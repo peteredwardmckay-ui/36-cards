@@ -3803,6 +3803,86 @@ function atmosphereSentenceFromMotifs(motifs: Array<[MotifId, number]>, random: 
       "Feeling is strong here, but it is moving through strain rather than ease.",
       "Warmth is present in the spread, though it is being tested by pressure around it.",
     ],
+    "guidance:pressure": [
+      "Direction is available in this spread, but it has to move through real resistance to arrive.",
+      "The clearer signals are present, but they are working against genuine pressure.",
+      "There is a usable path here, even if it runs straight through the difficulty.",
+    ],
+    "pressure:guidance": [
+      "The weight is real here, but the spread has not gone dark; guidance is still visible if you look past the strain.",
+      "Pressure leads in this field, though the cards have not closed off a useful direction.",
+      "The difficulty is genuine, but it is not the whole story; there is still signal pointing a way through.",
+    ],
+    "guidance:stability": [
+      "The spread has both direction and ground to stand on, which makes this a moment worth trusting.",
+      "Clear signal and a solid foundation are both present here, and together they give this reading unusual steadiness.",
+      "Something is pointing the way, and the footing is firm enough to move on it.",
+    ],
+    "stability:guidance": [
+      "There is solid ground beneath this reading, and the direction available is worth following from it.",
+      "The base is steady and the signal is clear; this is a field ready to be worked with deliberately.",
+      "Steadiness leads here, and the guidance available builds on that rather than fighting against it.",
+    ],
+    "pressure:movement": [
+      "The pressure in this spread is already forcing things to move, whether or not the timing feels right.",
+      "Strain and change are running together here; the question is whether the movement is being shaped or just endured.",
+      "Things are shifting under load, and the reading asks whether that movement can be steered.",
+    ],
+    "movement:pressure": [
+      "Change is happening, but it is moving through pressure rather than open ground.",
+      "This spread is in motion, though the resistance around it means nothing shifts without cost.",
+      "There is real movement here, but the pressure means the next step matters more than usual.",
+    ],
+    "guidance:warmth": [
+      "The direction available in this spread has a human quality to it; this is not just strategy, it is care.",
+      "Signal and warmth are both present, and they are pointing the same way.",
+      "There is both clarity and genuine feeling in this field, which gives the available direction real weight.",
+    ],
+    "warmth:guidance": [
+      "Warmth leads in this spread, and the direction available flows naturally from that rather than against it.",
+      "Human feeling is the dominant note here, and the guidance available is shaped by it.",
+      "The emotional tone is strong, and the signal the cards offer is consistent with it.",
+    ],
+    "stability:movement": [
+      "Something solid is present in this spread, but it is not static; change is gathering underneath it.",
+      "The base is steady for now, but the cards suggest that movement is already beginning to build.",
+      "Stability and change are both active here, and the reading is asking which one to back.",
+    ],
+    "movement:stability": [
+      "Change is the dominant note in this field, but something stable is available to land on once the movement settles.",
+      "Things are shifting here, and a steadier foundation is close enough to reach if the movement is directed well.",
+      "The spread is in motion, but it is not groundless; stability is available once the immediate change is navigated.",
+    ],
+    "guidance:choice": [
+      "The spread shows both a clear direction and a decision that has to be made before it can be followed.",
+      "There is useful signal here, but it leads through a genuine choice rather than around it.",
+      "Direction is available, though it requires a clear decision first rather than a gradual drift toward it.",
+    ],
+    "choice:guidance": [
+      "A decision is near the center of this reading, and the guidance available points toward rather than away from making it.",
+      "The cards keep returning to a choice, and the signal they offer is pointed enough to make that choice cleaner.",
+      "Decision pressure leads here, though the direction available gives it more structure than it might first appear.",
+    ],
+    "communication:pressure": [
+      "Conversation and signal are running through pressure in this spread; what gets said matters, and so does how.",
+      "Communication is active in this field, but it is moving through strain, which makes clarity more important than usual.",
+      "Words and information are part of the pressure here, not just a background note.",
+    ],
+    "pressure:communication": [
+      "The weight in this spread has a communicative edge; what is being said or withheld is part of the difficulty.",
+      "Pressure leads, and it is being carried at least partly through words, signals, and what remains unspoken.",
+      "The strain here is not just circumstantial; some of it lives in the space between what is said and what is meant.",
+    ],
+    "power:pressure": [
+      "Resources and leverage are active in this spread, but they are under pressure rather than freely available.",
+      "There is real capacity here, but it is being tested by the weight around it.",
+      "Power and strain are in direct contact in this field, and the question is which one is setting the terms.",
+    ],
+    "pressure:power": [
+      "The pressure in this spread has a structural quality; it is not just circumstantial but tied to leverage, resources, or control.",
+      "Strain leads here, and it is the kind that comes from competing claims on what has real weight.",
+      "The weight in this field is partly about who or what holds the leverage, and that is what makes it harder to simply wait out.",
+    ],
   };
 
   if (specialized[key]?.length) {
@@ -3920,7 +4000,7 @@ export function synthesizeGrandTableauNarrative(input: {
     openingSummary && pressureSummary
       ? choose(
         [
-          `Taken together, this is not a closed field; it is a live situation where ${pressureSummary} has to be named before ${openingSummary} can fully develop`,
+          `This is not a closed field; it is a live situation where ${pressureSummary} has to be named before ${openingSummary} can fully develop`,
           `The larger pattern says the opportunity is real, but it depends on handling ${pressureSummary} without losing sight of ${openingSummary}`,
           `This reads less like a dead end than a situation under strain, where ${openingSummary} remains possible if ${pressureSummary} is faced directly`,
           `The deeper story is not choosing between those too quickly; the strain is real, but so is what can still take shape if it is handled honestly`,
@@ -3933,9 +4013,10 @@ export function synthesizeGrandTableauNarrative(input: {
         )
       : choose(
           [
-            "Taken together, the tableau asks for discernment more than certainty.",
+            "The tableau asks for discernment more than certainty.",
             "The spread reads like navigation through mixed conditions rather than a simple yes or no.",
             "The overall story is one of measured movement, not dramatic certainty.",
+            "What the cards describe here is a field in motion, not a fixed answer.",
           ],
           random,
         ),
@@ -3958,9 +4039,10 @@ export function synthesizeGrandTableauNarrative(input: {
         )
       : choose(
           [
-            "Taken as a whole, the cards point to a live process that rewards steadiness and honest timing.",
+            "The cards point to a live process that rewards steadiness and honest timing.",
             "The tableau is asking for realism, patience, and attention to what is actually moving.",
             "The spread is less about forcing a result than about reading what is already taking shape.",
+            "What shows most clearly here is a situation still in motion, and the wisest move is to read it closely before acting.",
           ],
           random,
         ),

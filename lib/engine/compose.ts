@@ -82,7 +82,7 @@ function cardLabel(cardId: number): string {
 
 function cardRef(cardId: number): string {
   const card = getCardMeaning(cardId);
-  return `${card.name} (${card.id})`;
+  return `the ${card.name}`;
 }
 
 function clause(input: string): string {
@@ -360,6 +360,9 @@ function buildQuickIntro(input: {
         `With the question left open, this ${spreadLabel.toLowerCase()} gathers around ${lowerSubject} themes ${themeLensSummary}.`,
         `This open reading settles most naturally into ${subjectLabel} ${themeLensSummary}.`,
         `No single question is fixed here, so ${subjectLabel} ${themeLensSummary} becomes the clearest lens.`,
+        `The spread settles most naturally around ${subjectLabel} themes ${themeLensSummary}, given there is no fixed question to anchor it.`,
+        `Without a question to direct it, this reading finds its shape through ${lowerSubject} ${themeLensSummary}.`,
+        `Leaving the question open lets the spread speak through ${lowerSubject} ${themeLensSummary}, which is where the clearest signal sits.`,
       ],
       random,
     );
@@ -377,6 +380,10 @@ function buildQuickIntro(input: {
       `For "${normalized}", the cards keep circling back to ${lowerSubject}, ${themeLensSummary}.`,
       `One workable lens for "${normalized}" is ${subjectLabel} ${themeLensSummary}.`,
       `"${normalized}" draws the reading toward ${lowerSubject}, ${themeLensSummary}.`,
+      `This spread, asked through "${normalized}", keeps circling back to ${lowerSubject} ${themeLensSummary} as the clearest frame.`,
+      `What the cards seem most interested in, given "${normalized}", is ${lowerSubject} ${themeLensSummary}.`,
+      `The answer to "${normalized}" seems to be living in ${lowerSubject} territory ${themeLensSummary}.`,
+      `Framing "${normalized}" through ${lowerSubject} ${themeLensSummary} gives the clearest read of what is actually moving.`,
     ],
     random,
   );
@@ -1049,7 +1056,7 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
               domain,
               random,
             })}`,
-            `The nearby pair of ${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)} points to ${quickPairMeaning}. ${buildPairAssociationSentence({
+            `${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)} sit close together, and the combination points to ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
@@ -1088,7 +1095,14 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           random,
         );
       })()
-    : "No single nearby pair dominates, so meaning depends more on overall pattern than one isolated combination.";
+    : choose(
+        [
+          "No single nearby pair dominates, so meaning depends more on overall pattern than one isolated combination.",
+          "The cards near the center spread their influence broadly rather than concentrating in one strong pairing.",
+          "Without a dominant pairing near the center, the reading distributes its weight more evenly across the field.",
+        ],
+        random,
+      );
 
   const diagonalCardsAIds = diagonalCardsA.map((placement) => placement.cardId);
   const diagonalCardsBIds = diagonalCardsB.map((placement) => placement.cardId);
@@ -1107,23 +1121,32 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
     domain,
     random,
   });
+  const backgroundConnector = choose(
+    [
+      "Beneath that first layer,",
+      "Underneath the immediate picture,",
+      "Looking past the headline cards,",
+      "Behind the central impression,",
+    ],
+    random,
+  );
   const backgroundSentence =
     knightCards.length > 0
-      ? `${tableauSynthesis.atmosphereSentence} ${choose(
+      ? `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${choose(
           [
-            `A longer thread runs through ${diagonalThread}, while side links around ${knightBrief} show the story developing in stages.`,
-            `The diagonals run through ${diagonalThread}, while ${knightBrief} tighten the timing around that longer movement.`,
-            `Under the first impression, ${diagonalThread} read as a slow build, while ${knightBrief} show where the pace changes.`,
-            `The wider motion runs through ${diagonalThread}; off-angle links to ${knightBrief} show results arriving step by step.`,
-            `A quieter layer runs through ${diagonalThread}, while ${knightBrief} show where the rhythm starts to shift.`,
+            `a longer thread runs through ${diagonalThread}, while side links around ${knightBrief} show the story developing in stages.`,
+            `the diagonals run through ${diagonalThread}, while ${knightBrief} tighten the timing around that longer movement.`,
+            `${diagonalThread} read as a slow build, while ${knightBrief} show where the pace changes.`,
+            `the wider motion runs through ${diagonalThread}; off-angle links to ${knightBrief} show results arriving step by step.`,
+            `a quieter layer runs through ${diagonalThread}, while ${knightBrief} show where the rhythm starts to shift.`,
           ],
           random,
         )} Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events.`
-      : `${tableauSynthesis.atmosphereSentence} ${choose(
+      : `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${choose(
           [
-            `A quieter pattern runs through ${diagonalThread}, pointing to movement by stages rather than abrupt change.`,
+            `a quieter pattern runs through ${diagonalThread}, pointing to movement by stages rather than abrupt change.`,
             `${diagonalThread} suggest progress that gathers gradually once the separate threads are read together.`,
-            `The diagonal frame linking ${diagonalThread} implies a slow build rather than a dramatic turn.`,
+            `the diagonal frame linking ${diagonalThread} implies a slow build rather than a dramatic turn.`,
             `${diagonalThread} carry the wider story, and they favor sequence over sudden swings.`,
           ],
           random,
@@ -1131,27 +1154,36 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
 
   const nearBrief = dedupeCardRefs(proximity.near.map((placement) => placement.cardId), 4);
   const mediumBrief = dedupeCardRefs(proximity.medium.map((placement) => placement.cardId), 4);
-  const timingSentence = `${choose(
+  const timingConnector = choose(
     [
-      `Timing-wise, ${nearBrief} describe what is immediate, while ${mediumBrief || "the next ring of cards"} shape what follows.`,
-      `The first pressure sits with ${nearBrief}; ${mediumBrief || "the cards further out"} show the layer that forms just behind it.`,
-      `The near field, ${nearBrief}, speaks to current pressure, and ${mediumBrief || "the outer field"} helps show what gathers next.`,
-      `Read ${nearBrief} as present-tense influence and ${mediumBrief || "the broader field"} as the sequence forming right behind it.`,
+      "In terms of timing,",
+      "Looking at the sequence of pressure,",
+      "As the pace of events goes,",
+      "When it comes to what arrives first,",
+    ],
+    random,
+  );
+  const timingSentence = `${timingConnector} ${choose(
+    [
+      `${nearBrief} describe what is immediate, while ${mediumBrief || "the next ring of cards"} shape what follows.`,
+      `the first pressure sits with ${nearBrief}; ${mediumBrief || "the cards further out"} show the layer that forms just behind it.`,
+      `the near field, ${nearBrief}, speaks to current pressure, and ${mediumBrief || "the outer field"} helps show what gathers next.`,
+      `${nearBrief} read as present-tense influence, and ${mediumBrief || "the broader field"} as the sequence forming right behind it.`,
       `${nearBrief} belong to the immediate turn of events, while ${mediumBrief || "the outer field"} describe what is still gathering.`,
-      `Nearest to the center, ${nearBrief} speak first; ${mediumBrief || "the next layer out"} describe what follows after.`,
+      `${nearBrief} speak first; ${mediumBrief || "the next layer out"} describe what follows after.`,
     ],
     random,
   )} ${mediumBrief
     ? "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
     : "That split matters because the near field describes what is already pressing for attention, even if the outer layer has not clarified itself yet."}`;
 
-  const synthesisSentence = `${tableauSynthesis.practicalSentence} ${tableauSynthesis.thesisSentence}`;
+  const synthesisSentence = `${tableauSynthesis.practicalSentence} ${tableauSynthesis.openingsSentence} ${tableauSynthesis.thesisSentence}`;
 
   const sections: NarrativeSection[] = [
-    buildSection("center", "Center Focus", "house", centerSentence),
-    buildSection("pair", "Nearby Pair", "pair", pairSentence),
-    buildSection("background", "Background Pattern", "diagonal", backgroundSentence),
-    buildSection("timing", "Secondary Timing", "proximity", timingSentence),
+    buildSection("center", "At the Heart", "house", centerSentence),
+    buildSection("pair", "What Sits Beside It", "pair", pairSentence),
+    buildSection("background", "The Deeper Current", "diagonal", backgroundSentence),
+    buildSection("timing", "What Comes Next", "proximity", timingSentence),
   ];
 
   let cartouchePairKey: string | null = null;
@@ -1196,23 +1228,33 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           )} toward ${lowerFirst(clause(cartoucheLastCard.keywords[0]))}.`;
       const cartoucheSentenceC = choose(
         [
-          `Against the center at ${cardRef(primaryPlacement.cardId)}, this line suggests outcomes settle through pacing rather than pressure.`,
-          `Linked back to ${cardRef(primaryPlacement.cardId)} at the center, the final line points to consequences that arrive once choices are sustained.`,
-          `Compared with ${cardRef(primaryPlacement.cardId)} in center focus, the cartouche reads as what remains after immediate tension clears.`,
+          `Read alongside ${cardRef(primaryPlacement.cardId)} at the heart of the spread, this closing line suggests outcomes settle through pacing rather than pressure.`,
+          `Coming back to ${cardRef(primaryPlacement.cardId)}, the final line points to consequences that arrive once choices have been sustained.`,
+          `With ${cardRef(primaryPlacement.cardId)} still holding the center, the cartouche reads as what remains once the immediate tension clears.`,
+          `${cardRef(primaryPlacement.cardId)} anchors the reading, and this closing line shows what becomes available once its lesson is followed through.`,
         ],
         random,
       );
 
-      sections.push(buildSection("cartouche", "Cartouche", "timeline", `${cartoucheSentenceA} ${cartoucheSentenceB} ${cartoucheSentenceC}`));
+      sections.push(buildSection("cartouche", "The Closing Line", "timeline", `${cartoucheSentenceA} ${cartoucheSentenceB} ${cartoucheSentenceC}`));
     }
   }
 
   sections.push(
-    buildSection("synthesis", "Synthesis", "synthesis", synthesisSentence),
+    buildSection("synthesis", "Taken Together", "synthesis", synthesisSentence),
   );
 
   const conclusionActionCard = primaryCard.id === 28 || primaryCard.id === 29 ? getCardMeaning(primaryHouse.id) : primaryCard;
-  const conclusion = `${tableauSynthesis.conclusionSentence} ${buildActionDirectiveSentence({
+  const conclusionBridge = choose(
+    [
+      "The spread points to one clear place to start.",
+      "There is a concrete place to act from here.",
+      "The cards suggest a practical first step.",
+      "That picture leaves one useful point of entry.",
+    ],
+    random,
+  );
+  const conclusion = `${tableauSynthesis.conclusionSentence} ${conclusionBridge} ${buildActionDirectiveSentence({
     actionCard: conclusionActionCard,
     house: primaryHouse,
     subjectId,
@@ -1287,7 +1329,36 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
     random,
   });
 
-  const closerSentence = makeThreeCardCloser(subjectId, role, domain, random);
+  const synthesisConnector = choose(
+    [
+      "Stepping back from the individual cards,",
+      "Looking at the three cards as a single movement,",
+      "Read as a whole,",
+      "Across the full sequence,",
+    ],
+    random,
+  );
+  const closerConnector = choose(
+    [
+      "From here,",
+      "Given that picture,",
+      "With that sequence in mind,",
+      "Taking all of that,",
+    ],
+    random,
+  );
+  const closerSentence = `${closerConnector} ${makeThreeCardCloser(subjectId, role, domain, random).replace(/^[A-Z]/, (c) => c.toLowerCase())}`;
+  const pivotAction = `${cards[1].action[0].toUpperCase()}${cards[1].action.slice(1)}`;
+  const directionRef = cardRef(cards[2].id);
+  const conclusionClose = choose(
+    [
+      `${pivotAction}, and ${directionRef} will start to make sense in practice rather than theory.`,
+      `${pivotAction}; that is what gives ${directionRef} room to become real.`,
+      `${pivotAction} — then ${directionRef} stops being a possibility and becomes a direction.`,
+      `${pivotAction}, and ${directionRef} will stop feeling like potential and start feeling like something you can actually move toward.`,
+    ],
+    random,
+  );
   const conclusion = `${sentence(
     choose(
       [
@@ -1299,17 +1370,15 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
     ),
   )} ${buildCardAssociationSentence(cards[1], subjectId, domain, random)} ${
     topPair ? sentence(`${cardRef(topPair.cardA)} with ${cardRef(topPair.cardB)} keep emphasizing ${pairLine}`) : ""
-  } ${sentence(
-    `${cards[1].action[0].toUpperCase()}${cards[1].action.slice(1)} so ${cardRef(cards[2].id)} can land as lived experience rather than just possibility`,
-  )}`.trim();
+  } ${conclusionClose}`.trim();
 
   return {
     sections: [
-      buildSection("situation", "Situation", "timeline", situationSentence),
-      buildSection("pivot", "Pivot", "timeline", pivotSentence),
-      buildSection("direction", "Direction", "timeline", directionSentence),
-      buildSection("synthesis", "Synthesis", "synthesis", synthesisSentence),
-      buildSection("closer", "Closer", "synthesis", closerSentence),
+      buildSection("situation", "Where Things Stand", "timeline", situationSentence),
+      buildSection("pivot", "The Turning Point", "timeline", pivotSentence),
+      buildSection("direction", "Where It Leads", "timeline", directionSentence),
+      buildSection("synthesis", "Taken Together", "synthesis", `${synthesisConnector} ${synthesisSentence}`),
+      buildSection("closer", "The Next Move", "synthesis", closerSentence),
     ],
     conclusion,
     selectionTrace: {

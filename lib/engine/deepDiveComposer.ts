@@ -304,7 +304,7 @@ function narrativeMeaningDomain(subjectId: SubjectId): Domain {
 
 function cardRef(cardId: number): string {
   const card = getCardMeaning(cardId);
-  return `${card.name} (${card.id})`;
+  return `the ${card.name}`;
 }
 
 function countWords(input: string): number {
@@ -1533,9 +1533,10 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     const cartoucheNarrativeC = sentence(
       choose(
         [
-          `Linked back to ${cardRef(significatorPlacement.cardId)} at center, this line describes consequences that arrive through consistency more than force`,
-          `Set against ${cardRef(significatorPlacement.cardId)} in center focus, this final line shows what crystallizes after repeated choices`,
-          `Relative to the center card, the cartouche points to what is likely to endure once timing has played out`,
+          `Coming back to ${cardRef(significatorPlacement.cardId)} at the heart of the spread, this closing line describes consequences that arrive through consistency more than force`,
+          `With ${cardRef(significatorPlacement.cardId)} still holding the center, this final line shows what crystallizes after repeated choices`,
+          `Read alongside ${cardRef(significatorPlacement.cardId)}, the cartouche points to what is likely to endure once timing has played out`,
+          `${cardRef(significatorPlacement.cardId)} anchors the reading, and this closing line shows what becomes available once its lesson is followed through`,
         ],
         random,
       ),
@@ -1603,7 +1604,16 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
 
   const conclusionActionCard =
     significatorCard.id === 28 || significatorCard.id === 29 ? getCardMeaning(significatorHouse.id) : significatorCard;
-  const conclusion = `${tableauSynthesis.conclusionSentence} ${buildActionDirectiveSentence({
+  const conclusionBridge = choose(
+    [
+      "The spread points to one clear place to start.",
+      "There is a concrete place to act from here.",
+      "The cards suggest a practical first step.",
+      "That picture leaves one useful point of entry.",
+    ],
+    random,
+  );
+  const conclusion = `${tableauSynthesis.conclusionSentence} ${conclusionBridge} ${buildActionDirectiveSentence({
     actionCard: conclusionActionCard,
     house: significatorHouse,
     subjectId,
@@ -1835,9 +1845,19 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     strongestPair
       ? sentence(`${cardRef(strongestPair.cardA)} with ${cardRef(strongestPair.cardB)} keeps reinforcing ${toPairMeaningClause(pairText ?? strongestPair.prose)}`)
       : ""
-  } ${sentence(
-    `${cards[1].action[0].toUpperCase()}${cards[1].action.slice(1)} so ${cardRef(cards[2].id)} can become lived reality instead of remaining only a possibility`,
-  )}`.trim();
+  } ${(() => {
+    const pivotAction = `${cards[1].action[0].toUpperCase()}${cards[1].action.slice(1)}`;
+    const directionRef = cardRef(cards[2].id);
+    return sentence(choose(
+      [
+        `${pivotAction}, and ${directionRef} will start to make sense in practice rather than theory`,
+        `${pivotAction}; that is what gives ${directionRef} room to become real`,
+        `${pivotAction} — then ${directionRef} stops being a possibility and becomes a direction`,
+        `${pivotAction}, and ${directionRef} will stop feeling like potential and start feeling like something you can actually move toward`,
+      ],
+      random,
+    ));
+  })()}`.trim();
 
   const supplemental = [
     strongestPair
