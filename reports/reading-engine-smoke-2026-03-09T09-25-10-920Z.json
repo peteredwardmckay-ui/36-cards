@@ -1,0 +1,804 @@
+{
+  "generatedAt": "2026-03-09T09:25:10.920Z",
+  "summary": {
+    "totalCases": 200,
+    "grammarCollisionCount": 0,
+    "duplicateCardMentionCount": 0,
+    "bannedPhraseCount": 0,
+    "sectionRuleViolationCount": 8,
+    "wordBandViolationCount": 0
+  },
+  "failures": [
+    {
+      "caseId": "smoke-011",
+      "setup": {
+        "caseId": "smoke-011",
+        "subjectId": "personal_growth",
+        "interpretationThemeId": "boundaries",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about personal growth over the next 5 months?"
+      },
+      "fingerprint": "db3680a7bb0c1bb9bdb6",
+      "wordCount": 284,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-048",
+      "setup": {
+        "caseId": "smoke-048",
+        "subjectId": "friends_social",
+        "interpretationThemeId": "reconciliation",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about friends social over the next 2 months?"
+      },
+      "fingerprint": "374875485b7419e599b4",
+      "wordCount": 297,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-068",
+      "setup": {
+        "caseId": "smoke-068",
+        "subjectId": "health",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about health over the next 3 months?"
+      },
+      "fingerprint": "7c8e2c1f53638dc78a5c",
+      "wordCount": 292,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-098",
+      "setup": {
+        "caseId": "smoke-098",
+        "subjectId": "creative",
+        "interpretationThemeId": "momentum",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about creative over the next 3 months?"
+      },
+      "fingerprint": "4741b55da389c07ed71d",
+      "wordCount": 269,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-124",
+      "setup": {
+        "caseId": "smoke-124",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "change",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about general reading over the next 5 months?"
+      },
+      "fingerprint": "4140649a5b5f09bd6164",
+      "wordCount": 270,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-157",
+      "setup": {
+        "caseId": "smoke-157",
+        "subjectId": "love",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about love over the next 3 months?"
+      },
+      "fingerprint": "03bf12f1037e8c11d324",
+      "wordCount": 275,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-174",
+      "setup": {
+        "caseId": "smoke-174",
+        "subjectId": "community",
+        "interpretationThemeId": "networks",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about community over the next 2 months?"
+      },
+      "fingerprint": "6ee05d509cb39f9cb7cc",
+      "wordCount": 271,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-187",
+      "setup": {
+        "caseId": "smoke-187",
+        "subjectId": "community",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about community over the next 4 months?"
+      },
+      "fingerprint": "4ee71bd494a6e21bbf96",
+      "wordCount": 271,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    }
+  ],
+  "sample": [
+    {
+      "caseId": "smoke-001",
+      "setup": {
+        "caseId": "smoke-001",
+        "subjectId": "community",
+        "interpretationThemeId": "networks",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "deep_dive",
+        "includeHouses": true,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about community over the next 2 months?"
+      },
+      "fingerprint": "e4c7c090888fb91c2470",
+      "wordCount": 1068,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "houses-overlay",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "cartouche-fate-line",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-002",
+      "setup": {
+        "caseId": "smoke-002",
+        "subjectId": "health",
+        "interpretationThemeId": "energy",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about health over the next 2 months?"
+      },
+      "fingerprint": "368504185430db01e6cf",
+      "wordCount": 334,
+      "sectionIds": [
+        "center",
+        "pair",
+        "background",
+        "timing",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-003",
+      "setup": {
+        "caseId": "smoke-003",
+        "subjectId": "work",
+        "interpretationThemeId": "leadership",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x9",
+        "readingStyle": "deep_dive",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": ""
+      },
+      "fingerprint": "fc2e20662d3f009ba8df",
+      "wordCount": 679,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-004",
+      "setup": {
+        "caseId": "smoke-004",
+        "subjectId": "health",
+        "interpretationThemeId": "stress_load",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about health over the next 5 months?"
+      },
+      "fingerprint": "ae3b46678de0265c3bd9",
+      "wordCount": 258,
+      "sectionIds": [
+        "situation",
+        "pivot",
+        "direction",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-005",
+      "setup": {
+        "caseId": "smoke-005",
+        "subjectId": "money",
+        "interpretationThemeId": "financial_independence",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about money over the next 2 months?"
+      },
+      "fingerprint": "a31b738f853aa7a4069d",
+      "wordCount": 380,
+      "sectionIds": [
+        "center",
+        "pair",
+        "background",
+        "timing",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-006",
+      "setup": {
+        "caseId": "smoke-006",
+        "subjectId": "money",
+        "interpretationThemeId": "timing",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": ""
+      },
+      "fingerprint": "18c92bd109e366aab99b",
+      "wordCount": 312,
+      "sectionIds": [
+        "center",
+        "pair",
+        "background",
+        "timing"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-007",
+      "setup": {
+        "caseId": "smoke-007",
+        "subjectId": "pets",
+        "interpretationThemeId": "comfort",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x9",
+        "readingStyle": "deep_dive",
+        "includeHouses": true,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about pets over the next 2 months?"
+      },
+      "fingerprint": "53ea61109c3a46b07549",
+      "wordCount": 1090,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "houses-overlay",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-008",
+      "setup": {
+        "caseId": "smoke-008",
+        "subjectId": "love",
+        "interpretationThemeId": "ending_or_separation",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "deep_dive",
+        "includeHouses": true,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about love over the next 6 months?"
+      },
+      "fingerprint": "3fcf83764b59ce97c1dc",
+      "wordCount": 1094,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "houses-overlay",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "cartouche-fate-line",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-009",
+      "setup": {
+        "caseId": "smoke-009",
+        "subjectId": "love",
+        "interpretationThemeId": "auto",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about love over the next 2 months?"
+      },
+      "fingerprint": "c53500fcf7a69cfee557",
+      "wordCount": 256,
+      "sectionIds": [
+        "situation",
+        "pivot",
+        "direction",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-010",
+      "setup": {
+        "caseId": "smoke-010",
+        "subjectId": "friends_social",
+        "interpretationThemeId": "auto",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "deep_dive",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about friends social over the next 6 months?"
+      },
+      "fingerprint": "86ab3e3842c1b06eb180",
+      "wordCount": 434,
+      "sectionIds": [
+        "opening-frame",
+        "situation",
+        "pivot",
+        "direction",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-011",
+      "setup": {
+        "caseId": "smoke-011",
+        "subjectId": "personal_growth",
+        "interpretationThemeId": "boundaries",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about personal growth over the next 5 months?"
+      },
+      "fingerprint": "db3680a7bb0c1bb9bdb6",
+      "wordCount": 284,
+      "sectionIds": [
+        "center",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [
+        "quick-gt-missing-pair"
+      ],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-012",
+      "setup": {
+        "caseId": "smoke-012",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "clarity",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about general reading over the next 6 months?"
+      },
+      "fingerprint": "ee4c3564fe5713480c7c",
+      "wordCount": 235,
+      "sectionIds": [
+        "situation",
+        "pivot",
+        "direction",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-013",
+      "setup": {
+        "caseId": "smoke-013",
+        "subjectId": "personal_growth",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "deep_dive",
+        "includeHouses": true,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about personal growth over the next 4 months?"
+      },
+      "fingerprint": "30240d66aa6a4b77fd2e",
+      "wordCount": 1079,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "houses-overlay",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "cartouche-fate-line",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-014",
+      "setup": {
+        "caseId": "smoke-014",
+        "subjectId": "creative",
+        "interpretationThemeId": "auto",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about creative over the next 2 months?"
+      },
+      "fingerprint": "1dc00732e4aa98045ec1",
+      "wordCount": 253,
+      "sectionIds": [
+        "situation",
+        "pivot",
+        "direction",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-015",
+      "setup": {
+        "caseId": "smoke-015",
+        "subjectId": "legal_admin",
+        "interpretationThemeId": "approvals",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x8+4",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about legal admin over the next 3 months?"
+      },
+      "fingerprint": "32fccf53c525b2e763fb",
+      "wordCount": 302,
+      "sectionIds": [
+        "center",
+        "pair",
+        "cartouche"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-016",
+      "setup": {
+        "caseId": "smoke-016",
+        "subjectId": "spiritual",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x9",
+        "readingStyle": "deep_dive",
+        "includeHouses": true,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about spiritual over the next 4 months?"
+      },
+      "fingerprint": "5260c9c4267c14c49410",
+      "wordCount": 1086,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "houses-overlay",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-017",
+      "setup": {
+        "caseId": "smoke-017",
+        "subjectId": "home_family",
+        "interpretationThemeId": "family_tension",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": ""
+      },
+      "fingerprint": "3610d69e3c6a9ea695a4",
+      "wordCount": 260,
+      "sectionIds": [
+        "situation",
+        "pivot",
+        "direction",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-018",
+      "setup": {
+        "caseId": "smoke-018",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "gtLayout": "4x9",
+        "readingStyle": "deep_dive",
+        "includeHouses": true,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about general reading over the next 6 months?"
+      },
+      "fingerprint": "f233f293b033230f56b4",
+      "wordCount": 1078,
+      "sectionIds": [
+        "opening-frame",
+        "center-significator",
+        "immediate-surroundings",
+        "houses-overlay",
+        "local-cluster",
+        "wider-thread",
+        "secondary-zone",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-019",
+      "setup": {
+        "caseId": "smoke-019",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "auto",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "quick",
+        "includeHouses": false,
+        "threeCardMode": "past-present-future",
+        "question": "What should I understand about general reading over the next 3 months?"
+      },
+      "fingerprint": "51ca1411428a78e110f6",
+      "wordCount": 255,
+      "sectionIds": [
+        "situation",
+        "pivot",
+        "direction",
+        "synthesis"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    },
+    {
+      "caseId": "smoke-020",
+      "setup": {
+        "caseId": "smoke-020",
+        "subjectId": "community",
+        "interpretationThemeId": "collective_support",
+        "spreadType": "three-card",
+        "gtLayout": "4x9",
+        "readingStyle": "deep_dive",
+        "includeHouses": false,
+        "threeCardMode": "situation-challenge-advice",
+        "question": "What should I understand about community over the next 5 months?"
+      },
+      "fingerprint": "12f3496da1ea35f6b894",
+      "wordCount": 414,
+      "sectionIds": [
+        "opening-frame",
+        "situation",
+        "pivot",
+        "direction",
+        "key-threads"
+      ],
+      "grammarCollisions": [],
+      "duplicateCardMentions": [],
+      "bannedPhraseHits": [],
+      "sectionRuleErrors": [],
+      "wordBandError": null
+    }
+  ]
+}

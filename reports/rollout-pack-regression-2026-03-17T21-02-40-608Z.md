@@ -1,0 +1,22 @@
+# Rollout Pack Audit
+
+Generated: 2026-03-17T21:02:40.608Z
+Cases: 2
+Hard failures: 0
+Cases with soft seams: 0
+
+## Summary
+
+| Case | Subject | Style | Soft Seams | Hard Issues | Fingerprint |
+| --- | --- | --- | ---: | ---: | --- |
+| rollout-friends_social-quick | friends_social | quick | 0 | 0 | bdbe24d9e1c535515132 |
+| rollout-friends_social-deep | friends_social | deep_dive | 0 | 0 | b4a52a71a7879bf53f5e |
+
+## Soft Seam Labels
+
+| Label | Count |
+| --- | ---: |
+
+## Flagged Cases
+
+No soft seams detected.

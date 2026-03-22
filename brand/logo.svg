@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">36 Cards logo</title>
+  <desc id="desc">Wordmark and icon for 36 Cards / 36cards.com</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8C5A2E" />
+      <stop offset="100%" stop-color="#2F6E56" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="200" height="200" rx="34" fill="#15131A" />
+  <circle cx="110" cy="110" r="68" fill="url(#g)" />
+  <circle cx="110" cy="110" r="47" fill="none" stroke="#F5EBDD" stroke-width="3" />
+  <text x="110" y="120" text-anchor="middle" fill="#FDF7EE" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="56">36</text>
+  <text x="240" y="98" fill="#15131A" font-family="Cormorant Garamond, Georgia, serif" font-size="76" font-weight="700" letter-spacing="1.2">36 Cards</text>
+  <text x="244" y="145" fill="#5A4D43" font-family="Manrope, Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="0.5">36cards.com</text>
+</svg>

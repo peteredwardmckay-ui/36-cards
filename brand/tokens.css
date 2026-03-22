@@ -1,0 +1,109 @@
+:root {
+  --brand-bg: #f4efe8;
+  --brand-panel: #fffaf3;
+  --brand-border: #d2c4b0;
+  --brand-text: #1f1a16;
+  --brand-muted: #63554a;
+  --brand-accent: #8c5a2e;
+  --brand-accent-alt: #2f6e56;
+  --brand-shadow: 0 20px 50px rgba(12, 8, 16, 0.16);
+}
+
+.theme-botanical {
+  --theme-bg: #edf5e8;
+  --theme-panel: #f7fbf4;
+  --theme-border: #9ab28f;
+  --theme-text: #1c2b20;
+  --theme-muted: #5b6e5f;
+  --theme-accent: #3f6d46;
+}
+
+.theme-gothic {
+  --theme-bg: #111017;
+  --theme-panel: #1a1622;
+  --theme-border: #4f4660;
+  --theme-text: #ede6fa;
+  --theme-muted: #b5aac8;
+  --theme-accent: #bca3e2;
+}
+
+.theme-retro {
+  --theme-bg: #0f1e2f;
+  --theme-panel: #13273d;
+  --theme-border: #3f6e9f;
+  --theme-text: #e6f7ff;
+  --theme-muted: #a8c8db;
+  --theme-accent: #7ff7d3;
+}
+
+.theme-vapor {
+  --theme-bg: #180b2b;
+  --theme-panel: #24113f;
+  --theme-border: #7d5ee5;
+  --theme-text: #f7f1ff;
+  --theme-muted: #c9b8e8;
+  --theme-accent: #ff6fd8;
+}
+
+.theme-whimsical {
+  --theme-bg: #fff5ea;
+  --theme-panel: #fffdf8;
+  --theme-border: #d8b48c;
+  --theme-text: #352219;
+  --theme-muted: #7a5b4a;
+  --theme-accent: #b35b2f;
+}
+
+.theme-luxe {
+  --theme-bg: #f3f1ee;
+  --theme-panel: #ffffff;
+  --theme-border: #c3b9ab;
+  --theme-text: #201912;
+  --theme-muted: #655a4d;
+  --theme-accent: #7b6548;
+}
+
+.theme-ethiopian {
+  --theme-bg: #f4e8d0;
+  --theme-panel: #fff7ea;
+  --theme-border: #c9a770;
+  --theme-text: #2e1d13;
+  --theme-muted: #79573b;
+  --theme-accent: #8b5d2f;
+}
+
+.theme-hand-illustrated {
+  --theme-bg: #f7efe0;
+  --theme-panel: #fffaf1;
+  --theme-border: #d7b68c;
+  --theme-text: #38261b;
+  --theme-muted: #7e6048;
+  --theme-accent: #a65d3a;
+}
+
+.theme-minimal-lux {
+  --theme-bg: #f3f1ee;
+  --theme-panel: #ffffff;
+  --theme-border: #c3b9ab;
+  --theme-text: #201912;
+  --theme-muted: #655a4d;
+  --theme-accent: #7b6548;
+}
+
+.theme-neo-noir {
+  --theme-bg: #12131c;
+  --theme-panel: #1b1f2a;
+  --theme-border: #3f4659;
+  --theme-text: #f4f0e8;
+  --theme-muted: #adb3c4;
+  --theme-accent: #e0b266;
+}
+
+.theme-traditional {
+  --theme-bg: #efe6d8;
+  --theme-panel: #fbf5eb;
+  --theme-border: #bca07d;
+  --theme-text: #2f2117;
+  --theme-muted: #765741;
+  --theme-accent: #8a5931;
+}

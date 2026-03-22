@@ -1,0 +1,479 @@
+@import "../brand/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Georgia", "Times New Roman", "Times", serif;
+  --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-display-botanical: "Palatino", "Book Antiqua", "Georgia", serif;
+  --font-display-gothic: "Times New Roman", "Georgia", serif;
+  --font-display-retro: "Trebuchet MS", "Verdana", "Arial", sans-serif;
+  --font-display-vapor: "Trebuchet MS", "Verdana", "Arial", sans-serif;
+  --font-display-whimsy: "Gill Sans", "Trebuchet MS", "Verdana", sans-serif;
+  --font-display-luxe: "Didot", "Bodoni MT", "Georgia", serif;
+  --font-body-quiet: "Avenir Next", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-body-tech: "Verdana", "Trebuchet MS", "Arial", sans-serif;
+  --font-body-soft: "Gill Sans", "Trebuchet MS", "Verdana", sans-serif;
+  --font-body-clean: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --ui-radius-xl: 1rem;
+  --ui-radius-lg: 0.85rem;
+  --ui-radius-md: 0.7rem;
+  --ui-shadow-lg: 0 24px 60px rgba(12, 10, 20, 0.2);
+  --ui-shadow-card: 0 16px 36px rgba(10, 8, 18, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
+  color: var(--theme-text, var(--brand-text));
+  background:
+    radial-gradient(circle at 8% -12%, rgba(255, 255, 255, 0.68), transparent 36%),
+    radial-gradient(circle at 96% 4%, rgba(255, 255, 255, 0.28), transparent 34%),
+    linear-gradient(145deg, var(--theme-bg, var(--brand-bg)), color-mix(in oklab, var(--theme-bg, var(--brand-bg)) 74%, #1a1210 26%));
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+body::before {
+  top: -22vmax;
+  left: -18vmax;
+  width: 46vmax;
+  height: 46vmax;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 24%, white 76%), transparent 68%);
+  opacity: 0.45;
+}
+
+body::after {
+  bottom: -30vmax;
+  right: -24vmax;
+  width: 58vmax;
+  height: 58vmax;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 20%, #100b18 80%), transparent 68%);
+  opacity: 0.34;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ritual-panel {
+  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 78%, white 22%);
+  border-radius: var(--ui-radius-xl);
+  background:
+    linear-gradient(158deg, color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 90%, white 10%), color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 88%, #e5d8c5 12%));
+  box-shadow: var(--ui-shadow-lg);
+  backdrop-filter: blur(4px);
+}
+
+.ritual-panel-soft {
+  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 80%, white 20%);
+  border-radius: var(--ui-radius-lg);
+  background:
+    linear-gradient(170deg, color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 93%, white 7%), color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 87%, #d8cab8 13%));
+  box-shadow: 0 14px 30px rgba(12, 10, 20, 0.14);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 74%, white 26%);
+  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 86%, white 14%);
+  padding: 0.34rem 0.68rem;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--theme-muted, var(--brand-muted));
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-ghost {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  min-height: 44px;
+  transition: transform 150ms ease, filter 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.btn-primary {
+  border: 1px solid color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 72%, black 28%);
+  background:
+    linear-gradient(160deg, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 80%, white 20%), color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 82%, black 18%));
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 76%, white 24%);
+  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 90%, white 10%);
+  color: var(--theme-text, var(--brand-text));
+}
+
+.btn-ghost {
+  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 72%, white 28%);
+  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 84%, transparent 16%);
+  color: var(--theme-text, var(--brand-text));
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-ghost:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.05);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.btn-ghost:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 45%, white 55%);
+}
+
+.sky-motif {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 32%, #3a4a5c 68%);
+}
+
+.sky-motif__wash,
+.sky-motif__sea,
+.sky-motif__ships,
+.sky-motif__birds {
+  position: absolute;
+}
+
+.sky-motif__wash {
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(155, 125, 85, 0.06) 0%,
+      rgba(255, 182, 88, 0.17) 52%,
+      rgba(218, 108, 50, 0.10) 76%,
+      rgba(65, 100, 142, 0.11) 100%
+    ),
+    radial-gradient(circle at 82% 78%, rgba(255, 198, 96, 0.20), transparent 34%);
+}
+
+.sky-motif__sea {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 26%;
+  background: linear-gradient(180deg, rgba(58, 88, 128, 0.04), rgba(48, 76, 118, 0.11));
+  border-top: 1px solid rgba(155, 138, 118, 0.20);
+}
+
+
+.sky-motif__ships {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 18%, #243244 82%);
+}
+
+.sky-motif__birds {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.58;
+  animation: sky-birds-drift 24s ease-in-out infinite;
+}
+
+.sky-motif__birds path {
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+/* ── loading variant ── */
+.sky-motif-loading .sky-motif__wash {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(138, 112, 76, 0.09) 0%,
+      rgba(255, 188, 96, 0.24) 50%,
+      rgba(212, 96, 46, 0.13) 74%,
+      rgba(58, 98, 148, 0.15) 100%
+    ),
+    radial-gradient(circle at 80% 76%, rgba(255, 202, 106, 0.26), transparent 32%);
+}
+
+
+/* ── loading spinner ── */
+.loading-orbit {
+  position: absolute;
+  inset: -0.35rem;
+  border-top: 1px solid color-mix(in oklab, var(--brand-accent) 55%, white 45%);
+  border-right: 1px solid transparent;
+  border-radius: 9999px;
+  opacity: 0.85;
+}
+
+.loading-orbit--one {
+  animation: loading-orbit-spin 1.8s linear infinite;
+}
+
+.loading-orbit--two {
+  inset: -0.7rem;
+  opacity: 0.45;
+  animation: loading-orbit-spin 2.6s linear infinite reverse;
+}
+
+.sky-cta {
+  position: relative;
+}
+
+.sky-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 82% 18%, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 22%, white 78%), transparent 24%),
+    linear-gradient(180deg, rgba(145, 186, 219, 0.06), rgba(255, 220, 181, 0.08) 48%, transparent 100%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+
+@keyframes sky-birds-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0.55rem, -0.14rem, 0) scale(1.016);
+  }
+}
+
+@keyframes loading-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-motif__birds,
+  .loading-orbit--one,
+  .loading-orbit--two {
+    animation: none;
+  }
+}
+
+.ritual-progress-track {
+  height: 0.48rem;
+  width: 100%;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 78%, white 22%);
+  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 80%, #100d17 20%);
+  overflow: hidden;
+}
+
+.ritual-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 86%, white 14%), color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 78%, #ffd7a5 22%));
+  transition: width 260ms ease;
+}
+
+input[type="range"] {
+  accent-color: var(--theme-accent, var(--brand-accent));
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  border: 1px solid color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 72%, black 28%);
+  box-shadow: 0 5px 14px rgba(10, 8, 18, 0.26);
+}
+
+.card-flip-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 820ms cubic-bezier(0.22, 0.78, 0.22, 1);
+}
+
+.card-flip-inner-revealed {
+  transform: rotateY(180deg);
+}
+
+.card-interactive:hover .card-flip-inner,
+.card-interactive:focus-visible .card-flip-inner {
+  transform: translateY(-2px);
+}
+
+.card-interactive:hover .card-flip-inner-revealed,
+.card-interactive:focus-visible .card-flip-inner-revealed {
+  transform: rotateY(180deg) translateY(-2px);
+}
+
+.card-face-back,
+.card-face-front {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  backface-visibility: hidden;
+}
+
+.card-face-back {
+  background-size: cover;
+  background-position: center;
+}
+
+.card-face-front {
+  transform: rotateY(180deg);
+  background:
+    linear-gradient(160deg, color-mix(in oklab, var(--theme-panel, #fff) 95%, white 5%), color-mix(in oklab, var(--theme-panel, #fff) 84%, #e6d2ba 16%));
+  box-shadow: var(--ui-shadow-card);
+  text-align: left;
+  overflow: hidden;
+}
+
+.gt-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+@media (max-width: 639px) {
+  .gt-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 0.3rem !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .gt-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.25rem !important;
+  }
+}
+
+.font-display-botanical {
+  font-family: var(--font-display-botanical), var(--font-display), serif;
+}
+
+.font-display-gothic {
+  font-family: var(--font-display-gothic), var(--font-display), serif;
+}
+
+.font-display-retro {
+  font-family: var(--font-display-retro), var(--font-display), sans-serif;
+}
+
+.font-display-vapor {
+  font-family: var(--font-display-vapor), var(--font-display), sans-serif;
+}
+
+.font-display-whimsy {
+  font-family: var(--font-display-whimsy), var(--font-display), serif;
+}
+
+.font-display-luxe {
+  font-family: var(--font-display-luxe), var(--font-display), serif;
+}
+
+.font-body-quiet {
+  font-family: var(--font-body-quiet), var(--font-body), sans-serif;
+}
+
+.font-body-tech {
+  font-family: var(--font-body-tech), var(--font-body), sans-serif;
+}
+
+.font-body-soft {
+  font-family: var(--font-body-soft), var(--font-body), sans-serif;
+}
+
+.font-body-clean {
+  font-family: var(--font-body-clean), var(--font-body), sans-serif;
+}
+
+.reading-prose p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.reading-prose section {
+  scroll-margin-top: 1.6rem;
+}
+
+.reading-prose section + section {
+  margin-top: 1rem;
+}
+
+.page-reveal {
+  animation: pageReveal 420ms ease;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-flip-inner {
+    transition: none;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost,
+  .page-reveal {
+    animation: none;
+    transition: none;
+  }
+}

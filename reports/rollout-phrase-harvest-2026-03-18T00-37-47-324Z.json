@@ -1,0 +1,3427 @@
+{
+  "generatedAt": "2026-03-18T00:37:47.324Z",
+  "subjectId": "friends_social",
+  "totalCases": 96,
+  "totalFindings": 192,
+  "totalUniquePhrases": 163,
+  "suspiciousFindings": 88,
+  "suspiciousUniquePhrases": 81,
+  "aggregates": [
+    {
+      "phrase": "a small but usable opening around your own social position",
+      "label": "opening",
+      "count": 4,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small but usable opening around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-11",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a small but usable opening around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-30",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a small but usable opening around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-39",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a small but usable opening around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-45",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "movement beginning once your own social stance becomes clear",
+      "label": "opening",
+      "count": 4,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "movement beginning once your own social stance becomes clear",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-11",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning once your own social stance becomes clear",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-19",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning once your own social stance becomes clear",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-34",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning once your own social stance becomes clear",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-47",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position being met with more goodwill, warmth, or receptivity",
+      "label": "opening",
+      "count": 4,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position being met with more goodwill, warmth, or receptivity",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-10",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your own social position being met with more goodwill, warmth, or receptivity",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-14",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your own social position being met with more goodwill, warmth, or receptivity",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-37",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your own social position being met with more goodwill, warmth, or receptivity",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-38",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a new social beginning where first actions matter more than promises",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a new social beginning where first actions matter more than promises",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-20",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a new social beginning where first actions matter more than promises",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-21",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a new social beginning where first actions matter more than promises",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-28",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position becoming more visible in the group field",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position becoming more visible in the group field",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-15",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your own social position becoming more visible in the group field",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-16",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your own social position becoming more visible in the group field",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-18",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "mixed motives steadily worsening the strain, anxiety, and social wear already in the field",
+      "label": "pressure",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "mixed motives steadily worsening the strain, anxiety, and social wear already in the field",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-1",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "mixed motives steadily worsening the strain, anxiety, and social wear already in the field",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-40",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "mixed motives steadily worsening the strain, anxiety, and social wear already in the field",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-40",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 3,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening in values and love",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening in values and love",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-41",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a small opening in values and love",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-46",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clarity and success around slow growth and rooting",
+      "label": "opening",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "clarity and success around slow growth and rooting",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-12",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "clarity and success around slow growth and rooting",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-36",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "heart, value, or feeling in improvement or movement",
+      "label": "opening",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "heart, value, or feeling in improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-3",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "heart, value, or feeling in improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-35",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth around grace, goodwill, or invitation",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth around grace, goodwill, or invitation",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-0",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "slow growth around grace, goodwill, or invitation",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-32",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "values and love around your own position",
+      "label": "opening",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "values and love around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-44",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "values and love around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-47",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position under improvement or movement",
+      "label": "opening",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position under improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-5",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "your own position under improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-28",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position having to regrow more slowly, steadily, and with less forcing",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position having to regrow more slowly, steadily, and with less forcing",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-3",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your own social position having to regrow more slowly, steadily, and with less forcing",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-8",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a strategic ending or necessary pause",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a strategic ending or necessary pause",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-11",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a strategic ending or necessary pause",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-35",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "choice and branching paths under closure",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "choice and branching paths under closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-14",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "choice and branching paths under closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-38",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "defensive caution being reinforced by too much social strategy or guarded management of the dynamic",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "defensive caution being reinforced by too much social strategy or guarded management of the dynamic",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-13",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "defensive caution being reinforced by too much social strategy or guarded management of the dynamic",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-15",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication under decisive cuts",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication under decisive cuts",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-18",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "nervous communication under decisive cuts",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-22",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-34",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-47",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "too many side conversations, mixed signals, or anxious talk distorting what is actually happening in the social field",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "too many side conversations, mixed signals, or anxious talk distorting what is actually happening in the social field",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-13",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "too many side conversations, mixed signals, or anxious talk distorting what is actually happening in the social field",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-30",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own position moving through erosion and stress",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position moving through erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-23",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 23,
+          "gtLayout": "4x9",
+          "suspicious": true
+        },
+        {
+          "phrase": "your own position moving through erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-37",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 23,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a more welcoming tone becoming possible as trust regrows slowly",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a more welcoming tone becoming possible as trust regrows slowly",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-31",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small but real opening around constructive change",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small but real opening around constructive change",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-23",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening around leverage, influence, or what can actually be guided more responsibly",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening around leverage, influence, or what can actually be guided more responsibly",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-30",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening in support and loyalty",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening in support and loyalty",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-40",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening in your own field",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening in your own field",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-32",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening under a small opening",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening under a small opening",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-29",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 12,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a solution or unlock in guidance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a solution or unlock in guidance",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-7",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 7,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a solution or unlock under expansion",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a solution or unlock under expansion",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-6",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a warmer social response beginning to gather around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a warmer social response beginning to gather around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-43",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clarity and success around a small beginning",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "clarity and success around a small beginning",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-21",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "clarity and visible progress under improvement or movement",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "clarity and visible progress under improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-29",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "clearer momentum gathering once new contact or movement actually arrives",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "clearer momentum gathering once new contact or movement actually arrives",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-13",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "endurance around a small beginning",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "endurance around a small beginning",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-17",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "expansion around constructive change",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "expansion around constructive change",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-39",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "expansion around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "expansion around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-40",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 3,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace around constructive change",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace around constructive change",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-0",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 36,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace, goodwill, or invitation in clarity and success",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace, goodwill, or invitation in clarity and success",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-8",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 30,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace, goodwill, or invitation in values and love",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace, goodwill, or invitation in values and love",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-2",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "guidance and signal in incoming momentum",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "guidance and signal in incoming momentum",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-5",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "guidance and signal under slow growth",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "guidance and signal under slow growth",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-26",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "guidance around heart, value, or feeling",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "guidance around heart, value, or feeling",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-7",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 6,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "heart, value, or feeling under slow growth",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "heart, value, or feeling under slow growth",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-22",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "heart, value, or feeling under support and loyalty",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "heart, value, or feeling under support and loyalty",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-24",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "improvement or movement around constructive change",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "improvement or movement around constructive change",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-44",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "incoming momentum around guidance and signal",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "incoming momentum around guidance and signal",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-9",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "incoming movement or news in values and love",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "incoming movement or news in values and love",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-31",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "movement, distance, or transition in the answer point",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "movement, distance, or transition in the answer point",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-9",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "power around a small beginning",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "power around a small beginning",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-27",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 6,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "power or resource control in improvement or movement",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "power or resource control in improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-33",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "power or resource control in slow growth",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "power or resource control in slow growth",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-6",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 14,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "power or resource control under maturity",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "power or resource control under maturity",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-38",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "resource flow around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "resource flow around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-42",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth and rooting in endurance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth and rooting in endurance",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-1",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth and rooting in the answer point",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth and rooting in the answer point",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-13",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth and rooting under expansion",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth and rooting under expansion",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-25",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth and rooting under support and loyalty",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth and rooting under support and loyalty",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-18",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth around the commitment question or repeating terms",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth around the commitment question or repeating terms",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-34",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slower trust and steadier belonging beginning to gain more room to develop",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slower trust and steadier belonging beginning to gain more room to develop",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-17",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 12,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slower trust and steadier belonging gathering around your own social position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slower trust and steadier belonging gathering around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-46",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "stability and endurance under clarity and success",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "stability and endurance under clarity and success",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-37",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 23,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "stability around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "stability around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-2",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "steadier staying power gathering around your own social position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "steadier staying power gathering around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-19",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "steadier support gathering around your own social position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "steadier support gathering around your own social position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-36",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "support and loyalty around reliable support",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "support and loyalty around reliable support",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-10",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "the answer point around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the answer point around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-27",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the public field around reliable support",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the public field around reliable support",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-20",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the visible social field beginning to gather around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the visible social field beginning to gather around your own position",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-12",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "values and love around grace, goodwill, or invitation",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "values and love around grace, goodwill, or invitation",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-24",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 14,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "values and love around stability and endurance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "values and love around stability and endurance",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-22",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "warmth and feeling brought fully into the light",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "warmth and feeling brought fully into the light",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-23",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 23,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely matters becoming clearer at the emotional center of the friendship",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely matters becoming clearer at the emotional center of the friendship",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-25",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely matters gathering around movement, distance, or a social change already underway",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely matters gathering around movement, distance, or a social change already underway",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-35",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own field around heart, value, or feeling",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own field around heart, value, or feeling",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-26",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own position in endurance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position in endurance",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-45",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position in improvement or movement",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position in improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-1",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position in resource flow",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position in resource flow",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-41",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position in slow growth",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position in slow growth",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-16",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position in support and loyalty",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position in support and loyalty",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-14",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position under clarity and success",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position under clarity and success",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-15",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position under endurance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position under endurance",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-43",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position under maturity",
+      "label": "opening",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position under maturity",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-33",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 30,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position becoming the clearest answer you can actually work from",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position becoming the clearest answer you can actually work from",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-4",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position gaining firmer ground through clearer leverage and stronger backing",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position gaining firmer ground through clearer leverage and stronger backing",
+          "label": "opening",
+          "caseId": "harvest-friends_social-deep-42",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position getting pulled back toward what genuinely matters in the friendship",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position getting pulled back toward what genuinely matters in the friendship",
+          "label": "opening",
+          "caseId": "harvest-friends_social-quick-4",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a message, record, or document under communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a message, record, or document under communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-25",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a necessary social cut being complicated by too much chatter, nerves, or crossed signals",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a necessary social cut being complicated by too much chatter, nerves, or crossed signals",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-32",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, ending, or social withdrawal being complicated by too much anxious talk",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, ending, or social withdrawal being complicated by too much anxious talk",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-12",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a sharp decision or cut moving through caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a sharp decision or cut moving through caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-9",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a sharp decision or cut moving through decisive cuts",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a sharp decision or cut moving through decisive cuts",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-39",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a sharp decision or cut moving through obstruction",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a sharp decision or cut moving through obstruction",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-20",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a sharp decision or cut under fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a sharp decision or cut under fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-37",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a sharp decision or cut under strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a sharp decision or cut under strategy",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-9",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "a sharp decision or cut under the meaningful burden",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "a sharp decision or cut under the meaningful burden",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-19",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "anxious talk gathering around what is still private, unspoken, or not yet clearly known",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "anxious talk gathering around what is still private, unspoken, or not yet clearly known",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-1",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "burden and meaning in strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "burden and meaning in strategy",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-10",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "burden and meaning moving through communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "burden and meaning moving through communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-11",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "caution and self-interest in fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "caution and self-interest in fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-46",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "caution and self-interest moving through erosion and stress",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "caution and self-interest moving through erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-17",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "caution and self-interest under communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "caution and self-interest under communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-28",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "caution and self-interest under obstruction",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "caution and self-interest under obstruction",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-33",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 30,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "caution and self-interest under structure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "caution and self-interest under structure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-23",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "caution and self-interest under the meaningful burden",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "caution and self-interest under the meaningful burden",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-29",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "choice and branching paths moving through communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "choice and branching paths moving through communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-21",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest in recognition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest in recognition",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-4",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest in structure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest in structure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-21",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest moving through caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest moving through caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-42",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest moving through closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest moving through closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-44",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest moving through recognition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest moving through recognition",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-26",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest under closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest under closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-19",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest under erosion and stress",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest under erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-36",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "closure, ending, or rest under the meaningful burden",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "closure, ending, or rest under the meaningful burden",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-42",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives in repetition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives in repetition",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-34",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 1,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives moving through closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives moving through closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-46",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives moving through repetition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives moving through repetition",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-17",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 12,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives moving through resource flow",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives moving through resource flow",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-25",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives moving through strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives moving through strategy",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-5",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives under obstruction",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives under obstruction",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-8",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 30,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "complication or mixed motives under strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "complication or mixed motives under strategy",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-35",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "defensive caution feeding anxious talk, crossed signals, or too much social overprocessing",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "defensive caution feeding anxious talk, crossed signals, or too much social overprocessing",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-6",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "delay shaped by communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "delay shaped by communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-26",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "distance, fixed roles, or formal social structure being made harder by anxious talk, crossed signals, or too much chatter",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "distance, fixed roles, or formal social structure being made harder by anxious talk, crossed signals, or too much chatter",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-0",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "distance, structure, or formal boundaries being worn down by repeated social strain",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "distance, structure, or formal boundaries being worn down by repeated social strain",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-15",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage in closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage in closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-16",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage moving through closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage moving through closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-24",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage moving through erosion and stress",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage moving through erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-3",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage moving through structure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage moving through structure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-10",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage under communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage under communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-5",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "fog and uncertainty moving through communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "fog and uncertainty moving through communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-38",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "fog and uncertainty under communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "fog and uncertainty under communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-2",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "fog and uncertainty under repetition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "fog and uncertainty under repetition",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-2",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "guidance and signal under closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "guidance and signal under closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-36",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication in decisive cuts",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication in decisive cuts",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-31",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication in structure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication in structure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-16",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication moving through closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication moving through closure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-45",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication moving through fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication moving through fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-3",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication moving through recognition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication moving through recognition",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-4",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication under caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication under caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-41",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication under fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication under fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-45",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "nervous communication under obstruction",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "nervous communication under obstruction",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-33",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "obstacle or delay under fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "obstacle or delay under fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-0",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 36,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "repeated social drain gathering around a pause, ending, or quiet withdrawal",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repeated social drain gathering around a pause, ending, or quiet withdrawal",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-47",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "repetition and tension in erosion and stress",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repetition and tension in erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-41",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "repetition and tension moving through strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repetition and tension moving through strategy",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-14",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "repetition and tension under fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repetition and tension under fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-43",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "social uncertainty being intensified by guarded strategy, self-protective positioning, or too much management of the dynamic",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "social uncertainty being intensified by guarded strategy, self-protective positioning, or too much management of the dynamic",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-8",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "social uncertainty being made worse by guarded strategy, overmanagement, or too much careful positioning",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "social uncertainty being made worse by guarded strategy, overmanagement, or too much careful positioning",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-27",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "social uncertainty gathering around a pause, ending, or quiet withdrawal that has not yet been understood cleanly",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "social uncertainty gathering around a pause, ending, or quiet withdrawal that has not yet been understood cleanly",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-18",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "social uncertainty thickening because repeated strain and wear are already getting harder to ignore",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "social uncertainty thickening because repeated strain and wear are already getting harder to ignore",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-28",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "structure, distance, or institution moving through caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "structure, distance, or institution moving through caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-31",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "structure, distance, or institution moving through communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "structure, distance, or institution moving through communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-32",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "structure, distance, or institution under caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "structure, distance, or institution under caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-12",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "the other person's position being obscured by mixed signals, unclear motives, or uncertain availability",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the other person's position being obscured by mixed signals, unclear motives, or uncertain availability",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-43",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the other person's stance in strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the other person's stance in strategy",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-22",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the other person's stance moving through caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the other person's stance moving through caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-39",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the other person's stance moving through communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the other person's stance moving through communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-30",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own position in caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position in caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-6",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 14,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position moving through fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position moving through fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-7",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 6,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position under caution",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position under caution",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-24",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 14,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own position under structure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": true,
+      "examples": [
+        {
+          "phrase": "your own position under structure",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-20",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": true
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position being pulled through too much chatter, nerves, or crossed signals",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position being pulled through too much chatter, nerves, or crossed signals",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-29",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 12,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position caught in mixed motives or a dynamic that needs clearer boundaries",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position caught in mixed motives or a dynamic that needs clearer boundaries",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-7",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 7,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position moving into a needed pause, ending, or quiet withdrawal",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position moving into a needed pause, ending, or quiet withdrawal",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-deep-44",
+          "subjectId": "friends_social",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your own social position sitting inside mixed signals, ambiguity, or too little clarity",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your own social position sitting inside mixed signals, ambiguity, or too little clarity",
+          "label": "pressure",
+          "caseId": "harvest-friends_social-quick-27",
+          "subjectId": "friends_social",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 6,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    }
+  ]
+}

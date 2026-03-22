@@ -1,0 +1,3106 @@
+{
+  "generatedAt": "2026-03-18T01:44:15.165Z",
+  "subjectId": "pets",
+  "totalCases": 96,
+  "totalFindings": 192,
+  "totalUniquePhrases": 127,
+  "suspiciousFindings": 0,
+  "suspiciousUniquePhrases": 0,
+  "aggregates": [
+    {
+      "phrase": "movement beginning in the care picture",
+      "label": "opening",
+      "count": 6,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "movement beginning in the care picture",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-4",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning in the care picture",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-24",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning in the care picture",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-27",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning in the care picture",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-32",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "movement beginning in the care picture",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-41",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "steadier support",
+      "label": "opening",
+      "count": 6,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "steadier support",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-8",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 23,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "steadier support",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-9",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "steadier support",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-11",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "steadier support",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-13",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "steadier support",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-16",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care decisions becoming the clearest part of the situation you can actually control",
+      "label": "opening",
+      "count": 6,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care decisions becoming the clearest part of the situation you can actually control",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-2",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care decisions becoming the clearest part of the situation you can actually control",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-5",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care decisions becoming the clearest part of the situation you can actually control",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-19",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care decisions becoming the clearest part of the situation you can actually control",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-31",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care decisions becoming the clearest part of the situation you can actually control",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-31",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "mixed messages, gossip, or anxious conversation that can distort what is really happening",
+      "label": "pressure",
+      "count": 5,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "mixed messages, gossip, or anxious conversation that can distort what is really happening",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-6",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "mixed messages, gossip, or anxious conversation that can distort what is really happening",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-12",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "mixed messages, gossip, or anxious conversation that can distort what is really happening",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-35",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "mixed messages, gossip, or anxious conversation that can distort what is really happening",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-39",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "mixed messages, gossip, or anxious conversation that can distort what is really happening",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-47",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clearer care direction gathering around what you can actually do",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "clearer care direction gathering around what you can actually do",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-23",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "clearer care direction gathering around what you can actually do",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-29",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "clearer care direction gathering around what you can actually do",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-44",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clearer signs of improvement",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "clearer signs of improvement",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-12",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "clearer signs of improvement",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-33",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "clearer signs of improvement",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-35",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth around your own position",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-13",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "slow growth around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-14",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "slow growth around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-23",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the care rhythm beginning to move in a healthier direction",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the care rhythm beginning to move in a healthier direction",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-1",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "the care rhythm beginning to move in a healthier direction",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-29",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "the care rhythm beginning to move in a healthier direction",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-33",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely helps the animal settle",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely helps the animal settle",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-1",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "what genuinely helps the animal settle",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-41",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "what genuinely helps the animal settle",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-47",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care approach finding a steadier rhythm that can actually hold",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care approach finding a steadier rhythm that can actually hold",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-14",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care approach finding a steadier rhythm that can actually hold",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-18",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care approach finding a steadier rhythm that can actually hold",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-30",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care picture becoming clearer and easier to trust",
+      "label": "opening",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care picture becoming clearer and easier to trust",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-3",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care picture becoming clearer and easier to trust",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-21",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care picture becoming clearer and easier to trust",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-38",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a strategic ending or necessary pause",
+      "label": "pressure",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a strategic ending or necessary pause",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-28",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a strategic ending or necessary pause",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-32",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a strategic ending or necessary pause",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-41",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "anxious talk, speculation, or over-monitoring around the animal",
+      "label": "pressure",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "anxious talk, speculation, or over-monitoring around the animal",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-6",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "anxious talk, speculation, or over-monitoring around the animal",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-14",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "anxious talk, speculation, or over-monitoring around the animal",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-30",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+      "label": "pressure",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-1",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-10",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "nervous conversation caught in repetition, where talk can sharpen rather than settle the issue",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-30",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "rigid routines, outside constraints, or institutional structure pressing on the care rhythm",
+      "label": "pressure",
+      "count": 3,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "rigid routines, outside constraints, or institutional structure pressing on the care rhythm",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-5",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "rigid routines, outside constraints, or institutional structure pressing on the care rhythm",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-34",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 6,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "rigid routines, outside constraints, or institutional structure pressing on the care rhythm",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-36",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a new care cue, response, or shift",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a new care cue, response, or shift",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-28",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a new care cue, response, or shift",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-39",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clearer signal gathering around your care for the animal",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "clearer signal gathering around your care for the animal",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-32",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "clearer signal gathering around your care for the animal",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-37",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "constructive change in incoming momentum",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "constructive change in incoming momentum",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-34",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 6,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "constructive change in incoming momentum",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-40",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely helps the animal feel safer gathering around a useful change",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely helps the animal feel safer gathering around a useful change",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-17",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "what genuinely helps the animal feel safer gathering around a useful change",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-37",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care being pulled back toward what genuinely comforts or protects the animal",
+      "label": "opening",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care being pulled back toward what genuinely comforts or protects the animal",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-7",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care being pulled back toward what genuinely comforts or protects the animal",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-22",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a care delay or blockage being worsened by overprotection or second-guessing",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a care delay or blockage being worsened by overprotection or second-guessing",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-46",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 4,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a care delay or blockage being worsened by overprotection or second-guessing",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-47",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a necessary care change or firmer boundary being complicated by anxious talk or too much interpretation",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a necessary care change or firmer boundary being complicated by anxious talk or too much interpretation",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-22",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a necessary care change or firmer boundary being complicated by anxious talk or too much interpretation",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-43",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a necessary care change or firmer boundary landing as a pause or setback becomes unavoidable",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a necessary care change or firmer boundary landing as a pause or setback becomes unavoidable",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-14",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a necessary care change or firmer boundary landing as a pause or setback becomes unavoidable",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-42",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a necessary care change or firmer boundary that now needs honest handling",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a necessary care change or firmer boundary that now needs honest handling",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-20",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a necessary care change or firmer boundary that now needs honest handling",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-41",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a stopped place made heavier by delay, distance, or the feeling of no easy passage",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a stopped place made heavier by delay, distance, or the feeling of no easy passage",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-26",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "a stopped place made heavier by delay, distance, or the feeling of no easy passage",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-34",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "anxious talk and over-monitoring gathering around a care load that is already heavy",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "anxious talk and over-monitoring gathering around a care load that is already heavy",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-5",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "anxious talk and over-monitoring gathering around a care load that is already heavy",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-45",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "anxious talk and over-monitoring thickening an already unclear care picture",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "anxious talk and over-monitoring thickening an already unclear care picture",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-13",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "anxious talk and over-monitoring thickening an already unclear care picture",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-22",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "crossed care priorities and mixed handling making the situation harder to read cleanly",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "crossed care priorities and mixed handling making the situation harder to read cleanly",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-4",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "crossed care priorities and mixed handling making the situation harder to read cleanly",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-17",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling and too much control clouding the care picture",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling and too much control clouding the care picture",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-13",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "overprotective handling and too much control clouding the care picture",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-25",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling being shaped by another person's role in the care situation",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling being shaped by another person's role in the care situation",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-3",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "overprotective handling being shaped by another person's role in the care situation",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-9",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling making an already blocked care pattern harder to shift",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling making an already blocked care pattern harder to shift",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-7",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 24,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "overprotective handling making an already blocked care pattern harder to shift",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-31",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "pressure moving through official structures, boundaries, or a system that keeps the tension in place",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "pressure moving through official structures, boundaries, or a system that keeps the tension in place",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-40",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "pressure moving through official structures, boundaries, or a system that keeps the tension in place",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-40",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "rigid routines, outside constraints, or institutional structure being worn down by repeated strain",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "rigid routines, outside constraints, or institutional structure being worn down by repeated strain",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-25",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "rigid routines, outside constraints, or institutional structure being worn down by repeated strain",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-32",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "uncertainty about the animal's signals gathering around a pause or setback",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "uncertainty about the animal's signals gathering around a pause or setback",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-21",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 7,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "uncertainty about the animal's signals gathering around a pause or setback",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-33",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "uncertainty around what the animal is signaling",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "uncertainty around what the animal is signaling",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-7",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "uncertainty around what the animal is signaling",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-29",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "uncertainty being made worse by overmanagement or too much careful control",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "uncertainty being made worse by overmanagement or too much careful control",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-29",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 17,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "uncertainty being made worse by overmanagement or too much careful control",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-33",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "uncertainty thickening because repeated strain is already wearing the care rhythm down",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "uncertainty thickening because repeated strain is already wearing the care rhythm down",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-37",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "uncertainty thickening because repeated strain is already wearing the care rhythm down",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-38",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 32,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care for the animal at the point that needs the most honest attention",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care for the animal at the point that needs the most honest attention",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-8",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care for the animal at the point that needs the most honest attention",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-15",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care for the animal moving through a pause, setback, or necessary rest phase",
+      "label": "pressure",
+      "count": 2,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care for the animal moving through a pause, setback, or necessary rest phase",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-4",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        },
+        {
+          "phrase": "your care for the animal moving through a pause, setback, or necessary rest phase",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-43",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a message, record, or document under clarity and success",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a message, record, or document under clarity and success",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-2",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small beginning in improvement or movement",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small beginning in improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-19",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small beginning under improvement or movement",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small beginning under improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-25",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small but real opening around hidden knowledge or secrecy",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small but real opening around hidden knowledge or secrecy",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-8",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small but real opening around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small but real opening around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-35",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening around a small opening",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening around a small opening",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-40",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening around choice and branching paths",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening around choice and branching paths",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-28",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening around clarity and visible progress",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening around clarity and visible progress",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-43",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening in clarity and success",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening in clarity and success",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-46",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening in maturity",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening in maturity",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-36",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a small opening under improvement or movement",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a small opening under improvement or movement",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-17",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a workable care answer beginning to show through support that actually holds",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a workable care answer beginning to show through support that actually holds",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-5",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clarity itself becoming the solution",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "clarity itself becoming the solution",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-10",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "clearer signal beginning to show through calmer judgment and steadier pacing",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "clearer signal beginning to show through calmer judgment and steadier pacing",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-7",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "constructive change under values and love",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "constructive change under values and love",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-11",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 14,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace around a message, record, or document",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace around a message, record, or document",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-0",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace around clarity and visible progress",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace around clarity and visible progress",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-4",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace, goodwill, or invitation in clarity and success",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace, goodwill, or invitation in clarity and success",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-38",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 32,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace, goodwill, or invitation under slow growth",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace, goodwill, or invitation under slow growth",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-25",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "grace, goodwill, or invitation under the public field",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "grace, goodwill, or invitation under the public field",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-15",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "improvement or movement around a small beginning",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "improvement or movement around a small beginning",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-10",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "improvement or movement around power or resource control",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "improvement or movement around power or resource control",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-15",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "improvement or movement around slow growth and rooting",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "improvement or movement around slow growth and rooting",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-26",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "incoming momentum around a solution or unlock",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "incoming momentum around a solution or unlock",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-12",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "incoming momentum around clarity and visible progress",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "incoming momentum around clarity and visible progress",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-3",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "incoming momentum around the commitment question or repeating terms",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "incoming momentum around the commitment question or repeating terms",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-43",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "maturity and restraint under guidance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "maturity and restraint under guidance",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-21",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 7,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "maturity and restraint under maturity",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "maturity and restraint under maturity",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-6",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "maturity around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "maturity around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-39",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 30,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "practical support and cleaner routines gathering around your care for the animal",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "practical support and cleaner routines gathering around your care for the animal",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-26",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth and rooting in your own field",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth and rooting in your own field",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-27",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "slow growth and rooting under grace",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "slow growth and rooting under grace",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-45",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "stability and endurance in expansion",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "stability and endurance in expansion",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-16",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "steadier support gathering around your care for the animal",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "steadier support gathering around your care for the animal",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-36",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the answer point around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the answer point around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-6",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the care picture getting more room to ease and improve",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the care picture getting more room to ease and improve",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-42",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 3,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the care rhythm improving more slowly but on steadier ground",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the care rhythm improving more slowly but on steadier ground",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-42",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the public field around maturity and restraint",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the public field around maturity and restraint",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-30",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the public field around your own position",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the public field around your own position",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-44",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the wider environment supporting steadier improvement more than first appearances suggest",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the wider environment supporting steadier improvement more than first appearances suggest",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-24",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely helps the animal settle becoming clearer through calmer judgment and steadier pacing",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely helps the animal settle becoming clearer through calmer judgment and steadier pacing",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-20",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely helps the animal settle becoming clearer through the part you can actually control",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely helps the animal settle becoming clearer through the part you can actually control",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-0",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "what genuinely helps the animal settle becoming harder to ignore",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "what genuinely helps the animal settle becoming harder to ignore",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-47",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 15,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care being met with a softer, more encouraging response",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care being met with a softer, more encouraging response",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-18",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care for the animal finding a small but usable opening",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care for the animal finding a small but usable opening",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-22",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 2,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care for the animal reaching the clearest point of usable guidance",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care for the animal reaching the clearest point of usable guidance",
+          "label": "opening",
+          "caseId": "harvest-pets-quick-9",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your role meeting a newly forming situation, where what you do first matters more than what you promise later",
+      "label": "opening",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your role meeting a newly forming situation, where what you do first matters more than what you promise later",
+          "label": "opening",
+          "caseId": "harvest-pets-deep-20",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a care delay or blockage being worsened by overmanagement or too much control",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a care delay or blockage being worsened by overmanagement or too much control",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-35",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a care delay or blockage sitting inside a pattern that still has not shifted",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a care delay or blockage sitting inside a pattern that still has not shifted",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-16",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 11,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a care delay or blockage that still has to be worked through patiently",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a care delay or blockage that still has to be worked through patiently",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-19",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 27,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a necessary care change or firmer boundary being shaped by overmanagement or too much control",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a necessary care change or firmer boundary being shaped by overmanagement or too much control",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-0",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 8,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, setback, or necessary rest becoming harder to read because the signals are still unclear",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, setback, or necessary rest becoming harder to read because the signals are still unclear",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-42",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 3,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, setback, or necessary rest being shaped by another person's role in the care situation",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, setback, or necessary rest being shaped by another person's role in the care situation",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-31",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, setback, or necessary rest being sharpened by a harder care decision",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, setback, or necessary rest being sharpened by a harder care decision",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-45",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, setback, or necessary rest gathering around what is still unclear or off the page",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, setback, or necessary rest gathering around what is still unclear or off the page",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-18",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 35,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, setback, or necessary rest in the care rhythm being blurred by anxious talk and too much interpretation",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, setback, or necessary rest in the care rhythm being blurred by anxious talk and too much interpretation",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-27",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "a pause, setback, or necessary rest phase that needs honest recognition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "a pause, setback, or necessary rest phase that needs honest recognition",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-39",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 30,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "anxious talk and over-monitoring building around a blockage in the care pattern",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "anxious talk and over-monitoring building around a blockage in the care pattern",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-16",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "anxious talk or over-monitoring being tightened further by overprotection",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "anxious talk or over-monitoring being tightened further by overprotection",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-11",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "complication feeding anxiety, attrition, or the slow damage done by what keeps slipping sideways",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "complication feeding anxiety, attrition, or the slow damage done by what keeps slipping sideways",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-37",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 25,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "crossed care priorities complicating a care load that is already heavy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "crossed care priorities complicating a care load that is already heavy",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-15",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "crossed care priorities feeding the same care loop again and again",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "crossed care priorities feeding the same care loop again and again",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-36",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 18,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "crossed care priorities gathering around a pause or setback that has not been faced cleanly",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "crossed care priorities gathering around a pause or setback that has not been faced cleanly",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-23",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "crossed care priorities getting amplified by another person's role in the situation",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "crossed care priorities getting amplified by another person's role in the situation",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-2",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "crossed care priorities or mixed handling complicating an already guarded situation",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "crossed care priorities or mixed handling complicating an already guarded situation",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-24",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "decision pressure gathering around a pause, setback, or necessary ending",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "decision pressure gathering around a pause, setback, or necessary ending",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-44",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "delay shaped by fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "delay shaped by fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-24",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "delay shaped by recognition",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "delay shaped by recognition",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-3",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage in fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage in fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-38",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage under communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage under communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-2",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 22,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "erosion, worry, or leakage under structure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "erosion, worry, or leakage under structure",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-0",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 28,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "hidden knowledge or secrecy in strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "hidden knowledge or secrecy in strategy",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-26",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 34,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling being amplified by outside opinion or the visible care environment",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling being amplified by outside opinion or the visible care environment",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-19",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 29,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling feeding the same care loop again and again",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling feeding the same care loop again and again",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-12",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling gathering around a harder care decision that now needs to be made cleanly",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling gathering around a harder care decision that now needs to be made cleanly",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-27",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 19,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "overprotective handling growing out of uncertainty about what the animal is signaling",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "overprotective handling growing out of uncertainty about what the animal is signaling",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-23",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 5,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "repetition and tension in fog or uncertainty",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repetition and tension in fog or uncertainty",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-1",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 26,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "repetition and tension moving through erosion and stress",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repetition and tension moving through erosion and stress",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-9",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 33,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "repetition and tension under closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "repetition and tension under closure",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-10",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "rigid routines, outside constraints, or institutional structure being made noisier by anxious discussion and over-monitoring",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "rigid routines, outside constraints, or institutional structure being made noisier by anxious discussion and over-monitoring",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-28",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 10,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "stability and endurance under closure",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "stability and endurance under closure",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-18",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 9,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the care load feeling heavier and needing wiser handling",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the care load feeling heavier and needing wiser handling",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-46",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 21,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the care load feeling heavier because repeated strain is already wearing the routine down",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the care load feeling heavier because repeated strain is already wearing the routine down",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-11",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 14,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the other person's stance moving through strategy",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the other person's stance moving through strategy",
+          "label": "pressure",
+          "caseId": "harvest-pets-quick-17",
+          "subjectId": "pets",
+          "readingStyle": "quick",
+          "focusCardId": 29,
+          "focusPosition": 16,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "the public or social field in communication and nerves",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "the public or social field in communication and nerves",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-20",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 13,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "uncertainty deepening because the blockage in the care pattern still has not shifted",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "uncertainty deepening because the blockage in the care pattern still has not shifted",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-44",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 20,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "uncertainty gathering around how the animal's signals are being read or recognized",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "uncertainty gathering around how the animal's signals are being read or recognized",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-21",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 31,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "phrase": "your care for the animal being worn down by repeated strain, small stressors, or accumulating wear",
+      "label": "pressure",
+      "count": 1,
+      "suspicious": false,
+      "examples": [
+        {
+          "phrase": "your care for the animal being worn down by repeated strain, small stressors, or accumulating wear",
+          "label": "pressure",
+          "caseId": "harvest-pets-deep-8",
+          "subjectId": "pets",
+          "readingStyle": "deep_dive",
+          "focusCardId": 29,
+          "focusPosition": 23,
+          "gtLayout": "4x9",
+          "suspicious": false
+        }
+      ]
+    }
+  ]
+}

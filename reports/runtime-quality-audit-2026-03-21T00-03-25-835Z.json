@@ -1,0 +1,1860 @@
+{
+  "rows": [
+    {
+      "caseId": "general_gt",
+      "setup": {
+        "caseId": "general_gt",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "question": "What should I know about the next three months overall?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "open"
+      },
+      "resolvedSubjectId": "love",
+      "resolvedThemeId": "new_connection",
+      "resolvedThemeLabel": "New Connection",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:love:32",
+          "techniqueKey": "card:32",
+          "score": 12.634,
+          "selectedText": "In Love, Moon brings distance and commitment into the relationship field through emotional attunement is required.",
+          "summary": "Moon shapes the relationship field through recognition.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:love:1",
+          "techniqueKey": "house:1",
+          "score": 14.028,
+          "selectedText": "Rider House shows where new connection and communication becomes concrete in the relationship field, especially around incoming momentum.",
+          "summary": "Rider House localizes the relationship field around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:love:9-32:fallback",
+          "techniqueKey": "pair:9-32",
+          "score": 12.472,
+          "selectedText": "Bouquet + Moon blends gift with recognition, inviting offer gratitude and receive support while staying aware of being led by fluctuating mood.",
+          "summary": "Bouquet and Moon create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:love:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how timing and communication develops across the relationship field.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:love:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around timing and flirtation that can redirect timing in the relationship field.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:love:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In the relationship field, near cards show how urgently timing and new connection needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:love:open",
+          "techniqueKey": "significator:open",
+          "score": 11.312,
+          "selectedText": "This significator frame keeps the reading tied to the most relevant point of view, which sharpens trust and new connection in the relationship field.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [
+        "This looks like a live process rather than a closed answer: the other person's stance moving through repetition is real, yet a small but real opening around warmth, goodwill, or a friendlier response keeps the future from narrowing too quickly."
+      ],
+      "repeatedPhrasesInReading": [],
+      "finalText": "\"What should I know about the next three months overall\" draws the reading toward general reading, with a clarity emphasis. Whip House now holds Counterpart (28), which puts the other person's position, the mirrored side of events, and the part of the wider situation you do not define alone at the center of the reading. That is why the other person's stance carries real weight here. Counterpart in Whip House ties the other person's position, the mirrored side of events, and the part of the wider situation you do not define alone to the repeating cycle, pressure point, or friction pattern that will keep shaping the wider situation until the pattern itself changes. Moon (32) with Bouquet (9) points to recognition meeting warmth, which asks you to track cycles and communicate needs while staying alert to confusing pleasant tone with real alignment. Moon and Bouquet show visibility and emotional tone and warmth, invitation, and what opens through tone actively shaping each other rather than sitting in separate lanes. Across the field, pressure and weight lead, and guidance and openings keep working underneath. Under the first impression, Moon (32), Counterpart (28), Dog (18), Lily (30) and Whip (11), Rider (1) read as a slow build, while Mice (23), Tower (19), Crossroads (22), Snake (7) show where the pace changes. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. The first pressure sits with Moon (32), Bouquet (9), Whip (11), Ring (25); Mice (23), Tree (5), Tower (19), Crossroads (22) show the layer that forms just behind it. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. This looks like a live process rather than a closed answer: the other person's stance moving through repetition is real, yet a small but real opening around warmth, goodwill, or a friendlier response keeps the future from narrowing too quickly. One useful intervention starts in Whip House: use the friction to improve the pattern instead of replaying it. That keeps the focus on the repeating cycle, pressure point, or friction pattern that will keep shaping the wider situation until the pattern itself changes. ",
+      "wordCount": 396
+    },
+    {
+      "caseId": "general_3card",
+      "setup": {
+        "caseId": "general_3card",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "clarity",
+        "spreadType": "three-card",
+        "question": "What is the clearest way to approach this week?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "health",
+      "resolvedThemeId": "rest",
+      "resolvedThemeLabel": "Rest",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:health:20",
+          "techniqueKey": "card:20",
+          "score": 12.634,
+          "selectedText": "In Health, Garden brings energy and recovery into wellbeing, energy, and recovery through the wider social ecosystem and visible context.",
+          "summary": "Garden shapes wellbeing, energy, and recovery through public.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:health:20-23:fallback",
+          "techniqueKey": "pair:20-23",
+          "score": 12.472,
+          "selectedText": "Garden + Mice blends public with erosion, inviting curate meaningful participation while staying aware of ignoring minor losses until they accumulate.",
+          "summary": "Garden and Mice create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:health:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how energy and recovery develops across wellbeing, energy, and recovery.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:health:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around energy and recovery that can redirect timing in wellbeing, energy, and recovery.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:health:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In wellbeing, energy, and recovery, near cards show how urgently energy and recovery needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:health:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens energy and recovery in wellbeing, energy, and recovery.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "\"What is the clearest way to approach this week\" draws the reading toward general reading, with a clarity emphasis. Garden (20) in Situation sets the tone with the wider social ecosystem and visible context. Here, Garden emphasizes the wider social field, shared context, or visible environment that starts mattering once events can no longer stay private. Challenge centers on Mice (23), where the whole sequence either opens or tightens. Here, Mice emphasizes stress, erosion, and the small repeated drains that become serious only after they have accumulated. What develops in Advice through Ring (25) points to commitment clarity stabilizes momentum, provided the central pressure is handled honestly. Here, Ring emphasizes agreements, repetition, mutual terms, and what keeps returning until it is consciously renewed or revised. Garden (20) and Mice (23) give the reading its clearest inner logic, pointing to a blend of public and erosion, asking you to curate meaningful participation while staying alert to ignoring minor losses until they accumulate. Mice (23) shows where the whole sequence either opens or tightens. Mice colors the wider situation through worry, attrition, and the little losses that quietly change the mood of the whole situation. Garden (20) with Mice (23) keep emphasizing a blend of public and erosion, asking you to curate meaningful participation while staying alert to ignoring minor losses until they accumulate. Patch leaks and simplify so Ring (25) can land as lived experience rather than just possibility. ",
+      "wordCount": 238
+    },
+    {
+      "caseId": "love_gt",
+      "setup": {
+        "caseId": "love_gt",
+        "subjectId": "love",
+        "interpretationThemeId": "commitment",
+        "spreadType": "grand-tableau",
+        "question": "How is this relationship developing and what needs care?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "relationship"
+      },
+      "resolvedSubjectId": "love",
+      "resolvedThemeId": "commitment",
+      "resolvedThemeLabel": "Commitment",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:love:29",
+          "techniqueKey": "card:29",
+          "score": 12.634,
+          "selectedText": "In Love, Querent brings closure and timing into the relationship field through self-awareness improves relational clarity.",
+          "summary": "Querent shapes the relationship field through self.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:love:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "Rider House shows where new connection and communication becomes concrete in the relationship field, especially around incoming momentum.",
+          "summary": "Rider House localizes the relationship field around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:love:2-30:fallback",
+          "techniqueKey": "pair:2-30",
+          "score": 12.472,
+          "selectedText": "Clover + Lily blends luck with maturity, inviting take the chance while it is available while staying aware of passive avoidance of necessary action.",
+          "summary": "Clover and Lily create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:love:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how timing and communication develops across the relationship field.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:love:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around timing and flirtation that can redirect timing in the relationship field.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:love:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In the relationship field, near cards show how urgently timing and new connection needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:love:relationship",
+          "techniqueKey": "significator:relationship",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to the bond itself, which sharpens trust and timing in the relationship field.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "For \"How is this relationship developing and what needs care\", the cards keep circling back to love, with a commitment emphasis. Rider House now holds Querent (29), which puts your own stance in the relationship, including boundaries, availability, and the tone you are setting without always realizing it at the center of the reading. That is why your own stance carries more weight here than the surrounding noise. Querent meeting Rider House brings your own stance in the relationship, including boundaries, availability, and the tone you are setting without always realizing it into the atmosphere of the part of the field where messages, news, and first movement arrive. Lily (30) beside Clover (2) sharpens the reading around maturity meeting luck, which asks you to pair composure with clear intent while staying alert to assuming fortune will remain without effort. Lily and Clover show maturity and peace and luck and window actively shaping each other rather than sitting in separate lanes. The field is marked by guidance and openings, with a secondary pull toward pressure and weight. The diagonals run through Querent (29), Whip (11), Sun (31), Garden (20), while Mountain (21), Child (13) tighten the timing around that longer movement. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. The first pressure sits with Lily (30), Clover (2), Whip (11); Dog (18), Mountain (21), Stars (16), Child (13) show the layer that forms just behind it. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. The future stays more open with events beginning to move the moment your own stance becomes clear, provided repeated friction and pressure moving through repetition does not take over. Rider House is the place to act: respond promptly and confirm what is true. That should give the situation a steadier base. ",
+      "wordCount": 344
+    },
+    {
+      "caseId": "love_3card",
+      "setup": {
+        "caseId": "love_3card",
+        "subjectId": "love",
+        "interpretationThemeId": "communication",
+        "spreadType": "three-card",
+        "question": "What should I focus on in my current romantic dynamic?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "relationship"
+      },
+      "resolvedSubjectId": "love",
+      "resolvedThemeId": "communication",
+      "resolvedThemeLabel": "Communication",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:love:8",
+          "techniqueKey": "card:8",
+          "score": 12.634,
+          "selectedText": "In Love, Coffin brings ending or separation and closure into the relationship field through old relational scripts may need a clean ending.",
+          "summary": "Coffin shapes the relationship field through ending.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:love:10-35:fallback",
+          "techniqueKey": "pair:10-35",
+          "score": 12.472,
+          "selectedText": "Scythe + Anchor blends cut with stability, inviting choose cleanly and communicate implications while staying aware of staying anchored to obsolete goals.",
+          "summary": "Scythe and Anchor create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:love:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The main diagonal shows how timing and communication develops across the relationship field.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:love:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around timing and flirtation that can redirect timing in the relationship field.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:love:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In the relationship field, near cards show how urgently timing and new connection needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:love:relationship",
+          "techniqueKey": "significator:relationship",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to the bond itself, which sharpens trust and timing in the relationship field.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "The cards answer \"What should I focus on in my current romantic dynamic\" through Love with a communication emphasis. The sequence begins in Situation with Coffin (8), so old relational scripts may need a clean ending is already in play. Coffin often points to emotional endings, cold places in the bond, and the need to let what has already gone quiet actually rest in the relationship itself. In Challenge, Scythe (10) becomes the pivot, so the next movement depends on how its lesson is handled. Here, Scythe emphasizes clear boundaries, decisive conversations, and the moment a romantic ambiguity has to be cut through. What develops in Advice through Anchor (35) points to consistency creates relational safety, provided the central pressure is handled honestly. Anchor often points to consistency, reliability, and the sort of commitment that proves itself by staying power in the relationship itself. The relationship thread is clearest where Scythe (10) meets Anchor (35): a blend of cut and stability, asking you to choose cleanly and communicate implications while staying alert to staying anchored to obsolete goals. The spread turns on Scythe (10) more than any other card. Scythe colors the relationship itself through clear boundaries, decisive conversations, and the moment a romantic ambiguity has to be cut through. Scythe (10) with Anchor (35) keep emphasizing a blend of cut and stability, asking you to choose cleanly and communicate implications while staying alert to staying anchored to obsolete goals. Choose cleanly and communicate implications so Anchor (35) can land as lived experience rather than just possibility. ",
+      "wordCount": 257
+    },
+    {
+      "caseId": "work_gt",
+      "setup": {
+        "caseId": "work_gt",
+        "subjectId": "work",
+        "interpretationThemeId": "burnout",
+        "spreadType": "grand-tableau",
+        "question": "How can I navigate workload pressure and politics at work?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "work",
+      "resolvedThemeId": "burnout",
+      "resolvedThemeLabel": "Burnout",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:work:19",
+          "techniqueKey": "card:19",
+          "score": 12.634,
+          "selectedText": "In Work, Tower brings boundaries and stability into the workplace and your role through institutional processes and hierarchy matter.",
+          "summary": "Tower shapes the workplace and your role through institution.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:work:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "Rider House shows where promotion and workplace politics becomes concrete in the workplace and your role, especially around incoming momentum.",
+          "summary": "Rider House localizes the workplace and your role around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:work:4-28:fallback",
+          "techniqueKey": "pair:4-28",
+          "score": 12.472,
+          "selectedText": "House + Counterpart blends home with other, inviting strengthen routines and boundaries while staying aware of projecting assumptions onto others.",
+          "summary": "House and Counterpart create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:work:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how workplace politics and leadership develops across the workplace and your role.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:work:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator reveals side influences around workplace politics and burnout that can redirect timing in the workplace and your role.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:work:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In the workplace and your role, near cards show how urgently workplace politics and burnout needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:work:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens workplace politics and boundaries in the workplace and your role.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [
+        "This keeps your role, boundaries, workload ownership, and the way your position is shaping the outcome in the foreground."
+      ],
+      "repeatedPhrasesInReading": [
+        "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
+      ],
+      "finalText": "For \"How can I navigate workload pressure and politics at work\", the clearest pattern sits in Work with a burnout emphasis. At the center, Querent (29) rests in Cross House. This keeps your role, boundaries, workload ownership, and the way your position is shaping the outcome in the foreground. That is why your own stance carries more weight here than the surrounding noise. Placed in Cross House, Querent shows how your role, boundaries, workload ownership, and the way your position is shaping the outcome is being shaped by responsibility, consequence, and the burden that comes with serious stakes. House (4) beside Counterpart (28) sharpens the reading around home meeting the other person's position, which asks you to strengthen routines and boundaries while staying alert to projecting assumptions onto others. Taken together, House and Counterpart bring the shared base and what needs steadiness into direct contact with the other person's stance and what it reflects back, so neither can be read on its own. The field is marked by stability and endurance, with a secondary pull toward guidance and openings. Under the first impression, Birds (12), Rider (1), House (4), Querent (29) read as a slow build, while Stars (16), Fish (34) show where the pace changes. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. The near field, House (4), Counterpart (28), Fox (14), speaks to current pressure, and Rider (1), Stars (16), Clover (2), Fish (34) helps show what gathers next. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. At heart, this is a phase where nervous communication moving through fog or uncertainty has to be faced honestly, while constructive change in grace shows where the path can still open. If there is a leverage point here, it sits in Cross House: differentiate purpose from pressure. That keeps the focus on responsibility, consequence, and the burden that comes with serious stakes. ",
+      "wordCount": 361
+    },
+    {
+      "caseId": "work_3card",
+      "setup": {
+        "caseId": "work_3card",
+        "subjectId": "work",
+        "interpretationThemeId": "workplace_politics",
+        "spreadType": "three-card",
+        "question": "What is happening in my team dynamics this month?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "work",
+      "resolvedThemeId": "workplace_politics",
+      "resolvedThemeLabel": "Workplace Politics",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:work:4",
+          "techniqueKey": "card:4",
+          "score": 12.634,
+          "selectedText": "In Work, House brings boundaries and stability into the workplace and your role through systems and operational basics need reinforcement.",
+          "summary": "House shapes the workplace and your role through home.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:work:23-27:fallback",
+          "techniqueKey": "pair:23-27",
+          "score": 12.472,
+          "selectedText": "Mice + Letter blends erosion with document, inviting patch leaks and simplify while staying aware of vague or untracked communication.",
+          "summary": "Mice and Letter create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:work:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The main diagonal shows how workplace politics and leadership develops across the workplace and your role.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:work:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator reveals side influences around workplace politics and burnout that can redirect timing in the workplace and your role.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:work:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In the workplace and your role, near cards show how urgently workplace politics and burnout needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:work:self",
+          "techniqueKey": "significator:self",
+          "score": 11.312,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens workplace politics and boundaries in the workplace and your role.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "For \"What is happening in my team dynamics this month\", the spread keeps returning to work, with a workplace politics emphasis. With House (4) in the situation, the reading shows where things already stand, and the picture is already being shaped by systems and operational basics need reinforcement. House colors your work life through base systems, standard process. Challenge turns on Mice (23), so the middle card becomes the point where the sequence can redirect. Here, Mice emphasizes workflow leaks, repeated corrections, low-grade stress, and the hidden cost of everything that needs fixing twice. Advice closes with Letter (27), and the directional message is documentation protects execution quality when the pivot receives consistent attention. Letter colors your work life through instructions, approvals, filings, and the paper trail that keeps the work defensible. What ties the professional sequence together is the link between Mice (23) and Letter (27): a blend of erosion and document, asking you to patch leaks and simplify while staying alert to vague or untracked communication. Mice (23) shows where the whole sequence either opens or tightens. Mice often points to workflow leaks, repeated corrections, low-grade stress, and the hidden cost of everything that needs fixing twice in your work life. Mice (23) with Letter (27) keep emphasizing a blend of erosion and document, asking you to patch leaks and simplify while staying alert to vague or untracked communication. Patch leaks and simplify so Letter (27) can land as lived experience rather than just possibility. ",
+      "wordCount": 247
+    },
+    {
+      "caseId": "money_gt",
+      "setup": {
+        "caseId": "money_gt",
+        "subjectId": "money",
+        "interpretationThemeId": "financial_pressure",
+        "spreadType": "grand-tableau",
+        "question": "How can I stabilize my finances while planning ahead?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "money",
+      "resolvedThemeId": "financial_pressure",
+      "resolvedThemeLabel": "Financial Pressure",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:money:23",
+          "techniqueKey": "card:23",
+          "score": 12.634,
+          "selectedText": "In Money, Mice brings unexpected gain and cashflow into resources, affordability, and flow through reduce stressors and prevent gradual depletion.",
+          "summary": "Mice shapes resources, affordability, and flow through erosion.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:money:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "Rider House shows where unexpected gain and cashflow becomes concrete in resources, affordability, and flow, especially around incoming momentum.",
+          "summary": "Rider House localizes resources, affordability, and flow around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:money:25-33",
+          "techniqueKey": "pair:25-33",
+          "score": 13.874,
+          "selectedText": "Ring + Key defines the terms sharply; a bond or agreement reaches the point where it can be confirmed, revised, or unlocked.",
+          "summary": "Ring and Key combine around business growth and debt.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:money:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how shared resources and timing develops across resources, affordability, and flow.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:money:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around shared resources and timing that can redirect timing in resources, affordability, and flow.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:money:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In resources, affordability, and flow, near cards show how urgently shared resources and financial independence needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:money:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens shared resources and timing in resources, affordability, and flow.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [
+        "This looks like a live process rather than a closed answer: financial fog or unclear timing under financial uncertainty is real, yet maturity around your financial position keeps the future from narrowing too quickly.",
+        "This is where the strain is easiest to address directly."
+      ],
+      "repeatedPhrasesInReading": [
+        "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
+      ],
+      "finalText": "\"How can I stabilize my finances while planning ahead\" is best read here through Money with a financial pressure emphasis. Centered here, Querent (29) falls in Lily House. That keeps your financial position, spending choices, and the degree of control you actually have over the flow close to everything else that is happening. That keeps the focus on the part of the story you are actually steering. Lily House frames Querent through maturity, peace, ethics, and the wisdom that comes from restraint without passivity, making your financial position, spending choices, and the degree of control you actually have over the flow harder to ignore. Ring (25) with Key (33) points to the terms sharply, a bond or agreement reaches the point where it can be confirmed, revised, or unlocked. What this pair does is make the relationship between commitment and the terms that hold it and a workable answer and clearer signal part of the story itself. The strain is genuine, yet the spread is not structurally hopeless. Under the first impression, Dog (18), Birds (12), Querent (29) and Clouds (6), Rider (1), Tower (19) read as a slow build, while Fish (34), Counterpart (28), Fox (14), Anchor (35) show where the pace changes. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. Birds (12), Ring (25), Tower (19), Key (33) belong to the immediate turn of events, while Dog (18), Fish (34), Moon (32), Counterpart (28) describe what is still gathering. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. This looks like a live process rather than a closed answer: financial fog or unclear timing under financial uncertainty is real, yet maturity around your financial position keeps the future from narrowing too quickly. Start in Lily House: use patience to make the choice cleaner, not to avoid making it. This is where the strain is easiest to address directly. ",
+      "wordCount": 359
+    },
+    {
+      "caseId": "money_3card",
+      "setup": {
+        "caseId": "money_3card",
+        "subjectId": "money",
+        "interpretationThemeId": "cashflow",
+        "spreadType": "three-card",
+        "question": "What is the near-term trajectory of my income and expenses?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "money",
+      "resolvedThemeId": "cashflow",
+      "resolvedThemeLabel": "Cashflow",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:money:26",
+          "techniqueKey": "card:26",
+          "score": 12.634,
+          "selectedText": "In Money, Book brings financial independence and timing into resources, affordability, and flow through what is not yet visible.",
+          "summary": "Book shapes resources, affordability, and flow through knowledge.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:money:26-29",
+          "techniqueKey": "pair:26-29",
+          "score": 13.874,
+          "selectedText": "Book + Querent keeps part of the story off the page, making withheld details, self-knowledge, or what has not yet been fully counted central to what happens next.",
+          "summary": "Book and Querent combine around financial independence and timing.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:money:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how shared resources and timing develops across resources, affordability, and flow.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:money:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around shared resources and timing that can redirect timing in resources, affordability, and flow.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:money:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In resources, affordability, and flow, near cards show how urgently shared resources and financial independence needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:money:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens shared resources and timing in resources, affordability, and flow.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "Around \"What is the near-term trajectory of my income and expenses\", the reading gathers most strongly around money, with a cashflow emphasis. The sequence begins in Past with Book (26), so what is not yet visible is already in play. Here, Book emphasizes private knowledge, research, what is not yet visible, and the need to learn before you declare certainty. At the pivot, Present places Querent (29) at the center, making this the point where the reading can shift. Querent colors the financial picture through your financial position, spending choices, and the degree of control you actually have over the flow. The likely direction shows in Future through Child (13), and it suggests fresh perspective can reset stale assumptions once the pivot is met directly. Here, Child emphasizes fresh perspective can reset stale assumptions. Book (26) and Querent (29) reveal how the flow changes, and the message is part of the story off the page, making withheld details, self-knowledge, or what has not yet been fully counted central to what happens next. The spread turns on Querent (29) more than any other card. Here, Querent emphasizes your financial position, spending choices, and the degree of control you actually have over the flow. Book (26) with Querent (29) keep emphasizing part of the story off the page, making withheld details, self-knowledge, or what has not yet been fully counted central to what happens next. Choose from values rather than fear so Child (13) can land as lived experience rather than just possibility. ",
+      "wordCount": 251
+    },
+    {
+      "caseId": "home_gt",
+      "setup": {
+        "caseId": "home_gt",
+        "subjectId": "home_family",
+        "interpretationThemeId": "repair_or_renovation",
+        "spreadType": "grand-tableau",
+        "question": "What needs attention in my household and family rhythm?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "home_family",
+      "resolvedThemeId": "repair_or_renovation",
+      "resolvedThemeLabel": "Repair OR Renovation",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:home_family:7",
+          "techniqueKey": "card:7",
+          "score": 14.434,
+          "selectedText": "In Home & Family, Snake brings repair or renovation and protection into home life and family patterns through a nuanced approach beats blunt force.",
+          "summary": "Snake shapes home life and family patterns through strategy.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:home_family:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "Rider House shows where family tension and caregiving becomes concrete in home life and family patterns, especially around incoming momentum.",
+          "summary": "Rider House localizes home life and family patterns around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:home_family:22-33",
+          "techniqueKey": "pair:22-33",
+          "score": 13.874,
+          "selectedText": "Crossroads + Key shows the right door opening only after a real choice is made; clarity follows commitment, not the other way around.",
+          "summary": "Crossroads and Key combine around caregiving and household stability.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:home_family:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how family tension and independence at home develops across home life and family patterns.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:home_family:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around family tension and independence at home that can redirect timing in home life and family patterns.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:home_family:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In home life and family patterns, near cards show how urgently family tension and independence at home needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:home_family:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens family tension and protection in home life and family patterns.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
+      ],
+      "finalText": "\"What needs attention in my household and family rhythm\" draws the reading toward home & family, with a repair or renovation emphasis. Centered here, Querent (29) falls in Crossroads House. That keeps your own role inside the household, including boundaries, responsibility, and what you are quietly carrying close to everything else that is happening. That keeps the focus on the part of the story you are actually steering. Crossroads House frames Querent through the domestic crossroads, where the family needs a clearer direction instead of more circling around the same tension, making your own role inside the household, including boundaries, responsibility, and what you are quietly carrying harder to ignore. Key (33) beside Crossroads (22) sharpens the reading around the right door opening only after a real choice is made, clarity follows commitment, not the other way around. Taken together, Key and Crossroads bring a workable answer and clearer signal into direct contact with choice and branch, so neither can be read on its own. The strain is genuine, yet the spread is not structurally hopeless. A quieter layer runs through Coffin (8), Key (33), Querent (29), House (4) and Dog (18), Moon (32), Cross (36), while Anchor (35), Child (13), Tower (19), Rider (1) show where the rhythm starts to shift. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. Read Key (33), Stars (16), Moon (32), Crossroads (22) as present-tense influence and Coffin (8), Anchor (35), Lily (30), Child (13) as the sequence forming right behind it. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. The future stays more open with clearer momentum around support, authority, and who is carrying the household load, provided defensive caution and guarded self-interest under repeated strain and attrition does not take over. If there is a leverage point here, it sits in Crossroads House: choose the path aligned with values. That keeps the focus on the domestic crossroads, where the family needs a clearer direction instead of more circling around the same tension. ",
+      "wordCount": 380
+    },
+    {
+      "caseId": "growth_3card",
+      "setup": {
+        "caseId": "growth_3card",
+        "subjectId": "personal_growth",
+        "interpretationThemeId": "self_trust",
+        "spreadType": "three-card",
+        "question": "How do I strengthen confidence in my next decision?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "personal_growth",
+      "resolvedThemeId": "self_trust",
+      "resolvedThemeLabel": "Self Trust",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:personal_growth:18",
+          "techniqueKey": "card:18",
+          "score": 14.434,
+          "selectedText": "In Personal Growth, Dog brings self trust and transition into your inner patterning and personal change through trusted support and the steadiness it brings.",
+          "summary": "Dog shapes your inner patterning and personal change through loyalty.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:personal_growth:18-36:fallback",
+          "techniqueKey": "pair:18-36",
+          "score": 12.472,
+          "selectedText": "Dog + Cross blends loyalty with burden, inviting invest in dependable alliances while staying aware of accepting burdens that are not yours.",
+          "summary": "Dog and Cross create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:personal_growth:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how independence and grounding develops across your inner patterning and personal change.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:personal_growth:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around patterns and grounding that can redirect timing in your inner patterning and personal change.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:personal_growth:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In your inner patterning and personal change, near cards show how urgently grounding and protection needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:personal_growth:self",
+          "techniqueKey": "significator:self",
+          "score": 11.312,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens self trust and boundaries in your inner patterning and personal change.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Here, Ring emphasizes agreements, repetition, mutual terms, and what keeps returning until it is consciously renewed or revised."
+      ],
+      "finalText": "\"How do I strengthen confidence in my next decision\" is best read here through Personal Growth with a self trust emphasis. Dog (18) in Situation sets the tone with trusted support and the steadiness it brings. Dog colors your inner life through loyal support, dependable help, and the quiet strength of what proves itself through consistency. Ring (25) in Challenge acts as the fulcrum, so this is the point where tone, timing, or choice can change the sequence. Here, Ring emphasizes agreements, repetition, mutual terms, and what keeps returning until it is consciously renewed or revised. Cross (36) in Advice suggests a serious theme calls for grounded reflection, once the middle-card pressure has been worked with directly. Here, Cross emphasizes duty, burden, meaning, and the serious weight that has to be carried wisely rather than theatrically. Dog (18) with Cross (36) show the pattern that matters most for growth right now: a blend of loyalty and burden, asking you to invest in dependable alliances while staying alert to accepting burdens that are not yours. The spread turns on Ring (25) more than any other card. Here, Ring emphasizes agreements, repetition, mutual terms, and what keeps returning until it is consciously renewed or revised. Dog (18) with Cross (36) keep emphasizing a blend of loyalty and burden, asking you to invest in dependable alliances while staying alert to accepting burdens that are not yours. Review terms and renew consciously so Cross (36) can land as lived experience rather than just possibility. ",
+      "wordCount": 250
+    },
+    {
+      "caseId": "travel_gt",
+      "setup": {
+        "caseId": "travel_gt",
+        "subjectId": "travel",
+        "interpretationThemeId": "documents",
+        "spreadType": "grand-tableau",
+        "question": "How is my upcoming trip unfolding, especially documents and timing?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "travel",
+      "resolvedThemeId": "documents",
+      "resolvedThemeLabel": "Documents",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:travel:7",
+          "techniqueKey": "card:7",
+          "score": 14.434,
+          "selectedText": "For travel, Snake shows which part of the journey needs cleaner handling first. Here, a nuanced approach beats blunt force.",
+          "summary": "Snake shapes the journey through strategy.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:travel:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "In travel matters, Rider House marks the part of the route where incoming momentum cannot be improvised.",
+          "summary": "Rider House localizes the journey around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:travel:5-21",
+          "techniqueKey": "pair:5-21",
+          "score": 14.774,
+          "selectedText": "Tree + Mountain marks slow growth through sustained effort and patience.",
+          "summary": "Tree and Mountain combine around documents and timing.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:travel:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how safe travel and timing develops across movement, timing, and logistics.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:travel:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator reveals side influences around timing and documents that can redirect timing in movement, timing, and logistics.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:travel:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In movement, timing, and logistics, near cards show how urgently timing and safe travel needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:travel:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens timing and safe travel in movement, timing, and logistics.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "That keeps the focus on the part of the story you are actually steering.",
+        "The strain is genuine, yet the spread is not structurally hopeless.",
+        "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
+      ],
+      "finalText": "The cards answer \"How is my upcoming trip unfolding, especially documents and timing\" through Travel with a documents emphasis. Mountain House holds Querent (29), keeping your route, timing choices, and the part of the journey only you can organize or decide cleanly in focus. That keeps the focus on the part of the story you are actually steering. Querent in Mountain House brings the blockage landing directly on your travel plans, so resequencing matters more than force. The nearby pair of Mountain (21) and Tree (5) points to slow growth through sustained effort and patience. Taken together, Mountain and Tree bring obstacle and delay into direct contact with health and roots, so neither can be read on its own. The strain is genuine, yet the spread is not structurally hopeless. The wider motion runs through Snake (7), Mountain (21), Querent (29), Crossroads (22) and Rider (1), Tower (19), Bouquet (9); off-angle links to Moon (32), Fish (34), Clover (2), House (4) show results arriving step by step. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. Timing-wise, Mountain (21), Tree (5), Tower (19), Cross (36) describe what is immediate, while Snake (7), Moon (32), Bear (15), Fish (34) shape what follows. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. The clearer reading is that delay or blockage moving through repeat transit friction is real, and maturity and restraint in maturity is still worth backing. Mountain House is the place to act: reroute methodically instead of arguing with the delay. That should give the situation a steadier base. ",
+      "wordCount": 306
+    },
+    {
+      "caseId": "legal_gt",
+      "setup": {
+        "caseId": "legal_gt",
+        "subjectId": "legal_admin",
+        "interpretationThemeId": "documents",
+        "spreadType": "grand-tableau",
+        "question": "What should I watch in contracts and formal paperwork now?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "legal_admin",
+      "resolvedThemeId": "documents",
+      "resolvedThemeLabel": "Documents",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:legal_admin:10",
+          "techniqueKey": "card:10",
+          "score": 12.634,
+          "selectedText": "For paperwork, approvals, or obligations, Scythe shows where the process has to hold up under scrutiny. Here, urgent prioritization is required.",
+          "summary": "Scythe shapes the process through cut.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:legal_admin:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "In legal or administrative questions, Rider House marks the stage where incoming momentum has to stand up to procedure.",
+          "summary": "Rider House localizes the process around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:legal_admin:28-33",
+          "techniqueKey": "pair:28-33",
+          "score": 14.774,
+          "selectedText": "Counterpart + Key shows the other person's role becoming central to clarity; the answer opens through real exchange, not assumption.",
+          "summary": "Counterpart and Key combine around documents and contracts.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:legal_admin:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The main diagonal shows how documents and resolution develops across paperwork, process, and formal obligation.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:legal_admin:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator reveals side influences around documents and deadlines that can redirect timing in paperwork, process, and formal obligation.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:legal_admin:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In paperwork, process, and formal obligation, near cards show how urgently documents and bureaucracy needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:legal_admin:self",
+          "techniqueKey": "significator:self",
+          "score": 11.312,
+          "selectedText": "This significator frame keeps the reading tied to your own stance, which sharpens documents and disputes in paperwork, process, and formal obligation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [
+        "This pairing says the other side has become central to the approval point, so the file moves when their response is explicit enough to count.",
+        "This is where the strain is easiest to address directly."
+      ],
+      "repeatedPhrasesInReading": [
+        "That keeps the focus on the part of the story you are actually steering.",
+        "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
+      ],
+      "finalText": "On \"What should I watch in contracts and formal paperwork now\", this grand tableau leans into legal / admin, with a documents emphasis. One clear focal point is Querent (29) in Key House. It brings your side of the matter, what can be evidenced from your position, and the steps only you can authorize or complete to the foreground. That keeps the focus on the part of the story you are actually steering. Querent in Key House brings your own clarity becoming the approval point that unlocks the next stage of the matter. Key (33) with Counterpart (28) make the central tension easier to name: the other side becoming central to the approval point, so the next move depends on what they actually disclose, accept, or formally answer. This pairing says the other side has become central to the approval point, so the file moves when their response is explicit enough to count. The overall mood leans toward guidance and openings, with stability and endurance shaping the next layer down. A longer thread runs through Heart (24), Clover (2), Fish (34), Querent (29) and Dog (18), Crossroads (22), Key (33), while side links around Child (13), Book (26), Snake (7), Coffin (8) show the story developing in stages. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. The first pressure sits with Fish (34), Whip (11), Key (33), Anchor (35); Clover (2), Child (13), Birds (12), Book (26) show the layer that forms just behind it. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. The future stays more open with your own clarity becoming the hinge that opens the next stage cleanly, provided fees, access, or process flow moving through repeated strain and attrition does not take over. Start in Key House: work from the decisive clause or answer point instead of from speculation. This is where the strain is easiest to address directly. ",
+      "wordCount": 363
+    },
+    {
+      "caseId": "purpose_gt",
+      "setup": {
+        "caseId": "purpose_gt",
+        "subjectId": "purpose_calling",
+        "interpretationThemeId": "commitment",
+        "spreadType": "grand-tableau",
+        "question": "How do I commit to the path that feels deeply aligned?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "open"
+      },
+      "resolvedSubjectId": "purpose_calling",
+      "resolvedThemeId": "commitment",
+      "resolvedThemeLabel": "Commitment",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:purpose_calling:11",
+          "techniqueKey": "card:11",
+          "score": 14.434,
+          "selectedText": "Whip presses on the deeper path beneath the immediate choice. Here, notice patterns that keep replaying.",
+          "summary": "Whip shapes the path through repetition.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:purpose_calling:1",
+          "techniqueKey": "house:1",
+          "score": 12.228,
+          "selectedText": "In purpose and calling questions, Rider House marks the part of the path where incoming momentum reveals what still fits.",
+          "summary": "Rider House localizes the path around incoming momentum.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:purpose_calling:29-33",
+          "techniqueKey": "pair:29-33",
+          "score": 13.874,
+          "selectedText": "Querent + Key confirms that your own clarity is the hinge that opens the next phase; the lock is not elsewhere.",
+          "summary": "Querent and Key combine around right path and meaning.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:purpose_calling:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how long-term direction and alignment develops across long-range direction and meaningful fit.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:purpose_calling:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around long-term direction and meaning that can redirect timing in long-range direction and meaningful fit.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:purpose_calling:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In long-range direction and meaningful fit, near cards show how urgently long-term direction and alignment needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:purpose_calling:open",
+          "techniqueKey": "significator:open",
+          "score": 10.772,
+          "selectedText": "This significator frame keeps the reading tied to the most relevant point of view, which sharpens long-term direction and right path in long-range direction and meaningful fit.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
+      ],
+      "finalText": "\"How do I commit to the path that feels deeply aligned\" is best read here through Purpose / Calling with a commitment emphasis. Counterpart (28) in House becomes the main anchor here, putting the other person's position, their motives, and the part of the story you do not control directly under the strongest light. That keeps attention on the part of the story you do not define alone. Placed in House, Counterpart shows how the other person's position, their motives, and the part of the story you do not control directly is being shaped by the ordinary foundations, daily structure, and lived conditions that have to support the path if it is going to be real. Near the center, Querent (29) with Key (33) points to your own clarity becoming the hinge that unlocks the next phase of the path. Querent and Key bring self and identity into active contact with a workable answer and clearer signal, which is why the reading cannot treat them as separate issues. Pressure and weight set the tone here, while guidance and openings keep informing how events develop. Under the first impression, Counterpart (28), Anchor (35), Mountain (21), Cross (36) and Clouds (6), House (4), Dog (18) read as a slow build, while Mice (23), Coffin (8), Sun (31), Stars (16) show where the pace changes. Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events. The near field, Snake (7), Querent (29), Clouds (6), Key (33), speaks to current pressure, and Child (13), Bear (15), Mice (23), Coffin (8) helps show what gathers next. That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it. If there is a next step, it depends on your stance toward the path under slow growth, without pretending uncertainty thickened by too much anxious discussion around the path has disappeared. If there is a leverage point here, it sits in House: rebuild the ordinary foundation that makes the path viable in real life. That keeps the focus on the ordinary foundations, daily structure, and lived conditions that have to support the path if it is going to be real. ",
+      "wordCount": 397
+    },
+    {
+      "caseId": "purpose_3card",
+      "setup": {
+        "caseId": "purpose_3card",
+        "subjectId": "purpose_calling",
+        "interpretationThemeId": "right_path",
+        "spreadType": "three-card",
+        "question": "What is the next right step in my calling?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "open"
+      },
+      "resolvedSubjectId": "purpose_calling",
+      "resolvedThemeId": "right_path",
+      "resolvedThemeLabel": "Right Path",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:purpose_calling:28",
+          "techniqueKey": "card:28",
+          "score": 14.434,
+          "selectedText": "For vocation, Counterpart shows where the path asks for a truer fit rather than a faster answer. Here, consider how the other party experiences this.",
+          "summary": "Counterpart shapes the path through other.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:purpose_calling:27-28:fallback",
+          "techniqueKey": "pair:27-28",
+          "score": 12.472,
+          "selectedText": "Letter + Counterpart blends document with other, inviting document clearly and follow up while staying aware of projecting assumptions onto others.",
+          "summary": "Letter and Counterpart create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:purpose_calling:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The main diagonal shows how long-term direction and alignment develops across long-range direction and meaningful fit.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:purpose_calling:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator reveals side influences around long-term direction and meaning that can redirect timing in long-range direction and meaningful fit.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:purpose_calling:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In long-range direction and meaningful fit, near cards show how urgently long-term direction and alignment needs attention.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:purpose_calling:open",
+          "techniqueKey": "significator:open",
+          "score": 11.312,
+          "selectedText": "This significator frame keeps the reading tied to the most relevant point of view, which sharpens long-term direction and right path in long-range direction and meaningful fit.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "\"What is the next right step in my calling\" is best read here through Purpose / Calling with a right path emphasis. With Counterpart (28) in the past, the reading shows where things already stand, and the picture is already being shaped by consider how the other party experiences this. Counterpart often points to the other person's position, their motives, and the part of the story you do not control directly in your calling. Present centers on Cross (36), where the whole sequence either opens or tightens. Here, Cross emphasizes the weight of calling, duty, and the difference between a meaningful burden and a draining one. The likely direction shows in Future through Letter (27), and it suggests written clarity improves confidence once the pivot is met directly. Letter colors your calling through the wording, terms, or explicit message that makes the path less vague and more livable. Counterpart (28) with Letter (27) show what most shapes the question of calling: a blend of other and document, asking you to clarify roles and expectations while staying alert to vague or untracked communication. Cross (36) shows where the whole sequence either opens or tightens. Cross often points to the weight of calling, duty, and the difference between a meaningful burden and a draining one in your calling. Counterpart (28) with Letter (27) keep emphasizing a blend of other and document, asking you to clarify roles and expectations while staying alert to vague or untracked communication. Differentiate purpose from pressure so Letter (27) can land as lived experience rather than just possibility. ",
+      "wordCount": 260
+    }
+  ],
+  "aggregate": {
+    "sampleCount": 14,
+    "repeatedPhrases": [
+      {
+        "sentence": "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction.",
+        "count": 8
+      },
+      {
+        "sentence": "Taken together, this is the slower line of development rather than the headline turn of events.",
+        "count": 8
+      },
+      {
+        "sentence": "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it.",
+        "count": 8
+      },
+      {
+        "sentence": "That keeps the focus on the part of the story you are actually steering.",
+        "count": 4
+      },
+      {
+        "sentence": "Here, Ring emphasizes agreements, repetition, mutual terms, and what keeps returning until it is consciously renewed or revised.",
+        "count": 3
+      },
+      {
+        "sentence": "The strain is genuine, yet the spread is not structurally hopeless.",
+        "count": 3
+      }
+    ],
+    "overusedOpenings": [
+      {
+        "opening": "read together, the",
+        "count": 8
+      },
+      {
+        "opening": "taken together, this",
+        "count": 8
+      },
+      {
+        "opening": "that split matters",
+        "count": 8
+      },
+      {
+        "opening": "that keeps the",
+        "count": 8
+      },
+      {
+        "opening": "under the first",
+        "count": 4
+      },
+      {
+        "opening": "if there is",
+        "count": 4
+      }
+    ],
+    "weakSummaryLines": [
+      {
+        "caseId": "general_gt",
+        "line": "This looks like a live process rather than a closed answer: the other person's stance moving through repetition is real, yet a small but real opening around warmth, goodwill, or a friendlier response keeps the future from narrowing too quickly."
+      },
+      {
+        "caseId": "work_gt",
+        "line": "This keeps your role, boundaries, workload ownership, and the way your position is shaping the outcome in the foreground."
+      },
+      {
+        "caseId": "money_gt",
+        "line": "This looks like a live process rather than a closed answer: financial fog or unclear timing under financial uncertainty is real, yet maturity around your financial position keeps the future from narrowing too quickly."
+      },
+      {
+        "caseId": "money_gt",
+        "line": "This is where the strain is easiest to address directly."
+      },
+      {
+        "caseId": "legal_gt",
+        "line": "This pairing says the other side has become central to the approval point, so the file moves when their response is explicit enough to count."
+      },
+      {
+        "caseId": "legal_gt",
+        "line": "This is where the strain is easiest to address directly."
+      }
+    ],
+    "rankingConcerns": [],
+    "mostFrequentEntries": [
+      {
+        "entryId": "diagonal:love:primary",
+        "technique": "diagonal",
+        "count": 3
+      },
+      {
+        "entryId": "knighting:love:significator",
+        "technique": "knighting",
+        "count": 3
+      },
+      {
+        "entryId": "proximity:love:near",
+        "technique": "proximity",
+        "count": 3
+      },
+      {
+        "entryId": "house:love:1",
+        "technique": "house",
+        "count": 2
+      },
+      {
+        "entryId": "significator:love:relationship",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "diagonal:work:primary",
+        "technique": "diagonal",
+        "count": 2
+      },
+      {
+        "entryId": "knighting:work:significator",
+        "technique": "knighting",
+        "count": 2
+      },
+      {
+        "entryId": "proximity:work:near",
+        "technique": "proximity",
+        "count": 2
+      },
+      {
+        "entryId": "significator:work:self",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "diagonal:money:primary",
+        "technique": "diagonal",
+        "count": 2
+      },
+      {
+        "entryId": "knighting:money:significator",
+        "technique": "knighting",
+        "count": 2
+      },
+      {
+        "entryId": "proximity:money:near",
+        "technique": "proximity",
+        "count": 2
+      },
+      {
+        "entryId": "significator:money:self",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "diagonal:purpose_calling:primary",
+        "technique": "diagonal",
+        "count": 2
+      },
+      {
+        "entryId": "knighting:purpose_calling:significator",
+        "technique": "knighting",
+        "count": 2
+      },
+      {
+        "entryId": "proximity:purpose_calling:near",
+        "technique": "proximity",
+        "count": 2
+      },
+      {
+        "entryId": "significator:purpose_calling:open",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "card:love:32",
+        "technique": "card",
+        "count": 1
+      },
+      {
+        "entryId": "pair:love:9-32:fallback",
+        "technique": "pair",
+        "count": 1
+      },
+      {
+        "entryId": "significator:love:open",
+        "technique": "significator",
+        "count": 1
+      }
+    ],
+    "underusedNeverSelected": [
+      {
+        "entryId": "pair:general_reading:28-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:21-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:22-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:29-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:29-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:29-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:24-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:25-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:29-35",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:21-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:22-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:28-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:31-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:33-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:2-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:26-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:27-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:24-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:25-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:33-34",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:10-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:34-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:35-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:6-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:19-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:26-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:27-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:4-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:21-26",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:21-27",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:32-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:16-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:24-28",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:24-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:25-28",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:31-35",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:5-21",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:1-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:7-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:general_reading:8-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.15
+      }
+    ],
+    "underusedRarelySelected": [
+      {
+        "entryId": "pair:money:26-29",
+        "technique": "pair",
+        "count": 1,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:money:25-33",
+        "technique": "pair",
+        "count": 1,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:home_family:22-33",
+        "technique": "pair",
+        "count": 1,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:travel:5-21",
+        "technique": "pair",
+        "count": 1,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:legal_admin:28-33",
+        "technique": "pair",
+        "count": 1,
+        "weight": 1.15
+      },
+      {
+        "entryId": "pair:purpose_calling:29-33",
+        "technique": "pair",
+        "count": 1,
+        "weight": 1.15
+      },
+      {
+        "entryId": "card:love:8",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:love:29",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:love:32",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:work:4",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:work:19",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:money:23",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:money:26",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:home_family:7",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:personal_growth:18",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:health:20",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:travel:7",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:legal_admin:10",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:purpose_calling:11",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "card:purpose_calling:28",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.08
+      },
+      {
+        "entryId": "house:work:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1.04
+      },
+      {
+        "entryId": "house:money:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1.04
+      },
+      {
+        "entryId": "house:home_family:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1.04
+      },
+      {
+        "entryId": "house:travel:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1.04
+      },
+      {
+        "entryId": "house:legal_admin:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1.04
+      },
+      {
+        "entryId": "house:purpose_calling:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1.04
+      },
+      {
+        "entryId": "significator:love:open",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:home_family:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:personal_growth:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:health:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:travel:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:legal_admin:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "proximity:home_family:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:personal_growth:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:health:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:travel:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:legal_admin:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "diagonal:home_family:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "diagonal:personal_growth:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "diagonal:health:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      }
+    ],
+    "coverageSnapshot": {
+      "totalEntries": 2512,
+      "byTechnique": {
+        "card": 576,
+        "house": 576,
+        "pair": 1152,
+        "diagonal": 32,
+        "knighting": 64,
+        "proximity": 48,
+        "significator": 64
+      },
+      "themesWithZeroEntries": []
+    }
+  }
+}

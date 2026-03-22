@@ -1,0 +1,2147 @@
+{
+  "rows": [
+    {
+      "caseId": "general_gt",
+      "setup": {
+        "caseId": "general_gt",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "auto",
+        "spreadType": "grand-tableau",
+        "question": "What should I know about the next three months overall?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "open"
+      },
+      "resolvedSubjectId": "love",
+      "resolvedThemeId": "new_connection",
+      "resolvedThemeLabel": "New Connection",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:love:8",
+          "techniqueKey": "card:8",
+          "score": 12.334,
+          "selectedText": "Coffin in Love highlights a cycle closes to make space for renewal.",
+          "summary": "Coffin emphasizes ending in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:love:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Love frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:love:2-17:fallback",
+          "techniqueKey": "pair:2-17",
+          "score": 12.472,
+          "selectedText": "Clover + Stork blends luck with change, inviting take the chance while it is available while staying aware of constant switching without consolidation.",
+          "summary": "Clover and Stork create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:love:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Love reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:love:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Love highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:love:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Love, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:love:open",
+          "techniqueKey": "significator:open",
+          "score": 10.772,
+          "selectedText": "Significator mode open in Love defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "Question: \"What should I know about the next three months overall?\". Grand Tableau lens: Love. Theme: New Connection (with Flirtation, Communication). Significator focus remains open and context-driven. Querent at 19, Counterpart at 18. Current role priority: counterpart. 28. Counterpart lands in Dog House. Core signal: the significant other perspective enters the reading. Practical move: clarify roles and expectations. Love lens: partnership dynamics require mutual clarity. Diagonal thread A: 2. Clover -> 28. Counterpart. Diagonal thread B: 28. Counterpart -> 7. Snake -> 35. Anchor. Diagonals map reciprocal dynamics. Knighting from position 18: 16. Stars, 20. Garden, 22. Crossroads. Knights show where counterpart influence surfaces indirectly. Near cards around the significator are 2. Clover, 17. Stork, 27. Letter, 7. Snake. Medium influence: 16. Stars, 5. Tree, 20. Garden, 35. Anchor, 22. Crossroads. Treat near cards as now-signals and medium cards as near-future planning cues. 2. Clover + 27. Letter is the strongest nearby pair. Clover + Letter highlights light-hearted encounters can soften a tense dynamic while clear messages prevent avoidable misunderstandings. Synthesis: momentum gathers around loyal support. Treat diagonal and knight links as timing guides, not overrides. Next step: choose a values-led conversation over urgency. Revisit the spread after movement, not before. For entertainment purposes only. Not medical, legal or financial advice. Make your own life decisions.",
+      "wordCount": 216
+    },
+    {
+      "caseId": "general_3card",
+      "setup": {
+        "caseId": "general_3card",
+        "subjectId": "general_reading",
+        "interpretationThemeId": "clarity",
+        "spreadType": "three-card",
+        "question": "What is the clearest way to approach this week?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "health",
+      "resolvedThemeId": "rest",
+      "resolvedThemeLabel": "Rest",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:health:7",
+          "techniqueKey": "card:7",
+          "score": 12.334,
+          "selectedText": "Snake in Health highlights strategy and layered motives shape outcomes.",
+          "summary": "Snake emphasizes strategy in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:health:1-7:fallback",
+          "techniqueKey": "pair:1-7",
+          "score": 12.384,
+          "selectedText": "Rider + Snake blends news with strategy, suggesting respond promptly and confirm facts while staying aware of overcomplicating what needs directness.",
+          "summary": "Rider and Snake create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:health:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Health reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:health:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Health highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:health:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Health, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:health:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Health defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [],
+      "finalText": "Intent: \"What is the clearest way to approach this week?\". Health is the primary lens for this 3-card reading. Theme: Rest (with Energy, Recovery). Situation: 7. Snake (strategy and layered motives shape outcomes). Challenge: 1. Rider (swift movement brings new information into view). Advice: 25. Ring (agreements and repeating structures are active). Flow: 7. Snake -> 1. Rider -> 25. Ring. Use the middle card as the leverage point for changing the outcome. 7. Snake + 25. Ring: Snake + Ring combines strategy with commitment, pointing to separate signal from social noise. Significator lens: Querent is treated as the primary significator. Role emphasis: self orientation. Action sequence: separate signal from social noise -> respond promptly and confirm facts -> review terms and renew consciously. Choose one step for today, then schedule the next two deliberately. Synthesis: one concrete move now will clarify the next two decisions. Next step: take one grounded action and observe what changes. Let action produce the next layer of clarity. Add one written checkpoint: what is changing now, what can wait, and what action comes next. For reflection and entertainment. Not medical, legal, or financial advice. Make your own life decisions.",
+      "wordCount": 195
+    },
+    {
+      "caseId": "love_gt",
+      "setup": {
+        "caseId": "love_gt",
+        "subjectId": "love",
+        "interpretationThemeId": "commitment",
+        "spreadType": "grand-tableau",
+        "question": "How is this relationship developing and what needs care?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "relationship"
+      },
+      "resolvedSubjectId": "love",
+      "resolvedThemeId": "commitment",
+      "resolvedThemeLabel": "Commitment",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:love:35",
+          "techniqueKey": "card:35",
+          "score": 12.334,
+          "selectedText": "Anchor in Love highlights long-term commitment and steadiness are highlighted.",
+          "summary": "Anchor emphasizes stability in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:love:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Love frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:love:12-35:fallback",
+          "techniqueKey": "pair:12-35",
+          "score": 12.472,
+          "selectedText": "Birds + Anchor blends dialogue with stability, inviting favor concise, clarifying dialogue while staying aware of staying anchored to obsolete goals.",
+          "summary": "Birds and Anchor create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:love:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Love reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:love:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Love highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:love:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Love, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:love:relationship",
+          "techniqueKey": "significator:relationship",
+          "score": 10.772,
+          "selectedText": "Significator mode relationship in Love defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [
+        {
+          "type": "pair",
+          "message": "A stronger pair candidate scored higher than the selected pair context.",
+          "selectedKey": "12-35",
+          "strongerKey": "35-36",
+          "delta": 1.102
+        }
+      ],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Crossroads."
+      ],
+      "finalText": "For this Grand Tableau spread, the focus is \"How is this relationship developing and what needs care?\". Subject lens: Love. Theme: Commitment. Querent at 10, Counterpart at 16. Treat both roles as active signals, with emphasis on relationship dynamic. 29. Querent lands in Scythe House. Core signal: the querent's agency and orientation are central. Practical move: choose from values rather than fear. Context cue: self-awareness improves relational clarity. Diagonal thread A: 29. Querent -> 6. Clouds -> 2. Clover. Diagonal thread B: 12. Birds -> 29. Querent. Diagonals track personal storyline arcs. Knighting from position 10: 15. Bear, 7. Snake, 22. Crossroads. Jump links reveal strategic leverage points. Near cards around the significator are 35. Anchor, 12. Birds, 16. Stars, 36. Cross. Medium influence: 15. Bear, 9. Bouquet, 7. Snake, 11. Whip, 22. Crossroads. Treat near cards as now-signals and medium cards as near-future planning cues. 35. Anchor + 36. Cross is the strongest nearby pair. Anchor + Cross asks for steady care without self-sacrifice. Synthesis: momentum gathers around decisive cuts. Treat diagonal and knight links as timing guides, not overrides. Next step: choose a values-led conversation over urgency. Small concrete steps will tell you more than extra speculation. Interpretive guidance for entertainment only. Not a substitute for medical, legal, or financial advice.",
+      "wordCount": 213
+    },
+    {
+      "caseId": "love_3card",
+      "setup": {
+        "caseId": "love_3card",
+        "subjectId": "love",
+        "interpretationThemeId": "communication",
+        "spreadType": "three-card",
+        "question": "What should I focus on in my current romantic dynamic?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "relationship"
+      },
+      "resolvedSubjectId": "love",
+      "resolvedThemeId": "communication",
+      "resolvedThemeLabel": "Communication",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:love:30",
+          "techniqueKey": "card:30",
+          "score": 14.134,
+          "selectedText": "Lily in Love highlights maturity and principled calm support the path.",
+          "summary": "Lily emphasizes maturity in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:love:9-30:fallback",
+          "techniqueKey": "pair:9-30",
+          "score": 12.472,
+          "selectedText": "Bouquet + Lily blends gift with maturity, inviting offer gratitude and receive support while staying aware of passive avoidance of necessary action.",
+          "summary": "Bouquet and Lily create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:love:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The primary diagonal in Love reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:love:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator in Love highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:love:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Love, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:love:relationship",
+          "techniqueKey": "significator:relationship",
+          "score": 11.312,
+          "selectedText": "Significator mode relationship in Love defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Next step: choose a values-led conversation over urgency.",
+        "Not medical, legal, or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "Question: \"What should I focus on in my current romantic dynamic?\". 3-card lens: Love. Theme: Communication. Situation: 30. Lily (maturity and principled calm support the path). Challenge: 9. Bouquet (grace and appreciation open relational doors). Advice: 2. Clover (brief luck offers a manageable opening). Flow: move from 30. Lily through 9. Bouquet toward 2. Clover. The second card is your adjustment point. 30. Lily + 9. Bouquet: Lily + Bouquet highlights patience and respect improve emotional quality while warmth and generosity improve intimacy. Significator lens: Querent and Counterpart are read as a relational axis. Role emphasis: relationship dynamic. Action sequence: pair composure with clear intent -> offer gratitude and receive support -> take the chance while it is available. Choose one step for today, then schedule the next two deliberately. Synthesis: one concrete move now will clarify the next two decisions. Next step: choose a values-led conversation over urgency. Let action produce the next layer of clarity. Add one written checkpoint: what is changing now, what can wait, and what action comes next. For reflection and entertainment. Not medical, legal, or financial advice. Make your own life decisions.",
+      "wordCount": 188
+    },
+    {
+      "caseId": "work_gt",
+      "setup": {
+        "caseId": "work_gt",
+        "subjectId": "work",
+        "interpretationThemeId": "burnout",
+        "spreadType": "grand-tableau",
+        "question": "How can I navigate workload pressure and politics at work?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "work",
+      "resolvedThemeId": "burnout",
+      "resolvedThemeLabel": "Burnout",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:work:11",
+          "techniqueKey": "card:11",
+          "score": 14.134,
+          "selectedText": "Whip in Work highlights repetition can either refine or exhaust.",
+          "summary": "Whip emphasizes repetition in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:work:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Work frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:work:11-35:fallback",
+          "techniqueKey": "pair:11-35",
+          "score": 12.472,
+          "selectedText": "Whip + Anchor blends repetition with stability, inviting turn friction into intentional practice while staying aware of staying anchored to obsolete goals.",
+          "summary": "Whip and Anchor create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:work:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Work reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:work:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator in Work highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:work:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In Work, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:work:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Work defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Crossroads.",
+        "Not medical, legal or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "For this Grand Tableau spread, the focus is \"How can I navigate workload pressure and politics at work?\". Subject lens: Work. Theme: Burnout. Querent is treated as the primary significator. Querent at 2, Counterpart at 8. Primary role lens: self orientation. 29. Querent lands in Clover House. Core signal: the querent's agency and orientation are central. Practical move: choose from values rather than fear. Context cue: professional identity and priorities need definition. Diagonal thread A: 29. Querent -> 25. Ring -> 32. Moon -> 3. Ship. Diagonal thread B: 29. Querent -> 19. Tower. Querent on diagonals marks identity shifts. Knighting from position 2: 2. Clover, 15. Bear, 10. Scythe. Knights show where your influence reaches indirectly. Near cards around the significator are 11. Whip, 35. Anchor, 19. Tower, 22. Crossroads. Medium influence: 18. Dog, 2. Clover, 15. Bear, 5. Tree, 10. Scythe. Prioritize the near cluster first, then schedule the medium cluster deliberately. 11. Whip + 19. Tower is the strongest nearby pair. Whip + Tower emphasizes rework loops need a process reset while institutional processes and hierarchy matter. Synthesis: small luck is the anchor. Use one immediate action from the near cluster and one medium-range adjustment from diagonal or knight evidence. Next step: choose one operational fix and review its impact quickly. Revisit the spread after movement, not before. For entertainment purposes only. Not medical, legal or financial advice. Make your own life decisions.",
+      "wordCount": 236
+    },
+    {
+      "caseId": "work_3card",
+      "setup": {
+        "caseId": "work_3card",
+        "subjectId": "work",
+        "interpretationThemeId": "workplace_politics",
+        "spreadType": "three-card",
+        "question": "What is happening in my team dynamics this month?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "work",
+      "resolvedThemeId": "workplace_politics",
+      "resolvedThemeLabel": "Workplace Politics",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:work:5",
+          "techniqueKey": "card:5",
+          "score": 14.134,
+          "selectedText": "Tree in Work highlights deep growth unfolds gradually.",
+          "summary": "Tree emphasizes health in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:work:5-27:fallback",
+          "techniqueKey": "pair:5-27",
+          "score": 12.472,
+          "selectedText": "Tree + Letter blends health with document, inviting commit to steady, restorative pacing while staying aware of vague or untracked communication.",
+          "summary": "Tree and Letter create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:work:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The primary diagonal in Work reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:work:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Work highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:work:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Work, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:work:self",
+          "techniqueKey": "significator:self",
+          "score": 11.312,
+          "selectedText": "Significator mode self in Work defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Choose one step for today, then schedule the next two deliberately.",
+        "Add one written checkpoint: what is changing now, what can wait, and what action comes next.",
+        "For reflection and entertainment.",
+        "Not medical, legal, or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "Question: \"What is happening in my team dynamics this month?\". 3-card lens: Work. Theme: Workplace Politics. Situation: 5. Tree (deep growth unfolds gradually). Challenge: 27. Letter (written communication and records are decisive). Advice: 17. Stork (change is active and potentially beneficial). Flow: move from 5. Tree through 27. Letter toward 17. Stork. The second card is your adjustment point. 5. Tree + 27. Letter: Tree + Letter emphasizes career development benefits from patient skill-building while documentation protects execution quality. Significator lens: Querent is treated as the primary significator. Role emphasis: self orientation. Action sequence: commit to steady, restorative pacing -> document clearly and follow up -> sequence improvements deliberately. Choose one step for today, then schedule the next two deliberately. Synthesis: keep the reading practical. Act once, observe, then adjust. Next step: protect focus with one practical boundary this week. Small concrete steps will tell you more than extra speculation. Add one written checkpoint: what is changing now, what can wait, and what action comes next. For reflection and entertainment. Not medical, legal, or financial advice. Make your own life decisions.",
+      "wordCount": 181
+    },
+    {
+      "caseId": "money_gt",
+      "setup": {
+        "caseId": "money_gt",
+        "subjectId": "money",
+        "interpretationThemeId": "financial_pressure",
+        "spreadType": "grand-tableau",
+        "question": "How can I stabilize my finances while planning ahead?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "money",
+      "resolvedThemeId": "financial_pressure",
+      "resolvedThemeLabel": "Financial Pressure",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:money:18",
+          "techniqueKey": "card:18",
+          "score": 14.134,
+          "selectedText": "Dog in Money highlights reliable support and trust become key.",
+          "summary": "Dog emphasizes loyalty in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:money:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Money frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:money:3-31:fallback",
+          "techniqueKey": "pair:3-31",
+          "score": 12.384,
+          "selectedText": "Ship + Sun in work context indicates expansion, travel, or broader markets come into focus and recognition and progress are likely if sustained.",
+          "summary": "Ship and Sun create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:money:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Money reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:money:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Money highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:money:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Money, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:money:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Money defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [
+        {
+          "type": "pair",
+          "message": "A stronger pair candidate scored higher than the selected pair context.",
+          "selectedKey": "3-31",
+          "strongerKey": "1-10",
+          "delta": 2.09
+        }
+      ],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "29.",
+        "Core signal: the querent's agency and orientation are central.",
+        "Practical move: choose from values rather than fear.",
+        "Small concrete steps will tell you more than extra speculation.",
+        "For reflection and entertainment.",
+        "Not medical, legal, or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "Question: \"How can I stabilize my finances while planning ahead?\". Grand Tableau lens: Money. Theme: Financial Pressure. Querent is treated as the primary significator. Querent at 13, Counterpart at 36. Primary role lens: self orientation. 29. Querent lands in Child House. Core signal: the querent's agency and orientation are central. Practical move: choose from values rather than fear. Context cue: professional identity and priorities need definition. Diagonal thread A: 31. Sun -> 29. Querent -> 9. Bouquet -> 11. Whip. Diagonal thread B: 26. Book -> 29. Querent -> 35. Anchor -> 4. House. Diagonals track personal storyline arcs. Knighting from position 13: 21. Mountain, 14. Fox, 7. Snake, 34. Fish, 30. Lily. Knights show where your influence reaches indirectly. Near cards around the significator are 31. Sun, 3. Ship, 26. Book, 1. Rider. Medium influence: 21. Mountain, 14. Fox, 36. Cross, 27. Letter, 7. Snake. Use near cards for immediate action and medium cards for sequencing. 3. Ship + 26. Book is the strongest nearby pair. Ship + Book emphasizes expansion, travel, or broader markets come into focus while specialized information offers leverage. Synthesis: new start is the anchor. Use one immediate action from the near cluster and one medium-range adjustment from diagonal or knight evidence. Next step: choose one operational fix and review its impact quickly. Small concrete steps will tell you more than extra speculation. For reflection and entertainment. Not medical, legal, or financial advice. Make your own life decisions.",
+      "wordCount": 243
+    },
+    {
+      "caseId": "money_3card",
+      "setup": {
+        "caseId": "money_3card",
+        "subjectId": "money",
+        "interpretationThemeId": "cashflow",
+        "spreadType": "three-card",
+        "question": "What is the near-term trajectory of my income and expenses?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "money",
+      "resolvedThemeId": "cashflow",
+      "resolvedThemeLabel": "Cashflow",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:money:22",
+          "techniqueKey": "card:22",
+          "score": 12.334,
+          "selectedText": "Crossroads in Money highlights multiple paths require explicit criteria.",
+          "summary": "Crossroads emphasizes choice in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:money:10-22:fallback",
+          "techniqueKey": "pair:10-22",
+          "score": 12.406,
+          "selectedText": "Scythe + Crossroads in work context indicates rapid decisions can reduce operational drag and strategic forks require tradeoff clarity.",
+          "summary": "Scythe and Crossroads create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:money:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Money reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:money:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Money highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:money:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Money, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:money:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Money defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "The second card is your adjustment point.",
+        "Significator lens: Querent is treated as the primary significator.",
+        "Role emphasis: self orientation.",
+        "Choose one step for today, then schedule the next two deliberately.",
+        "Let action produce the next layer of clarity.",
+        "Add one written checkpoint: what is changing now, what can wait, and what action comes next.",
+        "For reflection and entertainment.",
+        "Not medical, legal, or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "Question: \"What is the near-term trajectory of my income and expenses?\". 3-card lens: Money. Theme: Cashflow. Past: 22. Crossroads (multiple paths require explicit criteria). Present: 10. Scythe (a decisive cut reshapes the landscape quickly). Future: 13. Child (a new beginning needs light structure). Flow: move from 22. Crossroads through 10. Scythe toward 13. Child. The second card is your adjustment point. 10. Scythe + 13. Child: Scythe + Child emphasizes rapid decisions can reduce operational drag while prototype and learn quickly. Significator lens: Querent is treated as the primary significator. Role emphasis: self orientation. Action sequence: choose the path aligned with values -> choose cleanly and communicate implications -> start small and iterate. Choose one step for today, then schedule the next two deliberately. Synthesis: keep the reading practical. Act once, observe, then adjust. Next step: define one measurable priority and assign ownership. Let action produce the next layer of clarity. Add one written checkpoint: what is changing now, what can wait, and what action comes next. For reflection and entertainment. Not medical, legal, or financial advice. Make your own life decisions.",
+      "wordCount": 182
+    },
+    {
+      "caseId": "home_gt",
+      "setup": {
+        "caseId": "home_gt",
+        "subjectId": "home_family",
+        "interpretationThemeId": "repair_or_renovation",
+        "spreadType": "grand-tableau",
+        "question": "What needs attention in my household and family rhythm?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "home_family",
+      "resolvedThemeId": "repair_or_renovation",
+      "resolvedThemeLabel": "Repair OR Renovation",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:home_family:19",
+          "techniqueKey": "card:19",
+          "score": 12.334,
+          "selectedText": "Tower in Home & Family highlights structure, authority, and boundaries dominate.",
+          "summary": "Tower emphasizes institution in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:home_family:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Home & Family frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:home_family:4-13:fallback",
+          "techniqueKey": "pair:4-13",
+          "score": 12.472,
+          "selectedText": "House + Child blends home with beginning, inviting strengthen routines and boundaries while staying aware of underestimating complexity.",
+          "summary": "House and Child create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:home_family:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The primary diagonal in Home & Family reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:home_family:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator in Home & Family highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:home_family:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Home & Family, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:home_family:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Home & Family defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Querent is treated as the primary significator.",
+        "29.",
+        "Core signal: the querent's agency and orientation are central.",
+        "Practical move: choose from values rather than fear.",
+        "Diagonals track personal storyline arcs.",
+        "Revisit the spread after movement, not before."
+      ],
+      "finalText": "Question: \"What needs attention in my household and family rhythm?\". Grand Tableau lens: Home & Family. Theme: Repair OR Renovation. Querent is treated as the primary significator. Querent at 22, Counterpart at 20. Role focus: self orientation. 29. Querent lands in Crossroads House. Core signal: the querent's agency and orientation are central. Practical move: choose from values rather than fear. Context cue: your role and boundaries set the tone. Diagonal thread A: 14. Fox -> 13. Child -> 29. Querent -> 33. Key. Diagonal thread B: 36. Cross -> 8. Coffin -> 29. Querent -> 32. Moon. Diagonals track personal storyline arcs. Knighting from position 22: 22. Crossroads, 3. Ship, 18. Dog, 9. Bouquet, 25. Ring. Jump links reveal strategic leverage points. Near cards around the significator are 13. Child, 4. House, 8. Coffin, 1. Rider. Medium influence: 14. Fox, 22. Crossroads, 16. Stars, 3. Ship, 36. Cross. Prioritize the near cluster first, then schedule the medium cluster deliberately. 13. Child + 4. House is the strongest nearby pair. Child + House combines beginning with home, pointing to start small and iterate. Synthesis: the board points to choice. Start with the strongest near signal, then sequence the medium influences over the next two steps. Next step: take one grounded action and observe what changes. Revisit the spread after movement, not before. Interpretive guidance for entertainment only. Not a substitute for medical, legal, or financial advice.",
+      "wordCount": 235
+    },
+    {
+      "caseId": "growth_3card",
+      "setup": {
+        "caseId": "growth_3card",
+        "subjectId": "personal_growth",
+        "interpretationThemeId": "self_trust",
+        "spreadType": "three-card",
+        "question": "How do I strengthen confidence in my next decision?",
+        "threeCardMode": "situation-challenge-advice",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "personal_growth",
+      "resolvedThemeId": "self_trust",
+      "resolvedThemeLabel": "Self Trust",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:personal_growth:10",
+          "techniqueKey": "card:10",
+          "score": 12.334,
+          "selectedText": "Scythe in Personal Growth highlights a decisive cut reshapes the landscape quickly.",
+          "summary": "Scythe emphasizes cut in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:personal_growth:10-18:fallback",
+          "techniqueKey": "pair:10-18",
+          "score": 12.472,
+          "selectedText": "Scythe + Dog blends cut with loyalty, inviting choose cleanly and communicate implications while staying aware of assuming loyalty without reciprocity.",
+          "summary": "Scythe and Dog create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:personal_growth:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Personal Growth reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:personal_growth:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Personal Growth highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:personal_growth:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Personal Growth, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:personal_growth:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Personal Growth defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Significator lens: Querent is treated as the primary significator.",
+        "Role emphasis: self orientation.",
+        "Choose one step for today, then schedule the next two deliberately.",
+        "Synthesis: one concrete move now will clarify the next two decisions.",
+        "Next step: take one grounded action and observe what changes.",
+        "Small concrete steps will tell you more than extra speculation.",
+        "Add one written checkpoint: what is changing now, what can wait, and what action comes next.",
+        "Interpretive guidance for entertainment only.",
+        "Not a substitute for medical, legal, or financial advice."
+      ],
+      "finalText": "Intent: \"How do I strengthen confidence in my next decision?\". Personal Growth is the primary lens for this 3-card reading. Theme: Self Trust. Situation: 10. Scythe (a decisive cut reshapes the landscape quickly). Challenge: 18. Dog (reliable support and trust become key). Advice: 14. Fox (skillful caution and tactical thinking are required). Flow: context (10. Scythe), pivot (18. Dog), outcome (14. Fox). Focus effort on the pivot card first. 10. Scythe + 18. Dog: Scythe + Dog combines cut with loyalty, pointing to choose cleanly and communicate implications. Significator lens: Querent is treated as the primary significator. Role emphasis: self orientation. Action sequence: choose cleanly and communicate implications -> invest in dependable alliances -> verify details and protect your value. Choose one step for today, then schedule the next two deliberately. Synthesis: one concrete move now will clarify the next two decisions. Next step: take one grounded action and observe what changes. Small concrete steps will tell you more than extra speculation. Add one written checkpoint: what is changing now, what can wait, and what action comes next. Interpretive guidance for entertainment only. Not a substitute for medical, legal, or financial advice.",
+      "wordCount": 192
+    },
+    {
+      "caseId": "travel_gt",
+      "setup": {
+        "caseId": "travel_gt",
+        "subjectId": "travel",
+        "interpretationThemeId": "documents",
+        "spreadType": "grand-tableau",
+        "question": "How is my upcoming trip unfolding, especially documents and timing?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "travel",
+      "resolvedThemeId": "documents",
+      "resolvedThemeLabel": "Documents",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:travel:22",
+          "techniqueKey": "card:22",
+          "score": 14.134,
+          "selectedText": "Crossroads in Travel highlights multiple paths require explicit criteria.",
+          "summary": "Crossroads emphasizes choice in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:travel:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Travel frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:travel:9-36:fallback",
+          "techniqueKey": "pair:9-36",
+          "score": 12.4214,
+          "selectedText": "Bouquet + Cross blends gift with burden, suggesting offer gratitude and receive support while staying aware of accepting burdens that are not yours.",
+          "summary": "Bouquet and Cross create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:travel:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Travel reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:travel:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Travel highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:travel:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Travel, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:travel:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Travel defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Querent is treated as the primary significator.",
+        "29.",
+        "Core signal: the querent's agency and orientation are central.",
+        "Practical move: choose from values rather than fear.",
+        "Querent.",
+        "Jump links reveal strategic leverage points.",
+        "Treat diagonal and knight links as timing guides, not overrides.",
+        "Revisit the spread after movement, not before.",
+        "Interpretive guidance for entertainment only.",
+        "Not a substitute for medical, legal, or financial advice."
+      ],
+      "finalText": "Question: \"How is my upcoming trip unfolding, especially documents and timing?\". Grand Tableau lens: Travel. Theme: Documents. Querent is treated as the primary significator. Querent at 29, Counterpart at 26. Role focus: self orientation. 29. Querent lands in Querent House. Core signal: the querent's agency and orientation are central. Practical move: choose from values rather than fear. Context cue: your role and boundaries set the tone. Diagonal thread A: 36. Cross -> 29. Querent. Diagonal thread B: 21. Mountain -> 24. Heart -> 16. Stars -> 29. Querent. Querent on diagonals marks identity shifts. Knighting from position 29: 30. Lily, 5. Tree, 31. Sun. Jump links reveal strategic leverage points. Near cards around the significator are 36. Cross, 9. Bouquet, 16. Stars, 3. Ship. Medium influence: 30. Lily, 12. Birds, 5. Tree, 24. Heart, 31. Sun. Use near cards for immediate action and medium cards for sequencing. 36. Cross + 16. Stars is the strongest nearby pair. Stars + Cross blends guidance with burden, suggesting convert vision into steps while staying aware of accepting burdens that are not yours. Synthesis: momentum gathers around self agency. Treat diagonal and knight links as timing guides, not overrides. Next step: act on the clearest signal and review outcomes before expanding. Revisit the spread after movement, not before. Interpretive guidance for entertainment only. Not a substitute for medical, legal, or financial advice.",
+      "wordCount": 228
+    },
+    {
+      "caseId": "legal_gt",
+      "setup": {
+        "caseId": "legal_gt",
+        "subjectId": "legal_admin",
+        "interpretationThemeId": "documents",
+        "spreadType": "grand-tableau",
+        "question": "What should I watch in contracts and formal paperwork now?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "self"
+      },
+      "resolvedSubjectId": "legal_admin",
+      "resolvedThemeId": "documents",
+      "resolvedThemeLabel": "Documents",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:legal_admin:19",
+          "techniqueKey": "card:19",
+          "score": 14.134,
+          "selectedText": "Tower in Legal / Admin highlights structure, authority, and boundaries dominate.",
+          "summary": "Tower emphasizes institution in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:legal_admin:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Legal / Admin frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:legal_admin:13-32:fallback",
+          "techniqueKey": "pair:13-32",
+          "score": 12.472,
+          "selectedText": "Child + Moon blends beginning with recognition, inviting start small and iterate while staying aware of being led by fluctuating mood.",
+          "summary": "Child and Moon create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:legal_admin:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Legal / Admin reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:legal_admin:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.976,
+          "selectedText": "Knighting from significator in Legal / Admin highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:legal_admin:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In Legal / Admin, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:legal_admin:self",
+          "techniqueKey": "significator:self",
+          "score": 10.772,
+          "selectedText": "Significator mode self in Legal / Admin defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Querent is treated as the primary significator.",
+        "Role focus: self orientation.",
+        "29.",
+        "Core signal: the querent's agency and orientation are central.",
+        "Practical move: choose from values rather than fear.",
+        "Context cue: professional identity and priorities need definition.",
+        "Diagonals track personal storyline arcs.",
+        "Jump links reveal strategic leverage points.",
+        "Prioritize the near cluster first, then schedule the medium cluster deliberately.",
+        "Use one immediate action from the near cluster and one medium-range adjustment from diagonal or knight evidence.",
+        "Revisit the spread after movement, not before.",
+        "For entertainment purposes only.",
+        "Not medical, legal or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "For this Grand Tableau spread, the focus is \"What should I watch in contracts and formal paperwork now?\". Subject lens: Legal / Admin. Theme: Documents. Querent is treated as the primary significator. Querent at 20, Counterpart at 17. Role focus: self orientation. 29. Querent lands in Garden House. Core signal: the querent's agency and orientation are central. Practical move: choose from values rather than fear. Context cue: professional identity and priorities need definition. Diagonal thread A: 13. Child -> 29. Querent -> 27. Letter. Diagonal thread B: 15. Bear -> 35. Anchor -> 29. Querent -> 6. Clouds. Diagonals track personal storyline arcs. Knighting from position 20: 19. Tower, 20. Garden, 11. Whip, 18. Dog. Jump links reveal strategic leverage points. Near cards around the significator are 13. Child, 32. Moon, 35. Anchor, 33. Key. Medium influence: 19. Tower, 23. Mice, 20. Garden, 15. Bear, 11. Whip. Prioritize the near cluster first, then schedule the medium cluster deliberately. 13. Child + 35. Anchor is the strongest nearby pair. Child + Anchor emphasizes prototype and learn quickly while career direction and sustained effort are central. Synthesis: public field is the anchor. Use one immediate action from the near cluster and one medium-range adjustment from diagonal or knight evidence. Next step: protect focus with one practical boundary this week. Revisit the spread after movement, not before. For entertainment purposes only. Not medical, legal or financial advice. Make your own life decisions.",
+      "wordCount": 239
+    },
+    {
+      "caseId": "purpose_gt",
+      "setup": {
+        "caseId": "purpose_gt",
+        "subjectId": "purpose_calling",
+        "interpretationThemeId": "commitment",
+        "spreadType": "grand-tableau",
+        "question": "How do I commit to the path that feels deeply aligned?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "open"
+      },
+      "resolvedSubjectId": "purpose_calling",
+      "resolvedThemeId": "commitment",
+      "resolvedThemeLabel": "Commitment",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:purpose_calling:30",
+          "techniqueKey": "card:30",
+          "score": 12.334,
+          "selectedText": "Lily in Purpose / Calling highlights maturity and principled calm support the path.",
+          "summary": "Lily emphasizes maturity in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "house",
+          "entryId": "house:purpose_calling:1",
+          "techniqueKey": "house:1",
+          "score": 11.828,
+          "selectedText": "Rider House centers incoming momentum in a Purpose / Calling frame.",
+          "summary": "Rider House acts as a contextual anchor.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:purpose_calling:14-27:fallback",
+          "techniqueKey": "pair:14-27",
+          "score": 12.472,
+          "selectedText": "Fox + Letter blends caution with document, inviting verify details and protect your value while staying aware of vague or untracked communication.",
+          "summary": "Fox and Letter create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:purpose_calling:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 10.47,
+          "selectedText": "The primary diagonal in Purpose / Calling reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:purpose_calling:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Purpose / Calling highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:purpose_calling:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.178,
+          "selectedText": "In Purpose / Calling, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:purpose_calling:open",
+          "techniqueKey": "significator:open",
+          "score": 10.772,
+          "selectedText": "Significator mode open in Purpose / Calling defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Sun.",
+        "Whip.",
+        "Treat near cards as now-signals and medium cards as near-future planning cues.",
+        "Treat diagonal and knight links as timing guides, not overrides.",
+        "Next step: take one grounded action and observe what changes.",
+        "Let action produce the next layer of clarity.",
+        "For reflection and entertainment.",
+        "Not medical, legal, or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "For this Grand Tableau spread, the focus is \"How do I commit to the path that feels deeply aligned?\". Subject lens: Purpose / Calling. Theme: Commitment. Significator focus remains open and context-driven. Querent at 19, Counterpart at 13. Current role priority: counterpart. 28. Counterpart lands in Child House. Core signal: the significant other perspective enters the reading. Practical move: clarify roles and expectations. Domain emphasis: consider how the other party experiences this. Diagonal thread A: 27. Letter -> 28. Counterpart -> 13. Child -> 31. Sun. Diagonal thread B: 4. House -> 28. Counterpart -> 9. Bouquet -> 24. Heart. Diagonals map reciprocal dynamics. Knighting from position 13: 35. Anchor, 7. Snake, 11. Whip, 18. Dog, 17. Stork. Knights show where counterpart influence surfaces indirectly. Near cards around the significator are 27. Letter, 14. Fox, 4. House, 12. Birds. Medium influence: 35. Anchor, 7. Snake, 10. Scythe, 15. Bear, 11. Whip. Treat near cards as now-signals and medium cards as near-future planning cues. 27. Letter + 14. Fox is the strongest nearby pair. Letter + Fox combines document with caution, pointing to document clearly and follow up. Synthesis: momentum gathers around new start. Treat diagonal and knight links as timing guides, not overrides. Next step: take one grounded action and observe what changes. Let action produce the next layer of clarity. For reflection and entertainment. Not medical, legal, or financial advice. Make your own life decisions.",
+      "wordCount": 236
+    },
+    {
+      "caseId": "purpose_3card",
+      "setup": {
+        "caseId": "purpose_3card",
+        "subjectId": "purpose_calling",
+        "interpretationThemeId": "right_path",
+        "spreadType": "three-card",
+        "question": "What is the next right step in my calling?",
+        "threeCardMode": "past-present-future",
+        "significatorMode": "open"
+      },
+      "resolvedSubjectId": "purpose_calling",
+      "resolvedThemeId": "right_path",
+      "resolvedThemeLabel": "Right Path",
+      "selectedEntries": [
+        {
+          "technique": "card",
+          "entryId": "card:purpose_calling:6",
+          "techniqueKey": "card:6",
+          "score": 12.334,
+          "selectedText": "Clouds in Purpose / Calling highlights clarity is partial and conditions are shifting.",
+          "summary": "Clouds emphasizes uncertainty in this context.",
+          "alternatives": []
+        },
+        {
+          "technique": "pair",
+          "entryId": "pair:purpose_calling:6-18:fallback",
+          "techniqueKey": "pair:6-18",
+          "score": 12.472,
+          "selectedText": "Clouds + Dog blends uncertainty with loyalty, inviting name unknowns before choosing direction while staying aware of assuming loyalty without reciprocity.",
+          "summary": "Clouds and Dog create a contextual pair bridge.",
+          "alternatives": []
+        },
+        {
+          "technique": "diagonal",
+          "entryId": "diagonal:purpose_calling:primary",
+          "techniqueKey": "diagonal:primary",
+          "score": 9.84,
+          "selectedText": "The primary diagonal in Purpose / Calling reveals a storyline crossing immediate and long-range influences.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "knighting",
+          "entryId": "knighting:purpose_calling:significator",
+          "techniqueKey": "knighting:significator",
+          "score": 9.346,
+          "selectedText": "Knighting from significator in Purpose / Calling highlights indirect triggers that can shift timing.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "proximity",
+          "entryId": "proximity:purpose_calling:near",
+          "techniqueKey": "proximity:near",
+          "score": 10.898,
+          "selectedText": "In Purpose / Calling, near proximity indicates how urgently this influence should be handled.",
+          "summary": null,
+          "alternatives": []
+        },
+        {
+          "technique": "significator",
+          "entryId": "significator:purpose_calling:open",
+          "techniqueKey": "significator:open",
+          "score": 11.312,
+          "selectedText": "Significator mode open in Purpose / Calling defines perspective and role framing before interpretation.",
+          "summary": null,
+          "alternatives": []
+        }
+      ],
+      "rankingConcerns": [
+        {
+          "type": "pair",
+          "message": "A stronger pair candidate scored higher than the selected pair context.",
+          "selectedKey": "6-18",
+          "strongerKey": "6-33",
+          "delta": 2.002
+        }
+      ],
+      "weakSummaryLines": [],
+      "repeatedPhrasesInReading": [
+        "Key.",
+        "Choose one step for today, then schedule the next two deliberately.",
+        "Synthesis: one concrete move now will clarify the next two decisions.",
+        "Next step: take one grounded action and observe what changes.",
+        "Small concrete steps will tell you more than extra speculation.",
+        "Add one written checkpoint: what is changing now, what can wait, and what action comes next.",
+        "For entertainment purposes only.",
+        "Not medical, legal or financial advice.",
+        "Make your own life decisions."
+      ],
+      "finalText": "Intent: \"What is the next right step in my calling?\". Purpose / Calling is the primary lens for this 3-card reading. Theme: Right Path. Past: 6. Clouds (clarity is partial and conditions are shifting). Present: 18. Dog (reliable support and trust become key). Future: 33. Key (a decisive solution becomes accessible). Flow: 6. Clouds -> 18. Dog -> 33. Key. Use the middle card as the leverage point for changing the outcome. 6. Clouds + 33. Key: Clouds + Key describes a path from uncertainty toward grounded clarity. Significator lens: Significator focus remains open and context-driven. Role emphasis: counterpart. Action sequence: name unknowns before choosing direction -> invest in dependable alliances -> verify then commit. Choose one step for today, then schedule the next two deliberately. Synthesis: one concrete move now will clarify the next two decisions. Next step: take one grounded action and observe what changes. Small concrete steps will tell you more than extra speculation. Add one written checkpoint: what is changing now, what can wait, and what action comes next. For entertainment purposes only. Not medical, legal or financial advice. Make your own life decisions.",
+      "wordCount": 188
+    }
+  ],
+  "aggregate": {
+    "sampleCount": 14,
+    "repeatedPhrases": [
+      {
+        "sentence": "Not medical, legal or financial advice.",
+        "count": 10
+      },
+      {
+        "sentence": "Make your own life decisions.",
+        "count": 10
+      },
+      {
+        "sentence": "Choose one step for today, then schedule the next two deliberately.",
+        "count": 6
+      },
+      {
+        "sentence": "Add one written checkpoint: what is changing now, what can wait, and what action comes next.",
+        "count": 6
+      },
+      {
+        "sentence": "For reflection and entertainment.",
+        "count": 6
+      },
+      {
+        "sentence": "29.",
+        "count": 6
+      },
+      {
+        "sentence": "Core signal: the querent's agency and orientation are central.",
+        "count": 6
+      },
+      {
+        "sentence": "Practical move: choose from values rather than fear.",
+        "count": 6
+      },
+      {
+        "sentence": "Crossroads.",
+        "count": 5
+      },
+      {
+        "sentence": "Revisit the spread after movement, not before.",
+        "count": 5
+      },
+      {
+        "sentence": "Next step: take one grounded action and observe what changes.",
+        "count": 5
+      },
+      {
+        "sentence": "Small concrete steps will tell you more than extra speculation.",
+        "count": 5
+      },
+      {
+        "sentence": "Querent is treated as the primary significator.",
+        "count": 5
+      },
+      {
+        "sentence": "Treat diagonal and knight links as timing guides, not overrides.",
+        "count": 4
+      },
+      {
+        "sentence": "For entertainment purposes only.",
+        "count": 4
+      },
+      {
+        "sentence": "Significator lens: Querent is treated as the primary significator.",
+        "count": 4
+      },
+      {
+        "sentence": "Role emphasis: self orientation.",
+        "count": 4
+      },
+      {
+        "sentence": "Synthesis: one concrete move now will clarify the next two decisions.",
+        "count": 4
+      },
+      {
+        "sentence": "Let action produce the next layer of clarity.",
+        "count": 4
+      },
+      {
+        "sentence": "Diagonals track personal storyline arcs.",
+        "count": 4
+      },
+      {
+        "sentence": "Jump links reveal strategic leverage points.",
+        "count": 4
+      },
+      {
+        "sentence": "Interpretive guidance for entertainment only.",
+        "count": 4
+      },
+      {
+        "sentence": "Not a substitute for medical, legal, or financial advice.",
+        "count": 4
+      },
+      {
+        "sentence": "Treat near cards as now-signals and medium cards as near-future planning cues.",
+        "count": 3
+      },
+      {
+        "sentence": "Next step: choose a values-led conversation over urgency.",
+        "count": 3
+      },
+      {
+        "sentence": "Querent.",
+        "count": 3
+      },
+      {
+        "sentence": "The second card is your adjustment point.",
+        "count": 3
+      },
+      {
+        "sentence": "Context cue: professional identity and priorities need definition.",
+        "count": 3
+      },
+      {
+        "sentence": "Prioritize the near cluster first, then schedule the medium cluster deliberately.",
+        "count": 3
+      },
+      {
+        "sentence": "Use one immediate action from the near cluster and one medium-range adjustment from diagonal or knight evidence.",
+        "count": 3
+      },
+      {
+        "sentence": "Whip.",
+        "count": 3
+      },
+      {
+        "sentence": "Role focus: self orientation.",
+        "count": 3
+      },
+      {
+        "sentence": "Key.",
+        "count": 3
+      },
+      {
+        "sentence": "Sun.",
+        "count": 3
+      }
+    ],
+    "overusedOpenings": [
+      {
+        "opening": "make your own",
+        "count": 10
+      },
+      {
+        "opening": "core signal: the",
+        "count": 8
+      },
+      {
+        "opening": "diagonal thread a:",
+        "count": 8
+      },
+      {
+        "opening": "diagonal thread b:",
+        "count": 8
+      },
+      {
+        "opening": "knighting from position",
+        "count": 8
+      },
+      {
+        "opening": "near cards around",
+        "count": 8
+      },
+      {
+        "opening": "choose one step",
+        "count": 6
+      },
+      {
+        "opening": "add one written",
+        "count": 6
+      },
+      {
+        "opening": "for reflection and",
+        "count": 6
+      },
+      {
+        "opening": "not medical, legal,",
+        "count": 6
+      },
+      {
+        "opening": "querent lands in",
+        "count": 6
+      },
+      {
+        "opening": "practical move: choose",
+        "count": 6
+      },
+      {
+        "opening": "crossroads.",
+        "count": 5
+      },
+      {
+        "opening": "next step: choose",
+        "count": 5
+      },
+      {
+        "opening": "revisit the spread",
+        "count": 5
+      },
+      {
+        "opening": "significator lens: querent",
+        "count": 5
+      },
+      {
+        "opening": "next step: take",
+        "count": 5
+      },
+      {
+        "opening": "small concrete steps",
+        "count": 5
+      },
+      {
+        "opening": "querent is treated",
+        "count": 5
+      },
+      {
+        "opening": "grand tableau lens:",
+        "count": 4
+      },
+      {
+        "opening": "knights show where",
+        "count": 4
+      },
+      {
+        "opening": "synthesis: momentum gathers",
+        "count": 4
+      },
+      {
+        "opening": "treat diagonal and",
+        "count": 4
+      },
+      {
+        "opening": "for entertainment purposes",
+        "count": 4
+      },
+      {
+        "opening": "not medical, legal",
+        "count": 4
+      },
+      {
+        "opening": "role emphasis: self",
+        "count": 4
+      },
+      {
+        "opening": "synthesis: one concrete",
+        "count": 4
+      },
+      {
+        "opening": "let action produce",
+        "count": 4
+      },
+      {
+        "opening": "for this grand",
+        "count": 4
+      },
+      {
+        "opening": "diagonals track personal",
+        "count": 4
+      }
+    ],
+    "weakSummaryLines": [],
+    "rankingConcerns": [
+      {
+        "type": "pair",
+        "message": "A stronger pair candidate scored higher than the selected pair context.",
+        "selectedKey": "12-35",
+        "strongerKey": "35-36",
+        "delta": 1.102
+      },
+      {
+        "type": "pair",
+        "message": "A stronger pair candidate scored higher than the selected pair context.",
+        "selectedKey": "3-31",
+        "strongerKey": "1-10",
+        "delta": 2.09
+      },
+      {
+        "type": "pair",
+        "message": "A stronger pair candidate scored higher than the selected pair context.",
+        "selectedKey": "6-18",
+        "strongerKey": "6-33",
+        "delta": 2.002
+      }
+    ],
+    "mostFrequentEntries": [
+      {
+        "entryId": "diagonal:love:primary",
+        "technique": "diagonal",
+        "count": 3
+      },
+      {
+        "entryId": "knighting:love:significator",
+        "technique": "knighting",
+        "count": 3
+      },
+      {
+        "entryId": "proximity:love:near",
+        "technique": "proximity",
+        "count": 3
+      },
+      {
+        "entryId": "house:love:1",
+        "technique": "house",
+        "count": 2
+      },
+      {
+        "entryId": "significator:love:relationship",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "diagonal:work:primary",
+        "technique": "diagonal",
+        "count": 2
+      },
+      {
+        "entryId": "knighting:work:significator",
+        "technique": "knighting",
+        "count": 2
+      },
+      {
+        "entryId": "proximity:work:near",
+        "technique": "proximity",
+        "count": 2
+      },
+      {
+        "entryId": "significator:work:self",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "diagonal:money:primary",
+        "technique": "diagonal",
+        "count": 2
+      },
+      {
+        "entryId": "knighting:money:significator",
+        "technique": "knighting",
+        "count": 2
+      },
+      {
+        "entryId": "proximity:money:near",
+        "technique": "proximity",
+        "count": 2
+      },
+      {
+        "entryId": "significator:money:self",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "diagonal:purpose_calling:primary",
+        "technique": "diagonal",
+        "count": 2
+      },
+      {
+        "entryId": "knighting:purpose_calling:significator",
+        "technique": "knighting",
+        "count": 2
+      },
+      {
+        "entryId": "proximity:purpose_calling:near",
+        "technique": "proximity",
+        "count": 2
+      },
+      {
+        "entryId": "significator:purpose_calling:open",
+        "technique": "significator",
+        "count": 2
+      },
+      {
+        "entryId": "card:love:8",
+        "technique": "card",
+        "count": 1
+      },
+      {
+        "entryId": "pair:love:2-17:fallback",
+        "technique": "pair",
+        "count": 1
+      },
+      {
+        "entryId": "significator:love:open",
+        "technique": "significator",
+        "count": 1
+      }
+    ],
+    "underusedNeverSelected": [
+      {
+        "entryId": "pair:general_reading:28-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:22-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:29-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:21-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:31-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:33-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:27-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:10-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:34-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:35-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:6-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:19-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:26-33",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:32-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:21-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:29-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:29-36",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:16-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:24-28",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:5-21",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:1-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:7-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:8-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:10-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:14-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:15-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:16-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:23-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:24-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:25-29",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:29-34",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:29-35",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:1-10",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:2-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:7-14",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:8-35",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:14-15",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:15-34",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:17-22",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      },
+      {
+        "entryId": "pair:general_reading:20-31",
+        "technique": "pair",
+        "count": 0,
+        "weight": 1.12
+      }
+    ],
+    "underusedRarelySelected": [
+      {
+        "entryId": "card:love:8",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:love:30",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:love:35",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:work:5",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:work:11",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:money:18",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:money:22",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:home_family:19",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:personal_growth:10",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:health:7",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:travel:22",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:legal_admin:19",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:purpose_calling:6",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "card:purpose_calling:30",
+        "technique": "card",
+        "count": 1,
+        "weight": 1.05
+      },
+      {
+        "entryId": "house:work:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1
+      },
+      {
+        "entryId": "house:money:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1
+      },
+      {
+        "entryId": "house:home_family:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1
+      },
+      {
+        "entryId": "house:travel:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1
+      },
+      {
+        "entryId": "house:legal_admin:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1
+      },
+      {
+        "entryId": "house:purpose_calling:1",
+        "technique": "house",
+        "count": 1,
+        "weight": 1
+      },
+      {
+        "entryId": "significator:love:open",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:home_family:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:personal_growth:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:health:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:travel:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "significator:legal_admin:self",
+        "technique": "significator",
+        "count": 1,
+        "weight": 0.9
+      },
+      {
+        "entryId": "proximity:home_family:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:personal_growth:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:health:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:travel:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "proximity:legal_admin:near",
+        "technique": "proximity",
+        "count": 1,
+        "weight": 0.88
+      },
+      {
+        "entryId": "diagonal:home_family:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "diagonal:personal_growth:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "diagonal:health:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "diagonal:travel:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "diagonal:legal_admin:primary",
+        "technique": "diagonal",
+        "count": 1,
+        "weight": 0.86
+      },
+      {
+        "entryId": "knighting:home_family:significator",
+        "technique": "knighting",
+        "count": 1,
+        "weight": 0.82
+      },
+      {
+        "entryId": "knighting:personal_growth:significator",
+        "technique": "knighting",
+        "count": 1,
+        "weight": 0.82
+      },
+      {
+        "entryId": "knighting:health:significator",
+        "technique": "knighting",
+        "count": 1,
+        "weight": 0.82
+      },
+      {
+        "entryId": "knighting:travel:significator",
+        "technique": "knighting",
+        "count": 1,
+        "weight": 0.82
+      }
+    ],
+    "coverageSnapshot": {
+      "totalEntries": 2128,
+      "byTechnique": {
+        "card": 576,
+        "house": 576,
+        "pair": 768,
+        "diagonal": 32,
+        "knighting": 64,
+        "proximity": 48,
+        "significator": 64
+      },
+      "themesWithZeroEntries": []
+    }
+  }
+}

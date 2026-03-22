@@ -1,0 +1,47 @@
+{
+  "name": "lenormand-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20 <23"
+  },
+  "scripts": {
+    "predev": "node scripts/check-node-version.mjs",
+    "prebuild": "node scripts/check-node-version.mjs",
+    "prestart": "node scripts/check-node-version.mjs",
+    "clean": "rm -rf .next .next-dev node_modules/.cache",
+    "dev": "next dev",
+    "dev:fresh": "npm run clean && next dev",
+    "dev:reset": "pkill -f \"next dev\" 2>/dev/null || true; npm run clean; next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:golden": "vitest run tests/reading-golden.test.ts",
+    "audit:reading-smoke": "vitest run tests/reading-engine-smoke.audit.test.ts",
+    "audit:frozen-regression": "vitest run tests/frozen-pack-regression.audit.test.ts",
+    "audit:rollout-pack": "vitest run tests/rollout-pack.audit.test.ts",
+    "audit:phrase-harvest": "vitest run tests/rollout-phrase-harvest.audit.test.ts",
+    "art:generate": "node scripts/generate-art.mjs",
+    "art:dry-run": "node scripts/generate-art.mjs --dry-run"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "next": "15.1.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
