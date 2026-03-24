@@ -70,7 +70,7 @@ export default function ShufflePage() {
   const shuffleReady = Boolean(state.ritual.shuffleRun);
   const cutReady = Boolean(state.ritual.cutStep);
   const locked = state.ritual.locked;
-  const ritualProgress = cutReady ? 100 : shuffleReady ? 60 : 20;
+
 
   const runShuffle = () => {
     if (locked) return;
@@ -191,17 +191,6 @@ export default function ShufflePage() {
             <p className="mt-2 text-sm text-[color:var(--theme-muted,var(--brand-muted))]">
               Shuffle intensity equals the number of riffle passes applied. The safe range is {MIN_RIFFLE_INTENSITY}–{MAX_RIFFLE_INTENSITY}.
             </p>
-
-            <div className="mt-4">
-              <div className="ritual-progress-track">
-                <div className="ritual-progress-fill" style={{ width: `${ritualProgress}%` }} />
-              </div>
-              <div className="mt-1 flex items-center justify-between text-xs uppercase tracking-[0.14em] text-[color:var(--theme-muted,var(--brand-muted))]">
-                <span>Shuffle</span>
-                <span>Cut</span>
-                <span>Lay</span>
-              </div>
-            </div>
 
             <div className="ritual-panel-soft mt-5 p-4">
               <label className="block text-sm font-medium text-[color:var(--theme-text,var(--brand-text))]">
