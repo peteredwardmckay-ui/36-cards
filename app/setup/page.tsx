@@ -234,6 +234,7 @@ export default function SetupPage() {
                     placeholder="What would you like clarity on today?"
                     className="mt-1 min-h-24 w-full rounded-xl border border-[color:var(--theme-border,var(--brand-border))] bg-white/55 p-3 text-base outline-none ring-[color:var(--theme-accent,var(--brand-accent))] focus:ring-2"
                   />
+                  <p className="mt-1.5 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">Lenormand reads what is in motion, not yes or no. &ldquo;What do I need to understand about my situation?&rdquo; will land better than &ldquo;Will this work out?&rdquo;</p>
                 </label>
               </section>
 
