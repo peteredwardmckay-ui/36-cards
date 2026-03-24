@@ -282,7 +282,7 @@ export function SpreadGrid({
 
   return (
     <div className="overflow-auto [overflow-scrolling:touch]">
-      <div className="relative space-y-3">
+      <div className="relative min-w-[480px] space-y-3">
         <div
           className="gt-grid relative"
           style={{

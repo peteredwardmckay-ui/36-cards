@@ -381,19 +381,6 @@ input[type="range"]::-webkit-slider-thumb {
   gap: 0.5rem;
 }
 
-@media (max-width: 639px) {
-  .gt-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    gap: 0.3rem !important;
-  }
-}
-
-@media (max-width: 479px) {
-  .gt-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 0.25rem !important;
-  }
-}
 
 .font-display-botanical {
   font-family: var(--font-display-botanical), var(--font-display), serif;
