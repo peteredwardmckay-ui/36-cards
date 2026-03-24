@@ -127,7 +127,7 @@ const SUBJECT_VOICE: Record<SubjectId, SubjectVoice> = {
     nextMove: "small care adjustments that reduce stress",
   },
   creative: {
-    area: "the making process and its visibility",
+    area: "the arc from making to reception",
     pressure: "momentum, craft, and audience response",
     value: "coherent expression and protected focus",
     nextMove: "a practical choice that keeps the work moving",
@@ -151,7 +151,7 @@ const SUBJECT_VOICE: Record<SubjectId, SubjectVoice> = {
     nextMove: "one quiet act that keeps you aligned with what feels true",
   },
   community: {
-    area: "the wider group field",
+    area: "the wider social arc",
     pressure: "how the wider group is responding",
     value: "visibility, contribution, and reciprocal care",
     nextMove: "the next choice that strengthens your place in the field",

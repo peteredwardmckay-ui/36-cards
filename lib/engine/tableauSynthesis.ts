@@ -273,7 +273,7 @@ const SUBJECT_OVERLAY_OVERRIDES: Partial<Record<SubjectId, Record<string, string
     "23-28": ["the counterpart's role colored by doubt, small repeated hurts, or the slow erosion that happens when reassurance never fully lands"],
     "23-29": ["your own stance worn down by overthinking, small hurts, or the slow strain of never feeling fully reassured"],
     "24-25": ["love trying to take a stable form, where affection starts asking for continuity, reciprocity, and a bond that can hold in real life"],
-    "24-27": ["feeling becoming legible through words, so the emotional truth of the bond starts depending on what is actually said or acknowledged"],
+    "24-27": ["the bond clarifying once feelings are spoken rather than left implied"],
     "24-28": ["the other person's role becoming more emotionally visible, where tenderness or care can no longer stay entirely implied"],
     "24-29": ["your position becoming more emotionally visible, whether through tenderness, longing, or clearer vulnerability"],
     "24-33": ["the heart arriving at an answer point, where clarity depends on whether feeling can become unmistakable rather than merely hoped for"],
@@ -293,7 +293,7 @@ const SUBJECT_OVERLAY_OVERRIDES: Partial<Record<SubjectId, Record<string, string
   },
   legal_admin: {
     "1-2": ["the next notice or procedural step creating a small but usable opening if it is handled promptly and cleanly"],
-    "1-29": ["movement beginning once your side of the matter is clear enough to file, answer, or act on"],
+    "1-29": ["movement beginning once your side of the matter is clear enough to file, answer, or consider carefully"],
     "2-5": ["a small but usable opening appearing inside a process that still has to move slowly and carefully"],
     "2-29": ["your side of the matter sitting inside a narrow but usable procedural opening"],
     "5-35": ["slow but usable procedural progress around what still holds"],
@@ -335,7 +335,7 @@ const SUBJECT_OVERLAY_OVERRIDES: Partial<Record<SubjectId, Record<string, string
     "1-16": ["movement beginning once the direction of the matter becomes clearer and the next instruction can actually be trusted"],
     "7-29": ["your side of the matter getting caught in layered process pressure, competing motives, or a file that needs cleaner boundaries"],
     "13-33": ["a small but usable opening appearing at the approval point, where the next step matters if it is handled cleanly"],
-    "13-31": ["a small but usable opening becoming visible once the process is finally clear enough to act on"],
+    "13-31": ["a small but usable opening becoming visible once the process is finally clear enough to consider"],
     "14-27": ["paperwork that needs careful reading because not every detail is as straightforward as it first looks"],
     "26-29": ["your side of the matter becoming tied to protected facts, pending review, or information that cannot yet be treated casually"],
     "27-10": ["a written decision or document that forces the matter forward quickly"],
@@ -344,7 +344,7 @@ const SUBJECT_OVERLAY_OVERRIDES: Partial<Record<SubjectId, Record<string, string
     "28-29": ["your side of the matter and the other side's position now having to be read together, because timing and leverage sit across both"],
     "25-29": ["your side of the matter becoming tied to binding terms, renewals, or obligations that now define what continues"],
     "29-30": ["your side of the matter becoming more workable through measured handling and clearer terms"],
-    "29-31": ["your side of the matter becoming clearer and easier to work with once the process is visible enough to act on"],
+    "29-31": ["your side of the matter becoming clearer and easier to work with once the process is visible enough to consider"],
     "29-33": ["your own clarity becoming the hinge that opens the next stage cleanly"],
     "29-34": ["your side of the matter beginning to move once fees, access, or process flow are actually clearing"],
     "29-32": ["your side of the matter becoming more visible, so timing, presentation, and review cycles start affecting the outcome"],
@@ -644,7 +644,7 @@ const SUBJECT_HOUSE_SIGNALS: Partial<Record<SubjectId, Partial<Record<number, st
     6: "unclear direction",
     7: "creative complication",
     9: "an encouraging response",
-    11: "repeat friction",
+    11: "repeated friction",
     14: "creative strategy",
     15: "power and stewardship",
     16: "the longer-view signal",
@@ -843,6 +843,17 @@ function describePlacementSignal(
     SHORT_HOUSE_SIGNALS[house.id] ??
     lowerFirst(house.shortFocus);
 
+  if (cardPhrase === housePhrase || cardPhrase.startsWith(housePhrase) || housePhrase.startsWith(cardPhrase)) {
+    return choose(
+      [
+        `${card.name} in ${house.name} suggests ${cardPhrase} concentrated at the center`,
+        `${card.name} in ${house.name} points to ${cardPhrase} as a dominant thread`,
+        `${card.name} in ${house.name} deepens the signal around ${cardPhrase}`,
+      ],
+      random,
+    );
+  }
+
   return choose(
     [
       `${card.name} in ${house.name} suggests ${cardPhrase} moving through ${housePhrase}`,
@@ -910,7 +921,7 @@ function rewriteSocialFragmentResiduals(input: string, subjectId: "community" | 
     [/heart, value, or feeling/gi, subjectId === "community" ? "what genuinely matters in the group" : "what genuinely matters in the friendship"],
     [/power or resource control/gi, subjectId === "community" ? "leverage or stronger backing" : "clearer leverage or stronger backing"],
     [/guidance and signal/gi, "clearer direction"],
-    [/values and love/gi, subjectId === "community" ? "what still feels mutual, welcoming, and worth belonging to" : "what genuinely matters in the friendship"],
+    [/values and love/gi, subjectId === "community" ? "what the group still genuinely values and holds in common" : "what genuinely matters in the friendship"],
   ];
 
   replacements.forEach(([pattern, replacement]) => {
@@ -936,7 +947,9 @@ function rewriteResidualSignalLabels(input: string, subjectId: SubjectId, kind: 
     .replace(/\bcommunication and nerves\b/gi, "anxious talk and crossed signals")
     .replace(/\byour own field\b/gi, "your own position")
     .replace(/\bsupport and loyalty\b/gi, "reliable support")
-    .replace(/\bpower or resource control\b/gi, "leverage or resource control");
+    .replace(/\bpower or resource control\b/gi, "leverage or resource control")
+    .replace(/\bguidance and signal\b/gi, "clearer direction")
+    .replace(/\bmovement, distance, or transition\b/gi, "a shift in proximity or direction");
 
   rewritten = rewritten
     .replace(/^a small beginning in what genuinely matters$/i, "a small beginning around what genuinely matters")
@@ -1219,7 +1232,12 @@ function rewriteFriendsSocialOpeningResiduals(input: string): string {
     .replace(/^slow growth around reliable support$/i, "slower trust beginning to regrow through the support that is actually dependable")
     .replace(/^clarity and visible progress(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer social movement becoming visible in ways people can actually trust")
     .replace(/^clarity and success(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer social momentum that is easier to trust")
-    .replace(/^(?:grace|grace, goodwill, or invitation)(?: (?:around|in|under) [a-z ,'-]+)?$/i, "a warmer, more receptive social response");
+    .replace(/^(?:grace|grace, goodwill, or invitation)(?: (?:around|in|under) [a-z ,'-]+)?$/i, "a warmer, more receptive social response")
+    .replace(/^endurance around grace, goodwill, or invitation$/i, "staying power gathering around a warmer, more receptive social response")
+    .replace(/^endurance\b/i, "social staying power and what the friendship can actually hold")
+    .replace(/^a solution or unlock\b/i, "a workable answer beginning to show in the social picture")
+    .replace(/^choice and branching paths\b/i, "a real social fork or decision that needs conscious handling")
+    .replace(/^your own position\b/i, "your own social position");
 }
 
 function rewriteFriendsSocialPressureResiduals(input: string): string {
@@ -1417,7 +1435,9 @@ function rewriteFriendsSocialPressureResiduals(input: string): string {
     .replace(/^obstacle or delay in the meaningful burden$/i, "delay or blockage gathering around a friendship or group tension that already carries real weight")
     .replace(/^obstacle or delay under fog or uncertainty$/i, "delay or blockage being made harder by mixed signals, uncertainty, or too little clarity")
     .replace(/^obstacle or delay under strategy$/i, "delay or blockage being worsened by guarded strategy, overmanagement, or too much careful positioning")
-    .replace(/^obstacle or delay under structure$/i, "delay or blockage being held in place by rigid roles, expectations, or social structure");
+    .replace(/^obstacle or delay under structure$/i, "delay or blockage being held in place by rigid roles, expectations, or social structure")
+    .replace(/^a sharp decision or cut\b/i, "a necessary social cut that now needs honest handling")
+    .replace(/^nervous communication\b/i, "anxious social talk and too much reactive discussion");
 }
 
 function rewriteSpiritualOpeningResiduals(input: string): string {
@@ -1440,6 +1460,7 @@ function rewriteSpiritualOpeningResiduals(input: string): string {
       "resource flow": "usable support and steadier flow gathering around your spiritual path",
       "slow growth": "your spiritual path asking for slower, steadier growth",
       "stability": "steadier footing gathering around your spiritual path",
+      "structural stability": "steadier footing and firmer ground gathering around your spiritual path",
       "support and loyalty": "steadier support gathering around your spiritual path",
       "the answer point": "your spiritual path arriving where the next answer can actually be used",
       "the public field": "your spiritual path becoming more visible in the wider field",
@@ -1547,11 +1568,13 @@ function rewriteSpiritualOpeningResiduals(input: string): string {
     .replace(/^a solution or unlock(?: (?:in|under) [a-z ,'-]+)?$/i, "a workable answer beginning to appear")
     .replace(/^clarity and success(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer signal and confirmation")
     .replace(/^clarity and visible progress(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer signal and usable confirmation")
-    .replace(/^guidance(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer guidance")
+    .replace(/^guidance\b/i, "clearer guidance")
     .replace(/^incoming movement or news(?: (?:around|in|under) [a-z ,'-]+)?$/i, "a sign, response, or new movement")
     .replace(/^movement, distance, or transition(?: (?:around|in|under) [a-z ,'-]+)?$/i, "the path beginning to shift")
     .replace(/^resource flow(?: around [a-z ,'-]+)?$/i, "usable support and steadier flow")
-    .replace(/^endurance(?: around [a-z ,'-]+)?$/i, "staying power that can actually hold");
+    .replace(/^endurance(?: around [a-z ,'-]+)?$/i, "staying power that can actually hold")
+    .replace(/^your own field\b/i, "your spiritual path")
+    .replace(/^your own position\b/i, "your spiritual path");
 }
 
 function rewriteSpiritualPressureResiduals(input: string): string {
@@ -1698,12 +1721,13 @@ function rewriteSpiritualPressureResiduals(input: string): string {
     .replace(/^burden and meaning(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a spiritually weighty issue that needs wiser carrying")
     .replace(/^caution and self-interest(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "defensive caution and overprotection clouding the path")
     .replace(/^choice and branching paths(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a decision point that cannot stay vague and has to be discerned cleanly")
-    .replace(/^closure, ending, or rest(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a pause, ending, or quiet withdrawal that needs honest recognition")
-    .replace(/^complication or mixed motives(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "mixed motives or layered pressure making the path harder to read cleanly")
-    .replace(/^fog and uncertainty(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "uncertainty and mixed signal thickening around the path")
-    .replace(/^nervous communication(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "anxious interpretation and too much mental noise")
-    .replace(/^structure, distance, or institution(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "formal structures, inherited rules, or rigid expectations pressing on the path")
-    .replace(/^your own position(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "your spiritual path at the point that needs the most honest attention");
+    .replace(/^closure, ending, or rest\b/i, "a pause, ending, or quiet withdrawal that needs honest recognition")
+    .replace(/^complication or mixed motives\b/i, "mixed motives or layered pressure making the path harder to read cleanly")
+    .replace(/^fog and uncertainty\b/i, "uncertainty and mixed signal thickening around the path")
+    .replace(/^nervous communication\b/i, "anxious interpretation and too much mental noise")
+    .replace(/^structure, distance, or institution\b/i, "formal structures, inherited rules, or rigid expectations pressing on the path")
+    .replace(/^your own field\b/i, "your spiritual path at the point that needs the most honest attention")
+    .replace(/^your own position\b/i, "your spiritual path at the point that needs the most honest attention");
 }
 
 function rewriteCommunityOpeningResiduals(input: string): string {
@@ -1715,6 +1739,7 @@ function rewriteCommunityOpeningResiduals(input: string): string {
     {
       "a small opening": "your place in the wider field finding a small but usable opening",
       "clarity and success": "your place in the wider field becoming clearer and easier for others to read",
+      "commitment": "your place in the wider field inside a recurring group pattern or agreement that now needs clearer handling",
       "endurance": "steadier footing beginning to hold around your place in the wider field",
       "erosion and stress": "your place in the wider field having to recover from repeated strain or low-grade social wear",
       "expansion": "your place in the wider field getting more room to move",
@@ -1725,6 +1750,7 @@ function rewriteCommunityOpeningResiduals(input: string): string {
       "power": "your place in the wider field gaining firmer footing through clearer leverage or support",
       "resource flow": "cleaner reciprocity and usable support gathering around your place in the wider field",
       "slow growth": "your place in the wider field growing more slowly but on steadier ground",
+      "structural stability": "steadier footing and firmer ground gathering around your place in the wider field",
       "support and loyalty": "steadier mutual support gathering around your place in the wider field",
       "the answer point": "your place in the wider field reaching the clearest point of response or decision",
       "the public field": "your place in the wider field becoming more visible in the shared space",
@@ -1844,7 +1870,8 @@ function rewriteCommunityOpeningResiduals(input: string): string {
     .replace(/^your own field(?: (?:around|in|under) [a-z ,'-]+)?$/i, "your place in the wider field becoming the clearest ground you can actually act from")
     .replace(/^(?:grace|grace, goodwill, or invitation)(?: (?:around|in|under) [a-z ,'-]+)?$/i, "a warmer, more receptive group response")
     .replace(/^(?:support and loyalty|reliable support)(?: (?:around|in|under) [a-z ,'-]+)?$/i, "steadier mutual support")
-    .replace(/^(?:heart, value, or feeling|values and love)(?: (?:around|in|under) [a-z ,'-]+)?$/i, "what still feels mutual, welcoming, and worth belonging to");
+    .replace(/^(?:heart, value, or feeling|values and love)(?: (?:around|in|under) [a-z ,'-]+)?$/i, "what still feels mutual, welcoming, and worth belonging to")
+    .replace(/^your own position\b/i, "your place in the wider field");
 }
 
 function rewriteCommunityPressureResiduals(input: string): string {
@@ -1997,6 +2024,7 @@ function rewriteCommunityPressureResiduals(input: string): string {
     .replace(/^nervous communication(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "anxious group talk and too much reactive discussion")
     .replace(/^obstacle or delay(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a real social delay or blockage the wider field still has to work through")
     .replace(/^structure, distance, or institution(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "fixed roles, gatekeeping, or formal group structure pressing on the dynamic")
+    .replace(/^choice and branching paths\b/i, "a real fork or decision in the wider field that now needs honest handling")
     .replace(/^your own position(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "your place in the wider field at the point that needs the most honest attention");
 }
 
@@ -2082,13 +2110,14 @@ function rewritePetsOpeningResiduals(input: string): string {
     .replace(/^guidance and signal under improvement or movement$/i, "clearer care direction beginning to show as the situation starts improving")
     .replace(/^guidance around your own position$/i, "clearer care direction gathering around what you can actually do")
     .replace(/^social or public life feeding long-term growth more than first appearances suggest$/i, "the wider environment supporting steadier improvement more than first appearances suggest")
-    .replace(/^your own field$/i, "the part of the care picture you can actually control")
+    .replace(/^your own field\b/i, "the part of the care picture you can actually control")
+    .replace(/^your own position\b/i, "the part of the care picture you can actually control")
     .replace(/^a newly forming situation(?: around [a-z ,'-]+)?$/i, "a newer care phase that is still taking shape")
     .replace(/^a solution or unlock(?: (?:in|under) [a-z ,'-]+)?$/i, "a workable care answer beginning to show")
     .replace(/^clarity and success(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer signal and reassurance")
     .replace(/^clarity and visible progress(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer signs of improvement")
     .replace(/^endurance(?: around [a-z ,'-]+)?$/i, "a steadier rhythm that can actually hold")
-    .replace(/^guidance(?: (?:around|in|under) [a-z ,'-]+)?$/i, "clearer care direction")
+    .replace(/^guidance\b/i, "clearer care direction")
     .replace(/^incoming movement or news(?: (?:around|in|under) [a-z ,'-]+)?$/i, "a new care cue, response, or shift")
     .replace(/^movement, distance, or transition(?: (?:around|in|under) [a-z ,'-]+)?$/i, "movement beginning in the care picture")
     .replace(/^resource flow(?: around [a-z ,'-]+)?$/i, "practical support and cleaner routines")
@@ -2242,16 +2271,18 @@ function rewritePetsPressureResiduals(input: string): string {
     .replace(/^repetition and tension under closure$/i, "a care loop tightening around a pause, setback, or rest phase")
     .replace(/^choice and branching paths in closure$/i, "decision pressure gathering around a pause, setback, or necessary ending")
     .replace(/^guidance and signal moving through communication and nerves$/i, "the real signal getting muddied by anxious talk, over-monitoring, or too much interpretation")
-    .replace(/^a sharp decision or cut(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a necessary care change or firmer boundary that now needs honest handling")
-    .replace(/^burden and meaning(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "the care load feeling heavier and needing wiser handling")
-    .replace(/^caution and self-interest(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "overprotective handling and too much control clouding the care picture")
-    .replace(/^closure, ending, or rest(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a pause, setback, or necessary rest phase that needs honest recognition")
-    .replace(/^complication or mixed motives(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "crossed care priorities and mixed handling making the situation harder to read cleanly")
-    .replace(/^fog and uncertainty(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "uncertainty around what the animal is signaling")
-    .replace(/^nervous communication(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "anxious talk, speculation, or over-monitoring around the animal")
-    .replace(/^obstacle or delay(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "a care delay or blockage that still has to be worked through patiently")
-    .replace(/^structure, distance, or institution(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "rigid routines, outside constraints, or institutional structure pressing on the care rhythm")
-    .replace(/^your own position(?: (?:in|under|moving through) [a-z ,'-]+)?$/i, "your care for the animal at the point that needs the most honest attention");
+    .replace(/^a sharp decision or cut\b/i, "a necessary care change or firmer boundary that now needs honest handling")
+    .replace(/^a solution or unlock\b/i, "a workable care answer beginning to show")
+    .replace(/^burden and meaning\b/i, "the care load feeling heavier and needing wiser handling")
+    .replace(/^caution and self-interest\b/i, "overprotective handling and too much control clouding the care picture")
+    .replace(/^choice and branching paths\b/i, "a real care decision or fork in the approach that now needs honest handling")
+    .replace(/^closure, ending, or rest\b/i, "a pause, setback, or necessary rest phase that needs honest recognition")
+    .replace(/^complication or mixed motives\b/i, "crossed care priorities and mixed handling making the situation harder to read cleanly")
+    .replace(/^fog and uncertainty\b/i, "uncertainty around what the animal is signaling")
+    .replace(/^nervous communication\b/i, "anxious talk, speculation, or over-monitoring around the animal")
+    .replace(/^obstacle or delay\b/i, "a care delay or blockage that still has to be worked through patiently")
+    .replace(/^structure, distance, or institution\b/i, "rigid routines, outside constraints, or institutional structure pressing on the care rhythm")
+    .replace(/^your own position\b/i, "your care for the animal at the point that needs the most honest attention");
 }
 
 function narrativeSignalPhrase(
@@ -2304,23 +2335,50 @@ function narrativeSignalPhrase(
       .replace(/^values and love around grace, goodwill, or invitation$/i, "what genuinely matters being met with more warmth, goodwill, or receptivity in the bond")
       .replace(/^closure, ending, or rest under the meaningful burden$/i, "a pause or withdrawal around a bond that still carries real weight")
       .replace(/^stability and foundations in improvement or movement$/i, "steadier footing starting to return to the relationship")
+      .replace(/^events beginning to move the moment your own stance becomes clear$/i, "a clearer sense of your own position in the bond")
+      .replace(/^your own position in the bond moving through uncertainty, hesitation, or a phase where not everything can yet be trusted at face value$/i, "your own position in the bond being clouded by uncertainty and mixed signals")
+      .replace(/^heart, value, or feeling in guidance$/i, "genuine feeling finding a clearer guiding signal")
+      .replace(/^how you are showing up in the relationship under your side of the relationship$/i, "your own presence in the bond and the tone it quietly creates")
+      .replace(/^how you are showing up in the relationship in the answer point$/i, "how you are showing up as the variable the bond is most waiting on")
       .replace(/^how you are showing up in the relationship$/i, "your own position in the bond")
       .replace(
         /^how you are showing up in the relationship in a small opening$/i,
-        "a small but real opening around how you are showing up in the relationship",
+        "a small but real opening in how you are showing up in the relationship",
       )
       .replace(
         /^your own position in the bond in a small opening$/i,
-        "a small but real opening around your own position in the bond",
+        "a small but real opening in your own position in the bond",
       )
-      .replace(/^a small opening around how you are showing up in the relationship$/i, "a small but real opening around how you are showing up in the relationship")
-      .replace(/^a small opening around your own position in the bond$/i, "a small but real opening around your own position in the bond")
+      .replace(/^a small opening around how you are showing up in the relationship$/i, "a small but real opening in how you are showing up in the relationship")
+      .replace(/^a small opening around your own position in the bond$/i, "a small but real opening in your own position in the bond")
       .replace(/^the emotional truth moving toward clarity$/i, "feeling becoming clear enough to trust")
       .replace(/^structure, distance, or institution moving through strategy$/i, "distance or guarded strategy")
       .replace(/^movement, distance, or transition under clarity and success$/i, "movement that gains clarity and momentum")
+      .replace(/^erosion, worry, or leakage moving through repeated strain and attrition$/i, "small repeated losses compounding each other until the wear becomes hard to ignore")
+      .replace(/^nervous communication moving through obstruction$/i, "anxious communication hitting a wall it cannot move through cleanly")
+      .replace(/^nervous communication moving through repeated strain and attrition$/i, "anxious talk and crossed signals made worse by ongoing wear and drain")
       .replace(/^closure, ending, or rest moving through erosion and stress$/i, "an old hurt or tired pattern reaching its limit")
+      .replace(/^closure, ending, or rest moving through power$/i, "an ending or withdrawal being held in place by a dominant or guarded dynamic in the bond")
       .replace(/^closure, ending, or rest in closure$/i, "an ending or withdrawal that needs to be acknowledged")
+      .replace(/^closure, ending, or rest in caution$/i, "an ending, withdrawal, or cold spell being kept in place by self-protective caution")
+      .replace(/^repeated friction and pressure under closure$/i, "repeated arguments or tension pressing toward an ending neither person is quite ready to name")
+      .replace(/^heart, value, or feeling under improvement or movement$/i, "genuine feeling becoming easier to act on as the bond begins to move in a cleaner direction")
+      .replace(/^constructive change under clearer momentum$/i, "constructive change becoming easier to sustain as things begin to clear and move")
+      .replace(/^uncertainty and mixed signals in closure$/i, "mixed signals and unclear intentions gathering around an ending that has not yet been named honestly")
+      .replace(/^maturity and restraint in improvement or movement$/i, "maturity and restraint creating the conditions for the bond to move in a cleaner direction")
+      .replace(/^maturity and restraint in incoming momentum$/i, "the steadier, more composed approach that makes an arriving signal or first move easier to receive well")
+      .replace(/^nervous communication under decisive cuts$/i, "anxious communication pressing against a boundary or clear cut that has to be stated")
+      .replace(/^maturity and restraint under grace$/i, "steadier, more composed intimacy becoming available through warmth and genuine receptivity")
+      .replace(/^resources and flow under slow growth$/i, "mutual generosity and trust deepening into something more consistent over time")
       .replace(/^grace around how you are showing up in the relationship$/i, "a gentler tone in how you are showing up")
+      .replace(/^how you are showing up in the relationship in closure$/i, "how you are showing up as something that has already begun to close")
+      .replace(/^how you are showing up in the relationship under closure$/i, "how you are showing up inside a bond that is already going quiet")
+      .replace(/^how you are showing up in the relationship in improvement or movement$/i, "gradual renewal in how you are showing up, and what shifts when your own approach updates")
+      .replace(/^closure, ending, or rest moving through repetition$/i, "an ending or withdrawal being held in a pattern that keeps repeating instead of resolving")
+      .replace(/^reliable support around how you are showing up in the relationship$/i, "dependable support and friendship grounding how you are showing up in the bond")
+      .replace(/^how you are showing up in the relationship under clearer momentum$/i, "how you are showing up becoming steadier and more readable as things begin to clear")
+      .replace(/^repeated friction and pressure in repeated strain and attrition$/i, "ongoing friction and pressure feeding directly into the drain and wear already present")
+      .replace(/^uncertainty and mixed signals moving through closure$/i, "mixed signals and unclear intentions pressing toward an ending or cold withdrawal")
       .replace(/^power around incoming movement or news$/i, "movement that gains momentum once something concrete arrives")
       .replace(/^obstacle or delay in obstruction$/i, "delay and emotional blockage")
       .replace(/^a message, record, or document under erosion and stress$/i, "strained communication and what is wearing thin")
@@ -2328,8 +2386,24 @@ function narrativeSignalPhrase(
       .replace(/^slow growth around maturity and restraint$/i, "slow, steadier growth through maturity and restraint")
       .replace(/^distance or reserve in decisive cuts$/i, "distance or reserve hardening as a decision can no longer be put off")
       .replace(/^your side of the relationship around slower, steadier growth$/i, "slower, steadier growth in your part of the relationship")
+      .replace(/^pressure moving through official structures, boundaries, or a system that keeps the tension in place$/i, "emotional distance being held in place by structure or a boundary neither person is currently moving around")
       .replace(/^movement, distance, or transition\b/i, "movement")
-      .replace(/^structure, distance, or institution\b/i, "distance or reserve");
+      .replace(/^structure, distance, or institution\b/i, "distance or reserve")
+      .replace(/^nervous communication\b/i, "anxious communication and reactive talk in the bond")
+      .replace(/^closure, ending, or rest\b/i, "an ending or withdrawal in the bond")
+      .replace(/^burden and meaning\b/i, "real weight in the bond")
+      .replace(/^obstacle or delay\b/i, "a genuine blocker or stall in the bond")
+      .replace(/^a sharp decision or cut\b/i, "a necessary decision or boundary in the bond")
+      .replace(/^choice and branching paths\b/i, "a real fork or choice in the relationship")
+      .replace(/^a solution or unlock\b/i, "the actual answer or opening in the bond")
+      .replace(/^heart, value, or feeling\b/i, "what genuinely matters in the bond")
+      .replace(/^guidance\b/i, "clearer direction in the relationship")
+      .replace(/^a newly forming situation\b/i, "an early-stage opening in the relationship")
+      .replace(/^endurance\b/i, "staying power and commitment in the bond")
+      .replace(/^resource flow\b/i, "practical support and what is actually moving in the bond")
+      .replace(/^social or public life\b/i, "the wider social field around the relationship")
+      .replace(/^your own field\b/i, "where you stand in the relationship")
+      .replace(/^your own position\b/i, "where you stand in the relationship");
   }
 
   if (subjectId === "general_reading") {
@@ -2351,12 +2425,24 @@ function narrativeSignalPhrase(
       .replace(/^caution and self-interest moving through the meaningful burden$/i, "defensive strategy building around something weighty or consequential")
       .replace(/^values and love around a small opening$/i, "a small opening around what genuinely matters")
       .replace(/^burden and meaning under structure$/i, "real pressure being held in place by structure, duty, or rigid conditions")
+      .replace(/^burden and meaning under strategy$/i, "real emotional weight filtered through defensiveness or guarded self-protection")
+      .replace(/^burden and meaning under caution$/i, "emotional weight being tightened further by defensiveness or overcareful handling")
       .replace(/^incoming momentum around heart, value, or feeling$/i, "movement beginning around what feels genuinely important")
-      .replace(/^complication or mixed motives under caution$/i, "mixed motives and defensive caution complicating the wider picture")
+      .replace(/^what genuinely matters around incoming movement or a concrete update$/i, "genuine feeling beginning to move as something concrete finally arrives")
+      .replace(/^(?:warmth, goodwill, or a friendlier response|grace, goodwill, or invitation) in what genuinely matters$/i, "warmth and genuine receptivity landing where the bond is actually asking for something real")
+      .replace(/^power around maturity and restraint$/i, "the protective or steadying side of the bond becoming more sustainable through patience and restraint")
+      .replace(/^stability and endurance in what genuinely matters$/i, "the stability that comes from staying close to what genuinely matters in the bond")
+      .replace(/^a sharp decision or cut under strategy$/i, "a needed boundary or clean cut being complicated by guarded strategy or mixed motives")
+      .replace(/^a sharp decision or cut moving through caution$/i, "a needed boundary or decisive conversation being slowed by overcareful handling or self-protective hesitation")
+      .replace(/^(?:defensive caution and guarded self-interest|caution and self-interest) (?:in|under) strategy$/i, "self-protective caution feeding into guarded strategy and keeping both in place")
+      .replace(/^improvement or movement around a solution or unlock$/i, "a clearer answer beginning to come into view once the bond has room to move")
+      .replace(/^a small opening under slow growth$/i, "a small but real opening that asks for patience rather than force")
+      .replace(/^uncertainty and mixed signals in repeated strain and attrition$/i, "mixed signals and uncertainty being worn down further by repeated small hurts and ongoing drain")
+      .replace(/^(?:complication or )?mixed motives under caution$/i, "mixed motives and defensive caution complicating the wider picture")
       .replace(/^maturity around your own position$/i, "steadier judgment gathering around your own position")
       .replace(/^nervous communication moving through erosion and stress$/i, "anxious discussion feeding an already worn-down situation")
       .replace(/^constructive change under values and love$/i, "constructive change around what genuinely matters")
-      .replace(/^complication or mixed motives in the meaningful burden$/i, "mixed motives gathering around something already weighty or consequential")
+      .replace(/^(?:complication or )?mixed motives in the meaningful burden$/i, "mixed motives gathering around something already weighty or consequential")
       .replace(/^endurance around your own position$/i, "staying power gathering around your own position")
       .replace(/^repetition and tension in erosion and stress$/i, "repeated strain intensifying what is already being worn down")
       .replace(/^improvement or movement around clarity and visible progress$/i, "movement beginning once the picture is clearer and easier to trust")
@@ -2365,7 +2451,7 @@ function narrativeSignalPhrase(
       .replace(/^your own position under improvement or movement$/i, "your own position beginning to move into a better pattern")
       .replace(/^choice and branching paths under erosion and stress$/i, "a decision point complicated by repeated strain and attrition")
       .replace(/^your own position under the answer point$/i, "your own position gathering around the clearest available answer")
-      .replace(/^complication or mixed motives moving through repetition$/i, "mixed motives feeding a pattern that keeps replaying")
+      .replace(/^(?:complication or )?mixed motives moving through repetition$/i, "mixed motives feeding a pattern that keeps replaying")
       .replace(/^stability and endurance in maturity$/i, "steadier footing through maturity and what can actually hold")
       .replace(/^nervous communication under obstruction$/i, "anxious discussion gathering around a real blockage or delay")
       .replace(/^grace, goodwill, or invitation in the public field$/i, "a more helpful tone becoming visible in the wider field")
@@ -2374,7 +2460,9 @@ function narrativeSignalPhrase(
       .replace(/^closure, ending, or rest moving through what is hidden$/i, "something hidden reaching an ending, pause, or needed withdrawal")
       .replace(/^your own position in support and loyalty$/i, "steadier support gathering around your own position")
       .replace(/^nervous communication in commitment$/i, "anxious discussion inside an obligation, agreement, or repeating pattern")
-      .replace(/^complication or mixed motives moving through closure$/i, "mixed motives gathering around something that may already be ending or withdrawing")
+      .replace(/^(?:complication or )?mixed motives (?:in|under) strategy$/i, "mixed motives and guarded self-interest reinforcing each other")
+      .replace(/^expansion around how you are showing up in the relationship$/i, "a little more room opening around how you are showing up, and what that makes available")
+      .replace(/^(?:complication or )?mixed motives moving through closure$/i, "mixed motives gathering around something that may already be ending or withdrawing")
       .replace(/^improvement or movement around your own position$/i, "movement beginning once your own stance starts changing")
       .replace(/^closure, ending, or rest moving through communication and nerves$/i, "an ending, pause, or withdrawal being complicated by anxious discussion")
       .replace(/^heart, value, or feeling under maturity$/i, "clearer values emerging through maturity and restraint")
@@ -2423,7 +2511,24 @@ function narrativeSignalPhrase(
       .replace(/^repetition and tension under decisive cuts$/i, "a pattern of friction being sharpened by decisions that cannot stay deferred")
       .replace(/^slow growth and rooting under incoming momentum$/i, "slower, steadier growth beginning once movement finally starts")
       .replace(/^erosion, worry, or leakage moving through the other person's field$/i, "repeated drain and uncertainty gathering around the other side of the situation")
-      .replace(/^endurance around a small opening$/i, "a small opening that could still hold if handled steadily");
+      .replace(/^endurance around a small opening$/i, "a small opening that could still hold if handled steadily")
+      .replace(/^nervous communication\b/i, "anxious discussion and reactive noise in the situation")
+      .replace(/^closure, ending, or rest\b/i, "something reaching its natural limit or needing a pause")
+      .replace(/^burden and meaning\b/i, "real weight and what it demands")
+      .replace(/^obstacle or delay\b/i, "a genuine blocker or delay in the situation")
+      .replace(/^a sharp decision or cut\b/i, "a necessary decision or boundary")
+      .replace(/^choice and branching paths\b/i, "a real fork or open decision")
+      .replace(/^a solution or unlock\b/i, "the actual answer or opening")
+      .replace(/^heart, value, or feeling\b/i, "what genuinely matters")
+      .replace(/^movement, distance, or transition\b/i, "movement or a change of direction")
+      .replace(/^structure, distance, or institution\b/i, "formal structure, distance, or institutional pressure")
+      .replace(/^guidance\b/i, "clearer direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage opening")
+      .replace(/^endurance\b/i, "staying power and what can hold")
+      .replace(/^resource flow\b/i, "practical resources and what is actually moving")
+      .replace(/^social or public life\b/i, "the wider social or public field")
+      .replace(/^your own field\b/i, "your own stance in the wider situation")
+      .replace(/^your own position\b/i, "your own stance in the wider situation");
   }
 
   if (subjectId === "spiritual") {
@@ -2642,6 +2747,7 @@ function narrativeSignalPhrase(
       .replace(/^support and loyalty around your own position$/i, "steadier support gathering around your own stance")
       .replace(/^emotional weather and self-image moving through layered motives and self-protective strategy$/i, "changing emotional weather tangled in self-protective strategy")
       .replace(/^fog and uncertainty in fog or uncertainty$/i, "uncertainty feeding on itself")
+      .replace(/^repeated inner drain in repeated strain and attrition$/i, "repeated inner drain and the low-grade attrition that goes with it")
       .replace(/^nervous communication under caution$/i, "anxious inner talk thickened by self-protective caution")
       .replace(/^anxious inner talk in communication and nerves$/i, "anxious inner talk feeding on itself")
       .replace(/^closure, ending, or rest in communication and nerves$/i, "an ending or withdrawal tangled in anxious inner talk")
@@ -2664,7 +2770,7 @@ function narrativeSignalPhrase(
       .replace(/^clarity and visible progress under maturity$/i, "clearer progress once it is carried with maturity and steadier pacing")
       .replace(
         /^your role meeting a newly forming situation, where what you do first matters more than what you promise later$/i,
-        "a newly forming version of yourself, where first actions matter more than promises",
+        "a newly forming version of yourself where first actions matter more than promises",
       )
       .replace(
         /^your own role caught in complication, mixed motives, or a dynamic that needs clearer boundaries$/i,
@@ -2675,7 +2781,24 @@ function narrativeSignalPhrase(
       .replace(/^the other person's stance in caution$/i, "another person's stance being filtered through caution or defensiveness")
       .replace(/^the other person's stance under caution$/i, "another person's stance being filtered through caution or defensiveness")
       .replace(/^slow growth and rooting in maturity$/i, "slower, steadier growth through maturity and patience")
-      .replace(/^clarity and visible progress under maturity$/i, "clearer progress once it is carried with maturity and steadier pacing");
+      .replace(/^clarity and visible progress under maturity$/i, "clearer progress once it is carried with maturity and steadier pacing")
+      .replace(/^nervous communication\b/i, "anxious inner talk and reactive self-monitoring")
+      .replace(/^closure, ending, or rest\b/i, "an old pattern reaching its natural limit")
+      .replace(/^burden and meaning\b/i, "real inner weight and what it is asking you to carry")
+      .replace(/^obstacle or delay\b/i, "a genuine internal blocker or delay")
+      .replace(/^a sharp decision or cut\b/i, "a necessary inner boundary or honest break with an old pattern")
+      .replace(/^choice and branching paths\b/i, "a real inner fork or choice")
+      .replace(/^a solution or unlock\b/i, "the actual inner answer or opening")
+      .replace(/^heart, value, or feeling\b/i, "what genuinely matters inwardly")
+      .replace(/^movement, distance, or transition\b/i, "inner movement or a shift in direction")
+      .replace(/^structure, distance, or institution\b/i, "outer structures or inherited patterns pressing on the inner work")
+      .replace(/^guidance\b/i, "clearer inner direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage inner opening")
+      .replace(/^endurance\b/i, "inner staying power and what can hold over time")
+      .replace(/^resource flow\b/i, "practical energy and what is actually moving")
+      .replace(/^social or public life\b/i, "the wider social field touching the inner picture")
+      .replace(/^your own field\b/i, "your own inner stance")
+      .replace(/^your own position\b/i, "your own inner stance");
   }
 
   if (subjectId === "creative") {
@@ -2694,7 +2817,7 @@ function narrativeSignalPhrase(
       .replace(/^fog or uncertainty moving through decisive cuts$/i, "creative uncertainty colliding with a hard cut or forced decision before the direction feels settled")
       .replace(/^nervous communication under your own creative field$/i, "creative chatter getting caught inside your own reactions and second-guessing")
       .replace(/^fog or uncertainty in unclear direction$/i, "creative direction staying too fogged to trust cleanly yet")
-      .replace(/^fog or uncertainty under repeat friction$/i, "creative uncertainty being worsened by repeated friction and the same draining loop")
+      .replace(/^fog or uncertainty under repeated friction$/i, "creative uncertainty being worsened by repeated friction and the same draining loop")
       .replace(/^obstacle or delay in drain$/i, "delay being made heavier by repeated drain and attrition")
       .replace(/^slow growth around constructive change$/i, "slower but real creative progress building through useful revision")
       .replace(/^slow growth around maturity and restraint$/i, "slow, steadier creative growth through restraint and more mature craft")
@@ -2720,7 +2843,7 @@ function narrativeSignalPhrase(
       .replace(/^repetition and tension moving through what is hidden$/i, "creative repetition building around what is still hidden, withheld, or not yet fully named")
       .replace(/^repetition and tension under recognition cycle$/i, "creative strain getting pulled into the same visibility and recognition loop")
       .replace(/^repetition and tension under unclear direction$/i, "creative repetition building because the direction is still too unclear to trust cleanly")
-      .replace(/^complication or mixed motives in repeat friction$/i, "creative complication getting intensified by the same repeating friction instead of being worked through cleanly")
+      .replace(/^complication or mixed motives in repeated friction$/i, "creative complication getting intensified by the same repeating friction instead of being worked through cleanly")
       .replace(/^complication or mixed motives moving through decisive cuts$/i, "creative complication colliding with a hard cut or forced decision before the work is ready for it")
       .replace(/^a sharp decision or cut under creative complication$/i, "a hard creative choice being made inside layered complication, crossed motives, or too many agendas")
       .replace(/^choice and branching paths under creative complication$/i, "decision pressure getting tangled inside layered creative complication or too many competing agendas")
@@ -2795,7 +2918,24 @@ function narrativeSignalPhrase(
       .replace(/^support and loyalty around your own position$/i, "steadier support gathering around your creative position")
       .replace(/^your own position under expansion$/i, "your creative position gaining more room to move")
       .replace(/^movement, distance, or transition in expansion$/i, "the work beginning to move as the field opens a little wider")
-      .replace(/^grace, goodwill, or invitation\b/i, "a more encouraging response");
+      .replace(/^grace, goodwill, or invitation\b/i, "a more encouraging response")
+      .replace(/^nervous communication\b/i, "creative chatter and reactive noise around the work")
+      .replace(/^closure, ending, or rest\b/i, "a necessary pause, ending, or rest phase for the work")
+      .replace(/^burden and meaning\b/i, "real creative weight and what the work is asking you to carry")
+      .replace(/^obstacle or delay\b/i, "a genuine creative block or delay")
+      .replace(/^a sharp decision or cut\b/i, "a necessary creative decision or hard cut")
+      .replace(/^choice and branching paths\b/i, "a real creative fork or choice")
+      .replace(/^a solution or unlock\b/i, "the actual creative fix or opening")
+      .replace(/^heart, value, or feeling\b/i, "what genuinely matters in the work")
+      .replace(/^movement, distance, or transition\b/i, "movement or a creative shift")
+      .replace(/^structure, distance, or institution\b/i, "formal structures or outside pressures on the work")
+      .replace(/^guidance\b/i, "clearer creative direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage creative opening")
+      .replace(/^endurance\b/i, "creative staying power and what the work can sustain")
+      .replace(/^resource flow\b/i, "practical creative resources and what is actually moving")
+      .replace(/^social or public life\b/i, "the wider social or public field around the work")
+      .replace(/^your own field\b/i, "your creative field")
+      .replace(/^your own position\b/i, "your creative position");
   }
 
   if (subjectId === "travel") {
@@ -2843,7 +2983,22 @@ function narrativeSignalPhrase(
       .replace(/^grace, goodwill, or invitation\b/i, "a more workable opening")
       .replace(/^movement, distance, or transition in expansion$/i, "movement beginning as the trip starts opening again")
       .replace(/^movement, distance, or transition\b/i, "movement")
-      .replace(/^structure, distance, or institution\b/i, "formal travel structure");
+      .replace(/^structure, distance, or institution\b/i, "formal travel structure")
+      .replace(/^nervous communication\b/i, "anxious travel communication and crossed updates")
+      .replace(/^closure, ending, or rest\b/i, "a cancelled leg, paused trip, or necessary stop")
+      .replace(/^burden and meaning\b/i, "real weight or obligation shaping the journey")
+      .replace(/^obstacle or delay\b/i, "a genuine travel blocker or delay")
+      .replace(/^a sharp decision or cut\b/i, "a necessary reroute or clean cut in travel plans")
+      .replace(/^choice and branching paths\b/i, "a real itinerary fork or route choice")
+      .replace(/^a solution or unlock\b/i, "the actual fix or opening in the travel picture")
+      .replace(/^heart, value, or feeling\b/i, "what still feels worth the journey")
+      .replace(/^guidance\b/i, "clearer route direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage travel opening")
+      .replace(/^endurance\b/i, "staying power and persistence in the travel picture")
+      .replace(/^resource flow\b/i, "practical resources and what is actually moving")
+      .replace(/^social or public life\b/i, "the wider social or public field of the journey")
+      .replace(/^your own field\b/i, "your travel position")
+      .replace(/^your own position\b/i, "your travel position");
   }
 
   if (subjectId === "education") {
@@ -2962,7 +3117,23 @@ function narrativeSignalPhrase(
       .replace(/^clarity and visible progress in steady skill-building$/i, "clearer progress beginning to show through steadier skill-building that is finally holding")
       .replace(/^grace, goodwill, or invitation\b/i, "a more workable opening")
       .replace(/^heart, value, or feeling\b/i, "what still matters academically")
-      .replace(/^warmth and feeling brought fully into the light$/i, "motivation and genuine interest coming back into clearer view");
+      .replace(/^warmth and feeling brought fully into the light$/i, "motivation and genuine interest coming back into clearer view")
+      .replace(/^nervous communication\b/i, "anxious academic chatter and crossed messages")
+      .replace(/^closure, ending, or rest\b/i, "a pause, deferral, or necessary stop in the learning path")
+      .replace(/^burden and meaning\b/i, "real academic weight and what the path is asking you to carry")
+      .replace(/^obstacle or delay\b/i, "a genuine blocker or delay in the learning path")
+      .replace(/^a sharp decision or cut\b/i, "a hard academic decision or correction")
+      .replace(/^choice and branching paths\b/i, "a real fork or choice in the educational path")
+      .replace(/^a solution or unlock\b/i, "the actual answer or opening in the learning path")
+      .replace(/^guidance\b/i, "clearer academic direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage academic opening")
+      .replace(/^endurance\b/i, "staying power and long-term academic effort")
+      .replace(/^resource flow\b/i, "practical resources and what is actually moving in the learning path")
+      .replace(/^social or public life\b/i, "the wider academic or institutional field")
+      .replace(/^movement, distance, or transition\b/i, "movement in the learning path")
+      .replace(/^structure, distance, or institution\b/i, "formal academic structure or institutional pressure")
+      .replace(/^your own field\b/i, "your learning path")
+      .replace(/^your own position\b/i, "your learning path");
   }
 
   if (subjectId === "health") {
@@ -3036,7 +3207,23 @@ function narrativeSignalPhrase(
       .replace(/^your wellbeing in rest and regulation$/i, "your wellbeing settling into better rest and regulation")
       .replace(/^your own field around your wellbeing$/i, "your direct experience of what the body is doing")
       .replace(/^heart, value, or feeling under rest and regulation$/i, "what genuinely nourishes you around rest and regulation")
-      .replace(/^heart, value, or feeling around rest and regulation$/i, "what genuinely nourishes you around rest and regulation");
+      .replace(/^heart, value, or feeling around rest and regulation$/i, "what genuinely nourishes you around rest and regulation")
+      .replace(/^nervous communication\b/i, "anxiety and overactivated stress signals")
+      .replace(/^closure, ending, or rest\b/i, "a necessary ending, pause, or rest phase for the system")
+      .replace(/^burden and meaning\b/i, "what the body is carrying and the weight of it")
+      .replace(/^obstacle or delay\b/i, "a genuine health blocker or slowdown")
+      .replace(/^a sharp decision or cut\b/i, "a necessary health boundary or protocol change")
+      .replace(/^choice and branching paths\b/i, "a real fork or choice in the recovery path")
+      .replace(/^a solution or unlock\b/i, "the actual fix or opening in the health picture")
+      .replace(/^heart, value, or feeling\b/i, "what genuinely nourishes you")
+      .replace(/^movement, distance, or transition\b/i, "recovery movement")
+      .replace(/^guidance\b/i, "clearer health direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage recovery opening")
+      .replace(/^endurance\b/i, "staying power and long-term health effort")
+      .replace(/^resource flow\b/i, "practical support and what is actually moving in recovery")
+      .replace(/^social or public life\b/i, "the wider social or community field around health")
+      .replace(/^your own field\b/i, "your wellbeing")
+      .replace(/^your own position\b/i, "your wellbeing");
   }
 
   if (subjectId === "purpose_calling") {
@@ -3118,7 +3305,24 @@ function narrativeSignalPhrase(
       .replace(/^nervous communication moving through the answer point$/i, "anxious discussion crowding the very decision point")
       .replace(/^resource flow around your stance toward the path$/i, "real support and movement beginning to gather around your path")
       .replace(/^caution and self-interest under structure$/i, "defensive caution hardened by structure or inherited rules")
-      .replace(/^a small opening in guidance$/i, "a small opening once the direction feels clearer");
+      .replace(/^a small opening in guidance$/i, "a small opening once the direction feels clearer")
+      .replace(/^nervous communication\b/i, "anxious discussion and mental noise around the path")
+      .replace(/^closure, ending, or rest\b/i, "an old path reaching its natural limit")
+      .replace(/^burden and meaning\b/i, "real weight and what the path is asking you to carry")
+      .replace(/^obstacle or delay\b/i, "a genuine blocker or delay on the path")
+      .replace(/^a sharp decision or cut\b/i, "a necessary decision or refusal on the path")
+      .replace(/^choice and branching paths\b/i, "a real fork or choice in how the path continues")
+      .replace(/^a solution or unlock\b/i, "the actual answer or opening on the path")
+      .replace(/^heart, value, or feeling\b/i, "what still feels deeply true")
+      .replace(/^movement, distance, or transition\b/i, "movement on the path")
+      .replace(/^structure, distance, or institution\b/i, "old structures or inherited obligations on the path")
+      .replace(/^guidance\b/i, "clearer direction and a longer-range signal on the path")
+      .replace(/^a newly forming situation\b/i, "an early-stage opening on the path")
+      .replace(/^endurance\b/i, "staying power and long-term commitment to the path")
+      .replace(/^resource flow\b/i, "practical support and what is actually moving")
+      .replace(/^social or public life\b/i, "the wider field where the path becomes visible to others")
+      .replace(/^your own field\b/i, "your own sense of the path")
+      .replace(/^your own position\b/i, "your own stance toward the path");
   }
 
   if (subjectId === "work") {
@@ -3167,7 +3371,337 @@ function narrativeSignalPhrase(
       .replace(/^grace, goodwill, or invitation under expansion$/i, "a more workable opening as momentum builds")
       .replace(/^your role in the household under expansion$/i, "your role gaining room to move")
       .replace(/^your role at home being shaped by anxious conversation, repeated check-ins, or the practical strain of too many unsettled discussions$/i, "your role being shaped by anxious updates, repeated check-ins, or too many unsettled work conversations")
-      .replace(/^a gentler new beginning in the household$/i, "a smaller, cleaner restart in the work itself");
+      .replace(/^a gentler new beginning in the household$/i, "a smaller, cleaner restart in the work itself")
+      .replace(/^closure, ending, or rest in commitment$/i, "a role, agreement, or repeating obligation reaching the point where it needs to end or be renegotiated")
+      .replace(/^your own position under endurance$/i, "your professional position finding steadier footing through persistence and staying power")
+      .replace(/^repeating terms moving through repeated strain and attrition$/i, "recurring commitments and contract terms being worn down by the same pressure that has not let up")
+      .replace(/^your own position under the answer point$/i, "your professional position becoming more central once the key decision or strategic fix is named")
+      .replace(/^the question of what can hold$/i, "the question of whether current commitments and work terms can hold under the existing pressure")
+      .replace(/^uncertainty and mixed signals under the meaningful burden$/i, "unclear signals and mixed direction pressing into an already heavy workload")
+      .replace(/^structural blockers require persistence and planning$/i, "structural blockers that demand patience and deliberate planning")
+      .replace(/^strategy gains clarity and coherence$/i, "the point where strategic direction becomes clearer and the picture holds")
+      .replace(/^your own position under improvement or movement$/i, "your professional position beginning to shift as conditions create room for it")
+      .replace(/^your own position around your own position$/i, "your own professional position as the clearest point of leverage available")
+      .replace(/^erosion, worry, or leakage moving through obstruction$/i, "accumulated drain and depletion pressing against a structural block that has not moved yet")
+      .replace(/^budget, authority, and ownership come forward$/i, "budget, authority, and ownership beginning to come forward")
+      .replace(/^a sharp decision or cut in decisive cuts$/i, "a necessary decision or cut that has to be named and made without delay")
+      .replace(/^your own position around clearer visible progress$/i, "your professional position becoming more visible and clearly productive as things begin to move")
+      .replace(/^a phase where structural blockers require persistence and planning$/i, "structural blockers that demand patient, deliberate planning")
+      .replace(/^networking and visibility support progress$/i, "how networking and visibility create the conditions for professional progress")
+      .replace(/^a phase where networking and visibility support progress$/i, "the point where networking and visibility begin to support forward movement")
+      .replace(/^events beginning to move the moment your own stance becomes clear$/i, "the way things begin to move once your own professional position is clearly held")
+      .replace(/^uncertainty and mixed signals moving through decisive cuts$/i, "unclear direction and mixed signals pressing toward a decision or boundary that can no longer wait")
+      .replace(/^a sharp decision or cut in anxious talk and crossed signals$/i, "a necessary decision or boundary being muddied by anxious communication and crossed signals")
+      .replace(/^the other person's stance in anxious talk and crossed signals$/i, "the other party's position being complicated by anxious communication and crossed signals")
+      .replace(/^reliable support in clearer momentum$/i, "reliable support giving the work clearer forward momentum")
+      .replace(/^public-facing diplomacy creates opportunities$/i, "the opportunities that open when public-facing work and diplomacy are handled well")
+      .replace(/^your own position in structure$/i, "your professional position being constrained by structure, hierarchy, or rigid systems")
+      .replace(/^your own position under structure\b/i, "your professional position being pressed down by formal structure, hierarchy, or rigid systems")
+      .replace(/^incoming momentum around warmth, goodwill, or a friendlier response$/i, "incoming movement or a concrete update arriving at exactly the moment when the professional climate is becoming more receptive")
+      .replace(/^expansion around clearer visible progress$/i, "growing room opening around a more visible, demonstrable result")
+      .replace(/^closure, ending, or rest under structure$/i, "a process, role, or phase being held in place by structure when it should have ended or reset")
+      .replace(/^incoming movement or a concrete update in expansion$/i, "incoming news or a concrete update opening up more room to move")
+      .replace(/^your own position under slow growth$/i, "your professional position gaining ground through patient, incremental progress")
+      .replace(/^burden and meaning in the meaningful burden$/i, "genuine weight and accountability reinforcing each other, with no obvious way to set either down")
+      .replace(/^a small beginning in endurance$/i, "a modest first move that builds staying power if followed through consistently")
+      .replace(/^improvement or movement around reliable support$/i, "real improvement becoming available when reliable support is part of the picture")
+      .replace(/^improvement or movement around stability and endurance$/i, "real improvement becoming available once the work settles onto a more durable, sustainable footing")
+      .replace(/^closure, ending, or rest under repeated strain and attrition$/i, "a process or phase that needs to end, being ground down further by the same pressure that has not let up")
+      .replace(/^guidance and signal under anxious talk and crossed signals$/i, "clear direction being muddied by anxious communication, chatter, and crossed signals")
+      .replace(/^slow growth around a small beginning$/i, "slow but real progress building from a modest, sustainable first step")
+      .replace(/^uncertainty and mixed signals under strategy$/i, "unclear direction and mixed signals filtering through guarded strategy or political maneuvering")
+      .replace(/^your own position under expansion$/i, "your professional position gaining more room as the work begins to expand")
+      .replace(/^your own position in expansion\b/i, "your professional position gaining more room as the work begins to open up")
+      .replace(/^mixed motives under closure$/i, "guarded self-interest and mixed motives reinforcing a situation that should already be closing")
+      .replace(/^your own position under reliable support$/i, "your professional position becoming steadier when reliable support is genuinely present")
+      .replace(/^your own position in reliable support\b/i, "your professional position becoming more stable when reliable support is genuinely available")
+      .replace(/^closure, ending, or rest in caution$/i, "a process or phase being held back by overcautious handling when it needs to close or reset")
+      .replace(/^a sharp decision or cut under fog or uncertainty$/i, "a necessary decision or cut being clouded by unclear information and shifting priorities")
+      .replace(/^your own position under grace$/i, "your professional position becoming more workable through goodwill, diplomacy, and a more receptive tone")
+      .replace(/^erosion, worry, or leakage moving through structure$/i, "accumulated drain and depletion being locked in by structural rigidity or rigid process")
+      .replace(/^slower, steadier growth under a small opening$/i, "a modest opening that rewards slower, more deliberate follow-through")
+      .replace(/^defensive caution and guarded self-interest moving through structure$/i, "defensive handling and self-protective strategy tightening inside a structure that was already rigid")
+      .replace(/^a small opening around a solution or unlock$/i, "a small but usable opening beginning to form around the actual fix or unlock")
+      .replace(/^your own position under repeated strain and attrition$/i, "your professional position being ground down by the same pressure that has not let up")
+      .replace(/^slower, steadier growth under clearer momentum$/i, "slow but real progress building traction once the clearer momentum is used well")
+      .replace(/^erosion, worry, or leakage under repeated strain and attrition$/i, "accumulated drain and depletion being ground down further by the same pressure that has not let up")
+      .replace(/^the other person's stance in decisive cuts$/i, "the other party's position hardening into or around a decisive cut or boundary call")
+      .replace(/^a small opening as momentum starts to build$/i, "a small opening that gains real traction as momentum begins to build behind it")
+      .replace(/^a sharp decision or cut in obstruction$/i, "a necessary decision or clean cut being blocked by something that has not yet been moved around")
+      .replace(/^a sharp decision or cut in repeated strain and attrition$/i, "a necessary decision or cut being worn down by the same sustained pressure that has not let up")
+      .replace(/^a sharp decision or cut under strategy$/i, "a necessary decision or cut being handled through guarded strategy and self-protective maneuvering rather than named directly")
+      .replace(/^a sharp decision or cut moving through structure$/i, "a necessary decision or cut being slowed and complicated by formal structure, hierarchy, or institutional process")
+      .replace(/^a small opening under maturity$/i, "a small but real opening becoming available through principled judgment and a more measured, seasoned approach")
+      .replace(/^a small opening in power\b$/i, "a small but usable opening appearing where leverage or backing is beginning to matter")
+      .replace(/^maturity helping slower, steadier growth take hold$/i, "professional maturity creating the conditions for slower, steadier progress to actually hold")
+      .replace(/^emotional weather or recognition moving through repeated strain and attrition$/i, "recognition and emotional climate being worn down by the same pressure that keeps not letting up")
+      .replace(/^what genuinely matters around your own position$/i, "clarity about what genuinely matters beginning to inform how your professional position holds")
+      .replace(/^defensive caution and guarded self-interest in the meaningful burden$/i, "self-protective strategy and guarded self-interest deepening what is already a heavy workload")
+      .replace(/^defensive caution and guarded self-interest under the meaningful burden$/i, "self-protective strategy and guarded self-interest being pressed down by duty, obligation, and real professional weight")
+      .replace(/^your own position in grace$/i, "your professional position becoming more sustainable through goodwill, social ease, and a receptive tone")
+      .replace(/^nervous communication moving through fog or uncertainty$/i, "anxious communication and reactive chatter being made worse by unclear direction and shifting priorities")
+      .replace(/^slower, steadier growth in guidance$/i, "slow but steady progress building once clearer direction and guidance are in place")
+      .replace(/^defensive caution and guarded self-interest under repetition$/i, "self-protective strategy and guarded self-interest locked inside the same repeating work loop")
+      .replace(/^power around your own position$/i, "the authority or backing your professional position already carries beginning to matter more")
+      .replace(/^uncertainty and mixed signals under caution$/i, "unclear signals and mixed direction being tightened further by self-protective caution")
+      .replace(/^a solution or unlock under slow growth$/i, "the actual fix or unlock becoming available once the work slows to a pace that can sustain it")
+      .replace(/^stability and foundations in repeated strain and attrition$/i, "the stability and foundational reliability of your role being worn down by the same pressure that has not let up")
+      .replace(/^your own position in clearer momentum$/i, "your professional position beginning to gain clearer forward momentum")
+      .replace(/^a solution or unlock in maturity$/i, "the actual fix or unlock becoming available through principled judgment and a more mature approach")
+      .replace(/^closure, ending, or rest under recognition$/i, "a process or role that should be closing being held in place by the recognition question still unresolved")
+      .replace(/^burden and meaning in repeated strain and attrition$/i, "real weight and accountability being ground down by the same pressure that has not let up")
+      .replace(/^maturity around heart, value, or feeling$/i, "the professional maturity that makes it possible to act from what genuinely matters rather than what is merely pressing")
+      .replace(/^closure, ending, or rest as a dominant thread$/i, "an ending, withdrawal, or need for rest running through the whole picture as the dominant pressure")
+      .replace(/^structure, distance, or institution under closure$/i, "formal structure, institutional distance, or rigid hierarchy pressing into a situation that needs to close or reset")
+      .replace(/^clearer visible progress in grace$/i, "clearer, more visible results becoming available as the professional climate becomes more receptive")
+      .replace(/^uncertainty and mixed signals under the public field$/i, "unclear signals and mixed direction pressing into the visible, public-facing layer of the work")
+      .replace(/^your own position under caution$/i, "your professional position being tightened further by self-protective caution")
+      .replace(/^a small opening in slow growth$/i, "a small opening that holds better when the pace is slower and more sustainable")
+      .replace(/^nervous communication under structure$/i, "anxious or reactive communication being held rigid by formal structure or hierarchical pressure")
+      .replace(/^the answer point around slower, steadier growth$/i, "the workable answer or decisive fix becoming available as the pace slows to something more sustainable")
+      .replace(/^improvement or movement around movement, distance, or transition$/i, "process improvement or a positive shift becoming available once a transition or change of direction is properly handled")
+      .replace(/^obstacle or delay under anxious talk and crossed signals$/i, "a genuine blocker or delay being made worse by anxious communication and crossed signals")
+      .replace(/^incoming movement or a concrete update in incoming momentum$/i, "incoming news or a concrete update that lands at exactly the right moment to create real momentum")
+      .replace(/^(?:complication or )?mixed motives in strategy$/i, "guarded self-interest and mixed motives reinforcing each other in how the work is being approached")
+      .replace(/^a small opening around your own position$/i, "a small but usable opening gathering around your professional position")
+      .replace(/^burden and meaning moving through strategy$/i, "real weight and accountability being filtered through defensive strategy or self-protective maneuvering")
+      .replace(/^(?:complication or )?mixed motives under repetition$/i, "guarded self-interest and mixed motives locked inside the same repeating work loop")
+      .replace(/^constructive change in the public field$/i, "constructive change beginning to take hold in the visible, public-facing layer of the work")
+      .replace(/^a message, record, or document under a small opening$/i, "a specific message, record, or document that becomes more actionable once a small opening appears")
+      .replace(/^structure, distance, or institution in caution$/i, "formal structure, institutional distance, or hierarchical rigidity being tightened further by self-protective caution")
+      .replace(/^constructive change in slow growth$/i, "constructive change taking hold slowly enough to be sustainable")
+      .replace(/^obstacle or delay in caution$/i, "a genuine blocker or delay being tightened further by self-protective caution")
+      .replace(/^clearer momentum around maturity and restraint$/i, "clearer forward movement becoming available through principled judgment and steady composure")
+      .replace(/^closure, ending, or rest moving through structure$/i, "a process or role that needs to close being locked in by structural rigidity or formal hierarchy")
+      .replace(/^the public field around your own position$/i, "how your professional position lands and is read in the wider, more visible field")
+      .replace(/^defensive caution and guarded self-interest under fog or uncertainty$/i, "self-protective strategy and guarded self-interest being made harder to read by unclear direction and shifting signals")
+      .replace(/^defensive caution and guarded self-interest in fog or uncertainty$/i, "self-protective strategy and guarded self-interest thickening inside unclear direction and shifting priorities")
+      .replace(/^heart, value, or feeling in what genuinely matters$/i, "what genuinely matters at the level of morale, meaning, and professional value beginning to clarify itself")
+      .replace(/^your own position in slow growth$/i, "your professional position gaining ground through patient, incremental progress")
+      .replace(/^clearer visible progress under resource flow$/i, "clearer, more demonstrable results becoming possible once resource flow is properly directed")
+      .replace(/^structure, distance, or institution moving through repeated strain and attrition$/i, "formal structure, institutional distance, or rigid hierarchy being ground down by the same sustained pressure that has not let up")
+      .replace(/^structure, distance, or institution getting tangled in anxious talk and crossed signals$/i, "formal structure, institutional distance, or hierarchical rigidity being made worse by anxious communication and crossed signals")
+      .replace(/^a small opening around heart, value, or feeling$/i, "a small but real opening becoming available once what genuinely matters is allowed to inform how the situation is handled")
+      .replace(/^nervous communication in repeated strain and attrition$/i, "anxious communication and reactive chatter being ground down by the same sustained pressure that has not let up")
+      .replace(/^nervous communication in the meaningful burden$/i, "anxious communication and reactive chatter being loaded down with duty, obligation, and real professional weight")
+      .replace(/^nervous communication under decisive cuts$/i, "anxious communication and reactive chatter being tightened further by a decision or boundary that has not yet been made cleanly")
+      .replace(/^nervous communication moving through closure$/i, "anxious communication and reactive chatter pressing into a situation that needs to close but has not yet been allowed to")
+      .replace(/^your own position in structural stability\b/i, "your professional position becoming more grounded as structural stability holds")
+      .replace(/^your own position in closure\b/i, "your professional position pressing up against a needed ending or reset that has not yet been allowed to close")
+      .replace(/^maturity around a small beginning$/i, "the professional maturity that allows a modest first move to be made without oversizing it or letting it stall")
+      .replace(/^maturity around a solution or unlock$/i, "the professional maturity that makes the actual fix or unlock available once principled judgment is applied")
+      .replace(/^reliable support in commitment$/i, "reliable support becoming more available and more usable once the right obligations are clearly in place")
+      .replace(/^maturity and restraint in reliable support$/i, "principled judgment and steady composure creating the conditions where reliable support can actually hold")
+      .replace(/^the public or social field under clearer momentum$/i, "how the wider, more visible field begins to work in your favour once clearer forward momentum is established")
+      .replace(/^erosion, worry, or leakage in decisive cuts$/i, "accumulated drain and depletion pressing up against a decision or cut that can no longer be deferred")
+      .replace(/^erosion, worry, or leakage under decisive cuts$/i, "accumulated drain and depletion being tightened further by a decision or boundary that has not yet been made cleanly")
+      .replace(/^hidden knowledge or secrecy under caution$/i, "restricted or undisclosed information being tightened further by self-protective caution")
+      .replace(/^defensive caution and guarded self-interest under closure$/i, "self-protective strategy and guarded self-interest reinforcing a situation that should already be closing")
+      .replace(/^defensive caution and guarded self-interest moving through strategy$/i, "self-protective strategy and guarded self-interest locking inside a pattern of defensive maneuvering")
+      .replace(/^your own position in power\b/i, "your professional position gaining firmer ground through clearer leverage and stronger backing")
+      .replace(/^uncertainty and mixed signals moving through obstruction$/i, "unclear direction and mixed signals pressing against a structural block that has not yet moved")
+      .replace(/^uncertainty and mixed signals moving through closure$/i, "unclear direction and mixed signals pressing into a situation that should already be closing")
+      .replace(/^uncertainty and mixed signals in repeated strain and attrition$/i, "unclear direction and mixed signals being ground down by the same sustained pressure that has not let up")
+      .replace(/^incoming movement or a concrete update under what genuinely matters$/i, "incoming news or a concrete update that lands where it can actually support what matters most")
+      .replace(/^what genuinely matters around movement, distance, or transition$/i, "clarity about what genuinely matters beginning to inform a transition or change of direction")
+      .replace(/^grace around your own position$/i, "the goodwill and social ease that make your professional position more workable and more sustainable")
+      .replace(/^warmth, goodwill, or a friendlier response under slow growth$/i, "a more workable professional climate becoming available as the pace slows to something sustainable")
+      .replace(/^warmth, goodwill, or a friendlier response under the answer point$/i, "a more workable professional climate becoming available once the key decision or strategic fix is named")
+      .replace(/^warmth, goodwill, or a friendlier response under what genuinely matters$/i, "a more workable professional climate becoming available once the work is anchored to what actually matters")
+      .replace(/^mixed motives under recognition$/i, "guarded self-interest and mixed motives deepening inside a situation where recognition is still unresolved")
+      .replace(/^repeated friction and pressure moving through repeated strain and attrition$/i, "repeating friction and pressure being ground down further by the same sustained strain that has not let up")
+      .replace(/^greater freedom beginning to open around your own position$/i, "a genuine opening beginning to form around your professional position as the work begins to give you more room")
+      .replace(/^burden and meaning in anxious talk and crossed signals$/i, "real weight and accountability being tangled up in anxious communication and crossed signals")
+      .replace(/^burden and meaning under fog or uncertainty$/i, "real weight and accountability being made harder to carry by unclear direction and shifting priorities")
+      .replace(/^a newly forming situation around constructive change$/i, "an early-stage opening beginning to form around genuine, constructive improvement")
+      .replace(/^repeated friction and pressure moving through closure$/i, "a repeating pressure pattern pressing into a situation that needs to close but has not yet been allowed to")
+      .replace(/^repeated friction and pressure in the meaningful burden$/i, "repeating friction and pressure deepening what is already a heavy load of duty and professional responsibility")
+      // burden and meaning variants
+      .replace(/^burden and meaning under closure$/i, "real weight and accountability pressing into a situation that needs to close or reset")
+      .replace(/^burden and meaning under repeated strain and attrition$/i, "real weight and accountability being ground down by the same sustained pressure that has not let up")
+      .replace(/^burden and meaning in decisive cuts$/i, "real weight and accountability pressing toward a decision or cut that has to be named and made")
+      .replace(/^burden and meaning moving through closure$/i, "real weight and accountability pressing into a process that needs to end but has not yet been allowed to")
+      .replace(/^burden and meaning moving through fog or uncertainty$/i, "real weight and accountability being complicated by unclear direction and shifting priorities")
+      .replace(/^burden and meaning under anxious talk and crossed signals$/i, "real weight and accountability being tangled further by anxious communication and crossed signals")
+      .replace(/^burden and meaning under strategy$/i, "real weight and accountability being filtered through guarded strategy and self-protective maneuvering")
+      // closure variants
+      .replace(/^closure, ending, or rest getting tangled in anxious talk and crossed signals$/i, "a process or role that needs to close being muddied by anxious communication and crossed signals")
+      .replace(/^closure, ending, or rest in anxious talk and crossed signals$/i, "a process or role that needs to close being muddied by anxious communication and crossed signals")
+      .replace(/^closure, ending, or rest in repetition$/i, "a process or role that needs to close being caught in the same repeating work loop")
+      .replace(/^closure, ending, or rest in the meaningful burden$/i, "a process or role that needs to close being held in place by real duty and professional weight")
+      .replace(/^closure, ending, or rest under caution$/i, "a process or phase being held back by overcautious handling when it needs to close or reset")
+      .replace(/^closure, ending, or rest under repetition$/i, "a process or role that needs to close being held in place by repeating obligations and work loops")
+      .replace(/^closure, ending, or rest under strategy$/i, "a process or role that needs to close being managed through guarded strategy rather than allowed to end cleanly")
+      // nervous communication variants
+      .replace(/^nervous communication moving through decisive cuts$/i, "anxious communication and reactive chatter pressing toward a decision or boundary that has to be made cleanly")
+      .replace(/^nervous communication moving through obstruction$/i, "anxious communication and reactive chatter pressing against a structural block that has not yet moved")
+      .replace(/^nervous communication in anxious talk and crossed signals$/i, "anxious communication tightening into reactive noise and crossed signals with no clear centre holding")
+      .replace(/^nervous communication in closure$/i, "anxious communication pressing into a situation that needs to close but has not been allowed to")
+      .replace(/^nervous communication in fog or uncertainty$/i, "anxious communication being made worse by unclear direction and shifting priorities")
+      .replace(/^nervous communication in the other person's field$/i, "anxious communication affecting how the other party is reading the situation")
+      .replace(/^nervous communication moving through endurance$/i, "anxious communication being tested by what the work can actually sustain long-term")
+      .replace(/^nervous communication moving through the meaningful burden$/i, "anxious communication pressing into real duty, weight, and professional responsibility")
+      // obstacle or delay variants
+      .replace(/^obstacle or delay in decisive cuts$/i, "a blocker or delay pressing toward a decision or cut that has to be made")
+      .replace(/^obstacle or delay in fog or uncertainty$/i, "a blocker or delay being made worse by unclear direction and shifting priorities")
+      .replace(/^obstacle or delay in strategy$/i, "a blocker or delay being managed through guarded strategy rather than addressed directly")
+      .replace(/^obstacle or delay under strategy$/i, "a blocker or delay being managed through guarded strategy rather than addressed directly")
+      // sharp decision variants
+      .replace(/^a sharp decision or cut in caution$/i, "a necessary decision or cut being held back by self-protective caution")
+      .replace(/^a sharp decision or cut in closure$/i, "a necessary decision or cut pressing into a situation that needs to close but has not yet been allowed to")
+      .replace(/^a sharp decision or cut in strategy$/i, "a necessary decision or cut being managed through guarded strategy rather than named directly")
+      .replace(/^a sharp decision or cut moving through obstruction$/i, "a necessary decision or cut pressing against a structural block that has not yet moved")
+      .replace(/^a sharp decision or cut moving through repetition$/i, "a necessary decision or cut pressing into the same repeating work loop that has not yet changed")
+      .replace(/^a sharp decision or cut under anxious talk and crossed signals$/i, "a necessary decision or cut being muddied by anxious communication and crossed signals")
+      .replace(/^a sharp decision or cut under the meaningful burden$/i, "a necessary decision or cut being weighed down by real duty, obligation, and professional weight")
+      .replace(/^a sharp decision or cut under what is hidden$/i, "a necessary decision or cut being held back by restricted information or undisclosed knowledge")
+      // structure variants
+      .replace(/^structure, distance, or institution in closure$/i, "formal structure, institutional distance, or rigid hierarchy pressing into a situation that needs to close or reset")
+      .replace(/^structure, distance, or institution in repeated strain and attrition$/i, "formal structure, institutional distance, or rigid hierarchy being ground down by the same sustained pressure that has not let up")
+      .replace(/^structure, distance, or institution in the meaningful burden$/i, "formal structure, institutional distance, or rigid hierarchy deepening what is already a heavy load of duty")
+      .replace(/^structure, distance, or institution moving through fog or uncertainty$/i, "formal structure, institutional distance, or rigid hierarchy being complicated by unclear direction and shifting priorities")
+      .replace(/^structure, distance, or institution under obstruction$/i, "formal structure, institutional distance, or rigid hierarchy pressing against a structural block that has not yet moved")
+      // solution or unlock variants
+      .replace(/^a solution or unlock in incoming momentum$/i, "the actual fix or unlock becoming available as incoming momentum creates the right opening")
+      .replace(/^a solution or unlock in what genuinely matters$/i, "the actual fix or unlock becoming clearer once the work is anchored to what matters most")
+      .replace(/^a solution or unlock under what genuinely matters$/i, "the actual fix or unlock becoming clearer once the work is anchored to what matters most")
+      .replace(/^a solution or unlock getting tangled in anxious talk and crossed signals$/i, "the actual fix or unlock being muddied by anxious communication and crossed signals")
+      // heart, value, or feeling variants
+      .replace(/^heart, value, or feeling in guidance$/i, "what genuinely matters at the level of morale and professional value becoming clearer once clear direction is in place")
+      .replace(/^heart, value, or feeling in a newly forming situation$/i, "what genuinely matters at the level of morale and professional value beginning to emerge from an early-stage situation")
+      .replace(/^heart, value, or feeling in endurance$/i, "what genuinely matters at the level of morale and professional value finding steadier ground through persistence and staying power")
+      .replace(/^heart, value, or feeling in maturity$/i, "what genuinely matters at the level of morale and professional value becoming available through principled judgment and steady composure")
+      .replace(/^heart, value, or feeling in your own position$/i, "what genuinely matters at the level of morale and professional value beginning to inform how your professional position holds")
+      .replace(/^heart, value, or feeling under choice$/i, "what genuinely matters at the level of morale and professional value pressing up against an open decision")
+      // movement, distance, or transition variants
+      .replace(/^movement, distance, or transition in improvement or movement$/i, "a transition or change of direction building momentum as real improvement begins")
+      .replace(/^movement, distance, or transition in the answer point$/i, "a transition or change of direction becoming the actual answer or unlock")
+      .replace(/^movement, distance, or transition in your own position$/i, "a transition or change of direction beginning to reshape your professional position")
+      .replace(/^movement, distance, or transition under a newly forming situation$/i, "movement opening inside a situation that is still too early to fully commit to")
+      .replace(/^movement, distance, or transition under choice$/i, "a transition or change of direction being complicated by an open decision that has not yet been made")
+      .replace(/^movement, distance, or transition under improvement or movement$/i, "a transition or change of direction supported by genuine improvement in the conditions")
+      .replace(/^movement, distance, or transition under your own position$/i, "a transition or change of direction that depends on your own professional position being clearly held")
+      // your own position variants
+      .replace(/^your own position around heart, value, or feeling$/i, "your professional position gaining more clarity when what genuinely matters is allowed to guide it")
+      .replace(/^your own position around stability and endurance$/i, "your professional position finding steadier, more durable footing as stability and staying power begin to hold")
+      // other
+      .replace(/^a newly forming situation around movement, distance, or transition$/i, "an early-stage opening beginning to form around a transition or change of direction")
+      .replace(/^choice and branching paths in clearer momentum$/i, "a strategic fork or open decision becoming more navigable once clearer forward momentum is established")
+      // pre-transform: communication and nerves (→ anxious talk and crossed signals after work block)
+      .replace(/^closure, ending, or rest moving through communication and nerves$/i, "a process or role that needs to close being muddied by anxious communication and crossed signals")
+      .replace(/^closure, ending, or rest in communication and nerves$/i, "a process or role that needs to close being muddied by anxious communication and crossed signals")
+      .replace(/^a sharp decision or cut in communication and nerves$/i, "a necessary decision or boundary being muddied by anxious communication and crossed signals")
+      .replace(/^a sharp decision or cut under communication and nerves$/i, "a necessary decision or cut being muddied by anxious communication and crossed signals")
+      .replace(/^a solution or unlock moving through communication and nerves$/i, "the actual fix or unlock being muddied by anxious communication and crossed signals")
+      .replace(/^burden and meaning under communication and nerves$/i, "real weight and accountability being tangled further by anxious communication and crossed signals")
+      .replace(/^burden and meaning moving through communication and nerves$/i, "real weight and accountability being tangled further by anxious communication and crossed signals")
+      .replace(/^choice and branching paths moving through communication and nerves$/i, "a strategic fork or open decision being muddied by anxious communication and crossed signals")
+      .replace(/^nervous communication in communication and nerves$/i, "anxious communication tightening into reactive noise and crossed signals with no clear centre holding")
+      .replace(/^nervous communication moving through communication and nerves$/i, "anxious communication tightening further into reactive noise and crossed signals with no clear centre holding")
+      .replace(/^nervous communication under communication and nerves$/i, "anxious communication being made worse by reactive chatter, crossed signals, and too much unsettled talk at once")
+      .replace(/^obstacle or delay under communication and nerves$/i, "a genuine blocker or delay being made worse by anxious communication and crossed signals")
+      .replace(/^structure, distance, or institution in communication and nerves$/i, "formal structure, institutional distance, or hierarchical rigidity being made worse by anxious communication and crossed signals")
+      .replace(/^structure, distance, or institution moving through communication and nerves$/i, "formal structure, institutional distance, or hierarchical rigidity being made worse by anxious communication and crossed signals")
+      // pre-transform: erosion and stress (→ repeated strain and attrition after work block)
+      .replace(/^a sharp decision or cut in erosion and stress$/i, "a necessary decision or cut being worn down by the same sustained pressure that has not let up")
+      .replace(/^a sharp decision or cut moving through erosion and stress$/i, "a necessary decision or cut pressing into the same sustained pressure that has not yet let up")
+      .replace(/^burden and meaning under erosion and stress$/i, "real weight and accountability being ground down by the same sustained pressure that has not let up")
+      .replace(/^closure, ending, or rest under erosion and stress$/i, "a process or phase that needs to end, being ground down further by the same pressure that has not let up")
+      .replace(/^nervous communication in erosion and stress$/i, "anxious communication and reactive chatter being ground down by the same sustained pressure that has not let up")
+      .replace(/^nervous communication under erosion and stress$/i, "anxious communication and reactive chatter being ground down further by the same sustained pressure that has not let up")
+      .replace(/^structure, distance, or institution in erosion and stress$/i, "formal structure, institutional distance, or rigid hierarchy being ground down by the same sustained pressure that has not let up")
+      .replace(/^structure, distance, or institution moving through erosion and stress$/i, "formal structure, institutional distance, or rigid hierarchy being worn down by the same sustained pressure that has not let up")
+      // pre-transform: values and love / clarity and success / support and loyalty (→ post-transform labels after work block)
+      .replace(/^a solution or unlock in values and love$/i, "the actual fix or unlock becoming clearer once the work is anchored to what matters most")
+      .replace(/^a solution or unlock under values and love$/i, "the actual fix or unlock becoming clearer once the work is anchored to what matters most")
+      .replace(/^choice and branching paths in clarity and success$/i, "a strategic fork or open decision becoming more navigable once clearer forward momentum is established")
+      .replace(/^guidance and signal in values and love$/i, "clearer direction and a longer-range signal becoming available once the work is anchored to what matters most")
+      .replace(/^guidance and signal under values and love$/i, "clearer direction and a longer-range signal becoming available once the work is anchored to what matters most")
+      .replace(/^guidance and signal under support and loyalty$/i, "clearer direction and a longer-range signal becoming available once reliable support is part of the picture")
+      // pre-transform: your own field (house 29 phrase, → your own position after work block)
+      .replace(/^heart, value, or feeling in your own field$/i, "what genuinely matters at the level of morale and professional value beginning to inform how your professional position holds")
+      .replace(/^movement, distance, or transition in your own field$/i, "a transition or change of direction beginning to reshape your professional position")
+      .replace(/^movement, distance, or transition under your own field$/i, "a transition or change of direction that depends on your own professional position being clearly held")
+      .replace(/^your own field around clarity and visible progress$/i, "your professional position becoming more visible and clearly productive as things begin to move")
+      .replace(/^your own field around heart, value, or feeling$/i, "your professional position gaining more clarity when what genuinely matters is allowed to guide it")
+      .replace(/^your own field around stability and endurance$/i, "your professional position finding steadier, more durable footing as stability and staying power begin to hold")
+      .replace(/^your own field around your own position$/i, "your own professional position as the clearest point of leverage available")
+      // closure variants: fog, caution, strategy, documents, hidden
+      .replace(/^closure, ending, or rest in fog or uncertainty$/i, "a process or role that needs to close being kept open by unclear direction and shifting priorities")
+      .replace(/^closure, ending, or rest under fog or uncertainty$/i, "a process or role that needs to close being kept open by unclear direction and shifting priorities")
+      .replace(/^closure, ending, or rest moving through caution$/i, "a process or role that needs to close being further delayed by self-protective caution")
+      .replace(/^closure, ending, or rest moving through strategy$/i, "a process or role that needs to close being managed through defensive strategy rather than allowed to end cleanly")
+      .replace(/^closure, ending, or rest under documents and messages$/i, "a process or role that needs to close being held in place by unresolved records or unclear written terms")
+      .replace(/^closure, ending, or rest under what is hidden$/i, "a process or role that needs to close being held in place by restricted information or undisclosed knowledge")
+      // burden and meaning: closure
+      .replace(/^burden and meaning in closure$/i, "real weight and accountability pressing into a process or role that needs to close or reset")
+      // sharp decision or cut: caution, decisive cuts, closure
+      .replace(/^a sharp decision or cut moving through caution$/i, "a necessary decision or cut pressing against self-protective caution that keeps narrowing the available options")
+      .replace(/^a sharp decision or cut moving through decisive cuts$/i, "a necessary decision or cut pressing into a situation that is already demanding hard choices")
+      .replace(/^a sharp decision or cut under caution$/i, "a necessary decision or cut being held back by self-protective caution")
+      .replace(/^a sharp decision or cut under closure$/i, "a necessary decision or cut pressing into a situation that needs to close but has not yet been allowed to")
+      // nervous communication: caution, decisive cuts, endurance, resource flow, recognition, documents, fog, hidden, strategy
+      .replace(/^nervous communication in caution$/i, "anxious communication and reactive chatter being held in place by self-protective caution")
+      .replace(/^nervous communication in decisive cuts$/i, "anxious communication and reactive chatter pressing up against a decision or boundary that needs to be made cleanly")
+      .replace(/^nervous communication in endurance$/i, "anxious communication and reactive chatter being tested by what the work can actually sustain long-term")
+      .replace(/^nervous communication in resource flow$/i, "anxious communication and reactive chatter getting tangled in questions of budget, resources, or who controls the flow of support")
+      .replace(/^nervous communication moving through caution$/i, "anxious communication and reactive chatter being held tighter by self-protective caution")
+      .replace(/^nervous communication under documents and messages$/i, "anxious communication and reactive chatter being held in place by outstanding records or unclear written terms")
+      .replace(/^nervous communication under fog or uncertainty$/i, "anxious communication and reactive chatter being made worse by unclear direction and shifting priorities")
+      .replace(/^nervous communication under recognition$/i, "anxious communication and reactive chatter being made worse by unresolved recognition questions and visibility pressure")
+      .replace(/^nervous communication under what is hidden$/i, "anxious communication and reactive chatter being made worse by restricted information or undisclosed knowledge")
+      // obstacle or delay: caution, obstruction
+      .replace(/^obstacle or delay under caution$/i, "a genuine blocker or delay being made harder to navigate by self-protective caution")
+      .replace(/^obstacle or delay under obstruction$/i, "a delay or blocker being compounded by a structural block that has not yet been moved")
+      // structure: strategy
+      .replace(/^structure, distance, or institution in strategy$/i, "formal structure, institutional distance, or rigid hierarchy being managed through defensive strategy rather than addressed directly")
+      .replace(/^structure, distance, or institution moving through strategy$/i, "formal structure, institutional distance, or rigid hierarchy being filtered through defensive strategy and self-protective maneuvering")
+      // movement, distance, or transition: various opening contexts
+      .replace(/^movement, distance, or transition under values and love$/i, "a transition or change of direction becoming clearer once the work is anchored to what matters most")
+      .replace(/^movement, distance, or transition in values and love$/i, "a transition or change of direction becoming clearer once the work is anchored to what matters most")
+      .replace(/^movement, distance, or transition in expansion$/i, "a transition or change of direction finding more room to move as things begin to expand")
+      .replace(/^movement, distance, or transition under clarity and success$/i, "a transition or change of direction supported by clearer forward momentum")
+      .replace(/^movement, distance, or transition under grace$/i, "a transition or change of direction becoming more workable as the professional climate becomes more receptive")
+      .replace(/^movement, distance, or transition under guidance$/i, "a transition or change of direction becoming clearer once a longer-range signal is in place")
+      .replace(/^movement, distance, or transition under maturity$/i, "a transition or change of direction becoming steadier through principled judgment and a more measured approach")
+      .replace(/^movement, distance, or transition under slow growth$/i, "a transition or change of direction that holds better at a slower, more sustainable pace")
+      // heart, value, or feeling: various opening contexts
+      .replace(/^heart, value, or feeling in values and love$/i, "what genuinely matters at the level of morale and professional value becoming the central question")
+      .replace(/^heart, value, or feeling in grace$/i, "what genuinely matters becoming more usable once the professional climate is more receptive and easier to work with")
+      .replace(/^heart, value, or feeling in improvement or movement$/i, "what genuinely matters at the level of morale and professional value beginning to move in a healthier direction")
+      .replace(/^heart, value, or feeling in incoming momentum$/i, "what genuinely matters at the level of morale and professional value beginning to arrive with fresh momentum")
+      .replace(/^heart, value, or feeling under grace$/i, "what genuinely matters becoming more workable once the professional climate is more receptive")
+      .replace(/^heart, value, or feeling under the public field$/i, "what genuinely matters being shaped by visibility, public-facing work, and how the situation is read in the wider field")
+      // choice and branching paths: improvement or movement
+      .replace(/^choice and branching paths under improvement or movement$/i, "a strategic fork or open decision becoming clearer as the conditions start to improve")
+      // solution or unlock: expansion, a small opening
+      .replace(/^a solution or unlock in expansion$/i, "the actual fix or unlock becoming available as the work begins to find more room to move")
+      .replace(/^a solution or unlock under a small opening$/i, "the actual fix or unlock becoming available inside a small but real opening that can still be used")
+      // concentrated at center
+      .replace(/^closure, ending, or rest concentrated at the center$/i, "a process or role that needs to close sitting at the center of the whole work picture")
+      // prefix catch-alls — handle all remaining card/house label combinations not caught above
+      // (runs before general fallbacks; specific rules above take priority)
+      .replace(/^nervous communication\b/i, "anxious communication and reactive chatter")
+      .replace(/^closure, ending, or rest\b/i, "a process or role that needs to close")
+      .replace(/^structure, distance, or institution\b/i, "formal structure, institutional distance, or rigid hierarchy")
+      .replace(/^burden and meaning\b/i, "real weight and accountability")
+      .replace(/^obstacle or delay\b/i, "a genuine blocker or delay")
+      .replace(/^a sharp decision or cut\b/i, "a necessary decision or cut")
+      .replace(/^choice and branching paths\b/i, "a strategic fork or open decision")
+      .replace(/^a solution or unlock\b/i, "the actual fix or unlock")
+      .replace(/^heart, value, or feeling\b/i, "what genuinely matters")
+      .replace(/^movement, distance, or transition\b/i, "a transition or change of direction")
+      .replace(/^guidance and signal\b/i, "clearer direction and a longer-range signal")
+      .replace(/^guidance\b/i, "clearer direction")
+      .replace(/^a newly forming situation\b/i, "an early-stage opening")
+      .replace(/^endurance\b/i, "staying power and long-term commitment")
+      .replace(/^resource flow\b/i, "the flow of resources and budget")
+      .replace(/^social or public life\b/i, "the wider, more visible professional field")
+      // general fallbacks — must stay last in this block
+      .replace(/^(.+) (?:in|under|around) \1$/i, "the same dynamic reinforcing itself and keeping the situation from resolving cleanly")
+      .replace(/^the other person's stance\b/i, "the other party's position")
+      .replace(/^your own field\b/i, "your professional position")
+      .replace(/^your own position\b/i, "your professional position");
   }
 
   if (subjectId === "legal_admin") {
@@ -3231,7 +3765,7 @@ function narrativeSignalPhrase(
       .replace(/^repetition and tension under uncertain facts or incomplete review$/i, "repeat-request pressure inside a matter that is still not fully clarified")
       .replace(/^uncertain facts or incomplete review moving through repetition$/i, "uncertain facts getting dragged through the same repeat-request loop")
       .replace(/^your own clarity becoming the approval point that unlocks the next stage of the matter$/i, "your own clarity becoming the hinge that opens the next stage cleanly")
-      .replace(/^movement beginning once your side of the matter is clear enough to file, answer, or act on$/i, "movement beginning once your side is clear enough to answer, file, or act cleanly")
+      .replace(/^movement beginning once your side of the matter is clear enough to file, answer, or act on$/i, "movement beginning once your side is clear enough to answer, file, or consider carefully")
       .replace(/^a sharp decision or cut in structure$/i, "a hard procedural cut colliding with fixed structure or formal constraints")
       .replace(/^withheld or specialist information under incoming notices or procedural movement$/i, "reviewed or specialist information beginning to move with the next notice or procedural step")
       .replace(/^nervous conversation caught in repetition, where talk can sharpen rather than settle the issue$/i, "reactive back-and-forth caught in the same procedural loop")
@@ -3342,7 +3876,7 @@ function narrativeSignalPhrase(
       .replace(/^structure, distance, or institution moving through strategic pressure or mixed motives$/i, "formal structure getting tangled in strategic pressure or mixed motives")
       .replace(/^structure, distance, or institution in structure$/i, "formal structure reinforcing itself and making the process harder to move")
       .replace(/^institutional delay or structural strain worsening the admin drag$/i, "institutional delay and structural friction worsening the admin drag")
-      .replace(/^your side of the matter becoming clearer and more usable$/i, "your side of the matter becoming clear enough to act on")
+      .replace(/^your side of the matter becoming clearer and more usable$/i, "your side of the matter becoming clear enough to consider")
       .replace(/^defensive strategy or close procedural reading under decisive cuts$/i, "defensive strategy tightening around a hard deadline or forced procedural cut")
       .replace(/^a small but real opening around your side of the matter$/i, "a narrow but usable opening on your side of the matter")
       .replace(/^nervous communication moving through obstruction$/i, "back-and-forth communication getting stuck in delay or formal blockage")
@@ -3352,7 +3886,7 @@ function narrativeSignalPhrase(
       .replace(/^nervous communication moving through erosion and stress$/i, "reactive communication feeding an already worn-down process")
       .replace(/^reactive communication tightening under defensive handling$/i, "reactive communication hardening because the process is being handled too defensively")
       .replace(/^your side of the matter under clarity and success$/i, "your side of the matter becoming clearer and more usable")
-      .replace(/^your side of the matter in clarity and success$/i, "your side of the matter becoming clearer and more usable once the process is visible enough to act on")
+      .replace(/^your side of the matter in clarity and success$/i, "your side of the matter becoming clearer and more usable once the process is visible enough to consider")
       .replace(/^complication feeding anxiety, attrition, or the slow damage done by what keeps slipping sideways$/i, "mixed motives steadily worsening the admin strain instead of resolving it")
       .replace(/^nervous communication under decisive cuts$/i, "anxious updates or reactive back-and-forth around a hard procedural cut")
       .replace(/^nervous communication under erosion and stress$/i, "reactive communication inside a process already being worn down")
@@ -3406,7 +3940,7 @@ function narrativeSignalPhrase(
       .replace(/^caution and self-interest in caution$/i, "defensive strategy tightening into self-protective process handling")
       .replace(/^incoming movement or news in guidance$/i, "movement beginning once the direction of the matter is clearer")
       .replace(/^incoming movement or news under power$/i, "movement beginning once authority or the decision-maker responds")
-      .replace(/^events beginning to move the moment your own stance becomes clear$/i, "movement beginning once your side of the matter is clear enough to file, answer, or act on")
+      .replace(/^events beginning to move the moment your own stance becomes clear$/i, "movement beginning once your side of the matter is clear enough to file, answer, or consider carefully")
       .replace(/^(?:your role|your side of the matter) meeting a newly forming situation, where what you do first matters more than what you promise later$/i, "an early-stage step where the first filing, response, or correction matters more than later assurances")
       .replace(/^a new enough situation that the first steps matter more than promises$/i, "an early-stage step where the first filing or response matters more than later assurances")
       .replace(/^a sharp decision or cut under the other person's field$/i, "a hard procedural move or forced decision coming from the other side of the matter")
@@ -3470,7 +4004,22 @@ function narrativeSignalPhrase(
       .replace(/^clarity and visible progress around ([a-z ,'-]+)$/i, "clearer visibility and usable progress around $1")
       .replace(/^clarity and visible progress under ([a-z ,'-]+)$/i, "clearer visibility and usable progress under $1")
       .replace(/^clarity and visible progress in ([a-z ,'-]+)$/i, "clearer visibility and usable progress in $1")
-      .replace(/^clarity and visible progress$/i, "clearer visibility and usable progress");
+      .replace(/^clarity and visible progress$/i, "clearer visibility and usable progress")
+      .replace(/^nervous communication\b/i, "reactive back-and-forth complicating the process")
+      .replace(/^closure, ending, or rest\b/i, "a necessary procedural pause, closure, or file stop")
+      .replace(/^burden and meaning\b/i, "real weight in the matter and what it is obliging you to carry")
+      .replace(/^obstacle or delay\b/i, "a genuine procedural blocker or delay")
+      .replace(/^a sharp decision or cut\b/i, "a hard deadline or forced procedural decision")
+      .replace(/^choice and branching paths\b/i, "a real procedural fork or filing choice")
+      .replace(/^a solution or unlock\b/i, "the actual approval or opening in the process")
+      .replace(/^guidance\b/i, "clearer procedural direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage procedural opening")
+      .replace(/^endurance\b/i, "procedural staying power and what it takes to hold through the process")
+      .replace(/^resource flow\b/i, "fees, access, and what is practically moving in the process")
+      .replace(/^social or public life\b/i, "the wider public or institutional field around the matter")
+      .replace(/^structure, distance, or institution\b/i, "formal structure, distance, or institutional constraint")
+      .replace(/^your own field\b/i, "your side of the matter")
+      .replace(/^your own position\b/i, "your side of the matter");
   }
 
   if (subjectId === "money") {
@@ -3567,7 +4116,23 @@ function narrativeSignalPhrase(
       .replace(/^an answer point emerging inside cashflow itself, where a clearer movement of resources starts revealing what can be fixed or unlocked$/i, "an answer beginning to show up in the numbers themselves")
       .replace(/^the solution beginning to take a more durable form, so what stabilizes now has a chance of lasting rather than only relieving pressure briefly$/i, "a workable fix beginning to take durable form")
       .replace(/^cashflow trying to find the form of stability that can actually last, rather than only looking secure for a moment$/i, "cashflow looking for a steadier structure")
-      .replace(/^cashflow improving through better sequencing, smarter updates, or changes that help money move more cleanly$/i, "cashflow improving once changes are made in the right order");
+      .replace(/^cashflow improving through better sequencing, smarter updates, or changes that help money move more cleanly$/i, "cashflow improving once changes are made in the right order")
+      .replace(/^nervous communication\b/i, "anxious money talk and reactive financial noise")
+      .replace(/^closure, ending, or rest\b/i, "a financial reset, pause, or necessary ending")
+      .replace(/^burden and meaning\b/i, "real financial obligation and what it is asking you to carry")
+      .replace(/^obstacle or delay\b/i, "a genuine financial blocker or delay")
+      .replace(/^a sharp decision or cut\b/i, "a necessary cutback, reset, or hard financial decision")
+      .replace(/^choice and branching paths\b/i, "a real fork or financial choice")
+      .replace(/^a solution or unlock\b/i, "the actual fix or opening in the money picture")
+      .replace(/^guidance\b/i, "clearer financial direction and signal")
+      .replace(/^a newly forming situation\b/i, "an early-stage financial opening")
+      .replace(/^endurance\b/i, "financial staying power and what holds through the pressure")
+      .replace(/^resource flow\b/i, "the flow of money and practical resources")
+      .replace(/^social or public life\b/i, "the wider social or public field around finances")
+      .replace(/^movement, distance, or transition\b/i, "a financial shift or change of direction")
+      .replace(/^structure, distance, or institution\b/i, "fixed financial obligations or institutional constraints")
+      .replace(/^your own field\b/i, "your own financial leverage")
+      .replace(/^your own position\b/i, "your own financial position");
   }
 
   if (subjectId === "home_family") {
@@ -3626,7 +4191,24 @@ function narrativeSignalPhrase(
       .replace(/^your own role inside the household moving through repetition, cycles, pressure, and refinement are visible$/i, "your role at home moving through a pattern that keeps replaying")
       .replace(/^your own role inside the household, including boundaries, responsibility, and what you are quietly carrying$/i, "your role in the household, including what you are carrying and what you keep permitting")
       .replace(/^your own place in the household$/i, "your role in the household")
-      .replace(/^the wish for calm and mature boundaries in a small opening$/i, "a small opening toward calmer, steadier boundaries at home");
+      .replace(/^the wish for calm and mature boundaries in a small opening$/i, "a small opening toward calmer, steadier boundaries at home")
+      .replace(/^nervous communication\b/i, "tense communication and anxious household talk")
+      .replace(/^closure, ending, or rest\b/i, "a needed pause, ending, or quiet spell at home")
+      .replace(/^burden and meaning\b/i, "real weight at home and what is being carried")
+      .replace(/^obstacle or delay\b/i, "a genuine blocker or delay at home")
+      .replace(/^a sharp decision or cut\b/i, "a necessary decision or clear change in the household")
+      .replace(/^choice and branching paths\b/i, "a real fork or choice in the family situation")
+      .replace(/^a solution or unlock\b/i, "the actual fix or opening in the household situation")
+      .replace(/^heart, value, or feeling\b/i, "care and what genuinely matters at home")
+      .replace(/^movement, distance, or transition\b/i, "movement or change at home")
+      .replace(/^structure, distance, or institution\b/i, "household structure, distance, or outside pressure")
+      .replace(/^guidance\b/i, "clearer direction in the household situation")
+      .replace(/^a newly forming situation\b/i, "an early-stage opening in the family situation")
+      .replace(/^endurance\b/i, "staying power and what holds the household together")
+      .replace(/^resource flow\b/i, "practical resources and what is actually moving at home")
+      .replace(/^social or public life\b/i, "the wider social field touching the household")
+      .replace(/^your own field\b/i, "your place in the household")
+      .replace(/^your own position\b/i, "your place in the household");
   }
 
   rewritten = rewriteResidualSignalLabels(rewritten, subjectId, kind);
@@ -3978,7 +4560,7 @@ export function synthesizeGrandTableauNarrative(input: {
             `The difficulty sits with ${pressureSummary}, while ${openingSummary} shows what can still move`,
             `The harder part is ${pressureSummary}, but there is still room for ${openingSummary}`,
           `${pressureSummary} is what keeps the story from settling, yet there is still room for ${openingSummary}`,
-            `The live pressure gathers around ${pressureSummary}, while ${openingSummary} is already beginning to answer it`,
+            `The pressure gathers around ${pressureSummary}, while ${openingSummary} is already beginning to answer it`,
             `What is most difficult here is ${pressureSummary}; what still helps is ${openingSummary}`,
             `${openingSummary} is real, but it has to work around ${pressureSummary} first`,
           ],
@@ -4000,14 +4582,14 @@ export function synthesizeGrandTableauNarrative(input: {
     openingSummary && pressureSummary
       ? choose(
         [
-          `This is not a closed field; it is a live situation where ${pressureSummary} has to be named before ${openingSummary} can fully develop`,
-          `The larger pattern says the opportunity is real, but it depends on handling ${pressureSummary} without losing sight of ${openingSummary}`,
-          `This reads less like a dead end than a situation under strain, where ${openingSummary} remains possible if ${pressureSummary} is faced directly`,
-          `The deeper story is not choosing between those too quickly; the strain is real, but so is what can still take shape if it is handled honestly`,
-          `The cards do not describe a shut door; they describe ${pressureSummary}, with ${openingSummary} still available if it is handled cleanly`,
-          `What keeps this workable is that ${pressureSummary} is not the whole story; ${openingSummary} is already coming into view`,
-          `Both belong in the reading: ${pressureSummary} is real, and ${openingSummary} is already beginning to matter`,
-          `The situation is strained, not closed: ${pressureSummary} is active, and there is still room for ${openingSummary}`,
+          `This is not a closed field; it is a live situation where naming the pressure is what allows the path forward to come through`,
+          `The larger pattern says the opportunity is real, but it depends on handling what is pressing without losing sight of what is opening`,
+          `This reads less like a dead end than a situation under strain, where a way through remains possible if the pressure is faced directly`,
+          `The deeper story is not resolving this too quickly; the strain is real, but so is what can still take shape if it is handled honestly`,
+          `The cards do not describe a shut door; they describe active strain, with a way forward still available if it is handled cleanly`,
+          `What keeps this workable is that the strain is not the whole story; movement is already beginning to show through`,
+          `Both threads belong in the reading: the pressure is real, and so is where the spread is still pointing forward`,
+          `The situation is strained, not closed: the pressure is active, and there is still room for what is beginning to open`,
           ],
           random,
         )
@@ -4026,20 +4608,20 @@ export function synthesizeGrandTableauNarrative(input: {
     openingSummary && pressureSummary
       ? choose(
         [
-          `At heart, this is a phase where ${pressureSummary} has to be faced honestly, while ${openingSummary} shows where the path can still open`,
-          `Two things can be true at once here: ${pressureSummary} is real, and ${openingSummary} is beginning to matter`,
-          `What matters is not denying ${pressureSummary}; it is noticing that ${openingSummary} is already beginning to change the tone`,
-          `This looks like a live process rather than a closed answer: ${pressureSummary} is real, yet ${openingSummary} keeps the future from narrowing too quickly`,
-          `The clearer reading is that ${pressureSummary} is real, and ${openingSummary} is still worth backing`,
-          `The future stays more open with ${openingSummary}, provided ${pressureSummary} does not take over`,
-          `The part worth backing now is ${openingSummary}, even though ${pressureSummary} needs direct attention`,
-          `If there is a next step, it depends on ${openingSummary}, without pretending ${pressureSummary} is no longer part of the picture`,
+          `The situation has more room in it than the pressure suggests — the strain is real, and so is what can still develop, and neither cancels the other`,
+          `Two things can be true at once here: the pressure is real, and a clearer direction is beginning to take shape`,
+          `What matters is not denying the strain; it is noticing where movement has already started`,
+          `At heart, this is a phase where the strain has to be faced honestly — and there is still a path worth following if it is`,
+          `The clearer reading is that the strain is real, and the forward thread is still worth following`,
+          `This is not a closed picture; the pressure has not ended, but neither has what can still shift`,
+          `The reading describes active strain, not a finished outcome — the difficulty is real, and so is what the spread is still pointing toward`,
+          `Neither side of this picture cancels the other — the pressure is worth attending to, and so is what the spread is still pointing toward`,
           ],
           random,
         )
       : choose(
           [
-            "The cards point to a live process that rewards steadiness and honest timing.",
+            "The cards point to a situation still in motion, where steadiness and honest timing matter more than early conclusions.",
             "The tableau is asking for realism, patience, and attention to what is actually moving.",
             "The spread is less about forcing a result than about reading what is already taking shape.",
             "What shows most clearly here is a situation still in motion, and the wisest move is to read it closely before acting.",

@@ -65,7 +65,7 @@ export function queryInterpretationEntries(query: InterpretationQuery): Retrieve
   const primary =
     fromRepository?.meanings[domain] ??
     sentenceCase(
-      `${left.name} + ${right.name} blends ${left.keywords[0]} with ${right.keywords[0]}, inviting ${left.action} while staying aware of ${right.caution}`,
+      `${left.name} + ${right.name} blends ${left.keywords[0]} with ${right.keywords[0]}, asking you to ${left.action} while staying aware of ${right.caution}`,
     );
   const summary = sentenceCase(`${left.name} and ${right.name} create a contextual pair bridge`);
   const baseSignal = fromRepository?.signal ?? 18;

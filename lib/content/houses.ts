@@ -9,7 +9,7 @@ export const HOUSE_MEANINGS: HouseMeaning[] = [
   { id: 1, name: "Rider House", shortFocus: "incoming momentum", description: "Where messages, news, and first movement arrive." },
   { id: 2, name: "Clover House", shortFocus: "small luck", description: "Where quick chances and temporary openings appear." },
   { id: 3, name: "Ship House", shortFocus: "expansion", description: "Where travel, trade, and distance shape perspective." },
-  { id: 4, name: "House House", shortFocus: "stability", description: "Where foundations, home patterns, and security are tested." },
+  { id: 4, name: "House House", shortFocus: "structural stability", description: "Where foundations, home patterns, and security are tested." },
   { id: 5, name: "Tree House", shortFocus: "long growth", description: "Where health, roots, and long-term development are emphasized." },
   { id: 6, name: "Clouds House", shortFocus: "ambiguity", description: "Where uncertainty must be clarified before commitment." },
   { id: 7, name: "Snake House", shortFocus: "strategy", description: "Where complexity, desire, and tactical choices unfold." },

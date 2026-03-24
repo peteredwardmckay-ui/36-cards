@@ -8,7 +8,6 @@ This directory contains brand identity assets for **36 Cards** (`36cards.com`).
 - `favicon.svg`: Vector favicon source
 - `tokens.css`: Global and theme color tokens
 - `card-backs/*.svg`: Branded card verso designs for all shipped themes
-- `pdf/PdfBrand.tsx`: Reusable PDF header/footer/watermark helpers
 
 ## Typography
 

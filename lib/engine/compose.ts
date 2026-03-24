@@ -2,6 +2,8 @@ import { CARD_MEANINGS, getCardMeaning } from "@/lib/content/cards";
 import { getHouseMeaning } from "@/lib/content/houses";
 import { getSubjectDefinition } from "@/lib/content/subjects";
 import { resolveThemeForReading } from "@/lib/content/themes";
+import type { ThemeId } from "@/lib/content/themes";
+import { buildThemeCardSentence, buildThemeSectionBridge, buildCardPairBridge } from "@/lib/engine/themeFraming";
 import { getDomainForSubject, inferCounterpartRole, inferSubjectFromQuestion } from "@/lib/engine/context";
 import {
   buildGrandTableauLayout,
@@ -44,6 +46,7 @@ interface NarrativeSeedContext {
   state: ReadingState;
   domain: Domain;
   subjectId: SubjectId;
+  resolvedThemeId: ThemeId | null;
 }
 
 interface QuickCompositionResult {
@@ -139,7 +142,7 @@ function normalizeMeaningFragment(input: string): string {
 function normalizeMeaningThatClause(input: string): string {
   const normalized = normalizeMeaningFragment(input).replace(/^that\s+/i, "");
   if (
-    /^(choose|set|keep|watch|name|protect|clarify|review|track|listen|speak|pause|move|reframe|allow|hold|act|offer|take|make|prioritize|commit|focus|ask|give|let|consider)\b/i.test(
+    /^(choose|set|keep|watch|name|protect|clarify|review|track|listen|speak|pause|move|reframe|allow|hold|act|offer|take|make|prioritize|commit|focus|ask|give|let|consider|notice|reduce)\b/i.test(
       normalized,
     )
   ) {
@@ -151,7 +154,7 @@ function normalizeMeaningThatClause(input: string): string {
 function normalizeMeaningForSentenceFrame(input: string): string {
   const normalized = lowerFirst(normalizeMeaningFragment(input));
   if (
-    /^(choose|set|keep|watch|name|protect|clarify|review|track|listen|speak|pause|move|reframe|allow|hold|act|offer|take|make|prioritize|commit|focus|ask|give|let)\b/i.test(
+    /^(choose|set|keep|watch|name|protect|clarify|review|track|listen|speak|pause|move|reframe|allow|hold|act|offer|take|make|prioritize|commit|focus|ask|give|let|consider|prototype|notice|reduce)\b/i.test(
       normalized,
     )
   ) {
@@ -994,7 +997,7 @@ function buildThemeLensSummary(themeOverlay: ReturnType<typeof resolveThemeForRe
 }
 
 function generateGTSections(context: NarrativeSeedContext, random: () => number): QuickCompositionResult {
-  const { state, domain, subjectId } = context;
+  const { state, domain, subjectId, resolvedThemeId } = context;
   const gtLayout = state.setup.gtLayout ?? "4x9";
   const layout = buildGrandTableauLayout(state.layout, gtLayout);
   const mode = state.setup.significatorMode;
@@ -1036,6 +1039,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
     ],
     random,
   );
+  const centerThemeSentence = buildThemeCardSentence(resolvedThemeId, primaryCard.id, primaryCard.name, "center", random);
+  const centerSentenceWithTheme = [centerSentence, centerThemeSentence].filter(Boolean).join(" ");
 
   const pairSentence = selectedPair
     ? (() => {
@@ -1180,7 +1185,7 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
   const synthesisSentence = `${tableauSynthesis.practicalSentence} ${tableauSynthesis.openingsSentence} ${tableauSynthesis.thesisSentence}`;
 
   const sections: NarrativeSection[] = [
-    buildSection("center", "At the Heart", "house", centerSentence),
+    buildSection("center", "At the Heart", "house", centerSentenceWithTheme),
     buildSection("pair", "What Sits Beside It", "pair", pairSentence),
     buildSection("background", "The Deeper Current", "diagonal", backgroundSentence),
     buildSection("timing", "What Comes Next", "proximity", timingSentence),
@@ -1236,21 +1241,22 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
         random,
       );
 
-      sections.push(buildSection("cartouche", "The Closing Line", "timeline", `${cartoucheSentenceA} ${cartoucheSentenceB} ${cartoucheSentenceC}`));
+      sections.push(buildSection("cartouche", "Cartouche", "timeline", `${cartoucheSentenceA} ${cartoucheSentenceB} ${cartoucheSentenceC}`));
     }
   }
 
+  const themeBridge = buildThemeSectionBridge(resolvedThemeId, random);
   sections.push(
-    buildSection("synthesis", "Taken Together", "synthesis", synthesisSentence),
+    buildSection("synthesis", "Taken Together", "synthesis", [synthesisSentence, themeBridge].filter(Boolean).join(" ")),
   );
 
   const conclusionActionCard = primaryCard.id === 28 || primaryCard.id === 29 ? getCardMeaning(primaryHouse.id) : primaryCard;
   const conclusionBridge = choose(
     [
-      "The spread points to one clear place to start.",
-      "There is a concrete place to act from here.",
-      "The cards suggest a practical first step.",
-      "That picture leaves one useful point of entry.",
+      "The spread points to one place worth reflecting on first.",
+      "There is a practical thread worth following through.",
+      "The cards suggest one place where a direct response would land first.",
+      "That picture leaves one thread that concentrates the reading more than the others.",
     ],
     random,
   );
@@ -1274,7 +1280,7 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
 }
 
 function generateThreeCardSections(context: NarrativeSeedContext, random: () => number): QuickCompositionResult {
-  const { state, domain, subjectId } = context;
+  const { state, domain, subjectId, resolvedThemeId } = context;
   const mode = state.setup.threeCardMode as ThreeCardMode;
   const placements = buildThreeCardLayout(state.layout, mode);
   const labels = getThreeCardLabels(mode);
@@ -1285,17 +1291,18 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
   const directionThread = normalizeMeaningForSentenceFrame(cards[2].domainVariants[domain]);
   const topPair = selectTopPair(buildThreeCardPairCandidates(cards.map((card) => card.id)), domain);
 
-  const situationSentence = choose(
+  const situationSentenceBase = choose(
       [
-        `${labels[0]} opens with ${cardRef(cards[0].id)}, putting ${situationThread} in focus and setting the emotional weather around the reading. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `With ${cardRef(cards[0].id)} in the ${labels[0].toLowerCase()}, the reading shows where things already stand, and the picture is already being shaped by ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `${cardRef(cards[0].id)} in ${labels[0]} sets the tone with ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `The sequence begins in ${labels[0]} with ${cardRef(cards[0].id)}, so ${situationThread} is already in play. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `${labels[0]} opens with ${cardRef(cards[0].id)}: ${situationThread}. This sets the emotional weather for everything that follows. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `With ${cardRef(cards[0].id)} in ${labels[0].toLowerCase()}, the starting picture is already clear: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `${cardRef(cards[0].id)} in ${labels[0]} sets the tone: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `The sequence begins in ${labels[0]} with ${cardRef(cards[0].id)}: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
       ],
       random,
   );
+  const situationSentence = [situationSentenceBase, buildThemeCardSentence(resolvedThemeId, cards[0].id, cards[0].name, "situation", random)].filter(Boolean).join(" ");
 
-  const pivotSentence = choose(
+  const pivotSentenceBase = choose(
     [
       `${labels[1]} turns on ${cardRef(cards[1].id)}, so the middle card becomes the point where the sequence can redirect. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
       `At the pivot, ${labels[1]} places ${cardRef(cards[1].id)} at the center, making this the point where the reading can shift. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
@@ -1305,17 +1312,19 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
     ],
     random,
   );
+  const pivotSentence = [pivotSentenceBase, buildThemeCardSentence(resolvedThemeId, cards[1].id, cards[1].name, "pivot", random)].filter(Boolean).join(" ");
 
-  const directionSentence = choose(
+  const directionSentenceBase = choose(
     [
-      `Looking ahead, ${labels[2]} with ${cardRef(cards[2].id)} points toward ${directionThread}, if the middle-card lesson is handled with care. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
+      `The direction in ${labels[2]} comes through ${cardRef(cards[2].id)}: ${directionThread}, once the middle card is handled directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
       `The likely direction shows in ${labels[2]} through ${cardRef(cards[2].id)}, and it suggests ${directionThread} once the pivot is met directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `What develops in ${labels[2]} through ${cardRef(cards[2].id)} points to ${directionThread}, provided the central pressure is handled honestly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `${labels[2]} closes with ${cardRef(cards[2].id)}, and the directional message is ${directionThread} when the pivot receives consistent attention. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
+      `What ${labels[2]} shows through ${cardRef(cards[2].id)}: ${directionThread}, provided the central pressure is handled honestly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
+      `${labels[2]} closes with ${cardRef(cards[2].id)}, and the directional message is: ${directionThread} when the pivot receives consistent attention. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
       `${cardRef(cards[2].id)} in ${labels[2]} suggests ${directionThread}, once the middle-card pressure has been worked with directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
     ],
     random,
   );
+  const directionSentence = [directionSentenceBase, buildThemeCardSentence(resolvedThemeId, cards[2].id, cards[2].name, "direction", random)].filter(Boolean).join(" ");
 
   const pairLine = topPair ? pairMeaningToProse(topPair.meaning) : "the relationship between the cards matters more than any single symbol alone";
   const leftRef = cardRef(topPair?.cardA ?? cards[0].id);
@@ -1352,10 +1361,10 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
   const directionRef = cardRef(cards[2].id);
   const conclusionClose = choose(
     [
-      `${pivotAction}, and ${directionRef} will start to make sense in practice rather than theory.`,
-      `${pivotAction}; that is what gives ${directionRef} room to become real.`,
-      `${pivotAction} — then ${directionRef} stops being a possibility and becomes a direction.`,
-      `${pivotAction}, and ${directionRef} will stop feeling like potential and start feeling like something you can actually move toward.`,
+      `${pivotAction} — that is the clearest move this reading points to.`,
+      `The practical thread here is to ${pivotAction.toLowerCase()}.`,
+      `${pivotAction}. That is where the sequence concentrates.`,
+      `The reading keeps returning to one thing: ${pivotAction.toLowerCase()}.`,
     ],
     random,
   );
@@ -1368,16 +1377,15 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
       ],
       random,
     ),
-  )} ${buildCardAssociationSentence(cards[1], subjectId, domain, random)} ${
-    topPair ? sentence(`${cardRef(topPair.cardA)} with ${cardRef(topPair.cardB)} keep emphasizing ${pairLine}`) : ""
-  } ${conclusionClose}`.trim();
+  )} ${conclusionClose}`.trim();
 
+  const themeBridge = buildThemeSectionBridge(resolvedThemeId, random);
   return {
     sections: [
       buildSection("situation", "Where Things Stand", "timeline", situationSentence),
       buildSection("pivot", "The Turning Point", "timeline", pivotSentence),
       buildSection("direction", "Where It Leads", "timeline", directionSentence),
-      buildSection("synthesis", "Taken Together", "synthesis", `${synthesisConnector} ${synthesisSentence}`),
+      buildSection("synthesis", "Taken Together", "synthesis", [synthesisConnector, synthesisSentence, buildCardPairBridge(cards[0].id, cards[1].id, cards[0].name, cards[1].name, random), buildCardPairBridge(cards[1].id, cards[2].id, cards[1].name, cards[2].name, random), themeBridge].filter(Boolean).join(" ")),
       buildSection("closer", "The Next Move", "synthesis", closerSentence),
     ],
     conclusion,
@@ -1418,7 +1426,7 @@ function enforceSentenceTargets(
   while (sentenceTotal() > maxSentences && sections.length > 2) {
     const preserveIds =
       spreadType === "grand-tableau"
-        ? new Set(sections.some((section) => section.id === "cartouche") ? ["center", "pair", "cartouche"] : ["center", "pair"])
+        ? new Set(sections.some((section) => section.id === "cartouche") ? ["center", "pair", "background", "cartouche"] : ["center", "pair", "background"])
         : new Set(["situation", "pivot", "direction"]);
     let removeIndex = sections.length - 1;
     while (removeIndex >= 0 && preserveIds.has(sections[removeIndex]?.id ?? "")) {
@@ -1469,9 +1477,9 @@ function enforceSentenceTargets(
       },
       (section) => {
         const house = extractHouseNameFromText(section.body);
-        return house ? `${house} shows where the theme becomes practical instead of staying abstract.` : "A house overlay often reveals where the reading must be worked with directly.";
+        return house ? `${house} shows where the theme becomes practical instead of staying abstract.` : "A house overlay often reveals where the reading is most worth sitting with directly.";
       },
-      "A house overlay often reveals where the reading must be worked with directly.",
+      "A house overlay often reveals where the reading is most worth sitting with directly.",
       "The house narrows the theme to the place where it can be tested.",
       "House emphasis often points to the arena where timing matters most.",
       (section) => {
@@ -1863,8 +1871,8 @@ export function composeReading(state: ReadingState): GeneratedReading {
   });
   const sectionsCore =
     state.setup.spreadType === "grand-tableau"
-      ? generateGTSections({ state, domain, subjectId }, rng.next)
-      : generateThreeCardSections({ state, domain, subjectId }, rng.next);
+      ? generateGTSections({ state, domain, subjectId, resolvedThemeId: themeOverlay.resolvedThemeId }, rng.next)
+      : generateThreeCardSections({ state, domain, subjectId, resolvedThemeId: themeOverlay.resolvedThemeId }, rng.next);
   const sections = sectionsCore.sections;
 
   const conclusion = sectionsCore.conclusion || makeConclusion(subjectId, domain, rng.next);

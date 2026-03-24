@@ -90,7 +90,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "visibility",
-    expectedFingerprint: "9d7313199a555bf9a1c9",
+    expectedFingerprint: "2f2dceaa6295a1f363d4",
   },
   {
     id: "friends_social_gossip_or_hidden_factors_deep",
@@ -106,7 +106,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "gossip_or_hidden_factors",
-    expectedFingerprint: "b6ca6b0dccd07b6e5629",
+    expectedFingerprint: "cf52795ac0c07e8f0fee",
   },
   {
     id: "friends_social_networks_deep",
@@ -122,7 +122,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "networks",
-    expectedFingerprint: "62d6cd6e0a6fb091c922",
+    expectedFingerprint: "71ce6e97bc2ec25b7ebc",
   },
   {
     id: "work_workplace_politics_deep",
@@ -138,7 +138,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "workplace_politics",
-    expectedFingerprint: "0cf6010c2a517409f15c",
+    expectedFingerprint: "44d10833d7ddeb18b346",
   },
   {
     id: "legal_admin_approvals_deep",
@@ -154,7 +154,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "approvals",
-    expectedFingerprint: "8ab7e94f3daf6ccd4a90",
+    expectedFingerprint: "cf628cbacfeaed486986",
   },
   {
     id: "purpose_calling_long_term_direction_deep",
@@ -170,7 +170,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "open",
     },
     expectedThemeId: "long_term_direction",
-    expectedFingerprint: "8af367de286769c88621",
+    expectedFingerprint: "c1cf4db28d48ed1bd1b9",
   },
   {
     id: "travel_delays_deep",
@@ -186,7 +186,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "delays",
-    expectedFingerprint: "57c24c8c35a6300e98a6",
+    expectedFingerprint: "71f0c04514c631d9ca29",
   },
   {
     id: "education_applications_deep",
@@ -202,7 +202,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "applications",
-    expectedFingerprint: "bf62db27e4c8b728d7c3",
+    expectedFingerprint: "a6925d28cd0d0191be97",
   },
   {
     id: "creative_visibility_deep",
@@ -218,7 +218,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "visibility",
-    expectedFingerprint: "cffc5239318655a2e291",
+    expectedFingerprint: "497a3552f30cd57ab97b",
   },
   {
     id: "money_financial_pressure_deep",
@@ -234,7 +234,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "financial_pressure",
-    expectedFingerprint: "42ea8f9cfdbf47ae6b8a",
+    expectedFingerprint: "e62abb18104e5c2ebcd9",
   },
   {
     id: "home_family_family_tension_deep",
@@ -250,7 +250,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "family_tension",
-    expectedFingerprint: "5b88b5483c0dcf5f61a4",
+    expectedFingerprint: "5c7912592cb7cc3705b1",
   },
   {
     id: "personal_growth_self_trust_deep",
@@ -266,7 +266,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "self_trust",
-    expectedFingerprint: "e9b9e6243091cf6ba69c",
+    expectedFingerprint: "1ac016cf43169929a6ca",
   },
   {
     id: "health_stress_load_deep",
@@ -282,7 +282,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "stress_load",
-    expectedFingerprint: "b53f237fbd948fb3dab0",
+    expectedFingerprint: "24875cd98b46e851a6c0",
   },
   {
     id: "pets_behavior_deep",
@@ -298,7 +298,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "behavior",
-    expectedFingerprint: "a689cfc9a4f754c675f0",
+    expectedFingerprint: "bb570d3d445758db95d6",
   },
   {
     id: "spiritual_discernment_deep",
@@ -314,7 +314,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "open",
     },
     expectedThemeId: "discernment",
-    expectedFingerprint: "4662a75cf40e5e86bb58",
+    expectedFingerprint: "cccf4684738396ac2cf4",
   },
   {
     id: "general_reading_clarity_deep",
@@ -330,7 +330,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "clarity",
-    expectedFingerprint: "ee369dd57e290567e6f2",
+    expectedFingerprint: "ff7ab0ac0de2c9c58e7b",
   },
   {
     id: "love_commitment_deep",
@@ -346,7 +346,7 @@ const CURATED_FIXTURES: CuratedThemeLensFixture[] = [
       significatorMode: "self",
     },
     expectedThemeId: "commitment",
-    expectedFingerprint: "010385c40c00d1899af8",
+    expectedFingerprint: "88d52f53492ce46e6b5d",
   },
 ];
 

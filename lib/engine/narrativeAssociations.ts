@@ -25,12 +25,37 @@ const SUBJECT_SCOPE: Record<SubjectId, string> = {
 };
 
 const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
+  6: {
+    general: [
+      "fog, uncertainty, and the parts of the picture that shift before they can be read clearly",
+      "the unclear or ambiguous quality of the situation, where patience matters more than conclusions",
+      "uncertainty and shifting conditions that ask for careful pacing before any firm commitment",
+    ],
+    love: [
+      "fog in the connection, where mixed signals or withheld clarity make it hard to read what is actually being offered",
+    ],
+    work: [
+      "unclear direction, shifting priorities, and the parts of the work picture that cannot yet be trusted as fixed",
+    ],
+  },
   1: {
+    general: [
+      "incoming news, a new arrival, and the signal that something which has been waiting is finally starting to move",
+    ],
+    love: [
+      "a message, invitation, or emotional signal that reactivates what has been quietly building",
+    ],
     work: [
       "incoming communication, updates, and the practical opening they create when timing is finally right",
     ],
   },
   2: {
+    general: [
+      "a small opening, brief easing, and the kind of chance that only matters if it is used promptly",
+    ],
+    love: [
+      "a light touch, small gesture of goodwill, and the warmth that softens a tense emotional climate when it arrives",
+    ],
     work: [
       "a small opening, brief easing, and the kind of chance that only helps if it is used cleanly and quickly",
     ],
@@ -66,7 +91,7 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
       "slow growth, deep roots, and whatever needs steadiness rather than speed",
     ],
     love: [
-      "slow trust, emotional rootedness, and the kind of intimacy that deepens by consistency",
+      "slow trust, emotional rootedness, and the kind of intimacy that deepens through consistency",
     ],
     work: [
       "long skill-building, sustainable process, and the quiet work that strengthens the whole structure over time",
@@ -81,6 +106,29 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
     ],
     work: [
       "politics, competing interests, tactical maneuvering, and the quiet leverage hidden inside complexity",
+    ],
+  },
+  8: {
+    general: [
+      "an ending or closure that clears the field for what genuinely comes next",
+      "the thing that has already finished and needs to be allowed to rest rather than reactivated",
+    ],
+    love: [
+      "the part of the bond that has already ended or gone quiet and needs to be allowed to rest rather than forced back open",
+    ],
+    work: [
+      "a process, role, or phase of work that has run its course and cannot be meaningfully continued",
+    ],
+  },
+  9: {
+    general: [
+      "a moment of goodwill, ease, or visible appreciation that makes the wider situation easier to move through",
+    ],
+    love: [
+      "warmth, romantic gesture, and the feeling of being genuinely appreciated in the connection",
+    ],
+    work: [
+      "professional recognition, goodwill between parties, and the visible ease that opens conversations",
     ],
   },
   10: {
@@ -119,6 +167,18 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
       "constant updates, chatter, meetings, nerves, and short-cycle decisions that can unsettle the day",
     ],
   },
+  13: {
+    general: [
+      "a fresh start, small beginning, and the early-stage quality that needs careful handling to develop well",
+      "the early signal of something genuinely new — and the light touch required before it can build its own momentum",
+    ],
+    love: [
+      "the tender, early quality of this connection, or the part of it still holding its original openness",
+    ],
+    work: [
+      "an early-stage effort, new approach, or small beginning that has not yet built its own momentum",
+    ],
+  },
   14: {
     general: [
       "discernment, tactical caution, self-interest, and the need to stay useful without becoming cynical",
@@ -130,6 +190,31 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
       "quality control, tactical caution, professional self-interest, and the need to verify before committing",
     ],
   },
+  15: {
+    general: [
+      "resource authority, protective weight, and the question of who actually controls what the situation depends on",
+    ],
+    love: [
+      "protective instincts, possessive dynamics, and the weight of caring for someone in a way that can either steady or strain the bond",
+    ],
+    work: [
+      "resource control, budgetary authority, and the responsibility that comes with holding influence over what others need",
+    ],
+    money: [
+      "significant resource concentration, major financial authority, and the leverage held by whoever controls the flow",
+    ],
+  },
+  16: {
+    general: [
+      "long-range clarity, guidance, and the alignment between where things stand and where they are moving",
+    ],
+    love: [
+      "shared hope, mutual orientation, and the sense of moving toward something meaningful together",
+    ],
+    work: [
+      "strategic coherence, clear direction, and the clarity that makes planning feel genuinely oriented rather than provisional",
+    ],
+  },
   17: {
     general: [
       "improvement, transition, upgrades, and the feeling that something is trying to move into a better form",
@@ -138,7 +223,7 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
       "financial improvement, restructuring, and the kind of change that helps the flow work better instead of just moving faster",
     ],
     love: [
-      "constructive change, relational improvement, and the chance to update the way the bond is being lived",
+      "gradual renewal, relational improvement, and the chance to update the way the bond is being lived",
     ],
     work: [
       "upgrades, changed routines, transfers, process improvement, and movement toward a better method",
@@ -146,7 +231,7 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   },
   18: {
     general: [
-      "loyal support, dependable help, and the quiet strength of what proves itself through consistency",
+      "loyal backing, dependable help, and the quiet strength of what proves itself through consistency",
     ],
     money: [
       "practical support, a reliable ally, and the arrangements or help that can make the numbers more workable",
@@ -167,6 +252,28 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
     ],
     work: [
       "institutions, hierarchy, compliance, status, and the formal structure shaping what is possible",
+    ],
+  },
+  20: {
+    general: [
+      "the visible social field, wider context, and the shared environment that shapes how events are read by others",
+    ],
+    love: [
+      "the public side of the relationship, outside context, and the social environment shaping what can be offered or withheld",
+    ],
+    work: [
+      "the professional network, visible environment, and wider context that creates or limits what is practically possible",
+    ],
+  },
+  21: {
+    general: [
+      "a real obstacle, hard resistance, or significant blockage that requires patience and staged effort rather than force",
+    ],
+    love: [
+      "emotional distance, blocked access, or a hard barrier between people that cannot be resolved quickly or by goodwill alone",
+    ],
+    work: [
+      "a structural block, persistent resistance, or major obstacle that cannot be worked around without sustained effort and planning",
     ],
   },
   22: {
@@ -219,6 +326,9 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   26: {
     general: [
       "private knowledge, research, what is not yet visible, and the need to learn before you declare certainty",
+      "the withheld, unverified, or still-forming information that shapes the situation from behind the surface",
+      "what is known but not shared, or known partially — and the patience required before conclusions can hold",
+      "hidden information, research still in progress, and the gap between what is available and what can yet be confirmed",
     ],
     love: [
       "private conversations, what one person has not yet said, and the intimacy or distance created by secrecy",
@@ -230,6 +340,9 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   27: {
     general: [
       "records, messages, explicit wording, and the importance of what can be tracked or proven",
+      "written communication, documentation, and the clarity that comes from putting things into explicit form",
+      "the stated position, formal record, or message that changes what can be assumed or left vague",
+      "correspondence, notice, or information that needs to move between people in a clear and traceable way",
     ],
     love: [
       "texts, messages, written clarity, and the relief that comes when the emotional subtext is finally named",
@@ -258,6 +371,17 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
     ],
     work: [
       "your role, boundaries, workload ownership, and the way your position is shaping the outcome",
+    ],
+  },
+  30: {
+    general: [
+      "maturity, ethical steadiness, and the patience to let things develop at the right pace",
+    ],
+    love: [
+      "respect, composed affection, and the slower intimacy that deepens when both people stop rushing",
+    ],
+    work: [
+      "professional composure, principled judgment, and the restraint that keeps work from becoming reactive",
     ],
   },
   31: {
@@ -335,6 +459,10 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     29: [
       "your own role, boundaries, self-definition, and the way your stance is quietly shaping the wider situation",
+      "your own position and how your choices are quietly setting the tone",
+      "the way your boundaries and availability are shaping what can unfold",
+      "your own stance and the field it is creating around you",
+      "what you are permitting, clarifying, or holding back — and how that shapes the wider picture",
     ],
   },
   personal_growth: {
@@ -379,6 +507,9 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     29: [
       "your role, boundaries, self-definition, and the way your stance is quietly setting the tone",
+      "how you are moving through the inner process and what only you can decide about it",
+      "what you are reinforcing or resisting — and how that shapes the pace of change",
+      "your own stance and the ground it is creating for growth",
     ],
     32: [
       "your emotional weather, self-image, and the visibility cycle through which growth starts feeling more or less real",
@@ -496,7 +627,7 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
       "the mixed signals, unclear group response, and wider-field ambiguity that make belonging harder to read cleanly",
     ],
     4: [
-      "the group's base structure, shared ground, and the conditions that have to hold before belonging can stretch well",
+      "the group's base structure, shared ground, and the conditions that have to hold before belonging can deepen reliably",
     ],
     8: [
       "a pause, exit, or quiet withdrawal in the wider field, including what may need to end cleanly before belonging can reset on truer terms",
@@ -535,16 +666,22 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
       "the visible group field, networks, and shared spaces where belonging gets mirrored, tested, or opened up",
     ],
     21: [
-      "the blockage, delay, or slower passage in the wider field that has to be worked patiently instead of forced",
+      "the blockage, delay, or slower passage in the wider field that calls for patience and careful sequencing",
     ],
     24: [
       "what still feels genuinely mutual, welcoming, and worth belonging to in the group",
+      "the genuine warmth, goodwill, and real reciprocity that makes belonging feel earned rather than obligatory",
+      "the shared feeling and real affinity that holds a group together when pressure tests it",
     ],
     25: [
       "the group agreement, recurring norm, or repeated social terms that keep renewing themselves until they are consciously revised",
     ],
     29: [
       "your place in the wider field, the boundaries around your participation, and the tone your presence or withdrawal is setting",
+      "how your own availability, consistency, and style of showing up are shaping what the group can become",
+      "your role in the wider field and the way your choices about participation are quietly defining what continues",
+      "the signal your presence, boundaries, and patterns of engagement are sending into the wider group",
+      "the part of the group field that only you can actively shape, protect, or choose to step back from",
     ],
     30: [
       "maturity, restraint, and the steadier tone that helps participation hold without hardening into coldness",
@@ -749,6 +886,10 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     29: [
       "your creative process, voice, and the part of the work only you can shape, release, or protect",
+      "the part of the creative work that only you can shape, authorize, or set aside",
+      "the creative stance you are holding and how it is quietly shaping what can emerge",
+      "what is genuinely yours to make — the part of the process no one else can move for you",
+      "your own authorship and the way it is setting the tone before anything is visible",
     ],
     30: [
       "craft maturity, restraint, and the steadier hand that knows how to refine without flattening the work",
@@ -814,6 +955,9 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     29: [
       "your wellbeing, body awareness, and the part of the process only you can report or regulate honestly",
+      "your direct experience of recovery and what only your body can tell you about pacing and readiness",
+      "how you are reading the system and what only you can feel, pace, or adjust from the inside",
+      "your own body signals and the honest picture only you have access to",
     ],
     30: [
       "rest, regulation, and the steadier pace that helps the system trust safety again",
@@ -974,17 +1118,43 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   love: {
+    6: [
+      "mixed signals, clouded intentions, and the difficulty of reading what the other person is actually offering",
+      "the uncertainty in the connection, where what is meant and what is communicated are not yet the same",
+    ],
     8: [
       "emotional endings, cold places in the bond, and the need to let what has already gone quiet actually rest",
     ],
+    9: [
+      "affection and the small gestures that help the bond feel genuinely appreciated rather than taken for granted",
+      "warmth and genuine openness that makes connection feel lighter and more generous",
+    ],
     12: [
       "texting loops, nervous check-ins, mixed signals, and the difference between contact and true clarity",
+    ],
+    13: [
+      "new emotional ground, tentative openings, and the part of the bond that still needs gentleness rather than pressure",
+      "a fragile beginning in the bond, where curiosity and lightness matter more than conclusions",
+      "the tender or early part of the connection, where gentleness is what makes the next step possible",
     ],
     23: [
       "small hurts, suspicion, anxious over-reading, and the slow wear that comes from what never fully gets repaired",
     ],
     24: [
-      "open affection, tenderness, emotional truth, and what the bond is really asking to be fed",
+      "genuine affection, tenderness, emotional truth, and what the bond is genuinely asking for",
+    ],
+    21: [
+      "emotional distance, blocked access, and the slow work of patient repair",
+      "the resistance or distance in the bond, and what it is asking for before it shifts",
+      "the obstacle in the connection, which requires patience rather than force",
+    ],
+    15: [
+      "security, resource protection, and the way the stronger partner's stance shapes the emotional field",
+      "the protective or possessive current in the bond — steadying or controlling depending on how it is held",
+    ],
+    16: [
+      "shared hopes, long-range direction, and the vision of what the relationship could become if both people stay with it",
+      "the guiding light in the bond, including what both people are reaching toward and whether those visions align",
     ],
     25: [
       "promises, commitment, and the repeating shape the relationship keeps falling back into",
@@ -994,6 +1164,9 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     29: [
       "your own stance in the relationship, including boundaries, availability, and the tone you are setting without always realizing it",
+      "how your presence in the relationship is quietly shaping what can be given or received",
+      "what you are making available, withholding, or leaving unclear — and how that shapes the dynamic",
+      "your presence in the relationship and the tone it creates before anything is made explicit",
     ],
   },
   legal_admin: {
@@ -1296,7 +1469,7 @@ const HOUSE_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
       "distance, standards, formal structure, and the part of the situation governed by rules rather than mood",
     ],
     love: [
-      "distance, emotional reserve, and the guarded architecture that can keep two people apart even when interest remains",
+      "distance, reserve, and the guarded patterns that can keep genuine connection at arm's length",
     ],
     work: [
       "institutions, hierarchy, and the systems of approval that determine what can move",
@@ -1558,7 +1731,7 @@ const SUBJECT_HOUSE_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<
       "the unclear group mood, mixed signals, and part of the wider field that still cannot be read cleanly",
     ],
     4: [
-      "the group's base structure, shared ground, and the conditions that have to hold before belonging can stretch well",
+      "the group's base structure, shared ground, and the conditions that have to hold before belonging can deepen reliably",
     ],
     8: [
       "a pause, exit, or quiet withdrawal in the wider field, including what has cooled enough that it should not be forced back into life",
@@ -1600,7 +1773,7 @@ const SUBJECT_HOUSE_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<
       "the visible group field, shared spaces, and networks where belonging becomes public enough to affect tone",
     ],
     21: [
-      "the blockage, delay, or slower passage in the wider field that has to be worked patiently instead of forced",
+      "the blockage, delay, or slower passage in the wider field that calls for patience and careful sequencing",
     ],
     24: [
       "shared values, real affinity, and the part of belonging that has to feel mutual if it is going to keep holding",
@@ -3961,6 +4134,7 @@ function naturalizeAction(input: string): string {
     "favor concise, clarifying dialogue": "keep the conversation brief and clarifying",
     "turn friction into intentional practice": "use the friction to improve the pattern instead of replaying it",
     "stabilize what matters and release dead weight": "secure what can last and release what only adds drag",
+    "verify details and protect your value": "check what is actually present before committing further trust",
   };
   return mapped[normalized] ?? normalized;
 }
@@ -4058,7 +4232,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "work with timing, reflection, and self-observation instead of assuming this moment defines the whole pattern",
     ],
     33: [
-      "act on the clearest answer that already feels usable instead of demanding total certainty",
+      "work from the clearest answer that already feels usable instead of demanding total certainty",
       "work from the part of the truth that is already clear enough to live, not just admire",
     ],
     35: [
@@ -4070,6 +4244,14 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     21: [
       "work the blockage in stages instead of asking the wider field to move all at once",
       "reroute participation around what is blocked instead of treating delay as proof you do not belong",
+    ],
+    22: [
+      "notice which path actually aligns with what you value before closing the other one off",
+      "sit with the fork until values rather than anxiety are doing the pointing",
+    ],
+    29: [
+      "notice what your own patterns of participation are quietly reinforcing before asking the group to change",
+      "reflect on which boundaries and choices are setting the terms for what the wider field can become",
     ],
     31: [
       "let the clearer signal show without turning belonging into performance",
@@ -4175,7 +4357,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
   education: {
     2: [
       "use the small academic window while it is real instead of assuming it will stay open",
-      "treat a brief extension or opening as something to act on quickly, not admire abstractly",
+      "treat a brief extension or opening as something to use while it is real, not admire abstractly",
     ],
     3: [
       "define direction before expanding effort into a wider course, campus, or application field",
@@ -4391,7 +4573,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     ],
     28: [
       "separate your body's truth from what other people need, expect, or mirror back to you",
-      "stop treating someone else's pace or demand as the measure of what your system should be able to carry",
+      "notice whether someone else's pace or expectation has become the measure of what your system is supposed to carry",
     ],
     29: [
       "treat your own wellbeing as part of the answer, not just the thing being managed",
@@ -4410,7 +4592,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "work with sleep, timing, and sensitivity instead of treating every fluctuation as random",
     ],
     33: [
-      "act on what is already proving helpful instead of waiting for perfect certainty",
+      "work with what is already proving helpful instead of waiting for perfect certainty",
       "build around the clearest answer your body is already giving you",
     ],
     34: [
@@ -4913,7 +5095,8 @@ function normalizePairKeywords(input: string): string {
 }
 
 function displayHouseName(input: HouseMeaning): string {
-  return input.name.replace(/\bHouse House$/i, "House");
+  if (input.name === "House House") return "Foundation House";
+  return input.name;
 }
 
 function cardFrom(input: number | CardMeaning): CardMeaning {
@@ -4928,21 +5111,50 @@ function houseDescriptionPhrase(input: HouseMeaning): string {
   return lowerFirst(clause(input.description).replace(/^where\s+/i, ""));
 }
 
+export interface ReadingContext {
+  usedCardPhrases: Map<number, Set<string>>;
+  usedHousePhrases: Map<number, Set<string>>;
+}
+
+export function createReadingContext(): ReadingContext {
+  return { usedCardPhrases: new Map(), usedHousePhrases: new Map() };
+}
+
+function chooseAvoiding(
+  pool: string[],
+  id: number,
+  usedMap: Map<number, Set<string>>,
+  random: () => number,
+): string {
+  if (pool.length <= 1) return pool[0] ?? "";
+  const used = usedMap.get(id);
+  const available = used ? pool.filter((p) => !used.has(p)) : pool;
+  const chosen = choose(available.length > 0 ? available : pool, random);
+  if (!usedMap.has(id)) usedMap.set(id, new Set());
+  usedMap.get(id)!.add(chosen);
+  return chosen;
+}
+
 export function buildCardAssociationPhrase(
   input: number | CardMeaning,
   subjectId: SubjectId,
   domain: Domain,
   random: () => number,
+  context?: ReadingContext,
 ): string {
   const card = cardFrom(input);
   const subjectPool = SUBJECT_CARD_ASSOCIATION_NOTES[subjectId]?.[card.id] ?? [];
   if (subjectPool.length) {
-    return choose(subjectPool, random);
+    return context
+      ? chooseAvoiding(subjectPool, card.id, context.usedCardPhrases, random)
+      : choose(subjectPool, random);
   }
 
   const specialPool = CARD_ASSOCIATION_NOTES[card.id]?.[domain] ?? CARD_ASSOCIATION_NOTES[card.id]?.general ?? [];
   if (specialPool.length) {
-    return choose(specialPool, random);
+    return context
+      ? chooseAvoiding(specialPool, card.id, context.usedCardPhrases, random)
+      : choose(specialPool, random);
   }
 
   const domainLine = clause(card.domainVariants[domain]);
@@ -4967,16 +5179,21 @@ export function buildHouseAssociationPhrase(
   subjectId: SubjectId,
   domain: Domain,
   random: () => number,
+  context?: ReadingContext,
 ): string {
   const house = houseFrom(input);
   const subjectPool = SUBJECT_HOUSE_ASSOCIATION_NOTES[subjectId]?.[house.id] ?? [];
   if (subjectPool.length) {
-    return choose(subjectPool, random);
+    return context
+      ? chooseAvoiding(subjectPool, house.id, context.usedHousePhrases, random)
+      : choose(subjectPool, random);
   }
 
   const specialPool = HOUSE_ASSOCIATION_NOTES[house.id]?.[domain] ?? HOUSE_ASSOCIATION_NOTES[house.id]?.general ?? [];
   if (specialPool.length) {
-    return choose(specialPool, random);
+    return context
+      ? chooseAvoiding(specialPool, house.id, context.usedHousePhrases, random)
+      : choose(specialPool, random);
   }
 
   return compactAssociationPhrase(
@@ -5025,7 +5242,7 @@ export function buildHouseAssociationSentence(
   random: () => number,
 ): string {
   const house = houseFrom(input);
-  const houseName = house.name === "House House" ? "House" : house.name;
+  const houseName = displayHouseName(house);
   const housePhrase = buildHouseAssociationPhrase(house, subjectId, domain, random);
 
   return sentence(
@@ -5049,7 +5266,7 @@ export function buildOverlayAssociationSentence(input: {
 }): string {
   const card = cardFrom(input.card);
   const house = houseFrom(input.house);
-  const houseName = house.name === "House House" ? "House" : house.name;
+  const houseName = displayHouseName(house);
   const overlayOverride = SUBJECT_OVERLAY_ASSOCIATION_NOTES[input.subjectId]?.[sortedPairKey(card.id, house.id)];
   if (overlayOverride?.length) {
     const overlayPhrase = choose(overlayOverride, input.random);
@@ -5100,17 +5317,22 @@ export function buildPairAssociationSentence(input: {
   }
   const leftKeywords = normalizePairKeywords(naturalJoin(cardA.keywords.slice(0, 2)).toLowerCase());
   const rightKeywords = normalizePairKeywords(naturalJoin(cardB.keywords.slice(0, 2)).toLowerCase());
+  // Avoid "X and Y and A and B" chains when each side already contains "and"
+  const kwJoin = (left: string, right: string): string =>
+    left.includes(" and ") || right.includes(" and ")
+      ? `${left} alongside ${right}`
+      : `${left} and ${right}`;
 
   return sentence(
     choose(
       [
-        `${cardA.name} and ${cardB.name} show ${leftKeywords} and ${rightKeywords} actively shaping each other rather than sitting in separate lanes`,
+        `${cardA.name} and ${cardB.name} show ${kwJoin(leftKeywords, rightKeywords)} actively shaping each other rather than sitting in separate lanes`,
         `Taken together, ${cardA.name} and ${cardB.name} bring ${leftKeywords} into direct contact with ${rightKeywords}, so neither can be read on its own`,
-        `What this pair does is make the relationship between ${leftKeywords} and ${rightKeywords} part of the story itself`,
+        `${cardA.name} and ${cardB.name} place ${kwJoin(leftKeywords, rightKeywords)} in the same frame — and make each harder to ignore`,
         `${cardA.name} and ${cardB.name} bring ${leftKeywords} into active contact with ${rightKeywords}, which is why the reading cannot treat them as separate issues`,
-        `${cardA.name} alongside ${cardB.name} means ${leftKeywords} and ${rightKeywords} are not separate threads — they are already interacting`,
-        `The combination of ${cardA.name} and ${cardB.name} makes ${leftKeywords} and ${rightKeywords} part of the same question`,
-        `${cardA.name} and ${cardB.name} together pull ${leftKeywords} and ${rightKeywords} into the same orbit`,
+        `${cardA.name} alongside ${cardB.name} means ${kwJoin(leftKeywords, rightKeywords)} are not separate threads — they are already interacting`,
+        `The combination of ${cardA.name} and ${cardB.name} makes ${kwJoin(leftKeywords, rightKeywords)} part of the same question`,
+        `${cardA.name} and ${cardB.name} together pull ${kwJoin(leftKeywords, rightKeywords)} into the same orbit`,
       ],
       input.random,
     ),
@@ -5142,24 +5364,42 @@ export function buildActionDirectiveSentence(input: {
   const wherePhrase = fieldWhereMatch?.[1] ?? null;
   const followThroughOverrides = SUBJECT_HOUSE_FOLLOW_THROUGH_OVERRIDES[input.subjectId]?.[house.id] ?? [];
   const hasFollowThroughOverride = followThroughOverrides.length > 0;
+  const isCardEqualsHouse = card.id === house.id;
   const followThroughSentence = hasFollowThroughOverride
     ? choose(followThroughOverrides, input.random)
-    : wherePhrase
-      ? `This is where ${wherePhrase}`
-      : `That keeps the focus on ${housePhrase}`;
+    : isCardEqualsHouse
+      ? choose(
+          [
+            `That is the sharpest signal in this spread`,
+            `When the card and the house name the same thing, the signal concentrates`,
+            `The card and the house point to the same place, which makes it worth trusting`,
+          ],
+          input.random,
+        )
+      : wherePhrase
+        ? `This is where ${wherePhrase}`
+        : choose(
+            [
+              `That keeps the focus on ${housePhrase}`,
+              `That is the thread the rest of the reading leads toward`,
+              `That is where acting first would carry the most weight`,
+              `That is where the reading's weight concentrates most`,
+            ],
+            input.random,
+          );
 
   return sentence(
     choose(
       hasFollowThroughOverride
         ? [
-            `If there is a leverage point here, it sits in ${houseName}: ${actionSentence}. ${followThroughSentence}`,
-            `One useful intervention starts in ${houseName}: ${actionSentence}. ${followThroughSentence}`,
+            `If anything deserves closer attention here, it is ${houseName}: ${actionSentence}. ${followThroughSentence}`,
+            `The thread worth following runs through ${houseName}: ${actionSentence}. ${followThroughSentence}`,
           ]
         : [
-            `Start in ${houseName}: ${actionSentence}. This is where the strain is easiest to address directly`,
-            `${houseName} is the place to act: ${actionSentence}. That should give the situation a steadier base`,
-            `If there is a leverage point here, it sits in ${houseName}: ${actionSentence}. ${followThroughSentence}`,
-            `One useful intervention starts in ${houseName}: ${actionSentence}. ${followThroughSentence}`,
+            `The place most worth returning to is ${houseName}: ${actionSentence}. This is where the reading concentrates most clearly`,
+            `${houseName} is where the reading keeps pointing: ${actionSentence}. ${followThroughSentence}`,
+            `If anything deserves closer attention here, it is ${houseName}: ${actionSentence}. ${followThroughSentence}`,
+            `The thread worth following runs through ${houseName}: ${actionSentence}. ${followThroughSentence}`,
           ],
       input.random,
     ),

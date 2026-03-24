@@ -269,7 +269,7 @@ describe("deep-dive composition", () => {
     const reading = composeReading(state);
     const sectionIds = reading.sections.map((section) => section.id);
 
-    expect(sectionIds).toEqual(["opening-frame", "situation", "pivot", "direction", "key-threads"]);
+    expect(sectionIds).toEqual(["opening-frame", "situation", "pivot", "direction", "between-the-cards", "key-threads"]);
     expect(reading.wordCount).toBeGreaterThanOrEqual(280);
     expect(reading.wordCount).toBeLessThanOrEqual(450);
   });
@@ -298,13 +298,13 @@ describe("deep-dive composition", () => {
     const localCluster = reading.sections.find((section) => section.id === "local-cluster")?.body ?? "";
     const firstSentence = localCluster.split(/(?<=[.!?])\s+/)[0] ?? "";
     const listedRefs = new Set(
-      Array.from(firstSentence.matchAll(/[A-Z][A-Za-z]+(?: [A-Z][A-Za-z]+)? \(\d+\)/g), (match) => match[0]),
+      Array.from(firstSentence.matchAll(/the [A-Z][A-Za-z]+(?: [A-Z][A-Za-z]+)?/g), (match) => match[0]),
     );
     const pairMatch = localCluster.match(
-      /([A-Z][A-Za-z]+(?: [A-Z][A-Za-z]+)? \(\d+\)) with ([A-Z][A-Za-z]+(?: [A-Z][A-Za-z]+)? \(\d+\)) (?:highlights|suggests that|points toward)/,
+      /(the [A-Z][A-Za-z]+(?: [A-Z][A-Za-z]+)?) with (the [A-Z][A-Za-z]+(?: [A-Z][A-Za-z]+)?) (?:highlights|suggests that|points toward)/,
     );
 
-    expect(listedRefs).not.toContain("Key (33)");
+    expect(listedRefs).not.toContain("the Key");
     expect(pairMatch).not.toBeNull();
     expect(listedRefs).toContain(pairMatch?.[1] ?? "");
     expect(listedRefs).toContain(pairMatch?.[2] ?? "");

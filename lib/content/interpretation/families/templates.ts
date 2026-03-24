@@ -43,7 +43,7 @@ export function buildTemplateInterpretationEntries(): InterpretationEntry[] {
         },
         text: {
           primary: sentenceCase(
-            `The ${line === "primary" ? "main" : "secondary"} diagonal shows how ${lineThemeFocus} develops across ${voice.area}`,
+            `The ${line === "primary" ? "main" : "secondary"} diagonal shows ${lineThemeFocus} developing across ${voice.area}`,
           ),
           variants: [
             sentenceCase(

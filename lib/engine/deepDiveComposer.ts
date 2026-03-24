@@ -4,6 +4,7 @@ import { queryInterpretationEntries } from "@/lib/content/interpretation";
 import { getPairMeaning } from "@/lib/content/pairs";
 import type { ThemeId } from "@/lib/content/themes";
 import { inferCounterpartRole } from "@/lib/engine/context";
+import { buildThemeCardSentence, buildThemeSectionBridge, buildCardPairBridge, pickThemeLensPhrase } from "@/lib/engine/themeFraming";
 import { analyzeGrandTableauForDeepDive } from "@/lib/engine/deepDive";
 import { buildGrandTableauLayout, findCardPosition } from "@/lib/engine/gt";
 import { resolvePairMeaningForSubject } from "@/lib/engine/pairSelection";
@@ -14,6 +15,8 @@ import {
   buildHouseAssociationPhrase,
   buildHouseAssociationSentence,
   buildPairAssociationSentence,
+  createReadingContext,
+  type ReadingContext,
 } from "@/lib/engine/narrativeAssociations";
 import { synthesizeGrandTableauNarrative } from "@/lib/engine/tableauSynthesis";
 import { buildThreeCardLayout, getThreeCardLabels } from "@/lib/engine/threeCard";
@@ -69,17 +72,29 @@ function sentence(input: string): string {
 }
 
 function normalizeMeaningForSentenceFrame(input: string): string {
-  const normalized = lowerFirst(cleanSpacing(clause(sanitizeNarrativeText(input))));
+  const raw = lowerFirst(cleanSpacing(clause(sanitizeNarrativeText(input))));
+  // Strip leading punctuation left behind when "In [Subject]," is removed by sanitization
+  const afterLeadingPunct = raw.replace(/^[,;:\s]+/, "");
+  // Strip "in/for [subject phrase], " prefix for subjects not handled by sanitizeNarrativeText (e.g. "in friends & social, ", "for vocation, ")
+  const afterSubjectPrefix = afterLeadingPunct.replace(/^(?:in|for)\s+[^,]{2,50},\s*/i, "");
+  // Strip ". Here, [sentence]" suffix produced by the primary card interpretation template
+  const afterHere = afterSubjectPrefix.replace(/\.\s*here,.*$/i, "").trim();
+  // Strip trailing passive constructions like "is required", "is needed", "is indicated"
+  const normalized = afterHere.replace(/\s+(is|are|was|were)\s+(required|needed|indicated|recommended|necessary|warranted)\s*$/i, "").trim();
   if (!normalized) return "";
   if (
-    /^(choose|set|keep|watch|name|protect|clarify|review|track|listen|speak|pause|move|reframe|allow|hold|act|offer|take|make|prioritize|commit|focus|ask|give|let)\b/i.test(
+    /^(choose|set|keep|watch|name|protect|clarify|review|track|listen|speak|pause|move|reframe|allow|hold|act|offer|take|consider|make|prioritize|commit|focus|ask|give|let|notice)\b/i.test(
       normalized,
     )
   ) {
     return `the need to ${normalized}`;
   }
+  // "[card name] brings X into Y" pattern: extract just X (the themeFocus fragment)
+  // Must check before the phase-where verb list to prevent false matches like "anchor brings career [change] into..."
+  const bringMatch = /^\w+\s+(?:brings|carries)\s+(.+?)\s+into\b/i.exec(normalized);
+  if (bringMatch) return bringMatch[1];
   if (
-    /^(?:[a-z][a-z'-]*\s+){0,5}(?:require|requires|influence|influences|affect|affects|shape|shapes|govern|governs|decide|decides|demand|demands|support|supports|change|changes|reveal|reveals|determine|determines|complicate|complicates|tighten|tightens|deepen|deepens|pull|pulls|keep|keeps|open|opens)\b/i.test(
+    /^(?:[a-z][a-z'-]*\s+){0,5}(?:require|requires|influence|influences|affect|affects|shape|shapes|govern|governs|decide|decides|demand|demands|change|changes|reveal|reveals|determine|determines|complicate|complicates|tighten|tightens|deepen|deepens|pull|pulls|keep|keeps|open|opens)\b/i.test(
       normalized,
     )
   ) {
@@ -100,10 +115,10 @@ function subjectReadingLabel(subjectLabel: string): string {
 
 function cleanSpacing(input: string): string {
   return input
-    .replace(/\s+/g, " ")
-    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/[^\S\n]+/g, " ")
+    .replace(/[^\S\n]*([,.;:!?])/g, "$1")
     .replace(/([,.;:!?])([A-Za-z])/g, "$1 $2")
-    .replace(/\.\s*\./g, ".")
+    .replace(/\.[^\S\n]*\./g, ".")
     .trim();
 }
 
@@ -181,6 +196,11 @@ function interpretiveThread(input: string): string {
   if (/^(your|the other person's|how|what|where|whether|timing|pressure|distance|trust|commitment|clarity|support|documents|roles|professional|family|wellbeing)\b/i.test(lower)) {
     return lower;
   }
+  // "strength can protect if paired with fairness" → "how strength can protect if paired with fairness"
+  // Safe-pass above must come first so "what can X" is not double-prefixed
+  if (/^\w[\w\s]{0,20}\s+(can|will|may|should|must|could|would)\b/i.test(lower)) {
+    return `how ${lower}`;
+  }
   return lower;
 }
 
@@ -189,14 +209,15 @@ function buildDiagonalMovementSentence(
   subjectId: SubjectId,
   domain: Domain,
   random: () => number,
+  context?: ReadingContext,
 ): string {
   if (cardIds.length < 2) return "";
 
   const startThread = normalizeMeaningForSentenceFrame(
-    buildCardAssociationPhrase(cardIds[0], subjectId, domain, random),
+    buildCardAssociationPhrase(cardIds[0], subjectId, domain, random, context),
   );
   const endThread = normalizeMeaningForSentenceFrame(
-    buildCardAssociationPhrase(cardIds[cardIds.length - 1], subjectId, domain, random),
+    buildCardAssociationPhrase(cardIds[cardIds.length - 1], subjectId, domain, random, context),
   );
 
   if (!startThread || !endThread) return "";
@@ -208,8 +229,8 @@ function buildDiagonalMovementSentence(
     choose(
       [
         `Read as a sequence, that line moves from ${startThread} toward ${endThread}`,
-        `Taken as one progression, it starts with ${startThread} and leans toward ${endThread}`,
-        `As a wider arc, it begins with ${startThread} and gradually points toward ${endThread}`,
+        `Taken as one progression, it starts with ${startThread}, then leans toward ${endThread}`,
+        `As a wider arc, it begins with ${startThread}, then gradually points toward ${endThread}`,
       ],
       random,
     ),
@@ -222,14 +243,15 @@ function buildLineMovementSentence(
   domain: Domain,
   random: () => number,
   axis: "row" | "column",
+  context?: ReadingContext,
 ): string {
   if (cardIds.length < 2) return "";
 
   const startThread = normalizeMeaningForSentenceFrame(
-    buildCardAssociationPhrase(cardIds[0], subjectId, domain, random),
+    buildCardAssociationPhrase(cardIds[0], subjectId, domain, random, context),
   );
   const endThread = normalizeMeaningForSentenceFrame(
-    buildCardAssociationPhrase(cardIds[cardIds.length - 1], subjectId, domain, random),
+    buildCardAssociationPhrase(cardIds[cardIds.length - 1], subjectId, domain, random, context),
   );
 
   if (!startThread || !endThread) return "";
@@ -363,7 +385,7 @@ function toPairProse(input: string): string {
     .replace(/^this\s+pair\s+/iu, "")
     .replace(/\bthis\s+pair\s+acts\s+as\s+/iu, "")
     .replace(
-      /^(emphasizes|suggests|asks|indicates|points|signals|highlights|warns|marks|brings|calls|describes|supports|places|favors|combines|links|confirms|shows|reveals)\s+/iu,
+      /^(emphasizes|suggests|asks|indicates|points|signals|highlights|warns|marks|brings|calls|describes|supports|places|favors|combines|links|confirms|shows|reveals|blends)\s+/iu,
       "",
     )
     .replace(/;/g, ",")
@@ -552,7 +574,9 @@ function buildClusterLinkSentence(
 function renderDirectionList(
   values: Array<{ label: string; cardId: number }>,
 ): string {
-  return values.map((item) => `${item.label} ${cardRef(item.cardId)}`).join(", ");
+  const items = values.map((item) => `${cardRef(item.cardId)} to the ${item.label}`);
+  if (items.length <= 1) return items[0] ?? "";
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
 }
 
 function chebyshevDistanceFromSignificator(
@@ -584,23 +608,78 @@ function dominantKeywords(cardIds: number[]): string[] {
 
 function normalizeAtmospherePhrase(subjectId: SubjectId, phrase: string): string {
   const normalized = phrase
+    // Rider
+    .replace(/^news and arrival$/i, "movement and fresh signals")
+    // Clover
+    .replace(/^luck and window$/i, "brief openings and usable chances")
+    // Ship
+    .replace(/^journey and trade$/i, "movement and exchange")
+    // House
+    .replace(/^home and structure$/i, "home, structure, and steadiness")
+    // Tree
+    .replace(/^health and roots$/i, "slow growth and deep foundations")
+    // Clouds
+    .replace(/^uncertainty and fog$/i, "unclear conditions and shifting ground")
+    // Snake
+    .replace(/^strategy and complexity$/i, "strategic depth and layered complexity")
+    // Coffin
+    .replace(/^ending and rest$/i, "closure and rest")
+    // Bouquet
+    .replace(/^gift and charm$/i, "warmth and goodwill")
+    // Scythe
+    .replace(/^cut and decision$/i, "sharp choices and decisive pressure")
+    // Whip
+    .replace(/^repetition and tension$/i, "repeated friction and pressure")
+    // Birds
+    .replace(/^dialogue and nerves$/i, "active conversation and underlying tension")
+    // Child
+    .replace(/^beginning and small$/i, "small beginnings and first movement")
+    // Fox
+    .replace(/^caution and craft$/i, "caution and calculation")
+    // Bear
+    .replace(/^power and resources$/i, "resource authority and protective weight")
+    // Stars
+    .replace(/^guidance and clarity$/i, "clear guidance and long-range direction")
     .replace(/^clarity and success$/i, "clearer signal and momentum")
     .replace(/^clarity and visible progress$/i, "clearer visible traction")
-    .replace(/^erosion and stress$/i, "strain and attrition")
-    .replace(/^repetition and tension$/i, "repeated friction and pressure")
-    .replace(/^journey and trade$/i, "movement and exchange")
-    .replace(/^caution and craft$/i, "caution and calculation")
+    // Stork
+    .replace(/^change and upgrade$/i, "active change and forward improvement")
+    // Dog
+    .replace(/^loyalty and ally$/i, "reliable loyalty and trusted support")
+    // Tower
+    .replace(/^institution and distance$/i, "formal structure and maintained distance")
+    // Mountain
+    .replace(/^obstacle and delay$/i, "real obstacles and necessary patience")
+    // Crossroads
     .replace(/^choice and branch$/i, "choice and direction")
-    .replace(/^gift and charm$/i, "warmth and goodwill")
+    // Mice
+    .replace(/^erosion and stress$/i, "strain and attrition")
+    // Heart
     .replace(/^love and values$/i, "genuine care and shared values")
+    // Ring
+    .replace(/^commitment and contract$/i, "commitment and formal terms")
+    // Book
     .replace(/^knowledge and secrecy$/i, "private knowledge and hidden factors")
-    .replace(/^news and arrival$/i, "movement and fresh signals")
-    .replace(/^luck and window$/i, "brief openings and usable chances")
-    .replace(/^home and structure$/i, "home, structure, and steadiness")
-    .replace(/^ending and rest$/i, "closure and rest")
-    .replace(/^beginning and small$/i, "small beginnings and first movement")
+    // Letter
+    .replace(/^document and message$/i, "written records and clear communication")
+    // Counterpart
+    .replace(/^other and mirror$/i, "the other person's perspective and what reflects back")
+    // Querent
+    .replace(/^self and identity$/i, "your own role and how it is shaping the field")
+    // Lily
+    .replace(/^maturity and peace$/i, "principled calm and long-term judgment")
+    // Sun
+    .replace(/^success and vitality$/i, "forward momentum and returning confidence")
+    // Moon
     .replace(/^recognition and emotion$/i, "visibility and emotional tone")
-    .replace(/^commitment and contract$/i, "commitment and formal terms");
+    // Key
+    .replace(/^solution and certainty$/i, "workable answers and clearer signal")
+    // Fish
+    .replace(/^money and flow$/i, "resource flow and financial movement")
+    // Anchor
+    .replace(/^stability and career$/i, "career durability and long-term steadiness")
+    // Cross
+    .replace(/^burden and meaning$/i, "meaningful responsibility and what it demands");
   if (/^public and network$/i.test(normalized)) return "public life and networks";
   if (subjectId !== "pets") return normalized;
 
@@ -610,7 +689,8 @@ function normalizeAtmospherePhrase(subjectId: SubjectId, phrase: string): string
 }
 
 function displayHouseName(name: string): string {
-  return /^House House$/i.test(name) ? "House" : name;
+  if (name === "House House") return "Foundation House";
+  return name;
 }
 
 function pickInterpretationText(input: {
@@ -686,16 +766,17 @@ function buildArcBullet(
   subjectId: SubjectId,
   domain: Domain,
   random: () => number,
+  context?: ReadingContext,
 ): string {
   if (cardIds.length < 2) {
     return `The wider arc settles around ${formatCardList(cardIds, 4)}`;
   }
 
   const startThread = normalizeMeaningForSentenceFrame(
-    buildCardAssociationPhrase(cardIds[0], subjectId, domain, random),
+    buildCardAssociationPhrase(cardIds[0], subjectId, domain, random, context),
   );
   const endThread = normalizeMeaningForSentenceFrame(
-    buildCardAssociationPhrase(cardIds[cardIds.length - 1], subjectId, domain, random),
+    buildCardAssociationPhrase(cardIds[cardIds.length - 1], subjectId, domain, random, context),
   );
 
   if (!startThread || !endThread) {
@@ -710,10 +791,17 @@ function buildArcBullet(
     [
       `The wider arc moves from ${startThread} toward ${endThread}`,
       `The longer movement runs from ${startThread} toward ${endThread}`,
-      `The wider pattern starts in ${startThread} and leans toward ${endThread}`,
+      `The wider pattern starts in ${startThread}, then leans toward ${endThread}`,
     ],
     random,
   );
+}
+
+type TrimQueueEntry = { sectionId: string; sentence: string };
+
+function removeSentenceFromBody(body: string, target: string): string {
+  const escaped = target.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return cleanSpacing(body.replace(new RegExp(`\\s*${escaped}\\s*`), " ").trim());
 }
 
 function enforceDeepDiveTargets(
@@ -722,6 +810,7 @@ function enforceDeepDiveTargets(
   conclusion: string,
   spreadType: "grand-tableau" | "three-card",
   supplementalSentences: string[] = [],
+  trimQueue: TrimQueueEntry[] = [],
 ): { intro: string; sections: NarrativeSection[]; conclusion: string; wordCount: number } {
   const minWords = spreadType === "grand-tableau" ? 650 : 280;
   const maxWords = spreadType === "grand-tableau" ? 1100 : 450;
@@ -742,24 +831,46 @@ function enforceDeepDiveTargets(
     supplementIndex += 1;
   }
 
+  let trimQueueIndex = 0;
   let guard = 0;
   while (wordCount > maxWords && guard < 48) {
-    const longestIndex = sections.reduce((best, section, index, list) => (section.body.length > list[best].body.length ? index : best), 0);
+    guard += 1;
+
+    // Work through the priority trim queue first
+    if (trimQueueIndex < trimQueue.length) {
+      const entry = trimQueue[trimQueueIndex++];
+      const sectionIndex = sections.findIndex((s) => s.id === entry.sectionId);
+      if (sectionIndex !== -1) {
+        const section = sections[sectionIndex];
+        const newBody = removeSentenceFromBody(section.body, entry.sentence);
+        if (newBody !== section.body) {
+          sections[sectionIndex] = { ...section, body: newBody };
+          wordCount = countDraftWords(intro, sections, conclusion);
+        }
+      }
+      continue;
+    }
+
+    // Fallback: trim last sentence from longest section
+    const longestIndex = sections.reduce(
+      (best, section, index, list) => (section.body.length > list[best].body.length ? index : best),
+      0,
+    );
     const longest = sections[longestIndex];
     const sentences = longest.body
       .split(/(?<=[.!?])\s+/)
       .map((part) => part.trim())
       .filter(Boolean);
     if (sentences.length > 2) {
+      const separator = longest.body.includes("\n") ? "\n" : " ";
       sections[longestIndex] = {
         ...longest,
-        body: sentences.slice(0, sentences.length - 1).join(" "),
+        body: sentences.slice(0, sentences.length - 1).join(separator),
       };
     } else {
       break;
     }
     wordCount = countDraftWords(intro, sections, conclusion);
-    guard += 1;
   }
 
   return {
@@ -772,6 +883,7 @@ function enforceDeepDiveTargets(
 
 function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const { state, subjectId, subjectLabel, domain, resolvedThemeId, resolvedThemeLabel, random } = input;
+  const phraseContext: ReadingContext = createReadingContext();
   const gtLayout: GTLayout = state.setup.gtLayout ?? "4x9";
   const layout = buildGrandTableauLayout(state.layout, gtLayout);
   const significatorCardId = inferSignificatorCard(layout, state.setup.significatorMode);
@@ -878,7 +990,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const secondaryPair = bestPairFromPositions(secondaryZone.cards, subjectId);
   const secondaryZoneCenterThread = secondaryZoneCenterCardId
     ? interpretiveThread(
-        buildCardAssociationPhrase(secondaryZoneCenterCardId, subjectId, meaningDomain, random),
+        buildCardAssociationPhrase(secondaryZoneCenterCardId, subjectId, meaningDomain, random, phraseContext),
       )
     : "";
   const secondaryZoneDisplayCards =
@@ -901,6 +1013,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       : dominantWords[0] ?? "quiet movement";
   const atmospherePhrase = normalizeAtmospherePhrase(subjectId, rawAtmospherePhrase);
   const themePhrase = resolvedThemeLabel ? resolvedThemeLabel.toLowerCase() : "context-led";
+  const themeLensPhrase = pickThemeLensPhrase(resolvedThemeId, random);
   const normalizedQuestion = normalizeQuestionText(state.setup.question);
   const centerLead = choose(["At the center", "At the heart of the tableau", "In the middle of the spread"], random);
   const nearLead = choose(["Close by", "Within one step of the center", "Just around the center"], random);
@@ -929,7 +1042,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const backgroundLead = choose(["In the background", "Under the surface", "Further out in the field"], random);
   let strongestHouseBullet: string | null = null;
   const centerCardThread = interpretiveThread(
-    buildCardAssociationPhrase(significatorCard, subjectId, meaningDomain, random),
+    buildCardAssociationPhrase(significatorCard, subjectId, meaningDomain, random, phraseContext),
   );
   const centerSignificatorThread =
     significatorCard.id === 29
@@ -1019,7 +1132,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               [
                 "your side of the matter matters because the process is responding to what you can actually evidence, clarify, or submit",
                 "the reading keeps returning to what your side can prove, document, or carry through the process",
-                "your position in the matter matters because the next stage depends on what you can substantiate, not just what you suspect",
+                "your position here matters because the next stage depends on what you can substantiate, not just what you suspect",
               ],
               random,
             )
@@ -1071,7 +1184,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
         : choose(
             [
               "your own stance is setting the tone more than first appearances suggest",
-              "your role in the bond matters because your boundaries and availability are shaping the pace",
+              "your role in the bond matters — your boundaries and availability are shaping the pace",
               "the reading keeps returning to what your own position is inviting, allowing, or postponing",
             ],
             random,
@@ -1134,6 +1247,25 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
         ),
   );
 
+  // Capture boilerplate sentences for the GT trim queue.
+  // None of these call random(), so hoisting them is safe — no seeding change.
+  const gtWiderRowBoilerplate = sentence(
+    `Across the center row, ${formatCardList(analysis.rowLine.map((p) => p.cardId), 6)} show that pacing matters more than force`,
+  );
+  const gtWiderColBoilerplate = sentence(
+    `The vertical line through ${formatCardList(analysis.columnLine.map((p) => p.cardId), 4)} adds a quieter timing signal, where outcomes settle after the visible turning point`,
+  );
+  const gtImmediateRowBoilerplate = rowNeighbors.length
+    ? sentence(
+        `Across the same row, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} show how immediate choices ripple into social or practical consequences`,
+      )
+    : "";
+  const gtImmediateColBoilerplate = columnNeighbors.length
+    ? sentence(
+        `On the vertical axis, ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} describe what is already maturing beneath the surface`,
+      )
+    : "";
+
   const sections: NarrativeSection[] = [
     {
       id: "opening-frame",
@@ -1144,9 +1276,9 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           ? sentence(
               choose(
                 [
-                  `Your question "${normalizedQuestion}" enters ${withIndefiniteArticle(themePhrase)} field`,
-                  `"${normalizedQuestion}" lands in ${withIndefiniteArticle(themePhrase)} field here`,
-                  `Your question "${normalizedQuestion}" is moving through ${withIndefiniteArticle(themePhrase)} field`,
+                  `Your question "${normalizedQuestion}" enters a field ${themeLensPhrase}`,
+                  `"${normalizedQuestion}" lands in a field ${themeLensPhrase}`,
+                  `Your question "${normalizedQuestion}" is read through a field ${themeLensPhrase}`,
                 ],
                 random,
               ),
@@ -1208,7 +1340,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           : `${nearLead}, the field is sparse, so weight falls on only a few immediate influences`,
       )} ${
         diagonalNeighbors.length
-          ? sentence(`The diagonal touches at ${formatCardList(diagonalNeighbors, 4)} add nuance to what looks simple at first glance`)
+          ? sentence(`The diagonal neighbors — ${formatCardList(diagonalNeighbors, 4)} — add nuance to what looks simple at first glance`)
           : ""
       } ${proximityText ? buildProximityInterpretationSentence(proximityText) : ""} ${
         cardinalPair
@@ -1218,25 +1350,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               random,
             )
           : ""
-      } ${
-        rowNeighbors.length
-          ? sentence(
-              `Across the same row, ${formatCardList(
-                rowNeighbors.map((placement) => placement.cardId),
-                5,
-              )} show how immediate choices ripple into social or practical consequences`,
-            )
-          : ""
-      } ${rowNeighbors.length ? buildLineMovementSentence(analysis.rowLine.map((placement) => placement.cardId), subjectId, meaningDomain, random, "row") : ""} ${
-        columnNeighbors.length
-          ? sentence(
-              `On the vertical axis, ${formatCardList(
-                columnNeighbors.map((placement) => placement.cardId),
-                3,
-              )} describe what is already maturing beneath the surface`,
-            )
-          : ""
-      } ${columnNeighbors.length ? buildLineMovementSentence(analysis.columnLine.map((placement) => placement.cardId), subjectId, meaningDomain, random, "column") : ""}`,
+      } ${gtImmediateRowBoilerplate} ${rowNeighbors.length ? buildLineMovementSentence(analysis.rowLine.map((placement) => placement.cardId), subjectId, meaningDomain, random, "row", phraseContext) : ""} ${gtImmediateColBoilerplate} ${columnNeighbors.length ? buildLineMovementSentence(analysis.columnLine.map((placement) => placement.cardId), subjectId, meaningDomain, random, "column", phraseContext) : ""}`,
     },
   ];
 
@@ -1277,14 +1391,23 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           ],
           random,
         ),
-      )} ${centerHouseSentence} ${
+      )} ${sentence(
+        choose(
+          [
+            `That framing sets the context for the overlay entries that follow`,
+            `That context carries into how each card interprets its house`,
+            `That same framing runs through the houses that follow`,
+          ],
+          random,
+        ),
+      )} ${
         centerCardThread
           ? sentence(
               choose(
                 [
-                  `In practice, this keeps attention on ${centerCardThread}`,
-                  `Practically, the focus stays on ${centerCardThread}`,
-                  `In lived terms, the emphasis stays on ${centerCardThread}`,
+                  `In practice, this keeps the reading close to that same central thread`,
+                  `Practically, the focus stays with what was named at the center`,
+                  `In practice, that thread keeps this section oriented toward the same core concern`,
                 ],
                 random,
               ),
@@ -1295,8 +1418,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
         const house = getHouseMeaning(placement.houseId);
         const card = getCardMeaning(placement.cardId);
         const houseName = displayHouseName(house.name);
-        const houseOverlay = lowerFirst(buildHouseAssociationPhrase(house, subjectId, meaningDomain, random));
-        const cardThread = interpretiveThread(buildCardAssociationPhrase(card, subjectId, meaningDomain, random));
+        const houseOverlay = lowerFirst(buildHouseAssociationPhrase(house, subjectId, meaningDomain, random, phraseContext));
+        const cardThread = interpretiveThread(buildCardAssociationPhrase(card, subjectId, meaningDomain, random, phraseContext));
         if (placement === houseTargets[0]) {
           strongestHouseBullet = `${houseName} with ${cardRef(placement.cardId)} highlights ${houseOverlay}`;
         }
@@ -1317,7 +1440,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                     `It also points to ${cardThread}`,
                     `${card.name} here keeps returning to ${cardThread}`,
                     `That matters because it brings ${cardThread} into the main story`,
-                    `This pulls ${cardThread} directly into the center of the story`,
+                    `This pulls ${cardThread} into the center of the story`,
                     `That keeps ${cardThread} close to what is actually unfolding`,
                   ],
                   random,
@@ -1344,7 +1467,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       body: `${sentence(
         `${clusterLead}: ${formatCardList(renderedClusterCardIds, 7)}`,
       )} ${
-        clusterPair
+        clusterPair && clusterPairKey !== cardinalPairKey
           ? buildPairPointSentence(
               choose(
                 [
@@ -1382,6 +1505,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                       subjectId,
                       meaningDomain,
                       random,
+                      phraseContext,
                     ),
                   )}`,
                   `It keeps circling back to ${lowerFirst(
@@ -1390,6 +1514,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                       subjectId,
                       meaningDomain,
                       random,
+                      phraseContext,
                     ),
                   )}`,
                   `That nearest group keeps pulling attention back to ${lowerFirst(
@@ -1398,6 +1523,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                       subjectId,
                       meaningDomain,
                       random,
+                      phraseContext,
                     ),
                   )}`,
                 ],
@@ -1413,11 +1539,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       technique: "diagonal",
       body: `${sentence(
         `${widerLead} ${formatCardList(diagonalLine, 7)}, where early signals echo into later positions`,
-      )} ${buildDiagonalMovementSentence(diagonalLine, subjectId, meaningDomain, random)} ${sentence(
-        `Across the center row, ${formatCardList(analysis.rowLine.map((placement) => placement.cardId), 6)} show that pacing matters more than force`,
-      )} ${sentence(
-        `The vertical line through ${formatCardList(analysis.columnLine.map((placement) => placement.cardId), 4)} adds a quieter timing signal, where outcomes settle after the visible turning point`,
-      )} ${
+      )} ${buildDiagonalMovementSentence(diagonalLine, subjectId, meaningDomain, random, phraseContext)} ${gtWiderRowBoilerplate} ${gtWiderColBoilerplate} ${
         analysis.mirrors.rowPairs[0]
           ? sentence(
               `${cardRef(analysis.mirrors.rowPairs[0][0].cardId)} mirrored with ${cardRef(
@@ -1486,13 +1608,13 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               choose(
                 [
                   `${cardRef(secondaryZone.cards[0])} carries an underlying note of ${lowerFirst(
-                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random)),
+                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
                   )}`,
                   `${cardRef(secondaryZone.cards[0])} keeps a quieter note of ${lowerFirst(
-                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random)),
+                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
                   )}`,
                   `${cardRef(secondaryZone.cards[0])} leaves a quieter trace of ${lowerFirst(
-                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random)),
+                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
                   )}`,
                 ],
                 random,
@@ -1586,7 +1708,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     tableauSynthesis.pressureBullet
       ? `${tableauSynthesis.pressureBullet[0].toUpperCase()}${tableauSynthesis.pressureBullet.slice(1)}`
       : `${secondaryZone.label} carries the background pressure`,
-    buildArcBullet(diagonalLine, subjectId, meaningDomain, random),
+    buildArcBullet(diagonalLine, subjectId, meaningDomain, random, phraseContext),
     gtLayout === "4x8+4" && analysis.cartoucheCards.length === 4
       ? `Cartouche line ${formatCardList(analysis.cartoucheCards.map((placement) => placement.cardId), 4)} frames the end-state`
       : state.setup.includeHouses && strongestHouseBullet
@@ -1595,21 +1717,22 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     `Most momentum sits in ${quadrantLabel}`,
   ];
 
+  const gtThemeBridge = buildThemeSectionBridge(resolvedThemeId, random);
   sections.push({
     id: "key-threads",
     title: "Key Threads",
     technique: "synthesis",
-    body: buildKeyThreadBullets(keyThreadLines),
+    body: [buildKeyThreadBullets(keyThreadLines), gtThemeBridge].filter(Boolean).join("\n"),
   });
 
   const conclusionActionCard =
     significatorCard.id === 28 || significatorCard.id === 29 ? getCardMeaning(significatorHouse.id) : significatorCard;
   const conclusionBridge = choose(
     [
-      "The spread points to one clear place to start.",
-      "There is a concrete place to act from here.",
-      "The cards suggest a practical first step.",
-      "That picture leaves one useful point of entry.",
+      "The spread points to one place worth reflecting on first.",
+      "There is a practical thread worth following through.",
+      "The cards suggest one place where a direct response would land first.",
+      "That picture leaves one thread that concentrates the reading more than the others.",
     ],
     random,
   );
@@ -1647,7 +1770,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       : "",
     rowNeighbors[0]
       ? `${cardRef(rowNeighbors[0].cardId)} close on the row keeps pressing this point: ${normalizeCardThread(
-          buildCardAssociationPhrase(rowNeighbors[0].cardId, subjectId, meaningDomain, random),
+          buildCardAssociationPhrase(rowNeighbors[0].cardId, subjectId, meaningDomain, random, phraseContext),
         )}`
       : "",
     rowNeighbors[1]
@@ -1677,7 +1800,22 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       : "",
   ].filter(Boolean);
 
-  const normalized = enforceDeepDiveTargets(intro, sections, conclusion, "grand-tableau", supplemental);
+  // The secondary-zone boilerplate is one of three choose() variants — add all three.
+  // removeSentenceFromBody silently no-ops on the two that don't appear in the body.
+  const gtTrimQueue: TrimQueueEntry[] = [
+    // wider-thread: most generic sentences first
+    { sectionId: "wider-thread", sentence: gtWiderColBoilerplate },
+    { sectionId: "wider-thread", sentence: gtWiderRowBoilerplate },
+    // secondary-zone: any of the three boilerplate variants
+    { sectionId: "secondary-zone", sentence: sentence("What gathers there is less immediate, but it quietly sets the conditions under which your next choices will land") },
+    { sectionId: "secondary-zone", sentence: sentence("That zone is not the loudest part yet, but it is already setting the terms your next choices will meet") },
+    { sectionId: "secondary-zone", sentence: sentence("It is not foreground pressure yet, but it is already shaping the conditions your next steps will enter") },
+    // immediate-surroundings: conditional — empty strings are filtered by the enforcer no-op check
+    ...(gtImmediateColBoilerplate ? [{ sectionId: "immediate-surroundings", sentence: gtImmediateColBoilerplate }] : []),
+    ...(gtImmediateRowBoilerplate ? [{ sectionId: "immediate-surroundings", sentence: gtImmediateRowBoilerplate }] : []),
+  ];
+
+  const normalized = enforceDeepDiveTargets(intro, sections, conclusion, "grand-tableau", supplemental, gtTrimQueue);
 
   return {
     intro: normalized.intro,
@@ -1725,9 +1863,38 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       themeIds,
       usedPhrases,
     }) ?? sentence(cards[2].domainVariants[domain]);
-  const firstThread = normalizeMeaningForSentenceFrame(firstText);
-  const secondThread = normalizeMeaningForSentenceFrame(secondText);
-  const thirdThread = normalizeMeaningForSentenceFrame(thirdText);
+  const resolveThread = (raw: string, alt1: string, alt2: string): string => {
+    // Phrases shorter than 5 words, or containing " or " (raw theme label joins like "ending or separation"),
+    // are label extractions — fall back to richer card-native text.
+    const isUsable = (s: string) => {
+      if (s.split(/\s+/).filter(Boolean).length < 5) return false;
+      if (/ or /i.test(s)) return false;
+      // Pure "word word and word word" theme-label pairs have no verb — not usable as prose
+      if (/^[^\s]+ [^\s]+ and [^\s]+ [^\s]+$/i.test(s)) return false;
+      return true;
+    };
+    if (isUsable(raw)) return raw;
+    const n1 = normalizeMeaningForSentenceFrame(alt1);
+    if (isUsable(n1)) return n1;
+    const n2 = normalizeMeaningForSentenceFrame(alt2);
+    if (isUsable(n2)) return n2;
+    return raw;
+  };
+  const firstThread = resolveThread(
+    normalizeMeaningForSentenceFrame(firstText),
+    sentence(cards[0].domainVariants[domain]),
+    sentence(cards[0].coreMeaning),
+  );
+  const secondThread = resolveThread(
+    normalizeMeaningForSentenceFrame(secondText),
+    sentence(cards[1].coreMeaning),
+    sentence(cards[1].domainVariants[domain]),
+  );
+  const thirdThread = resolveThread(
+    normalizeMeaningForSentenceFrame(thirdText),
+    sentence(cards[2].domainVariants[domain]),
+    sentence(cards[2].coreMeaning),
+  );
 
   const strongestPair = bestPairFromPositions(cards.map((card) => card.id), subjectId);
   const pairText =
@@ -1753,6 +1920,15 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     ),
   );
 
+  // Capture sentences that will be used in section bodies AND the trim queue.
+  // Boilerplate is trimmed first (highest priority), then association sentences (lower priority).
+  const situationAssoc = buildCardAssociationSentence(cards[0], subjectId, domain, random);
+  const pivotAssoc = buildCardAssociationSentence(cards[1], subjectId, domain, random);
+  const directionAssoc = buildCardAssociationSentence(cards[2], subjectId, domain, random);
+  const situationBoilerplate = sentence("This first card shows where things already stand before any adjustment is made");
+  const pivotBoilerplate = sentence("This is the hinge point in the reading, where one precise response can redirect the whole arc");
+  const directionBoilerplate = sentence("If the middle card is handled cleanly, this direction tends to feel steadier and more coherent");
+
   const sections: NarrativeSection[] = [
     {
       id: "opening-frame",
@@ -1770,43 +1946,31 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       id: "situation",
       title: "Situation",
       technique: "timeline",
-      body: `${sentence(`${labels[0]} begins with ${cardRef(cards[0].id)}, setting the stage with ${firstThread}`)} ${buildCardAssociationSentence(
-        cards[0],
-        subjectId,
-        domain,
-        random,
-      )} ${sentence(
-        `This first card shows where things already stand before any adjustment is made`,
-      )}`,
+      body: [
+        `${sentence(`${labels[0]} begins with ${cardRef(cards[0].id)}${firstThread ? `: ${firstThread[0].toUpperCase()}${firstThread.slice(1)}` : `, establishing the opening conditions`}`)} ${situationAssoc} ${situationBoilerplate}`,
+        buildThemeCardSentence(resolvedThemeId, cards[0].id, cards[0].name, "situation", random),
+      ].filter(Boolean).join(" "),
     },
     {
       id: "pivot",
       title: "Pivot",
       technique: "timeline",
-      body: `${sentence(`${labels[1]} turns on ${cardRef(cards[1].id)}, bringing ${secondThread} to the point where the reading can turn`)} ${buildCardAssociationSentence(
-        cards[1],
-        subjectId,
-        domain,
-        random,
-      )} ${sentence(
-        `This is the hinge point in the reading, where one precise response can redirect the whole arc`,
-      )}`,
+      body: [
+        `${sentence(`${labels[1]} turns on ${cardRef(cards[1].id)}${secondThread ? `: ${secondThread[0].toUpperCase()}${secondThread.slice(1)}` : `, and this is where the reading can turn`}`)} ${pivotAssoc} ${pivotBoilerplate}`,
+        buildThemeCardSentence(resolvedThemeId, cards[1].id, cards[1].name, "pivot", random),
+      ].filter(Boolean).join(" "),
     },
     {
       id: "direction",
       title: "Direction",
       technique: "timeline",
-      body: `${sentence(`${labels[2]} closes with ${cardRef(cards[2].id)}, opening toward ${thirdThread}`)} ${buildCardAssociationSentence(
-        cards[2],
-        subjectId,
-        domain,
-        random,
-      )} ${sentence(
-        `If the middle card is handled cleanly, this direction tends to feel steadier and more coherent`,
-      )} ${
+      body: [
+        `${sentence(`${labels[2]} closes with ${cardRef(cards[2].id)}${thirdThread ? `: ${thirdThread[0].toUpperCase()}${thirdThread.slice(1)}` : `, carrying the sequence into its likely direction`}`)} ${directionAssoc}`,
+        buildThemeCardSentence(resolvedThemeId, cards[2].id, cards[2].name, "direction", random),
+        `${directionBoilerplate} ${
         pairText
           ? `${sentence(
-              `The strongest link in the spread is ${cardRef(strongestPair!.cardA)} with ${cardRef(strongestPair!.cardB)}, and it speaks of ${lowerFirst(clause(pairText))}`,
+              `The strongest link in the spread is ${cardRef(strongestPair!.cardA)} with ${cardRef(strongestPair!.cardB)}: ${toPairMeaningClause(pairText)}`,
             )} ${buildPairAssociationSentence({
               cardA: strongestPair!.cardA,
               cardB: strongestPair!.cardB,
@@ -1816,7 +1980,20 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
             })}`
           : ""
       }`,
+      ].filter(Boolean).join(" "),
     },
+    ...((() => {
+      const bridge01 = buildCardPairBridge(cards[0].id, cards[1].id, cards[0].name, cards[1].name, random);
+      const bridge12 = buildCardPairBridge(cards[1].id, cards[2].id, cards[1].name, cards[2].name, random);
+      const body = [bridge01, bridge12].filter(Boolean).join(" ");
+      if (!body) return [];
+      return [{
+        id: "between-the-cards",
+        title: "Between the Cards",
+        technique: "synthesis" as const,
+        body,
+      }];
+    })()),
     {
       id: "key-threads",
       title: "Key Threads",
@@ -1824,7 +2001,7 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       body: buildKeyThreadBullets([
         `${cardRef(cards[0].id)} sets the opening tone`,
         `${cardRef(cards[1].id)} marks the central turning point`,
-        `${cardRef(cards[2].id)} shows where momentum is heading`,
+        `${cardRef(cards[2].id)} marks where momentum is heading`,
         strongestPair
           ? `${cardRef(strongestPair.cardA)} with ${cardRef(strongestPair.cardB)} carries the strongest shared current`
           : "The strongest movement comes through the sequence rather than one dominant pair",
@@ -1841,19 +2018,15 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       ],
       random,
     ),
-  )} ${buildCardAssociationSentence(cards[1], subjectId, domain, random)} ${
-    strongestPair
-      ? sentence(`${cardRef(strongestPair.cardA)} with ${cardRef(strongestPair.cardB)} keeps reinforcing ${toPairMeaningClause(pairText ?? strongestPair.prose)}`)
-      : ""
-  } ${(() => {
-    const pivotAction = `${cards[1].action[0].toUpperCase()}${cards[1].action.slice(1)}`;
+  )} ${(() => {
+    const pivotAction = cards[1].action;
     const directionRef = cardRef(cards[2].id);
     return sentence(choose(
       [
-        `${pivotAction}, and ${directionRef} will start to make sense in practice rather than theory`,
-        `${pivotAction}; that is what gives ${directionRef} room to become real`,
-        `${pivotAction} — then ${directionRef} stops being a possibility and becomes a direction`,
-        `${pivotAction}, and ${directionRef} will stop feeling like potential and start feeling like something you can actually move toward`,
+        `When that means ${pivotAction}, ${directionRef} tends to start making sense in practice rather than theory`,
+        `The question worth sitting with is what it would mean to ${pivotAction} — that is what gives ${directionRef} room to become real`,
+        `If the invitation is to ${pivotAction}, then ${directionRef} stops being a possibility and becomes a direction`,
+        `The reading keeps returning to ${pivotAction} as the thread — and ${directionRef} is what that can open toward`,
       ],
       random,
     ));
@@ -1868,7 +2041,18 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     `${cardRef(cards[0].id)} and ${cardRef(cards[2].id)} suggest that the ending can settle if the middle turn is handled deliberately`,
   ].filter(Boolean);
 
-  const normalized = enforceDeepDiveTargets(intro, sections, conclusion, "three-card", supplemental);
+  const trimQueue: TrimQueueEntry[] = [
+    // Boilerplate first — these are safe to cut and the reading still makes sense without them
+    { sectionId: "direction", sentence: directionBoilerplate },
+    { sectionId: "pivot", sentence: pivotBoilerplate },
+    { sectionId: "situation", sentence: situationBoilerplate },
+    // Association sentences next — useful but echoing the thread content
+    { sectionId: "direction", sentence: directionAssoc },
+    { sectionId: "pivot", sentence: pivotAssoc },
+    { sectionId: "situation", sentence: situationAssoc },
+  ];
+
+  const normalized = enforceDeepDiveTargets(intro, sections, conclusion, "three-card", supplemental, trimQueue);
 
   return {
     intro: normalized.intro,

@@ -100,7 +100,7 @@ function buildDefaultCardCopy(
   secondaryKeyword: string,
 ): CardInterpretationCopy {
   return {
-    primary: `In ${subject.displayLabel}, ${card.name} brings ${themeFocus} into ${voice.area} through ${domainLine}`,
+    primary: `In ${subject.displayLabel}, ${card.name} brings ${themeFocus} into ${voice.area}. Here, ${domainLine}`,
     variants: [
       `${card.name} keeps attention on ${card.keywords[0]} and ${secondaryKeyword} in ${voice.area}, where ${voice.pressure} matters more than appearances`,
       `${card.name} works best here when you ${card.action}, while staying aware of ${card.caution.toLowerCase()}`,

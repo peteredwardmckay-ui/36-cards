@@ -296,13 +296,15 @@ export function SpreadGrid({
             <p className="mb-2 text-center text-[10px] uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">
               Cartouche
             </p>
-            <div
-              className="gt-grid relative"
-              style={{
-                gridTemplateColumns: `repeat(${cartouchePlacements.length}, minmax(0, 1fr))`,
-              }}
-            >
-              {cartouchePlacements.map((placement) => renderGrandTableauCard(placement.position, placement.cardId))}
+            <div style={{ width: `${(cartouchePlacements.length / mainDimensions.cols) * 100}%`, margin: "0 auto" }}>
+              <div
+                className="gt-grid relative"
+                style={{
+                  gridTemplateColumns: `repeat(${cartouchePlacements.length}, minmax(0, 1fr))`,
+                }}
+              >
+                {cartouchePlacements.map((placement) => renderGrandTableauCard(placement.position, placement.cardId))}
+              </div>
             </div>
           </div>
         ) : null}

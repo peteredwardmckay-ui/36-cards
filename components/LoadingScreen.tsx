@@ -44,7 +44,7 @@ export function LoadingScreen({ mode = "transient" }: LoadingScreenProps) {
             alt="36 Cards"
             width={180}
             height={180}
-            className="h-auto w-36 object-contain sm:w-44 [mix-blend-mode:multiply]"
+            className="brand-wordmark h-auto w-36 object-contain sm:w-44 [mix-blend-mode:multiply]"
           />
           <p className="mt-4 text-base text-[color:var(--brand-muted)]">
             Your interpretation is loading…

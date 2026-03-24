@@ -85,7 +85,7 @@ export function CardInspector({ state, position }: CardInspectorProps) {
       <aside className="ritual-panel page-reveal p-4">
         <h3 className="text-lg font-semibold text-[color:var(--theme-text,var(--brand-text))]">Card Detail</h3>
         <p className="mt-2 text-sm text-[color:var(--theme-muted,var(--brand-muted))]">
-          This card's detail didn't arrive. Tap it again to retry.
+          This card&apos;s detail didn&apos;t arrive. Tap it again to retry.
         </p>
       </aside>
     );

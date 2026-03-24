@@ -51,8 +51,33 @@ const SIGNAL_WEIGHTS: Record<number, number> = {
 const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
   "1-27": {
     general: "Rider + Letter highlights rapid communication that benefits from precision and quick acknowledgment.",
-    love: "Rider + Letter suggests an important emotional message arrives soon; clarity and tone matter.",
+    love: "Rider + Letter suggests an important emotional message arriving soon, where tone and precise wording carry real emotional weight.",
     work: "Rider + Letter points to decisive updates, contracts, or notices with immediate workflow impact.",
+  },
+  "1-29": {
+    general: "Rider + Querent puts fresh news, a first move, or incoming momentum directly in your own hands.",
+    love: "Rider + Querent points to an incoming signal or first move landing squarely with you, where your response is what determines whether it goes further.",
+    work: "Rider + Querent marks new information or an incoming opportunity that your own timing and readiness will decide.",
+  },
+  "6-29": {
+    general: "Clouds + Querent places uncertainty and mixed signals close to home, where your own clarity is what begins to clear the fog.",
+    love: "Clouds + Querent points to uncertainty about the connection, where your own stance is what begins to clear the mixed signals.",
+    work: "Clouds + Querent marks unclear direction gathering around your own role, where a clearer personal position is what shifts the picture.",
+  },
+  "7-29": {
+    general: "Snake + Querent places mixed motives, desire, or a complicated dynamic close to home, where your own clarity about what you actually want is what begins to untangle it.",
+    love: "Snake + Querent points to desire or mixed motives gathering most squarely around your own position, where naming what you actually want is what cuts through the complication.",
+    work: "Snake + Querent marks strategic pressure or mixed motives landing on your side, where your own discernment is what the situation needs.",
+  },
+  "11-29": {
+    general: "Whip + Querent: the repeating argument, friction, or pattern of tension is directly with you, where how you respond to it is what either sustains it or breaks it.",
+    love: "Whip + Querent points to the repeating tension or friction landing most squarely with you, where your own shift in response changes the pattern.",
+    work: "Whip + Querent marks your own response to the repeating friction or pressure as what determines whether the pattern continues.",
+  },
+  "10-29": {
+    general: "Scythe + Querent: a sharp decision or necessary boundary is directly with you, where the clarity required is yours to provide.",
+    love: "Scythe + Querent marks a decisive boundary or clear cut falling most squarely on your side, where your own clarity matters more than pressure.",
+    work: "Scythe + Querent marks your role as the place where the necessary boundary or clean cut has to be named and owned.",
   },
   "1-10": {
     general: "Rider + Scythe marks fast-moving news that demands a timely decision.",
@@ -60,13 +85,13 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Rider + Scythe indicates urgent communications requiring rapid prioritization.",
   },
   "2-31": {
-    general: "Clover + Sun blends luck with confidence; small openings can become meaningful wins.",
+    general: "Clover + Sun blends luck with confidence, where small openings can become meaningful wins when met with self-trust.",
     love: "Clover + Sun favors joyful moments that refresh connection.",
     work: "Clover + Sun suggests a fortunate boost in visibility or performance.",
   },
   "2-29": {
-    general: "Clover + Querent puts the opening close to your own choices; a small shift matters if you use it in time.",
-    love: "Clover + Querent suggests your own openness may be closer to a breakthrough than you think, provided you respond in the moment.",
+    general: "Clover + Querent puts the opening close to your own choices, where a small, timely shift can make the difference.",
+    love: "Clover + Querent places a small opening directly within reach, where your own responsiveness turns timing into something real.",
     work: "Clover + Querent points to a useful opening that depends on your own timing, responsiveness, and willingness to act cleanly.",
   },
   "3-34": {
@@ -80,7 +105,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Ship + Dog points to dependable support across teams, locations, or moving parts.",
   },
   "3-24": {
-    general: "Ship + Heart ties direction to devotion; what moves forward is what still feels worth backing.",
+    general: "Ship + Heart ties direction to devotion, so that what moves forward is what still feels genuinely worth backing.",
     love: "Ship + Heart suggests emotional movement, longing, or a bond trying to bridge distance through sincere feeling.",
     work: "Ship + Heart suggests a move or expansion shaped by values rather than convenience alone.",
   },
@@ -95,7 +120,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "House + Dog supports a dependable base, where trusted allies or routines keep things stable.",
   },
   "4-24": {
-    general: "House + Heart brings values and belonging into focus; emotional security matters.",
+    general: "House + Heart brings values and belonging into focus, making emotional security the central concern.",
     love: "House + Heart is a strong signal for nurturing intimacy through stability.",
     work: "House + Heart suggests culture and values alignment influence productivity.",
   },
@@ -130,7 +155,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Clouds + Heart points to values and morale being affected by uncertainty or unclear emotional undercurrents.",
   },
   "6-25": {
-    general: "Clouds + Ring puts commitment under uncertain weather; terms may exist, but the meaning of them is still unsettled.",
+    general: "Clouds + Ring puts commitment under uncertain weather, where existing terms still lack the clear meaning needed to hold firm.",
     love: "Clouds + Ring suggests commitment is being tested by confusion, ambiguity, or changing emotional conditions.",
     work: "Clouds + Ring indicates uncertain contract terms, unclear commitments, or obligations that need better definition.",
   },
@@ -140,7 +165,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Clouds + Key points to solving ambiguity with one decisive framework.",
   },
   "6-34": {
-    general: "Clouds + Fish muddies the resource picture; money is moving, but the true state of it is harder to read cleanly.",
+    general: "Clouds + Fish muddies the resource picture, making the true state of financial movement harder to read cleanly.",
     love: "Clouds + Fish can blur the line between emotional generosity and practical uncertainty.",
     work: "Clouds + Fish points to unclear revenue, budgets, or resource movement that need cleaner visibility.",
   },
@@ -160,13 +185,13 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Coffin + Anchor suggests restructuring a career path for sustainable endurance.",
   },
   "9-20": {
-    general: "Bouquet + Garden blends charm with visibility; positive social reception is likely.",
+    general: "Bouquet + Garden blends charm with visibility, creating conditions where social reception opens warmly.",
     love: "Bouquet + Garden favors warm social energy and mutual appreciation.",
     work: "Bouquet + Garden supports networking and external reputation building.",
   },
   "10-36": {
     general: "Scythe + Cross marks a serious cut: a hard decision that carries consequence, duty, or moral weight.",
-    love: "Scythe + Cross can signal a boundary choice made for emotional integrity.",
+    love: "Scythe + Cross marks a boundary choice made for emotional integrity.",
     work: "Scythe + Cross points to difficult tradeoffs with serious responsibility.",
   },
   "10-25": {
@@ -190,12 +215,12 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Birds + Ring points to ongoing discussion around agreements, expectations, or terms that are not yet fully settled.",
   },
   "12-27": {
-    general: "Birds + Letter turns communication into the central event; wording, timing, and tone matter immediately.",
+    general: "Birds + Letter turns communication into the central event, where wording, timing, and tone all carry immediate weight.",
     love: "Birds + Letter suggests the emotional atmosphere is being carried by messages, replies, and the way things are said in real time.",
     work: "Birds + Letter often marks rapid exchanges, document revisions, or message loops that shape the practical outcome.",
   },
   "12-34": {
-    general: "Birds + Fish puts attention and conversation directly onto the numbers; nervous talk, repeated checking, or mixed signals around money need separating from the actual flow.",
+    general: "Birds + Fish puts attention and conversation directly onto the numbers, where nervous talk or mixed signals need separating from the actual financial flow.",
     love: "Birds + Fish can tie emotional tone to practical giving, support, or shared resources in ways that heighten sensitivity.",
     work: "Birds + Fish points to money talk, budget chatter, or resource questions that are moving faster than clear decisions.",
   },
@@ -220,7 +245,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Fox + Anchor favors protecting what already works, provided caution does not harden into unhelpful rigidity.",
   },
   "15-34": {
-    general: "Bear + Fish puts money under strong hands; leverage, stewardship, and who sets the terms become central.",
+    general: "Bear + Fish puts money under strong hands, making leverage, stewardship, and who sets the terms the central concern.",
     love: "Bear + Fish raises practical questions about shared financial security.",
     work: "Bear + Fish often marks high-impact financial decision windows.",
   },
@@ -238,6 +263,11 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     general: "Stork + Fish suggests improving flow through timely changes, better sequencing, or a smarter pattern of movement in the numbers.",
     love: "Stork + Fish can show change improving the balance of giving, support, or practical reciprocity.",
     work: "Stork + Fish points to improving resource movement through better process or changed conditions.",
+  },
+  "17-29": {
+    general: "Stork + Querent places movement, renewal, or a shift in conditions directly in your hands.",
+    love: "Stork + Querent points to gradual renewal in how you are showing up, where a shift in your own approach is what updates the bond.",
+    work: "Stork + Querent marks constructive change that depends on your own next move or reorientation.",
   },
   "17-22": {
     general: "Stork + Crossroads signals change driven by a pivotal decision.",
@@ -270,7 +300,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Tower + Ring points to formal agreements, policies, or responsibilities becoming binding.",
   },
   "19-28": {
-    general: "Tower + Counterpart places the other person at a distance, behind structure, or inside conditions they are not moving beyond quickly.",
+    general: "Tower + Counterpart: the other person is at a distance, behind structure, or inside conditions they are not moving beyond quickly.",
     love: "Tower + Counterpart suggests the other person's role is shaped by reserve, distance, caution, or a bond that currently feels more formal than intimate.",
     work: "Tower + Counterpart points to a stakeholder, institution, or counterpart operating from a more formal and protected position.",
   },
@@ -285,7 +315,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Tower + Letter often marks contracts, notices, approvals, or formal correspondence with consequences.",
   },
   "19-33": {
-    general: "Tower + Key brings a firm answer through structure, boundaries, or official channels; clarity comes by defining the frame.",
+    general: "Tower + Key brings a firm answer through structure, boundaries, or official channels, where clarity comes by defining the frame precisely.",
     love: "Tower + Key suggests defining boundaries can unlock emotional stability.",
     work: "Tower + Key indicates a formal decision or policy unlock.",
   },
@@ -300,7 +330,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Garden + Ring supports alliances, memberships, and agreements that operate across a wider network.",
   },
   "20-28": {
-    general: "Garden + Counterpart places the other person in a wider social field, where context and outside influences matter.",
+    general: "Garden + Counterpart: the other person is in a wider social field, where context and outside influences matter.",
     love: "Garden + Counterpart suggests the relationship is shaped by social setting, visibility, or shared circles.",
     work: "Garden + Counterpart points to a collaborator or stakeholder whose role is publicly visible.",
   },
@@ -315,23 +345,23 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Garden + Moon can indicate reputation, audience reception, or creative visibility in the wider field.",
   },
   "21-26": {
-    general: "Mountain + Book keeps truth behind a barrier; understanding exists, but it must be approached patiently.",
+    general: "Mountain + Book points to truth held behind a barrier that yields only to patient, deliberate approach.",
     love: "Mountain + Book indicates emotional distance linked to what remains unsaid or hard to understand.",
     work: "Mountain + Book points to complex material, delays in access, or information blocked by process.",
   },
   "21-27": {
-    general: "Mountain + Letter slows messages, paperwork, or explanations; persistence matters more than speed.",
-    love: "Mountain + Letter suggests communication feels obstructed and needs patience rather than pressure.",
+    general: "Mountain + Letter slows messages, paperwork, or explanations, making persistence through the delay more important than trying to rush.",
+    love: "Mountain + Letter marks the point where communication feels stuck and patience matters more than pushing.",
     work: "Mountain + Letter often marks slow approvals, stalled documents, or messages caught in procedure.",
   },
   "21-33": {
-    general: "Mountain + Key says the answer is real but not immediate; the obstacle must be worked methodically.",
-    love: "Mountain + Key indicates patient repair can resolve emotional distance.",
+    general: "Mountain + Key points to a real answer held behind an obstacle that yields only to patience and methodical working-through.",
+    love: "Mountain + Key marks the slow repair that can dissolve emotional distance if both people commit to it steadily.",
     work: "Mountain + Key points to a blocker that is solvable with focused effort.",
   },
   "21-29": {
-    general: "Mountain + Querent shows the obstacle landing personally; the way through is steadiness, sequencing, and not forcing what is still blocked.",
-    love: "Mountain + Querent suggests your own reserve or caution may be part of the relational distance.",
+    general: "Mountain + Querent: the blockage is squarely with you, where steadiness and patience matter more than forcing what is still closed.",
+    love: "Mountain + Querent points to your own reserve or caution as a likely part of what is keeping the distance in place.",
     work: "Mountain + Querent indicates you are personally handling the blockage and may need a slower, steadier strategy.",
   },
   "23-34": {
@@ -340,13 +370,13 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Mice + Fish points to budget seepage, small losses, or value leaking out through unstable process.",
   },
   "22-29": {
-    general: "Crossroads + Querent puts the choice squarely with you; the road changes when your decision does.",
+    general: "Crossroads + Querent: the decision is squarely with you, where the path forward depends on the direction you actually commit to.",
     love: "Crossroads + Querent asks what you genuinely want in this relationship path.",
     work: "Crossroads + Querent indicates personal leadership over strategic direction.",
   },
   "22-33": {
-    general: "Crossroads + Key shows the right door opening only after a real choice is made; clarity follows commitment, not the other way around.",
-    love: "Crossroads + Key suggests relationship clarity arrives once the direction is named plainly.",
+    general: "Crossroads + Key shows the right door opening only after a real choice is made, where clarity follows commitment rather than preceding it.",
+    love: "Crossroads + Key points to the relational clarity that becomes available once the direction is named honestly.",
     work: "Crossroads + Key points to a strategic decision that unlocks the next workable phase.",
   },
   "23-35": {
@@ -356,8 +386,13 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
   },
   "23-24": {
     general: "Mice + Heart shows care being worn down by worry, attrition, or the small repeated losses that quietly change the tone.",
-    love: "Mice + Heart suggests affection is being eroded by small hurts, doubt, or the strain of never fully feeling settled.",
+    love: "Mice + Heart points to affection being worn down by small hurts, doubt, or the strain of never feeling fully settled.",
     work: "Mice + Heart points to morale and motivation being slowly depleted by repeated stressors.",
+  },
+  "23-29": {
+    general: "Mice + Querent puts attrition, drain, or small repeated stressors directly on your own choices and position.",
+    love: "Mice + Querent points to worry, doubt, or low-grade relational strain landing most squarely with you.",
+    work: "Mice + Querent marks personal energy, focus, or resources being quietly depleted by accumulated pressure.",
   },
   "24-25": {
     general: "Heart + Ring highlights commitment that is trying to stay true to what genuinely matters.",
@@ -375,7 +410,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Heart + Counterpart points to collaboration that benefits from empathy.",
   },
   "24-29": {
-    general: "Heart + Querent brings you back to your own values, making honest self-knowledge the emotional anchor of the reading.",
+    general: "Heart + Querent keeps your own values and honest self-knowledge at the center, making them the emotional anchor of what unfolds.",
     love: "Heart + Querent suggests the relationship becomes clearer when you stay close to your own feelings rather than guessing theirs first.",
     work: "Heart + Querent points to values-led choices, where motivation improves when the work still feels personally true.",
   },
@@ -385,7 +420,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Heart + Sun favors visible goodwill, where values and confidence strengthen each other.",
   },
   "24-33": {
-    general: "Heart + Key brings emotional truth into clear focus; sincerity becomes the thing that unlocks the next phase.",
+    general: "Heart + Key brings emotional truth into clear focus, where sincerity becomes the thing that opens the next phase.",
     love: "Heart + Key suggests a clear emotional truth can unlock the relationship more effectively than guessing, testing, or waiting silently.",
     work: "Heart + Key points to values clarity becoming the key factor in a decision or commitment.",
   },
@@ -405,12 +440,12 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Ring + Letter often indicates contracts, renewals, or written obligations.",
   },
   "25-28": {
-    general: "Ring + Counterpart puts the agreement into the space between two people, making mutual terms impossible to ignore.",
+    general: "Ring + Counterpart names the explicit terms between two people, where mutual obligations can no longer be treated as implied.",
     love: "Ring + Counterpart suggests the relationship turns on whether the other person can meet the commitment in a concrete, mutual way.",
     work: "Ring + Counterpart points to agreements that depend on reciprocal clarity with the other party.",
   },
   "25-33": {
-    general: "Ring + Key defines the terms sharply; a bond or agreement reaches the point where it can be confirmed, revised, or unlocked.",
+    general: "Ring + Key defines the terms sharply enough that a bond or agreement can finally be confirmed, revised, or unlocked.",
     love: "Ring + Key suggests commitment becomes much clearer once the real terms are named directly.",
     work: "Ring + Key points to agreement terms becoming clear enough to unlock the next workable phase.",
   },
@@ -430,8 +465,8 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Letter + Key points to documents, notices, or approvals that open the next stage.",
   },
   "27-29": {
-    general: "Letter + Querent brings your own position into explicit words; clarity begins when what you mean is stated plainly.",
-    love: "Letter + Querent supports expressing emotional needs directly.",
+    general: "Letter + Querent sharpens the need to say explicitly what you actually mean, where clarity starts with your own stated position.",
+    love: "Letter + Querent points to the clarity that comes from naming what you actually need in the bond.",
     work: "Letter + Querent indicates clear self-advocacy in professional communication.",
   },
   "25-34": {
@@ -445,14 +480,19 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Letter + Fish often marks financial reporting, invoices, or written information that clarifies the real resource picture.",
   },
   "28-29": {
-    general: "Counterpart + Querent brings self and other into direct view; what matters is not one perspective alone, but the space between them.",
+    general: "Counterpart + Querent keeps both perspectives in the frame, where what matters is not one side alone but the space they genuinely share.",
     love: "Counterpart + Querent highlights relationship negotiation and mutual perspective.",
     work: "Counterpart + Querent points to stakeholder alignment as a central task.",
   },
   "28-33": {
-    general: "Counterpart + Key shows the other person's role becoming central to clarity; the answer opens through real exchange, not assumption.",
-    love: "Counterpart + Key suggests the relationship clarifies when both people are explicit about what they want.",
+    general: "Counterpart + Key shows the other person's role becoming central to clarity, where the answer opens through real exchange rather than assumption.",
+    love: "Counterpart + Key points to relational clarity that comes from both people stating what they actually want.",
     work: "Counterpart + Key points to a counterpart, client, or stakeholder holding the information that unlocks progress.",
+  },
+  "28-36": {
+    general: "Counterpart + Cross places a real burden or obligation at the center of the other person's role, where what they carry shapes what they can offer.",
+    love: "Counterpart + Cross points to the other person carrying something heavy — duty, guilt, or unresolved obligation — that is quietly shaping the bond.",
+    work: "Counterpart + Cross points to a stakeholder or collaborator operating under significant pressure, duty, or constraint.",
   },
   "28-30": {
     general: "Counterpart + Lily slows the tone, suggesting maturity, restraint, or a quieter style of engagement from the other side.",
@@ -460,23 +500,23 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Counterpart + Lily points to a composed, measured counterpart whose pace may be slower but steadier.",
   },
   "29-33": {
-    general: "Querent + Key confirms that your own clarity is the hinge that opens the next phase; the lock is not elsewhere.",
-    love: "Querent + Key signals that personal clarity improves the bond.",
+    general: "Querent + Key confirms that your own clarity is the hinge that opens the next phase, and the answer is not as far from you as it may feel.",
+    love: "Querent + Key points to your own relational clarity as the variable the bond is most waiting on.",
     work: "Querent + Key indicates your decision can resolve a stuck process.",
   },
   "29-31": {
-    general: "Querent + Sun places you in a clearer light; confidence and self-trust improve the whole field around you.",
-    love: "Querent + Sun suggests warmth and confidence in yourself improve the tone of the connection.",
+    general: "Querent + Sun: your position in a clearer light, where confidence and self-trust improve the whole field around you.",
+    love: "Querent + Sun points to warmth and self-confidence as what lifts the overall tone of the connection.",
     work: "Querent + Sun points to stronger visibility, confidence, and positive momentum around your role.",
   },
   "25-29": {
-    general: "Ring + Querent places the bond, promise, or repeating pattern close to home; your own terms shape what continues.",
-    love: "Ring + Querent suggests commitment becomes clearer when you are honest about the kind of bond you can truly sustain.",
+    general: "Ring + Querent places the bond, promise, or repeating pattern close to home, where your own terms shape what continues.",
+    love: "Ring + Querent points to the clarity that comes from being honest about the kind of bond you can truly sustain.",
     work: "Ring + Querent points to agreements or recurring responsibilities that depend on your own boundaries and follow-through.",
   },
   "29-36": {
-    general: "Querent + Cross suggests the burden lands close to the bone; part of the lesson is learning what is yours to carry and what is not.",
-    love: "Querent + Cross can show emotional weight landing heavily on you, making boundaries essential.",
+    general: "Querent + Cross suggests a burden that lands close to the bone, where the harder task is discerning what is genuinely yours to carry and what can be released.",
+    love: "Querent + Cross marks an emotional weight that settles on you more personally than almost anything else, where clearer limits become the most necessary response.",
     work: "Querent + Cross points to duty or pressure being felt very personally, which calls for steadier limits.",
   },
   "29-35": {
@@ -485,7 +525,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Querent + Anchor points to your own reliability becoming the stabilizing force in the wider situation.",
   },
   "33-34": {
-    general: "Key + Fish shows the answer appearing inside the numbers themselves; clarity comes from following the flow closely.",
+    general: "Key + Fish shows the answer appearing inside the numbers themselves, where clarity comes from reading the flow closely rather than guessing at it.",
     love: "Key + Fish can clarify what is being exchanged emotionally and practically, and whether that balance is sustainable.",
     work: "Key + Fish points to a financial or operational unlock once the flow is read clearly.",
   },
@@ -510,23 +550,23 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Moon + Cross can indicate emotional load within public or creative work.",
   },
   "33-36": {
-    general: "Key + Cross marks a defining obligation or lesson; what matters now cannot remain vague, postponed, or half-held.",
+    general: "Key + Cross marks a defining obligation or lesson that can no longer remain vague, postponed, or half-held.",
     love: "Key + Cross indicates a defining relational lesson or commitment decision.",
     work: "Key + Cross points to mission-critical obligations becoming explicit.",
   },
   "4-36": {
-    general: "House + Cross ties the base structure to fixed obligations, foundational responsibilities, or conditions that cannot simply be ignored.",
+    general: "House + Cross marks a base structure carrying fixed obligations, foundational responsibilities, or conditions that cannot simply be ignored.",
     love: "House + Cross may show the relationship carrying family, home, or responsibility weight that must be faced honestly.",
     work: "House + Cross points to structural obligations or base-system responsibilities carrying real consequence.",
   },
   "34-35": {
-    general: "Fish + Anchor asks whether the flow can take a durable form; money steadies only when movement and structure agree.",
+    general: "Fish + Anchor asks whether the flow can take a durable form, with money steadying only when movement and structure agree.",
     love: "Fish + Anchor asks for practical steadiness around shared resources.",
     work: "Fish + Anchor supports sustainable financial strategy.",
   },
   "34-36": {
     general: "Fish + Cross shows resources, flow, or material support carrying a heavier responsibility that cannot be handled casually.",
-    love: "Fish + Cross may highlight weighty discussions around security and support.",
+    love: "Fish + Cross points to weighty questions about what the bond can truly sustain in practical and emotional terms.",
     work: "Fish + Cross suggests financial decisions with long-term accountability.",
   },
   "35-36": {
@@ -566,9 +606,9 @@ function buildFallbackMeaning(aId: number, bId: number): Record<Domain, string> 
     };
   }
 
-  const general = `${a.name} + ${b.name} blends ${a.keywords[0]} with ${b.keywords[0]}, suggesting ${a.action} while staying aware of ${b.caution}.`;
-  const love = `${a.name} + ${b.name} in love themes suggests ${a.domainVariants.love} and ${b.domainVariants.love.toLowerCase()}.`;
-  const work = `${a.name} + ${b.name} in work context indicates ${a.domainVariants.work} and ${b.domainVariants.work.toLowerCase()}.`;
+  const general = `${a.name} + ${b.name} keeps ${a.keywords[0]} and ${b.keywords[0]} in active tension, where the way they settle determines what becomes available next.`;
+  const love = `${a.name} + ${b.name} keeps ${a.keywords[0]} and ${b.keywords[0]} in active tension in the relationship, where the way they settle shapes what becomes emotionally available next.`;
+  const work = `${a.name} + ${b.name} keeps ${a.keywords[0]} and ${b.keywords[0]} in active tension at work, where the way they settle determines what becomes practically available next.`;
 
   return { general, love, work };
 }

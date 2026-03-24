@@ -24,7 +24,7 @@ export default function HomePage() {
           <div className="px-6 py-8 sm:px-10 sm:py-12">
             <p className="section-kicker">36 Cards</p>
             <h1 className="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">
-              A Lenormand reading for the path ahead.
+              A Lenormand reader for the path ahead.
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[color:var(--brand-muted)]">
               Lenormand is a 36-card oracle from 19th-century Europe. Unlike tarot, it reads in combinations — cards speak to each other across the table, building layers of meaning that a single card alone cannot carry.

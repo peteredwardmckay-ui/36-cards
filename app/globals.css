@@ -477,3 +477,31 @@ input[type="range"]::-webkit-slider-thumb {
     transition: none;
   }
 }
+
+/* Dark mode body — replace white radial overlays with subtle dark glows */
+html.dark body {
+  background-color: #12131c;
+  background:
+    radial-gradient(circle at 8% -12%, rgba(224, 178, 102, 0.06), transparent 36%),
+    radial-gradient(circle at 96% 4%, rgba(224, 178, 102, 0.03), transparent 34%),
+    linear-gradient(145deg, #12131c, #0b0c14);
+}
+
+html.dark body::before,
+html.dark body::after {
+  opacity: 0 !important;
+}
+
+html.dark .sky-cta::before {
+  opacity: 0;
+}
+
+/* Fix hardcoded light backgrounds on form elements in dark mode */
+html.dark textarea,
+html.dark select {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--brand-text);
+}
+
+/* Logo inversion: dark PNG asset inverts to white in dark mode */
+html.dark .brand-wordmark { filter: invert(1); mix-blend-mode: normal; }

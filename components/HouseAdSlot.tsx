@@ -7,16 +7,18 @@ const ADS = [
   {
     key: "riddle",
     name: "Riddle the Badger",
-    tagline: "A free daily word game. New puzzle every day.",
+    tagline: "A new word puzzle every day. Free, challenging, satisfying.",
     url: RIDDLE_URL,
-    symbol: "◈",
+    mascot: "/brand/riddle-the-badger.png",
+    mascotAlt: "Riddle the Badger",
   },
   {
     key: "beaver",
     name: "Busy Beaver",
-    tagline: "A focus timer with pixel-art scenery and deep work modes.",
+    tagline: "A focus timer with cosy pixel-art scenery. Work better, one session at a time.",
     url: BUSY_BEAVER_URL,
-    symbol: "◉",
+    mascot: "/brand/busy-beaver.png",
+    mascotAlt: "Busy Beaver",
   },
 ];
 
@@ -41,14 +43,13 @@ export function HouseAdSlot({ id, className }: HouseAdSlotProps) {
               href={ad.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-[44px] items-start gap-2 rounded-lg border border-[color:var(--theme-border,var(--brand-border))] p-2 transition-opacity hover:opacity-75"
+              className="flex min-h-[44px] items-center gap-3 rounded-lg border border-[color:var(--theme-border,var(--brand-border))] p-2 transition-opacity hover:opacity-75"
             >
-              <span
-                className="mt-0.5 shrink-0 text-base leading-none text-[color:var(--theme-accent,var(--brand-accent))]"
-                aria-hidden="true"
-              >
-                {ad.symbol}
-              </span>
+              <img
+                src={ad.mascot}
+                alt={ad.mascotAlt}
+                className="h-12 w-12 shrink-0 object-contain"
+              />
               <div className="min-w-0">
                 <p className="text-sm font-semibold leading-snug">{ad.name}</p>
                 <p className="mt-0.5 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">{ad.tagline}</p>

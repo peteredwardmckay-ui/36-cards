@@ -79,7 +79,14 @@ export default function SetupPage() {
   const [spreadType, setSpreadType] = useState<SetupInput["spreadType"]>("grand-tableau");
   const [gtLayout, setGtLayout] = useState<GTLayout>("4x9");
   const [threeCardMode, setThreeCardMode] = useState<SetupInput["threeCardMode"]>("past-present-future");
-  const [themeId, setThemeId] = useState<string>(THEMES[0].id);
+  const [themeId, setThemeId] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("36cards-dark");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (stored !== null ? stored === "true" : prefersDark) return "neo-noir";
+    }
+    return THEMES[0].id;
+  });
   const [significatorMode, setSignificatorMode] = useState<SetupInput["significatorMode"]>("self");
 
   useEffect(() => {

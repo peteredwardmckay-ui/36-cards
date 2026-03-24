@@ -42,8 +42,64 @@ const HARVEST_CASES_PER_STYLE = Number.isFinite(requestedHarvestCasesPerStyle) &
   ? requestedHarvestCasesPerStyle
   : 48;
 const MAX_EXAMPLES_PER_PHRASE = 5;
+const requestedGtLayout = process.env.HARVEST_GT_LAYOUT;
+const HARVEST_GT_LAYOUT: GTLayout = requestedGtLayout === "4x8+4" ? "4x8+4" : "4x9";
 
 const ROLLOUT_SUBJECT_SWEEP: Record<string, RolloutSubjectSweep> = {
+  work: {
+    subjectId: "work",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my work situation over the next three months?",
+    deepQuestion: "Where is the real pressure in my work situation, and what is beginning to move?",
+  },
+  love: {
+    subjectId: "love",
+    significatorMode: "relationship",
+    quickQuestion: "What is the real shape of this relationship over the next three months?",
+    deepQuestion: "Where is the real pressure in this relationship, and what is beginning to move?",
+  },
+  money: {
+    subjectId: "money",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my financial situation over the next three months?",
+    deepQuestion: "Where is the real pressure in my financial situation, and what is beginning to move?",
+  },
+  home_family: {
+    subjectId: "home_family",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my home and family situation over the next three months?",
+    deepQuestion: "Where is the real pressure in my home and family situation, and what is beginning to move?",
+  },
+  health: {
+    subjectId: "health",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my health situation over the next three months?",
+    deepQuestion: "Where is the real pressure in my health situation, and what is beginning to move?",
+  },
+  travel: {
+    subjectId: "travel",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of this travel situation over the next three months?",
+    deepQuestion: "Where is the real pressure in this travel situation, and what is beginning to move?",
+  },
+  education: {
+    subjectId: "education",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my education and learning over the next three months?",
+    deepQuestion: "Where is the real pressure in this education situation, and what is beginning to move?",
+  },
+  purpose_calling: {
+    subjectId: "purpose_calling",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my sense of purpose and calling over the next three months?",
+    deepQuestion: "Where is the real pressure in my sense of purpose, and what is beginning to move?",
+  },
+  legal_admin: {
+    subjectId: "legal_admin",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of this legal or admin situation over the next three months?",
+    deepQuestion: "Where is the real pressure in this legal or admin matter, and what is beginning to move?",
+  },
   friends_social: {
     subjectId: "friends_social",
     significatorMode: "self",
@@ -67,6 +123,24 @@ const ROLLOUT_SUBJECT_SWEEP: Record<string, RolloutSubjectSweep> = {
     significatorMode: "self",
     quickQuestion: "What is the real shape of my place in this community over the next three months?",
     deepQuestion: "Where is the real pressure in this community field, and what is beginning to move?",
+  },
+  personal_growth: {
+    subjectId: "personal_growth",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of my personal growth over the next three months?",
+    deepQuestion: "Where is the real pressure in my personal growth, and what is beginning to move?",
+  },
+  creative: {
+    subjectId: "creative",
+    significatorMode: "self",
+    quickQuestion: "What is the real shape of this creative work over the next three months?",
+    deepQuestion: "Where is the real pressure in this creative work, and what is beginning to move?",
+  },
+  general_reading: {
+    subjectId: "general_reading",
+    significatorMode: "open",
+    quickQuestion: "What is the real shape of my situation over the next three months?",
+    deepQuestion: "Where is the real pressure in my situation, and what is beginning to move?",
   },
 };
 
@@ -99,6 +173,7 @@ const SUSPICIOUS_PHRASE_PREFIXES = [
 
 const KNOWN_GOOD_PHRASES = new Set([
   "reliable support beginning to show itself more clearly",
+  "social or public life feeding long-term growth more than first appearances suggest",
 ]);
 
 function readActiveRolloutSubjectId(): SubjectId {
@@ -130,7 +205,7 @@ function buildHarvestFixtures(subject: RolloutSubjectSweep): ReadingHarnessFixtu
       subjectId: subject.subjectId,
       interpretationThemeId: "auto",
       spreadType: "grand-tableau",
-      gtLayout: "4x9",
+      gtLayout: HARVEST_GT_LAYOUT,
       readingStyle: "quick",
       includeHouses: false,
       significatorMode: subject.significatorMode,
@@ -142,7 +217,7 @@ function buildHarvestFixtures(subject: RolloutSubjectSweep): ReadingHarnessFixtu
       subjectId: subject.subjectId,
       interpretationThemeId: "auto",
       spreadType: "grand-tableau",
-      gtLayout: "4x9",
+      gtLayout: HARVEST_GT_LAYOUT,
       readingStyle: "deep_dive",
       includeHouses: true,
       significatorMode: subject.significatorMode,

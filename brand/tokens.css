@@ -107,3 +107,26 @@
   --theme-muted: #765741;
   --theme-accent: #8a5931;
 }
+
+/* Dark mode — overrides brand vars and the ethiopian class used on all chrome pages */
+html.dark {
+  --brand-bg: #12131c;
+  --brand-panel: #1b1f2a;
+  --brand-border: #3f4659;
+  --brand-text: #f4f0e8;
+  --brand-muted: #adb3c4;
+  --brand-accent: #e0b266;
+  --brand-accent-alt: #5a9e82;
+  --brand-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  background-color: #12131c;
+  color-scheme: dark;
+}
+
+html.dark .theme-ethiopian {
+  --theme-bg: #12131c;
+  --theme-panel: #1b1f2a;
+  --theme-border: #3f4659;
+  --theme-text: #f4f0e8;
+  --theme-muted: #adb3c4;
+  --theme-accent: #e0b266;
+}

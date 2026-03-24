@@ -310,7 +310,7 @@ export default function ResultsPage() {
             >
               <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                 <div className="max-w-2xl">
-                  <span className="section-kicker">What's Next</span>
+                  <span className="section-kicker">What&apos;s Next</span>
                   <h2 className="mt-3 text-2xl font-semibold">Share your reading or ask another question.</h2>
                   <p className="mt-2 text-sm text-[color:var(--theme-muted,var(--brand-muted))]">
                     Send this reading to someone, or begin again with a new question and a fresh spread.

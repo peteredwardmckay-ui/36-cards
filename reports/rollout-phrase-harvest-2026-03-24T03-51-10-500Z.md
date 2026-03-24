@@ -1,0 +1,2320 @@
+# Rollout Phrase Harvest
+
+Generated: 2026-03-24T03:51:10.500Z
+Subject: purpose_calling
+Cases: 200
+Phrase hits: 400
+Unique phrases: 306
+Suspicious hits: 77
+Suspicious phrases: 65
+
+## Suspect Phrases
+
+| Phrase | Label | Count |
+| --- | --- | ---: |
+| endurance around your stance toward the path | opening | 5 |
+| movement, distance, or transition in what genuinely matters | opening | 3 |
+| nervous communication in repeated strain and attrition | pressure | 3 |
+| a sharp decision or cut under strategy | pressure | 2 |
+| closure, ending, or rest under the meaningful burden | pressure | 2 |
+| nervous communication moving through caution | pressure | 2 |
+| nervous communication under decisive cuts | pressure | 2 |
+| a newly forming situation around heart, value, or feeling | opening | 1 |
+| a solution or unlock in slow growth | opening | 1 |
+| a solution or unlock in structural stability | opening | 1 |
+| choice and branching paths in slow growth | opening | 1 |
+| endurance around clearer visible progress | opening | 1 |
+| guidance and signal in what genuinely matters | opening | 1 |
+| guidance and signal under what genuinely matters | opening | 1 |
+| guidance around maturity and restraint | opening | 1 |
+| heart, value, or feeling in grace | opening | 1 |
+| heart, value, or feeling in maturity | opening | 1 |
+| heart, value, or feeling in reliable support | opening | 1 |
+| heart, value, or feeling under power | opening | 1 |
+| heart, value, or feeling under what genuinely matters | opening | 1 |
+| movement, distance, or transition under choice | opening | 1 |
+| movement, distance, or transition under clearer momentum | opening | 1 |
+| movement, distance, or transition under what genuinely matters | opening | 1 |
+| your own position around constructive change | opening | 1 |
+| your own position around your stance toward the path | opening | 1 |
+| a sharp decision or cut in caution | pressure | 1 |
+| a sharp decision or cut in obstruction | pressure | 1 |
+| a sharp decision or cut in repetition | pressure | 1 |
+| a sharp decision or cut in what is hidden | pressure | 1 |
+| a sharp decision or cut under closure | pressure | 1 |
+| a solution or unlock moving through caution | pressure | 1 |
+| choice and branching paths getting tangled in anxious talk and crossed signals | pressure | 1 |
+| choice and branching paths under closure | pressure | 1 |
+| closure, ending, or rest getting tangled in anxious talk and crossed signals | pressure | 1 |
+| closure, ending, or rest in anxious talk and crossed signals | pressure | 1 |
+| closure, ending, or rest in repeated strain and attrition | pressure | 1 |
+| closure, ending, or rest in the meaningful burden | pressure | 1 |
+| closure, ending, or rest in the other person's field | pressure | 1 |
+| closure, ending, or rest moving through repeated strain and attrition | pressure | 1 |
+| closure, ending, or rest moving through repetition | pressure | 1 |
+| closure, ending, or rest under fog or uncertainty | pressure | 1 |
+| closure, ending, or rest under recognition | pressure | 1 |
+| closure, ending, or rest under your own position | pressure | 1 |
+| nervous communication in closure | pressure | 1 |
+| nervous communication in recognition | pressure | 1 |
+| nervous communication moving through choice | pressure | 1 |
+| nervous communication moving through commitment | pressure | 1 |
+| nervous communication moving through obstruction | pressure | 1 |
+| nervous communication moving through structure | pressure | 1 |
+| nervous communication moving through the other person's field | pressure | 1 |
+| nervous communication under choice | pressure | 1 |
+| nervous communication under fog or uncertainty | pressure | 1 |
+| nervous communication under obstruction | pressure | 1 |
+| nervous communication under repeated strain and attrition | pressure | 1 |
+| nervous communication under structure | pressure | 1 |
+| nervous communication under the other person's field | pressure | 1 |
+| nervous communication under what is hidden | pressure | 1 |
+| obstacle or delay in fog or uncertainty | pressure | 1 |
+| obstacle or delay under anxious talk and crossed signals | pressure | 1 |
+| structure, distance, or institution in fog or uncertainty | pressure | 1 |
+| structure, distance, or institution moving through closure | pressure | 1 |
+| structure, distance, or institution moving through repeated strain and attrition | pressure | 1 |
+| structure, distance, or institution moving through strategy | pressure | 1 |
+| structure, distance, or institution under repeated strain and attrition | pressure | 1 |
+| structure, distance, or institution under strategy | pressure | 1 |
+
+## All Phrases
+
+| Phrase | Label | Count | Suspicious |
+| --- | --- | ---: | --- |
+| movement beginning once your own stance becomes clear | opening | 6 | no |
+| complication feeding anxiety, attrition, or the slow damage done by what keeps slipping sideways | pressure | 6 | no |
+| endurance around your stance toward the path | opening | 5 | yes |
+| slow growth around your stance toward the path | opening | 4 | no |
+| what genuinely matters around your stance toward the path | opening | 4 | no |
+| your role meeting a newly forming situation, where what you do first matters more than what you promise later | opening | 4 | no |
+| your stance toward the path in endurance | opening | 4 | no |
+| your stance toward the path in expansion | opening | 4 | no |
+| a stopped place made heavier by delay, distance, or the feeling of no easy passage | pressure | 4 | no |
+| clearer direction forming around your own stance | opening | 3 | no |
+| maturity around your stance toward the path | opening | 3 | no |
+| movement, distance, or transition in what genuinely matters | opening | 3 | yes |
+| reliable support under slow growth | opening | 3 | no |
+| slower, steadier growth under incoming momentum | opening | 3 | no |
+| your path becoming clearer through what still feels deeply true | opening | 3 | no |
+| your stance toward the path in slow growth | opening | 3 | no |
+| anxious discussion and mental noise crowding your sense of the path | pressure | 3 | no |
+| erosion, worry, or leakage getting tangled in anxious talk and crossed signals | pressure | 3 | no |
+| erosion, worry, or leakage in anxious talk and crossed signals | pressure | 3 | no |
+| erosion, worry, or leakage in the meaningful burden | pressure | 3 | no |
+| mixed messages, gossip, or anxious conversation that can distort what is really happening | pressure | 3 | no |
+| mixed motives in caution | pressure | 3 | no |
+| mixed motives moving through caution | pressure | 3 | no |
+| nervous communication in repeated strain and attrition | pressure | 3 | yes |
+| new movement beginning as the path starts to shift for the better | opening | 2 | no |
+| power around your stance toward the path | opening | 2 | no |
+| something tangible beginning to move inside a slower rebuilding process | opening | 2 | no |
+| warmth, goodwill, or a friendlier response under what genuinely matters | opening | 2 | no |
+| what genuinely matters around constructive change | opening | 2 | no |
+| your path becoming clearer through visible progress | opening | 2 | no |
+| your path being tested by what it can actually sustain | opening | 2 | no |
+| your stance toward the path in grace | opening | 2 | no |
+| your stance toward the path under guidance | opening | 2 | no |
+| your stance toward the path under reliable support | opening | 2 | no |
+| your stance toward the path under resource flow | opening | 2 | no |
+| your stance toward the path under the public field | opening | 2 | no |
+| a necessary cut made harder by repeated drain and stress | pressure | 2 | no |
+| a sharp decision or cut under strategy | pressure | 2 | yes |
+| closure, ending, or rest under the meaningful burden | pressure | 2 | yes |
+| defensive caution and guarded self-interest moving through the other person's field | pressure | 2 | no |
+| defensive strategy and self-protection shaping the path | pressure | 2 | no |
+| erosion, worry, or leakage moving through obstruction | pressure | 2 | no |
+| erosion, worry, or leakage moving through repeated strain and attrition | pressure | 2 | no |
+| erosion, worry, or leakage under anxious talk and crossed signals | pressure | 2 | no |
+| fox in Fox House deepens the signal around defensive caution and guarded self-interest | pressure | 2 | no |
+| mixed motives in closure | pressure | 2 | no |
+| nervous communication moving through caution | pressure | 2 | yes |
+| nervous communication under decisive cuts | pressure | 2 | yes |
+| repeated friction and pressure in obstruction | pressure | 2 | no |
+| the burden of calling in closure | pressure | 2 | no |
+| uncertainty and mixed signals in obstruction | pressure | 2 | no |
+| uncertainty thickened by too much anxious discussion around the path | pressure | 2 | no |
+| your conviction being worn down by repeated strain | pressure | 2 | no |
+| your own role caught in complication, mixed motives, or a dynamic that needs clearer boundaries | pressure | 2 | no |
+| your stance toward the path getting tangled in anxious talk and crossed signals | pressure | 2 | no |
+| your stance toward the path moving through repeated strain and attrition | pressure | 2 | no |
+| a newly forming situation around heart, value, or feeling | opening | 1 | yes |
+| a small beginning in maturity | opening | 1 | no |
+| a small but real opening around slower, steadier growth | opening | 1 | no |
+| a small but real opening around your stance toward the path | opening | 1 | no |
+| a small opening around reliable support | opening | 1 | no |
+| a small opening around slower, steadier growth | opening | 1 | no |
+| a small opening around your stance toward the path | opening | 1 | no |
+| a small opening in slow growth | opening | 1 | no |
+| a small opening under endurance | opening | 1 | no |
+| a small opening under improvement or movement | opening | 1 | no |
+| a small opening under reliable support | opening | 1 | no |
+| a small opening under the answer point | opening | 1 | no |
+| a small opening under what genuinely matters | opening | 1 | no |
+| a solution or unlock in slow growth | opening | 1 | yes |
+| a solution or unlock in structural stability | opening | 1 | yes |
+| choice and branching paths in slow growth | opening | 1 | yes |
+| clearer momentum around a small opening | opening | 1 | no |
+| clearer momentum around guidance and signal | opening | 1 | no |
+| clearer momentum around stability and foundations | opening | 1 | no |
+| clearer momentum around the commitment question or repeating terms | opening | 1 | no |
+| clearer momentum around warmth, goodwill, or a friendlier response | opening | 1 | no |
+| clearer momentum around your stance toward the path | opening | 1 | no |
+| clearer visible progress in guidance | opening | 1 | no |
+| clearer visible progress under a newly forming situation | opening | 1 | no |
+| clearer visible progress under clearer momentum | opening | 1 | no |
+| clearer visible progress under maturity | opening | 1 | no |
+| clearer visible progress under reliable support | opening | 1 | no |
+| constructive change in improvement or movement | opening | 1 | no |
+| constructive change in what genuinely matters | opening | 1 | no |
+| constructive change under a small opening | opening | 1 | no |
+| constructive change under endurance | opening | 1 | no |
+| constructive change under maturity | opening | 1 | no |
+| constructive change under the answer point | opening | 1 | no |
+| endurance around clearer visible progress | opening | 1 | yes |
+| expansion around heart, value, or feeling | opening | 1 | no |
+| expansion around maturity and restraint | opening | 1 | no |
+| expansion around your stance toward the path | opening | 1 | no |
+| grace around slower, steadier growth | opening | 1 | no |
+| grace around your stance toward the path | opening | 1 | no |
+| guidance and signal in what genuinely matters | opening | 1 | yes |
+| guidance and signal under what genuinely matters | opening | 1 | yes |
+| guidance around maturity and restraint | opening | 1 | yes |
+| heart, value, or feeling in grace | opening | 1 | yes |
+| heart, value, or feeling in maturity | opening | 1 | yes |
+| heart, value, or feeling in reliable support | opening | 1 | yes |
+| heart, value, or feeling under power | opening | 1 | yes |
+| heart, value, or feeling under what genuinely matters | opening | 1 | yes |
+| improvement or movement around a small opening | opening | 1 | no |
+| improvement or movement around constructive change | opening | 1 | no |
+| improvement or movement around maturity and restraint | opening | 1 | no |
+| improvement or movement around movement, distance, or transition | opening | 1 | no |
+| improvement or movement around resources and flow | opening | 1 | no |
+| improvement or movement around warmth, goodwill, or a friendlier response | opening | 1 | no |
+| improvement or movement around your stance toward the path | opening | 1 | no |
+| incoming momentum around a small opening | opening | 1 | no |
+| incoming momentum around clearer visible progress | opening | 1 | no |
+| incoming momentum around constructive change | opening | 1 | no |
+| incoming momentum around maturity and restraint | opening | 1 | no |
+| incoming movement or a concrete update in improvement or movement | opening | 1 | no |
+| incoming movement or a concrete update under a small opening | opening | 1 | no |
+| incoming movement or a concrete update under reliable support | opening | 1 | no |
+| leverage or resource control in maturity | opening | 1 | no |
+| leverage or resource control under clearer momentum | opening | 1 | no |
+| mature confidence and steadier visible progress | opening | 1 | no |
+| maturity and restraint in improvement or movement | opening | 1 | no |
+| maturity and restraint in the answer point | opening | 1 | no |
+| maturity and restraint under a newly forming situation | opening | 1 | no |
+| maturity and restraint under clearer momentum | opening | 1 | no |
+| maturity and restraint under expansion | opening | 1 | no |
+| maturity and restraint under improvement or movement | opening | 1 | no |
+| maturity around incoming movement or a concrete update | opening | 1 | no |
+| movement, distance, or transition under choice | opening | 1 | yes |
+| movement, distance, or transition under clearer momentum | opening | 1 | yes |
+| movement, distance, or transition under what genuinely matters | opening | 1 | yes |
+| power around clearer visible progress | opening | 1 | no |
+| real support and movement beginning to gather around your path | opening | 1 | no |
+| reliable support in grace | opening | 1 | no |
+| reliable support in guidance | opening | 1 | no |
+| reliable support in your own position | opening | 1 | no |
+| reliable support under a small opening | opening | 1 | no |
+| reliable support under improvement or movement | opening | 1 | no |
+| reliable support under reliable support | opening | 1 | no |
+| reliable support under your own position | opening | 1 | no |
+| resources and flow in clearer momentum | opening | 1 | no |
+| slow growth around constructive change | opening | 1 | no |
+| slow growth around stability and foundations | opening | 1 | no |
+| slower, steadier growth under a small opening | opening | 1 | no |
+| slower, steadier growth under clearer momentum | opening | 1 | no |
+| slower, steadier growth under improvement or movement | opening | 1 | no |
+| something tangible beginning to move | opening | 1 | no |
+| steadier judgment around what genuinely matters | opening | 1 | no |
+| structural stability around reliable support | opening | 1 | no |
+| the answer point around a small opening | opening | 1 | no |
+| the answer point around your stance toward the path | opening | 1 | no |
+| the commitment question or repeating terms under clearer momentum | opening | 1 | no |
+| the public field around clearer visible progress | opening | 1 | no |
+| the public field around heart, value, or feeling | opening | 1 | no |
+| warmth, goodwill, or a friendlier response in power | opening | 1 | no |
+| warmth, goodwill, or a friendlier response in resource flow | opening | 1 | no |
+| warmth, goodwill, or a friendlier response in the answer point | opening | 1 | no |
+| warmth, goodwill, or a friendlier response under structural stability | opening | 1 | no |
+| what can be sustained in vocation in a newly forming situation | opening | 1 | no |
+| what can be sustained in vocation in improvement or movement | opening | 1 | no |
+| what can be sustained in vocation under clearer momentum | opening | 1 | no |
+| what genuinely matters around guidance and signal | opening | 1 | no |
+| what genuinely matters around heart, value, or feeling | opening | 1 | no |
+| what genuinely matters around warmth, goodwill, or a friendlier response | opening | 1 | no |
+| what genuinely matters around what can be sustained in vocation | opening | 1 | no |
+| what still feels deeply true arriving at the answer point | opening | 1 | no |
+| what still feels deeply true becoming unmistakable | opening | 1 | no |
+| your own position around constructive change | opening | 1 | yes |
+| your own position around your stance toward the path | opening | 1 | yes |
+| your path asking for maturity and restraint | opening | 1 | no |
+| your path gaining a little more room to move | opening | 1 | no |
+| your stance toward the path in guidance | opening | 1 | no |
+| your stance toward the path in power | opening | 1 | no |
+| your stance toward the path in reliable support | opening | 1 | no |
+| your stance toward the path in the answer point | opening | 1 | no |
+| your stance toward the path in the public field | opening | 1 | no |
+| your stance toward the path in your own position | opening | 1 | no |
+| your stance toward the path under a small opening | opening | 1 | no |
+| your stance toward the path under grace | opening | 1 | no |
+| your stance toward the path under slow growth | opening | 1 | no |
+| your stance toward the path under the answer point | opening | 1 | no |
+| a sharp decision or cut in caution | pressure | 1 | yes |
+| a sharp decision or cut in obstruction | pressure | 1 | yes |
+| a sharp decision or cut in repetition | pressure | 1 | yes |
+| a sharp decision or cut in what is hidden | pressure | 1 | yes |
+| a sharp decision or cut under closure | pressure | 1 | yes |
+| a solution or unlock moving through caution | pressure | 1 | yes |
+| anxious discussion straining what you are trying to sustain on the path | pressure | 1 | no |
+| choice and branching paths getting tangled in anxious talk and crossed signals | pressure | 1 | yes |
+| choice and branching paths under closure | pressure | 1 | yes |
+| closure, ending, or rest getting tangled in anxious talk and crossed signals | pressure | 1 | yes |
+| closure, ending, or rest in anxious talk and crossed signals | pressure | 1 | yes |
+| closure, ending, or rest in repeated strain and attrition | pressure | 1 | yes |
+| closure, ending, or rest in the meaningful burden | pressure | 1 | yes |
+| closure, ending, or rest in the other person's field | pressure | 1 | yes |
+| closure, ending, or rest moving through repeated strain and attrition | pressure | 1 | yes |
+| closure, ending, or rest moving through repetition | pressure | 1 | yes |
+| closure, ending, or rest under fog or uncertainty | pressure | 1 | yes |
+| closure, ending, or rest under recognition | pressure | 1 | yes |
+| closure, ending, or rest under your own position | pressure | 1 | yes |
+| coffin in Coffin House deepens the signal around closure, ending, or rest | pressure | 1 | no |
+| defensive caution and guarded self-interest concentrated at the center | pressure | 1 | no |
+| defensive caution and guarded self-interest in anxious talk and crossed signals | pressure | 1 | no |
+| defensive caution and guarded self-interest in obstruction | pressure | 1 | no |
+| defensive caution and guarded self-interest in repetition | pressure | 1 | no |
+| defensive caution and guarded self-interest in strategy | pressure | 1 | no |
+| defensive caution and guarded self-interest in what is hidden | pressure | 1 | no |
+| defensive caution and guarded self-interest moving through closure | pressure | 1 | no |
+| defensive caution and guarded self-interest moving through repeated strain and attrition | pressure | 1 | no |
+| defensive caution and guarded self-interest moving through repetition | pressure | 1 | no |
+| defensive caution and guarded self-interest moving through structure | pressure | 1 | no |
+| defensive caution and guarded self-interest under choice | pressure | 1 | no |
+| defensive caution and guarded self-interest under fog or uncertainty | pressure | 1 | no |
+| defensive caution and guarded self-interest under obstruction | pressure | 1 | no |
+| defensive caution and guarded self-interest under repeated strain and attrition | pressure | 1 | no |
+| defensive caution and guarded self-interest under repetition | pressure | 1 | no |
+| defensive caution and guarded self-interest under strategy | pressure | 1 | no |
+| delay shaped by anxious talk and crossed signals | pressure | 1 | no |
+| delay shaped by obstruction | pressure | 1 | no |
+| delay shaped by repeated strain and attrition | pressure | 1 | no |
+| documents or messages needing a close reading before trust is given | pressure | 1 | no |
+| erosion, worry, or leakage in caution | pressure | 1 | no |
+| erosion, worry, or leakage in documents and messages | pressure | 1 | no |
+| erosion, worry, or leakage in repeated strain and attrition | pressure | 1 | no |
+| erosion, worry, or leakage in the answer point | pressure | 1 | no |
+| erosion, worry, or leakage moving through decisive cuts | pressure | 1 | no |
+| erosion, worry, or leakage moving through the answer point | pressure | 1 | no |
+| erosion, worry, or leakage under commitment | pressure | 1 | no |
+| erosion, worry, or leakage under decisive cuts | pressure | 1 | no |
+| erosion, worry, or leakage under endurance | pressure | 1 | no |
+| erosion, worry, or leakage under obstruction | pressure | 1 | no |
+| erosion, worry, or leakage under structure | pressure | 1 | no |
+| hidden knowledge or secrecy getting tangled in anxious talk and crossed signals | pressure | 1 | no |
+| hidden knowledge or secrecy moving through repeated strain and attrition | pressure | 1 | no |
+| leverage or resource control under repeated strain and attrition | pressure | 1 | no |
+| mixed motives in the answer point | pressure | 1 | no |
+| mixed motives in the other person's field | pressure | 1 | no |
+| mixed motives moving through decisive cuts | pressure | 1 | no |
+| mixed motives moving through fog or uncertainty | pressure | 1 | no |
+| mixed motives moving through obstruction | pressure | 1 | no |
+| mixed motives moving through repetition | pressure | 1 | no |
+| mixed motives reinforcing a defensive pattern around the path | pressure | 1 | no |
+| mixed motives under closure | pressure | 1 | no |
+| mixed motives under endurance | pressure | 1 | no |
+| mixed motives under the answer point | pressure | 1 | no |
+| mixed motives under the other person's field | pressure | 1 | no |
+| mixed motives under the public field | pressure | 1 | no |
+| nervous communication in closure | pressure | 1 | yes |
+| nervous communication in recognition | pressure | 1 | yes |
+| nervous communication moving through choice | pressure | 1 | yes |
+| nervous communication moving through commitment | pressure | 1 | yes |
+| nervous communication moving through obstruction | pressure | 1 | yes |
+| nervous communication moving through structure | pressure | 1 | yes |
+| nervous communication moving through the other person's field | pressure | 1 | yes |
+| nervous communication under choice | pressure | 1 | yes |
+| nervous communication under fog or uncertainty | pressure | 1 | yes |
+| nervous communication under obstruction | pressure | 1 | yes |
+| nervous communication under repeated strain and attrition | pressure | 1 | yes |
+| nervous communication under structure | pressure | 1 | yes |
+| nervous communication under the other person's field | pressure | 1 | yes |
+| nervous communication under what is hidden | pressure | 1 | yes |
+| nervous conversation caught in repetition, where talk can sharpen rather than settle the issue | pressure | 1 | no |
+| obstacle or delay in fog or uncertainty | pressure | 1 | yes |
+| obstacle or delay under anxious talk and crossed signals | pressure | 1 | yes |
+| pressure moving through official structures, boundaries, or a system that keeps the tension in place | pressure | 1 | no |
+| repeated friction and pressure in caution | pressure | 1 | no |
+| repeated friction and pressure in decisive cuts | pressure | 1 | no |
+| repeated friction and pressure in fog or uncertainty | pressure | 1 | no |
+| repeated friction and pressure in repeated strain and attrition | pressure | 1 | no |
+| repeated friction and pressure moving through strategy | pressure | 1 | no |
+| repeated friction and pressure under caution | pressure | 1 | no |
+| repeated friction slowly draining conviction | pressure | 1 | no |
+| resources and flow under repeated strain and attrition | pressure | 1 | no |
+| structure, distance, or institution in fog or uncertainty | pressure | 1 | yes |
+| structure, distance, or institution moving through closure | pressure | 1 | yes |
+| structure, distance, or institution moving through repeated strain and attrition | pressure | 1 | yes |
+| structure, distance, or institution moving through strategy | pressure | 1 | yes |
+| structure, distance, or institution under repeated strain and attrition | pressure | 1 | yes |
+| structure, distance, or institution under strategy | pressure | 1 | yes |
+| the burden of calling moving through closure | pressure | 1 | no |
+| the burden of calling moving through strategy | pressure | 1 | no |
+| the burden of calling under repetition | pressure | 1 | no |
+| the commitment question or repeating terms in strategy | pressure | 1 | no |
+| the commitment question or repeating terms under repeated strain and attrition | pressure | 1 | no |
+| the other person's stance in repetition | pressure | 1 | no |
+| uncertainty and mixed signals in caution | pressure | 1 | no |
+| uncertainty and mixed signals in repeated strain and attrition | pressure | 1 | no |
+| uncertainty and mixed signals moving through caution | pressure | 1 | no |
+| uncertainty and mixed signals moving through repeated strain and attrition | pressure | 1 | no |
+| uncertainty and mixed signals moving through repetition | pressure | 1 | no |
+| uncertainty and mixed signals moving through the other person's field | pressure | 1 | no |
+| uncertainty and mixed signals moving through the public field | pressure | 1 | no |
+| uncertainty and mixed signals under decisive cuts | pressure | 1 | no |
+| uncertainty and mixed signals under obstruction | pressure | 1 | no |
+| uncertainty and mixed signals under resource flow | pressure | 1 | no |
+| uncertainty and mixed signals under the meaningful burden | pressure | 1 | no |
+| uncertainty and mixed signals under your own position | pressure | 1 | no |
+| uncertainty feeding on itself until the picture gets harder to read cleanly | pressure | 1 | no |
+| your stance toward the path in repetition | pressure | 1 | no |
+| your stance toward the path moving through caution | pressure | 1 | no |
+| your stance toward the path moving through closure | pressure | 1 | no |
+| your stance toward the path moving through decisive cuts | pressure | 1 | no |
+| your stance toward the path moving through repetition | pressure | 1 | no |
+| your stance toward the path under caution | pressure | 1 | no |
+| your stance toward the path under closure | pressure | 1 | no |
+| your stance toward the path under fog or uncertainty | pressure | 1 | no |
+| your stance toward the path under repetition | pressure | 1 | no |
+
+## Phrase Samples
+
+### movement beginning once your own stance becomes clear
+- Label: `opening`
+- Count: 6
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-2` | quick | focus card 29 @ position 1 (4x9)
+- Example: `harvest-purpose_calling-quick-16` | quick | focus card 29 @ position 19 (4x9)
+- Example: `harvest-purpose_calling-deep-25` | deep_dive | focus card 29 @ position 1 (4x9)
+- Example: `harvest-purpose_calling-quick-33` | quick | focus card 29 @ position 1 (4x9)
+- Example: `harvest-purpose_calling-deep-81` | deep_dive | focus card 29 @ position 1 (4x9)
+
+### complication feeding anxiety, attrition, or the slow damage done by what keeps slipping sideways
+- Label: `pressure`
+- Count: 6
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-13` | deep_dive | focus card 29 @ position 4 (4x9)
+- Example: `harvest-purpose_calling-quick-16` | quick | focus card 29 @ position 19 (4x9)
+- Example: `harvest-purpose_calling-deep-74` | deep_dive | focus card 29 @ position 8 (4x9)
+- Example: `harvest-purpose_calling-deep-76` | deep_dive | focus card 29 @ position 27 (4x9)
+- Example: `harvest-purpose_calling-deep-77` | deep_dive | focus card 29 @ position 6 (4x9)
+
+### endurance around your stance toward the path
+- Label: `opening`
+- Count: 5
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-13` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-deep-67` | deep_dive | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-deep-84` | deep_dive | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-quick-94` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-quick-95` | quick | focus card 29 @ position 35 (4x9)
+
+### slow growth around your stance toward the path
+- Label: `opening`
+- Count: 4
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-8` | quick | focus card 29 @ position 5 (4x9)
+- Example: `harvest-purpose_calling-deep-43` | deep_dive | focus card 29 @ position 5 (4x9)
+- Example: `harvest-purpose_calling-quick-50` | quick | focus card 29 @ position 5 (4x9)
+- Example: `harvest-purpose_calling-deep-55` | deep_dive | focus card 29 @ position 5 (4x9)
+
+### what genuinely matters around your stance toward the path
+- Label: `opening`
+- Count: 4
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-59` | quick | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-quick-61` | quick | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-quick-63` | quick | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-deep-71` | deep_dive | focus card 29 @ position 24 (4x9)
+
+### your role meeting a newly forming situation, where what you do first matters more than what you promise later
+- Label: `opening`
+- Count: 4
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-17` | quick | focus card 29 @ position 13 (4x9)
+- Example: `harvest-purpose_calling-deep-36` | deep_dive | focus card 29 @ position 13 (4x9)
+- Example: `harvest-purpose_calling-quick-78` | quick | focus card 29 @ position 13 (4x9)
+- Example: `harvest-purpose_calling-deep-87` | deep_dive | focus card 29 @ position 13 (4x9)
+
+### your stance toward the path in endurance
+- Label: `opening`
+- Count: 4
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-51` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-quick-71` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-quick-82` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-deep-92` | deep_dive | focus card 29 @ position 35 (4x9)
+
+### your stance toward the path in expansion
+- Label: `opening`
+- Count: 4
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-7` | deep_dive | focus card 29 @ position 3 (4x9)
+- Example: `harvest-purpose_calling-deep-38` | deep_dive | focus card 29 @ position 3 (4x9)
+- Example: `harvest-purpose_calling-deep-48` | deep_dive | focus card 29 @ position 3 (4x9)
+- Example: `harvest-purpose_calling-quick-69` | quick | focus card 29 @ position 3 (4x9)
+
+### a stopped place made heavier by delay, distance, or the feeling of no easy passage
+- Label: `pressure`
+- Count: 4
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-51` | deep_dive | focus card 29 @ position 30 (4x9)
+- Example: `harvest-purpose_calling-deep-59` | deep_dive | focus card 29 @ position 31 (4x9)
+- Example: `harvest-purpose_calling-quick-81` | quick | focus card 29 @ position 26 (4x9)
+- Example: `harvest-purpose_calling-deep-92` | deep_dive | focus card 29 @ position 35 (4x9)
+
+### clearer direction forming around your own stance
+- Label: `opening`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-30` | deep_dive | focus card 29 @ position 16 (4x9)
+- Example: `harvest-purpose_calling-quick-90` | quick | focus card 29 @ position 16 (4x9)
+- Example: `harvest-purpose_calling-quick-91` | quick | focus card 29 @ position 16 (4x9)
+
+### maturity around your stance toward the path
+- Label: `opening`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-12` | deep_dive | focus card 29 @ position 30 (4x9)
+- Example: `harvest-purpose_calling-deep-51` | deep_dive | focus card 29 @ position 30 (4x9)
+- Example: `harvest-purpose_calling-quick-85` | quick | focus card 29 @ position 30 (4x9)
+
+### movement, distance, or transition in what genuinely matters
+- Label: `opening`
+- Count: 3
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-73` | quick | focus card 29 @ position 34 (4x9)
+- Example: `harvest-purpose_calling-deep-79` | deep_dive | focus card 29 @ position 33 (4x9)
+- Example: `harvest-purpose_calling-quick-88` | quick | focus card 29 @ position 14 (4x9)
+
+### reliable support under slow growth
+- Label: `opening`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-30` | quick | focus card 29 @ position 6 (4x9)
+- Example: `harvest-purpose_calling-deep-40` | deep_dive | focus card 29 @ position 13 (4x9)
+- Example: `harvest-purpose_calling-quick-52` | quick | focus card 29 @ position 15 (4x9)
+
+### slower, steadier growth under incoming momentum
+- Label: `opening`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-22` | quick | focus card 29 @ position 19 (4x9)
+- Example: `harvest-purpose_calling-quick-47` | quick | focus card 29 @ position 11 (4x9)
+- Example: `harvest-purpose_calling-deep-50` | deep_dive | focus card 29 @ position 11 (4x9)
+
+### your path becoming clearer through what still feels deeply true
+- Label: `opening`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-2` | deep_dive | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-quick-34` | quick | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-deep-39` | deep_dive | focus card 29 @ position 24 (4x9)
+
+### your stance toward the path in slow growth
+- Label: `opening`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-34` | deep_dive | focus card 29 @ position 5 (4x9)
+- Example: `harvest-purpose_calling-quick-55` | quick | focus card 29 @ position 5 (4x9)
+- Example: `harvest-purpose_calling-deep-88` | deep_dive | focus card 29 @ position 5 (4x9)
+
+### anxious discussion and mental noise crowding your sense of the path
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-9` | deep_dive | focus card 29 @ position 12 (4x9)
+- Example: `harvest-purpose_calling-deep-58` | deep_dive | focus card 29 @ position 12 (4x9)
+- Example: `harvest-purpose_calling-deep-64` | deep_dive | focus card 29 @ position 12 (4x9)
+
+### erosion, worry, or leakage getting tangled in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-27` | quick | focus card 29 @ position 15 (4x9)
+- Example: `harvest-purpose_calling-deep-42` | deep_dive | focus card 29 @ position 28 (4x9)
+- Example: `harvest-purpose_calling-quick-73` | quick | focus card 29 @ position 34 (4x9)
+
+### erosion, worry, or leakage in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-12` | quick | focus card 29 @ position 22 (4x9)
+- Example: `harvest-purpose_calling-quick-19` | quick | focus card 29 @ position 3 (4x9)
+- Example: `harvest-purpose_calling-quick-96` | quick | focus card 29 @ position 21 (4x9)
+
+### erosion, worry, or leakage in the meaningful burden
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-21` | deep_dive | focus card 29 @ position 27 (4x9)
+- Example: `harvest-purpose_calling-quick-43` | quick | focus card 29 @ position 9 (4x9)
+- Example: `harvest-purpose_calling-quick-94` | quick | focus card 29 @ position 35 (4x9)
+
+### mixed messages, gossip, or anxious conversation that can distort what is really happening
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-48` | deep_dive | focus card 29 @ position 3 (4x9)
+- Example: `harvest-purpose_calling-deep-57` | deep_dive | focus card 29 @ position 8 (4x9)
+- Example: `harvest-purpose_calling-quick-92` | quick | focus card 29 @ position 1 (4x9)
+
+### mixed motives in caution
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-30` | quick | focus card 29 @ position 6 (4x9)
+- Example: `harvest-purpose_calling-quick-44` | quick | focus card 29 @ position 15 (4x9)
+- Example: `harvest-purpose_calling-quick-68` | quick | focus card 29 @ position 32 (4x9)
+
+### mixed motives moving through caution
+- Label: `pressure`
+- Count: 3
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-8` | quick | focus card 29 @ position 5 (4x9)
+- Example: `harvest-purpose_calling-quick-17` | quick | focus card 29 @ position 13 (4x9)
+- Example: `harvest-purpose_calling-deep-61` | deep_dive | focus card 29 @ position 30 (4x9)
+
+### nervous communication in repeated strain and attrition
+- Label: `pressure`
+- Count: 3
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-48` | quick | focus card 29 @ position 26 (4x9)
+- Example: `harvest-purpose_calling-deep-71` | deep_dive | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-deep-93` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### new movement beginning as the path starts to shift for the better
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-24` | deep_dive | focus card 29 @ position 27 (4x9)
+- Example: `harvest-purpose_calling-quick-84` | quick | focus card 29 @ position 25 (4x9)
+
+### power around your stance toward the path
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-4` | deep_dive | focus card 29 @ position 15 (4x9)
+- Example: `harvest-purpose_calling-quick-44` | quick | focus card 29 @ position 15 (4x9)
+
+### something tangible beginning to move inside a slower rebuilding process
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-77` | deep_dive | focus card 29 @ position 6 (4x9)
+- Example: `harvest-purpose_calling-deep-90` | deep_dive | focus card 29 @ position 13 (4x9)
+
+### warmth, goodwill, or a friendlier response under what genuinely matters
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-23` | quick | focus card 29 @ position 19 (4x9)
+- Example: `harvest-purpose_calling-deep-53` | deep_dive | focus card 29 @ position 15 (4x9)
+
+### what genuinely matters around constructive change
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-80` | quick | focus card 29 @ position 25 (4x9)
+- Example: `harvest-purpose_calling-quick-86` | quick | focus card 29 @ position 34 (4x9)
+
+### your path becoming clearer through visible progress
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-59` | deep_dive | focus card 29 @ position 31 (4x9)
+- Example: `harvest-purpose_calling-quick-70` | quick | focus card 29 @ position 31 (4x9)
+
+### your path being tested by what it can actually sustain
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-11` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-quick-98` | quick | focus card 29 @ position 35 (4x9)
+
+### your stance toward the path in grace
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-29` | deep_dive | focus card 29 @ position 9 (4x9)
+- Example: `harvest-purpose_calling-deep-70` | deep_dive | focus card 29 @ position 9 (4x9)
+
+### your stance toward the path under guidance
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-3` | deep_dive | focus card 29 @ position 16 (4x9)
+- Example: `harvest-purpose_calling-deep-10` | deep_dive | focus card 29 @ position 16 (4x9)
+
+### your stance toward the path under reliable support
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-1` | quick | focus card 29 @ position 18 (4x9)
+- Example: `harvest-purpose_calling-quick-42` | quick | focus card 29 @ position 18 (4x9)
+
+### your stance toward the path under resource flow
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-20` | deep_dive | focus card 29 @ position 34 (4x9)
+- Example: `harvest-purpose_calling-quick-66` | quick | focus card 29 @ position 34 (4x9)
+
+### your stance toward the path under the public field
+- Label: `opening`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-37` | deep_dive | focus card 29 @ position 20 (4x9)
+- Example: `harvest-purpose_calling-deep-62` | deep_dive | focus card 29 @ position 20 (4x9)
+
+### a necessary cut made harder by repeated drain and stress
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-45` | quick | focus card 29 @ position 33 (4x9)
+- Example: `harvest-purpose_calling-deep-96` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### a sharp decision or cut under strategy
+- Label: `pressure`
+- Count: 2
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-41` | deep_dive | focus card 29 @ position 27 (4x9)
+- Example: `harvest-purpose_calling-deep-83` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### closure, ending, or rest under the meaningful burden
+- Label: `pressure`
+- Count: 2
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-35` | quick | focus card 29 @ position 26 (4x9)
+- Example: `harvest-purpose_calling-quick-95` | quick | focus card 29 @ position 35 (4x9)
+
+### defensive caution and guarded self-interest moving through the other person's field
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-71` | quick | focus card 29 @ position 35 (4x9)
+- Example: `harvest-purpose_calling-deep-82` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### defensive strategy and self-protection shaping the path
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-3` | deep_dive | focus card 29 @ position 16 (4x9)
+- Example: `harvest-purpose_calling-deep-73` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### erosion, worry, or leakage moving through obstruction
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-3` | quick | focus card 29 @ position 20 (4x9)
+- Example: `harvest-purpose_calling-quick-63` | quick | focus card 29 @ position 24 (4x9)
+
+### erosion, worry, or leakage moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-6` | deep_dive | focus card 29 @ position 25 (4x9)
+- Example: `harvest-purpose_calling-deep-63` | deep_dive | focus card 29 @ position 19 (4x9)
+
+### erosion, worry, or leakage under anxious talk and crossed signals
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-86` | deep_dive | focus card 29 @ position 21 (4x9)
+- Example: `harvest-purpose_calling-deep-90` | deep_dive | focus card 29 @ position 13 (4x9)
+
+### fox in Fox House deepens the signal around defensive caution and guarded self-interest
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-0` | quick | focus card 29 @ position 16 (4x9)
+- Example: `harvest-purpose_calling-quick-99` | quick | focus card 29 @ position 34 (4x9)
+
+### mixed motives in closure
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-1` | quick | focus card 29 @ position 18 (4x9)
+- Example: `harvest-purpose_calling-quick-2` | quick | focus card 29 @ position 1 (4x9)
+
+### nervous communication moving through caution
+- Label: `pressure`
+- Count: 2
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-61` | quick | focus card 29 @ position 24 (4x9)
+- Example: `harvest-purpose_calling-quick-75` | quick | focus card 29 @ position 10 (4x9)
+
+### nervous communication under decisive cuts
+- Label: `pressure`
+- Count: 2
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-14` | deep_dive | focus card 29 @ position 28 (4x9)
+- Example: `harvest-purpose_calling-quick-85` | quick | focus card 29 @ position 30 (4x9)
+
+### repeated friction and pressure in obstruction
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-12` | deep_dive | focus card 29 @ position 30 (4x9)
+- Example: `harvest-purpose_calling-deep-35` | deep_dive | focus card 29 @ position 19 (4x9)
+
+### the burden of calling in closure
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-31` | quick | focus card 29 @ position 4 (4x9)
+- Example: `harvest-purpose_calling-deep-43` | deep_dive | focus card 29 @ position 5 (4x9)
+
+### uncertainty and mixed signals in obstruction
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-62` | quick | focus card 29 @ position 29 (4x9)
+- Example: `harvest-purpose_calling-quick-70` | quick | focus card 29 @ position 31 (4x9)
+
+### uncertainty thickened by too much anxious discussion around the path
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-47` | quick | focus card 29 @ position 11 (4x9)
+- Example: `harvest-purpose_calling-deep-87` | deep_dive | focus card 29 @ position 13 (4x9)
+
+### your conviction being worn down by repeated strain
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-14` | quick | focus card 29 @ position 23 (4x9)
+- Example: `harvest-purpose_calling-quick-57` | quick | focus card 29 @ position 23 (4x9)
+
+### your own role caught in complication, mixed motives, or a dynamic that needs clearer boundaries
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-18` | deep_dive | focus card 29 @ position 7 (4x9)
+- Example: `harvest-purpose_calling-quick-87` | quick | focus card 29 @ position 7 (4x9)
+
+### your stance toward the path getting tangled in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-41` | quick | focus card 29 @ position 12 (4x9)
+- Example: `harvest-purpose_calling-deep-91` | deep_dive | focus card 29 @ position 12 (4x9)
+
+### your stance toward the path moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 2
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-27` | deep_dive | focus card 29 @ position 23 (4x9)
+- Example: `harvest-purpose_calling-deep-75` | deep_dive | focus card 29 @ position 23 (4x9)
+
+### a newly forming situation around heart, value, or feeling
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-69` | deep_dive | focus card 29 @ position 22 (4x9)
+
+### a small beginning in maturity
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-62` | quick | focus card 29 @ position 29 (4x9)
+
+### a small but real opening around slower, steadier growth
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-9` | deep_dive | focus card 29 @ position 12 (4x9)
+
+### a small but real opening around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-26` | deep_dive | focus card 29 @ position 2 (4x9)
+
+### a small opening around reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-5` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### a small opening around slower, steadier growth
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-10` | quick | focus card 29 @ position 10 (4x9)
+
+### a small opening around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-77` | quick | focus card 29 @ position 2 (4x9)
+
+### a small opening in slow growth
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-49` | quick | focus card 29 @ position 13 (4x9)
+
+### a small opening under endurance
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-47` | deep_dive | focus card 29 @ position 27 (4x9)
+
+### a small opening under improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-0` | quick | focus card 29 @ position 16 (4x9)
+
+### a small opening under reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-74` | deep_dive | focus card 29 @ position 8 (4x9)
+
+### a small opening under the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-82` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### a small opening under what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-78` | deep_dive | focus card 29 @ position 19 (4x9)
+
+### a solution or unlock in slow growth
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-58` | quick | focus card 29 @ position 14 (4x9)
+
+### a solution or unlock in structural stability
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-21` | quick | focus card 29 @ position 12 (4x9)
+
+### choice and branching paths in slow growth
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-13` | deep_dive | focus card 29 @ position 4 (4x9)
+
+### clearer momentum around a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-72` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### clearer momentum around guidance and signal
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-14` | deep_dive | focus card 29 @ position 28 (4x9)
+
+### clearer momentum around stability and foundations
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-89` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### clearer momentum around the commitment question or repeating terms
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-7` | quick | focus card 29 @ position 28 (4x9)
+
+### clearer momentum around warmth, goodwill, or a friendlier response
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-26` | quick | focus card 29 @ position 36 (4x9)
+
+### clearer momentum around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-54` | deep_dive | focus card 29 @ position 31 (4x9)
+
+### clearer visible progress in guidance
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-15` | deep_dive | focus card 29 @ position 7 (4x9)
+
+### clearer visible progress under a newly forming situation
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-41` | quick | focus card 29 @ position 12 (4x9)
+
+### clearer visible progress under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-96` | quick | focus card 29 @ position 21 (4x9)
+
+### clearer visible progress under maturity
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-56` | quick | focus card 29 @ position 21 (4x9)
+
+### clearer visible progress under reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-66` | deep_dive | focus card 29 @ position 11 (4x9)
+
+### constructive change in improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-21` | deep_dive | focus card 29 @ position 27 (4x9)
+
+### constructive change in what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-39` | quick | focus card 29 @ position 32 (4x9)
+
+### constructive change under a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-60` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### constructive change under endurance
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-28` | quick | focus card 29 @ position 34 (4x9)
+
+### constructive change under maturity
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-32` | quick | focus card 29 @ position 36 (4x9)
+
+### constructive change under the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-27` | deep_dive | focus card 29 @ position 23 (4x9)
+
+### endurance around clearer visible progress
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-23` | deep_dive | focus card 29 @ position 36 (4x9)
+
+### expansion around heart, value, or feeling
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-31` | quick | focus card 29 @ position 4 (4x9)
+
+### expansion around maturity and restraint
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-64` | deep_dive | focus card 29 @ position 12 (4x9)
+
+### expansion around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-19` | quick | focus card 29 @ position 3 (4x9)
+
+### grace around slower, steadier growth
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-89` | quick | focus card 29 @ position 18 (4x9)
+
+### grace around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-43` | quick | focus card 29 @ position 9 (4x9)
+
+### guidance and signal in what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-74` | quick | focus card 29 @ position 32 (4x9)
+
+### guidance and signal under what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-9` | quick | focus card 29 @ position 34 (4x9)
+
+### guidance around maturity and restraint
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-94` | deep_dive | focus card 29 @ position 6 (4x9)
+
+### heart, value, or feeling in grace
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-95` | deep_dive | focus card 29 @ position 8 (4x9)
+
+### heart, value, or feeling in maturity
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-0` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### heart, value, or feeling in reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-98` | deep_dive | focus card 29 @ position 26 (4x9)
+
+### heart, value, or feeling under power
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-18` | quick | focus card 29 @ position 6 (4x9)
+
+### heart, value, or feeling under what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-32` | deep_dive | focus card 29 @ position 14 (4x9)
+
+### improvement or movement around a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-85` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### improvement or movement around constructive change
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-83` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### improvement or movement around maturity and restraint
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-97` | deep_dive | focus card 29 @ position 26 (4x9)
+
+### improvement or movement around movement, distance, or transition
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-22` | deep_dive | focus card 29 @ position 16 (4x9)
+
+### improvement or movement around resources and flow
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-48` | quick | focus card 29 @ position 26 (4x9)
+
+### improvement or movement around warmth, goodwill, or a friendlier response
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-18` | deep_dive | focus card 29 @ position 7 (4x9)
+
+### improvement or movement around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-45` | deep_dive | focus card 29 @ position 17 (4x9)
+
+### incoming momentum around a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-75` | quick | focus card 29 @ position 10 (4x9)
+
+### incoming momentum around clearer visible progress
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-79` | quick | focus card 29 @ position 10 (4x9)
+
+### incoming momentum around constructive change
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-37` | quick | focus card 29 @ position 11 (4x9)
+
+### incoming momentum around maturity and restraint
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-67` | quick | focus card 29 @ position 11 (4x9)
+
+### incoming movement or a concrete update in improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-41` | deep_dive | focus card 29 @ position 27 (4x9)
+
+### incoming movement or a concrete update under a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-1` | deep_dive | focus card 29 @ position 11 (4x9)
+
+### incoming movement or a concrete update under reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-57` | deep_dive | focus card 29 @ position 8 (4x9)
+
+### leverage or resource control in maturity
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-3` | quick | focus card 29 @ position 20 (4x9)
+
+### leverage or resource control under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-75` | deep_dive | focus card 29 @ position 23 (4x9)
+
+### mature confidence and steadier visible progress
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-28` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### maturity and restraint in improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-73` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### maturity and restraint in the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-14` | quick | focus card 29 @ position 23 (4x9)
+
+### maturity and restraint under a newly forming situation
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-86` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### maturity and restraint under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-76` | quick | focus card 29 @ position 11 (4x9)
+
+### maturity and restraint under expansion
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-99` | deep_dive | focus card 29 @ position 4 (4x9)
+
+### maturity and restraint under improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-76` | deep_dive | focus card 29 @ position 27 (4x9)
+
+### maturity around incoming movement or a concrete update
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-19` | deep_dive | focus card 29 @ position 29 (4x9)
+
+### movement, distance, or transition under choice
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-65` | quick | focus card 29 @ position 32 (4x9)
+
+### movement, distance, or transition under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-68` | quick | focus card 29 @ position 32 (4x9)
+
+### movement, distance, or transition under what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-99` | quick | focus card 29 @ position 34 (4x9)
+
+### power around clearer visible progress
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-87` | quick | focus card 29 @ position 7 (4x9)
+
+### real support and movement beginning to gather around your path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-6` | quick | focus card 29 @ position 34 (4x9)
+
+### reliable support in grace
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-17` | deep_dive | focus card 29 @ position 8 (4x9)
+
+### reliable support in guidance
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-81` | quick | focus card 29 @ position 26 (4x9)
+
+### reliable support in your own position
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-29` | quick | focus card 29 @ position 19 (4x9)
+
+### reliable support under a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-58` | deep_dive | focus card 29 @ position 12 (4x9)
+
+### reliable support under improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-5` | quick | focus card 29 @ position 25 (4x9)
+
+### reliable support under reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-35` | quick | focus card 29 @ position 26 (4x9)
+
+### reliable support under your own position
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-68` | deep_dive | focus card 29 @ position 20 (4x9)
+
+### resources and flow in clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-72` | quick | focus card 29 @ position 22 (4x9)
+
+### slow growth around constructive change
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-56` | deep_dive | focus card 29 @ position 15 (4x9)
+
+### slow growth around stability and foundations
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-20` | quick | focus card 29 @ position 6 (4x9)
+
+### slower, steadier growth under a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-53` | quick | focus card 29 @ position 11 (4x9)
+
+### slower, steadier growth under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-33` | deep_dive | focus card 29 @ position 36 (4x9)
+
+### slower, steadier growth under improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-15` | quick | focus card 29 @ position 10 (4x9)
+
+### something tangible beginning to move
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-46` | deep_dive | focus card 29 @ position 14 (4x9)
+
+### steadier judgment around what genuinely matters
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-6` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### structural stability around reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-91` | deep_dive | focus card 29 @ position 12 (4x9)
+
+### the answer point around a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-42` | deep_dive | focus card 29 @ position 28 (4x9)
+
+### the answer point around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-93` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### the commitment question or repeating terms under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-80` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### the public field around clearer visible progress
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-11` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### the public field around heart, value, or feeling
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-35` | deep_dive | focus card 29 @ position 19 (4x9)
+
+### warmth, goodwill, or a friendlier response in power
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-60` | quick | focus card 29 @ position 6 (4x9)
+
+### warmth, goodwill, or a friendlier response in resource flow
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-65` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### warmth, goodwill, or a friendlier response in the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-57` | quick | focus card 29 @ position 23 (4x9)
+
+### warmth, goodwill, or a friendlier response under structural stability
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-93` | quick | focus card 29 @ position 14 (4x9)
+
+### what can be sustained in vocation in a newly forming situation
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-49` | deep_dive | focus card 29 @ position 4 (4x9)
+
+### what can be sustained in vocation in improvement or movement
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-36` | quick | focus card 29 @ position 7 (4x9)
+
+### what can be sustained in vocation under clearer momentum
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-12` | quick | focus card 29 @ position 22 (4x9)
+
+### what genuinely matters around guidance and signal
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-54` | quick | focus card 29 @ position 34 (4x9)
+
+### what genuinely matters around heart, value, or feeling
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-44` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### what genuinely matters around warmth, goodwill, or a friendlier response
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-96` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### what genuinely matters around what can be sustained in vocation
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-63` | deep_dive | focus card 29 @ position 19 (4x9)
+
+### what still feels deeply true arriving at the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-4` | quick | focus card 29 @ position 34 (4x9)
+
+### what still feels deeply true becoming unmistakable
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-83` | quick | focus card 29 @ position 21 (4x9)
+
+### your own position around constructive change
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-24` | quick | focus card 29 @ position 28 (4x9)
+
+### your own position around your stance toward the path
+- Label: `opening`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-46` | quick | focus card 29 @ position 29 (4x9)
+
+### your path asking for maturity and restraint
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-61` | deep_dive | focus card 29 @ position 30 (4x9)
+
+### your path gaining a little more room to move
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-8` | deep_dive | focus card 29 @ position 3 (4x9)
+
+### your stance toward the path in guidance
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-38` | quick | focus card 29 @ position 16 (4x9)
+
+### your stance toward the path in power
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-27` | quick | focus card 29 @ position 15 (4x9)
+
+### your stance toward the path in reliable support
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-52` | deep_dive | focus card 29 @ position 18 (4x9)
+
+### your stance toward the path in the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-31` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### your stance toward the path in the public field
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-40` | quick | focus card 29 @ position 20 (4x9)
+
+### your stance toward the path in your own position
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-25` | quick | focus card 29 @ position 29 (4x9)
+
+### your stance toward the path under a small opening
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-16` | deep_dive | focus card 29 @ position 2 (4x9)
+
+### your stance toward the path under grace
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-64` | quick | focus card 29 @ position 9 (4x9)
+
+### your stance toward the path under slow growth
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-97` | quick | focus card 29 @ position 5 (4x9)
+
+### your stance toward the path under the answer point
+- Label: `opening`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-45` | quick | focus card 29 @ position 33 (4x9)
+
+### a sharp decision or cut in caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-34` | quick | focus card 29 @ position 24 (4x9)
+
+### a sharp decision or cut in obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-33` | quick | focus card 29 @ position 1 (4x9)
+
+### a sharp decision or cut in repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-69` | quick | focus card 29 @ position 3 (4x9)
+
+### a sharp decision or cut in what is hidden
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-23` | deep_dive | focus card 29 @ position 36 (4x9)
+
+### a sharp decision or cut under closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-55` | deep_dive | focus card 29 @ position 5 (4x9)
+
+### a solution or unlock moving through caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-49` | deep_dive | focus card 29 @ position 4 (4x9)
+
+### anxious discussion straining what you are trying to sustain on the path
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-6` | quick | focus card 29 @ position 34 (4x9)
+
+### choice and branching paths getting tangled in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-72` | quick | focus card 29 @ position 22 (4x9)
+
+### choice and branching paths under closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-64` | quick | focus card 29 @ position 9 (4x9)
+
+### closure, ending, or rest getting tangled in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-56` | quick | focus card 29 @ position 21 (4x9)
+
+### closure, ending, or rest in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-77` | quick | focus card 29 @ position 2 (4x9)
+
+### closure, ending, or rest in repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-58` | quick | focus card 29 @ position 14 (4x9)
+
+### closure, ending, or rest in the meaningful burden
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-82` | quick | focus card 29 @ position 35 (4x9)
+
+### closure, ending, or rest in the other person's field
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-86` | quick | focus card 29 @ position 34 (4x9)
+
+### closure, ending, or rest moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-78` | quick | focus card 29 @ position 13 (4x9)
+
+### closure, ending, or rest moving through repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-81` | deep_dive | focus card 29 @ position 1 (4x9)
+
+### closure, ending, or rest under fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-56` | deep_dive | focus card 29 @ position 15 (4x9)
+
+### closure, ending, or rest under recognition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-69` | deep_dive | focus card 29 @ position 22 (4x9)
+
+### closure, ending, or rest under your own position
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-72` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### coffin in Coffin House deepens the signal around closure, ending, or rest
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-98` | deep_dive | focus card 29 @ position 26 (4x9)
+
+### defensive caution and guarded self-interest concentrated at the center
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-79` | quick | focus card 29 @ position 10 (4x9)
+
+### defensive caution and guarded self-interest in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-5` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### defensive caution and guarded self-interest in obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-22` | quick | focus card 29 @ position 19 (4x9)
+
+### defensive caution and guarded self-interest in repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-25` | deep_dive | focus card 29 @ position 1 (4x9)
+
+### defensive caution and guarded self-interest in strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-24` | deep_dive | focus card 29 @ position 27 (4x9)
+
+### defensive caution and guarded self-interest in what is hidden
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-28` | quick | focus card 29 @ position 34 (4x9)
+
+### defensive caution and guarded self-interest moving through closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-22` | deep_dive | focus card 29 @ position 16 (4x9)
+
+### defensive caution and guarded self-interest moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-23` | quick | focus card 29 @ position 19 (4x9)
+
+### defensive caution and guarded self-interest moving through repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-15` | quick | focus card 29 @ position 10 (4x9)
+
+### defensive caution and guarded self-interest moving through structure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-50` | deep_dive | focus card 29 @ position 11 (4x9)
+
+### defensive caution and guarded self-interest under choice
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-39` | quick | focus card 29 @ position 32 (4x9)
+
+### defensive caution and guarded self-interest under fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-53` | deep_dive | focus card 29 @ position 15 (4x9)
+
+### defensive caution and guarded self-interest under obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-5` | quick | focus card 29 @ position 25 (4x9)
+
+### defensive caution and guarded self-interest under repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-49` | quick | focus card 29 @ position 13 (4x9)
+
+### defensive caution and guarded self-interest under repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-21` | quick | focus card 29 @ position 12 (4x9)
+
+### defensive caution and guarded self-interest under strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-54` | quick | focus card 29 @ position 34 (4x9)
+
+### delay shaped by anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-1` | deep_dive | focus card 29 @ position 11 (4x9)
+
+### delay shaped by obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-36` | deep_dive | focus card 29 @ position 13 (4x9)
+
+### delay shaped by repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-93` | quick | focus card 29 @ position 14 (4x9)
+
+### documents or messages needing a close reading before trust is given
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-84` | deep_dive | focus card 29 @ position 35 (4x9)
+
+### erosion, worry, or leakage in caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-89` | quick | focus card 29 @ position 18 (4x9)
+
+### erosion, worry, or leakage in documents and messages
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-45` | deep_dive | focus card 29 @ position 17 (4x9)
+
+### erosion, worry, or leakage in repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-78` | deep_dive | focus card 29 @ position 19 (4x9)
+
+### erosion, worry, or leakage in the answer point
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-84` | quick | focus card 29 @ position 25 (4x9)
+
+### erosion, worry, or leakage moving through decisive cuts
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-52` | deep_dive | focus card 29 @ position 18 (4x9)
+
+### erosion, worry, or leakage moving through the answer point
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-59` | quick | focus card 29 @ position 24 (4x9)
+
+### erosion, worry, or leakage under commitment
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-67` | deep_dive | focus card 29 @ position 35 (4x9)
+
+### erosion, worry, or leakage under decisive cuts
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-67` | quick | focus card 29 @ position 11 (4x9)
+
+### erosion, worry, or leakage under endurance
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-32` | quick | focus card 29 @ position 36 (4x9)
+
+### erosion, worry, or leakage under obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-25` | quick | focus card 29 @ position 29 (4x9)
+
+### erosion, worry, or leakage under structure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-40` | quick | focus card 29 @ position 20 (4x9)
+
+### hidden knowledge or secrecy getting tangled in anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-99` | deep_dive | focus card 29 @ position 4 (4x9)
+
+### hidden knowledge or secrecy moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-39` | deep_dive | focus card 29 @ position 24 (4x9)
+
+### leverage or resource control under repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-80` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### mixed motives in the answer point
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-80` | quick | focus card 29 @ position 25 (4x9)
+
+### mixed motives in the other person's field
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-26` | quick | focus card 29 @ position 36 (4x9)
+
+### mixed motives moving through decisive cuts
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-62` | deep_dive | focus card 29 @ position 20 (4x9)
+
+### mixed motives moving through fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-90` | quick | focus card 29 @ position 16 (4x9)
+
+### mixed motives moving through obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-40` | deep_dive | focus card 29 @ position 13 (4x9)
+
+### mixed motives moving through repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-7` | deep_dive | focus card 29 @ position 3 (4x9)
+
+### mixed motives reinforcing a defensive pattern around the path
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-98` | quick | focus card 29 @ position 35 (4x9)
+
+### mixed motives under closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-28` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### mixed motives under endurance
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-65` | deep_dive | focus card 29 @ position 25 (4x9)
+
+### mixed motives under the answer point
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-66` | quick | focus card 29 @ position 34 (4x9)
+
+### mixed motives under the other person's field
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-33` | deep_dive | focus card 29 @ position 36 (4x9)
+
+### mixed motives under the public field
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-7` | quick | focus card 29 @ position 28 (4x9)
+
+### nervous communication in closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-15` | deep_dive | focus card 29 @ position 7 (4x9)
+
+### nervous communication in recognition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-9` | quick | focus card 29 @ position 34 (4x9)
+
+### nervous communication moving through choice
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-97` | deep_dive | focus card 29 @ position 26 (4x9)
+
+### nervous communication moving through commitment
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-20` | deep_dive | focus card 29 @ position 34 (4x9)
+
+### nervous communication moving through obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-38` | deep_dive | focus card 29 @ position 3 (4x9)
+
+### nervous communication moving through structure
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-11` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### nervous communication moving through the other person's field
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-46` | quick | focus card 29 @ position 29 (4x9)
+
+### nervous communication under choice
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-89` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### nervous communication under fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-34` | deep_dive | focus card 29 @ position 5 (4x9)
+
+### nervous communication under obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-68` | deep_dive | focus card 29 @ position 20 (4x9)
+
+### nervous communication under repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-55` | quick | focus card 29 @ position 5 (4x9)
+
+### nervous communication under structure
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-85` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### nervous communication under the other person's field
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-44` | deep_dive | focus card 29 @ position 32 (4x9)
+
+### nervous communication under what is hidden
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-13` | quick | focus card 29 @ position 35 (4x9)
+
+### nervous conversation caught in repetition, where talk can sharpen rather than settle the issue
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-24` | quick | focus card 29 @ position 28 (4x9)
+
+### obstacle or delay in fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-29` | deep_dive | focus card 29 @ position 9 (4x9)
+
+### obstacle or delay under anxious talk and crossed signals
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-76` | quick | focus card 29 @ position 11 (4x9)
+
+### pressure moving through official structures, boundaries, or a system that keeps the tension in place
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-8` | deep_dive | focus card 29 @ position 3 (4x9)
+
+### repeated friction and pressure in caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-65` | quick | focus card 29 @ position 32 (4x9)
+
+### repeated friction and pressure in decisive cuts
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-26` | deep_dive | focus card 29 @ position 2 (4x9)
+
+### repeated friction and pressure in fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-88` | quick | focus card 29 @ position 14 (4x9)
+
+### repeated friction and pressure in repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-50` | quick | focus card 29 @ position 5 (4x9)
+
+### repeated friction and pressure moving through strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-60` | quick | focus card 29 @ position 6 (4x9)
+
+### repeated friction and pressure under caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-97` | quick | focus card 29 @ position 5 (4x9)
+
+### repeated friction slowly draining conviction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-42` | quick | focus card 29 @ position 18 (4x9)
+
+### resources and flow under repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-79` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### structure, distance, or institution in fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-36` | quick | focus card 29 @ position 7 (4x9)
+
+### structure, distance, or institution moving through closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-88` | deep_dive | focus card 29 @ position 5 (4x9)
+
+### structure, distance, or institution moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-54` | deep_dive | focus card 29 @ position 31 (4x9)
+
+### structure, distance, or institution moving through strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-20` | quick | focus card 29 @ position 6 (4x9)
+
+### structure, distance, or institution under repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-quick-52` | quick | focus card 29 @ position 15 (4x9)
+
+### structure, distance, or institution under strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: yes
+- Example: `harvest-purpose_calling-deep-30` | deep_dive | focus card 29 @ position 16 (4x9)
+
+### the burden of calling moving through closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-38` | quick | focus card 29 @ position 16 (4x9)
+
+### the burden of calling moving through strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-94` | deep_dive | focus card 29 @ position 6 (4x9)
+
+### the burden of calling under repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-29` | quick | focus card 29 @ position 19 (4x9)
+
+### the commitment question or repeating terms in strategy
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-70` | deep_dive | focus card 29 @ position 9 (4x9)
+
+### the commitment question or repeating terms under repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-2` | deep_dive | focus card 29 @ position 24 (4x9)
+
+### the other person's stance in repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-0` | deep_dive | focus card 29 @ position 21 (4x9)
+
+### uncertainty and mixed signals in caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-4` | deep_dive | focus card 29 @ position 15 (4x9)
+
+### uncertainty and mixed signals in repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-47` | deep_dive | focus card 29 @ position 27 (4x9)
+
+### uncertainty and mixed signals moving through caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-10` | quick | focus card 29 @ position 10 (4x9)
+
+### uncertainty and mixed signals moving through repeated strain and attrition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-74` | quick | focus card 29 @ position 32 (4x9)
+
+### uncertainty and mixed signals moving through repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-19` | deep_dive | focus card 29 @ position 29 (4x9)
+
+### uncertainty and mixed signals moving through the other person's field
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-51` | quick | focus card 29 @ position 35 (4x9)
+
+### uncertainty and mixed signals moving through the public field
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-83` | quick | focus card 29 @ position 21 (4x9)
+
+### uncertainty and mixed signals under decisive cuts
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-16` | deep_dive | focus card 29 @ position 2 (4x9)
+
+### uncertainty and mixed signals under obstruction
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-37` | deep_dive | focus card 29 @ position 20 (4x9)
+
+### uncertainty and mixed signals under resource flow
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-11` | quick | focus card 29 @ position 35 (4x9)
+
+### uncertainty and mixed signals under the meaningful burden
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-4` | quick | focus card 29 @ position 34 (4x9)
+
+### uncertainty and mixed signals under your own position
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-31` | deep_dive | focus card 29 @ position 33 (4x9)
+
+### uncertainty feeding on itself until the picture gets harder to read cleanly
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-10` | deep_dive | focus card 29 @ position 16 (4x9)
+
+### your stance toward the path in repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-53` | quick | focus card 29 @ position 11 (4x9)
+
+### your stance toward the path moving through caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-46` | deep_dive | focus card 29 @ position 14 (4x9)
+
+### your stance toward the path moving through closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-95` | deep_dive | focus card 29 @ position 8 (4x9)
+
+### your stance toward the path moving through decisive cuts
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-60` | deep_dive | focus card 29 @ position 10 (4x9)
+
+### your stance toward the path moving through repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-66` | deep_dive | focus card 29 @ position 11 (4x9)
+
+### your stance toward the path under caution
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-32` | deep_dive | focus card 29 @ position 14 (4x9)
+
+### your stance toward the path under closure
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-deep-17` | deep_dive | focus card 29 @ position 8 (4x9)
+
+### your stance toward the path under fog or uncertainty
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-18` | quick | focus card 29 @ position 6 (4x9)
+
+### your stance toward the path under repetition
+- Label: `pressure`
+- Count: 1
+- Suspicious: no
+- Example: `harvest-purpose_calling-quick-37` | quick | focus card 29 @ position 11 (4x9)
