@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     url: "https://36cards.com",
     images: [
       {
-        url: "https://36cards.com/brand/header.png",
-        width: 1536,
-        height: 1024,
+        url: "https://36cards.com/brand/og-image-1200x630.png",
+        width: 1200,
+        height: 630,
         alt: "36 Cards — Lenormand cards laid on a table",
       },
     ],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "36 Cards",
     description: "Ritual-style Lenormand readings with houses, diagonals, knighting, and rich narrative interpretation.",
-    images: ["https://36cards.com/brand/header.png"],
+    images: ["https://36cards.com/brand/og-image-1200x630.png"],
   },
   verification: GOOGLE_SITE_VERIFICATION
     ? {
@@ -56,6 +56,28 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "36 Cards",
+              url: "https://36cards.com",
+              description:
+                "Premium Lenormand ritual app with 3-card and Grand Tableau readings, deep layered techniques, and rich narrative interpretation.",
+              applicationCategory: "LifestyleApplication",
+              operatingSystem: "Any",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+            }),
+          }}
+        />
+      </head>
       <body>
         {children}
         <Suspense fallback={null}>
