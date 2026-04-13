@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { BrandHeader } from "@/components/BrandHeader";
 import { BrandFooter } from "@/components/BrandFooter";
 import { CARD_BY_SLUG, CARD_MEANINGS } from "@/lib/content/cards";
+import { HOUSE_MEANINGS } from "@/lib/content/houses";
 
 export function generateStaticParams() {
   return CARD_MEANINGS.map((card) => ({ slug: card.slug }));
@@ -96,6 +97,22 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
                 In practice, {card.name} becomes most useful when you read it as a pressure, opportunity, or behavioral cue rather than
                 a fixed prediction. The sections below show how its tone shifts between general, relationship, and work contexts.
               </p>
+              {(() => {
+                const house = HOUSE_MEANINGS.find((h) => h.id === card.id);
+                if (!house) return null;
+                return (
+                  <p className="mt-3 text-sm text-[color:var(--brand-muted)]">
+                    In the Grand Tableau, position {card.id} is{" "}
+                    <Link
+                      href={`/glossary/houses/${house.id}`}
+                      className="font-medium text-[color:var(--brand-text)] underline underline-offset-2 hover:opacity-80"
+                    >
+                      {house.name}
+                    </Link>
+                    {" "}({house.shortFocus}).
+                  </p>
+                );
+              })()}
             </div>
           </div>
 

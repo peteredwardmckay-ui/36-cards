@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       images: [
         {
-          url: "https://36cards.com/brand/opengraph-share.png",
+          url: "https://36cards.com/brand/og-image-1200x630.png",
           width: 1200,
           height: 630,
           alt: `${technique.title} glossary page`,
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${technique.title} - 36 Cards Glossary`,
       description: `${technique.title}: ${technique.summary}`,
-      images: ["https://36cards.com/brand/opengraph-share.png"],
+      images: ["https://36cards.com/brand/og-image-1200x630.png"],
     },
   };
 }
@@ -60,6 +60,10 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
   const technique = TECHNIQUES_BY_SLUG.get(slug);
   if (!technique) return notFound();
 
+  const techIndex = TECHNIQUES.findIndex((t) => t.slug === slug);
+  const prevTech = techIndex > 0 ? TECHNIQUES[techIndex - 1] : null;
+  const nextTech = techIndex < TECHNIQUES.length - 1 ? TECHNIQUES[techIndex + 1] : null;
+
   return (
     <main className="min-h-screen px-4 py-5 sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-4">
@@ -68,26 +72,54 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
           <p className="text-xs uppercase tracking-[0.12em] text-[color:var(--brand-muted)]">
             <Link href="/glossary" className="hover:underline">Glossary</Link> / Techniques
           </p>
-          <h1 className="text-3xl font-semibold">{technique.title}</h1>
+          <h1 className="mt-2 text-3xl font-semibold">{technique.title}</h1>
           <p className="mt-2 text-sm text-[color:var(--brand-muted)]">{technique.summary}</p>
-          <p className="mt-3 text-sm text-[color:var(--brand-text)]">
-            This technique matters because the reading engine is not just summarizing nearby cards. It uses structural relationships on
-            the board to decide which pressures are immediate, which themes are developing, and which patterns belong to the wider story.
-          </p>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[color:var(--brand-muted)]">
-            {technique.details.map((detail) => (
-              <li key={detail}>{detail}</li>
-            ))}
-          </ul>
+          <p className="mt-3 text-sm leading-relaxed text-[color:var(--brand-text)]">{technique.description}</p>
+
+          <section className="mt-5">
+            <h2 className="text-xl font-semibold">How It Works</h2>
+            <ul className="mt-3 space-y-3 text-sm text-[color:var(--brand-muted)]">
+              {technique.howItWorks.map((point) => (
+                <li key={point} className="flex gap-3">
+                  <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--brand-accent)]" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <section className="mt-5 rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
-            <h2 className="text-lg font-semibold">Why It Matters In Practice</h2>
-            <p className="mt-2 text-sm text-[color:var(--brand-muted)]">
-              If you see this technique mentioned in a reading, it usually means the interpretation is leaning on board structure rather
-              than just symbolic keywords. That is often where the reading becomes more precise, because it explains not only what a card
-              means, but how it is acting in relation to the rest of the spread.
-            </p>
+            <h2 className="text-lg font-semibold">Why It Matters</h2>
+            <p className="mt-2 text-sm leading-relaxed text-[color:var(--brand-muted)]">{technique.whyItMatters}</p>
           </section>
+
+          <section className="mt-5 rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
+            <h2 className="text-lg font-semibold">Example</h2>
+            <p className="mt-2 text-sm leading-relaxed text-[color:var(--brand-muted)] italic">{technique.example}</p>
+          </section>
+
+          <nav className="mt-6 flex items-center justify-between border-t border-[color:var(--brand-border)] pt-4">
+            {prevTech ? (
+              <Link
+                href={`/glossary/techniques/${prevTech.slug}`}
+                className="text-sm text-[color:var(--brand-muted)] hover:text-[color:var(--brand-text)] hover:underline"
+              >
+                &larr; {prevTech.title}
+              </Link>
+            ) : (
+              <span />
+            )}
+            {nextTech ? (
+              <Link
+                href={`/glossary/techniques/${nextTech.slug}`}
+                className="text-sm text-[color:var(--brand-muted)] hover:text-[color:var(--brand-text)] hover:underline"
+              >
+                {nextTech.title} &rarr;
+              </Link>
+            ) : (
+              <span />
+            )}
+          </nav>
         </article>
         <BrandFooter />
       </div>
