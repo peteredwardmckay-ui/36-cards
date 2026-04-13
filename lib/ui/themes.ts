@@ -37,7 +37,7 @@ export const THEMES: ThemeConfig[] = [
     subtitle: "Timeless cartomancy deck",
     bodyClass: "theme-ethiopian",
     cardBackAsset: "/brand/card-backs/traditional.webp",
-    previewCardFile: "001 Rider.png",
+    previewCardFile: "001 Rider.webp",
     displayFontClass: "font-display-botanical",
     bodyFontClass: "font-body-quiet",
     palette: {
@@ -60,7 +60,7 @@ export const THEMES: ThemeConfig[] = [
     subtitle: "Gentle detailed deck",
     bodyClass: "theme-ethiopian",
     cardBackAsset: "/brand/card-backs/botanical-engraving.webp",
-    previewCardFile: "001 Rider.png",
+    previewCardFile: "001 Rider.webp",
     displayFontClass: "font-display-botanical",
     bodyFontClass: "font-body-quiet",
     palette: {
@@ -83,7 +83,7 @@ export const THEMES: ThemeConfig[] = [
     subtitle: "Evocative calm deck",
     bodyClass: "theme-ethiopian",
     cardBackAsset: "/brand/card-backs/hand-illustrated.webp",
-    previewCardFile: "001 Rider.png",
+    previewCardFile: "001 Rider.webp",
     displayFontClass: "font-display-botanical",
     bodyFontClass: "font-body-quiet",
     palette: {
@@ -106,7 +106,7 @@ export const THEMES: ThemeConfig[] = [
     subtitle: "Minimal premium deck",
     bodyClass: "theme-ethiopian",
     cardBackAsset: "/brand/card-backs/minimal-lux.webp",
-    previewCardFile: "001 Rider.png",
+    previewCardFile: "001 Rider.webp",
     displayFontClass: "font-display-botanical",
     bodyFontClass: "font-body-quiet",
     palette: {
@@ -129,7 +129,7 @@ export const THEMES: ThemeConfig[] = [
     subtitle: "Cinematic midnight deck",
     bodyClass: "theme-ethiopian",
     cardBackAsset: "/brand/card-backs/neo-noir.webp",
-    previewCardFile: "001d Rider.png",
+    previewCardFile: "001d Rider.webp",
     displayFontClass: "font-display-botanical",
     bodyFontClass: "font-body-quiet",
     palette: {
@@ -152,7 +152,7 @@ export const THEMES: ThemeConfig[] = [
     subtitle: "Vibrant whimsical deck",
     bodyClass: "theme-ethiopian",
     cardBackAsset: "/brand/card-backs/ethiopian.webp",
-    previewCardFile: "001 Rider.png",
+    previewCardFile: "001 Rider.webp",
     displayFontClass: "font-display-botanical",
     bodyFontClass: "font-body-quiet",
     palette: {

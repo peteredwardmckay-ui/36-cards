@@ -40,22 +40,16 @@ function getCardFaceSources(themeId: string, cardId: number, cardName: string): 
   const slug = toCardSlug(cardName);
   return [
     `/cards/${themeId}/${id}-${slug}.webp`,
-    `/cards/${themeId}/${id}-${slug}.png`,
     `/cards/${themeId}/${id}.webp`,
-    `/cards/${themeId}/${id}.png`,
     `/cards/${themeId}/${slug}.webp`,
-    `/cards/${themeId}/${slug}.png`,
   ];
 }
 
 function getAspectProbeSources(themeId: string): string[] {
   return [
     `/cards/${themeId}/01-rider.webp`,
-    `/cards/${themeId}/01-rider.png`,
     `/cards/${themeId}/01.webp`,
-    `/cards/${themeId}/01.png`,
     "/cards/botanical-engraving/01-rider.webp",
-    "/cards/botanical-engraving/01-rider.png",
   ];
 }
 
