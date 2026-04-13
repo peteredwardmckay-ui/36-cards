@@ -39,6 +39,9 @@ function buildTravelCardCopy(
       `${card.name} tends to help most in travel matters when you ${card.action}, especially around ${card.keywords[0]} and ${secondaryKeyword}`,
       `The deeper message is that ${card.coreMeaning}, which makes preparation and adaptability more useful than speed alone`,
       `In practical terms, ${card.name} keeps attention on ${voice.area}; keep the journey workable and avoid ${card.caution.toLowerCase()}`,
+      `The consequence of ignoring ${card.name} here is that ${card.caution.toLowerCase()} starts shaping the journey before you notice it`,
+      `Timing matters: ${card.name} suggests the window for ${card.keywords[0]} is open now, but ${secondaryKeyword} will shift the route if left unaddressed`,
+      `Other travellers or companions are affected too — ${card.name} puts ${card.keywords[0]} into the shared space where coordination matters`,
     ],
     summary: `${card.name} shapes the journey through ${card.keywords[0]}`,
   };
@@ -63,6 +66,9 @@ function buildLegalAdminCardCopy(
       `${card.name} is strongest here when you ${card.action} and leave a clean trail behind you, especially around ${card.keywords[0]} and ${secondaryKeyword}`,
       `The deeper message is that ${card.coreMeaning}, so what is clear, documented, and timely will usually carry more weight than verbal reassurance`,
       `In this subject, ${card.name} asks for precision without panic inside ${voice.area}; avoid ${card.caution.toLowerCase()}`,
+      `If ${card.name} is neglected in the process, ${card.caution.toLowerCase()} tends to create delays that compound — the administrative cost rises quietly`,
+      `The pace of the process matters: ${card.keywords[0]} handled early keeps the formal machinery running, while ${secondaryKeyword} left unresolved creates bottlenecks`,
+      `Other parties in the process are watching — ${card.name} affects how counterparts, officials, or institutions read your position on ${card.keywords[0]}`,
     ],
     summary: `${card.name} shapes the process through ${card.keywords[0]}`,
   };
@@ -86,6 +92,9 @@ function buildPurposeCallingCardCopy(
       `${card.name} points to the part of the path that needs honest attention first, especially around ${card.keywords[0]} and ${secondaryKeyword}`,
       `The deeper message is that ${card.coreMeaning}, so the right move is usually the one you can keep living with after the mood passes`,
       `In this subject, ${card.name} is strongest when you ${card.action}, rather than letting ${card.caution.toLowerCase()} decide the course`,
+      `The cost of avoiding ${card.name} here is a path that looks right but feels hollow — ${card.caution.toLowerCase()} slowly replaces genuine direction`,
+      `This is not urgent in a clock sense, but ${card.keywords[0]} is quietly shaping what becomes available next — the window is present, not permanent`,
+      `The people around you can sense where you stand with ${card.keywords[0]} — purpose is visible even when unspoken, and so is its absence`,
     ],
     summary: `${card.name} shapes the path through ${card.keywords[0]}`,
   };
@@ -105,6 +114,9 @@ function buildDefaultCardCopy(
       `${card.name} keeps attention on ${card.keywords[0]} and ${secondaryKeyword} in ${voice.area}, where ${voice.pressure} matters more than appearances`,
       `${card.name} works best here when you ${card.action}, while staying aware of ${card.caution.toLowerCase()}`,
       `In ${voice.area}, ${card.coreMeaning}, so ${voice.nextMove} is usually stronger than force`,
+      `Left unattended, ${card.name} lets ${card.caution.toLowerCase()} build quietly in ${voice.area} until the cost of inaction outweighs the effort of change`,
+      `The timing dimension of ${card.name} matters: ${card.keywords[0]} is active now and ${secondaryKeyword} is following — what you do in this window shapes what becomes possible next`,
+      `${card.name} affects the people around you too — ${card.keywords[0]} in ${voice.area} is not just personal, it reshapes what others can offer or expect`,
     ],
     summary: `${card.name} shapes ${voice.area} through ${card.keywords[0]}`,
   };

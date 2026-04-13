@@ -84,6 +84,15 @@ export function buildPairInterpretationEntries(): InterpretationEntry[] {
             sentenceCase(
               `Read this pair as one movement inside ${voice.area}: ${left?.action ?? "act with care"} while staying aware of ${right?.caution?.toLowerCase() ?? "context"}`,
             ),
+            sentenceCase(
+              `If this pair goes unaddressed, the tension between ${left?.keywords[0] ?? "signal"} and ${right?.keywords[0] ?? "context"} tends to resolve itself in ways you did not choose — better to act while the shape is still clear`,
+            ),
+            sentenceCase(
+              `The sequence matters: ${left?.name ?? "Card A"} is setting the conditions that ${right?.name ?? "Card B"} will either amplify or complicate — what happens first determines what becomes possible`,
+            ),
+            sentenceCase(
+              `This pair does not just describe your position — it shapes what others in ${voice.area} can see and respond to, making ${themeFocus} a shared condition rather than a private concern`,
+            ),
           ],
           summary: sentenceCase(`${left?.name ?? "Card A"} and ${right?.name ?? "Card B"} combine around ${themeFocus}`),
         },

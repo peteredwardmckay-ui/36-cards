@@ -52,6 +52,12 @@ export function buildTemplateInterpretationEntries(): InterpretationEntry[] {
             sentenceCase(
               `Diagonal evidence is most useful when it shows how earlier choices become later conditions in ${voice.area}`,
             ),
+            sentenceCase(
+              `The diagonal is a timeline compressed into position — what appears early on this line creates the context for what appears later, and the pattern rarely reverses on its own`,
+            ),
+            sentenceCase(
+              `Cards on this diagonal share a developmental arc, so read them as stages of the same process rather than separate events in ${voice.area}`,
+            ),
           ],
         },
         meta: {
@@ -101,6 +107,12 @@ export function buildTemplateInterpretationEntries(): InterpretationEntry[] {
             sentenceCase(
               `Indirect links often show why events move faster or slower than expected in ${voice.area}`,
             ),
+            sentenceCase(
+              `Knight connections work like off-screen characters — their influence is real even when it is not immediately visible, and it shapes ${voice.pressure} from an angle you might not be watching`,
+            ),
+            sentenceCase(
+              `The cards reached by knighting are not random noise; they carry the weight of what is trying to enter ${voice.area} through the side door rather than the front`,
+            ),
           ],
         },
         meta: {
@@ -147,6 +159,12 @@ export function buildTemplateInterpretationEntries(): InterpretationEntry[] {
             sentenceCase("Near cards speak first, medium cards gather, and far cards give context to the rest."),
             sentenceCase(
               `Use distance as a pacing tool inside ${voice.area}, not as a fixed prediction`,
+            ),
+            sentenceCase(
+              `Proximity tells you what is pressing and what is forming — the near cards are already active, while the far cards describe the weather that is coming`,
+            ),
+            sentenceCase(
+              `The gradient from near to far is a priority map: attend to what is closest first, let middle-distance cards inform your strategy, and keep far cards as context rather than worry`,
             ),
           ],
         },
@@ -207,6 +225,12 @@ export function buildTemplateInterpretationEntries(): InterpretationEntry[] {
             sentenceCase("Role framing should stay specific enough to be useful, while remaining inclusive and flexible."),
             sentenceCase(
               `Perspective matters here because it shows where ${voice.value} is most likely to be tested`,
+            ),
+            sentenceCase(
+              `The significator anchors the reading to a lived viewpoint — without it, the cards describe a situation but not who is standing inside it or what they can actually do`,
+            ),
+            sentenceCase(
+              `Everything else in the spread is relative to this position; the significator is not just a label, it is the center of gravity that makes distance, direction, and adjacency meaningful`,
             ),
           ],
         },
