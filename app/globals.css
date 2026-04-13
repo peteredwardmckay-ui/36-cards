@@ -490,5 +490,10 @@ html.dark select {
   color: var(--brand-text);
 }
 
+/* Fix hardcoded bg-white/35 boxes in dark mode (glossary panels etc.) */
+html.dark [class*="bg-white/"] {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
 /* Logo inversion: dark PNG asset inverts to white in dark mode */
 html.dark .brand-wordmark { filter: invert(1); mix-blend-mode: normal; }
