@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BrandHeader } from "@/components/BrandHeader";
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       images: [
         {
-          url: "https://36cards.com/brand/opengraph-share.png",
+          url: "https://36cards.com/brand/og-image-1200x630.png",
           width: 1200,
           height: 630,
           alt: `${card.name} glossary page`,
@@ -50,15 +51,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${card.id}. ${card.name} - 36 Cards Glossary`,
       description: `${card.name} Lenormand meanings, core variants, and domain-specific interpretations in the 36 Cards glossary.`,
-      images: ["https://36cards.com/brand/opengraph-share.png"],
+      images: ["https://36cards.com/brand/og-image-1200x630.png"],
     },
   };
+}
+
+function getCardImagePath(cardId: number, cardSlug: string): string {
+  return `/cards/traditional/${String(cardId).padStart(2, "0")}-${cardSlug}.webp`;
 }
 
 export default async function CardGlossaryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const card = CARD_BY_SLUG.get(slug);
   if (!card) return notFound();
+
+  const cardIndex = CARD_MEANINGS.findIndex((c) => c.slug === slug);
+  const prevCard = cardIndex > 0 ? CARD_MEANINGS[cardIndex - 1] : null;
+  const nextCard = cardIndex < CARD_MEANINGS.length - 1 ? CARD_MEANINGS[cardIndex + 1] : null;
 
   return (
     <main className="min-h-screen px-4 py-5 sm:px-6 lg:px-8">
@@ -68,13 +77,27 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
           <p className="text-xs uppercase tracking-[0.12em] text-[color:var(--brand-muted)]">
             <Link href="/glossary" className="hover:underline">Glossary</Link> / Cards
           </p>
-          <h1 className="text-3xl font-semibold">{card.id}. {card.name}</h1>
-          <p className="mt-2 text-sm text-[color:var(--brand-muted)]">{card.keywords.join(" - ")}</p>
-          <p className="mt-3 text-sm text-[color:var(--brand-text)]">{card.coreMeaning}</p>
-          <p className="mt-3 text-sm text-[color:var(--brand-muted)]">
-            In practice, {card.name} becomes most useful when you read it as a pressure, opportunity, or behavioral cue rather than
-            a fixed prediction. The sections below show how its tone shifts between general, relationship, and work contexts.
-          </p>
+
+          <div className="mt-4 flex flex-col items-start gap-6 sm:flex-row">
+            <div className="relative w-36 shrink-0 overflow-hidden rounded-xl border border-[color:var(--brand-border)] shadow-md sm:w-44">
+              <Image
+                src={getCardImagePath(card.id, card.slug)}
+                alt={`${card.name} — Lenormand card illustration`}
+                width={400}
+                height={600}
+                className="h-auto w-full"
+              />
+            </div>
+            <div>
+              <h1 className="text-3xl font-semibold">{card.id}. {card.name}</h1>
+              <p className="mt-2 text-sm text-[color:var(--brand-muted)]">{card.keywords.join(" - ")}</p>
+              <p className="mt-3 text-sm text-[color:var(--brand-text)]">{card.coreMeaning}</p>
+              <p className="mt-3 text-sm text-[color:var(--brand-muted)]">
+                In practice, {card.name} becomes most useful when you read it as a pressure, opportunity, or behavioral cue rather than
+                a fixed prediction. The sections below show how its tone shifts between general, relationship, and work contexts.
+              </p>
+            </div>
+          </div>
 
           <section className="mt-5 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
@@ -126,6 +149,29 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
               </div>
             </div>
           </section>
+
+          <nav className="mt-6 flex items-center justify-between border-t border-[color:var(--brand-border)] pt-4">
+            {prevCard ? (
+              <Link
+                href={`/glossary/cards/${prevCard.slug}`}
+                className="text-sm text-[color:var(--brand-muted)] hover:text-[color:var(--brand-text)] hover:underline"
+              >
+                &larr; {prevCard.id}. {prevCard.name}
+              </Link>
+            ) : (
+              <span />
+            )}
+            {nextCard ? (
+              <Link
+                href={`/glossary/cards/${nextCard.slug}`}
+                className="text-sm text-[color:var(--brand-muted)] hover:text-[color:var(--brand-text)] hover:underline"
+              >
+                {nextCard.id}. {nextCard.name} &rarr;
+              </Link>
+            ) : (
+              <span />
+            )}
+          </nav>
         </article>
         <BrandFooter />
       </div>
