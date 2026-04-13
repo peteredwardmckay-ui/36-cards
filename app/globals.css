@@ -95,6 +95,14 @@ a {
   text-decoration: none;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .ritual-panel {
   border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 78%, white 22%);
   border-radius: var(--ui-radius-xl);
