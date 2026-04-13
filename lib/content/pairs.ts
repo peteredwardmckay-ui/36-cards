@@ -1424,6 +1424,527 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     love: "Tree + Cross suggests the relationship requires long-term emotional care under difficult conditions, where endurance and rest must coexist.",
     work: "Tree + Cross marks a career or health burden that demands both long-term patience and clear limits on what you take on.",
   },
+
+  // ── Round 2: GT-adjacent high-signal pairs ─────────────────────────────
+
+  "20-29": {
+    general: "Garden + Querent places you in a social or public-facing context — your visibility, network, and community engagement are the active factors.",
+    love: "Garden + Querent suggests your social presence, openness to others, and willingness to be seen shape the relationship dynamic.",
+    work: "Garden + Querent marks your public profile, networking effort, or community engagement as the asset the situation most depends on.",
+  },
+  "8-16": {
+    general: "Coffin + Stars: an ending creates the conditions for clearer guidance — what was clouding the direction has to close before the signal sharpens.",
+    love: "Coffin + Stars suggests letting go of an old emotional pattern clears the way for a truer sense of direction in the relationship.",
+    work: "Coffin + Stars points to a closure that improves strategic clarity — retiring something obsolete reveals a better long-term path.",
+  },
+  "7-16": {
+    general: "Snake + Stars brings strategic complexity into dialogue with long-range guidance — the direction is right but the path is indirect.",
+    love: "Snake + Stars suggests desire and deeper purpose are negotiating with each other, where clarity emerges only through honest self-examination.",
+    work: "Snake + Stars marks a strategic situation where the long-term vision is sound but the route requires careful political navigation.",
+  },
+  "27-36": {
+    general: "Letter + Cross places a document, message, or written statement at the centre of a serious obligation or consequence.",
+    love: "Letter + Cross suggests a difficult conversation or message that must be delivered honestly, even though the weight of it is real.",
+    work: "Letter + Cross marks correspondence, notices, or documentation carrying serious professional accountability.",
+  },
+  "26-36": {
+    general: "Book + Cross places hidden knowledge or private truth at the centre of a serious obligation — what is not yet known or spoken carries real weight.",
+    love: "Book + Cross suggests unspoken emotional truth is making a relational burden heavier than it needs to be.",
+    work: "Book + Cross marks confidential information or specialist knowledge tied to a serious professional responsibility.",
+  },
+  "25-35": {
+    general: "Ring + Anchor locks commitment into lasting form — what is agreed on here is meant to hold, and the terms need to reflect that.",
+    love: "Ring + Anchor is a strong signal for durable partnership — commitment built to last through consistency and follow-through.",
+    work: "Ring + Anchor supports long-term contracts, career commitments, and agreements designed for sustained reliability.",
+  },
+  "24-34": {
+    general: "Heart + Fish connects feeling to flow — emotional generosity and practical resource exchange become part of the same movement.",
+    love: "Heart + Fish suggests love expressed through giving, financial sharing, or practical support that reflects genuine emotional care.",
+    work: "Heart + Fish points to values-driven work generating financial flow, or motivation improving when the numbers align with what matters.",
+  },
+  "22-32": {
+    general: "Crossroads + Moon places emotional sensitivity, intuition, or reputation at a decision point — what you feel may be as important as what you know.",
+    love: "Crossroads + Moon suggests the relationship decision is shaped by deep emotional currents, mood, and what intuition is telling you.",
+    work: "Crossroads + Moon marks a creative or reputational fork where emotional intelligence guides the better strategic choice.",
+  },
+  "16-25": {
+    general: "Stars + Ring aligns long-range direction with a durable commitment — the agreement gains purpose when both sides share the same vision.",
+    love: "Stars + Ring suggests a commitment grounded in shared hopes and long-term alignment rather than convenience or habit.",
+    work: "Stars + Ring supports strategic partnerships, purpose-driven contracts, or agreements that serve a clear long-range goal.",
+  },
+  "16-24": {
+    general: "Stars + Heart aligns values with direction — the path that honours genuine feeling is also the one that serves the longer arc.",
+    love: "Stars + Heart is a strong signal for relationship alignment, where shared values and mutual hopes create a clear, emotionally grounded direction.",
+    work: "Stars + Heart supports purpose-driven work where long-term vision and personal motivation point the same way.",
+  },
+  "15-24": {
+    general: "Bear + Heart brings strength to feeling — protective care, generous resource power, and values working together.",
+    love: "Bear + Heart suggests the relationship benefits from strong, generous care — love backed by the capacity to protect and provide.",
+    work: "Bear + Heart points to leadership motivated by genuine values, where authority and care reinforce each other.",
+  },
+  "15-23": {
+    general: "Bear + Mice warns that resource power is being drained by small, persistent losses — strength can erode if leaks are not patched.",
+    love: "Bear + Mice suggests the protector in the relationship is being quietly worn down by accumulated small frustrations or imbalances.",
+    work: "Bear + Mice marks financial or leadership resources being depleted by persistent low-level operational stress.",
+  },
+  "15-16": {
+    general: "Bear + Stars brings resource power under strategic guidance — strength is most useful when it serves a clear long-range direction.",
+    love: "Bear + Stars supports a relationship where security and shared vision reinforce each other, making long-term plans feel genuinely achievable.",
+    work: "Bear + Stars marks strong financial or leadership resources aligned with clear strategic direction — power with purpose.",
+  },
+  "14-24": {
+    general: "Fox + Heart places feeling under careful scrutiny — the care may be real, but discernment about how it is being expressed or received still matters.",
+    love: "Fox + Heart asks whether caution is protecting the relationship wisely or keeping genuine feeling at arm's length.",
+    work: "Fox + Heart suggests evaluating whether values-driven decisions are being made honestly or being shaped by self-interest.",
+  },
+  "14-23": {
+    general: "Fox + Mice combines strategic caution with quiet attrition — discernment is needed to identify where the drain is coming from before it spreads.",
+    love: "Fox + Mice suggests small relational tensions are being handled too guardedly, where direct honesty would stop the erosion faster than vigilance.",
+    work: "Fox + Mice points to an operational leak that requires tactical diagnosis — identify the source of attrition before it compounds.",
+  },
+  "12-22": {
+    general: "Birds + Crossroads places a decision in the middle of active conversation — the choice is being discussed, debated, or talked through in real time.",
+    love: "Birds + Crossroads suggests the relationship direction is being worked out through ongoing dialogue, where the conversations themselves shape the decision.",
+    work: "Birds + Crossroads marks a strategic decision being negotiated through meetings, calls, or rapid exchanges that require clear communication.",
+  },
+  "8-9": {
+    general: "Coffin + Bouquet brings grace to an ending — closure handled with appreciation, warmth, or the recognition that what was shared had genuine value.",
+    love: "Coffin + Bouquet suggests a parting that carries gratitude rather than bitterness, or a closure softened by genuine appreciation.",
+    work: "Coffin + Bouquet supports dignified exits, graceful transitions, or endings that acknowledge contribution before moving on.",
+  },
+  "7-17": {
+    general: "Snake + Stork brings change through a complicated route — the improvement is coming, but the path to it is indirect and requires navigation.",
+    love: "Snake + Stork suggests the relationship is evolving through a complex transition, where desire, strategy, and genuine renewal all share the stage.",
+    work: "Snake + Stork points to a process improvement requiring political skill, where the upgrade arrives through negotiation rather than decree.",
+  },
+  "6-7": {
+    general: "Clouds + Snake doubles the confusion — ambiguity layered with complexity, where both the situation and the motives are hard to read clearly.",
+    love: "Clouds + Snake suggests emotional confusion compounded by mixed motives or unclear desires that make the dynamic harder to trust.",
+    work: "Clouds + Snake marks a workplace situation where both the strategy and the information are murky — verify everything twice.",
+  },
+  "6-16": {
+    general: "Clouds + Stars says the guidance is there but partially obscured — the direction is sound, but current conditions make it difficult to see clearly.",
+    love: "Clouds + Stars suggests the relationship has genuine long-term potential, but present confusion needs clearing before direction becomes trustworthy.",
+    work: "Clouds + Stars points to good strategy being hampered by unclear conditions — the vision is right but visibility needs improving first.",
+  },
+  "6-15": {
+    general: "Clouds + Bear obscures the resource picture — power, money, or authority are present but their true state is harder to assess in current conditions.",
+    love: "Clouds + Bear suggests uncertainty about the protective or providing role in the relationship, where strength is present but trust in it wavers.",
+    work: "Clouds + Bear marks financial or leadership ambiguity — the resources exist, but the fog makes it hard to know exactly how much is available or secure.",
+  },
+  "6-14": {
+    general: "Clouds + Fox doubles the caution — when both the situation and your own read on it are unclear, patience and verification matter more than speed.",
+    love: "Clouds + Fox suggests confusion compounded by guardedness, where neither person is sure enough to be fully honest yet.",
+    work: "Clouds + Fox marks a situation requiring extra due diligence — conditions are unclear and the information available may be incomplete.",
+  },
+  "4-14": {
+    general: "House + Fox places strategic caution inside the foundation — something in the base structure, routines, or domestic setup needs closer inspection.",
+    love: "House + Fox suggests the household or foundational dynamic needs honest examination, where comfortable habits may be masking a real issue.",
+    work: "House + Fox points to operational foundations needing quality review — systems, processes, or base routines that look stable but deserve scrutiny.",
+  },
+  "27-35": {
+    general: "Letter + Anchor ties written communication to lasting structure — a document, agreement, or message that has enduring effect.",
+    love: "Letter + Anchor suggests a message or conversation that creates genuine lasting stability in the relationship.",
+    work: "Letter + Anchor marks documentation with long-term impact — permanent records, foundational contracts, or communications that create enduring terms.",
+  },
+  "26-35": {
+    general: "Book + Anchor grounds hidden knowledge or specialist study in something durable — what you learn here stays useful for a long time.",
+    love: "Book + Anchor suggests deeper understanding of the relationship's private truth creates the foundation for lasting stability.",
+    work: "Book + Anchor marks specialist expertise or confidential knowledge becoming a long-term career anchor.",
+  },
+  "26-34": {
+    general: "Book + Fish ties resource flow to hidden information — the money picture becomes clearer once private knowledge or undisclosed details surface.",
+    love: "Book + Fish suggests undisclosed financial details or private resource dynamics are quietly shaping the relationship.",
+    work: "Book + Fish marks confidential financial data, hidden revenue streams, or specialist knowledge that unlocks commercial insight.",
+  },
+  "23-32": {
+    general: "Mice + Moon shows emotional sensitivity or reputation being quietly worn down by persistent small stressors.",
+    love: "Mice + Moon suggests the emotional atmosphere in the relationship is being eroded by accumulated worry, doubt, or unprocessed feeling.",
+    work: "Mice + Moon marks reputation, morale, or creative energy being undermined by chronic low-level stress.",
+  },
+  "22-30": {
+    general: "Crossroads + Lily brings mature judgment to a decision — the choice benefits from patience, composure, and principled thinking rather than reactive speed.",
+    love: "Crossroads + Lily suggests the relationship decision calls for wisdom and emotional maturity rather than impulsive action.",
+    work: "Crossroads + Lily supports strategic choices guided by experience, professional integrity, and measured judgment.",
+  },
+  "2-10": {
+    general: "Clover + Scythe places luck beside a sharp decision — a fortunate moment that requires quick, clean action before the window closes.",
+    love: "Clover + Scythe suggests a lighthearted opening that needs a clear choice to be made quickly before the moment passes.",
+    work: "Clover + Scythe marks a lucky break that rewards decisive action — hesitation may cost the advantage.",
+  },
+  "16-26": {
+    general: "Stars + Book combines strategic guidance with hidden knowledge — the direction becomes clearer once something currently private is understood or revealed.",
+    love: "Stars + Book suggests the relationship's true direction becomes visible only after something private, studied, or withheld comes to light.",
+    work: "Stars + Book marks strategic insight arriving through research, specialist knowledge, or information not yet widely known.",
+  },
+  "16-17": {
+    general: "Stars + Stork aligns constructive change with clear direction — the improvement serves the longer arc and the timing supports it.",
+    love: "Stars + Stork supports a relationship upgrade guided by shared vision, where the change feels purposeful rather than reactive.",
+    work: "Stars + Stork marks strategic improvements, well-timed transitions, or process upgrades aligned with long-range goals.",
+  },
+  "13-22": {
+    general: "Child + Crossroads places a decision at the beginning of something new — the choice about direction shapes the fresh start before it takes form.",
+    love: "Child + Crossroads suggests a new emotional opening that immediately presents a choice about which path to take.",
+    work: "Child + Crossroads marks an early-stage project or role facing a directional choice that will define its trajectory.",
+  },
+  "10-20": {
+    general: "Scythe + Garden brings a sharp decision or sudden change into the public arena — the cut is visible and the response is communal.",
+    love: "Scythe + Garden suggests a decisive boundary or clear-cut conversation that affects the social circle around the relationship.",
+    work: "Scythe + Garden marks a high-visibility decision, public restructuring, or sharp move that the wider network notices immediately.",
+  },
+  "10-19": {
+    general: "Scythe + Tower cuts through institutional structure — a decisive move within a formal system, where boundaries and rules are reshaped quickly.",
+    love: "Scythe + Tower suggests a relationship boundary being set firmly through structure, legal action, or institutional channels.",
+    work: "Scythe + Tower marks organisational restructuring, role elimination, or a clean institutional cut that changes the hierarchy.",
+  },
+  "10-11": {
+    general: "Scythe + Whip doubles the sharpness — cutting friction that repeats, or decisive action taken against a pattern that keeps recycling.",
+    love: "Scythe + Whip suggests a repeating argument or tension pattern that finally meets a decisive boundary or clean break.",
+    work: "Scythe + Whip marks a process loop being forcefully interrupted — the cycle ends because a sharp decision overrides the pattern.",
+  },
+  "1-11": {
+    general: "Rider + Whip delivers news that brings tension, or incoming information that triggers a repeating cycle of response.",
+    love: "Rider + Whip suggests an incoming message or contact that reactivates a familiar pattern of friction or emotional intensity.",
+    work: "Rider + Whip points to urgent communications arriving under pressure, where the update itself creates a cycle of reactive work.",
+  },
+  "29-34": {
+    general: "Querent + Fish places resource flow, money, or material capacity directly in your own hands — your financial position shapes what is possible.",
+    love: "Querent + Fish suggests your own practical generosity, financial situation, or material capacity is a significant factor in the relationship.",
+    work: "Querent + Fish marks your own financial or commercial position as the variable that shapes the next step.",
+  },
+  "9-17": {
+    general: "Bouquet + Stork brings positive change through grace, charm, or social warmth — the improvement arrives as a welcome gift.",
+    love: "Bouquet + Stork supports a relationship evolving through genuine warmth, appreciation, and caring gestures that invite renewal.",
+    work: "Bouquet + Stork marks improvements welcomed by the team or community, where the upgrade is received with genuine appreciation.",
+  },
+  "8-18": {
+    general: "Coffin + Dog places an ending close to a loyal ally — a trusted relationship or reliable support reaching its natural conclusion.",
+    love: "Coffin + Dog suggests a friendship or supportive dynamic coming to an end, or loyalty being tested by a necessary closure.",
+    work: "Coffin + Dog marks the departure of a trusted colleague or the end of a dependable working arrangement.",
+  },
+  "5-15": {
+    general: "Tree + Bear roots resource power in something lasting — strength built through sustained growth, patient accumulation, and deep foundations.",
+    love: "Tree + Bear suggests the relationship's security deepens through slow, steady care and the quiet accumulation of trust over time.",
+    work: "Tree + Bear marks career strength built through long-term skill growth, where patience and consistency create durable resource power.",
+  },
+  "5-14": {
+    general: "Tree + Fox places careful scrutiny on the growth process — patience is important, but so is verifying that what is growing is genuinely healthy.",
+    love: "Tree + Fox suggests the slow emotional growth in the relationship needs honest evaluation, not just patient waiting.",
+    work: "Tree + Fox points to long-term development requiring periodic quality checks to ensure the growth is heading in the right direction.",
+  },
+  "4-12": {
+    general: "House + Birds brings conversation into the domestic or foundational space — discussions about home, structure, or core arrangements.",
+    love: "House + Birds suggests the household dynamic is being shaped by ongoing dialogue, nervousness, or conversations that need grounding.",
+    work: "House + Birds marks operational discussions, team conversations about process, or communication about foundational systems.",
+  },
+  "3-4": {
+    general: "Ship + House stretches between movement and stability — the pull between exploring further and staying grounded at home.",
+    love: "Ship + House suggests the relationship is navigating the tension between distance and domestic security.",
+    work: "Ship + House points to expansion plans that must balance growth with operational stability at the base.",
+  },
+  "3-12": {
+    general: "Ship + Birds places communication across distance — conversations that span geography, cultural gaps, or unfamiliar terrain.",
+    love: "Ship + Birds suggests the emotional dialogue is happening across distance, whether physical, emotional, or experiential.",
+    work: "Ship + Birds marks communications with remote teams, international contacts, or discussions about expansion and logistics.",
+  },
+  "3-11": {
+    general: "Ship + Whip creates tension through movement — friction from travel, distance-related stress, or repetitive logistical challenges.",
+    love: "Ship + Whip suggests distance is generating friction, or a repeating pattern of departure and return is wearing on the bond.",
+    work: "Ship + Whip marks operational friction from movement, travel fatigue, or logistics issues cycling through without resolution.",
+  },
+  "2-3": {
+    general: "Clover + Ship offers a fortunate window for movement — lucky timing around travel, expansion, or exploring something further afield.",
+    love: "Clover + Ship suggests a lighthearted opportunity involving distance, travel, or a broader perspective on the relationship.",
+    work: "Clover + Ship marks a well-timed opportunity for expansion, travel, or reaching a broader market.",
+  },
+  "2-12": {
+    general: "Clover + Birds brings a bit of luck into the conversation — a fortunate exchange, well-timed dialogue, or news that eases nerves.",
+    love: "Clover + Birds suggests a lighthearted conversation or fortunate exchange that improves the emotional atmosphere.",
+    work: "Clover + Birds marks a lucky break arriving through communication — a well-timed meeting, call, or message that opens something.",
+  },
+  "2-11": {
+    general: "Clover + Whip softens tension with a small piece of luck — a fortunate break in a repeating pattern, or ease arriving amid friction.",
+    love: "Clover + Whip suggests a lighthearted moment that interrupts a tense pattern, offering a brief window for repair.",
+    work: "Clover + Whip points to a lucky break within a repetitive process — a small opening that makes the friction more manageable.",
+  },
+  "19-20": {
+    general: "Tower + Garden bridges structure and community — institutional authority meeting public space, where formal and social dynamics interact.",
+    love: "Tower + Garden suggests the relationship's public face and its private structure need to be aligned rather than competing.",
+    work: "Tower + Garden marks organisational presence in a wider community — corporate networking, institutional public relations, or structured community engagement.",
+  },
+  "17-27": {
+    general: "Stork + Letter marks change arriving through written communication — a notice, document, or message that initiates or confirms a transition.",
+    love: "Stork + Letter suggests a conversation, message, or written exchange that signals a constructive shift in the relationship.",
+    work: "Stork + Letter points to change communicated formally — transition notices, contract updates, or documentation of improvement.",
+  },
+  "17-26": {
+    general: "Stork + Book brings change through knowledge — an improvement triggered by new understanding, private study, or information that was previously hidden.",
+    love: "Stork + Book suggests the relationship evolves once something private is understood or a hidden truth comes to light.",
+    work: "Stork + Book marks process improvements driven by research, specialist insight, or newly available information.",
+  },
+  "13-23": {
+    general: "Child + Mice warns that something new and fragile is being worn down by small stresses before it has time to take root.",
+    love: "Child + Mice suggests a tender new dynamic being undermined by worry, doubt, or small frictions that erode trust before it can settle.",
+    work: "Child + Mice marks a new initiative or early-stage project being weakened by persistent minor issues that compound quickly.",
+  },
+  "13-14": {
+    general: "Child + Fox places a new beginning under careful scrutiny — start with caution, verify early, and protect the fresh start from avoidable mistakes.",
+    love: "Child + Fox suggests a new emotional opening being approached guardedly, where some caution is wise but too much blocks the tenderness.",
+    work: "Child + Fox supports a new initiative or prototype that benefits from tactical awareness and quality-checking from the very start.",
+  },
+  "12-20": {
+    general: "Birds + Garden amplifies social communication — dialogue moving through a wider network, public conversation, or community-level exchange.",
+    love: "Birds + Garden suggests the relationship is being discussed in social circles, or that friends and community are part of the communication dynamic.",
+    work: "Birds + Garden marks public-facing communication, networking conversations, or feedback moving through the wider professional community.",
+  },
+  "11-20": {
+    general: "Whip + Garden brings repetitive tension into the social or public sphere — friction that is visible, communal, or played out in shared spaces.",
+    love: "Whip + Garden suggests relational tension being felt or witnessed in social settings, where private friction becomes publicly uncomfortable.",
+    work: "Whip + Garden marks public-facing process friction, community complaints, or repetitive issues affecting external perception.",
+  },
+  "11-19": {
+    general: "Whip + Tower creates institutional friction — repetitive tension within a formal structure, rules-based conflict, or structural discipline under strain.",
+    love: "Whip + Tower suggests boundary enforcement becoming a source of recurring tension, where structure helps but the repetition exhausts.",
+    work: "Whip + Tower marks process friction within institutional frameworks — policy disputes, regulatory loops, or disciplinary patterns.",
+  },
+  "11-12": {
+    general: "Whip + Birds doubles the communicative intensity — conversations that repeat, escalate, or carry anxious tension into a feedback loop.",
+    love: "Whip + Birds suggests arguments that cycle through talking, where the dialogue itself has become the arena for repetitive tension.",
+    work: "Whip + Birds marks meetings, calls, or exchanges stuck in unproductive loops — communication friction that needs a structural reset.",
+  },
+  "21-24": {
+    general: "Mountain + Heart meets genuine feeling with a real obstacle — the care is present but something structural or circumstantial is blocking its expression.",
+    love: "Mountain + Heart suggests emotional distance despite real love, where patience and persistence matter because the feeling is genuine even if access is blocked.",
+    work: "Mountain + Heart marks values-driven motivation meeting a structural barrier, where the commitment must outlast the obstruction.",
+  },
+  "21-23": {
+    general: "Mountain + Mice combines a major obstacle with persistent erosion — the blockage is both immovable and slowly wearing down what surrounds it.",
+    love: "Mountain + Mice suggests emotional distance compounded by accumulating small worries, where the obstacle itself is generating secondary stress.",
+    work: "Mountain + Mice marks a structural blocker that is also creating operational attrition — the delay causes its own damage.",
+  },
+  "16-28": {
+    general: "Stars + Counterpart places the other person in the line of strategic guidance — their direction, vision, or clarity is a factor in the shared path.",
+    love: "Stars + Counterpart suggests the other person's sense of direction and long-term hopes are important to understand before the shared path becomes clear.",
+    work: "Stars + Counterpart marks a collaborator or stakeholder whose strategic vision influences the shared direction.",
+  },
+  "15-22": {
+    general: "Bear + Crossroads places resource power or authority at a decision point — the choice involves leverage, money, or protective capacity.",
+    love: "Bear + Crossroads suggests a relational decision influenced by security, financial capacity, or questions about who holds the protective role.",
+    work: "Bear + Crossroads marks a resource-heavy strategic fork — a financial, leadership, or authority decision with significant downstream impact.",
+  },
+  "14-31": {
+    general: "Fox + Sun says success is available but requires discernment — visible momentum benefits from careful, tactical awareness rather than blind confidence.",
+    love: "Fox + Sun suggests the relationship's warm trajectory needs protecting through honest attention to detail, not just riding the good feeling.",
+    work: "Fox + Sun marks a period of visible success that benefits from quality control, careful review, and protecting the gains strategically.",
+  },
+  "14-21": {
+    general: "Fox + Mountain places a blockage under tactical scrutiny — the obstacle may have a workaround if you look carefully enough.",
+    love: "Fox + Mountain suggests emotional distance that may respond to a cleverer, more indirect approach rather than head-on confrontation.",
+    work: "Fox + Mountain marks a structural blocker that rewards tactical analysis — look for the side route rather than attacking the wall directly.",
+  },
+  "10-22": {
+    general: "Scythe + Crossroads makes the decision sharp and immediate — the fork requires a clean cut now, not more deliberation.",
+    love: "Scythe + Crossroads marks a relationship decision that has arrived at the point where delay is no longer an option.",
+    work: "Scythe + Crossroads points to a strategic fork requiring rapid, decisive action — the moment for analysis has passed.",
+  },
+  "1-36": {
+    general: "Rider + Cross delivers serious news — a message or arrival carrying real weight, duty, or consequence that demands a grounded response.",
+    love: "Rider + Cross suggests incoming information about obligation, grief, or responsibility that changes the emotional landscape significantly.",
+    work: "Rider + Cross marks important incoming news about serious accountability, institutional decisions, or matters with lasting consequence.",
+  },
+  "1-28": {
+    general: "Rider + Counterpart delivers news about or from the other person — a message, arrival, or development that puts the other party in motion.",
+    love: "Rider + Counterpart suggests the other person is reaching out, arriving, or making a first move that changes the relational dynamic.",
+    work: "Rider + Counterpart marks incoming communication from a key stakeholder, client, or collaborator that shifts the working relationship.",
+  },
+  "1-22": {
+    general: "Rider + Crossroads delivers news at a decision point — incoming information that forces or clarifies a choice about direction.",
+    love: "Rider + Crossroads suggests a message or arrival that creates an immediate decision about the relationship's direction.",
+    work: "Rider + Crossroads marks incoming intelligence that reshapes a strategic decision — new data at a critical fork.",
+  },
+  "1-21": {
+    general: "Rider + Mountain delivers news about a delay or obstacle — the information confirms a blockage that patience must handle.",
+    love: "Rider + Mountain suggests a message about distance, unavailability, or circumstances that slow the relationship's forward movement.",
+    work: "Rider + Mountain marks incoming information about a structural delay, blocked process, or timeline pushed back.",
+  },
+  "9-18": {
+    general: "Bouquet + Dog blends appreciation with loyalty — genuine gratitude meeting dependable support, where warmth and reliability reinforce each other.",
+    love: "Bouquet + Dog supports a friendship deepening into something warmer, or appreciation strengthening a bond built on trust.",
+    work: "Bouquet + Dog marks loyal collaboration rewarded with recognition, goodwill, and mutual appreciation.",
+  },
+  "5-6": {
+    general: "Tree + Clouds slows growth with uncertainty — the roots are there but current conditions make it difficult to see how things are developing.",
+    love: "Tree + Clouds suggests emotional growth is happening but confusion or mixed signals make it hard to feel secure about the direction.",
+    work: "Tree + Clouds marks long-term development proceeding under unclear conditions, where patient waiting is the only honest option.",
+  },
+  "4-13": {
+    general: "House + Child brings a fresh start to the foundation — new routines, a domestic beginning, or something small and new entering the stable base.",
+    love: "House + Child suggests a gentle domestic renewal — new energy in the home, a fresh dynamic, or a tender beginning inside an established structure.",
+    work: "House + Child marks a new initiative within existing infrastructure, where something small and fresh enters the established foundation.",
+  },
+  "3-13": {
+    general: "Ship + Child begins something new at a distance — a fresh start that involves exploration, travel, or reaching beyond the familiar.",
+    love: "Ship + Child suggests a new emotional beginning connected to distance, fresh perspectives, or exploring unfamiliar relational territory.",
+    work: "Ship + Child marks a new venture, project, or initiative involving expansion, new markets, or distant contacts.",
+  },
+  "20-30": {
+    general: "Garden + Lily brings mature composure to social settings — dignity in public, measured engagement, and principled community participation.",
+    love: "Garden + Lily suggests the social world around the relationship benefits from patience, respect, and mature handling of shared circles.",
+    work: "Garden + Lily supports professional networking guided by seniority, measured reputation, and principled public engagement.",
+  },
+  "18-27": {
+    general: "Dog + Letter ties loyalty to written communication — a trusted message, a reliable document, or support arriving through explicit, written terms.",
+    love: "Dog + Letter suggests faithful communication — messages you can trust, conversations that follow through, and words that match actions.",
+    work: "Dog + Letter marks dependable correspondence, reliable documentation, or trusted communications from proven allies.",
+  },
+  "18-26": {
+    general: "Dog + Book brings loyalty into the hidden or private space — a trusted ally who keeps counsel, or reliable support behind the scenes.",
+    love: "Dog + Book suggests quiet loyalty, private support, or a trusted confidant whose discretion matters.",
+    work: "Dog + Book marks a reliable colleague with specialist knowledge, or a trusted ally handling confidential information with care.",
+  },
+  "12-13": {
+    general: "Birds + Child brings nervous, excited energy to a new beginning — the start is fresh but the anxiety about it is real.",
+    love: "Birds + Child suggests early-stage romantic nervousness, excited dialogue about something new, or the butterflies that come with a tender opening.",
+    work: "Birds + Child marks anxious communication around a new project, role, or initiative — nervous energy that needs grounding.",
+  },
+  "9-22": {
+    general: "Bouquet + Crossroads places a gift, invitation, or social opportunity at a decision point — the welcome option that still requires a genuine choice.",
+    love: "Bouquet + Crossroads suggests a charming or warm relational opportunity that still requires a deliberate decision about direction.",
+    work: "Bouquet + Crossroads marks a pleasant opportunity arriving at a strategic fork, where appreciation and clear choice work together.",
+  },
+  "9-21": {
+    general: "Bouquet + Mountain softens an obstacle with grace — the blockage may be real, but warmth, appreciation, or social skill can ease the path around it.",
+    love: "Bouquet + Mountain suggests emotional distance may respond to kindness and gentle social warmth more than to insistence.",
+    work: "Bouquet + Mountain points to a blocker that yields to diplomatic skill, goodwill, or charm rather than brute-force persistence.",
+  },
+  "8-34": {
+    general: "Coffin + Fish marks an ending in the flow — resources drying up, a financial chapter closing, or practical support reaching its natural limit.",
+    love: "Coffin + Fish suggests the practical or financial dimension of the relationship is reaching a conclusion that needs honest acknowledgment.",
+    work: "Coffin + Fish marks revenue streams closing, financial chapters ending, or resource-dependent projects reaching their natural conclusion.",
+  },
+  "1-7": {
+    general: "Rider + Snake delivers news through a complicated channel — the message arrives, but the route is indirect and the full story may take time to unfold.",
+    love: "Rider + Snake suggests incoming information entangled with desire, mixed motives, or a complicated situation that resists simple interpretation.",
+    work: "Rider + Snake marks incoming intelligence requiring careful decoding — the update is important but the context is politically complex.",
+  },
+  "1-9": {
+    general: "Rider + Bouquet delivers a pleasant message, welcome invitation, or news that arrives with genuine warmth and social grace.",
+    love: "Rider + Bouquet suggests a charming approach, warm invitation, or message of appreciation arriving at just the right moment.",
+    work: "Rider + Bouquet marks positive incoming feedback, a welcome offer, or recognition arriving through friendly channels.",
+  },
+  "1-15": {
+    general: "Rider + Bear delivers news about resources, authority, or financial matters — incoming information that shifts the power picture.",
+    love: "Rider + Bear suggests a message or development involving security, protection, or the financial dimension of the relationship.",
+    work: "Rider + Bear marks incoming news about budgets, authority decisions, or resource allocation that changes the practical landscape.",
+  },
+  "1-25": {
+    general: "Rider + Ring delivers news about a commitment — an incoming message that confirms, questions, or reshapes the terms of an agreement.",
+    love: "Rider + Ring suggests a message about the relationship's status, a proposal, or news that directly affects the commitment.",
+    work: "Rider + Ring marks incoming contract news, partnership updates, or agreement-related communications requiring prompt response.",
+  },
+
+  // ── Remaining high-signal combinations ─────────────────────────────────
+
+  "2-9": {
+    general: "Clover + Bouquet doubles the charm — a fortunate, warm moment where luck and grace combine into something genuinely pleasant.",
+    love: "Clover + Bouquet supports lighthearted, graceful connection — a lucky encounter or welcome moment that brings easy warmth.",
+    work: "Clover + Bouquet marks a fortunate social moment — positive reception, lucky networking, or well-timed goodwill.",
+  },
+  "3-35": {
+    general: "Ship + Anchor asks whether movement can find a lasting harbour — exploration and stability negotiating a sustainable balance.",
+    love: "Ship + Anchor suggests the relationship navigating between the need for exploration and the desire for grounded commitment.",
+    work: "Ship + Anchor marks expansion efforts needing a stable operational anchor, or career movement seeking long-term footing.",
+  },
+  "4-35": {
+    general: "House + Anchor doubles the stability — deeply rooted foundations, durable domestic structure, and security built to last.",
+    love: "House + Anchor supports a relationship where home, routine, and dependable structure create genuine long-term safety.",
+    work: "House + Anchor marks strong operational foundations and career stability grounded in reliable systems and infrastructure.",
+  },
+  "5-25": {
+    general: "Tree + Ring ties deep, patient growth to a lasting commitment — the bond strengthens slowly through sustained, faithful attention.",
+    love: "Tree + Ring supports a long-term commitment that deepens through patience, where the relationship is the thing being carefully grown.",
+    work: "Tree + Ring marks career commitments or professional agreements that benefit from sustained, patient development.",
+  },
+  "6-21": {
+    general: "Clouds + Mountain layers confusion with obstruction — visibility is poor and the path is blocked, demanding patience with both the fog and the wall.",
+    love: "Clouds + Mountain marks a particularly difficult period where emotional confusion and real distance both need to be accepted before they clear.",
+    work: "Clouds + Mountain points to an unclear situation compounded by structural blockers — wait for better visibility before committing to a route.",
+  },
+  "6-36": {
+    general: "Clouds + Cross places uncertainty over an obligation — the duty is real but the confusion about how to carry it makes the weight harder to bear.",
+    love: "Clouds + Cross suggests a relational burden made heavier by confusion about what is genuinely owed and what can be released.",
+    work: "Clouds + Cross marks professional obligation under unclear conditions, where ambiguity about the duty itself is the primary stressor.",
+  },
+  "6-22": {
+    general: "Clouds + Crossroads places a decision under foggy conditions — the choice needs to be made, but the information available is not yet clear enough to feel confident.",
+    love: "Clouds + Crossroads suggests a relationship decision being hampered by emotional confusion, where clarity may need to precede the choice.",
+    work: "Clouds + Crossroads marks a strategic fork under uncertain conditions — if possible, improve visibility before committing to direction.",
+  },
+  "9-34": {
+    general: "Bouquet + Fish connects warmth and appreciation to resource flow — generosity, social capital, and material value supporting each other.",
+    love: "Bouquet + Fish suggests practical generosity expressed with genuine warmth, where gifts and gestures carry real feeling.",
+    work: "Bouquet + Fish marks goodwill generating commercial value — charm, social capital, and client appreciation improving the financial picture.",
+  },
+  "10-34": {
+    general: "Scythe + Fish makes a sharp cut in the resource picture — a decisive financial move, sudden change in flow, or rapid resource reallocation.",
+    love: "Scythe + Fish suggests a sharp practical decision affecting shared resources or the financial dimension of the relationship.",
+    work: "Scythe + Fish marks a rapid financial decision — budget cuts, decisive investment, or immediate reallocation of resources.",
+  },
+  "11-28": {
+    general: "Whip + Counterpart places repetitive tension or friction with the other person — a pattern of conflict or intensity in the dynamic between you.",
+    love: "Whip + Counterpart suggests a recurring friction with the other person that needs structural change rather than another round of the same argument.",
+    work: "Whip + Counterpart marks a pattern of tension with a stakeholder or collaborator that requires a different approach to break.",
+  },
+  "11-31": {
+    general: "Whip + Sun says the tension is not permanent — the friction resolves into clearer, warmer energy once the pattern is addressed honestly.",
+    love: "Whip + Sun suggests the relationship's tensions can lead to genuine warmth if the repeating pattern is named and changed.",
+    work: "Whip + Sun marks process friction that resolves positively — the discipline or rework produces visible, energising improvement.",
+  },
+  "13-25": {
+    general: "Child + Ring starts a new commitment — a fresh agreement, early-stage partnership, or the beginning of a recurring pattern.",
+    love: "Child + Ring marks the early stage of a commitment — new promises, a young relationship, or a fresh cycle beginning in an existing bond.",
+    work: "Child + Ring supports new contracts, early-stage partnerships, or the beginning of a recurring professional arrangement.",
+  },
+  "13-28": {
+    general: "Child + Counterpart brings the other person into a fresh beginning — their own renewal, new approach, or changed position reshapes the dynamic.",
+    love: "Child + Counterpart suggests the other person is offering a fresh start, a renewed approach, or an openness that invites something new.",
+    work: "Child + Counterpart marks a counterpart bringing a new initiative, fresh perspective, or changed terms to the working relationship.",
+  },
+  "17-28": {
+    general: "Stork + Counterpart places constructive change with the other person — they are evolving, improving, or shifting in ways that affect the shared dynamic.",
+    love: "Stork + Counterpart suggests the other person is going through a positive change that creates new conditions for the bond.",
+    work: "Stork + Counterpart marks a collaborator or stakeholder in transition, where their improvement creates new opportunities.",
+  },
+  "18-31": {
+    general: "Dog + Sun brings loyalty into the light — trusted support becoming visible, dependable allies recognised, and faithful effort rewarded.",
+    love: "Dog + Sun supports a warm, loyal bond where trust and confidence are both active and visible.",
+    work: "Dog + Sun marks trusted colleagues or dependable allies gaining recognition, where loyalty and visibility reinforce each other.",
+  },
+  "18-33": {
+    general: "Dog + Key says the answer comes through a trusted ally — the solution arrives from someone dependable, not from a stranger or a new source.",
+    love: "Dog + Key suggests emotional clarity arriving through a trusted friend, confidant, or loyal bond that provides the missing perspective.",
+    work: "Dog + Key points to a reliable colleague or proven ally being the one who provides the critical insight or unlock.",
+  },
+  "18-35": {
+    general: "Dog + Anchor doubles the reliability — trusted support grounded in long-term commitment, where loyalty and endurance work as one.",
+    love: "Dog + Anchor supports the most dependable form of partnership — consistent loyalty backed by genuine staying power.",
+    work: "Dog + Anchor marks deeply reliable working relationships, career allies, or professional support systems built for the long term.",
+  },
+  "18-36": {
+    general: "Dog + Cross brings loyalty face to face with burden — faithful support under heavy conditions, where the cost of caring is real.",
+    love: "Dog + Cross suggests a loyal bond carrying real weight, where the person who stays must also set honest limits on what they can bear.",
+    work: "Dog + Cross marks a trusted ally handling serious responsibility, where the demand on loyalty requires sustainable boundaries.",
+  },
+  "30-34": {
+    general: "Lily + Fish brings patience and maturity to resource management — financial flow benefits from composed, principled stewardship.",
+    love: "Lily + Fish suggests practical generosity guided by maturity, where financial or material exchange reflects wisdom rather than impulse.",
+    work: "Lily + Fish supports mature financial leadership, patient investment strategies, and experienced resource management.",
+  },
+  "30-32": {
+    general: "Lily + Moon brings maturity to emotional depth — composure meeting sensitivity, where principled restraint and genuine feeling coexist.",
+    love: "Lily + Moon suggests deep, mature emotional understanding, where patience and emotional attunement create a rich bond.",
+    work: "Lily + Moon supports creative or reputational work guided by experienced judgment and emotional intelligence.",
+  },
 };
 
 function pairKey(a: number, b: number): string {
