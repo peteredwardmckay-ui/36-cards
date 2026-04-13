@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BrandHeader } from "@/components/BrandHeader";
 import { BrandFooter } from "@/components/BrandFooter";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://36cards.com/brand/opengraph-share.png",
+        url: "https://36cards.com/brand/og-image-1200x630.png",
         width: 1200,
         height: 630,
         alt: "36 Cards glossary preview",
@@ -32,9 +33,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lenormand Glossary - 36 Cards",
     description: "Browse Lenormand cards, houses, and reading techniques in the 36 Cards glossary.",
-    images: ["https://36cards.com/brand/opengraph-share.png"],
+    images: ["https://36cards.com/brand/og-image-1200x630.png"],
   },
 };
+
+function getCardImagePath(cardId: number, cardSlug: string): string {
+  return `/cards/traditional/${String(cardId).padStart(2, "0")}-${cardSlug}.webp`;
+}
 
 export default function GlossaryPage() {
   return (
@@ -54,60 +59,45 @@ export default function GlossaryPage() {
           </p>
         </section>
 
-        <section className="grid gap-4 lg:grid-cols-3">
-          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-4">
-            <h2 className="text-lg font-semibold">How To Use It</h2>
-            <p className="mt-2 text-sm text-[color:var(--brand-muted)]">
-              Start with a card if a single symbol keeps showing up in your readings. Use the house pages if the overlay itself is
-              doing a lot of interpretive work. Use the technique pages if you want to understand why the reading keeps talking about
-              diagonals, proximity, or knighting.
-            </p>
-          </article>
-
-          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-4">
-            <h2 className="text-lg font-semibold">What You&apos;ll Find</h2>
-            <ul className="mt-2 space-y-1 text-sm text-[color:var(--brand-muted)]">
-              <li>{CARD_MEANINGS.length} card reference pages</li>
-              <li>{HOUSE_MEANINGS.length} house reference pages</li>
-              <li>{TECHNIQUES.length} technique explainers</li>
-            </ul>
-          </article>
-
-          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-4">
-            <h2 className="text-lg font-semibold">Next Step</h2>
-            <p className="mt-2 text-sm text-[color:var(--brand-muted)]">
-              If you want to move from reference into practice, return to setup and run a reading once you&apos;ve checked the symbols or
-              techniques that matter most to your question.
-            </p>
-            <Link
-              href="/setup"
-              className="mt-3 inline-flex rounded-full border border-[color:var(--brand-border)] px-3 py-1.5 text-sm font-medium text-[color:var(--brand-text)] transition hover:bg-white/50"
-            >
-              Start A Reading
-            </Link>
-          </article>
+        <section className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-5 shadow-ritual">
+          <h2 className="text-xl font-semibold">Cards</h2>
+          <p className="mt-1 text-sm text-[color:var(--brand-muted)]">
+            {CARD_MEANINGS.length} cards — tap any card to read its full meaning.
+          </p>
+          <div className="mt-4 grid grid-cols-4 gap-3 sm:grid-cols-6 md:grid-cols-9">
+            {CARD_MEANINGS.map((card) => (
+              <Link
+                key={card.id}
+                href={`/glossary/cards/${card.slug}`}
+                className="group flex flex-col items-center gap-1.5"
+              >
+                <div className="overflow-hidden rounded-lg border border-[color:var(--brand-border)] shadow-sm transition group-hover:shadow-md group-hover:border-[color:var(--brand-accent)]">
+                  <Image
+                    src={getCardImagePath(card.id, card.slug)}
+                    alt={card.name}
+                    width={120}
+                    height={180}
+                    className="h-auto w-full transition group-hover:scale-105"
+                  />
+                </div>
+                <span className="text-center text-[10px] leading-tight text-[color:var(--brand-muted)] group-hover:text-[color:var(--brand-text)]">
+                  {card.name}
+                </span>
+              </Link>
+            ))}
+          </div>
         </section>
 
-        <section className="grid gap-4 lg:grid-cols-3">
-          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-4">
-            <h2 className="text-xl font-semibold">Cards</h2>
-            <ul className="mt-3 grid gap-2 text-sm text-[color:var(--brand-muted)]">
-              {CARD_MEANINGS.map((card) => (
-                <li key={card.id}>
-                  <Link href={`/glossary/cards/${card.slug}`} className="hover:underline">
-                    {card.id}. {card.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-4">
+        <section className="grid gap-4 lg:grid-cols-2">
+          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-5">
             <h2 className="text-xl font-semibold">Houses</h2>
-            <ul className="mt-3 grid gap-2 text-sm text-[color:var(--brand-muted)]">
+            <p className="mt-1 text-sm text-[color:var(--brand-muted)]">
+              {HOUSE_MEANINGS.length} positions in the Grand Tableau casting board.
+            </p>
+            <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-[color:var(--brand-muted)]">
               {HOUSE_MEANINGS.map((house) => (
                 <li key={house.id}>
-                  <Link href={`/glossary/houses/${house.id}`} className="hover:underline">
+                  <Link href={`/glossary/houses/${house.id}`} className="hover:text-[color:var(--brand-text)] hover:underline">
                     {house.id}. {house.name}
                   </Link>
                 </li>
@@ -115,17 +105,30 @@ export default function GlossaryPage() {
             </ul>
           </article>
 
-          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-4">
+          <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-5">
             <h2 className="text-xl font-semibold">Techniques</h2>
-            <ul className="mt-3 grid gap-2 text-sm text-[color:var(--brand-muted)]">
+            <p className="mt-1 text-sm text-[color:var(--brand-muted)]">
+              {TECHNIQUES.length} interpretation methods used by the reading engine.
+            </p>
+            <ul className="mt-3 grid gap-2 text-sm">
               {TECHNIQUES.map((item) => (
                 <li key={item.slug}>
-                  <Link href={`/glossary/techniques/${item.slug}`} className="hover:underline">
-                    {item.title}
+                  <Link
+                    href={`/glossary/techniques/${item.slug}`}
+                    className="block rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-3 transition hover:bg-white/55"
+                  >
+                    <span className="font-medium text-[color:var(--brand-text)]">{item.title}</span>
+                    <span className="mt-0.5 block text-xs text-[color:var(--brand-muted)]">{item.summary}</span>
                   </Link>
                 </li>
               ))}
             </ul>
+            <Link
+              href="/setup"
+              className="mt-4 inline-flex rounded-full border border-[color:var(--brand-border)] px-3 py-1.5 text-sm font-medium text-[color:var(--brand-text)] transition hover:bg-white/50"
+            >
+              Start A Reading
+            </Link>
           </article>
         </section>
 
