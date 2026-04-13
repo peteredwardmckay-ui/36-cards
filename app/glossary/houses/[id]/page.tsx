@@ -116,16 +116,12 @@ export default async function HouseGlossaryPage({ params }: { params: Promise<{ 
 
           <section className="mt-5 grid gap-4 md:grid-cols-2">
             <div className="rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
-              <h2 className="text-lg font-semibold">What This House Emphasizes</h2>
-              <p className="mt-2 text-sm text-[color:var(--brand-muted)]">
-                In a Grand Tableau, {house.name} tells you where <span className="font-medium text-[color:var(--brand-text)]">{house.shortFocus}</span> is becoming structurally important. It changes the role a card plays by showing which life area, duty, pressure, or resource the card is being asked to operate through.
-              </p>
+              <h2 className="text-lg font-semibold">When a Supportive Card Lands Here</h2>
+              <p className="mt-2 text-sm text-[color:var(--brand-muted)]">{house.whenStrong}</p>
             </div>
             <div className="rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
-              <h2 className="text-lg font-semibold">How To Read The Overlay</h2>
-              <p className="mt-2 text-sm text-[color:var(--brand-muted)]">
-                A card placed here should be read through the lens of {house.shortFocus}. That does not replace the card&apos;s meaning; it tells you the part of the story where that meaning becomes active, visible, or demanding.
-              </p>
+              <h2 className="text-lg font-semibold">When a Difficult Card Lands Here</h2>
+              <p className="mt-2 text-sm text-[color:var(--brand-muted)]">{house.whenChallenged}</p>
             </div>
           </section>
 
