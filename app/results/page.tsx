@@ -11,6 +11,7 @@ import { trackEvent } from "@/lib/analytics/ga";
 import { ritualSummaryLine } from "@/lib/engine/shuffle";
 import type { GeneratedReading, ReadingRequestPayload } from "@/lib/engine/types";
 import { useReadingState } from "@/lib/state/useReadingState";
+import { saveReadingToHistory } from "@/lib/state/storage";
 import { getTheme } from "@/lib/ui/themes";
 
 const RESULTS_LOADING_MIN_MS = 4000;
@@ -98,10 +99,12 @@ export default function ResultsPage() {
         update((current) => {
           if (current.id !== state.id || current.reading) return current;
 
-          return {
+          const updated = {
             ...current,
             reading: payload.reading ?? null,
           };
+          if (updated.reading) saveReadingToHistory(updated);
+          return updated;
         });
         trackEvent("reading_generated", {
           subject_id: state.setup.subjectId,
@@ -287,7 +290,11 @@ export default function ResultsPage() {
                     className="ritual-panel-soft border-l-4 border-l-[color:var(--theme-accent,var(--brand-accent))] p-3"
                   >
                     <h2 className="text-xl font-semibold">{section.title}</h2>
-                    <p className="mt-2 whitespace-pre-line text-sm text-[color:var(--theme-text,var(--brand-text))]">{section.body}</p>
+                    <div className="mt-2 space-y-2 text-sm text-[color:var(--theme-text,var(--brand-text))]">
+                      {section.body.split("\n").filter(Boolean).map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
+                      ))}
+                    </div>
                   </section>
                   {index === 2 ? (
                     <HouseAdSlot key="ad-mid" id="ad-mid-content" variant="standard" />

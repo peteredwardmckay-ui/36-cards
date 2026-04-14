@@ -140,6 +140,60 @@ export function updateReadingState(
   };
 }
 
+// ── Reading History ──────────────────────────────────────────────────────────
+
+const HISTORY_STORAGE_KEY = "lenormand-atlas-history-v1";
+const MAX_HISTORY_ENTRIES = 20;
+
+export interface ReadingHistoryEntry {
+  id: string;
+  createdAt: number;
+  question: string;
+  subjectId: SubjectId;
+  spreadType: SpreadType;
+  readingStyle: ReadingStyle;
+  cardIds: number[];
+}
+
+export function saveReadingToHistory(state: ReadingState): void {
+  if (typeof window === "undefined" || !state.reading) return;
+
+  const entry: ReadingHistoryEntry = {
+    id: state.id,
+    createdAt: state.createdAt,
+    question: state.setup.question,
+    subjectId: state.setup.subjectId,
+    spreadType: state.setup.spreadType,
+    readingStyle: state.setup.readingStyle,
+    cardIds: state.layout.slice(0, getSpreadCardCount(state.setup.spreadType)),
+  };
+
+  try {
+    const raw = window.localStorage.getItem(HISTORY_STORAGE_KEY);
+    const history: ReadingHistoryEntry[] = raw ? JSON.parse(raw) : [];
+    // Avoid duplicates
+    const filtered = history.filter((h) => h.id !== entry.id);
+    filtered.unshift(entry);
+    window.localStorage.setItem(
+      HISTORY_STORAGE_KEY,
+      JSON.stringify(filtered.slice(0, MAX_HISTORY_ENTRIES)),
+    );
+  } catch {
+    // Silently fail — history is non-critical
+  }
+}
+
+export function loadReadingHistory(): ReadingHistoryEntry[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.localStorage.getItem(HISTORY_STORAGE_KEY);
+    if (!raw) return [];
+    return JSON.parse(raw) as ReadingHistoryEntry[];
+  } catch {
+    return [];
+  }
+}
+
 export function resetRevealMap(state: ReadingState): ReadingState {
   const count = getSpreadCardCount(state.setup.spreadType);
   return {

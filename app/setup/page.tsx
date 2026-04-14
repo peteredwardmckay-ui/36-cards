@@ -372,6 +372,12 @@ export default function SetupPage() {
                           <option value="relationship">Relationship axis</option>
                           <option value="open">Open significator</option>
                         </select>
+                        <span className="mt-1 block text-[10px] text-[color:var(--theme-muted,var(--brand-muted))]">
+                          {significatorMode === "self" && "Reading centers on your own position and choices."}
+                          {significatorMode === "other" && "Reading centers on another person\u2019s position and influence."}
+                          {significatorMode === "relationship" && "Reading centers on the dynamic between two people."}
+                          {significatorMode === "open" && "No fixed viewpoint \u2014 the cards determine the focus."}
+                        </span>
                       </label>
                       <label className="flex items-center gap-2 rounded-lg border border-[color:var(--theme-border,var(--brand-border))] px-3 py-2 text-sm text-[color:var(--theme-text,var(--brand-text))]">
                         <input

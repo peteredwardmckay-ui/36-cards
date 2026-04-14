@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BrandHeader } from "@/components/BrandHeader";
 import { BrandFooter } from "@/components/BrandFooter";
+import { RecentReadings } from "@/components/RecentReadings";
 
 const FEATURED_CARDS = [
   { id: 1, slug: "rider", name: "Rider" },
@@ -92,6 +93,9 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+
+        {/* Recent readings (client component — renders only when history exists) */}
+        <RecentReadings />
 
         {/* How it works */}
         <section className="ritual-panel p-6 sm:p-8">
