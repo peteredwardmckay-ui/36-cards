@@ -973,6 +973,9 @@ export function buildCardPairBridge(
       `${card1Name} alongside ${card2Name} speaks of ${bridge}.`,
       `The combination of ${card1Name} and ${card2Name}: ${bridge}.`,
       `What ${card1Name} and ${card2Name} say together — ${bridge}.`,
+      `${card1Name} and ${card2Name} side by side describe ${bridge}.`,
+      `When ${card1Name} meets ${card2Name}, the reading names ${bridge}.`,
+      `The pairing of ${card1Name} and ${card2Name} is specific: ${bridge}.`,
     ],
     random,
   );
@@ -1021,6 +1024,9 @@ export function buildThemeConclusionLine(themeId: ThemeId | null, random: () => 
       `The reading on ${label} is clear enough to reflect on honestly.`,
       `What the reading says about ${label} is worth taking seriously — the pattern here is clearer than it may feel in the moment.`,
       `The spread has something to say about ${label}; it is worth returning to once the initial read settles.`,
+      `The ${label} signal in this reading is consistent — not just one card, but a pattern that repeats across positions.`,
+      `On ${label}, the cards are more direct than they might first appear. Sit with what they are actually saying.`,
+      `The reading's message about ${label} is not vague — there is enough here to act on, or at least to watch for.`,
     ],
     random,
   );

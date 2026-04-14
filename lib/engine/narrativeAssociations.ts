@@ -100,12 +100,15 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   7: {
     general: [
       "layered motives, complexity, desire, and the need to read around what looks obvious",
+      "the indirect path, hidden agendas, and the complexity that demands careful navigation rather than blunt honesty",
     ],
     love: [
       "desire, mixed motives, jealousy, or the need for cleaner boundaries around a complicated dynamic",
+      "attraction tangled with strategy, and the question of whether someone's interest is straightforward or layered",
     ],
     work: [
       "politics, competing interests, tactical maneuvering, and the quiet leverage hidden inside complexity",
+      "the office undercurrent that nobody names directly but everyone navigates — alliances, positioning, and indirect influence",
     ],
   },
   8: {
@@ -123,34 +126,43 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   9: {
     general: [
       "a moment of goodwill, ease, or visible appreciation that makes the wider situation easier to move through",
+      "grace, generosity, and the social warmth that makes difficult situations more navigable",
     ],
     love: [
       "warmth, romantic gesture, and the feeling of being genuinely appreciated in the connection",
+      "the gift of attention, small kindnesses, and the beauty that arrives when affection is freely offered",
     ],
     work: [
       "professional recognition, goodwill between parties, and the visible ease that opens conversations",
+      "a positive impression, social capital, and the professional charm that creates openings where force would not",
     ],
   },
   10: {
     general: [
       "a clean cut, abrupt clarity, and what can no longer be carried in its current form",
+      "the sharp intervention that separates what can stay from what has to go — swift, necessary, and usually irreversible",
     ],
     love: [
       "clear boundaries, decisive conversations, and the moment a romantic ambiguity has to be cut through",
+      "the conversation that ends ambiguity, the boundary that finally holds, or the severance that cannot be taken back",
     ],
     work: [
       "hard decisions, quick edits, deadlines, and cutting waste before it spreads further",
+      "the restructure, the layoff, the decisive action that reorganizes what was no longer working — painful but clarifying",
     ],
   },
   11: {
     general: [
       "repetition, friction, discipline, and the strain of a pattern that keeps replaying",
+      "the recurring loop that builds frustration or builds strength — depending on whether it is chosen or just endured",
     ],
     love: [
       "repeating arguments, sharpened chemistry, and the question of whether tension is being used well or badly",
+      "the pattern that keeps triggering the same fight, or the passionate intensity that refuses to settle into calm",
     ],
     work: [
       "pressure, rework, repeated tasks, training through friction, and the cost of doing the same correction again",
+      "the grinding repetition that either builds mastery or burns people out — the difference is whether it is deliberate",
     ],
   },
   12: {
@@ -182,12 +194,15 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   14: {
     general: [
       "discernment, tactical caution, self-interest, and the need to stay useful without becoming cynical",
+      "the sharp-eyed assessment of what is real, who benefits, and whether the terms actually serve you",
     ],
     love: [
       "wariness, self-protection, guarded motives, and the need to test intentions before trusting them",
+      "the protective instinct that checks whether affection is genuine before the heart commits further",
     ],
     work: [
       "quality control, tactical caution, professional self-interest, and the need to verify before committing",
+      "the careful audit of whether an opportunity is as good as it looks, or whether someone else is benefiting more",
     ],
   },
   15: {
@@ -207,12 +222,15 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   16: {
     general: [
       "long-range clarity, guidance, and the alignment between where things stand and where they are moving",
+      "the wider vision that gives individual steps their meaning — not wishful thinking, but genuine orientation",
     ],
     love: [
       "shared hope, mutual orientation, and the sense of moving toward something meaningful together",
+      "the moment when both people can see where the relationship could go — and whether they want the same destination",
     ],
     work: [
       "strategic coherence, clear direction, and the clarity that makes planning feel genuinely oriented rather than provisional",
+      "the north star that makes daily work meaningful — purpose strong enough to survive the grind of execution",
     ],
   },
   17: {
@@ -257,23 +275,29 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   20: {
     general: [
       "the visible social field, wider context, and the shared environment that shapes how events are read by others",
+      "the audience, the community, the public stage — what happens here is witnessed, and the witnesses shape the outcome",
     ],
     love: [
       "the public side of the relationship, outside context, and the social environment shaping what can be offered or withheld",
+      "how the relationship looks from the outside, and whether the public version matches what is happening privately",
     ],
     work: [
       "the professional network, visible environment, and wider context that creates or limits what is practically possible",
+      "industry connections, professional reputation, and the visibility that determines whether opportunity finds you",
     ],
   },
   21: {
     general: [
       "a real obstacle, hard resistance, or significant blockage that requires patience and staged effort rather than force",
+      "the wall that does not move when pushed — something in the situation is genuinely immovable right now",
     ],
     love: [
       "emotional distance, blocked access, or a hard barrier between people that cannot be resolved quickly or by goodwill alone",
+      "the emotional wall — not hostility, but a genuine inability to reach the other person through the usual channels",
     ],
     work: [
       "a structural block, persistent resistance, or major obstacle that cannot be worked around without sustained effort and planning",
+      "the project stall, the regulatory block, or the organizational resistance that refuses to yield to enthusiasm alone",
     ],
   },
   22: {
@@ -354,23 +378,29 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   28: {
     general: [
       "the other person's position, their motives, and the part of the story you do not control directly",
+      "someone else's agency — what they want, what they are doing about it, and how their choices shape yours",
     ],
     love: [
       "the counterpart's needs, signals, and willingness to meet the relationship honestly",
+      "who the other person actually is in this dynamic — not who you hope they are, but what their behavior reveals",
     ],
     work: [
       "the other party's agenda, stakeholder needs, and the external perspective shaping the process",
+      "the client, the manager, the counterpart — whoever holds the other half of this equation and what they actually need",
     ],
   },
   29: {
     general: [
       "your role, boundaries, self-definition, and the way your stance is quietly setting the tone",
+      "yourself as the variable — what you bring, what you withhold, and how your presence is shaping everything around you",
     ],
     love: [
       "self-awareness, boundaries, emotional availability, and the part you are playing in the relationship dynamic",
+      "what you are actually offering to the relationship right now, and whether it matches what you believe you are offering",
     ],
     work: [
       "your role, boundaries, workload ownership, and the way your position is shaping the outcome",
+      "how you are being perceived at work, what authority you actually hold, and whether your actions match your intentions",
     ],
   },
   30: {
@@ -387,12 +417,15 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   31: {
     general: [
       "confidence, visibility, success, and the warming effect of momentum that is finally obvious",
+      "the bright outcome — things working openly, energy flowing, and the situation visibly improving",
     ],
     love: [
       "warmth, generosity, clearer attraction, and the healing effect of openness after uncertainty",
+      "joy in the connection, mutual delight, and the kind of emotional sunlight that makes everything else easier",
     ],
     work: [
       "recognition, visibility, confidence, and the point where effort begins to look unmistakably productive",
+      "success that others can see — the project landing, the recognition arriving, the momentum becoming undeniable",
     ],
   },
   32: {
@@ -409,6 +442,15 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
   33: {
     general: [
       "a workable answer, clearer certainty, and the point where guessing can stop because something usable is finally emerging",
+      "the insight or access that changes the whole equation — the moment something locked finally opens",
+    ],
+    love: [
+      "the emotional breakthrough, the conversation that finally unlocks understanding, or the gesture that proves what words could not",
+      "the moment of clarity in the relationship where what was confusing becomes suddenly, usably clear",
+    ],
+    work: [
+      "the solution that was missing, the access that was denied, or the answer that reorganizes the whole problem",
+      "the professional breakthrough — the contact, credential, insight, or timing that finally makes progress possible",
     ],
   },
   34: {
@@ -5251,6 +5293,11 @@ export function buildHouseAssociationSentence(
         `${houseName} keeps drawing attention to ${housePhrase}`,
         `${houseName} makes ${housePhrase} harder to ignore`,
         `In ${houseName}, the emphasis falls on ${housePhrase}`,
+        `${houseName} is the part of the reading where ${housePhrase} becomes most concrete`,
+        `Whatever else is happening, ${houseName} keeps pulling focus back to ${housePhrase}`,
+        `The weight of ${houseName} lands on ${housePhrase}, and other readings nearby are shaped by it`,
+        `${houseName} grounds the reading: ${housePhrase} is not abstract here, it is active`,
+        `${houseName} localizes the pressure around ${housePhrase}`,
       ],
       random,
     ),
@@ -5296,6 +5343,9 @@ export function buildOverlayAssociationSentence(input: {
         `${houseName} frames ${card.name} through ${housePhrase}, making ${cardPhrase} harder to ignore`,
         `Placed in ${houseName}, ${card.name} shows how ${cardPhrase} is being shaped by ${housePhrase}`,
         `${card.name} meeting ${houseName} brings ${cardPhrase} into the atmosphere of ${housePhrase}`,
+        `${card.name} landing in ${houseName} means ${cardPhrase} is now working inside the conditions of ${housePhrase}`,
+        `The combination of ${card.name} and ${houseName} concentrates the reading: ${cardPhrase} is where ${housePhrase} becomes personal`,
+        `In ${houseName}, ${card.name} cannot avoid ${housePhrase} — and the result is that ${cardPhrase} takes on a sharper, more grounded quality`,
       ],
       input.random,
     ),
@@ -5333,6 +5383,9 @@ export function buildPairAssociationSentence(input: {
         `${cardA.name} alongside ${cardB.name} means ${kwJoin(leftKeywords, rightKeywords)} are not separate threads — they are already interacting`,
         `The combination of ${cardA.name} and ${cardB.name} makes ${kwJoin(leftKeywords, rightKeywords)} part of the same question`,
         `${cardA.name} and ${cardB.name} together pull ${kwJoin(leftKeywords, rightKeywords)} into the same orbit`,
+        `What ${cardA.name} starts with ${leftKeywords}, ${cardB.name} reshapes through ${rightKeywords} — the two cards speak as one voice here`,
+        `${cardA.name} and ${cardB.name} are not background noise: ${kwJoin(leftKeywords, rightKeywords)} is the mechanism the reading is describing`,
+        `Neither ${cardA.name} nor ${cardB.name} can be understood alone in this spread — ${kwJoin(leftKeywords, rightKeywords)} describes a single dynamic, not two separate ones`,
       ],
       input.random,
     ),
@@ -5384,6 +5437,9 @@ export function buildActionDirectiveSentence(input: {
               `That is the thread the rest of the reading leads toward`,
               `That is where acting first would carry the most weight`,
               `That is where the reading's weight concentrates most`,
+              `That is the single clearest directive in the spread`,
+              `Everything else in the reading orbits this — ${housePhrase} is where the leverage sits`,
+              `If you only act on one thing from this reading, this is where it counts`,
             ],
             input.random,
           );
@@ -5400,6 +5456,8 @@ export function buildActionDirectiveSentence(input: {
             `${houseName} is where the reading keeps pointing: ${actionSentence}. ${followThroughSentence}`,
             `If anything deserves closer attention here, it is ${houseName}: ${actionSentence}. ${followThroughSentence}`,
             `The thread worth following runs through ${houseName}: ${actionSentence}. ${followThroughSentence}`,
+            `The reading's clearest practical signal is at ${houseName}: ${actionSentence}. ${followThroughSentence}`,
+            `Everything in this spread leads back to ${houseName}: ${actionSentence}. ${followThroughSentence}`,
           ],
       input.random,
     ),
