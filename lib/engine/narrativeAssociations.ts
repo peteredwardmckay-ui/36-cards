@@ -490,11 +490,86 @@ const CARD_ASSOCIATION_NOTES: Partial<Record<number, DomainNotes>> = {
 
 const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<number, string[]>>>> = {
   general_reading: {
+    1: [
+      "incoming news, a fresh signal, or the first concrete movement that shows the situation is ready to shift",
+    ],
+    2: [
+      "a brief opening, small relief, or modest stroke of luck that helps if it is used before the window closes",
+    ],
+    3: [
+      "movement, changing context, and the part of the situation that shifts once things leave familiar ground",
+    ],
+    4: [
+      "the stable base, home ground, and practical foundation the situation depends on whether or not it is acknowledged",
+    ],
+    5: [
+      "slow growth, deeper roots, and the part of the picture that only improves through patience and steady attention",
+    ],
+    6: [
+      "confusion, mixed signals, and the part of the situation that still cannot be read cleanly enough to act on confidently",
+    ],
+    7: [
+      "complication, mixed motives, and the thread in the situation that has to be navigated carefully rather than trusted at face value",
+    ],
+    8: [
+      "an ending, pause, or necessary withdrawal that has to be acknowledged before anything healthier can begin again",
+    ],
     9: [
       "a visible opening in tone, goodwill, or encouragement that can help the wider situation move more easily without resolving it by itself",
     ],
+    10: [
+      "a sharp cut, sudden change, or decisive boundary that alters the situation faster than expected",
+    ],
+    11: [
+      "repeating tension, friction, or the pattern that keeps cycling through the same unresolved conflict",
+    ],
+    12: [
+      "anxious talk, nervous discussion, and the noise created when too many signals arrive before any of them settle",
+    ],
+    13: [
+      "a fresh start, early phase, or newer element in the picture that is still flexible enough to shape well",
+    ],
+    14: [
+      "strategic caution, self-protective instinct, and the question of whether watchfulness is helping clarity or feeding suspicion",
+    ],
+    15: [
+      "strength, authority, and the part of the situation where someone's weight or resources are shaping the field",
+    ],
+    16: [
+      "long-range direction, guiding clarity, and the pattern that only helps once it is turned into concrete steps",
+    ],
+    17: [
+      "constructive change, improvement, and the kind of shift that helps when it is done in the right order",
+    ],
+    18: [
+      "loyalty, reliable support, and the dependable presence that proves itself through consistency rather than intensity",
+    ],
+    19: [
+      "formal structures, authority, and the institutional framework that shapes what can proceed, stall, or be refused",
+    ],
     20: [
       "the wider social field, shared context, or visible environment that starts mattering once events can no longer stay private",
+    ],
+    21: [
+      "blockage, delay, and the obstacle that requires patience and careful strategy rather than force",
+    ],
+    22: [
+      "a decision point, fork in the road, and the moment where continuing on two paths stops being viable",
+    ],
+    23: [
+      "low-grade drain, repeated small losses, and the quiet attrition that wears the situation down if left unnamed",
+    ],
+    24: [
+      "what genuinely matters, emotional truth, and the part of the picture that deserves honest protection",
+    ],
+    25: [
+      "recurring terms, binding agreements, and the loop that keeps setting the shape of the situation until it is consciously revised",
+    ],
+    26: [
+      "hidden information, what is not yet known, and the gap between assumption and verified fact",
+    ],
+    27: [
+      "documents, messages, explicit terms, and the point where the situation changes because something is finally stated plainly",
     ],
     28: [
       "the other person's position, the mirrored side of events, and the part of the wider situation you do not define alone",
@@ -505,6 +580,27 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
       "the way your boundaries and availability are shaping what can unfold",
       "your own stance and the field it is creating around you",
       "what you are permitting, clarifying, or holding back — and how that shapes the wider picture",
+    ],
+    30: [
+      "maturity, restraint, and the steadier handling that keeps the situation from becoming noisier than it needs to be",
+    ],
+    31: [
+      "clarity, warmth, and the visible momentum that makes the situation easier to trust and move with",
+    ],
+    32: [
+      "emotional cycles, shifting visibility, and the way recognition or perception changes the whole atmosphere",
+    ],
+    33: [
+      "the answer, the unlock, and the decisive clarity that lets guessing stop and action begin",
+    ],
+    34: [
+      "flow, exchange, and the practical movement of resources or energy that keeps the situation from stalling",
+    ],
+    35: [
+      "what can actually hold, stay reliable, and remain standing once the initial reaction passes",
+    ],
+    36: [
+      "weight, duty, and the serious burden that has to be carried wisely rather than avoided or dramatized",
     ],
   },
   personal_growth: {
@@ -558,6 +654,63 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     33: [
       "the answer point where something inside finally clicks into usable clarity",
+    ],
+    3: [
+      "the inner journey that begins once you leave the comfort of familiar self-understanding and let your perspective widen",
+    ],
+    4: [
+      "the foundation of habits, safety, and self-care that has to hold before deeper inner work becomes sustainable",
+    ],
+    5: [
+      "slow healing, deeper roots, and the part of personal development that only matures through patience and consistent practice",
+    ],
+    6: [
+      "inner confusion, self-doubt, and the fog that must be acknowledged honestly before clarity can arrive on its own terms",
+    ],
+    7: [
+      "the inner complication, competing desires, and the part of growth where honesty about mixed motives matters more than clean answers",
+    ],
+    8: [
+      "the ending of an old identity, necessary rest, and the quieter phase that has to be honored before renewal becomes real",
+    ],
+    11: [
+      "inner conflict, self-criticism, and the repeating friction that keeps you stuck until the pattern itself is addressed",
+    ],
+    15: [
+      "personal strength, self-sufficiency, and the question of whether your protective power is serving growth or preventing vulnerability",
+    ],
+    16: [
+      "long-range personal vision, guiding clarity, and the deeper direction that only becomes useful once it shapes daily choices",
+    ],
+    18: [
+      "self-loyalty, inner faithfulness, and the steady alliance with your own process that holds even when progress feels invisible",
+    ],
+    19: [
+      "personal boundaries, solitude, and the part of growth that requires standing apart from others long enough to hear yourself clearly",
+    ],
+    25: [
+      "the promises you keep making to yourself, habitual commitments, and the loops that shape your life until you consciously revise them",
+    ],
+    26: [
+      "what you have not yet learned about yourself, and the self-knowledge that only arrives through honest inquiry rather than assumption",
+    ],
+    27: [
+      "the moment of self-articulation where something you have been feeling becomes clear enough to write down or say aloud",
+    ],
+    28: [
+      "the mirror others hold up for you, and the part of personal growth that depends on how you receive what is reflected back",
+    ],
+    30: [
+      "emotional maturity, earned patience, and the steadier inner pace that comes from having survived earlier storms without hardening",
+    ],
+    31: [
+      "genuine confidence, inner warmth, and the phase where growth starts feeling less like effort and more like arrival",
+    ],
+    34: [
+      "the flow of energy, motivation, and practical resources that either sustain your growth or reveal where the support has run dry",
+    ],
+    36: [
+      "the weight of personal responsibility, the burden of meaning, and the question of what you are willing to carry for your own sake",
     ],
     35: [
       "what can actually hold after the first emotional wave passes",
@@ -1160,9 +1313,29 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   love: {
+    1: [
+      "incoming romantic news, a first message, or the signal that the emotional situation is starting to move",
+      "the arrival of new energy in the bond — a text, a gesture, or a shift that changes the emotional weather",
+    ],
+    2: [
+      "a brief romantic opening, lighthearted moment, or small chance to reconnect before the mood shifts again",
+    ],
+    3: [
+      "emotional distance, long-distance dynamics, and the way desire changes once the relationship leaves familiar ground",
+    ],
+    4: [
+      "domestic stability, shared living, and the practical foundation the relationship depends on beneath the romance",
+    ],
+    5: [
+      "slow emotional deepening, trust built through time, and the bond that strengthens by steadiness rather than intensity",
+    ],
     6: [
       "mixed signals, clouded intentions, and the difficulty of reading what the other person is actually offering",
       "the uncertainty in the connection, where what is meant and what is communicated are not yet the same",
+    ],
+    7: [
+      "desire tangled with strategy, and the question of whether attraction is being offered cleanly or used as leverage",
+      "complicated desire, rival energy, and the thread of seduction or manipulation woven through the connection",
     ],
     8: [
       "emotional endings, cold places in the bond, and the need to let what has already gone quiet actually rest",
@@ -1170,6 +1343,12 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     9: [
       "affection and the small gestures that help the bond feel genuinely appreciated rather than taken for granted",
       "warmth and genuine openness that makes connection feel lighter and more generous",
+    ],
+    10: [
+      "the sharp break, decisive ending, or sudden emotional boundary that changes the relationship faster than either person expected",
+    ],
+    11: [
+      "repeating arguments, passion that tips into friction, and the tension loop that keeps cycling without resolving",
     ],
     12: [
       "texting loops, nervous check-ins, mixed signals, and the difference between contact and true clarity",
@@ -1179,16 +1358,8 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
       "a fragile beginning in the bond, where curiosity and lightness matter more than conclusions",
       "the tender or early part of the connection, where gentleness is what makes the next step possible",
     ],
-    23: [
-      "small hurts, suspicion, anxious over-reading, and the slow wear that comes from what never fully gets repaired",
-    ],
-    24: [
-      "genuine affection, tenderness, emotional truth, and what the bond is genuinely asking for",
-    ],
-    21: [
-      "emotional distance, blocked access, and the slow work of patient repair",
-      "the resistance or distance in the bond, and what it is asking for before it shifts",
-      "the obstacle in the connection, which requires patience rather than force",
+    14: [
+      "romantic suspicion, guarded attachment, and the question of whether self-protection is keeping you safe or keeping love out",
     ],
     15: [
       "security, resource protection, and the way the stronger partner's stance shapes the emotional field",
@@ -1198,8 +1369,40 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
       "shared hopes, long-range direction, and the vision of what the relationship could become if both people stay with it",
       "the guiding light in the bond, including what both people are reaching toward and whether those visions align",
     ],
+    17: [
+      "relationship improvement, emotional upgrades, and the constructive change that helps the bond evolve when both people are willing",
+    ],
+    18: [
+      "loyalty, dependable love, and the steady devotion that proves itself by showing up consistently rather than dramatically",
+    ],
+    19: [
+      "emotional walls, institutional distance, and the part of the relationship shaped by formality or separation rather than warmth",
+    ],
+    20: [
+      "the relationship's public face, social context, and what changes when the bond becomes visible to others",
+    ],
+    21: [
+      "emotional distance, blocked access, and the slow work of patient repair",
+      "the resistance or distance in the bond, and what it is asking for before it shifts",
+      "the obstacle in the connection, which requires patience rather than force",
+    ],
+    22: [
+      "the romantic decision point, the choice between staying or leaving, and the fork where both paths can no longer be walked at once",
+    ],
+    23: [
+      "small hurts, suspicion, anxious over-reading, and the slow wear that comes from what never fully gets repaired",
+    ],
+    24: [
+      "genuine affection, tenderness, emotional truth, and what the bond is genuinely asking for",
+    ],
     25: [
       "promises, commitment, and the repeating shape the relationship keeps falling back into",
+    ],
+    26: [
+      "what is still hidden in the relationship, unspoken feelings, and the emotional truth that has not yet surfaced between you",
+    ],
+    27: [
+      "love letters, explicit declarations, and the moment where what has been felt finally gets put into words that can be received",
     ],
     28: [
       "the counterpart's signals, availability, and the part of the bond that depends on their willingness to meet you honestly",
@@ -1209,6 +1412,27 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
       "how your presence in the relationship is quietly shaping what can be given or received",
       "what you are making available, withholding, or leaving unclear — and how that shapes the dynamic",
       "your presence in the relationship and the tone it creates before anything is made explicit",
+    ],
+    30: [
+      "mature love, sexual depth, and the quieter intimacy that comes from experience and earned trust rather than novelty",
+    ],
+    31: [
+      "radiant connection, visible happiness, and the phase where the relationship feels warm, open, and genuinely nourishing",
+    ],
+    32: [
+      "romantic longing, emotional tides, and the way the bond feels different depending on mood, memory, and what is being projected",
+    ],
+    33: [
+      "the decisive romantic clarity that ends ambiguity and reveals whether the connection can actually work",
+    ],
+    34: [
+      "emotional abundance, shared resources, and the practical flow that keeps the relationship from becoming all feeling and no foundation",
+    ],
+    35: [
+      "lasting commitment, relationship endurance, and the bond that can actually hold once infatuation and first intensity pass",
+    ],
+    36: [
+      "the weight of love, sacrificial devotion, and the part of the bond that asks something real to be carried without resentment",
     ],
   },
   legal_admin: {
@@ -1283,14 +1507,17 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   money: {
-    9: [
-      "goodwill, a favorable response, and the kind of practical support that can open a door if it is backed by substance",
-    ],
     1: [
       "incoming movement, fresh information, and the first sign that the money picture is ready to respond",
     ],
     2: [
       "a modest financial opening, brief relief, or a narrow chance worth using while it is still available",
+    ],
+    3: [
+      "money in transit, international transactions, and the financial movement that changes once capital leaves familiar territory",
+    ],
+    4: [
+      "property value, mortgage stability, and the financial foundation that everything else is quietly resting on",
     ],
     5: [
       "slower financial repair, better roots, and the kind of growth that matters more over time than in one quick result",
@@ -1298,26 +1525,65 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     6: [
       "unclear numbers, fog around timing, and the difficulty of judging the financial picture cleanly before the facts settle",
     ],
-    12: [
-      "nervous money talk, repeated checking, and the noise created when the financial picture is discussed faster than it is understood",
-    ],
-    14: [
-      "budget caution, defensive strategy, and the need to separate prudent protection from unhelpful suspicion",
+    7: [
+      "financial complication, hidden costs, and the part of the money picture that has to be traced carefully rather than trusted at face value",
     ],
     8: [
       "a financial pause, ending, write-off, or necessary reset that has to be acknowledged before healthier movement can begin again",
     ],
+    9: [
+      "goodwill, a favorable response, and the kind of practical support that can open a door if it is backed by substance",
+    ],
+    10: [
+      "a sudden financial cut, unexpected expense, or sharp change in the money picture that demands an immediate response",
+    ],
+    11: [
+      "financial disputes, billing conflicts, and the repeating tension around money that keeps cycling without clean resolution",
+    ],
+    12: [
+      "nervous money talk, repeated checking, and the noise created when the financial picture is discussed faster than it is understood",
+    ],
+    13: [
+      "a new financial venture, seed funding, or early-stage investment still small enough to shape before the stakes harden",
+    ],
+    14: [
+      "budget caution, defensive strategy, and the need to separate prudent protection from unhelpful suspicion",
+    ],
+    15: [
+      "heavyweight financial authority, major asset management, and the question of who actually controls the resources",
+    ],
+    16: [
+      "long-range financial planning, investment horizons, and the strategy that only pays off when it is followed through patiently",
+    ],
+    17: [
+      "financial improvement, portfolio rebalancing, and the upgrade in money management that helps when the timing is right",
+    ],
+    18: [
+      "a trusted financial ally, reliable business partner, or the steady support that keeps the money picture from tipping in a crisis",
+    ],
+    19: [
+      "banks, regulatory bodies, tax structures, and the institutional framework that shapes what money can or cannot do",
+    ],
     20: [
       "markets, clients, audience, or the wider financial ecosystem shaping which opportunities are actually viable",
     ],
-    15: [
-      "control of resources, budget pressure, stewardship, and the question of who actually holds the leverage",
+    21: [
+      "financial blockage, frozen assets, and the money obstacle that requires patience and workaround rather than brute force",
+    ],
+    22: [
+      "the financial fork, investment choice, or spending decision where both options can no longer be held open simultaneously",
     ],
     23: [
       "small losses, recurring costs, admin drag, financial anxiety, and the little leaks that matter precisely because they repeat",
     ],
+    24: [
+      "what money is genuinely for, the spending that reflects real values, and the financial choices that feel emotionally honest",
+    ],
     25: [
       "binding financial terms, repeating obligations, subscriptions, debt cycles, and the agreements that keep claiming a share of the flow",
+    ],
+    26: [
+      "hidden financial information, undisclosed terms, and the part of the money picture you still need to research before committing",
     ],
     27: [
       "statements, invoices, notices, filings, and the paperwork that reveals where money is truly going",
@@ -1331,6 +1597,12 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     30: [
       "restraint, long-view judgment, and the steadier pacing that helps money decisions hold up over time",
     ],
+    31: [
+      "financial clarity, profitable momentum, and the phase where money effort starts producing visible, trustworthy returns",
+    ],
+    32: [
+      "fluctuating confidence, market sentiment, and the emotional weather that makes financial decisions feel more or less certain",
+    ],
     33: [
       "the practical fix or decisive clarity that reveals what can be unlocked in the money picture",
     ],
@@ -1339,6 +1611,9 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
     35: [
       "stability, durable income, and the structures that can still hold when the market mood changes",
+    ],
+    36: [
+      "financial sacrifice, the cost of doing what is right, and the money burden that comes with moral or family obligation",
     ],
   },
   purpose_calling: {
@@ -1404,11 +1679,78 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   work: {
+    1: [
+      "incoming assignments, fresh leads, and the first signal that the work situation is ready to move",
+      "a new task, message, or opportunity arriving that changes what the workday demands next",
+    ],
+    2: [
+      "a brief professional opening, small stroke of timing, or narrow window worth acting on before it closes",
+    ],
+    3: [
+      "business travel, remote work, projects with moving parts, and the phase where the job leaves familiar ground",
+    ],
+    4: [
+      "the office base, workspace setup, and the practical foundation the job depends on more than anyone admits",
+    ],
+    5: [
+      "slow professional growth, skill-building over time, and the career investment that only compounds through patience",
+    ],
+    6: [
+      "unclear direction from management, mixed signals about priorities, and the fog that makes it hard to commit confidently",
+    ],
+    7: [
+      "office politics, strategic maneuvering, and the part of the work that has to be navigated carefully rather than taken at face value",
+    ],
+    8: [
+      "a project ending, role closure, or professional pause that needs to be acknowledged before the next phase can begin cleanly",
+    ],
+    9: [
+      "professional goodwill, a favorable review, or the kind of recognition that opens a door if it is backed by substance",
+    ],
+    10: [
+      "a decisive cut, sudden restructure, or sharp professional boundary that changes the work picture faster than expected",
+    ],
+    11: [
+      "workplace friction, repeated disputes, competitive pressure, and the tension that keeps cycling through the same unresolved pattern",
+    ],
+    12: [
+      "excessive meetings, Slack noise, email churn, and the professional chatter that creates activity without progress",
+    ],
+    13: [
+      "a new project, early-stage initiative, or professional beginning still flexible enough to shape before it hardens into routine",
+    ],
+    14: [
+      "strategic caution, self-protective professionalism, and the question of whether workplace vigilance is helping focus or breeding distrust",
+    ],
+    15: [
+      "management authority, resource control, and the heavyweight professional presence that shapes the field whether it intends to or not",
+    ],
+    16: [
+      "career direction, long-range professional goals, and the guiding vision that only becomes useful once it turns into actual steps",
+    ],
+    17: [
+      "role changes, process improvements, and the kind of professional upgrade that helps when the sequencing is right",
+    ],
+    18: [
+      "a reliable colleague, trusted mentor, or steady professional alliance that proves itself through consistency rather than drama",
+    ],
     19: [
       "institutions, hierarchy, formal standards, and the part of the job that is shaped by structure rather than preference",
     ],
+    20: [
+      "the professional network, industry visibility, and the wider field where reputation and opportunity actually circulate",
+    ],
+    21: [
+      "career blockage, stalled promotion, and the professional obstacle that requires patience and strategy rather than force",
+    ],
+    22: [
+      "the career fork, job decision, or professional pivot where continuing on two paths stops being viable",
+    ],
     23: [
       "workflow leaks, repeated corrections, low-grade stress, and the hidden cost of everything that needs fixing twice",
+    ],
+    24: [
+      "genuine professional passion, the work that still feels meaningful, and what keeps the career emotionally alive beneath the routine",
     ],
     25: [
       "recurring obligations, standing meetings, contract terms, and the loops that keep setting the rhythm of the work",
@@ -1419,8 +1761,142 @@ const SUBJECT_CARD_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<n
     27: [
       "instructions, approvals, filings, and the paper trail that keeps the work defensible",
     ],
+    28: [
+      "the colleague, client, or counterpart whose position and timing shape the work outcome without being under your direct control",
+    ],
+    29: [
+      "your professional stance, boundaries, and the way your work ethic and availability are quietly setting the terms",
+    ],
+    30: [
+      "professional maturity, measured judgment, and the experienced hand that keeps the work from becoming noisier than it needs to be",
+    ],
+    31: [
+      "visible professional success, clear momentum, and the phase where effort starts landing in ways others can see",
+    ],
+    32: [
+      "professional reputation, visibility cycles, and the way recognition or perception shifts how the work is received",
+    ],
+    33: [
+      "the breakthrough, decisive answer, or key insight that unlocks what has been stuck in the work picture",
+    ],
+    34: [
+      "income flow, business revenue, professional resources, and the practical exchange that keeps the work financially viable",
+    ],
     35: [
       "career durability, long effort, and the kind of commitment that has to prove it can last",
+    ],
+    36: [
+      "professional duty, moral weight at work, and the burden of responsibility that comes with meaningful stakes",
+    ],
+  },
+  spiritual: {
+    1: [
+      "the first stirring of spiritual awareness, an arriving message from the inner life, or the sign that something deeper is ready to move",
+    ],
+    2: [
+      "a brief moment of grace, a small synchronicity, or the fleeting opening where the sacred feels closer before ordinary life resumes",
+    ],
+    3: [
+      "the spiritual journey, pilgrimage energy, and the expansion that begins once practice leaves familiar comfort and enters deeper water",
+    ],
+    4: [
+      "the spiritual home base, sacred space, and the grounded container that daily practice depends on more than inspiration alone",
+    ],
+    5: [
+      "deep roots, ancestral connection, and the slow spiritual growth that only comes through patience, embodiment, and lived experience",
+    ],
+    6: [
+      "spiritual confusion, dark night of the soul, and the fog that must be endured honestly before genuine clarity can arrive",
+    ],
+    7: [
+      "spiritual complication, shadow work, and the part of the inner path that requires honesty about mixed motives and hidden desires",
+    ],
+    8: [
+      "ego death, necessary endings, and the spiritual surrender that has to happen before transformation can take root on deeper ground",
+    ],
+    9: [
+      "spiritual gifts, blessings received, and the grace that arrives as encouragement without needing to be earned or explained",
+    ],
+    10: [
+      "the decisive spiritual cut, renunciation, and the moment where something must be released completely rather than renegotiated",
+    ],
+    11: [
+      "spiritual discipline, repetitive practice, and the question of whether devotion is deepening awareness or becoming compulsive ritual",
+    ],
+    12: [
+      "restless spiritual seeking, too many teachings at once, and the inner noise created when the mind tries to outpace the soul",
+    ],
+    13: [
+      "beginner's mind, fresh spiritual openness, and the phase of the path where innocence and curiosity matter more than expertise",
+    ],
+    14: [
+      "spiritual bypassing, over-strategic practice, and the question of whether discernment is serving truth or protecting the ego from honest encounter",
+    ],
+    15: [
+      "spiritual authority, the weight of a teacher or tradition, and the question of whether power in sacred space is serving or controlling",
+    ],
+    16: [
+      "higher guidance, cosmic orientation, and the long-range spiritual direction that only becomes real when it shapes how you actually live",
+    ],
+    17: [
+      "spiritual transformation, renewal of practice, and the constructive change that helps the inner life evolve rather than stagnate",
+    ],
+    18: [
+      "spiritual companionship, faithful practice partners, and the steady devotional support that holds without needing to perform",
+    ],
+    19: [
+      "spiritual solitude, monastic energy, and the part of the path that requires withdrawal from noise long enough to hear what is real",
+    ],
+    20: [
+      "spiritual community, shared practice, and the sacred context that emerges when inner work becomes visible to and held by others",
+    ],
+    21: [
+      "the spiritual obstacle, the wall that cannot be climbed by effort alone, and the invitation to let stillness do what striving cannot",
+    ],
+    22: [
+      "the spiritual crossroads, the choice between paths or traditions, and the fork where deepening requires choosing one direction honestly",
+    ],
+    23: [
+      "spiritual erosion, doubt that wears away faith, and the quiet attrition of practice when meaning drains faster than it is replenished",
+    ],
+    24: [
+      "devotion, the heart of spiritual life, and the love that keeps practice alive when intellectual understanding alone is not enough",
+    ],
+    25: [
+      "spiritual vows, sacred commitments, and the repeating promises that shape the inner life until they are consciously renewed or released",
+    ],
+    26: [
+      "esoteric knowledge, hidden teachings, and the part of the spiritual path that only reveals itself through study, initiation, or time",
+    ],
+    27: [
+      "sacred texts, spiritual writing, and the moment where inner experience becomes articulate enough to be shared or recorded",
+    ],
+    28: [
+      "the spiritual mirror, the teacher or counterpart who reflects back what you cannot yet see in yourself",
+    ],
+    29: [
+      "your own spiritual stance, the sincerity of your seeking, and the way your inner posture is shaping what can be received",
+    ],
+    30: [
+      "spiritual maturity, elder wisdom, and the quieter holiness that comes from having walked the path long enough to stop performing it",
+    ],
+    31: [
+      "illumination, spiritual clarity, and the phase where practice begins producing genuine warmth and visible inner light",
+    ],
+    32: [
+      "mystical experience, lunar intuition, and the part of the spiritual path that works through dreams, cycles, and what cannot be fully articulated",
+    ],
+    33: [
+      "spiritual breakthrough, the key insight that unlocks a deeper level of understanding, and the moment where seeking gives way to finding",
+    ],
+    34: [
+      "spiritual abundance, the flow of grace, and the practical question of how inner richness translates into a life that actually sustains the path",
+    ],
+    35: [
+      "spiritual endurance, anchored faith, and the practice that can still hold after ecstasy fades and ordinary life returns",
+    ],
+    36: [
+      "the weight of sacred duty, spiritual suffering, and the part of the path that asks something real to be carried as offering rather than complaint",
     ],
   },
 };
