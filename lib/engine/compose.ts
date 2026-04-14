@@ -366,6 +366,13 @@ function buildQuickIntro(input: {
         `The spread settles most naturally around ${subjectLabel} themes ${themeLensSummary}, given there is no fixed question to anchor it.`,
         `Without a question to direct it, this reading finds its shape through ${lowerSubject} ${themeLensSummary}.`,
         `Leaving the question open lets the spread speak through ${lowerSubject} ${themeLensSummary}, which is where the clearest signal sits.`,
+        `The cards arrange themselves around ${lowerSubject} ${themeLensSummary}, offering a picture of what is already in motion.`,
+        `This ${spreadLabel.toLowerCase()} reads best as a general survey through ${lowerSubject} ${themeLensSummary}, so the strongest threads can surface on their own.`,
+        `An open reading like this one finds its centre through ${subjectLabel} ${themeLensSummary}, where the cards cluster most clearly.`,
+        `The reading opens without a fixed question, so ${lowerSubject} ${themeLensSummary} becomes the thread that holds the sections together.`,
+        `No question was set, and that lets the spread breathe — ${subjectLabel} ${themeLensSummary} gives it the shape it needs.`,
+        `The strongest signal in this open ${spreadLabel.toLowerCase()} lives in ${lowerSubject} ${themeLensSummary}, so that is the thread the reading follows.`,
+        `This is a reading without a fixed question, which means the cards speak through ${lowerSubject} ${themeLensSummary} and let the picture form gradually.`,
       ],
       random,
     );
@@ -387,6 +394,10 @@ function buildQuickIntro(input: {
       `What the cards seem most interested in, given "${normalized}", is ${lowerSubject} ${themeLensSummary}.`,
       `The answer to "${normalized}" seems to be living in ${lowerSubject} territory ${themeLensSummary}.`,
       `Framing "${normalized}" through ${lowerSubject} ${themeLensSummary} gives the clearest read of what is actually moving.`,
+      `"${normalized}" enters a field shaped by ${lowerSubject} ${themeLensSummary}, and the cards answer by pointing toward what is most ready to shift.`,
+      `The question "${normalized}" finds its strongest thread in ${lowerSubject} ${themeLensSummary}, so the reading follows that line first.`,
+      `For "${normalized}", the practical answer lives in ${lowerSubject} ${themeLensSummary} — that is where the cards concentrate.`,
+      `"${normalized}" is a question that the spread answers through ${lowerSubject} ${themeLensSummary}, and the sections below trace where the signal is strongest.`,
     ],
     random,
   );
@@ -401,6 +412,27 @@ function describeSignificatorMode(mode: SignificatorMode): string {
 
 function buildSection(id: string, title: string, technique: NarrativeSection["technique"], body: string): NarrativeSection {
   return { id, title, technique, body };
+}
+
+const SECTION_TITLE_POOL: Record<string, string[]> = {
+  // GT quick mode
+  center: ["At the Heart", "Central Focus", "The Core Position", "Where It All Centers"],
+  pair: ["What Sits Beside It", "The Nearest Cards", "Adjacent Influences", "Side by Side"],
+  background: ["The Deeper Current", "Undercurrents", "What Runs Beneath", "The Wider Pattern"],
+  timing: ["What Comes Next", "Timing and Momentum", "The Forward Edge", "What Is Forming"],
+  cartouche: ["Cartouche", "The Fate Line", "Below the Tableau", "The Final Row"],
+  synthesis: ["Taken Together", "The Full Picture", "Reading the Whole", "What It Adds Up To"],
+  // Three-card quick mode
+  situation: ["Where Things Stand", "The Starting Position", "What Is Already Here", "The Current Ground"],
+  pivot: ["The Turning Point", "The Hinge", "Where It Shifts", "The Central Question"],
+  direction: ["Where It Leads", "What Follows", "The Forward Movement", "Where Momentum Points"],
+  closer: ["The Next Move", "What To Do With This", "The Practical Thread", "Your Response"],
+};
+
+function pickSectionTitle(id: string, random: () => number): string {
+  const pool = SECTION_TITLE_POOL[id];
+  if (!pool || pool.length === 0) return id;
+  return pool[Math.floor(random() * pool.length)];
 }
 
 function buildHighlights(sections: NarrativeSection[]): HighlightItem[] {
@@ -1193,10 +1225,10 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
   const synthesisSentence = `${tableauSynthesis.practicalSentence} ${tableauSynthesis.openingsSentence} ${tableauSynthesis.thesisSentence}`;
 
   const sections: NarrativeSection[] = [
-    buildSection("center", "At the Heart", "house", centerSentenceWithTheme),
-    buildSection("pair", "What Sits Beside It", "pair", pairSentence),
-    buildSection("background", "The Deeper Current", "diagonal", backgroundSentence),
-    buildSection("timing", "What Comes Next", "proximity", timingSentence),
+    buildSection("center", pickSectionTitle("center", random), "house", centerSentenceWithTheme),
+    buildSection("pair", pickSectionTitle("pair", random), "pair", pairSentence),
+    buildSection("background", pickSectionTitle("background", random), "diagonal", backgroundSentence),
+    buildSection("timing", pickSectionTitle("timing", random), "proximity", timingSentence),
   ];
 
   let cartouchePairKey: string | null = null;
@@ -1249,13 +1281,13 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
         random,
       );
 
-      sections.push(buildSection("cartouche", "Cartouche", "timeline", `${cartoucheSentenceA} ${cartoucheSentenceB} ${cartoucheSentenceC}`));
+      sections.push(buildSection("cartouche", pickSectionTitle("cartouche", random), "timeline", `${cartoucheSentenceA} ${cartoucheSentenceB} ${cartoucheSentenceC}`));
     }
   }
 
   const themeBridge = buildThemeSectionBridge(resolvedThemeId, random);
   sections.push(
-    buildSection("synthesis", "Taken Together", "synthesis", [synthesisSentence, themeBridge].filter(Boolean).join(" ")),
+    buildSection("synthesis", pickSectionTitle("synthesis", random), "synthesis", [synthesisSentence, themeBridge].filter(Boolean).join(" ")),
   );
 
   const conclusionActionCard = primaryCard.id === 28 || primaryCard.id === 29 ? getCardMeaning(primaryHouse.id) : primaryCard;
@@ -1393,11 +1425,11 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
   const themeBridge = buildThemeSectionBridge(resolvedThemeId, random);
   return {
     sections: [
-      buildSection("situation", "Where Things Stand", "timeline", situationSentence),
-      buildSection("pivot", "The Turning Point", "timeline", pivotSentence),
-      buildSection("direction", "Where It Leads", "timeline", directionSentence),
-      buildSection("synthesis", "Taken Together", "synthesis", [synthesisConnector, synthesisSentence, buildCardPairBridge(cards[0].id, cards[1].id, cards[0].name, cards[1].name, random), buildCardPairBridge(cards[1].id, cards[2].id, cards[1].name, cards[2].name, random), themeBridge].filter(Boolean).join(" ")),
-      buildSection("closer", "The Next Move", "synthesis", closerSentence),
+      buildSection("situation", pickSectionTitle("situation", random), "timeline", situationSentence),
+      buildSection("pivot", pickSectionTitle("pivot", random), "timeline", pivotSentence),
+      buildSection("direction", pickSectionTitle("direction", random), "timeline", directionSentence),
+      buildSection("synthesis", pickSectionTitle("synthesis", random), "synthesis", [synthesisConnector, synthesisSentence, buildCardPairBridge(cards[0].id, cards[1].id, cards[0].name, cards[1].name, random), buildCardPairBridge(cards[1].id, cards[2].id, cards[1].name, cards[2].name, random), themeBridge].filter(Boolean).join(" ")),
+      buildSection("closer", pickSectionTitle("closer", random), "synthesis", closerSentence),
     ],
     conclusion,
     selectionTrace: {

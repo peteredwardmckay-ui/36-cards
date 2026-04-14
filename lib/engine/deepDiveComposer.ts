@@ -55,6 +55,30 @@ function choose<T>(values: T[], random: () => number): T {
   return values[Math.floor(random() * values.length)];
 }
 
+const DEEP_DIVE_TITLE_POOL: Record<string, string[]> = {
+  // GT deep dive
+  "opening-frame": ["Opening Frame", "The Wider Picture", "Setting the Scene", "Reading the Field"],
+  "center-significator": ["Center / Significator Focus", "The Significator", "Your Central Position", "Where You Sit"],
+  "immediate-surroundings": ["Immediate Surroundings", "What Sits Closest", "The Near Field", "Cards Within Reach"],
+  houses: ["Houses", "House Positions", "The Houses Beneath", "Where Each Card Lands"],
+  "local-cluster": ["Local Cluster", "The Closest Group", "Concentrated Energy", "Where Cards Gather"],
+  "wider-thread": ["Wider Thread", "The Longer Reach", "Distant Influences", "What Extends Further"],
+  "secondary-zone": ["Secondary Zone", "Background Pressure", "The Outer Ring", "What Builds Quietly"],
+  "cartouche-fate": ["Cartouche / Fate Line", "The Fate Line", "Below the Grid", "The Final Row"],
+  "key-threads": ["Key Threads", "Pulling It Together", "The Strongest Threads", "What Stands Out"],
+  // Three-card deep dive
+  "situation-3c": ["Situation", "Where Things Stand", "The Starting Position", "What Is Already Here"],
+  "pivot-3c": ["Pivot", "The Turning Point", "The Hinge", "Where It Shifts"],
+  "direction-3c": ["Direction", "Where It Leads", "The Forward Movement", "What Follows"],
+  "between-cards": ["Between the Cards", "The Pairs", "Card Combinations", "How They Speak Together"],
+};
+
+function pickDeepDiveTitle(id: string, random: () => number): string {
+  const pool = DEEP_DIVE_TITLE_POOL[id];
+  if (!pool || pool.length === 0) return id;
+  return pool[Math.floor(random() * pool.length)];
+}
+
 function clause(input: string): string {
   return input.trim().replace(/[.!?]+$/g, "");
 }
@@ -1257,6 +1281,13 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `The tableau opens in a mood of ${atmospherePhrase}, where timing and selection seem to matter more than force`,
             `${subjectLabel} comes through here with ${atmospherePhrase} nearest the surface, while the cards keep pointing back to practical choices`,
             `The first thing the tableau shows is ${atmospherePhrase}, and that is the first clue to ${introShiftFocus(subjectId)}`,
+            `Your question enters a spread where ${atmospherePhrase} sets the opening tone, and the strongest threads point toward decisions that cannot wait much longer`,
+            `This ${subjectReadingLabel(subjectLabel).toLowerCase()} reading begins with ${atmospherePhrase}, where the cards suggest that clarity will come from action rather than reflection alone`,
+            `The spread shows ${atmospherePhrase} running through the field, and your question is best answered by following the most concentrated thread first`,
+            `What the tableau picks up first is ${atmospherePhrase}, and the rest of the reading builds from that foundation`,
+            `Around your question, the cards describe a field shaped by ${atmospherePhrase}, where the practical path forward matters more than the general atmosphere`,
+            `The tableau arranges itself around ${atmospherePhrase}, and the deeper patterns emerge once the nearest influences are read in sequence`,
+            `Your question meets a field where ${atmospherePhrase} is already active, and the reading below traces what that means in practice`,
           ],
           random,
         )
@@ -1267,6 +1298,13 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `The field opens in a mood of ${atmospherePhrase}, where timing and selection seem to matter more than force`,
             `${subjectLabel} comes through here with ${atmospherePhrase} nearest the surface, while the cards keep pointing back to practical choices`,
             `The first thing the tableau shows is ${atmospherePhrase}, and that is the first clue to ${introShiftFocus(subjectId)}`,
+            `This ${subjectReadingLabel(subjectLabel).toLowerCase()} reading begins with ${atmospherePhrase} shaping the opening field, and the strongest threads point toward decisions that cannot be deferred`,
+            `The spread describes a field where ${atmospherePhrase} is already active, and what follows traces how that plays out across the full tableau`,
+            `What the cards pick up first is ${atmospherePhrase}, and the rest of the reading builds outward from that signal`,
+            `The tableau arranges itself around ${atmospherePhrase}, with the deepest patterns emerging only after the nearest influences are read`,
+            `The field is shaped by ${atmospherePhrase}, and the practical path forward matters more than general impressions`,
+            `Across the full layout, ${atmospherePhrase} sets the tone, and the reading traces what that means for ${introShiftFocus(subjectId)}`,
+            `The first signal in this ${subjectReadingLabel(subjectLabel).toLowerCase()} reading is ${atmospherePhrase}, and the cards suggest that action will clarify more than waiting`,
           ],
           random,
         ),
@@ -1323,7 +1361,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const sections: NarrativeSection[] = [
     {
       id: "opening-frame",
-      title: "Opening Frame",
+      title: pickDeepDiveTitle("opening-frame", random),
       technique: "synthesis",
       body: [
         normalizedQuestion
@@ -1346,7 +1384,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "center-significator",
-      title: "Center / Significator Focus",
+      title: pickDeepDiveTitle("center-significator", random),
       technique: "significator",
       body: `${sentence(
         `${centerLead}, ${cardRef(significatorPlacement.cardId)} sits at row ${analysis.significator.row + 1}, column ${
@@ -1386,7 +1424,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "immediate-surroundings",
-      title: "Immediate Surroundings",
+      title: pickDeepDiveTitle("immediate-surroundings", random),
       technique: "proximity",
       body: `${sentence(
         cardinal.length
@@ -1507,7 +1545,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
 
     sections.push({
       id: "houses-overlay",
-      title: "Houses",
+      title: pickDeepDiveTitle("houses", random),
       technique: "house",
       body: houseNotes.slice(0, 6).join(" "),
     });
@@ -1516,7 +1554,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   sections.push(
     {
       id: "local-cluster",
-      title: "Local Cluster",
+      title: pickDeepDiveTitle("local-cluster", random),
       technique: "pair",
       body: `${sentence(
         `${clusterLead}: ${formatCardList(renderedClusterCardIds, 7)}`,
@@ -1589,7 +1627,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "wider-thread",
-      title: "Wider Thread",
+      title: pickDeepDiveTitle("wider-thread", random),
       technique: "diagonal",
       body: `${sentence(
         `${widerLead} ${formatCardList(diagonalLine, 7)}, where early signals echo into later positions`,
@@ -1605,7 +1643,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "secondary-zone",
-      title: "Secondary Zone",
+      title: pickDeepDiveTitle("secondary-zone", random),
       technique: "knight",
       body: `${sentence(
         `${backgroundLead}, ${secondaryZone.label} carries ${formatCardList(
@@ -1730,7 +1768,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
 
     sections.push({
       id: "cartouche-fate-line",
-      title: "Cartouche / Fate Line",
+      title: pickDeepDiveTitle("cartouche-fate", random),
       technique: "timeline",
       body: `${cartoucheNarrativeA} ${cartoucheNarrativeB}\n\n${cartoucheNarrativeC}\n${cartoucheBullets}`,
     });
@@ -1776,7 +1814,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const gtThemeBridge = buildThemeSectionBridge(resolvedThemeId, random);
   sections.push({
     id: "key-threads",
-    title: "Key Threads",
+    title: pickDeepDiveTitle("key-threads", random),
     technique: "synthesis",
     body: [buildKeyThreadBullets(keyThreadLines), gtThemeBridge].filter(Boolean).join("\n"),
   });
@@ -1970,12 +2008,18 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     }) ??
       sentence(strongestPair.prose));
 
+  const themeEmphasis = resolvedThemeLabel ? resolvedThemeLabel.toLowerCase() : "context-led";
   const intro = sentence(
     choose(
       [
-        `This deep-dive ${subjectLabel.toLowerCase()} reading opens with a ${resolvedThemeLabel ? resolvedThemeLabel.toLowerCase() : "context-led"} emphasis`,
+        `This deep-dive ${subjectLabel.toLowerCase()} reading opens with a ${themeEmphasis} emphasis`,
         `The three cards answer in a quieter, reflective register shaped by ${subjectLabel.toLowerCase()}`,
         `The atmosphere here is focused and reflective, with the ${subjectLabel.toLowerCase()} lens sharpening each turn`,
+        `Three cards, read slowly: ${subjectLabel.toLowerCase()} shapes the question, and a ${themeEmphasis} tone shapes the reading`,
+        `The sequence unfolds through a ${subjectLabel.toLowerCase()} lens, where each position builds on the one before it`,
+        `This reading moves card by card through ${subjectLabel.toLowerCase()}, with a ${themeEmphasis} emphasis that sharpens the practical thread`,
+        `What follows is a close reading of three cards through the lens of ${subjectLabel.toLowerCase()}, where timing and sequence matter as much as individual symbols`,
+        `The spread reads best when each card is given room to speak — ${subjectLabel.toLowerCase()} provides the frame, and the ${themeEmphasis} tone provides the texture`,
       ],
       random,
     ),
@@ -1993,7 +2037,7 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
   const sections: NarrativeSection[] = [
     {
       id: "opening-frame",
-      title: "Opening Frame",
+      title: pickDeepDiveTitle("opening-frame", random),
       technique: "synthesis",
       body: `${sentence(
         normalizedQuestion
@@ -2005,7 +2049,7 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "situation",
-      title: "Situation",
+      title: pickDeepDiveTitle("situation-3c", random),
       technique: "timeline",
       body: [
         `${sentence(`${labels[0]} begins with ${cardRef(cards[0].id)}${firstThread ? `: ${firstThread[0].toUpperCase()}${firstThread.slice(1)}` : `, establishing the opening conditions`}`)} ${situationAssoc} ${situationBoilerplate}`,
@@ -2014,7 +2058,7 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "pivot",
-      title: "Pivot",
+      title: pickDeepDiveTitle("pivot-3c", random),
       technique: "timeline",
       body: [
         `${sentence(`${labels[1]} turns on ${cardRef(cards[1].id)}${secondThread ? `: ${secondThread[0].toUpperCase()}${secondThread.slice(1)}` : `, and this is where the reading can turn`}`)} ${pivotAssoc} ${pivotBoilerplate}`,
@@ -2023,7 +2067,7 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     },
     {
       id: "direction",
-      title: "Direction",
+      title: pickDeepDiveTitle("direction-3c", random),
       technique: "timeline",
       body: [
         `${sentence(`${labels[2]} closes with ${cardRef(cards[2].id)}${thirdThread ? `: ${thirdThread[0].toUpperCase()}${thirdThread.slice(1)}` : `, carrying the sequence into its likely direction`}`)} ${directionAssoc}`,
@@ -2050,14 +2094,14 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       if (!body) return [];
       return [{
         id: "between-the-cards",
-        title: "Between the Cards",
+        title: pickDeepDiveTitle("between-cards", random),
         technique: "synthesis" as const,
         body,
       }];
     })()),
     {
       id: "key-threads",
-      title: "Key Threads",
+      title: pickDeepDiveTitle("key-threads", random),
       technique: "synthesis",
       body: buildKeyThreadBullets([
         `${cardRef(cards[0].id)} sets the opening tone`,

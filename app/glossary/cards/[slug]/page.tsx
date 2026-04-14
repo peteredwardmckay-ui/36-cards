@@ -6,6 +6,7 @@ import { BrandHeader } from "@/components/BrandHeader";
 import { BrandFooter } from "@/components/BrandFooter";
 import { CARD_BY_SLUG, CARD_MEANINGS } from "@/lib/content/cards";
 import { HOUSE_MEANINGS } from "@/lib/content/houses";
+import { getTopPairsForCard } from "@/lib/content/pairs";
 
 export function generateStaticParams() {
   return CARD_MEANINGS.map((card) => ({ slug: card.slug }));
@@ -144,6 +145,44 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
               <li><strong>Work:</strong> {card.domainVariants.work}</li>
             </ul>
           </section>
+
+          {(() => {
+            const topPairs = getTopPairsForCard(card.id, 6);
+            if (topPairs.length === 0) return null;
+            return (
+              <section className="mt-5">
+                <h2 className="text-xl font-semibold">Common Pairs</h2>
+                <p className="mt-2 text-sm text-[color:var(--brand-muted)]">
+                  When {card.name} appears next to these cards, the combination often points to:
+                </p>
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                  {topPairs.map((pair) => {
+                    const partnerId = pair.a === card.id ? pair.b : pair.a;
+                    const partner = CARD_MEANINGS.find((c) => c.id === partnerId);
+                    if (!partner) return null;
+                    return (
+                      <div
+                        key={pair.key}
+                        className="rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4"
+                      >
+                        <Link
+                          href={`/glossary/cards/${partner.slug}`}
+                          className="text-base font-semibold text-[color:var(--brand-text)] hover:underline"
+                        >
+                          {partner.id}. {partner.name}
+                        </Link>
+                        <ul className="mt-2 space-y-1 text-sm text-[color:var(--brand-muted)]">
+                          <li><strong>General:</strong> {pair.meanings.general}</li>
+                          <li><strong>Love:</strong> {pair.meanings.love}</li>
+                          <li><strong>Work:</strong> {pair.meanings.work}</li>
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })()}
 
           <section className="mt-5">
             <h2 className="text-xl font-semibold">Technique Notes</h2>

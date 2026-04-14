@@ -3405,3 +3405,11 @@ export const PAIR_MEANINGS_BY_KEY = new Map(PAIR_MEANINGS.map((item) => [item.ke
 export function getPairMeaning(a: number, b: number): PairMeaning | null {
   return PAIR_MEANINGS_BY_KEY.get(pairKey(a, b)) ?? null;
 }
+
+/** Return the top pairs involving a given card, sorted by signal strength (descending). */
+export function getTopPairsForCard(cardId: number, limit = 6): PairMeaning[] {
+  return PAIR_MEANINGS
+    .filter((pair) => pair.a === cardId || pair.b === cardId)
+    .sort((x, y) => y.signal - x.signal)
+    .slice(0, limit);
+}
