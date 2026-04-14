@@ -231,6 +231,9 @@ function buildDiagonalMovementSentence(
         `Read as a sequence, that line moves from ${startThread} toward ${endThread}`,
         `Taken as one progression, it starts with ${startThread}, then leans toward ${endThread}`,
         `As a wider arc, it begins with ${startThread}, then gradually points toward ${endThread}`,
+        `The diagonal traces a development: ${startThread} at one corner becoming ${endThread} at the other`,
+        `Corner to corner, the arc runs from ${startThread} into ${endThread} — the spread's longest storyline`,
+        `The diagonal's narrative runs from ${startThread} toward ${endThread}, and the cards between mark the stages of that shift`,
       ],
       random,
     ),
@@ -271,6 +274,9 @@ function buildLineMovementSentence(
           `Across that line, the movement runs from ${startThread} toward ${endThread}`,
           `Read from one side to the other, that row moves from ${startThread} toward ${endThread}`,
           `Seen as one horizontal progression, it moves from ${startThread} toward ${endThread}`,
+          `The row tells a story: it begins with ${startThread} and resolves toward ${endThread}`,
+          `Horizontally, the sequence shifts from ${startThread} into ${endThread} — and the transition carries information`,
+          `What starts as ${startThread} on one side becomes ${endThread} on the other — the row describes that arc`,
         ],
         random,
       ),
@@ -283,6 +289,9 @@ function buildLineMovementSentence(
         `On that vertical line, the deeper movement runs from ${startThread} toward ${endThread}`,
         `Read from top to bottom, that axis moves from ${startThread} toward ${endThread}`,
         `Seen as one vertical progression, it moves from ${startThread} toward ${endThread}`,
+        `The column carries a slower arc: from ${startThread} above toward ${endThread} below`,
+        `Vertically, the development runs from ${startThread} down to ${endThread} — a quieter timeline than the row`,
+        `What sits above as ${startThread} gradually becomes ${endThread} further down — the column marks that maturation`,
       ],
       random,
     ),
@@ -493,6 +502,8 @@ function buildClusterLinkSentence(
           [
             "The cluster keeps procedural pressure and practical choices tightly linked",
             "This part of the spread keeps procedural pressure and practical choices tightly bound together",
+            "In this ring, compliance, documentation, and decision-making all converge — none moves independently",
+            "The formal and the practical are pressing on each other here; what the process requires and what can actually be done stay entangled",
           ],
           random,
         ),
@@ -503,6 +514,8 @@ function buildClusterLinkSentence(
           [
             "This nearest ring keeps financial pressure and practical choices tightly linked",
             "Here, financial pressure and practical choices keep feeding into one another",
+            "The cluster concentrates where resource decisions and emotional reactions to money are inseparable",
+            "At this range, what the numbers say and how you feel about them are part of the same question",
           ],
           random,
         ),
@@ -513,6 +526,8 @@ function buildClusterLinkSentence(
           [
             "The cluster keeps study pressure, practical choices, and what still needs proving tightly linked",
             "This section keeps study pressure, practical choices, and what still needs proving tightly bound together",
+            "In this ring, the learning curve, the assessment pressure, and the daily reality of study all press on the same point",
+            "What you are studying and what the study is costing — in time, energy, and focus — stay tangled together here",
           ],
           random,
         ),
@@ -523,6 +538,8 @@ function buildClusterLinkSentence(
           [
             "The cluster keeps logistics, timing, and practical choices tightly linked",
             "This section keeps logistics, timing, and practical choices tightly bound together",
+            "At this range, route, schedule, and readiness are all one conversation — planning and reality overlap",
+            "The cards nearest the center keep the practical demands of the journey directly in view",
           ],
           random,
         ),
@@ -533,6 +550,8 @@ function buildClusterLinkSentence(
           [
             "The cluster keeps creative pressure, practical choices, and what still needs shaping tightly linked",
             "This knot of cards keeps creative pressure, practical choices, and what still needs shaping tightly bound together",
+            "In this ring, inspiration, craft, and the question of whether the work is landing all converge",
+            "What the work needs and what you are able to give it right now are pressing on the same point here",
           ],
           random,
         ),
@@ -543,6 +562,8 @@ function buildClusterLinkSentence(
           [
             "The cluster keeps social pressure, practical choices, and what still needs clarifying tightly linked",
             "This knot of cards keeps social pressure, practical choices, and what still needs clarifying tightly bound together",
+            "In this ring, who you spend time with, how it feels, and what the group expects all press on the same point",
+            "Social dynamics and private needs are entangled here — neither can be addressed without the other moving",
           ],
           random,
         ),
@@ -553,6 +574,8 @@ function buildClusterLinkSentence(
           [
             "This nearest ring keeps workplace pressure and practical choices tightly linked",
             "Here, workplace pressure and practical choices keep shaping each other",
+            "The cluster concentrates where performance, politics, and personal judgment all converge — they cannot be separated",
+            "In this ring, what the role demands and what you are prepared to give stay entangled",
           ],
           random,
         ),
@@ -564,6 +587,8 @@ function buildClusterLinkSentence(
             "In this nearest ring, emotion and practical decisions keep shaping each other",
             "Here, emotional tone and practical decisions remain tightly linked",
             "At this distance, feeling and practical judgment keep feeding into one another",
+            "The cluster concentrates the reading's central tension — what is felt and what must be done stay tangled together",
+            "In this ring, the cards cannot be separated into clean categories; they all speak to the same pressure point",
           ],
           random,
         ),
@@ -1248,21 +1273,50 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   );
 
   // Capture boilerplate sentences for the GT trim queue.
-  // None of these call random(), so hoisting them is safe — no seeding change.
+  const rowCardList = formatCardList(analysis.rowLine.map((p) => p.cardId), 6);
+  const colCardList = formatCardList(analysis.columnLine.map((p) => p.cardId), 4);
   const gtWiderRowBoilerplate = sentence(
-    `Across the center row, ${formatCardList(analysis.rowLine.map((p) => p.cardId), 6)} show that pacing matters more than force`,
+    choose(
+      [
+        `Across the center row, ${rowCardList} show that pacing matters more than force`,
+        `The horizontal line through ${rowCardList} describes the sequence of events — what is immediate and what follows`,
+        `Reading across the row, ${rowCardList} reveal how one decision flows into the next`,
+      ],
+      random,
+    ),
   );
   const gtWiderColBoilerplate = sentence(
-    `The vertical line through ${formatCardList(analysis.columnLine.map((p) => p.cardId), 4)} adds a quieter timing signal, where outcomes settle after the visible turning point`,
+    choose(
+      [
+        `The vertical line through ${colCardList} adds a quieter timing signal, where outcomes settle after the visible turning point`,
+        `Down the column, ${colCardList} show what is developing beneath the surface — slower to arrive but harder to reverse`,
+        `The vertical axis through ${colCardList} carries the deeper timeline, where what matures quietly eventually becomes decisive`,
+      ],
+      random,
+    ),
   );
   const gtImmediateRowBoilerplate = rowNeighbors.length
     ? sentence(
-        `Across the same row, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} show how immediate choices ripple into social or practical consequences`,
+        choose(
+          [
+            `Across the same row, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} show how immediate choices ripple into social or practical consequences`,
+            `On the horizontal, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} describe what is actively in play alongside your central position`,
+            `The row neighbors ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} show the immediate landscape of choices and pressures`,
+          ],
+          random,
+        ),
       )
     : "";
   const gtImmediateColBoilerplate = columnNeighbors.length
     ? sentence(
-        `On the vertical axis, ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} describe what is already maturing beneath the surface`,
+        choose(
+          [
+            `On the vertical axis, ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} describe what is already maturing beneath the surface`,
+            `Above and below, ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} carry the slower influences that are building toward visibility`,
+            `The column neighbors ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} reveal what is rising or settling around the central question`,
+          ],
+          random,
+        ),
       )
     : "";
 
@@ -1564,6 +1618,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `What gathers there is less immediate, but it quietly sets the conditions under which your next choices will land`,
             `That zone is not the loudest part yet, but it is already setting the terms your next choices will meet`,
             `It is not foreground pressure yet, but it is already shaping the conditions your next steps will enter`,
+            `This is the weather that is forming — not yet arrived, but already influencing what becomes possible`,
+            `The cards here describe what is building in the background; by the time it surfaces, the shape will already be set`,
           ],
           random,
         ),
@@ -1733,6 +1789,9 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       "There is a practical thread worth following through.",
       "The cards suggest one place where a direct response would land first.",
       "That picture leaves one thread that concentrates the reading more than the others.",
+      "One part of the spread carries more weight than the rest, and that is where action would count most.",
+      "If the reading has a single strongest signal, it gathers here.",
+      "The cards converge on one point more clearly than anywhere else in the spread.",
     ],
     random,
   );
@@ -1806,10 +1865,12 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     // wider-thread: most generic sentences first
     { sectionId: "wider-thread", sentence: gtWiderColBoilerplate },
     { sectionId: "wider-thread", sentence: gtWiderRowBoilerplate },
-    // secondary-zone: any of the three boilerplate variants
+    // secondary-zone: any of the five boilerplate variants
     { sectionId: "secondary-zone", sentence: sentence("What gathers there is less immediate, but it quietly sets the conditions under which your next choices will land") },
     { sectionId: "secondary-zone", sentence: sentence("That zone is not the loudest part yet, but it is already setting the terms your next choices will meet") },
     { sectionId: "secondary-zone", sentence: sentence("It is not foreground pressure yet, but it is already shaping the conditions your next steps will enter") },
+    { sectionId: "secondary-zone", sentence: sentence("This is the weather that is forming — not yet arrived, but already influencing what becomes possible") },
+    { sectionId: "secondary-zone", sentence: sentence("The cards here describe what is building in the background; by the time it surfaces, the shape will already be set") },
     // immediate-surroundings: conditional — empty strings are filtered by the enforcer no-op check
     ...(gtImmediateColBoilerplate ? [{ sectionId: "immediate-surroundings", sentence: gtImmediateColBoilerplate }] : []),
     ...(gtImmediateRowBoilerplate ? [{ sectionId: "immediate-surroundings", sentence: gtImmediateRowBoilerplate }] : []),
@@ -2015,6 +2076,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
         `${cardRef(cards[1].id)} is the hinge that decides how the whole sequence lands`,
         `The spread keeps turning back to ${cardRef(cards[1].id)} as the place where the outcome can still change`,
         `${cardRef(cards[1].id)} is the point where this reading either opens or tightens`,
+        `Everything in this spread passes through ${cardRef(cards[1].id)} — it is the center of gravity`,
+        `The reading concentrates at ${cardRef(cards[1].id)}, where what has been building meets what is about to shift`,
+        `${cardRef(cards[1].id)} holds the pivot: what you do with it shapes whether ${cardRef(cards[2].id)} arrives as opportunity or pressure`,
       ],
       random,
     ),
