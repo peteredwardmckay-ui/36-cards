@@ -7,6 +7,7 @@ import { SpreadGrid } from "@/components/SpreadGrid";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { HouseAdSlot } from "@/components/HouseAdSlot";
 import { BrandFooter } from "@/components/BrandFooter";
+import { ReadingTOC } from "@/components/ReadingTOC";
 import { trackEvent } from "@/lib/analytics/ga";
 import { ritualSummaryLine } from "@/lib/engine/shuffle";
 import type { GeneratedReading, ReadingRequestPayload } from "@/lib/engine/types";
@@ -280,6 +281,10 @@ export default function ResultsPage() {
               <p>Ritual details: {ritualSummaryLine(state.ritual.shuffleRun, state.ritual.cutStep)}</p>
               <p className="mt-1">Generated narrative length: {state.reading.wordCount} words</p>
             </div>
+
+            {state.setup.spreadType === "grand-tableau" && state.reading.sections.length > 3 ? (
+              <ReadingTOC sections={state.reading.sections} />
+            ) : null}
 
             <div className="reading-prose mt-4 space-y-4">
               {state.reading.sections.map((section, index) => (

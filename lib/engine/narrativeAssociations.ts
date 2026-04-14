@@ -3171,11 +3171,44 @@ const SUBJECT_HOUSE_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<
 
 const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string, string[]>>> = {
   general_reading: {
+    "1-29": [
+      "your position receiving fresh news, a first move, or an early signal that resets the timeline",
+    ],
+    "2-29": [
+      "a brief window forming around your own position, where a small practical step matters more than waiting for a bigger opening",
+    ],
     "3-29": [
       "your own role moving into a wider phase where changing context, distance, or momentum starts altering what progress actually looks like",
     ],
+    "4-29": [
+      "your role becoming anchored to a structure, routine, or obligation that limits movement but provides stability",
+    ],
+    "5-29": [
+      "your own position being asked to grow slowly, root more deeply, or let a longer pattern play out before forcing outcomes",
+    ],
     "6-29": [
       "your own stance passing through uncertainty, where clearer reading matters more than premature certainty",
+    ],
+    "8-29": [
+      "your position entering a pause, ending, or withdrawal phase that cannot be rushed through",
+    ],
+    "10-29": [
+      "a sharp cut, fast decision, or clean reroute landing directly on your role and requiring immediate clarity",
+    ],
+    "11-29": [
+      "repeated strain or friction wearing against your position until something is simplified or renegotiated",
+    ],
+    "14-29": [
+      "your role being shaped by strategy, mixed motives, or the need to read the field more carefully before committing",
+    ],
+    "15-29": [
+      "authority, resource control, or protective strength landing directly on your position, making leverage visible",
+    ],
+    "16-29": [
+      "clearer direction starting to form around your role once the broader pattern is named honestly",
+    ],
+    "21-29": [
+      "a blockage or obstacle sitting directly on your position, so resequencing matters more than force",
     ],
     "22-29": [
       "the wider situation changing once you make a real choice instead of circling the same fork",
@@ -3183,8 +3216,23 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "23-29": [
       "your own position being quietly worn down by repeated strain, small leaks, or the cost of leaving too much unaddressed",
     ],
+    "24-29": [
+      "your position being shaped by what genuinely matters, so the emotional core of the situation cannot stay vague",
+    ],
+    "25-29": [
+      "a binding commitment, agreement, or obligation landing on your role and making the terms visible",
+    ],
     "26-29": [
       "your own role becoming tied to what is still hidden, withheld, or only partly understood",
+    ],
+    "27-29": [
+      "your position becoming clearer through messages, documents, or practical information that brings definition",
+    ],
+    "28-29": [
+      "your position and another person's expectations becoming linked, so alignment matters more than assumption",
+    ],
+    "29-31": [
+      "warmth, energy, or visible success beginning to gather around your own position and clarify direction",
     ],
     "29-33": [
       "your own clarity becoming the answer point that starts unlocking the wider situation",
@@ -3786,14 +3834,35 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     ],
   },
   work: {
+    "1-29": [
+      "your role receiving a fresh assignment, update, or incoming request that resets the immediate priority",
+    ],
+    "3-29": [
+      "your professional trajectory shifting through relocation, remote arrangements, or a change of context that alters how the role feels",
+    ],
+    "4-29": [
+      "your position being held in place by process, institutional routine, or structural commitments that limit how fast things can change",
+    ],
     "7-29": [
       "your role moving through office politics, mixed motives, or a dynamic that needs cleaner boundaries and clearer reading",
     ],
     "8-11": [
       "a repeated work strain showing the old way has reached its limit, so a workflow now needs to be retired rather than patched",
     ],
+    "8-29": [
+      "your role entering a winding-down phase where the current project, contract, or arrangement is approaching its natural end",
+    ],
+    "10-29": [
+      "a fast decision, restructure, or clean break landing on your position, where speed and clarity matter more than consensus",
+    ],
+    "11-29": [
+      "ongoing friction, micromanagement, or low-grade conflict wearing at your professional position until something is renegotiated",
+    ],
     "12-29": [
       "your role being shaped by meetings, status chatter, and too many short-cycle decisions for clean judgment",
+    ],
+    "14-29": [
+      "your role requiring sharper political reading, because strategy, self-interest, and mixed motives are shaping the landscape around you",
     ],
     "15-29": [
       "your position being defined by authority, resource control, and who actually has leverage over the next move",
@@ -3801,8 +3870,32 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "16-29": [
       "clearer direction beginning to form around your role once the broader work pattern is named plainly",
     ],
+    "19-29": [
+      "your role being tested by institutional process, formal structure, or bureaucratic steps that cannot be skipped",
+    ],
+    "21-29": [
+      "a blockage, delay, or stalled approval sitting on your position, where resequencing matters more than pushing harder",
+    ],
+    "22-29": [
+      "a career fork or role decision landing on your position, so progress depends on choosing rather than hovering between options",
+    ],
+    "25-29": [
+      "a contract, formal agreement, or binding commitment landing on your role and making obligations visible",
+    ],
+    "27-29": [
+      "your position becoming clearer through emails, briefs, documentation, or practical information that brings the next step into focus",
+    ],
     "28-29": [
       "your position and the other side's expectations becoming impossible to separate cleanly, so alignment matters more than assumption",
+    ],
+    "29-31": [
+      "recognition, visibility, or a positive outcome starting to gather around your professional position",
+    ],
+    "29-34": [
+      "your role connecting to revenue, client flow, or resource movement that makes the practical value of your work visible",
+    ],
+    "29-36": [
+      "your professional position carrying a heavier obligation, ethical weight, or responsibility that cannot stay optional",
     ],
   },
   purpose_calling: {
@@ -3908,6 +4001,65 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
       "your place in the household becoming the answer point, where clearer boundaries or decisions begin to unlock movement for everyone else too",
     ],
   },
+  spiritual: {
+    "1-29": [
+      "your inner position receiving a sign, synchronicity, or early signal that suggests movement is beginning whether you feel ready or not",
+    ],
+    "2-29": [
+      "a small sacred opening forming around your path, where a quiet act of faith can shift the pattern if taken without overthinking",
+    ],
+    "5-29": [
+      "your spiritual path being asked to grow slowly through patience, devotion, and repetition that actually deepens rather than performs",
+    ],
+    "6-29": [
+      "your inner life moving through fog, doubt, or spiritual ambiguity that cannot be resolved by thinking harder",
+    ],
+    "8-29": [
+      "your path passing through a necessary ending, release, or surrender that clears space for what comes next",
+    ],
+    "9-29": [
+      "grace, generosity, or unexpected kindness gathering around your inner position and softening the way forward",
+    ],
+    "10-29": [
+      "a sharp spiritual cut or moment of clarity landing on your path, severing something that was holding the old pattern in place",
+    ],
+    "13-29": [
+      "your spiritual position encountering a fresh beginning, rebirth, or initiation that asks you to start again with less certainty and more presence",
+    ],
+    "16-29": [
+      "a moment of alignment, guidance, or spiritual clarity starting to gather around your path and light the next step",
+    ],
+    "21-29": [
+      "a blockage on your path that is not punishment but invitation — the obstacle itself is teaching something that cannot be bypassed",
+    ],
+    "22-29": [
+      "your inner journey arriving at a genuine fork, where the path changes once a real choice is made rather than endlessly weighed",
+    ],
+    "24-29": [
+      "what you love and what you practise becoming inseparable, so the heart of the matter cannot be intellectualised away from the path",
+    ],
+    "26-29": [
+      "your path being shaped by mystery, secrecy, or something still hidden that is not yet ready to be understood",
+    ],
+    "29-31": [
+      "warmth, illumination, or spiritual vitality gathering around your position and bringing what was practised in the dark into the light",
+    ],
+    "29-33": [
+      "your own clarity becoming the key that unlocks the next phase of practice, where understanding arrives through lived experience rather than study alone",
+    ],
+    "29-35": [
+      "your path being tested by endurance, faith, and whether the practice can hold when comfort and momentum withdraw",
+    ],
+    "29-36": [
+      "your spiritual position carrying a heavier weight, calling, or sacred responsibility that cannot stay optional or casual",
+    ],
+    "32-29": [
+      "your path being shaped by emotional honesty, shifting moods, and the need to sit with the full range of inner weather",
+    ],
+    "36-29": [
+      "a deep obligation, karmic weight, or non-negotiable calling landing on your path and asking for acceptance rather than resistance",
+    ],
+  },
 };
 
 function choose<T>(values: T[], random: () => number): T {
@@ -3939,23 +4091,50 @@ function sortedPairKey(a: number, b: number): string {
 
 const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<string, string[]>>> = {
   general_reading: {
+    "1-6": [
+      "This pairing says news is arriving inside uncertainty, so the signal matters but the full picture is not yet readable",
+    ],
     "2-34": [
       "This pairing says a small opening is forming around flow, support, or whatever needs to start moving again",
     ],
     "4-36": [
       "This pairing says a basic obligation, structural burden, or responsibility can no longer stay in the background",
     ],
+    "8-13": [
+      "This pairing says an ending is clearing space for a fresh start, so what closes now makes room for what comes next",
+    ],
     "9-29": [
       "This pairing says a more helpful tone or visible encouragement is gathering around your own position, even if it does not resolve the wider situation by itself",
     ],
+    "10-21": [
+      "This pairing says a sharp decision meets a firm obstacle, so the cut has to be placed precisely or it will bounce off the blockage",
+    ],
+    "11-23": [
+      "This pairing says repeated friction is compounding with ongoing drain, so the pattern needs interrupting before the cost outweighs the effort",
+    ],
+    "14-15": [
+      "This pairing says strategy and authority are in the same frame, so the question is whether caution serves protection or just delays the reckoning",
+    ],
+    "16-31": [
+      "This pairing says guidance and warmth are reinforcing each other, so the clearest path is also the most energising one",
+    ],
+    "22-26": [
+      "This pairing says the choice depends on information that is still hidden, so the fork cannot be resolved until more is revealed",
+    ],
     "24-33": [
       "This pairing says what genuinely matters is reaching an answer point, so clarity depends on whether the situation can be named honestly",
+    ],
+    "25-36": [
+      "This pairing says a binding commitment is meeting a heavier obligation, so the weight of what has been agreed is becoming impossible to set aside",
     ],
     "27-28": [
       "This pairing says the other side of the situation becomes clearer through messages, wording, or details that can no longer stay implied",
     ],
     "29-33": [
       "This pairing says your own clarity is becoming the hinge that can unlock the wider situation",
+    ],
+    "31-33": [
+      "This pairing says success and clarity are converging, so the answer becomes visible when progress is named honestly",
     ],
     "34-36": [
       "This pairing says practical flow, support, or resources are getting tied to a heavier responsibility that cannot stay vague",
@@ -4602,11 +4781,35 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
   },
   work: {
+    "1-4": [
+      "This pairing says fresh news or an incoming task is landing inside a stable structure, so the change has to be absorbed without breaking what already works",
+    ],
+    "3-25": [
+      "This pairing says a professional move, transfer, or change of context is now tied to a commitment or contract that shapes when and how it happens",
+    ],
+    "7-14": [
+      "This pairing says mixed signals and strategic self-interest are in the same frame, so reading the political landscape matters before taking sides",
+    ],
     "8-11": [
       "This pairing says an exhausted workflow or repeated strain has reached the point where patching it costs more than replacing it",
     ],
+    "8-13": [
+      "This pairing says the end of one project or role is making space for a fresh start, so what closes now opens room for a better arrangement",
+    ],
+    "10-15": [
+      "This pairing says a sharp decision is meeting authority or resource control, so the cut has to respect the power structure or it will not stick",
+    ],
     "12-29": [
       "This pairing says your role is being crowded by meetings, status chatter, or too many quick-turn decisions, so cleaner communication matters",
+    ],
+    "14-28": [
+      "This pairing says someone in the professional field is playing a strategic angle, so what they say and what they want may not be the same thing",
+    ],
+    "15-19": [
+      "This pairing says management authority and institutional process are reinforcing each other, so navigating both requires patience and clear documentation",
+    ],
+    "16-29": [
+      "This pairing says clearer professional direction is forming around your position once the broader workplace pattern is named honestly",
     ],
     "19-33": [
       "This pairing says the answer comes through structure, policy, or a formal approval path rather than more improvisation",
@@ -4614,8 +4817,117 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     "21-26": [
       "This pairing says the needed information exists, but access is slowed by process, hierarchy, or what is still restricted",
     ],
+    "22-29": [
+      "This pairing says a career decision or role fork is sitting with you, so progress resumes once you choose rather than wait for the situation to choose for you",
+    ],
+    "25-34": [
+      "This pairing says contractual terms and revenue flow are linked, so obligations shape what the work is actually worth in practice",
+    ],
     "28-29": [
       "This pairing says your role and the other side's expectations now need explicit alignment before the work can move cleanly",
+    ],
+    "29-31": [
+      "This pairing says recognition or a positive outcome is starting to form around your professional position, so visible effort matters now",
+    ],
+  },
+  love: {
+    "1-24": [
+      "This pairing says fresh news or a first signal is arriving around what the heart wants, so what comes in now sets the emotional tone for what follows",
+    ],
+    "2-24": [
+      "This pairing says a small opening is forming in the emotional field, but it is brief and needs to be met with honesty rather than hesitation",
+    ],
+    "5-24": [
+      "This pairing says what matters most in this connection needs time, patience, and rootedness — love that is rushed will not hold",
+    ],
+    "6-24": [
+      "This pairing says emotional fog or mixed signals are making it hard to read the connection clearly, so patience matters more than guessing",
+    ],
+    "8-24": [
+      "This pairing says something in the emotional picture is ending, closing, or being released — grief and acceptance are both part of this passage",
+    ],
+    "9-24": [
+      "This pairing says warmth, encouragement, or a kind gesture is touching the heart of the connection and softening the wider dynamic",
+    ],
+    "10-24": [
+      "This pairing says a sharp emotional break, honest cut, or decisive moment is arriving in the relationship, where clarity matters more than comfort",
+    ],
+    "14-24": [
+      "This pairing says self-interest and emotional attachment are in the same frame, so the question is whether care and strategy can coexist honestly",
+    ],
+    "22-24": [
+      "This pairing says a genuine emotional fork is present, where the connection changes once a real choice is made rather than deferred",
+    ],
+    "24-25": [
+      "This pairing says what matters emotionally is now bound to a commitment, promise, or agreement that makes the relationship's terms visible",
+    ],
+    "24-26": [
+      "This pairing says the emotional picture is being shaped by something still hidden, unsaid, or not yet ready to be fully revealed",
+    ],
+    "24-28": [
+      "This pairing says two hearts are in the same frame, so what each person feels and what each person needs have to be read together",
+    ],
+    "24-29": [
+      "This pairing says your emotional position is becoming the centre of the story, so what you feel and what you allow shapes the whole connection",
+    ],
+    "24-31": [
+      "This pairing says warmth, joy, and visible happiness are gathering around the emotional core of this reading",
+    ],
+    "24-33": [
+      "This pairing says the heart is reaching an answer point, where emotional clarity unlocks the next step in the connection",
+    ],
+    "24-36": [
+      "This pairing says what matters emotionally is carrying a heavier weight, obligation, or test that cannot be wished away",
+    ],
+    "25-28": [
+      "This pairing says a commitment or agreement is now directly tied to another person, so the terms of the bond matter as much as the feeling",
+    ],
+  },
+  spiritual: {
+    "1-16": [
+      "This pairing says a first sign or spiritual signal is arriving alongside clearer guidance, so the direction of the path becomes more readable",
+    ],
+    "5-8": [
+      "This pairing says something is dying slowly into richer soil, where spiritual growth requires the patience to let go without rushing the next growth",
+    ],
+    "6-26": [
+      "This pairing says fog and secrecy are in the same frame, so the path through mystery requires sitting with what cannot yet be known",
+    ],
+    "8-13": [
+      "This pairing says death and rebirth are working together, so what ends now is making room for a genuine new beginning in the inner life",
+    ],
+    "9-36": [
+      "This pairing says grace and spiritual weight are meeting, so the blessing arrives inside the difficulty rather than in spite of it",
+    ],
+    "10-26": [
+      "This pairing says sharp clarity is cutting into hidden territory, so spiritual honesty may expose what was more comfortable left in shadow",
+    ],
+    "13-31": [
+      "This pairing says a new spiritual beginning is being illuminated by warmth and vitality, so the fresh start has real energy behind it",
+    ],
+    "16-33": [
+      "This pairing says guidance and clarity are converging, so the answer to the spiritual question is closer than uncertainty makes it feel",
+    ],
+    "21-36": [
+      "This pairing says an obstacle is meeting a deep obligation, so the blockage is not random — it is asking something specific of your practice",
+    ],
+    "22-36": [
+      "This pairing says a spiritual fork is meeting sacred obligation, so the choice is not casual — it carries weight for the path ahead",
+    ],
+    "24-36": [
+      "This pairing says what the heart holds and what the path demands are now in the same frame, so devotion has to become practical",
+    ],
+    "26-29": [
+      "This pairing says your spiritual position is shaped by what is still hidden or not yet revealed, so trust and surrender matter more than analysis",
+    ],
+    "29-31": [
+      "This pairing says illumination is gathering around your spiritual position, so what was practised quietly is becoming visible and warm",
+    ],
+    "29-36": [
+      "This pairing says your path is carrying a sacred weight or calling that cannot be put down, so acceptance matters more than comfort",
+    ],
+    "31-36": [
+      "This pairing says light and weight are together, so spiritual joy and spiritual responsibility are not opposed — they ask to be held at once",
     ],
   },
 };
