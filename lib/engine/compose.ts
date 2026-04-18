@@ -1156,6 +1156,9 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           "No single nearby pair dominates, so meaning depends more on overall pattern than one isolated combination.",
           "The cards near the center spread their influence broadly rather than concentrating in one strong pairing.",
           "Without a dominant pairing near the center, the reading distributes its weight more evenly across the field.",
+          "The nearby cards do not lock into one strong combination, so the reading is shaped by proximity and atmosphere rather than a single pair.",
+          "No single pairing commands the center, which means the broader spread of surrounding influences carries more weight than usual.",
+          "The lack of a dominant pair near the center keeps the reading open — the pattern emerges from the wider field rather than one concentrated signal.",
         ],
         random,
       );
@@ -1197,7 +1200,14 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
             `a quieter layer runs through ${diagonalThread}, while ${knightBrief} show where the rhythm starts to shift.`,
           ],
           random,
-        )} Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events.`
+        )} ${choose(
+          [
+            "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events.",
+            "The diagonals trace the longer arc of the story, and the knight connections show where indirect forces can alter the pace or redirect the outcome.",
+            "What the diagonals and knight links reveal together is the quieter machinery behind the visible events — the deeper timeline and the sideways influences that shape it.",
+          ],
+          random,
+        )}`
       : `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${choose(
           [
             `a quieter pattern runs through ${diagonalThread}, pointing to movement by stages rather than abrupt change.`,
@@ -1206,7 +1216,14 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
             `${diagonalThread} carry the wider story, and they favor sequence over sudden swings.`,
           ],
           random,
-        )} Read together, the diagonals are doing the longer-range work here, showing what gathers by stages rather than arriving all at once. Taken together, this is the slower line of development, and it shows what needs time to assemble before the full picture can be read clearly.`;
+        )} ${choose(
+          [
+            "Read together, the diagonals are doing the longer-range work here, showing what gathers by stages rather than arriving all at once. Taken together, this is the slower line of development, and it shows what needs time to assemble before the full picture can be read clearly.",
+            "The diagonal thread describes the quieter timeline — what builds gradually rather than announcing itself. This is the part of the reading that rewards patience.",
+            "What the diagonals reveal is the slower current beneath the surface. These are not headline events but the conditions that are quietly assembling before the next visible shift.",
+          ],
+          random,
+        )}`;
 
   const nearBrief = dedupeCardRefs(proximity.near.map((placement) => placement.cardId), 4);
   const mediumBrief = dedupeCardRefs(proximity.medium.map((placement) => placement.cardId), 4);
@@ -1230,8 +1247,22 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
     ],
     random,
   )} ${mediumBrief
-    ? "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."
-    : "That split matters because the near field describes what is already pressing for attention, even if the outer layer has not clarified itself yet."}`;
+    ? choose(
+        [
+          "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it.",
+          "The near cards carry the immediate urgency, and the medium ring shows what is assembling just outside the current frame.",
+          "What is closest demands attention first, but the next ring out is already shaping the conditions those decisions will land in.",
+        ],
+        random,
+      )
+    : choose(
+        [
+          "That split matters because the near field describes what is already pressing for attention, even if the outer layer has not clarified itself yet.",
+          "The immediate cards carry the clearest signal; what lies further out has not yet gathered enough weight to read with confidence.",
+          "The nearest cards speak most clearly — the outer field is still forming, so the timing picture concentrates around what is closest.",
+        ],
+        random,
+      )}`;
 
   const synthesisSentence = `${tableauSynthesis.practicalSentence} ${tableauSynthesis.openingsSentence} ${tableauSynthesis.thesisSentence}`;
 
@@ -1266,6 +1297,9 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           `The cartouche closes with ${dedupeCardRefs(cartoucheCardIds, 4)}, setting the wrap-up tone after the main field speaks.`,
           `As a final line, the cartouche shows ${dedupeCardRefs(cartoucheCardIds, 4)}, clarifying what settles after the first wave.`,
           `The wrap-up line in cartouche form carries ${dedupeCardRefs(cartoucheCardIds, 4)}, which reads as the spread's closing movement.`,
+          `Below the main grid, the cartouche holds ${dedupeCardRefs(cartoucheCardIds, 4)}, adding a final layer to the reading.`,
+          `The fate line at the bottom — ${dedupeCardRefs(cartoucheCardIds, 4)} — describes what lingers after the main action settles.`,
+          `Closing the layout, ${dedupeCardRefs(cartoucheCardIds, 4)} form the cartouche row and carry the reading's last word.`,
         ],
         random,
       );
@@ -1276,6 +1310,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
               `Within that line, ${cardRef(cartouchePair.cardA)} and ${cardRef(cartouchePair.cardB)} suggest ${pairMeaningToProse(
                 cartouchePair.meaning,
               )}.`,
+              `The strongest link in the cartouche is ${cardRef(cartouchePair.cardA)} beside ${cardRef(cartouchePair.cardB)}: ${pairMeaningToProse(cartouchePair.meaning)}.`,
+              `${cardRef(cartouchePair.cardA)} and ${cardRef(cartouchePair.cardB)} concentrate the cartouche's meaning around ${pairMeaningToProse(cartouchePair.meaning)}.`,
             ],
             random,
           )
@@ -1288,6 +1324,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           `Coming back to ${cardRef(primaryPlacement.cardId)}, the final line points to consequences that arrive once choices have been sustained.`,
           `With ${cardRef(primaryPlacement.cardId)} still holding the center, the cartouche reads as what remains once the immediate tension clears.`,
           `${cardRef(primaryPlacement.cardId)} anchors the reading, and this closing line shows what becomes available once its lesson is followed through.`,
+          `The cartouche adds a coda to ${cardRef(primaryPlacement.cardId)}'s central message, showing where the sequence naturally resolves.`,
+          `Taken with ${cardRef(primaryPlacement.cardId)} at the center, this final row suggests that outcomes arrive through sustained attention rather than a single decisive moment.`,
         ],
         random,
       );
@@ -1351,6 +1389,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
         `With ${cardRef(cards[0].id)} in ${labels[0].toLowerCase()}, the starting picture is already clear: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
         `${cardRef(cards[0].id)} in ${labels[0]} sets the tone: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
         `The sequence begins in ${labels[0]} with ${cardRef(cards[0].id)}: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `${labels[0]} arrives through ${cardRef(cards[0].id)}, establishing ${situationThread} as the ground the rest of the reading builds from. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `The first card, ${cardRef(cards[0].id)}, describes what is already present: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
       ],
       random,
   );
@@ -1363,6 +1403,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
       `In ${labels[1]}, ${cardRef(cards[1].id)} becomes the pivot, so the next movement depends on how its lesson is handled. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
       `${cardRef(cards[1].id)} in ${labels[1]} acts as the fulcrum, so this is the point where tone, timing, or choice can change the sequence. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
       `${labels[1]} centers on ${cardRef(cards[1].id)}, where the whole sequence either opens or tightens. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
+      `The pivot falls on ${cardRef(cards[1].id)} in ${labels[1]}, marking the moment where the situation either moves forward or doubles back. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
+      `${cardRef(cards[1].id)} holds the middle ground in ${labels[1]}, and it is here that the reading asks for a direct response. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
     ],
     random,
   );
@@ -1375,6 +1417,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
       `What ${labels[2]} shows through ${cardRef(cards[2].id)}: ${directionThread}, provided the central pressure is handled honestly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
       `${labels[2]} closes with ${cardRef(cards[2].id)}, and the directional message is: ${directionThread} when the pivot receives consistent attention. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
       `${cardRef(cards[2].id)} in ${labels[2]} suggests ${directionThread}, once the middle-card pressure has been worked with directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
+      `In ${labels[2]}, ${cardRef(cards[2].id)} points toward ${directionThread}, assuming the pivot is met with something more than avoidance. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
+      `The final position gives ${cardRef(cards[2].id)} in ${labels[2]}, and its directional pull is toward ${directionThread} when the middle card is answered honestly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
     ],
     random,
   );
@@ -1398,6 +1442,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
       "Looking at the three cards as a single movement,",
       "Read as a whole,",
       "Across the full sequence,",
+      "When the three positions are read together,",
+      "Taken as one arc,",
     ],
     random,
   );
@@ -1407,6 +1453,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
       "Given that picture,",
       "With that sequence in mind,",
       "Taking all of that,",
+      "With that arc laid out,",
+      "Bearing all three cards in mind,",
     ],
     random,
   );
@@ -1419,6 +1467,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
       `The practical thread here is to ${pivotAction.toLowerCase()}.`,
       `${pivotAction}. That is where the sequence concentrates.`,
       `The reading keeps returning to one thing: ${pivotAction.toLowerCase()}.`,
+      `If there is one move to make from this spread, it is to ${pivotAction.toLowerCase()}.`,
+      `The three cards point most clearly toward one step: ${pivotAction.toLowerCase()}.`,
     ],
     random,
   );
@@ -1428,6 +1478,8 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
         `${cardRef(cards[1].id)} is the real hinge in this spread`,
         `The spread turns on ${cardRef(cards[1].id)} more than any other card`,
         `${cardRef(cards[1].id)} shows where the whole sequence either opens or tightens`,
+        `Everything in this reading orbits ${cardRef(cards[1].id)}`,
+        `${cardRef(cards[1].id)} is the card that asks the most of you in this spread`,
       ],
       random,
     ),
