@@ -4298,6 +4298,84 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     "4-29": [
       "This pairing says your rootedness, your home base, or your stable foundation is what makes sustained participation in the wider field possible — do not let that get hollowed out",
     ],
+    "2-20": [
+      "This pairing says a brief window of easy social connection or community opportunity is open, so meeting it lightly and promptly matters more than waiting for the right moment",
+    ],
+    "4-20": [
+      "This pairing says home and community are linked, so what is stable in the private sphere is what makes sustained engagement with the wider field possible",
+    ],
+    "5-20": [
+      "This pairing says deep roots and wider participation are in the same frame, so the community is healthiest when what grounds individual members is respected",
+    ],
+    "6-20": [
+      "This pairing says confusion or mixed signals are moving through the community field, so clarity about shared purpose matters more than group agreement for its own sake",
+    ],
+    "7-20": [
+      "This pairing says complexity, competing interests, or undercurrents of rivalry are shaping the community dynamic, so discernment about what is actually circulating matters",
+    ],
+    "8-20": [
+      "This pairing says something within the community, group, or social context is ending, contracting, or being released, so letting go of what no longer serves the whole is part of the work",
+    ],
+    "9-20": [
+      "This pairing says grace, generosity, and social warmth are moving through the community field, so what is given or gifted here enriches the wider dynamic",
+    ],
+    "10-20": [
+      "This pairing says a sharp decision or sudden cut is landing in the community or social setting, so clarity about what is being removed matters more than softening the change",
+    ],
+    "11-20": [
+      "This pairing says conflict or repeated friction is moving through the community field, so the pattern needs naming before engagement can become constructive again",
+    ],
+    "12-20": [
+      "This pairing says anxious chatter, nervous communication, or social worry is circulating through the community, so grounding the conversation in facts matters more than following the mood",
+    ],
+    "13-20": [
+      "This pairing says something new is arriving in the community or social field, so the fresh beginning benefits from an open, unhurried welcome",
+    ],
+    "15-20": [
+      "This pairing says authority, resources, or a powerful figure is shaping the community dynamic, so the question of who holds influence and how they use it matters here",
+    ],
+    "16-20": [
+      "This pairing says long-view vision and shared aspiration are moving through the community, so what the group is pointing toward together deserves more weight than short-term friction",
+    ],
+    "18-20": [
+      "This pairing says loyalty and social participation are linked, so the community is shaped by who consistently shows up and keeps faith with the shared purpose",
+    ],
+    "19-20": [
+      "This pairing says an institution, authority structure, or isolated entity is in relationship with the community, so the boundary between the two deserves attention",
+    ],
+    "20-22": [
+      "This pairing says the community or social field is at a fork, where what the group chooses next determines its character more than any single member's position",
+    ],
+    "20-23": [
+      "This pairing says the community or social context is being quietly eroded by small losses, unaddressed tensions, or slow withdrawal that accumulates before anyone names it",
+    ],
+    "20-25": [
+      "This pairing says commitment to the community, group agreement, or shared terms are what holds the social field together, so what is pledged here carries genuine weight",
+    ],
+    "20-26": [
+      "This pairing says hidden information, shared knowledge, or an unspoken matter is shaping the community dynamic in ways that are not yet visible to all members",
+    ],
+    "20-27": [
+      "This pairing says communication, documentation, or a shared message is moving through the community and shaping how the group understands itself",
+    ],
+    "20-28": [
+      "This pairing says a specific person is shaping the social or community dynamic, so their role and position inside the group carries weight",
+    ],
+    "20-30": [
+      "This pairing says maturity, experience, and a quieter kind of authority are steadying the community field, so wisdom matters more than energy here",
+    ],
+    "20-31": [
+      "This pairing says success, warmth, and visible positive momentum are moving through the community or social field, so what is happening collectively is worth celebrating",
+    ],
+    "20-33": [
+      "This pairing says the solution to the community question is already available, so the answer comes through engagement and trust in what the group already holds",
+    ],
+    "20-34": [
+      "This pairing says resources, reciprocal exchange, and material flow are shaping the community dynamic, so what circulates practically matters as much as what is said",
+    ],
+    "20-36": [
+      "This pairing says the community or social field is carrying a collective burden or shared weight that asks for patience and presence rather than easy resolution",
+    ],
   },
   friends_social: {
     "23-29": [
@@ -4338,6 +4416,81 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "35-36": [
       "This pairing says steadiness matters, but social duty still needs limits so support does not harden into burden",
+    ],
+    "2-18": [
+      "This pairing says a brief, lucky social moment or easy connection is available through a loyal person, so meeting it lightly matters more than planning it perfectly",
+    ],
+    "3-18": [
+      "This pairing says a loyal friendship is held across distance or separation, so the connection is real even when contact is infrequent",
+    ],
+    "4-18": [
+      "This pairing says friendship and home are in the same frame, so the loyal connection is rooted in shared space, family context, or domestic comfort",
+    ],
+    "5-18": [
+      "This pairing says a deep, slow-growing friendship is in the picture, so the loyalty is built on years of root rather than recent momentum",
+    ],
+    "6-18": [
+      "This pairing says confusion or unclear signals are shaping a loyal connection, so what feels uncertain in the friendship needs honest naming rather than silent assumption",
+    ],
+    "7-18": [
+      "This pairing says complexity, mixed loyalty, or competing interests are in the social picture, so discernment about who is genuinely trustworthy matters",
+    ],
+    "8-18": [
+      "This pairing says a loyal connection is ending, being released, or going through a significant closing phase, so grief and honesty belong together in how this is handled",
+    ],
+    "9-18": [
+      "This pairing says warmth, genuine care, and gracious social gestures are flowing through a loyal connection, so what is given here enriches the friendship",
+    ],
+    "10-18": [
+      "This pairing says a sharp moment of honesty or a necessary cut is landing inside a loyal friendship, so clarity matters more than protecting the comfortable version of the dynamic",
+    ],
+    "11-18": [
+      "This pairing says repeated conflict or unresolved tension is moving through a loyal connection, so the pattern needs addressing before the friendship can carry more weight",
+    ],
+    "12-18": [
+      "This pairing says nervous chatter or anxious social interaction is wearing on a loyal connection, so quieter and more direct contact would serve the friendship better",
+    ],
+    "13-18": [
+      "This pairing says a new friendship or fresh beginning in a loyal connection is forming, so the relationship benefits from a light touch and open expectations",
+    ],
+    "14-18": [
+      "This pairing says caution about loyalty is warranted, so discernment about whose interests are actually being served matters more than trusting the surface dynamic",
+    ],
+    "15-18": [
+      "This pairing says strength or authority and loyal friendship are in the same frame, so the balance of power inside the social connection deserves careful reading",
+    ],
+    "17-18": [
+      "This pairing says a loyal friendship is changing form, returning after absence, or moving into a new phase, so the relationship is not ending but becoming something different",
+    ],
+    "18-20": [
+      "This pairing says loyal friendship and wider social participation are linked, so the people who consistently show up are the ones who shape the social field",
+    ],
+    "18-22": [
+      "This pairing says a choice involving a loyal friend or about a significant social connection is present, so what is decided here matters for the shape of the friendship going forward",
+    ],
+    "18-23": [
+      "This pairing says a loyal connection is being quietly eroded by neglect, small betrayals, or accumulated strain that needs acknowledging before the trust is spent",
+    ],
+    "18-24": [
+      "This pairing says loyalty and love are deeply intertwined in this social picture, so what is felt most warmly is also what is held most faithfully",
+    ],
+    "18-25": [
+      "This pairing says a loyal bond is carrying the weight of a commitment or mutual agreement, so the friendship is defined by what both sides have pledged to each other",
+    ],
+    "18-26": [
+      "This pairing says a secret is moving through a loyal connection, so what is not yet said between friends is shaping the dynamic more than what has been spoken",
+    ],
+    "18-31": [
+      "This pairing says a loyal friendship is producing visible warmth, joy, and positive momentum, so the connection is one of the actual sources of light in this reading",
+    ],
+    "18-32": [
+      "This pairing says emotional depth and intuitive sensitivity are shaping a loyal social connection, so what is felt but not said in the friendship carries significant weight",
+    ],
+    "18-33": [
+      "This pairing says a loyal friend or faithful connection is part of the solution, so the key to the current situation may come through the relationship itself",
+    ],
+    "18-36": [
+      "This pairing says loyalty is being tested by a burden, obligation, or painful weight that asks something specific of the friendship, so steadiness matters more than comfort",
     ],
   },
   personal_growth: {
@@ -5039,6 +5192,69 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     "25-28": [
       "This pairing says a commitment or agreement is now directly tied to another person, so the terms of the bond matter as much as the feeling",
     ],
+    "3-24": [
+      "This pairing says what matters emotionally is at a distance, in longing, or approaching from afar, so the connection is shaped by what cannot yet be held",
+    ],
+    "4-24": [
+      "This pairing says love and home are in the same frame, so what is felt most deeply is rooted in the stability and safety of belonging",
+    ],
+    "7-24": [
+      "This pairing says desire, complexity, or a deeper undercurrent is moving through the emotional picture, so what appears as love may carry hidden layers that need honest examination",
+    ],
+    "11-24": [
+      "This pairing says conflict and love are repeating together, so the dynamic needs a cleaner pattern before the emotional connection can deepen safely",
+    ],
+    "11-25": [
+      "This pairing says a commitment or agreement carries a pattern of conflict or tension that keeps returning, so the terms of the bond need honest renegotiation",
+    ],
+    "12-24": [
+      "This pairing says anxiety and love are intertwined, so worried talk or overthinking is shaping the emotional field more than the actual connection warrants",
+    ],
+    "13-24": [
+      "This pairing says love is new, tender, or beginning again, so what arrives now in the heart needs gentle handling and time before it is tested",
+    ],
+    "15-24": [
+      "This pairing says strength, authority, or possessiveness is shaping the emotional dynamic, so the balance of power inside the connection deserves attention",
+    ],
+    "16-24": [
+      "This pairing says the heart is being guided by a longer view, so what feels right intuitively is pointing toward a horizon worth trusting",
+    ],
+    "17-24": [
+      "This pairing says the emotional picture is changing or returning to a new form, so what love looks like now is different from what it looked like before",
+    ],
+    "18-24": [
+      "This pairing says loyalty and love are in the same frame, so the emotional connection is held together by faithfulness as much as feeling",
+    ],
+    "18-25": [
+      "This pairing says loyalty and commitment are woven together, so the relationship is held by faithfulness to the agreement as much as by feeling",
+    ],
+    "19-24": [
+      "This pairing says emotional isolation, pride, or a defended inner position is shaping what love can reach, so walls need acknowledging before closeness is possible",
+    ],
+    "20-24": [
+      "This pairing says love is playing out in a social or visible setting, where the connection is shaped by what others see as much as what is privately felt",
+    ],
+    "21-24": [
+      "This pairing says an obstacle is standing between the heart and what it wants, so patience and honest assessment matter more than forcing the connection forward",
+    ],
+    "23-24": [
+      "This pairing says something in the emotional picture is being quietly eroded — small anxieties, unspoken resentments, or slow neglect are wearing at the connection",
+    ],
+    "24-27": [
+      "This pairing says a message, declaration, or written word is carrying significant emotional weight, so what is communicated around love now matters more than its content alone",
+    ],
+    "24-30": [
+      "This pairing says love is maturing, deepening, or entering a quieter and more settled phase that does not need proving",
+    ],
+    "24-32": [
+      "This pairing says emotion and intuition are amplifying each other, so what is felt deeply in this connection is also worth trusting as a genuine inner signal",
+    ],
+    "24-34": [
+      "This pairing says love and material flow are connected, where emotional generosity and practical giving or receiving are part of the same current",
+    ],
+    "24-35": [
+      "This pairing says what matters emotionally is grounding itself in stability, security, or long-term commitment — this is love that is settling in",
+    ],
   },
   spiritual: {
     "1-16": [
@@ -5085,6 +5301,75 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "31-36": [
       "This pairing says light and weight are together, so spiritual joy and spiritual responsibility are not opposed — they ask to be held at once",
+    ],
+    "2-36": [
+      "This pairing says a brief moment of grace or unexpected ease is arriving inside the burden, so the lightening is real even if it does not last",
+    ],
+    "3-16": [
+      "This pairing says the spiritual journey is aligned with genuine guidance, so travel, longing, or movement toward a horizon is being supported by a trustworthy sign",
+    ],
+    "4-36": [
+      "This pairing says the home or family life carries a sacred weight or fateful dimension that cannot be simply resolved — it asks for acceptance and presence",
+    ],
+    "5-16": [
+      "This pairing says slow, patient growth is aligned with long-view guidance, so the spiritual path is rooted enough to hold whatever vision is pointing toward",
+    ],
+    "5-36": [
+      "This pairing says deep roots are being tested by a spiritual burden, so the question is whether the inner life is grounded enough to carry what is being asked of it",
+    ],
+    "6-32": [
+      "This pairing says intuition is being obscured by uncertainty or confusion, so the inner signal exists but needs stillness before it can be read clearly",
+    ],
+    "7-26": [
+      "This pairing says hidden wisdom is moving through a complex or ambiguous field, so what needs discerning may not appear straightforward at first",
+    ],
+    "8-16": [
+      "This pairing says an ending is being guided toward something, where the darkness has direction even when it cannot yet be felt as such",
+    ],
+    "8-31": [
+      "This pairing says what is ending is moving toward light, so the release or transformation contains vitality on the other side of it",
+    ],
+    "11-36": [
+      "This pairing says repeated difficulty or self-imposed discipline is meeting sacred obligation, so the spiritual practice being called for is not comfortable",
+    ],
+    "13-36": [
+      "This pairing says a new beginning is weighted by fate or burden from the start, so the path forward asks for innocence and acceptance together",
+    ],
+    "16-26": [
+      "This pairing says guidance and hidden knowledge are in the same frame, so the spiritual direction is pointing toward something not yet fully revealed",
+    ],
+    "16-32": [
+      "This pairing says guidance and intuition are amplifying each other, so the inner knowing and the outer sign are pointing in the same direction",
+    ],
+    "16-36": [
+      "This pairing says the spiritual path is simultaneously guided and burdened, so the direction is visible but the way is not easy",
+    ],
+    "17-36": [
+      "This pairing says transformation and sacred obligation are moving together, so the change being called for is not optional — it is part of the spiritual path",
+    ],
+    "19-29": [
+      "This pairing says solitude, boundaries, or an inward-turned position is shaping the spiritual stance, so time alone or apart is part of what the practice needs",
+    ],
+    "20-36": [
+      "This pairing says a community, gathering, or shared ritual is carrying sacred weight or collective burden that asks for presence rather than performance",
+    ],
+    "22-29": [
+      "This pairing says a genuine spiritual crossroads is landing personally, so the choice about the path ahead carries real weight for who you are becoming",
+    ],
+    "25-36": [
+      "This pairing says a sacred vow, commitment, or repeated obligation is the spiritual matter being addressed, so the burden is connected to a bond that cannot be lightly released",
+    ],
+    "26-36": [
+      "This pairing says hidden knowledge and sacred burden are in the same frame, so something not yet known or named is connected to the weight being carried",
+    ],
+    "32-33": [
+      "This pairing says intuition is the key, where trusting the inner knowing unlocks what rational analysis cannot reach",
+    ],
+    "32-36": [
+      "This pairing says emotional depth and spiritual burden are meeting, so what is being felt most intensely is also what the path most needs you to face",
+    ],
+    "33-36": [
+      "This pairing says the solution to the spiritual question involves accepting what cannot be changed, where surrender is not weakness but the actual unlocking",
     ],
   },
 };
