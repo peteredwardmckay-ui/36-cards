@@ -1070,19 +1070,45 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const themePhrase = resolvedThemeLabel ? resolvedThemeLabel.toLowerCase() : "context-led";
   const themeLensPhrase = pickThemeLensPhrase(resolvedThemeId, random);
   const normalizedQuestion = normalizeQuestionText(state.setup.question);
-  const centerLead = choose(["At the center", "At the heart of the tableau", "In the middle of the spread"], random);
-  const nearLead = choose(["Close by", "Within one step of the center", "Just around the center"], random);
+  const centerLead = choose(
+    [
+      "At the center",
+      "At the heart of the tableau",
+      "In the middle of the spread",
+      "At the focal point",
+      "Anchoring the reading",
+      "Right at the core of the layout",
+    ],
+    random,
+  );
+  const nearLead = choose(
+    [
+      "Close by",
+      "Within one step of the center",
+      "Just around the center",
+      "In the nearest ring",
+      "Directly adjacent",
+      "Closest to the focal point",
+    ],
+    random,
+  );
   const clusterLead = choose(
     subjectId === "money"
       ? [
           "Around the center, a compact financial cluster gathers",
           "Nearest to the heart of the spread, these cards show the first practical pressure",
           "The closest cluster to the center carries the immediate financial weather",
+          "The tightest grouping near the center concentrates the resource picture",
+          "Where the cards gather most densely, the financial signal is clearest",
+          "The nearest cluster shapes the most immediate money question",
         ]
       : [
           "Around the center, a compact cluster gathers",
           "Nearest to the heart of the spread, these cards show where the first pressure lands",
           "The closest cluster to the center carries the immediate emotional weather",
+          "The tightest grouping near the center concentrates the reading's strongest signal",
+          "Where the cards gather most densely, the message is hardest to ignore",
+          "The nearest cluster shapes the most immediate question",
         ],
     random,
   );
@@ -1091,10 +1117,23 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
       "A longer thread runs through",
       "In the wider picture, a line of continuity runs through",
       "Beyond the center, one clear arc runs through",
+      "Stretching further from the center, a connecting thread runs through",
+      "A broader line of influence extends through",
+      "Looking further across the grid, a persistent thread links",
     ],
     random,
   );
-  const backgroundLead = choose(["In the background", "Under the surface", "Further out in the field"], random);
+  const backgroundLead = choose(
+    [
+      "In the background",
+      "Under the surface",
+      "Further out in the field",
+      "At a distance from the center",
+      "In the quieter part of the spread",
+      "Away from the immediate action",
+    ],
+    random,
+  );
   let strongestHouseBullet: string | null = null;
   const centerCardThread = interpretiveThread(
     buildCardAssociationPhrase(significatorCard, subjectId, meaningDomain, random, phraseContext),

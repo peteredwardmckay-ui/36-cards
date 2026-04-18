@@ -344,7 +344,7 @@ export default function SetupPage() {
                         )}
                       >
                         <span className="block font-semibold text-[color:var(--theme-text,var(--brand-text))]">Quick</span>
-                        <span className="mt-0.5 block text-[10px] text-[color:var(--theme-muted,var(--brand-muted))]">Concise reading</span>
+                        <span className="mt-0.5 block text-[10px] text-[color:var(--theme-muted,var(--brand-muted))]">Concise, focused</span>
                       </button>
                       <button
                         type="button"
@@ -356,9 +356,14 @@ export default function SetupPage() {
                         )}
                       >
                         <span className="block font-semibold text-[color:var(--theme-text,var(--brand-text))]">Deep Dive</span>
-                        <span className="mt-0.5 block text-[10px] text-[color:var(--theme-muted,var(--brand-muted))]">Literary narrative</span>
+                        <span className="mt-0.5 block text-[10px] text-[color:var(--theme-muted,var(--brand-muted))]">Layered narrative</span>
                       </button>
                     </div>
+                    <span className="mt-1.5 block text-[10px] text-[color:var(--theme-muted,var(--brand-muted))]">
+                      {readingStyle === "quick"
+                        ? "A shorter interpretation covering the key patterns. Good for specific questions or when you want a clear, direct answer."
+                        : "A longer, section-by-section interpretation that traces proximity, diagonals, and clusters in detail. Best for deeper reflection."}
+                    </span>
                     <div className="mt-3 space-y-2">
                       <label className="text-sm">
                         Significator
