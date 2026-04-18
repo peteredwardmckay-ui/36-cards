@@ -232,6 +232,11 @@ export default function ResultsPage() {
               <div>
                 <span className="section-kicker">Interpretation</span>
                 <h1 className="mt-2 text-3xl font-semibold">Your Reading Results</h1>
+                {state.setup.question ? (
+                  <p className="mt-2 max-w-2xl border-l-2 border-[color:var(--theme-accent,var(--brand-accent))] pl-3 text-base italic text-[color:var(--theme-text,var(--brand-text))]">
+                    &ldquo;{state.setup.question}&rdquo;
+                  </p>
+                ) : null}
                 <p className="mt-1 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">{new Date(state.createdAt).toLocaleString()}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">
                   Spread: {state.setup.spreadType === "grand-tableau" ? gtLayoutLabel : "3-card"}

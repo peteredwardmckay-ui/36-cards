@@ -79,6 +79,12 @@ function pickDeepDiveTitle(id: string, random: () => number): string {
   return pool[Math.floor(random() * pool.length)];
 }
 
+function subjectDisclaimer(subjectId: SubjectId): string {
+  if (subjectId === "health") return "This reading is for reflective purposes only. It is not medical advice and should not replace consultation with a qualified health professional.";
+  if (subjectId === "legal_admin") return "This reading is for reflective purposes only. It is not legal advice and should not replace consultation with a qualified legal professional.";
+  return "";
+}
+
 function clause(input: string): string {
   return input.trim().replace(/[.!?]+$/g, "");
 }
@@ -1920,7 +1926,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
     intro: normalized.intro,
     sections: normalized.sections,
     conclusion: normalized.conclusion,
-    disclaimer: "",
+    disclaimer: subjectDisclaimer(subjectId),
     wordCount: normalized.wordCount,
   };
 }
@@ -2030,9 +2036,33 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
   const situationAssoc = buildCardAssociationSentence(cards[0], subjectId, domain, random);
   const pivotAssoc = buildCardAssociationSentence(cards[1], subjectId, domain, random);
   const directionAssoc = buildCardAssociationSentence(cards[2], subjectId, domain, random);
-  const situationBoilerplate = sentence("This first card shows where things already stand before any adjustment is made");
-  const pivotBoilerplate = sentence("This is the hinge point in the reading, where one precise response can redirect the whole arc");
-  const directionBoilerplate = sentence("If the middle card is handled cleanly, this direction tends to feel steadier and more coherent");
+  const situationBoilerplate = sentence(choose(
+    [
+      "This first card shows where things already stand before any adjustment is made",
+      "The opening position describes conditions that are already present, not predictions",
+      "What this card captures is the ground you are standing on — what is already true before anything shifts",
+      "This is the starting material: the situation as it exists before any choice or change enters the picture",
+    ],
+    random,
+  ));
+  const pivotBoilerplate = sentence(choose(
+    [
+      "This is the hinge point in the reading, where one precise response can redirect the whole arc",
+      "The middle card carries the most weight — it is where the reading turns, and what you do with it shapes the outcome",
+      "Everything in this spread passes through this position, so a deliberate response here changes more than it might seem",
+      "This is where the reading asks for something specific — not reflection, but a response that alters the sequence",
+    ],
+    random,
+  ));
+  const directionBoilerplate = sentence(choose(
+    [
+      "If the middle card is handled cleanly, this direction tends to feel steadier and more coherent",
+      "The closing card describes where momentum is heading — not a fixed fate, but the most likely shape of what follows",
+      "This position shows what the sequence is moving toward, given what the first two cards have set in motion",
+      "Where the reading lands depends on the pivot, so this card is best read as a consequence rather than a destination",
+    ],
+    random,
+  ));
 
   const sections: NarrativeSection[] = [
     {
@@ -2041,10 +2071,34 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       technique: "synthesis",
       body: `${sentence(
         normalizedQuestion
-          ? `Your question "${normalizedQuestion}" is best read as an unfolding sequence rather than a fixed verdict`
-          : "These three cards read best as an unfolding sequence rather than a fixed verdict",
+          ? choose(
+              [
+                `Your question "${normalizedQuestion}" is best read as an unfolding sequence rather than a fixed verdict`,
+                `"${normalizedQuestion}" answers most clearly when each card is read in order — the sequence itself carries meaning`,
+                `The question "${normalizedQuestion}" enters a three-part arc where position matters as much as symbol`,
+                `"${normalizedQuestion}" is the kind of question that unfolds across three positions rather than arriving in a single answer`,
+              ],
+              random,
+            )
+          : choose(
+              [
+                "These three cards read best as an unfolding sequence rather than a fixed verdict",
+                "The reading unfolds across three positions, where order and timing carry as much meaning as the individual cards",
+                "Three cards, read in sequence — the arc itself tells a story that no single card could carry alone",
+                "What matters here is the movement from one position to the next, not any single card in isolation",
+              ],
+              random,
+            ),
       )} ${sentence(
-        `Timing and emotional tone matter here just as much as the obvious symbols`,
+        choose(
+          [
+            "Timing and emotional tone matter here just as much as the obvious symbols",
+            "Each position builds on the one before it, so the sequence rewards careful, unhurried reading",
+            "The reading is shaped by progression — what comes first sets the conditions for everything that follows",
+            "What makes this reading specific is not just the cards but the order they arrived in",
+          ],
+          random,
+        ),
       )}`,
     },
     {
@@ -2172,7 +2226,7 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
     intro: normalized.intro,
     sections: normalized.sections,
     conclusion: normalized.conclusion,
-    disclaimer: "",
+    disclaimer: subjectDisclaimer(subjectId),
     wordCount: normalized.wordCount,
   };
 }

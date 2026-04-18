@@ -403,6 +403,17 @@ function buildQuickIntro(input: {
   );
 }
 
+function buildSubjectDisclaimer(subjectId: SubjectId): string {
+  switch (subjectId) {
+    case "health":
+      return "This reading is for reflective purposes only. It is not medical advice and should not replace consultation with a qualified health professional.";
+    case "legal_admin":
+      return "This reading is for reflective purposes only. It is not legal advice and should not replace consultation with a qualified legal professional.";
+    default:
+      return "";
+  }
+}
+
 function describeSignificatorMode(mode: SignificatorMode): string {
   if (mode === "self") return "Querent is treated as the primary significator";
   if (mode === "other") return "Counterpart is treated as the primary significator";
@@ -1919,7 +1930,7 @@ export function composeReading(state: ReadingState): GeneratedReading {
   const sections = sectionsCore.sections;
 
   const conclusion = sectionsCore.conclusion || makeConclusion(subjectId, domain, rng.next);
-  const disclaimer = "";
+  const disclaimer = buildSubjectDisclaimer(subjectId);
 
   const reading = enforceSentenceTargets(
     {
