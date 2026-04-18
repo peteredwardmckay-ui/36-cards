@@ -601,6 +601,18 @@ function buildClusterLinkSentence(
           random,
         ),
       );
+    case "community":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps collective pressure, participation choices, and what the wider field expects tightly linked",
+            "This knot of cards keeps community dynamics, individual choices, and group expectations tightly bound together",
+            "In this ring, what the wider field needs and what you are actually able to give it all press on the same point",
+            "Belonging, contribution, and the terms of engagement are entangled here — none can shift without the others moving",
+          ],
+          random,
+        ),
+      );
     case "friends_social":
       return sentence(
         choose(

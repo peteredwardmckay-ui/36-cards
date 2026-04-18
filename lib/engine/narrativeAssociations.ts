@@ -4183,6 +4183,113 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
       "your path moving through emotional cycles, lunar sensitivity, and the part of practice that cannot be rushed or analytically resolved",
     ],
   },
+  community: {
+    "1-20": [
+      "news, a fresh arrival, or an early signal landing in the community field, prompting a response before the moment passes",
+    ],
+    "2-20": [
+      "a brief, lucky social opening in the community field that rewards prompt and light action more than careful planning",
+    ],
+    "3-20": [
+      "movement or a push toward a wider circle arriving in the social space, prompting clearer direction before the reach extends too far",
+    ],
+    "4-20": [
+      "domestic stability or private foundation showing up in the community context, grounding the social engagement in what is already secure",
+    ],
+    "5-20": [
+      "slow growth, patient rootedness, or long-term investment landing in the community space, rewarding sustained presence over quick visibility",
+    ],
+    "6-20": [
+      "confusion, unclear signals, or mixed messages making it hard to read the wider field clearly before reacting",
+    ],
+    "7-20": [
+      "complexity, rivalry, or competing interests moving through the social field and asking for discernment rather than surface-level trust",
+    ],
+    "8-20": [
+      "a closing or contraction within the community space, asking the wider group to let what is spent actually finish",
+    ],
+    "9-20": [
+      "warmth, grace, and genuine social goodwill circulating through the community field and creating a more generous shared climate",
+    ],
+    "10-20": [
+      "a sharp decision or necessary cut landing in the community space and clarifying what the wider field is moving away from",
+    ],
+    "11-20": [
+      "conflict or a repeating pattern of friction moving through the social field and asking for honest address before it defines the wider dynamic",
+    ],
+    "12-20": [
+      "anxious social conversation or nervous group energy landing in the community space and making it harder to read what is actually true",
+    ],
+    "13-20": [
+      "a fresh beginning or new arrival entering the community field and asking for patient welcome rather than immediate expectation",
+    ],
+    "14-20": [
+      "caution or self-interested maneuvering showing up in the social field and prompting attention to whose interests are actually being served",
+    ],
+    "15-20": [
+      "authority, resource power, or a dominant figure landing in the community space and shaping the dynamic more than shared purpose does",
+    ],
+    "16-20": [
+      "vision or long-range aspiration moving through the community field and giving the wider group a direction worth orienting toward",
+    ],
+    "17-20": [
+      "change or a new form of participation arriving in the social space and asking the wider field to update rather than defend the old pattern",
+    ],
+    "18-20": [
+      "loyalty, reliable companionship, or faithful presence showing up in the community field and becoming something the wider group can actually count on",
+    ],
+    "19-20": [
+      "institutional structure, formal authority, or an isolated entity landing in the community space and shaping where the informal and formal boundaries sit",
+    ],
+    "21-20": [
+      "a blockage or slow-moving difficulty landing in the community space and asking for patience and staged effort rather than force",
+    ],
+    "22-20": [
+      "a fork or choice landing in the social field and prompting the group to name what it is actually choosing between",
+    ],
+    "23-20": [
+      "quiet erosion or slow withdrawal moving through the community field and wearing at the wider trust before anyone names it",
+    ],
+    "24-20": [
+      "warmth, care, or emotional generosity arriving in the community space and softening the social dynamic in ways that matter more than policy",
+    ],
+    "25-20": [
+      "commitment or a shared agreement landing in the social field and giving the wider group something concrete to organise around",
+    ],
+    "26-20": [
+      "hidden information or something kept from wider view showing up in the community space and shaping the dynamic without being named",
+    ],
+    "27-20": [
+      "a message or clear communication arriving in the social field and giving the wider group something concrete to work with",
+    ],
+    "28-20": [
+      "a specific person's presence or influence landing in the community space and shaping how the wider field reads and responds",
+    ],
+    "29-20": [
+      "the querent's own position or presence landing in the community field and making their participation and choices visible to the wider group",
+    ],
+    "30-20": [
+      "maturity, composure, or elder steadiness arriving in the community space and giving the social field a quieter, more grounded centre of gravity",
+    ],
+    "31-20": [
+      "warmth, success, and visible positive momentum moving through the community field and making the social climate noticeably more encouraging",
+    ],
+    "32-20": [
+      "emotional weather or mood landing in the social field and shaping the community climate more than rational process does",
+    ],
+    "33-20": [
+      "clarity or a key insight arriving in the community space and unlocking what the wider group had been unable to move past",
+    ],
+    "34-20": [
+      "practical flow, resources, or reciprocal exchange landing in the social field and shaping what the community is actually able to share and sustain",
+    ],
+    "35-20": [
+      "stability, anchored presence, or long-term commitment arriving in the community space and giving the wider field something it can lean on",
+    ],
+    "36-20": [
+      "a weight, shared burden, or collective obligation landing in the community space and asking the wider group to name what it is actually carrying",
+    ],
+  },
 };
 
 function choose<T>(values: T[], random: () => number): T {
@@ -5753,6 +5860,86 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   community: {
+    1: [
+      "bring the arriving news or signal into the community's attention promptly before it gets absorbed by background noise",
+      "notice what is arriving in the wider field and meet it before the moment passes",
+    ],
+    2: [
+      "take the easy community opening while it is available rather than waiting for a more considered moment",
+      "let the small social ease count and act on it lightly rather than analyzing whether it is significant",
+    ],
+    3: [
+      "define where in the wider field you are actually trying to go before expanding participation further",
+      "be clear which direction deserves more energy before the reach gets wider than it can sustain",
+    ],
+    4: [
+      "keep the private base stable so that participation in the wider field does not drain what sustains it",
+      "protect the domestic or personal foundation that makes sustained community engagement actually possible",
+    ],
+    5: [
+      "build slowly into the wider field rather than seeking instant visibility or belonging",
+      "invest in the roots of community presence before expecting the relationship to hold under pressure",
+    ],
+    6: [
+      "name what is genuinely unclear in the wider field before deciding what to do about it",
+      "separate real signal from community noise before reacting to what the group is saying",
+    ],
+    7: [
+      "read what is actually circulating in the wider field rather than only what is being said publicly",
+      "notice competing interests in the social field and name them before they shape the dynamic unchecked",
+    ],
+    8: [
+      "let what is ending in the community context close cleanly rather than keeping it alive artificially",
+      "allow the closing phase of a group dynamic to complete without forcing a revival",
+    ],
+    9: [
+      "offer generosity or appreciation to the wider field without waiting for the perfect moment",
+      "let warmth and genuine acknowledgment circulate in the community rather than keeping it private",
+    ],
+    10: [
+      "be clear and direct in the community or group context rather than softening the necessary change",
+      "make the cut that the wider field needs cleanly rather than dragging out what is no longer working",
+    ],
+    11: [
+      "name the repeated community friction rather than absorbing another round without response",
+      "address the pattern of conflict in the wider field before it becomes the defining quality of participation",
+    ],
+    12: [
+      "reduce the noise in community communication and keep the shared conversation tied to actual decisions",
+      "distinguish community anxiety from real signal before letting the mood drive the group's next move",
+    ],
+    13: [
+      "approach the community with enough openness that what is beginning here can actually take root",
+      "treat the new arrival or fresh start in the wider field with enough care that it is not rushed past",
+    ],
+    14: [
+      "check whose interests are actually being served before proceeding as if the group's goal is shared",
+      "use discernment about what is circulating in the wider field rather than trusting the surface dynamic",
+    ],
+    15: [
+      "check whether authority in the wider field is being used to serve or to contain the group",
+      "engage with the figure of strength in the community carefully rather than by proximity or deference alone",
+    ],
+    16: [
+      "bring the group back to shared aspiration when short-term tension is setting the whole tone",
+      "let the longer vision of what the community could be steady the current friction",
+    ],
+    17: [
+      "let the community or group dynamic change into its next form rather than holding it to what it was",
+      "support the transition in the wider field rather than resisting it because the old form was more comfortable",
+    ],
+    18: [
+      "show up consistently in the wider field rather than only participating when it is convenient",
+      "let loyal, reliable presence be the main contribution to the community rather than gesture or occasional effort",
+    ],
+    19: [
+      "engage with the institutional or formal layer of the community rather than only the informal one",
+      "work within the structure of the wider field rather than around it",
+    ],
+    20: [
+      "be deliberately present in the community rather than participating at the edges",
+      "use the social or public setting intentionally rather than appearing and then withdrawing",
+    ],
     21: [
       "work the blockage in stages instead of asking the wider field to move all at once",
       "reroute participation around what is blocked instead of treating delay as proof you do not belong",
@@ -5761,13 +5948,61 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "notice which path actually aligns with what you value before closing the other one off",
       "sit with the fork until values rather than anxiety are doing the pointing",
     ],
+    23: [
+      "address the slow erosion of trust or engagement in the wider field before absence sets the tone",
+      "name what is quietly wearing at the community dynamic rather than assuming it will recover on its own",
+    ],
+    24: [
+      "let genuine care for the wider field become visible rather than operating only at the private level",
+      "bring warmth and real concern into the community interaction rather than keeping it managed and professional",
+    ],
+    25: [
+      "be clear about what you are actually committing to in the wider field rather than implying more than you can sustain",
+      "honour the shared terms of the community rather than treating the agreement as provisional",
+    ],
+    26: [
+      "share what you know with the wider field when it would serve the group rather than keeping it as private advantage",
+      "notice what is still hidden in the community dynamic and decide whether to bring it forward",
+    ],
+    27: [
+      "communicate clearly and directly in the wider field rather than letting important things remain implicit",
+      "put the key community message in plain language so the group can actually act on it",
+    ],
+    28: [
+      "read the specific person's role in the wider field clearly before deciding what their position means for the group",
+      "engage with the person in the community directly rather than working around them",
+    ],
     29: [
       "notice what your own patterns of participation are quietly reinforcing before asking the group to change",
       "reflect on which boundaries and choices are setting the terms for what the wider field can become",
     ],
+    30: [
+      "bring maturity and composure to the community dynamic rather than matching the energy of what is most reactive",
+      "let steady, experienced presence be the contribution to the wider field rather than trying to set the pace",
+    ],
     31: [
       "let the clearer signal show without turning belonging into performance",
       "use clearer visibility to build trust in the wider field, not just optics",
+    ],
+    32: [
+      "notice the emotional weather in the wider field without mistaking it for the whole reality",
+      "use emotional intelligence in the community rather than only operating at the rational or strategic level",
+    ],
+    33: [
+      "identify the specific thing that would actually unlock the wider field dynamic and bring it forward",
+      "trust that the answer to the community question is already present if the group is willing to look honestly",
+    ],
+    34: [
+      "notice whether what is flowing through the community practically — information, support, resources — is genuinely reciprocal",
+      "keep track of the practical exchange in the wider field and make sure it is moving in both directions",
+    ],
+    35: [
+      "commit to stability in the wider field rather than moving on when the connection becomes less exciting",
+      "be the steadying presence in the community rather than showing up only when momentum is high",
+    ],
+    36: [
+      "name the shared weight in the wider field rather than letting it sit as everyone's private burden",
+      "accept the communal obligation without letting it become resentment or performance",
     ],
   },
   friends_social: {
