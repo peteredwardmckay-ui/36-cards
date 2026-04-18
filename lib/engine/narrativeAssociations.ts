@@ -5164,6 +5164,114 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "build around what can actually hold once the first reaction passes",
       "let staying power decide what deserves continued effort",
     ],
+    1: [
+      "act on the incoming signal promptly rather than holding it until conditions feel more certain",
+      "treat new information as something to respond to rather than archive",
+    ],
+    2: [
+      "use the small window while it is genuinely open instead of waiting for a bigger one",
+      "take the narrow opportunity and do something concrete with it before it closes",
+    ],
+    3: [
+      "let direction precede movement — know where you are headed before adding more effort",
+      "check that the change of scene is actually a change of direction",
+    ],
+    4: [
+      "stabilise the foundation before asking more of the situation",
+      "work on what is underneath the problem before expecting the surface to hold",
+    ],
+    5: [
+      "pace the work for what can genuinely sustain rather than what looks most ambitious",
+      "let slow, compounding effort do more of the work than intensity alone",
+    ],
+    7: [
+      "read the layered picture more carefully before committing to one version of events",
+      "separate the real constraint from the hidden variable before deciding what to do",
+    ],
+    8: [
+      "let what is ending actually end rather than keeping it running on habit",
+      "treat the closure or pause as information rather than something to fix",
+    ],
+    10: [
+      "make the sharp decision cleanly and communicate the consequence directly",
+      "use the cut the situation is asking for instead of renegotiating around it one more time",
+    ],
+    11: [
+      "interrupt the repeating pattern at the point where it stops helping",
+      "change the sequence instead of refining the response to the same loop again",
+    ],
+    12: [
+      "reduce the noise before asking the situation for a clearer signal",
+      "separate what is being said from what is actually happening",
+    ],
+    13: [
+      "protect the new beginning by not demanding that it be more than a beginning yet",
+      "start on a scale you can sustain long enough to learn from",
+    ],
+    14: [
+      "use discernment without letting caution harden into paralysis",
+      "separate what the situation actually requires from what anxiety is inventing",
+    ],
+    15: [
+      "use the resource, authority, or support that is genuinely available rather than trying to carry everything alone",
+      "back the stronger position rather than negotiating with pressure from weakness",
+    ],
+    16: [
+      "turn the larger signal into a concrete next step rather than holding it as abstract possibility",
+      "use the clear direction to make one real decision rather than admiring the view from a distance",
+    ],
+    17: [
+      "change things in the order that actually addresses the root cause",
+      "let improvement happen in sequence rather than trying to fix everything at once",
+    ],
+    18: [
+      "rely on what has actually proved reliable rather than what is merely convenient",
+      "let loyalty and consistency count for more than availability and enthusiasm",
+    ],
+    19: [
+      "work with the structure, limit, or formal requirement directly rather than resenting it sideways",
+      "use the boundary as part of the solution rather than treating it as the whole problem",
+    ],
+    20: [
+      "be deliberate about what becomes public and what stays private in this situation",
+      "choose the visible field around the situation on purpose rather than letting it choose you",
+    ],
+    21: [
+      "work around the obstacle in stages rather than trying to force straight through it",
+      "treat the blockage as a sequencing problem rather than a verdict on whether progress is possible",
+    ],
+    24: [
+      "let what genuinely matters shape the decision rather than what is merely convenient or expected",
+      "follow the thread that still feels alive rather than only what looks sensible from the outside",
+    ],
+    25: [
+      "honour the commitment already made before adding new terms to the agreement",
+      "look at the repeating pattern and decide whether you are continuing it by choice or by inertia",
+    ],
+    27: [
+      "get the important communication in writing before planning around a verbal impression",
+      "say the thing plainly and in terms clear enough to be held accountable to",
+    ],
+    30: [
+      "bring patience and composure to what is slow by design",
+      "let steadiness and restraint do more of the work than urgency can",
+    ],
+    31: [
+      "use the positive signal as proof of direction rather than as permission to overreach",
+      "acknowledge what is working before looking for everything that is not",
+    ],
+    32: [
+      "track the pattern across time rather than treating one moment as the whole story",
+      "work with what the cycle is showing rather than reacting to the current phase as if it were permanent",
+    ],
+    34: [
+      "keep the flow of resources, support, or exchange moving rather than letting it stall",
+      "follow what is actually circulating in the situation rather than what is supposed to be",
+    ],
+    36: [
+      "carry the weight of what cannot be changed without letting it become the only story",
+      "work with what is given rather than what is owed",
+    ],
   },
   personal_growth: {
     2: [
@@ -6140,6 +6248,102 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "trace where support, money, or effort keeps flowing out faster than it returns",
       "work with the part of the household exchange that actually keeps daily life moving",
     ],
+    3: [
+      "consider whether the move, renovation, or expansion is genuinely the right next step or restlessness dressed as progress",
+      "define direction for the household before committing to a change that will be hard to reverse",
+    ],
+    5: [
+      "pace the household improvement for what the family can genuinely sustain rather than what looks best on paper",
+      "let slow, rooted change do more of the work than ambitious overhaul",
+    ],
+    6: [
+      "name what is unclear in the household picture before making decisions that depend on it being resolved",
+      "separate domestic uncertainty from domestic conflict before deciding which one you are actually dealing with",
+    ],
+    7: [
+      "read the family dynamic carefully before assuming you understand the full picture",
+      "separate the surface tension from the real issue before trying to resolve either",
+    ],
+    10: [
+      "make the household decision that stops the problem from replaying rather than deferring it one more time",
+      "use the cut or boundary the domestic situation is asking for",
+    ],
+    12: [
+      "reduce the household anxiety and over-discussion before asking for calmer conversation",
+      "settle the domestic noise first so the real concern can be heard",
+    ],
+    13: [
+      "protect the new phase at home by not demanding it be fully formed before it has had time to settle",
+      "let the early stage of the domestic change be tentative and that be enough for now",
+    ],
+    15: [
+      "use the household resource or authority to address the domestic pressure rather than negotiating around it",
+      "back the stronger domestic position — the budget, the agreement, the boundary — rather than hoping things resolve on their own",
+    ],
+    19: [
+      "respect the boundary or separation that the household dynamic is asking for",
+      "use the domestic limit as a signal rather than something to override",
+    ],
+    20: [
+      "be deliberate about what the household makes public and what stays between family members",
+      "manage what neighbours, extended family, or outside observers know before it shapes the home picture",
+    ],
+    21: [
+      "work around the domestic obstacle in stages rather than trying to force resolution all at once",
+      "treat the household blockage as a sequencing problem rather than proof the situation is hopeless",
+    ],
+    22: [
+      "make the household choice rather than keeping all the domestic options open until they close themselves",
+      "commit to the domestic direction that reduces confusion rather than the one that keeps everyone unoffended",
+    ],
+    23: [
+      "address the small household drain — the recurring cost, the repeated friction, the quiet erosion — before it accumulates",
+      "patch the repeating domestic leak before it quietly becomes the whole atmosphere of home",
+    ],
+    24: [
+      "let what actually matters in the household shape the decision rather than what is easiest or most expected",
+      "protect what is still alive in the family dynamic before it gets crowded out by daily obligation",
+    ],
+    25: [
+      "honour the household commitment already made before renegotiating its terms",
+      "look at the domestic pattern that keeps repeating and decide whether it is still the right agreement",
+    ],
+    26: [
+      "gather the household information that is missing before making a domestic decision that depends on it",
+      "do not assume the family situation is fully understood until the part that is still hidden has surfaced",
+    ],
+    27: [
+      "say the important household thing plainly rather than letting it circulate as mood or implication",
+      "get the domestic agreement, expectation, or change in clear terms rather than relying on it being understood",
+    ],
+    28: [
+      "clarify the other person's role, availability, or intention in the household before planning around assumptions",
+      "separate your domestic experience from someone else's version of what the family situation means",
+    ],
+    29: [
+      "treat your own position in the household as part of the answer rather than just the thing being managed",
+      "notice what your own choices at home are quietly reinforcing before asking others to change",
+    ],
+    30: [
+      "bring patience and steadiness to the domestic situation that is slow to change by design",
+      "let composure and restraint do more of the household work than urgency or pressure",
+    ],
+    31: [
+      "acknowledge the domestic progress that is actually happening before looking for everything that is still wrong",
+      "use the positive household signal to steady the next step rather than as permission to overreach",
+    ],
+    33: [
+      "back the household solution that is already clear rather than circling for a perfect one",
+      "use the clearest domestic answer as the hinge for the next step at home",
+    ],
+    35: [
+      "build the household around what can genuinely hold rather than what looks most stable under ideal conditions",
+      "let durability and consistency decide what deserves to stay in the domestic picture",
+    ],
+    36: [
+      "carry the weight of the household difficulty without letting it become the only story about home",
+      "accept what cannot be changed in the family situation and work from what is genuinely there",
+    ],
   },
   love: {
     6: [
@@ -6248,6 +6452,70 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "stabilize what can truly hold before expanding anything",
       "protect the part of the structure that is already proving durable",
     ],
+    2: [
+      "use the brief financial opening before conditions close it — small windows can be real windows",
+      "take the narrow opportunity and do something concrete with it rather than waiting for a larger one",
+    ],
+    3: [
+      "consider whether the financial move — the transfer, the investment, the expansion — is genuine progress or restlessness",
+      "define the financial direction before committing effort and resource to movement for its own sake",
+    ],
+    4: [
+      "secure the financial foundation before expanding the scope of what you are managing",
+      "strengthen the home base of the money picture before asking more of the overall structure",
+    ],
+    10: [
+      "make the sharp financial decision — cut the spending, close the account, end the arrangement — rather than deferring it",
+      "use the boundary or discontinuation that the money situation is already asking for",
+    ],
+    11: [
+      "interrupt the repeating financial friction — the same argument, the same overspend, the same shortfall — at the point it stops helping",
+      "change the money habit rather than managing the consequences of it one more time",
+    ],
+    13: [
+      "protect the new financial beginning by not asking it to perform at full scale before it has had time to develop",
+      "start the financial initiative smaller than ambition suggests and let it earn its own scope",
+    ],
+    14: [
+      "use financial caution without letting it harden into the kind of paralysis that prevents any real move",
+      "separate what the money situation actually requires from what anxiety about it is inventing",
+    ],
+    17: [
+      "change the financial approach in the order that addresses the root cause rather than the most visible symptom",
+      "let the money improvement happen in sequence — one change sticking before the next is added",
+    ],
+    18: [
+      "rely on financial support, advice, or partnership whose reliability is proven rather than whose intentions are good",
+      "let trustworthy financial allies do some of the work rather than managing everything alone",
+    ],
+    20: [
+      "be deliberate about what financial matters become public and what stays private",
+      "choose what to share about the money picture on purpose rather than letting it be visible by default",
+    ],
+    21: [
+      "work around the financial blockage in stages rather than trying to force straight through it",
+      "treat the money obstacle as a sequencing problem rather than a verdict on the whole picture",
+    ],
+    22: [
+      "make the financial choice rather than hovering between options until the window closes",
+      "commit to the money direction that reduces wasted effort rather than the one that keeps all options open",
+    ],
+    26: [
+      "gather the financial information you are missing before committing to the next money step",
+      "do not assume the contract, terms, or balance is fully understood until the hidden detail has surfaced",
+    ],
+    28: [
+      "clarify the other person's financial role, timing, or expectations before planning around assumptions",
+      "separate your side of the money picture from someone else's assumptions about what you can or will do",
+    ],
+    31: [
+      "use the positive financial signal as proof of direction rather than permission to overreach",
+      "acknowledge what is working in the money picture before going looking for everything that is not",
+    ],
+    36: [
+      "carry the financial burden without letting it become the whole story of what the situation is",
+      "accept what cannot be changed in the money picture and work steadily within what is actually there",
+    ],
   },
   work: {
     3: [
@@ -6281,6 +6549,114 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     33: [
       "back the cleanest fix and make it explicit",
       "choose the answer that turns a stuck process back into motion",
+    ],
+    1: [
+      "respond to the new professional signal — the message, the result, the update — rather than sitting on it",
+      "treat incoming work information as something to act on promptly rather than file for later",
+    ],
+    2: [
+      "use the brief professional opening while it is genuinely available rather than waiting for better conditions",
+      "take the narrow window — the approval, the slot, the opening — while it is real",
+    ],
+    4: [
+      "stabilise the professional foundation before expanding scope or taking on more",
+      "work on the structure the role depends on before expecting delivery to improve",
+    ],
+    5: [
+      "pace the professional effort for what can genuinely hold rather than what looks most ambitious",
+      "let the work compound through consistent effort rather than burning through intensity in one push",
+    ],
+    6: [
+      "name the unclear requirement, objective, or brief before committing more effort to possibly the wrong thing",
+      "do not accelerate in fog — stop and get the professional picture clearer before pushing harder",
+    ],
+    8: [
+      "let the project, role, or phase that is already ending close cleanly rather than dragging it on",
+      "treat the professional pause or endpoint as information rather than failure",
+    ],
+    9: [
+      "use the encouraging professional signal concretely — tie it to a specific next step rather than a mood",
+      "accept the smoother opening at work and do something real with it before conditions shift",
+    ],
+    10: [
+      "make the sharp professional decision — the cut, the redirect, the firm no — rather than deferring it",
+      "use the boundary or discontinuation that the work situation is already asking for",
+    ],
+    11: [
+      "interrupt the professional loop — the rework, the replay, the same conflict — at the point it stops adding value",
+      "change the sequence rather than refining the response to the same friction one more time",
+    ],
+    13: [
+      "protect the new project or role by not asking it to perform at full scale before it has developed",
+      "start the professional initiative smaller than ambition suggests and let it earn its own scope",
+    ],
+    15: [
+      "use the resource, budget, or institutional backing that is available rather than trying to carry the work without it",
+      "back the stronger professional position even when it requires more negotiation upfront",
+    ],
+    16: [
+      "turn the larger professional signal into a concrete deliverable or deadline rather than holding it as direction",
+      "use the career or project view to make one real decision rather than keeping it aspirational",
+    ],
+    17: [
+      "change the professional approach in the order that actually fixes the root problem",
+      "let improvement happen in deliberate stages rather than demanding transformation all at once",
+    ],
+    18: [
+      "rely on the professional ally or support whose reliability is proven rather than whoever is currently available",
+      "let trusted professional relationships do some of the load-bearing work rather than managing everything alone",
+    ],
+    20: [
+      "be deliberate about what becomes visible in the professional field and what stays internal",
+      "choose the public-facing parts of the work on purpose rather than letting them choose you",
+    ],
+    22: [
+      "make the professional choice rather than hovering between options until the window closes",
+      "commit to the direction that reduces wasted effort rather than the one that keeps all options open",
+    ],
+    24: [
+      "let what genuinely matters about the work shape the priority rather than what is loudest or most urgent",
+      "protect what is actually alive in the professional work before it gets crowded out by obligation",
+    ],
+    25: [
+      "honour the professional commitment already made before renegotiating its terms",
+      "look at the recurring professional contract or obligation and decide whether it still deserves renewal",
+    ],
+    26: [
+      "gather the information you are missing before committing to the next professional step",
+      "do not assume the brief, the scope, or the condition is clear until the hidden detail has surfaced",
+    ],
+    27: [
+      "get the professional communication — the brief, the agreement, the feedback — in writing before acting on it",
+      "document the decision clearly enough that it can be acted on without ambiguity",
+    ],
+    29: [
+      "tighten your own side of the professional picture before trying to change the wider context",
+      "treat your own choices and positioning as the first lever rather than waiting for external conditions to shift",
+    ],
+    30: [
+      "bring patience and restraint to the parts of the professional situation that are slow by design",
+      "let composure and steady pacing do more of the work than urgency can",
+    ],
+    31: [
+      "use the positive professional signal as proof of method rather than permission to overreach",
+      "acknowledge the visible progress before going looking for everything that is still not working",
+    ],
+    32: [
+      "track the professional cycle across time rather than treating one difficult phase as the permanent state",
+      "work with the pattern of visibility, recognition, and feedback rather than reacting to each fluctuation as if it were final",
+    ],
+    34: [
+      "keep the professional resource flow — budget, bandwidth, support — managed rather than discovering the shortfall mid-project",
+      "follow what is actually circulating in the work rather than the version that is supposed to be",
+    ],
+    35: [
+      "build around the professional practice that holds after the first push fades",
+      "let consistency and durability decide what deserves to continue",
+    ],
+    36: [
+      "carry the weight of the professional difficulty without letting it become the whole story of the work",
+      "accept what cannot be changed in the role or situation and work with what is actually there",
     ],
   },
   purpose_calling: {
