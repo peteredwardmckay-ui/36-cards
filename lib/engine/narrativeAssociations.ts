@@ -5226,6 +5226,90 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "build around what actually steadies you after the first surge of feeling",
       "back the practice, support, or boundary that still holds once the emotional weather changes",
     ],
+    3: [
+      "let inner movement lead before you make the change visible",
+      "notice whether the pull you feel is genuine direction or just restlessness wearing the same old clothes",
+    ],
+    4: [
+      "strengthen the inner home — the sense of safety inside yourself — before you ask the growth process for harder things",
+      "work on the private foundation your patterns are built on before expecting the surface to change",
+    ],
+    6: [
+      "sit with the uncertainty long enough to know whether it is pointing to something real or just anxiety doing its usual job",
+      "stop deciding through the fog and wait until what is unclear resolves enough to be named",
+    ],
+    8: [
+      "let something die that has been dying anyway instead of keeping it running on obligation",
+      "allow the ending inside you to be an ending, not another beginning you rushed into to avoid the discomfort of stopping",
+    ],
+    9: [
+      "receive what is good without immediately looking for the catch",
+      "let warmth, encouragement, or ease be part of the growth story instead of treating comfort as suspect",
+    ],
+    12: [
+      "get out of your own head long enough to notice what the situation is actually asking for",
+      "reduce the inner noise so the quieter, more reliable signal can be heard",
+    ],
+    13: [
+      "start small enough that you can actually sustain it",
+      "protect the new beginning by not asking it to be more than a beginning yet",
+    ],
+    17: [
+      "change the sequence instead of trying to transform everything at once",
+      "let growth happen in stages instead of demanding full transformation before the first stage is even stable",
+    ],
+    18: [
+      "let loyalty to yourself become as natural as loyalty to the people you never let down",
+      "stop outsourcing self-worth to consistent others and use that same steadiness for your own inner life",
+    ],
+    19: [
+      "notice when the boundary is protecting growth and when it is just protecting distance",
+      "use solitude deliberately instead of defaulting to isolation when things get difficult",
+    ],
+    23: [
+      "stop the slow bleed of small compromises before it defines the whole pattern",
+      "patch the accumulated drain before you ask yourself for more than the depleted system can actually give",
+    ],
+    24: [
+      "stay close to what actually matters to you rather than what you are supposed to want by now",
+      "let the heart's real signal — not the performed version — lead the inner conversation",
+    ],
+    25: [
+      "decide whether the inner contract you keep renewing still deserves renewal",
+      "notice the commitment or pattern you keep cycling back to and choose it consciously this time instead of by default",
+    ],
+    26: [
+      "go looking for the truth you have been half-knowing but not fully naming",
+      "bring the private understanding you already carry into the light long enough to work with it",
+    ],
+    27: [
+      "name it plainly — to yourself first, then to whoever needs to hear it",
+      "put the thing you have been circling into words clear enough to live by",
+    ],
+    28: [
+      "separate your own truth from the version of you that exists inside someone else's story",
+      "notice how much inner space you give to what other people think the growth is supposed to look like",
+    ],
+    29: [
+      "center your own experience as the primary data source instead of measuring it against everyone else's",
+      "start from what is actually true for you rather than what should be true by now",
+    ],
+    30: [
+      "let maturity mean something — stop rushing through the slow, undramatic parts of the process",
+      "use patience and composure as active tools rather than rewards you allow yourself once everything is resolved",
+    ],
+    31: [
+      "acknowledge what is actually working before you go looking for everything that is not",
+      "use the visible progress as confirmation that the process is real and worth continuing",
+    ],
+    34: [
+      "notice what you are feeding and what you are letting starve in your inner economy",
+      "track what nourishes the growth and what quietly drains it — they do not always look the way you expect",
+    ],
+    36: [
+      "accept what cannot be changed and stop spending growth energy arguing with it",
+      "work with what is given rather than what is owed — the deeper resource is your response, not the circumstances",
+    ],
   },
   community: {
     21: [
@@ -5340,6 +5424,66 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "back the part of the plan that can still hold when timing slips",
       "build around the booking, base, or fallback that still works once the strain hits",
     ],
+    4: [
+      "secure the home base — accommodation, return logistics, or the stable anchor of the trip — before you build outward from it",
+      "make sure there is a solid centre to come back to before committing to more complex movement",
+    ],
+    5: [
+      "pace the journey for what the body and the itinerary can genuinely sustain, not just what looks possible in theory",
+      "allow travel to unfold at a rhythm that permits real recovery between legs",
+    ],
+    8: [
+      "accept the cancellation, delay, or enforced pause as part of the trip's shape rather than a failure to fix",
+      "treat the travel ending or closure as information about what the route cannot hold right now",
+    ],
+    12: [
+      "stop replanning the same trip in your head and wait until the actual information becomes clear",
+      "reduce anxious speculation about the journey and work from confirmed details only",
+    ],
+    13: [
+      "start the planning from the smallest confirmed step rather than building the whole trip at once",
+      "let the early leg of the journey be modest and reliable before you extend it into something larger",
+    ],
+    14: [
+      "check the route carefully before you trust it — what looks straightforward may have a hidden condition",
+      "use caution at borders, checkpoints, or connections rather than assuming everything will move smoothly",
+    ],
+    15: [
+      "use the resources or authority available to you to secure the journey instead of relying on luck and goodwill",
+      "back the stronger logistical position even if it costs more — resources applied now prevent harder problems later",
+    ],
+    18: [
+      "travel with people or rely on contacts who have actually proven reliable rather than those who only sound dependable",
+      "lean on the steady support in the journey rather than managing every leg alone",
+    ],
+    23: [
+      "address the small, accumulating travel costs — in money, time, or energy — before they quietly undercut the whole trip",
+      "patch the repeating logistical drain instead of absorbing it one more time",
+    ],
+    24: [
+      "let what genuinely matters about the destination shape the itinerary rather than packing in every possible experience",
+      "travel toward what you actually want rather than what looks impressive on the plan",
+    ],
+    25: [
+      "honour the booking or commitment you have already made before you start changing the plan",
+      "treat the confirmed arrangement as a real agreement rather than a starting point for renegotiation",
+    ],
+    30: [
+      "let patience and unhurried movement do more of the work than momentum and optimism",
+      "travel at a speed that allows observation instead of only consumption",
+    ],
+    31: [
+      "use the favourable opening in the journey while it is clearly present rather than second-guessing it",
+      "trust the positive signal in the route and move on it before conditions shift",
+    ],
+    34: [
+      "keep the travel finances and resource flow managed before they quietly shape what is still possible",
+      "track spending, exchange, and supply actively rather than discovering the shortfall mid-journey",
+    ],
+    36: [
+      "carry the weight the journey brings without treating it as proof that the trip was wrong",
+      "accept that some travel carries real cost — the meaning of it does not always arrive during the trip itself",
+    ],
   },
   education: {
     2: [
@@ -5426,6 +5570,66 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "build around the study rhythm that still holds after the first push fades",
       "let sustainable effort decide what deserves to continue",
     ],
+    1: [
+      "act on the new information — the result, the feedback, or the update — rather than sitting with it until it loses momentum",
+      "treat the incoming academic signal as something to respond to promptly rather than analyse indefinitely",
+    ],
+    10: [
+      "make the decision that ends the stalled academic chapter rather than deferring it one more term",
+      "use the cut — drop the subject, close the application, or name the change — and communicate it cleanly",
+    ],
+    11: [
+      "break the study loop where you already know it is producing friction instead of learning",
+      "interrupt the revision cycle at the point where it has stopped sharpening the work and started draining confidence",
+    ],
+    15: [
+      "use the resource, authority, or support structure available to you rather than trying to carry the academic load without it",
+      "back what gives you the most leverage in the qualification — time, guidance, or institutional resource — before the window narrows",
+    ],
+    17: [
+      "change the study approach in the order that actually addresses the root problem rather than fixing symptoms first",
+      "let improvement happen in sequence — new habit, then new result — rather than expecting transformation to arrive all at once",
+    ],
+    18: [
+      "rely on the teacher, tutor, or study partner who has consistently shown up rather than the one who is merely convenient",
+      "let steady academic support do more of the work instead of trying to replace it with solo willpower",
+    ],
+    21: [
+      "work around the institutional blockage in stages instead of treating it as final",
+      "treat the obstacle as a sequencing problem to solve rather than a verdict on whether you belong in the field",
+    ],
+    23: [
+      "reduce the small academic drains — the missed sessions, the incomplete submissions, the unread feedback — before they compound",
+      "patch the repeating leaks in the study process before they quietly become the whole story of why progress stalled",
+    ],
+    24: [
+      "connect the study to what genuinely matters to you rather than only to what the credential requires",
+      "let the part of the subject that actually interests you carry more of the effort instead of pushing on pure obligation",
+    ],
+    25: [
+      "honour the academic commitment you made — the enrolment, the thesis, the programme — rather than exiting before it has had time to become what you hoped",
+      "look at whether you are renewing the study pattern by habit or by genuine choice",
+    ],
+    26: [
+      "do the research or background reading before you commit harder to a position you have not yet fully understood",
+      "treat hidden or inaccessible knowledge as a sign to keep investigating rather than a reason to give up",
+    ],
+    27: [
+      "get the academic communication — the feedback, the brief, the requirement — in writing before you plan around a verbal impression",
+      "write the thing you have been putting off: the application, the email, the draft",
+    ],
+    30: [
+      "bring patience and composure to the parts of the learning process that are slow by design",
+      "let academic maturity mean not rushing the integration of difficult material just because the deadline is pressing",
+    ],
+    32: [
+      "track the emotional cycle of study — the confidence peaks and the doubt troughs — without treating either as permanent truth",
+      "notice the pattern of motivation across the term instead of reading each individual day as a verdict on your ability",
+    ],
+    36: [
+      "carry the difficulty of the path without turning it into proof that the path is wrong",
+      "accept that deep study involves real weight — the burden is part of the formation, not an obstacle to it",
+    ],
   },
   creative: {
     4: [
@@ -5508,6 +5712,70 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "build around what can actually hold as practice once the first push fades",
       "let sustainable output decide what deserves to continue",
     ],
+    1: [
+      "act on the incoming signal — the commission, the response, the opportunity — rather than waiting until conditions feel more certain",
+      "treat the first clear creative movement as something to respond to promptly rather than overanalyse",
+    ],
+    2: [
+      "use the small opening in the work while it is genuinely available instead of waiting for a bigger permission",
+      "let a narrow window of creative momentum be enough to start from, rather than waiting for ideal conditions",
+    ],
+    3: [
+      "consider whether the urge to move the work into new territory is genuine expansion or avoidance of what the current work is actually asking",
+      "let the journey of the work be deliberate rather than just restless",
+    ],
+    5: [
+      "pace creative production for what can genuinely sustain rather than burning through intensity in one sitting",
+      "let the work root slowly and deeply rather than demanding rapid visible results",
+    ],
+    8: [
+      "allow the work that is ending to end — close the project, the draft, or the series rather than keeping it on life support",
+      "treat the creative pause or fallow period as part of the process rather than evidence that the work has stalled permanently",
+    ],
+    10: [
+      "make the cut the work needs — the edit, the refusal, the redirection — rather than deferring it to avoid discomfort",
+      "use the sharp creative decision cleanly and communicate it clearly to anyone it affects",
+    ],
+    13: [
+      "protect the new project or approach by not asking it to be finished before it has had time to develop",
+      "start the creative work smaller than your ambition suggests and let it earn its own scale",
+    ],
+    15: [
+      "use the resources, time, or institutional support available to the work rather than trying to carry everything without backing",
+      "back what the creative work actually needs rather than what costs the least or asks the least of you",
+    ],
+    18: [
+      "work alongside people whose reliability in the creative field is proven rather than those who are only enthusiastic",
+      "let trustworthy creative community or collaborators do some of the sustaining work instead of shouldering the whole practice alone",
+    ],
+    19: [
+      "use solitude and clear creative boundaries deliberately rather than isolating by accident",
+      "protect the private space the work needs to develop before it is ready to be shown",
+    ],
+    22: [
+      "make the creative choice that reduces self-betrayal rather than the one that only looks safest",
+      "close off the route that keeps the work stuck at the crossroads and commit to the direction that actually asks something real of you",
+    ],
+    25: [
+      "honour the creative commitment you have already made — the contract, the residency, the series — before you begin renegotiating it",
+      "look at the repeating creative pattern and decide whether you are renewing it by genuine choice or by habit",
+    ],
+    27: [
+      "write or articulate the creative idea before it dissolves back into intention",
+      "get the commission, brief, or agreement in writing before you begin work that depends on it",
+    ],
+    33: [
+      "act from the creative answer that is already clear enough to use rather than circling for a better one",
+      "trust the solution that has already presented itself instead of waiting for certainty before beginning",
+    ],
+    34: [
+      "keep the creative economy — income, materials, time — moving cleanly rather than letting resource pressure quietly reshape what is possible",
+      "address the financial or practical flow of the creative practice before it starts making the artistic decisions for you",
+    ],
+    36: [
+      "carry the weight that comes with serious creative commitment without treating it as proof the work is wrong",
+      "accept that deep work involves real cost — the burden is part of what the work is asking, not an obstacle in front of it",
+    ],
   },
   health: {
     4: [
@@ -5589,6 +5857,70 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     35: [
       "choose the routine, support, or pacing that still holds after the first good or bad day passes",
       "let staying power decide what is actually helping recovery",
+    ],
+    1: [
+      "respond to the new health signal — the symptom, the result, the change — promptly rather than absorbing it and moving on",
+      "treat incoming health information as something to act on rather than file away for later",
+    ],
+    2: [
+      "use the brief window of improved energy or reduced symptoms to establish something that will hold rather than spending it all at once",
+      "take the small opening in the health picture seriously rather than waiting for a bigger one",
+    ],
+    3: [
+      "consider whether the urge to try something new — a different practitioner, a different approach — is genuine progress or restlessness avoiding what is already working",
+      "let the movement in the health journey be deliberate rather than just reactive",
+    ],
+    6: [
+      "stop guessing what is wrong and get the information that would make the picture clearer",
+      "sit with the uncertainty long enough to separate real symptom signals from generalised anxiety",
+    ],
+    7: [
+      "unravel the layered health picture carefully — what looks like one problem may be several feeding into each other",
+      "separate the real physical signal from the complicated emotional weather around it before deciding what the body needs",
+    ],
+    9: [
+      "receive the good health signal — the improvement, the clear result, the reduction in symptoms — rather than immediately doubting it",
+      "let a positive indicator register as genuinely positive instead of bracing for the next bad turn",
+    ],
+    10: [
+      "make the sharp health decision — stop the treatment that is not helping, end the habit, cut the exposure — rather than continuing by inertia",
+      "use the clean boundary the body is asking for instead of negotiating around it one more time",
+    ],
+    13: [
+      "begin recovery gently enough that the body can actually integrate the improvement",
+      "protect the early stages of healing by not demanding too much too soon",
+    ],
+    15: [
+      "use the available medical resource, practitioner support, or physical capacity while it is accessible",
+      "back the stronger health position — rest, treatment, support — rather than relying on willpower to carry what resources could hold",
+    ],
+    16: [
+      "turn the longer health signal into a concrete change in the routine rather than holding it as abstract hope",
+      "use the guidance toward better health as a specific, liveable step rather than an inspiring idea you do not act on",
+    ],
+    19: [
+      "respect the boundary the body is drawing — the need for quiet, isolation, or withdrawal — rather than overriding it with social or professional obligation",
+      "use the body's signal to step back as permission rather than something to push through",
+    ],
+    21: [
+      "work around the health obstacle methodically instead of trying to force through it",
+      "treat the blockage — physical or otherwise — as something to sequence through patiently rather than something to overcome by will alone",
+    ],
+    22: [
+      "make the health choice rather than hovering between options until the window closes",
+      "commit to the path that actually supports recovery rather than the one that requires the least change",
+    ],
+    26: [
+      "gather the health information you are missing before committing to the next treatment step",
+      "treat hidden or unclear medical information as a sign to investigate further rather than a reason to assume the worst",
+    ],
+    27: [
+      "get the medical communication — the referral, the instruction, the prescription — in writing before acting on a verbal understanding",
+      "document what the body is doing clearly enough to report it accurately instead of relying on memory shaped by anxiety",
+    ],
+    36: [
+      "carry the difficulty of the health journey without turning it into a verdict on your worth or discipline",
+      "accept that some recovery involves real weight — the burden is part of the process, not evidence that you are failing it",
     ],
   },
   pets: {
