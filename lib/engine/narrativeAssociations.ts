@@ -4134,6 +4134,54 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "36-29": [
       "a deep obligation, karmic weight, or non-negotiable calling landing on your path and asking for acceptance rather than resistance",
     ],
+    "3-29": [
+      "your path calling you to move beyond familiar spiritual territory toward something that cannot be reached without genuine departure",
+    ],
+    "4-29": [
+      "the grounded home base of the inner life holding steady, providing the container that makes any deeper practice possible",
+    ],
+    "7-29": [
+      "complexity, shadow, or mixed spiritual motives landing on your path and asking for honest examination rather than projection",
+    ],
+    "11-29": [
+      "a repeated pattern or spiritual friction on your path that needs interrupting rather than being endured one more cycle",
+    ],
+    "12-29": [
+      "anxious seeking or inner noise landing on your path, suggesting the answer is closer than the restlessness makes it feel",
+    ],
+    "14-29": [
+      "strategic spiritual thinking or bypassing landing on your path — discernment needs checking to make sure it is serving truth, not comfort",
+    ],
+    "15-29": [
+      "weighty tradition, a demanding teacher, or a powerful spiritual authority landing on your path and asking to be engaged rather than deferred to blindly",
+    ],
+    "17-29": [
+      "transformation of the path itself landing on your inner position, asking the practice to become what it is trying to be",
+    ],
+    "18-29": [
+      "faithful, steady companionship on the spiritual path landing near your position — loyalty in practice matters as much as insight",
+    ],
+    "19-29": [
+      "necessary solitude, inner withdrawal, or contemplative distance landing on your path and asking to be used honestly rather than avoided",
+    ],
+    "20-29": [
+      "spiritual community, shared practice, or the holding power of others landing on your inner position and offering what solo work cannot",
+    ],
+    "23-29": [
+      "quiet erosion, doubt, or a slow draining of spiritual meaning landing on your path and asking for honest attention before it sets the tone",
+    ],
+    "25-29": [
+      "a sacred vow, repeated commitment, or spiritual agreement landing on your inner position and asking whether it is still being kept consciously",
+    ],
+    "27-29": [
+      "sacred writing, a spiritual message, or the moment inner experience becomes articulable landing near your position",
+    ],
+    "28-29": [
+      "the spiritual mirror or counterpart landing near your position, reflecting what you cannot yet see in yourself",
+    ],
+    "29-32": [
+      "your path moving through emotional cycles, lunar sensitivity, and the part of practice that cannot be rushed or analytically resolved",
+    ],
   },
 };
 
@@ -6631,6 +6679,26 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   love: {
+    1: [
+      "notice what is arriving in the emotional field and meet it promptly before the moment passes",
+      "follow the first signal rather than waiting for a louder one to confirm it",
+    ],
+    2: [
+      "use the small opening while it is available rather than talking yourself past it",
+      "let the easy moment count without needing it to be more than it is",
+    ],
+    3: [
+      "name what the distance is actually doing to the connection before assuming it is only physical",
+      "let the longing become a direction rather than a substitute for movement",
+    ],
+    4: [
+      "protect the home base of the relationship rather than sacrificing it for short-term peace",
+      "treat shared space and private stability as the foundation, not the consolation prize",
+    ],
+    5: [
+      "let the connection grow at its own rate without forcing the next stage",
+      "trust what is slow and steady over what arrives quickly and promises too much",
+    ],
     6: [
       "name what feels unclear before trying to call it commitment",
       "separate fear from fact before deciding what this bond means",
@@ -6639,9 +6707,77 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "separate signal from social noise",
       "say what feels complicated plainly instead of letting tension coil around it",
     ],
+    8: [
+      "let what is genuinely over close without trying to revive what has already finished",
+      "allow the loss or ending to complete itself so the next thing has room to begin",
+    ],
+    9: [
+      "receive warmth or appreciation without immediately deflecting or qualifying it",
+      "let genuine affection count as data about the connection, not just social noise",
+    ],
+    10: [
+      "make the honest cut rather than keeping something alive that is taking more than it gives",
+      "say the clear thing even when clarity feels uncomfortable — the connection deserves honesty",
+    ],
+    11: [
+      "name the repeating pattern before the next round of it starts",
+      "turn the repeated friction into a question about what keeps triggering it",
+    ],
+    12: [
+      "slow the anxious talk down and say the one thing that actually needs saying",
+      "separate worry from information before letting the conversation carry the weight of both",
+    ],
+    13: [
+      "treat the new or tender part of the connection with enough care that it does not get rushed",
+      "meet the early stage honestly rather than projecting an outcome onto it",
+    ],
+    14: [
+      "check whether you are protecting yourself or the connection — they are not always the same thing",
+      "name what self-interest is doing in this dynamic before it sets the terms",
+    ],
+    15: [
+      "check whether strength here looks like steadiness or control, and whether the connection can tell the difference",
+      "release the grip enough to let the other person have their own position",
+    ],
+    16: [
+      "let the longer view steady the emotional weather rather than getting lost in today's signal",
+      "trust what has been consistently pointing in the same direction over time",
+    ],
+    17: [
+      "name what is changing in the connection rather than holding on to the version that no longer fits",
+      "let the relationship become what it is becoming without forcing it back to what it was",
+    ],
+    18: [
+      "let loyalty be simple and visible rather than something the other person has to keep guessing at",
+      "name what faithfulness actually looks like in practice in this connection",
+    ],
     19: [
       "name the distance honestly and ask whether it is protection or pattern",
       "treat reserve as something to clarify, not something to romance",
+    ],
+    20: [
+      "keep what is private between the two of you rather than letting the social field set the terms",
+      "notice whether the public version of the connection matches the private one",
+    ],
+    21: [
+      "name the actual obstacle plainly rather than working around it indefinitely",
+      "treat the blockage as information about what the connection needs, not proof that it cannot work",
+    ],
+    22: [
+      "make the real choice rather than keeping all options technically open",
+      "name what both paths in this connection actually require and then decide",
+    ],
+    23: [
+      "address the small drains before they define the whole dynamic",
+      "name what has been quietly wearing at the connection before it becomes irreversible",
+    ],
+    24: [
+      "stay close to what actually matters in this connection rather than what performs well",
+      "let the emotional truth of the bond speak more clearly than the narrative around it",
+    ],
+    25: [
+      "be clear about what you are actually agreeing to, not just what the moment suggests",
+      "check that the terms of the bond are ones you can keep, not just ones you want to offer",
     ],
     26: [
       "say what has been kept private once you can say it plainly",
@@ -6651,9 +6787,41 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "say the important thing directly and without extra static",
       "let the next conversation clarify the terms instead of circling them",
     ],
+    28: [
+      "read the other person as they actually are rather than as the story you are carrying about them",
+      "give the other position as much weight as your own before deciding what the connection needs",
+    ],
+    29: [
+      "let your own emotional truth anchor the reading rather than reshaping it around the other person's reactions",
+      "name what you actually feel before deciding what the connection needs",
+    ],
     30: [
       "stay composed and say exactly what you mean",
       "let calm honesty do the work that drama cannot",
+    ],
+    31: [
+      "let visible warmth and positive signal count as real data about the connection",
+      "trust the clarity that arrives when the emotional weather is good rather than suspecting it",
+    ],
+    32: [
+      "trust the emotional intuition even when it is not yet fully articulable",
+      "let what you sense about the connection inform what you say rather than overriding it with logic",
+    ],
+    33: [
+      "identify the one thing that would actually unlock this dynamic and focus there first",
+      "trust the clear answer when it arrives rather than keeping the question open from habit",
+    ],
+    34: [
+      "notice whether practical generosity and emotional giving are balanced in this connection",
+      "check that what flows between you practically reflects what both people actually value",
+    ],
+    35: [
+      "build the steady version of the connection rather than the exciting one that does not last",
+      "choose security and reliability as an active value rather than settling for them",
+    ],
+    36: [
+      "name the weight this connection is carrying and whether both people are holding it equally",
+      "accept what cannot be changed in the bond without letting resignation do the work that honesty needs to do",
     ],
   },
   money: {
@@ -7020,6 +7188,152 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     32: [
       "track the cycle without mistaking every mood for truth",
       "use the pattern you can see over time, not only the feeling of this moment",
+    ],
+  },
+  spiritual: {
+    1: [
+      "notice the first inner signal rather than waiting for it to announce itself more loudly",
+      "meet the arriving spiritual message before the ordinary day absorbs it",
+    ],
+    2: [
+      "receive the small grace without explaining it away or asking whether it was real",
+      "let the brief opening count as enough rather than waiting for a more convincing one",
+    ],
+    3: [
+      "let the spiritual journey move rather than waiting until you feel fully prepared",
+      "name where the path is actually asking you to go, not where it is comfortable to stay",
+    ],
+    4: [
+      "protect the sacred space or daily practice that grounds everything else",
+      "treat the spiritual home base as something worth tending before it quietly disappears",
+    ],
+    5: [
+      "trust the slow pace rather than rushing the growth the roots are still making possible",
+      "commit to the patient version of the practice rather than the one that produces faster results",
+    ],
+    6: [
+      "sit inside the confusion rather than trying to resolve it before it has finished teaching",
+      "let the fog be what it is without collapsing it into premature clarity",
+    ],
+    7: [
+      "bring honest attention to what is complicated rather than keeping it in shadow where it cannot be worked with",
+      "do the shadow work here rather than projecting the difficult part outward",
+    ],
+    8: [
+      "allow what needs to end to close fully rather than resurrecting it under a different name",
+      "complete the letting go so that transformation has actual space to begin",
+    ],
+    9: [
+      "receive the grace or spiritual encouragement without immediately qualifying whether it was deserved",
+      "let the blessing land rather than analyzing it before it can do its work",
+    ],
+    10: [
+      "make the renunciation rather than softening it back into a negotiation",
+      "release what the path is asking you to put down rather than renegotiating the terms",
+    ],
+    11: [
+      "check whether the discipline is deepening awareness or becoming an end in itself",
+      "bring honest attention to whether the practice is serving or replacing the actual encounter",
+    ],
+    12: [
+      "slow the seeking down and let one teaching do its work before adding the next",
+      "quiet the inner noise enough to hear what is already present rather than reaching for more",
+    ],
+    13: [
+      "stay in beginner's mind rather than reaching for authority you have not yet earned",
+      "let innocence and curiosity lead here more than expertise",
+    ],
+    14: [
+      "check whether discernment is serving truth or protecting the ego from honest encounter",
+      "name the difference between spiritual clarity and spiritual avoidance",
+    ],
+    15: [
+      "examine where authority in sacred space is serving those it holds rather than controlling them",
+      "check whether the weight of tradition is grounding or crushing what it is meant to support",
+    ],
+    16: [
+      "translate the long-range guidance into something that changes how you actually live this week",
+      "let the higher signal become concrete rather than remaining an inspiring abstraction",
+    ],
+    17: [
+      "allow the practice to evolve into the form it is trying to become",
+      "let the inner life change rather than forcing it to stay in a form that no longer fits",
+    ],
+    18: [
+      "show up faithfully for the practice without waiting to feel spiritually ready",
+      "let steadiness of presence do what inspiration alone cannot sustain",
+    ],
+    19: [
+      "use the solitude productively rather than letting it become spiritual avoidance",
+      "enter the inner retreat with enough honesty to hear what the silence is saying",
+    ],
+    20: [
+      "let shared practice and spiritual community support what solo work cannot",
+      "bring the inner work into relationship with others rather than keeping it entirely private",
+    ],
+    21: [
+      "stop trying to climb the spiritual obstacle by effort alone and let stillness do what striving cannot",
+      "sit with the wall long enough to learn what it is actually asking",
+    ],
+    22: [
+      "make the real choice about the path rather than keeping all directions technically open",
+      "name which spiritual direction you are actually choosing and let the other one rest",
+    ],
+    23: [
+      "address the quiet erosion of faith before it becomes the whole of what the practice is",
+      "replenish meaning actively rather than assuming it will return on its own",
+    ],
+    24: [
+      "let devotion and love keep the practice alive when intellectual understanding alone is not enough",
+      "return to what you actually care about in the spiritual life rather than what you feel obligated to perform",
+    ],
+    25: [
+      "renew the spiritual commitment consciously rather than continuing it on inertia",
+      "clarify what you are still choosing to honour and what may need to be released",
+    ],
+    26: [
+      "study the hidden teaching rather than avoiding the material that requires more of you",
+      "let the esoteric layer of the practice open without demanding that it reveal everything at once",
+    ],
+    27: [
+      "record or articulate what the inner experience has taught before the clarity fades",
+      "let the spiritual insight become language before ordinary life absorbs it again",
+    ],
+    28: [
+      "let the spiritual mirror show you what you cannot yet see in yourself rather than deflecting what it reflects",
+      "engage with the teacher or counterpart as an honest messenger rather than confirming what you already believe",
+    ],
+    29: [
+      "check whether your own inner posture is open enough to receive what is actually available",
+      "bring the sincerity of your seeking into alignment with the actual practice, not just the intention",
+    ],
+    30: [
+      "let the quieter, more mature holiness speak rather than reaching for the more dramatic version of the spiritual life",
+      "trust what decades of practice have made simple rather than chasing what is still only exciting",
+    ],
+    31: [
+      "trust the illumination and let it inform action rather than hoarding it as private warmth",
+      "let the clarity that is arriving become visible in how you actually live",
+    ],
+    32: [
+      "work with the dream, cycle, or intuitive layer of the practice rather than overriding it with analysis",
+      "let what is felt but not yet articulated remain present long enough to become usable wisdom",
+    ],
+    33: [
+      "act on the breakthrough rather than returning to the seeking once the answer has arrived",
+      "let the key insight become lived practice rather than remaining a beautiful idea",
+    ],
+    34: [
+      "check whether inner richness is being translated into a life that actually sustains the path",
+      "let spiritual abundance flow rather than hoarding it as private experience",
+    ],
+    35: [
+      "stay with the practice when the ecstasy has faded and ordinary life has returned",
+      "build the version of devotion that holds without requiring peak experience to sustain it",
+    ],
+    36: [
+      "carry the sacred duty without letting it become bitterness or performance",
+      "accept what the path is asking you to hold and offer it consciously rather than under protest",
     ],
   },
 };
