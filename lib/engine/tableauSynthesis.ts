@@ -849,6 +849,8 @@ function describePlacementSignal(
         `${card.name} in ${house.name} suggests ${cardPhrase} concentrated at the center`,
         `${card.name} in ${house.name} points to ${cardPhrase} as a dominant thread`,
         `${card.name} in ${house.name} deepens the signal around ${cardPhrase}`,
+        `${card.name} in ${house.name} keeps returning to ${cardPhrase} as the core concern`,
+        `${card.name} in ${house.name} makes ${cardPhrase} the clearest lens in this section of the reading`,
       ],
       random,
     );
@@ -859,6 +861,8 @@ function describePlacementSignal(
       `${card.name} in ${house.name} suggests ${cardPhrase} moving through ${housePhrase}`,
       `${card.name} in ${house.name} points to ${cardPhrase} inside ${housePhrase}`,
       `${card.name} in ${house.name} puts ${cardPhrase} under the influence of ${housePhrase}`,
+      `${card.name} in ${house.name} connects ${cardPhrase} with the territory of ${housePhrase}`,
+      `${card.name} in ${house.name} brings ${cardPhrase} into direct contact with ${housePhrase}`,
     ],
     random,
   );
@@ -4581,6 +4585,8 @@ export function synthesizeGrandTableauNarrative(input: {
             `Practically, this looks like ${practicalFrame}`,
             `In plain terms, this is ${practicalFrame}`,
             `On the ground, this is ${practicalFrame}`,
+            `The practical read here is ${practicalFrame}`,
+            `Stripped to its essence, this is ${practicalFrame}`,
           ],
           random,
         ),

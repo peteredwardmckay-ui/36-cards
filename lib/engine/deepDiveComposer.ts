@@ -463,6 +463,8 @@ function polishTemplatedPhrase(input: string, random: () => number): string {
         "a clear need for aligned expectations between you and the other person",
         "a shared alignment point that asks for clearer expectations",
         "a relational hinge where clarity between both sides matters most",
+        "the work of bringing both people onto the same page before the next step is taken",
+        "a need for mutual clarity that cannot be deferred without cost",
       ],
       random,
     );
@@ -474,6 +476,8 @@ function polishTemplatedPhrase(input: string, random: () => number): string {
         "resilience without carrying what is not yours",
         "steady endurance with clearer emotional load boundaries",
         "staying resilient while refusing unnecessary weight",
+        "endurance that knows the difference between what is yours to hold and what is not",
+        "the kind of steadiness that comes from setting down what was never supposed to be yours",
       ],
       random,
     );
@@ -485,6 +489,8 @@ function polishTemplatedPhrase(input: string, random: () => number): string {
         "the main diagonal traces how immediate pressures become longer-term outcomes",
         "the main diagonal maps a thread from what is pressing now to what settles later",
         "the main diagonal shows one continuous arc from present tension to later resolution",
+        "the main diagonal carries one continuous thread from what is active now to what resolves in time",
+        "the main diagonal reads as a development: what presses at the start gradually shifts into what is possible at the end",
       ],
       random,
     );
@@ -928,6 +934,8 @@ function buildArcBullet(
       `The wider arc moves from ${startThread} toward ${endThread}`,
       `The longer movement runs from ${startThread} toward ${endThread}`,
       `The wider pattern starts in ${startThread}, then leans toward ${endThread}`,
+      `Corner to corner, the arc traces ${startThread} becoming ${endThread}`,
+      `The diagonal arc narrates a shift: ${startThread} at the opening, ${endThread} at the close`,
     ],
     random,
   );
@@ -1751,6 +1759,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                   `Within that cluster, ${cardRef(clusterPair.cardA)} with ${cardRef(clusterPair.cardB)}`,
                   `At the center of that cluster, ${cardRef(clusterPair.cardA)} with ${cardRef(clusterPair.cardB)}`,
                   `Inside that nearest cluster, ${cardRef(clusterPair.cardA)} with ${cardRef(clusterPair.cardB)}`,
+                  `The strongest pairing in that cluster is ${cardRef(clusterPair.cardA)} with ${cardRef(clusterPair.cardB)}`,
+                  `Among those nearest cards, ${cardRef(clusterPair.cardA)} with ${cardRef(clusterPair.cardB)}`,
                 ],
                 random,
               ),
@@ -1766,6 +1776,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                   `What is closest matters first, while the next ring shows what is beginning to gather`,
                   `The nearest cards speak first, while the next ring shows what is already starting to build`,
                   `What is closest lands first, while the next ring shows what is gathering just behind it`,
+                  `The inner ring speaks to immediate pressure; the outer ring names what is forming just behind it`,
+                  `Near cards carry current weight; the cards further out show what the near field is already setting in motion`,
                 ],
                 random,
               ),
@@ -1795,6 +1807,24 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                     ),
                   )}`,
                   `That nearest group keeps pulling attention back to ${lowerFirst(
+                    buildCardAssociationPhrase(
+                      getCardMeaning(analysis.primaryCluster.placements[0].cardId),
+                      subjectId,
+                      meaningDomain,
+                      random,
+                      phraseContext,
+                    ),
+                  )}`,
+                  `What the cluster won't let go of is ${lowerFirst(
+                    buildCardAssociationPhrase(
+                      getCardMeaning(analysis.primaryCluster.placements[0].cardId),
+                      subjectId,
+                      meaningDomain,
+                      random,
+                      phraseContext,
+                    ),
+                  )}`,
+                  `The nearest cards keep concentrating on ${lowerFirst(
                     buildCardAssociationPhrase(
                       getCardMeaning(analysis.primaryCluster.placements[0].cardId),
                       subjectId,
@@ -1854,6 +1884,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                   `That zone centers on ${cardRef(secondaryZoneCenterCardId)} and keeps gathering around ${secondaryZoneCenterThread}`,
                   `At the center of that zone, ${cardRef(secondaryZoneCenterCardId)} keeps pulling attention back to ${secondaryZoneCenterThread}`,
                   `The center of that zone is ${cardRef(secondaryZoneCenterCardId)}, and it keeps drawing the future pressure toward ${secondaryZoneCenterThread}`,
+                  `${cardRef(secondaryZoneCenterCardId)} anchors that zone, and its thread stays with ${secondaryZoneCenterThread}`,
+                  `The background zone concentrates most strongly on ${cardRef(secondaryZoneCenterCardId)}, which keeps returning to ${secondaryZoneCenterThread}`,
                 ],
                 random,
               ),
@@ -1876,6 +1908,14 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                     secondaryPair.prose,
                     random,
                   )}`,
+                  `The strongest signal in that zone comes from ${cardRef(secondaryPair.cardA)} with ${cardRef(secondaryPair.cardB)}, which ${toPairNarrativePhrase(
+                    secondaryPair.prose,
+                    random,
+                  )}`,
+                  `Among those background cards, ${cardRef(secondaryPair.cardA)} with ${cardRef(secondaryPair.cardB)} ${toPairNarrativePhrase(
+                    secondaryPair.prose,
+                    random,
+                  )}`,
                 ],
                 random,
               ),
@@ -1893,6 +1933,12 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                     clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
                   )}`,
                   `${cardRef(secondaryZone.cards[0])} leaves a quieter trace of ${lowerFirst(
+                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
+                  )}`,
+                  `${cardRef(secondaryZone.cards[0])} sits at the surface of that zone and marks it with ${lowerFirst(
+                    clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
+                  )}`,
+                  `The most visible card in that zone is ${cardRef(secondaryZone.cards[0])}, and it keeps the zone oriented around ${lowerFirst(
                     clause(buildCardAssociationPhrase(secondaryZone.cards[0], subjectId, meaningDomain, random, phraseContext)),
                   )}`,
                 ],

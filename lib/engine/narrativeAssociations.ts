@@ -3398,6 +3398,30 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-34": [
       "your social position being shaped by the flow of contact, reciprocity, and what is or is not being exchanged cleanly between people",
     ],
+    "3-29": [
+      "your social world becoming more active around your own position, so what you bring into the dynamic at this moment shapes how others respond",
+    ],
+    "11-29": [
+      "your social position getting caught in a repeating friction pattern that changes only when one part of the dynamic is deliberately interrupted",
+    ],
+    "23-29": [
+      "your social position being worn down by small, accumulated strains — the drain is subtle but real, and simplification matters more than pushing for resolution",
+    ],
+    "4-29": [
+      "your sense of belonging and rootedness in the social world being reflected in where you can show up reliably, not just where you occasionally appear",
+    ],
+    "9-29": [
+      "your social position picking up a more encouraging signal — there is real warmth or positive momentum available if you stay present for it",
+    ],
+    "17-29": [
+      "your social world asking for a change in how you show up — the old pattern of engagement is no longer returning what it once did",
+    ],
+    "5-29": [
+      "your social position settling into a steadier, slower rhythm where patience with the pace of the dynamic matters more than accelerating it",
+    ],
+    "21-29": [
+      "your social world running into a block — participation or connection is being limited by something that is better worked around than forced through",
+    ],
   },
   creative: {
     "9-29": [
@@ -3965,6 +3989,18 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-35": [
       "your stance toward the path being tested by what you can actually sustain, not just admire from a distance",
     ],
+    "3-29": [
+      "your calling entering a more active phase, where what you bring forward now has more traction than it would in a quieter season",
+    ],
+    "9-29": [
+      "your path gathering a clearer, more encouraging signal — what is responding positively deserves more trust than what is still uncertain",
+    ],
+    "5-29": [
+      "your calling asking for patience and a slower, more sustained rhythm — the work is real but the timeline resists being rushed",
+    ],
+    "4-29": [
+      "your calling becoming inseparable from the stable foundation you have built, so protecting that base is the same as protecting the path",
+    ],
   },
   home_family: {
     "2-30": [
@@ -4183,6 +4219,46 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     "8-9": [
       "This pairing says the animal is more likely to settle when rest and reassurance work together, not when encouragement turns into pressure",
       "This pairing says comfort only helps if it protects the quiet phase the animal is already moving through",
+    ],
+    "4-8": [
+      "This pairing says the animal needs a stable, consistent environment right now, and the best care is protecting the quiet more than prompting a response",
+      "This pairing says the home base and rest period are the same thing here — the routine that holds steady is the routine that heals",
+    ],
+    "5-29": [
+      "This pairing says the animal responds best to the slower, steadier rhythm you are already providing — don't accelerate what is quietly working",
+      "This pairing says patience and your own calm consistency are the most effective care tool available right now",
+    ],
+    "11-17": [
+      "This pairing says a repeating friction pattern needs interrupting with a change — the same approach will keep producing the same result",
+      "This pairing says the flare-up and the needed change are the same event: break the loop instead of managing it again",
+    ],
+    "3-9": [
+      "This pairing says active engagement and visible positive response are running together, so the current care approach is building real confidence in the animal",
+      "This pairing says what you are putting in is producing a clear, readable signal from the animal — follow that signal",
+    ],
+    "1-3": [
+      "This pairing says an early signal is arriving alongside increased activity — pay attention before the first indicator gets lost in the noise",
+      "This pairing says something new is beginning to show in the animal's behaviour; it is worth noticing before it either intensifies or passes",
+    ],
+    "23-25": [
+      "This pairing says accumulated low-level stress and an outdated routine are compounding — simplify before the two problems become harder to separate",
+      "This pairing says what is draining the animal and what is merely habitual have become the same thing and both need changing",
+    ],
+    "14-23": [
+      "This pairing says careful watching and accumulated strain are in the same frame — the caution is appropriate, but so is the simplification",
+      "This pairing says the animal needs both closer attention and less accumulated stress, and neither will work without the other",
+    ],
+    "20-29": [
+      "This pairing says the wider environment and your care choices are the same problem right now — your positioning shapes what the animal absorbs",
+      "This pairing says what happens around the animal is as important as what happens with it; the surrounding input needs managing",
+    ],
+    "29-35": [
+      "This pairing says the care pattern that holds under sustained pressure is the one worth keeping — what works consistently matters more than what looks good briefly",
+      "This pairing says the animal tests what is actually reliable, so the routines and boundaries that hold through difficulty are the ones to back",
+    ],
+    "9-31": [
+      "This pairing says visible comfort and a positive sign of improvement are pointing in the same direction — the care approach is working and the signal is trustworthy",
+      "This pairing says what is showing as recovery or ease in the animal is real, not just temporary; it is worth trusting",
     ],
   },
   community: {
@@ -4847,6 +4923,18 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-31": [
       "This pairing says the path becomes clearer when it is lived visibly enough to test whether the progress is real",
+    ],
+    "3-29": [
+      "This pairing says your calling is entering a more active phase — what you bring forward now has more traction than it would in a quieter period",
+    ],
+    "9-29": [
+      "This pairing says the path is producing visible warmth or forward movement — trust what is responding rather than second-guessing the whole direction",
+    ],
+    "22-29": [
+      "This pairing says the path changes once you make a genuine commitment rather than staying suspended between options",
+    ],
+    "5-29": [
+      "This pairing says the calling asks for sustained patience — the work is real but the timeline is slower than ambition would prefer",
     ],
   },
   work: {

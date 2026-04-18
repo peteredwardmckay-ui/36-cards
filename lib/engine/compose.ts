@@ -1211,6 +1211,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
             "Read together, the diagonals show the underlying direction of travel, while the off-angle links show where smaller factors can interrupt, accelerate, or redirect that direction. Taken together, this is the slower line of development rather than the headline turn of events.",
             "The diagonals trace the longer arc of the story, and the knight connections show where indirect forces can alter the pace or redirect the outcome.",
             "What the diagonals and knight links reveal together is the quieter machinery behind the visible events — the deeper timeline and the sideways influences that shape it.",
+            "Together, the diagonals carry the background timeline while the knight links show where sideways pressure enters the story from unexpected angles.",
+            "The diagonal thread is the slow current, and the knight connections are the points where it is interrupted, redirected, or quietly reinforced.",
           ],
           random,
         )}`
@@ -1227,6 +1229,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
             "Read together, the diagonals are doing the longer-range work here, showing what gathers by stages rather than arriving all at once. Taken together, this is the slower line of development, and it shows what needs time to assemble before the full picture can be read clearly.",
             "The diagonal thread describes the quieter timeline — what builds gradually rather than announcing itself. This is the part of the reading that rewards patience.",
             "What the diagonals reveal is the slower current beneath the surface. These are not headline events but the conditions that are quietly assembling before the next visible shift.",
+            "The diagonal arc is the long game — what is accumulating underneath the immediate picture and will become decisive once enough time has passed.",
+            "Taken together, the diagonal connections describe what is not yet visible but already in motion — the quiet thread that will eventually define the outcome.",
           ],
           random,
         )}`;
@@ -1258,6 +1262,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it.",
           "The near cards carry the immediate urgency, and the medium ring shows what is assembling just outside the current frame.",
           "What is closest demands attention first, but the next ring out is already shaping the conditions those decisions will land in.",
+          "Near and medium cards are not the same story — the first layer is already active, while the second is still forming its shape.",
+          "That distinction is important: the near field names what requires a response now, and the medium field names what is becoming the next thing to manage.",
         ],
         random,
       )
@@ -1266,6 +1272,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
           "That split matters because the near field describes what is already pressing for attention, even if the outer layer has not clarified itself yet.",
           "The immediate cards carry the clearest signal; what lies further out has not yet gathered enough weight to read with confidence.",
           "The nearest cards speak most clearly — the outer field is still forming, so the timing picture concentrates around what is closest.",
+          "When the medium field is sparse, the near cards carry more weight than usual — they are doing most of the timing work here.",
+          "The near field is readable and pressing; the outer layer has not yet solidified, so this reading works most confidently from what is closest.",
         ],
         random,
       )}`;
