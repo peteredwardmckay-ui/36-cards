@@ -252,7 +252,16 @@ function buildDiagonalMovementSentence(
 
   if (!startThread || !endThread) return "";
   if (startThread === endThread) {
-    return sentence(`Read as a sequence, that line keeps circling ${startThread}`);
+    return sentence(
+      choose(
+        [
+          `Read as a sequence, that line keeps circling ${startThread}`,
+          `Taken as a whole, that line returns repeatedly to ${startThread}`,
+          `Corner to corner, the arc stays with ${startThread} — the same thread running throughout`,
+        ],
+        random,
+      ),
+    );
   }
 
   return sentence(
@@ -1146,6 +1155,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               "your own financial choices are setting the pace more than first appearances suggest",
               "the reading keeps returning to what you can actually change, pause, or commit to in the money picture",
               "your own position in the finances matters because your decisions are shaping more of the outcome than the surrounding noise",
+              "your financial stance is the variable that keeps surfacing — what you spend, hold back, or renegotiate shapes the next stage",
+              "the money situation is responding to your positioning more than to external conditions right now",
             ],
             random,
           )
@@ -1155,6 +1166,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your role in the household matters because your boundaries are shaping what home can actually sustain",
                 "the reading keeps returning to what you are carrying, permitting, or postponing at home",
                 "your own place in the household matters because the family field is taking its cues from what you keep holding or allowing",
+                "the domestic rhythm is responding to your tolerance levels — what you absorb, redirect, or refuse to carry keeps setting the pace",
+                "your position in the home is the thread that keeps pulling — what you protect, allow, or renegotiate shapes what the household can become",
               ],
               random,
             )
@@ -1164,6 +1177,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your stance toward the path matters because the next phase depends on what is truly chosen rather than merely inherited",
                 "the reading keeps returning to what still feels like your path once ambition, fear, and habit are stripped back",
                 "your own position in calling matters because alignment changes when you stop living by momentum alone",
+                "your relationship with purpose is the thread the reading keeps surfacing — what you commit to defines the shape of the next phase",
+                "the calling question responds to your positioning more than to circumstances right now, and the cards keep pointing back to genuine choice",
               ],
               random,
             )
@@ -1173,6 +1188,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your own position matters because the wider situation is reacting to what you keep allowing, clarifying, or postponing",
                 "the reading keeps returning to what your stance is reinforcing in the wider picture, even before everything is explicit",
                 "your role in the wider situation matters more than first appearances suggest, because the field is responding to how you are positioned inside it",
+                "the situation is shaped by your choices more than it first appears — what you hold firm on, defer, or quietly allow keeps setting the rhythm",
+                "your positioning is the variable the cards keep returning to, and the wider field adjusts each time you shift",
               ],
               random,
             )
@@ -1182,6 +1199,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your own stance matters because the inner process is taking its cue from what you keep allowing, protecting, or postponing",
                 "the reading keeps returning to how your boundaries and self-definition are shaping the pace of change",
                 "your role in your own growth matters because what you reinforce now becomes the next pattern",
+                "the growth process is tracking your positioning — what you lean into, what you resist, and what you outgrow keeps shaping what comes next",
+                "your relationship with change is the thread the cards keep surfacing, and the next phase depends on what you genuinely accept rather than tolerate",
               ],
               random,
             )
@@ -1191,6 +1210,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your creative process matters because the work is taking its cue from what you are willing to shape, protect, revise, or release",
                 "the reading keeps returning to how your own creative stance is setting the pace of the work",
                 "your role in the creative process matters because what you reinforce now becomes the next shape the work can take",
+                "the work responds to your creative positioning — what you commit to, revise, or leave unfinished keeps defining what the project can become",
+                "your relationship with the material is the variable that keeps surfacing, and the next stage depends on what you are willing to push through or abandon",
               ],
               random,
             )
@@ -1200,6 +1221,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your learning path matters because the next result depends on what you can actually prepare, clarify, or submit",
                 "the reading keeps returning to what your study effort is reinforcing in the path itself, even before everything is fully settled",
                 "your position in education matters because the next step depends on what you can realistically sustain, not just what you hope to complete",
+                "the academic situation is responding to your effort pattern — what you prioritize, defer, or abandon keeps shaping what results arrive",
+                "your approach to the work matters more than the material itself right now, and the cards keep returning to consistency over intensity",
               ],
               random,
             )
@@ -1209,6 +1232,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your travel situation matters because timing, documents, and what you keep confirming or postponing are shaping the route",
                 "the reading keeps returning to what you can actually verify, resequence, or decide cleanly before movement begins",
                 "your position in the journey matters because the next leg depends on what is actually confirmed, not just imagined",
+                "the trip responds to your preparation — what you lock in, leave open, or keep flexible shapes whether the journey runs smoothly or sideways",
+                "your readiness is the thread the cards keep surfacing, and the route changes depending on what you finalize before departure",
               ],
               random,
             )
@@ -1218,6 +1243,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your wellbeing matters because the body is taking its cue from what you keep pushing, ignoring, or allowing",
                 "the reading keeps returning to what helps your system settle, repair, or stop overcompensating",
                 "your position in health matters because pacing, rest, and what you keep asking of yourself are shaping the outcome",
+                "the health picture responds to your rhythm — what you sustain, what you interrupt, and what you refuse to accommodate keeps setting the body's pace",
+                "your relationship with pacing is the thread the cards keep surfacing, and the next improvement depends on what you actually allow yourself",
               ],
               random,
             )
@@ -1227,6 +1254,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your side of the matter matters because the process is responding to what you can actually evidence, clarify, or submit",
                 "the reading keeps returning to what your side can prove, document, or carry through the process",
                 "your position here matters because the next stage depends on what you can substantiate, not just what you suspect",
+                "the process is tracking what you can actually demonstrate — what is documented, filed, or formally communicated shapes the next decision point",
+                "your preparedness is the variable the cards keep returning to, and the outcome shifts depending on how cleanly you can present your position",
               ],
               random,
             )
@@ -1236,6 +1265,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your role at work matters because your choices are shaping more of the outcome than the surrounding noise suggests",
                 "the reading keeps returning to what you are owning, permitting, or postponing in the work itself",
                 "your professional position matters because the field is taking its cues from what you keep carrying or allowing",
+                "the work situation responds to your positioning — what you take on, delegate, or quietly absorb keeps setting the professional rhythm",
+                "your stance at work is the variable the cards keep returning to, and the next shift depends on what you make visible or keep holding alone",
               ],
               random,
             )
@@ -1245,6 +1276,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your care choices matter because the animal is responding to what you reinforce, soften, or keep consistent",
                 "the reading keeps returning to the tone, routine, and handling the animal is actually living inside",
                 "your role in the care rhythm matters because the animal keeps taking cues from what you make steady, noisy, or hard to read",
+                "the animal's behaviour tracks your consistency — what you repeat, change suddenly, or leave ambiguous shapes how the creature settles",
+                "your approach to the care routine is the thread the cards keep surfacing, and the animal responds to what you make predictable or erratic",
               ],
               random,
             )
@@ -1254,6 +1287,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your spiritual stance matters because the path is taking cues from what you trust, question, or keep postponing",
                 "the reading keeps returning to what your discernment is allowing, filtering, or prematurely closing down",
                 "your role in the path matters because your boundaries and receptivity are shaping how guidance can actually land",
+                "the spiritual picture responds to your openness — what you sit with, what you rush past, and what you keep testing shapes how the path can deepen",
+                "your relationship with practice is the thread the cards keep returning to, and the next shift depends on what you genuinely receive rather than merely seek",
               ],
               random,
             )
@@ -1263,6 +1298,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your social position matters because the tone of the group is taking cues from what you permit, clarify, or step back from",
                 "the reading keeps returning to the part your boundaries, availability, and visible participation are playing in the social field",
                 "your role in the social dynamic matters because the group keeps responding to what you make easy, difficult, or unmistakable",
+                "the social field is tracking your availability — what you show up for, what you quietly withdraw from, and what you make non-negotiable shapes the dynamic",
+                "your presence in the group is the variable the cards keep surfacing, and the friendships shift depending on what you make consistent or intermittent",
               ],
               random,
             )
@@ -1272,6 +1309,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "your place in the wider field matters because the group is taking cues from what you participate in, decline, or clarify",
                 "the reading keeps returning to how your boundaries, availability, and style of participation are shaping the wider field",
                 "your role in the wider group matters because the field keeps responding to what you make easier, harder, or unmistakable",
+                "the community picture responds to your engagement — what you contribute, what you withhold, and what you refuse to tolerate shapes how the collective moves",
+                "your participation is the thread the cards keep returning to, and the group dynamic shifts depending on what you make visible or keep to yourself",
               ],
               random,
             )
@@ -1280,6 +1319,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               "your own stance is setting the tone more than first appearances suggest",
               "your role in the bond matters — your boundaries and availability are shaping the pace",
               "the reading keeps returning to what your own position is inviting, allowing, or postponing",
+              "the relationship responds to your positioning — what you offer, withhold, or leave unspoken keeps shaping what the bond can hold",
+              "your presence in the dynamic is the variable the cards keep returning to, and the next shift depends on what you make clear or keep ambiguous",
             ],
             random,
           )
@@ -1289,6 +1330,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               "the other person's position matters because part of this story sits outside your direct control",
               "the reading keeps returning to what the other person is willing to reveal, offer, or avoid",
               "their stance is shaping the field in ways you can feel even before everything is explicit",
+              "the other person's choices are the variable the cards keep surfacing — what they hold back, offer, or refuse to clarify shapes more than you might expect",
+              "their positioning matters because the dynamic between you is responding to what they keep signaling, even when those signals are ambiguous",
             ],
             random,
           )
@@ -1364,6 +1407,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
         `Across the center row, ${rowCardList} show that pacing matters more than force`,
         `The horizontal line through ${rowCardList} describes the sequence of events — what is immediate and what follows`,
         `Reading across the row, ${rowCardList} reveal how one decision flows into the next`,
+        `The row through ${rowCardList} carries the active timeline — what is already moving and what is about to`,
+        `${rowCardList} across the center row describe the practical sequence unfolding around your position`,
       ],
       random,
     ),
@@ -1374,6 +1419,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
         `The vertical line through ${colCardList} adds a quieter timing signal, where outcomes settle after the visible turning point`,
         `Down the column, ${colCardList} show what is developing beneath the surface — slower to arrive but harder to reverse`,
         `The vertical axis through ${colCardList} carries the deeper timeline, where what matures quietly eventually becomes decisive`,
+        `${colCardList} along the vertical axis describe the slower layer — what is building under the main sequence`,
+        `The column through ${colCardList} carries what is not yet visible but already in motion beneath the surface`,
       ],
       random,
     ),
@@ -1385,6 +1432,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `Across the same row, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} show how immediate choices ripple into social or practical consequences`,
             `On the horizontal, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} describe what is actively in play alongside your central position`,
             `The row neighbors ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} show the immediate landscape of choices and pressures`,
+            `${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} flank the central card on the horizontal and carry the most immediately active pressures`,
+            `Reading outward along the row, ${formatCardList(rowNeighbors.map((p) => p.cardId), 5)} define the practical context that surrounds the central card`,
           ],
           random,
         ),
@@ -1397,6 +1446,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `On the vertical axis, ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} describe what is already maturing beneath the surface`,
             `Above and below, ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} carry the slower influences that are building toward visibility`,
             `The column neighbors ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} reveal what is rising or settling around the central question`,
+            `${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} sit above and below on the vertical axis, tracking the slower layer that accumulates around the main event`,
+            `The vertical neighbors ${formatCardList(columnNeighbors.map((p) => p.cardId), 3)} carry the undercurrent — what is not yet at the surface but already shaping direction`,
           ],
           random,
         ),
@@ -1416,6 +1467,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                   `Your question "${normalizedQuestion}" enters a field ${themeLensPhrase}`,
                   `"${normalizedQuestion}" lands in a field ${themeLensPhrase}`,
                   `Your question "${normalizedQuestion}" is read through a field ${themeLensPhrase}`,
+                  `The question "${normalizedQuestion}" meets a tableau ${themeLensPhrase}`,
+                  `Your question "${normalizedQuestion}" opens into a field ${themeLensPhrase}`,
                 ],
                 random,
               ),
@@ -1477,7 +1530,16 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           : `${nearLead}, the field is sparse, so weight falls on only a few immediate influences`,
       )} ${
         diagonalNeighbors.length
-          ? sentence(`The diagonal neighbors — ${formatCardList(diagonalNeighbors, 4)} — add nuance to what looks simple at first glance`)
+          ? sentence(
+              choose(
+                [
+                  `The diagonal neighbors — ${formatCardList(diagonalNeighbors, 4)} — add nuance to what looks simple at first glance`,
+                  `${formatCardList(diagonalNeighbors, 4)} sit diagonally and carry the subtler pressures that don't announce themselves immediately`,
+                  `At the diagonal corners, ${formatCardList(diagonalNeighbors, 4)} describe the undercurrent beneath the more visible influences`,
+                ],
+                random,
+              ),
+            )
           : ""
       } ${proximityText ? buildProximityInterpretationSentence(proximityText) : ""} ${
         cardinalPair
@@ -1525,6 +1587,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `${displayHouseName(significatorHouse.name)} sets the center tone of the spread`,
             `The house beneath the significator matters because it keeps the reading returning to ${displayHouseName(significatorHouse.name)}`,
             `${displayHouseName(significatorHouse.name)} is one of the clearest interpretive anchors in the tableau`,
+            `The significator lands in ${displayHouseName(significatorHouse.name)}, which shapes how every surrounding card is weighted`,
+            `${displayHouseName(significatorHouse.name)} beneath the central card is the most important house position in this reading`,
           ],
           random,
         ),
@@ -1534,6 +1598,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
             `That framing sets the context for the overlay entries that follow`,
             `That context carries into how each card interprets its house`,
             `That same framing runs through the houses that follow`,
+            `That central house sets the interpretive lens for everything below`,
+            `Each overlay entry that follows is read against that same backdrop`,
           ],
           random,
         ),
@@ -1566,6 +1632,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               `${cardRef(placement.cardId)} in ${houseName} keeps ${houseOverlay} close to the center story`,
               `${houseName} becomes important here because ${cardRef(placement.cardId)} keeps pulling it into view`,
               `${cardRef(placement.cardId)} makes ${houseName} one of the clearer side themes around the center`,
+              `In ${houseName}, ${cardRef(placement.cardId)} brings ${houseOverlay} into direct contact with the central reading`,
+              `${houseName} carries ${houseOverlay}, and ${cardRef(placement.cardId)} makes sure it stays in view`,
             ],
             random,
           ),
@@ -1775,6 +1843,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           `At the edge of the tableau, the cartouche line carries ${formatCardList(cartoucheCardIds, 4)}, reading like the final movement after the main field resolves`,
           `The cartouche closes with ${formatCardList(cartoucheCardIds, 4)}, and this line feels like what remains once immediate pressure softens`,
           `As a fate line, ${formatCardList(cartoucheCardIds, 4)} describe how the story settles after the center has done its work`,
+          `Below the main grid, ${formatCardList(cartoucheCardIds, 4)} carry the final layer — what settles once the active field has played out`,
+          `The cartouche line, ${formatCardList(cartoucheCardIds, 4)}, reads as the residual story after the tableau's central decisions have been made`,
         ],
         random,
       ),
@@ -1798,6 +1868,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           `With ${cardRef(significatorPlacement.cardId)} still holding the center, this final line shows what crystallizes after repeated choices`,
           `Read alongside ${cardRef(significatorPlacement.cardId)}, the cartouche points to what is likely to endure once timing has played out`,
           `${cardRef(significatorPlacement.cardId)} anchors the reading, and this closing line shows what becomes available once its lesson is followed through`,
+          `The cartouche answers the question that ${cardRef(significatorPlacement.cardId)} raises — what stays once the pressures of the main field have passed`,
+          `Returning to ${cardRef(significatorPlacement.cardId)} at center, this line describes the shape of the outcome when the active choices have been made`,
         ],
         random,
       ),
