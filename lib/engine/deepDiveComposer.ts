@@ -619,6 +619,78 @@ function buildClusterLinkSentence(
           random,
         ),
       );
+    case "general_reading":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps the main themes tightly linked — none of the pressures here can be resolved independently",
+            "In this nearest ring, the practical and the personal keep feeding into each other",
+            "At this range, circumstances and choices are entangled — what is happening and what you do about it are the same question",
+            "The cards closest to the center keep the central tension close and active; nothing here sits in isolation",
+          ],
+          random,
+        ),
+      );
+    case "love":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps emotional dynamics and practical choices tightly bound — they cannot be resolved separately",
+            "In this nearest ring, feeling and action keep feeding into each other in ways that are hard to separate",
+            "At this range, what is felt between you and what is actually said or done stay entangled",
+            "The cards nearest the center keep the relationship's central tension close; emotion and practical decision-making press on the same point",
+          ],
+          random,
+        ),
+      );
+    case "health":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps physical signals and daily choices tightly linked — what the body is doing and what you are asking of it stay entangled",
+            "In this nearest ring, pacing, routine, and what the system actually needs all press on the same question",
+            "At this range, symptoms and habits feed into each other; what is happening physically and what is being done about it are the same conversation",
+            "The cards nearest the center keep the health question close and practical — recovery and daily routine cannot be separated here",
+          ],
+          random,
+        ),
+      );
+    case "home_family":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps domestic pressure and practical choices tightly linked — what home needs and what is being given stay entangled",
+            "In this nearest ring, the emotional tone of the household and the practical demands of daily life press on the same point",
+            "At this range, family dynamics and concrete decisions feed into each other — neither moves without the other",
+            "The cards nearest the center keep the household's central tension active; emotional and practical concerns are the same concern here",
+          ],
+          random,
+        ),
+      );
+    case "personal_growth":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps inner change and outer choices tightly linked — what is shifting inside and what needs to shift in practice are the same question",
+            "In this nearest ring, self-awareness and behavioural change keep feeding into each other",
+            "At this range, what you are growing toward and what that actually requires day to day stay entangled",
+            "The cards nearest the center keep the growth question close — insight and action press on the same point here",
+          ],
+          random,
+        ),
+      );
+    case "spiritual":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps spiritual inquiry and lived practice tightly linked — what is being sought and how it is actually being met stay entangled",
+            "In this nearest ring, inner sensing and outer alignment keep feeding into each other in ways that resist clean separation",
+            "At this range, discernment and practice press on the same point — what is felt and what is acted on are one question",
+            "The cards nearest the center keep the spiritual question active; trust, doubt, and daily discipline all converge here",
+          ],
+          random,
+        ),
+      );
     default:
       return sentence(
         choose(

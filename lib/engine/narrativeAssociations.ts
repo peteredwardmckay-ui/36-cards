@@ -3503,6 +3503,45 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-31": [
       "your care for the animal being guided by clearer signs of comfort or improvement, so confidence follows what the animal is actually showing",
     ],
+    "1-29": [
+      "your care receiving an early signal, a first indicator, or a gentle opening that tells you what the animal is responding to",
+    ],
+    "4-29": [
+      "your care decisions sitting inside the home base and daily structure the animal is actually depending on",
+    ],
+    "5-29": [
+      "your care being shaped by the steadier rhythm the animal needs, where patience and consistency matter more than quick fixes",
+    ],
+    "8-29": [
+      "your care entering a rest phase, a quiet interval, or a natural pause the animal needs to be allowed to move through",
+    ],
+    "11-29": [
+      "your care getting caught in a loop where the same friction keeps returning until one part of the routine changes",
+    ],
+    "3-29": [
+      "your care moving into a more active phase where what the animal needs becomes more visible and demands a quicker response",
+    ],
+    "17-29": [
+      "your care requiring change — a shift in routine, environment, or approach — before the animal can settle into the next phase",
+    ],
+    "23-29": [
+      "your care being worn down by small repeated stresses that accumulate into something harder to manage if nothing is simplified",
+    ],
+    "35-29": [
+      "your care choices being tested by what can actually hold over time, so what works under pressure matters more than what works in ideal conditions",
+    ],
+    "9-29": [
+      "your care producing a visible sign of comfort, confidence, or recovery that shows the current approach is working",
+    ],
+    "14-29": [
+      "your care involving careful observation, caution, or watchfulness — the animal is signaling something that deserves more attention than it has received",
+    ],
+    "20-29": [
+      "your care being shaped by the wider environment and outside input the animal cannot filter on its own",
+    ],
+    "34-29": [
+      "your care staying reciprocal — the animal is responding clearly to what you give it, and that feedback is the most useful guide right now",
+    ],
   },
   legal_admin: {
     "8-26": [
@@ -4152,6 +4191,36 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "27-29": [
       "This pairing says the wider field becomes easier to read once your position, terms, or expectations are stated plainly",
+    ],
+    "3-29": [
+      "This pairing says your engagement with the wider group is entering a more active phase, and what you bring into the community at this moment sets the tone for what returns",
+    ],
+    "1-29": [
+      "This pairing says a first signal or early indicator is arriving from the wider field — notice it before it becomes part of the background noise",
+    ],
+    "29-35": [
+      "This pairing says your place in the community is being tested by what can actually hold under sustained pressure — consistency matters more than gestures",
+    ],
+    "9-29": [
+      "This pairing says your participation in the wider field is producing something visible and positive — there is real momentum available if you keep showing up",
+    ],
+    "21-29": [
+      "This pairing says the wider field has a blockage that is worth working around patiently rather than forcing — timing and sequence matter here more than effort",
+    ],
+    "14-29": [
+      "This pairing says something in the wider field needs closer attention before it becomes a larger problem — careful watching now prevents a harder situation later",
+    ],
+    "34-29": [
+      "This pairing says what circulates through the wider group — information, support, exchange — is carrying your community question more than formal structures are",
+    ],
+    "17-29": [
+      "This pairing says something in how you engage with the wider field needs to change — the old approach is not returning what it once did",
+    ],
+    "29-31": [
+      "This pairing says clearer signals of positive traction in the wider field are available to trust — what is actually working deserves more weight than worry about what might not",
+    ],
+    "4-29": [
+      "This pairing says your rootedness, your home base, or your stable foundation is what makes sustained participation in the wider field possible — do not let that get hollowed out",
     ],
   },
   friends_social: {
