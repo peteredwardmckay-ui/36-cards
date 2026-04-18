@@ -3422,6 +3422,72 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "21-29": [
       "your social world running into a block — participation or connection is being limited by something that is better worked around than forced through",
     ],
+    "6-29": [
+      "your social position moving through confusion or unclear signals, so waiting for the fog to settle matters more than reacting to the current read",
+    ],
+    "7-29": [
+      "your social position being complicated by competing loyalties, mixed signals, or subtext that is shaping the dynamic without being named",
+    ],
+    "8-29": [
+      "your social position going through a closing or release, so letting what is genuinely over end cleanly matters more than preserving the form",
+    ],
+    "10-29": [
+      "your social position requiring a clear, honest decision — the comfortable ambiguity in the dynamic has become more costly than the honesty would be",
+    ],
+    "12-29": [
+      "your social position being shaped by anxious chatter, nervous interpretation, or overworked communication that is adding noise rather than clarity",
+    ],
+    "13-29": [
+      "your social world offering a genuine fresh start — a new connection or renewed dynamic that benefits from open, unhurried attention",
+    ],
+    "14-29": [
+      "your social position being shaped by self-protective strategy — check whether the caution is serving the connection or replacing it",
+    ],
+    "15-29": [
+      "your social position being influenced by a stronger or more authoritative presence — notice whether the power dynamic is balanced",
+    ],
+    "16-29": [
+      "the longer social signal starting to clarify around your own position — what the wider pattern suggests matters more than today's mood",
+    ],
+    "18-29": [
+      "loyal, steady presence shaping your social position — faithfulness in the dynamic is what holds the connection more than excitement or gesture",
+    ],
+    "19-29": [
+      "your social position taking on more reserve or distance — notice whether the withdrawal is protective or becoming the substitute for honest engagement",
+    ],
+    "20-29": [
+      "your place in a wider social or community field shaping your more personal connections — the group context is influencing the individual dynamic",
+    ],
+    "22-29": [
+      "a real social choice landing on your own position — the decision about the friendship or dynamic can no longer be deferred without consequence",
+    ],
+    "24-29": [
+      "warmth and genuine care landing on your social position, so what you feel about the connection is more legible than you may be allowing",
+    ],
+    "25-29": [
+      "a commitment, recurring agreement, or repeated social pattern landing on your own position and asking whether it is still being kept consciously",
+    ],
+    "26-29": [
+      "something unspoken or still private shaping your social position — the dynamic is being influenced by what has not yet been said between people",
+    ],
+    "27-29": [
+      "a message, communication, or social exchange landing on your own position and carrying more weight than the surface content alone",
+    ],
+    "29-18": [
+      "your own social position landing in the space of loyalty and faithful connection — who you are in this dynamic reflects what you are prepared to offer consistently",
+    ],
+    "29-31": [
+      "your social position entering a warmer and more encouraging phase — the connection is producing something visible and worth trusting",
+    ],
+    "29-33": [
+      "your own clarity becoming the key that unlocks the social dynamic — the answer is available once your position becomes readable",
+    ],
+    "29-35": [
+      "your social position being tested by endurance and consistency — what holds under sustained attention matters more than what looked good at first",
+    ],
+    "29-36": [
+      "your social position carrying a heavier obligation or burden of loyalty that needs naming rather than silently absorbing",
+    ],
   },
   creative: {
     "9-29": [
@@ -6006,13 +6072,149 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     ],
   },
   friends_social: {
+    1: [
+      "follow up the social invitation or message promptly before the momentum behind it disappears",
+      "notice the social signal that just arrived and meet it rather than filing it away for later",
+    ],
+    2: [
+      "take the easy social moment while the timing is light rather than waiting for something more significant",
+      "let the casual encounter count without needing it to become more than it is",
+    ],
     3: [
       "be clear which connection is actually worth expanding before you keep moving between circles",
       "name where the social dynamic is heading before you widen the field around it",
     ],
+    4: [
+      "notice whether the friendship is sustaining the home environment or quietly draining it",
+      "be clear about which social commitments actually fit the life you are building",
+    ],
+    5: [
+      "invest in the long, steady friendship rather than chasing the more exciting but shallower one",
+      "let the slower, more rooted connection have as much attention as the more energetic ones",
+    ],
+    6: [
+      "name what is genuinely unclear in the friendship or social situation before deciding what to do",
+      "separate social anxiety from real signal before reacting to what the dynamic seems to be saying",
+    ],
+    7: [
+      "read the social dynamic as it actually is rather than as the polite version that everyone is maintaining",
+      "notice what is subtextual in the social field and name it rather than avoiding it",
+    ],
+    8: [
+      "let a friendship or social connection that is genuinely over release cleanly rather than being kept on habit",
+      "allow the social dynamic that is ending to complete without forcing a continuation that neither person is nourishing",
+    ],
+    9: [
+      "express warmth or appreciation to a friend or social connection rather than keeping it private",
+      "let genuine social goodwill flow rather than waiting for a more appropriate moment that never quite arrives",
+    ],
+    10: [
+      "be honest in the friendship even when honesty is harder than accommodation",
+      "make the clear social decision rather than softening it back into ambiguity because discomfort is easier",
+    ],
+    11: [
+      "address the repeated social friction directly rather than absorbing another round of it without response",
+      "name the pattern of conflict in the friendship before it becomes the whole of what the relationship is",
+    ],
+    12: [
+      "slow the anxious social chatter down and say the one thing the friendship actually needs",
+      "separate genuine concern from social nervousness before letting the worry drive the next interaction",
+    ],
+    13: [
+      "approach the new friendship or social connection with enough openness that it can actually develop",
+      "treat what is beginning in the social field with enough care that it is not rushed or taken for granted",
+    ],
+    14: [
+      "check whether the social dynamic is genuinely reciprocal or whether one side is managing the other",
+      "use discernment about whose interests are being served in the friendship rather than assuming alignment",
+    ],
+    15: [
+      "be honest about where authority or dominance is operating in the social field and whether it is balanced",
+      "check whether the power dynamic in the friendship is serving the connection or quietly defining its limits",
+    ],
+    16: [
+      "let the longer view of what matters in the friendship steady the current friction or uncertainty",
+      "trust what has been consistently good about the social connection over time rather than only reading the current moment",
+    ],
+    17: [
+      "allow the friendship or social connection to become what it is becoming rather than holding it to what it was",
+      "support the change in the social dynamic rather than resisting it because the old form was more comfortable",
+    ],
+    18: [
+      "name what loyalty looks like in practice in this friendship rather than assuming it is understood",
+      "show up faithfully for the friend or social connection rather than only when it is convenient",
+    ],
+    19: [
+      "notice whether the distance in the social dynamic is protective or simply habit, and decide which it needs to be",
+      "engage directly with the friendship rather than letting formality or cool distance become the substitute for honesty",
+    ],
+    20: [
+      "be genuinely present in the social setting rather than performing participation from the sidelines",
+      "use the social occasion intentionally rather than letting it pass as casual background",
+    ],
+    21: [
+      "name the actual obstacle in the friendship or social dynamic rather than working around it indefinitely",
+      "treat the difficulty in the social connection as information rather than as evidence the relationship cannot hold",
+    ],
+    22: [
+      "be clear which social connection or direction is actually worth more of your time rather than keeping everything equally open",
+      "make the choice about the friendship or social dynamic that has been getting deferred",
+    ],
+    23: [
+      "address the slow erosion of the friendship — small neglects, uneven contact, drifting trust — before it becomes the whole story",
+      "name what is quietly wearing at the social connection before distance sets in and becomes the new normal",
+    ],
+    24: [
+      "let care and genuine affection be visible in the friendship rather than only implied",
+      "bring warmth and real concern into the social connection rather than keeping everything at a comfortable distance",
+    ],
+    25: [
+      "be clear what you are actually committing to in the friendship rather than implying more than you can sustain",
+      "honour what has been agreed or assumed in the social bond rather than treating it as provisional",
+    ],
+    26: [
+      "decide whether the thing that has not been said between friends needs to be said now or needs to stay private",
+      "notice what is unspoken in the friendship and whether its silence is protecting the connection or quietly distorting it",
+    ],
+    27: [
+      "say the important social thing directly rather than waiting for a better moment that does not arrive",
+      "communicate what the friendship needs clearly rather than hoping it will be inferred",
+    ],
+    28: [
+      "read the specific person in the social dynamic as they actually are rather than as the easier version",
+      "engage directly with the person rather than managing the relationship from a careful distance",
+    ],
+    29: [
+      "notice what your own patterns of social engagement are creating in the friendship before asking the other person to change",
+      "be honest about what you actually want from the social connection rather than what is easier to ask for",
+    ],
+    30: [
+      "bring composure and experience to the social dynamic rather than matching the energy of whatever is most reactive",
+      "let mature, steady friendship speak more than exciting but unreliable connection",
+    ],
+    31: [
+      "trust the social connection that is actually working and invest more there rather than dividing attention evenly",
+      "let the warmth and ease in the friendship count as real data rather than something to be suspicious of",
+    ],
+    32: [
+      "notice what is being felt but not said in the friendship and whether it is shaping the dynamic more than the conversation is",
+      "use emotional intelligence in the social connection rather than only operating at the level of what is explicitly exchanged",
+    ],
+    33: [
+      "identify the specific thing that would actually unlock the friendship dynamic and say it or do it",
+      "trust that the answer to the social or friendship difficulty is more available than anxiety is making it feel",
+    ],
     34: [
       "track reciprocity and back what is actually flowing both ways",
       "pay attention to whether contact, effort, and support are moving cleanly in both directions",
+    ],
+    35: [
+      "commit to the steady social connection rather than being drawn only toward what is more exciting but less reliable",
+      "be the kind of friend who holds rather than the kind who is available only when the mood is right",
+    ],
+    36: [
+      "name what the friendship is actually costing rather than absorbing the weight in silence",
+      "accept the difficult or demanding part of a loyal friendship without letting it become resentment",
     ],
   },
   travel: {
