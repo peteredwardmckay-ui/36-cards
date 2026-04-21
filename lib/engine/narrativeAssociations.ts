@@ -3834,6 +3834,60 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "30-34": [
       "recovery depending on practical support and steadier pacing working together, so the body trusts what is actually being sustained",
     ],
+    "1-29": [
+      "a health signal, first indicator, or early change in symptoms landing on your wellbeing and asking for attention before it becomes part of the background",
+    ],
+    "2-29": [
+      "a brief window of improvement or easier health conditions available now — meet it concretely rather than waiting for a more definitive sign",
+    ],
+    "3-29": [
+      "movement, activity, or a change in physical context shaping your wellbeing — the body is asking to be in motion rather than waiting in place",
+    ],
+    "6-29": [
+      "your wellbeing moving through a phase of unclear signals, ambiguous symptoms, or diagnosis uncertainty that calls for patience more than premature conclusions",
+    ],
+    "7-29": [
+      "your wellbeing being shaped by a complex or hard-to-read health picture — the honest approach is to name the complexity rather than simplify it away",
+    ],
+    "9-29": [
+      "a moment of genuine physical ease, recovery support, or encouraging health signal gathering around your wellbeing — receive it rather than suspecting it",
+    ],
+    "10-29": [
+      "a sharp or decisive health moment — a necessary change, a stopping point, or a medical decision — landing on your wellbeing and asking for clarity rather than delay",
+    ],
+    "11-29": [
+      "a repeating physical pattern, recurring symptom, or cyclical health challenge landing on your position and asking to be addressed at its root rather than managed repeatedly",
+    ],
+    "13-29": [
+      "a genuine fresh start in your health picture — a new approach, a first improvement, or an early-stage recovery — that benefits from patient attention rather than premature expectations",
+    ],
+    "15-29": [
+      "medical expertise, a health authority, or a strong physical resource landing on your wellbeing and deserving honest engagement rather than passive compliance or avoidance",
+    ],
+    "16-29": [
+      "the longer health pattern — the arc of recovery, the chronic condition's direction, or the body's own timing — becoming clearer and deserving more trust than the short-term fluctuation",
+    ],
+    "18-29": [
+      "steady, faithful care or reliable support shaping your wellbeing — what holds consistently matters more than what promises a faster result",
+    ],
+    "19-29": [
+      "medical institutions, formal healthcare systems, or clinical processes shaping your wellbeing — engaging the system directly matters more than working around it",
+    ],
+    "20-29": [
+      "the social or lifestyle context — community, routine environment, or shared habits — shaping your physical wellbeing as much as the clinical picture",
+    ],
+    "21-29": [
+      "a health obstacle, slow recovery, or blocked progress landing on your wellbeing — patience, resequencing, and sustainable pacing matter more than forcing improvement",
+    ],
+    "22-29": [
+      "a genuine health choice landing on your position — the decision about treatment, lifestyle, or direction cannot stay deferred without consequence for recovery",
+    ],
+    "26-29": [
+      "a hidden or not-yet-named factor shaping your wellbeing — what has not yet been diagnosed, acknowledged, or fully examined is influencing the health picture",
+    ],
+    "29-36": [
+      "your wellbeing carrying a heavier or more chronic weight — a condition, limitation, or ongoing health obligation that asks for acceptance alongside management",
+    ],
   },
   pets: {
     "29-31": [
@@ -5442,6 +5496,63 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-35": [
       "This pairing says recovery is being tested by what can actually hold as routine, pacing, and staying power",
+    ],
+    "1-29": [
+      "This pairing says a health signal or first indicator is arriving and deserves attention before it settles into background noise",
+    ],
+    "2-29": [
+      "This pairing says a brief window of improvement or encouraging health conditions is available — meet it concretely rather than waiting for a more definitive sign",
+    ],
+    "3-29": [
+      "This pairing says movement, activity, or a change in physical context is what the body is asking for rather than more waiting in place",
+    ],
+    "4-29": [
+      "This pairing says home routines and domestic stability are shaping the health picture as much as the symptoms themselves",
+    ],
+    "6-29": [
+      "This pairing says your wellbeing is in a phase of unclear signals or ambiguous symptoms — patience and waiting for clearer information matters more than premature conclusions",
+    ],
+    "7-29": [
+      "This pairing says your health picture is more complex than the surface reading suggests — naming the complexity honestly matters more than simplifying it away",
+    ],
+    "9-29": [
+      "This pairing says genuine physical ease, recovery support, or an encouraging health signal is available now — receive it rather than suspecting it",
+    ],
+    "10-29": [
+      "This pairing says a necessary health decision, a stopping point, or a sharp medical change is landing — clarity and promptness matter more than delay",
+    ],
+    "11-29": [
+      "This pairing says a repeating health pattern or recurring symptom needs addressing at its root rather than being managed through another cycle",
+    ],
+    "13-29": [
+      "This pairing says a genuine fresh start in health is forming — a new approach, a first improvement, or an early recovery phase that benefits from patient, unhurried attention",
+    ],
+    "15-29": [
+      "This pairing says medical expertise or a strong health resource is available and deserves honest engagement rather than passive compliance or avoidance",
+    ],
+    "19-29": [
+      "This pairing says formal healthcare systems or clinical processes are shaping the health picture and need to be engaged directly rather than worked around",
+    ],
+    "20-29": [
+      "This pairing says the social or lifestyle context — community, environment, or shared habits — is shaping physical wellbeing as much as the clinical picture",
+    ],
+    "21-29": [
+      "This pairing says a genuine health obstacle or slow recovery is landing — patience, sustainable pacing, and steady resequencing matter more than forcing improvement",
+    ],
+    "22-29": [
+      "This pairing says a real health choice is landing — the decision about treatment, approach, or lifestyle direction cannot stay deferred without consequence",
+    ],
+    "26-29": [
+      "This pairing says a hidden or not-yet-named factor is shaping the health picture — what has not yet been diagnosed or acknowledged is influencing recovery more than what is visible",
+    ],
+    "27-29": [
+      "This pairing says health communication — test results, medical records, or a significant conversation with a practitioner — is shaping the wellbeing picture directly",
+    ],
+    "29-36": [
+      "This pairing says the health picture is carrying a heavier or more chronic weight — a condition or limitation that asks for honest acceptance alongside active management",
+    ],
+    "5-35": [
+      "This pairing says slow, patient recovery and stable long-term health practices are in the same frame — sustainable healing builds on what can actually hold",
     ],
   },
   legal_admin: {
