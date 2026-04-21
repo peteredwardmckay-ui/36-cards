@@ -3718,6 +3718,69 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-35": [
       "the work being tested by what can genuinely hold as practice and sustainable output",
     ],
+    "1-29": [
+      "a commission, invitation, or early creative signal landing on the work — the first signal deserves a real response before the moment passes",
+    ],
+    "2-29": [
+      "a brief creative opening — a window, a receptive audience, or a small lucky chance — available and best met with a light and prompt response",
+    ],
+    "3-29": [
+      "the creative process entering a more active or outward-facing phase, where direction and discipline matter more than raw energy",
+    ],
+    "4-29": [
+      "the home, the studio, or the settled space where the work happens shaping the creative process as much as the inspiration itself",
+    ],
+    "5-26": [
+      "deep practice and hidden craft knowledge meeting — the work deepens when patience and study are given the same respect as talent",
+    ],
+    "5-29": [
+      "the creative process asking for steadier, slower practice — the work that compounds is the work that is returned to consistently",
+    ],
+    "6-29": [
+      "the creative process moving through uncertainty, a foggy phase, or a period where the direction of the work is not yet readable — patience matters more than clarity-forcing",
+    ],
+    "7-29": [
+      "complexity, a difficult subject, or shadow material shaping the creative process — the harder territory is often where the more interesting work lives",
+    ],
+    "8-29": [
+      "the creative process reaching a genuine ending — a project that has to close, a phase of the work that is completing, or an old creative identity that has to release",
+    ],
+    "11-29": [
+      "a repeating creative pattern — the same friction, block, or habit — landing on the work and asking to be interrupted rather than absorbed again",
+    ],
+    "12-29": [
+      "anxious creative chatter, overworked self-criticism, or nervous audience-scanning making the work harder than the actual creative challenge warrants",
+    ],
+    "13-29": [
+      "a genuine new creative beginning — fresh territory, a first project, or a renewed approach — that benefits from openness rather than premature certainty",
+    ],
+    "15-29": [
+      "a significant creative demand, a mentor's expectations, or a weighty standard landing on the work and asking for honest engagement rather than strategic management",
+    ],
+    "18-29": [
+      "loyal, faithful creative practice or a dependable collaborator shaping the work — consistency with the work matters as much as inspiration",
+    ],
+    "19-29": [
+      "creative solitude, formal recognition, or an institutional context shaping the work — the space between the private process and public presentation is active here",
+    ],
+    "22-29": [
+      "a genuine creative crossroads landing on the work — the decision about direction, form, or approach cannot stay deferred without cost to the output",
+    ],
+    "25-29": [
+      "a creative commitment — to a form, a project, or a practice — that gives the work its shape and stakes and needs to be honoured consciously",
+    ],
+    "26-29": [
+      "hidden creative knowledge, unexamined technique, or the part of the craft that has not yet been fully studied landing on the work as the actual next step",
+    ],
+    "27-29": [
+      "artistic communication, publication, or the moment the work needs to be shared, submitted, or described in plain language shaping the creative position",
+    ],
+    "29-34": [
+      "the creative process being shaped by financial flow, practical resources, or the question of whether the work can also sustain the life around it",
+    ],
+    "29-36": [
+      "the creative work carrying a heavier calling or obligation — work that asks more than comfort, that has a weight beyond the output itself",
+    ],
   },
   health: {
     "14-29": [
@@ -5266,6 +5329,69 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-35": [
       "This pairing says the work is being tested by what can genuinely hold as practice and sustainable output",
+    ],
+    "1-29": [
+      "This pairing says a commission, invitation, or creative opportunity is arriving and deserves a real response before the moment moves on",
+    ],
+    "2-29": [
+      "This pairing says a brief creative opening — a receptive window, a small lucky chance — is available and rewards acting on it lightly rather than overplanning",
+    ],
+    "3-29": [
+      "This pairing says the creative process is entering a more active or outward phase, where direction and sustained effort matter more than raw inspiration alone",
+    ],
+    "4-29": [
+      "This pairing says the home, the studio, or the settled space of the work is shaping the creative process as much as the inspiration itself — protect the container",
+    ],
+    "5-26": [
+      "This pairing says deep practice and hidden craft knowledge are meeting, so the work deepens when patience and study are given the same respect as talent",
+    ],
+    "5-29": [
+      "This pairing says the creative process is asking for steadier, slower practice — the work that compounds is the work that is returned to consistently rather than revisited in bursts",
+    ],
+    "6-29": [
+      "This pairing says the creative work is in a foggy phase where the direction is not yet readable — patience and continuing the practice matters more than forcing clarity",
+    ],
+    "7-29": [
+      "This pairing says complexity, shadow, or a difficult creative subject is shaping the work — the harder territory is often where the more interesting work lives",
+    ],
+    "8-29": [
+      "This pairing says the creative process is reaching a genuine ending — a project that has to close, a phase that is completing, or an old creative identity that needs releasing",
+    ],
+    "11-29": [
+      "This pairing says a repeating creative pattern — the same friction, block, or avoidance — is landing on the work and needs interrupting rather than enduring one more time",
+    ],
+    "12-29": [
+      "This pairing says anxious creative chatter or overworked self-criticism is making the work harder than the actual creative challenge warrants — slow the noise",
+    ],
+    "13-29": [
+      "This pairing says a genuine new creative beginning is forming — fresh territory or a renewed approach that benefits from open expectations rather than premature certainty",
+    ],
+    "15-29": [
+      "This pairing says a significant creative demand, a mentor's standard, or a weighty external expectation is landing on the work and asking for honest engagement rather than management",
+    ],
+    "18-29": [
+      "This pairing says loyal, faithful creative practice or a dependable collaborator is shaping the work — consistency with the process matters as much as inspiration",
+    ],
+    "19-29": [
+      "This pairing says the creative work is being shaped by solitude, formal recognition, or an institutional context — the space between private process and public presentation is active",
+    ],
+    "22-29": [
+      "This pairing says a genuine creative crossroads is landing on the work — the decision about direction, form, or approach cannot stay deferred without cost to the output",
+    ],
+    "25-29": [
+      "This pairing says a creative commitment — to a form, a project, or a practice — is giving the work its shape and stakes, and needs to be honoured consciously",
+    ],
+    "26-29": [
+      "This pairing says hidden creative knowledge, unexamined technique, or craft not yet fully studied is the actual next step rather than more output",
+    ],
+    "27-29": [
+      "This pairing says the moment of sharing, submitting, or describing the work in plain language is where the creative position is being shaped — communication is part of the work",
+    ],
+    "29-34": [
+      "This pairing says the creative process is being shaped by financial flow or practical resources — the question of whether the work can sustain the life around it is live",
+    ],
+    "29-36": [
+      "This pairing says the creative work is carrying a heavier calling or obligation — work that asks more than comfort and has a weight beyond the output itself",
     ],
   },
   health: {
