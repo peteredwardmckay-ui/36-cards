@@ -3513,6 +3513,57 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-35": [
       "your study path being tested by what can actually hold as routine, stamina, and sustained effort",
     ],
+    "1-29": [
+      "news, a notice, or an early academic signal landing on your learning path and asking for a prompt, considered response",
+    ],
+    "3-29": [
+      "the learning path entering a more active or mobile phase — study abroad, a campus change, or a shift in how and where the work is being done",
+    ],
+    "4-29": [
+      "home stability and the academic path being linked around your position — the learning only holds if the personal foundation is secure enough to support it",
+    ],
+    "7-29": [
+      "complexity, competing demands, or institutional politics shaping your learning path and needing honest naming before they set the terms",
+    ],
+    "8-29": [
+      "the learning path reaching a genuine ending — graduation, withdrawal, or a phase that has to close before the next stage can begin",
+    ],
+    "10-29": [
+      "a sharp decision or necessary cut landing on your academic path — honesty about what is and is not working matters more than continuation for its own sake",
+    ],
+    "11-29": [
+      "a repeating academic pattern — the same friction, procrastination, or conflict — landing on the learning path and asking to be interrupted rather than observed again",
+    ],
+    "12-29": [
+      "anxious academic communication or overthought feedback interpretation landing on your position and making the learning path harder than the work itself warrants",
+    ],
+    "14-29": [
+      "strategic self-protection shaping your academic stance more than honest engagement — check whether the caution is serving learning or avoiding it",
+    ],
+    "15-29": [
+      "a teacher, supervisor, or academic authority shaping your learning path in ways that deserve direct engagement rather than managed distance",
+    ],
+    "17-29": [
+      "the academic path changing direction or moving into a new phase that asks for adapting to what is emerging rather than holding the original plan",
+    ],
+    "19-29": [
+      "institutional requirements or academic bureaucracy landing on your position and needing handling before they become blockers",
+    ],
+    "20-29": [
+      "the group study environment, cohort dynamic, or academic community shaping your learning path as much as the content itself",
+    ],
+    "21-29": [
+      "a genuine academic blockage landing on your position — patient resequencing and steadier effort matter more than force",
+    ],
+    "23-29": [
+      "your academic effort being quietly eroded — small avoidances, accumulated delays, or low-level discouragement needing naming before they set the whole pattern",
+    ],
+    "26-29": [
+      "the book, the hidden material, or the knowledge not yet fully engaged landing on your learning path as the actual next step",
+    ],
+    "29-36": [
+      "your academic path carrying a weight or calling that asks for genuine commitment rather than strategic participation",
+    ],
   },
   friends_social: {
     "1-5": [
@@ -5114,6 +5165,60 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-35": [
       "This pairing says the learning path is being tested by what can actually hold as routine, stamina, and sustainable effort",
+    ],
+    "1-29": [
+      "This pairing says news, a notice, or a first academic signal is arriving on your learning path and deserves a prompt, considered response",
+    ],
+    "2-29": [
+      "This pairing says a brief academic opening — a window for application, a narrow deadline, or a small helpful chance — is available and rewards acting on it promptly",
+    ],
+    "3-29": [
+      "This pairing says the learning path is entering a more active, moving phase — study abroad, a campus change, or a shift in where and how the work is being done",
+    ],
+    "4-29": [
+      "This pairing says home stability and the academic path are linked, so the learning only holds if the personal foundation is secure enough to support it",
+    ],
+    "7-29": [
+      "This pairing says complexity, competing demands, or institutional politics are shaping the learning path and need naming before they set the terms",
+    ],
+    "8-29": [
+      "This pairing says the learning path is reaching a genuine ending — graduation, withdrawal, or a phase that has to close before the next stage can begin",
+    ],
+    "10-29": [
+      "This pairing says a sharp decision or necessary cut is landing on the academic path, where honesty about what is and is not working matters more than continuation",
+    ],
+    "11-29": [
+      "This pairing says a repeating academic pattern — the same friction, the same procrastination, the same conflict — is landing on the learning path and needs interrupting",
+    ],
+    "12-29": [
+      "This pairing says anxious academic communication, worried interpretation of feedback, or overthought correspondence is making the learning path harder than it needs to be",
+    ],
+    "14-29": [
+      "This pairing says strategic self-protection is shaping the academic stance more than honest engagement — check whether the caution is serving learning or avoiding it",
+    ],
+    "15-29": [
+      "This pairing says a teacher, supervisor, or academic authority is shaping the learning path in ways that deserve direct engagement rather than avoidance",
+    ],
+    "17-29": [
+      "This pairing says the academic path is changing direction, improving, or moving into a new phase that asks for adapting to what is emerging rather than clinging to the plan",
+    ],
+    "19-29": [
+      "This pairing says institutional requirements, formal processes, or academic bureaucracy are landing on the learning path and need handling rather than ignoring",
+    ],
+    "20-29": [
+      "This pairing says the group study environment, cohort dynamic, or academic community is shaping your learning path as much as the content itself",
+    ],
+    "21-29": [
+      "This pairing says a genuine blockage is landing on the academic path — the obstacle needs patient resequencing rather than force or despair",
+    ],
+    "23-29": [
+      "This pairing says academic effort is being quietly eroded — small avoidances, accumulated delays, or low-level discouragement need naming before they become the whole pattern",
+    ],
+    "26-29": [
+      "This pairing says the book, the hidden knowledge, or the material that has not yet been fully studied is the actual next step on the learning path",
+    ],
+    "29-36": [
+      "This pairing says the academic path is carrying a weight or calling that cannot be made comfortable — it asks for genuine commitment rather than strategic participation",
     ],
   },
   creative: {
