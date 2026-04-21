@@ -3394,6 +3394,69 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-35": [
       "your plans being tested by what can still hold once delay or stress hits",
     ],
+    "2-29": [
+      "a brief, lucky timing window opening around your trip — the slot is real but narrow, so acting promptly matters more than refining the plan",
+    ],
+    "4-29": [
+      "home and journey in tension around your travel situation — the trip depends on whether the home base is secure enough to leave and return to cleanly",
+    ],
+    "5-29": [
+      "the journey asking for slower pacing and patience — the experience compounds when it is allowed to develop rather than rushed through",
+    ],
+    "7-29": [
+      "complexity or a harder-to-read logistical situation shaping your travel plans — what is actually circulating matters more than the surface-level route",
+    ],
+    "8-29": [
+      "the journey arriving at its natural completion — a trip that is ending, a chapter of travel that is closing, or an arrival that marks a genuine passage",
+    ],
+    "11-29": [
+      "friction or a repeating logistical problem landing on your travel situation and asking for direct address rather than repeated accommodation",
+    ],
+    "12-29": [
+      "anxious over-planning or communication overload making the trip harder than it needs to be — simplify the information and follow the confirmed facts",
+    ],
+    "13-29": [
+      "a new adventure or first journey taking shape around your travel situation — open expectations serve the experience better than heavy planning",
+    ],
+    "14-29": [
+      "strategic caution warranted around your travel plans — check routes, costs, and logistics carefully before committing to the first available option",
+    ],
+    "15-29": [
+      "significant cost, weight, or logistics effort landing on your travel situation and asking for careful planning before the commitment is made",
+    ],
+    "16-29": [
+      "the longer timing pattern for the journey becoming clearer around your situation — the route that works aligns with the bigger picture rather than the immediate impulse",
+    ],
+    "18-29": [
+      "a companion, travel partner, or reliable helper shaping the journey around your position in ways that matter as much as the logistics do",
+    ],
+    "19-29": [
+      "formal requirements — documentation, customs, or institutional processes — becoming part of your travel picture and needing attention before they block progress",
+    ],
+    "23-29": [
+      "your travel plans being quietly worn down by delays, small losses, or accumulated problems that need naming before they define the whole trip",
+    ],
+    "24-29": [
+      "the journey carrying genuine emotional significance for your position — a meaningful return, a visit to someone important, or travel that marks a personal milestone",
+    ],
+    "25-29": [
+      "your travel situation being tied to a commitment, return promise, or agreement — the trip has a shape and a stake beyond the logistics",
+    ],
+    "29-31": [
+      "your travel situation moving toward a clear, successful outcome — the route followed through is producing something genuinely positive",
+    ],
+    "29-36": [
+      "your travel situation carrying a weight or obligation — a duty trip, a difficult return, or a journey that is necessary rather than freely chosen",
+    ],
+    "3-1": [
+      "news or an early signal arriving specifically about the journey — a departure update, route confirmation, or first notice that sets the travel picture in motion",
+    ],
+    "3-35": [
+      "the journey finding an anchor — a destination that holds, a trip that leads to something stable, or an arrival that becomes more than passing through",
+    ],
+    "3-36": [
+      "the journey carrying obligation or burden — travel undertaken from duty rather than desire, or a route that asks more than it appeared to at the outset",
+    ],
   },
   education: {
     "1-2": [
@@ -4938,6 +5001,66 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-35": [
       "This pairing says the trip is being tested by what can still hold once delay or stress actually lands",
+    ],
+    "2-29": [
+      "This pairing says a brief timing window is available for the trip, so acting on the narrow opening promptly matters more than planning it perfectly",
+    ],
+    "4-29": [
+      "This pairing says home and journey are in tension, so the trip depends on whether the home base is stable enough to leave and return to",
+    ],
+    "5-29": [
+      "This pairing says the journey calls for patience, slower pacing, and time to let the experience root rather than rushing through every stage",
+    ],
+    "7-29": [
+      "This pairing says complexity, competing logistics, or an undercurrent of complication is shaping the trip, so reading what is actually circulating matters",
+    ],
+    "8-29": [
+      "This pairing says the journey is completing, arriving at its natural end, or marking a genuine passage — let it close rather than extending it past its purpose",
+    ],
+    "11-29": [
+      "This pairing says friction, conflict, or a repeating logistical problem is landing on the travel plans and needs addressing rather than absorbing",
+    ],
+    "12-29": [
+      "This pairing says anxious travel planning or over-communication about the route is making the trip harder than it needs to be — simplify the information",
+    ],
+    "13-29": [
+      "This pairing says the journey is a genuine fresh start, new adventure, or first experience — the early stage benefits from open expectations rather than heavy planning",
+    ],
+    "14-29": [
+      "This pairing says the travel situation calls for strategic awareness — check routes, costs, and logistics carefully rather than trusting the first available option",
+    ],
+    "15-29": [
+      "This pairing says the trip involves significant weight, cost, or logistics that deserve careful planning before commitment",
+    ],
+    "18-29": [
+      "This pairing says a companion, travel partner, or reliable helper is shaping the trip in ways that matter more than the logistics do",
+    ],
+    "19-29": [
+      "This pairing says formal requirements — visas, documentation, customs, or institutional processes — are part of the travel picture and need to be handled before they become blockers",
+    ],
+    "23-29": [
+      "This pairing says travel plans are being quietly worn down by delays, small losses, or accumulated problems that need naming before they compound further",
+    ],
+    "24-29": [
+      "This pairing says the journey carries genuine emotional significance — visiting someone important, returning somewhere meaningful, or marking a personal milestone",
+    ],
+    "25-29": [
+      "This pairing says the trip is tied to a commitment, return promise, or agreement that gives the journey its shape and stakes",
+    ],
+    "29-31": [
+      "This pairing says the travel outcome is moving toward a positive, clear, and successful resolution once the route is followed through",
+    ],
+    "29-36": [
+      "This pairing says the journey carries a weight or obligation — a duty trip, a difficult return, or travel that is necessary rather than chosen",
+    ],
+    "3-1": [
+      "news or a first signal arriving specifically about the journey — a departure update, route change, or early confirmation that matters",
+    ],
+    "3-35": [
+      "the journey anchoring somewhere — a destination that holds, a trip that leads to something stable, or arrival that becomes more than passing through",
+    ],
+    "3-36": [
+      "the journey carrying obligation or burden — travel undertaken from duty rather than desire, or a route that asks more than was expected",
     ],
   },
   education: {
