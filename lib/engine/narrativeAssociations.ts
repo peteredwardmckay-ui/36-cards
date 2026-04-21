@@ -4483,6 +4483,39 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-33": [
       "your place in the household becoming the answer point, where clearer boundaries or decisions begin to unlock movement for everyone else too",
     ],
+    "1-29": [
+      "a household signal, incoming news, or domestic change landing on your role and prompting a response before it becomes part of the background",
+    ],
+    "2-29": [
+      "a brief, easy domestic opening forming around your role — the timing is light and the window is narrow, so meeting it promptly matters",
+    ],
+    "5-29": [
+      "your role in the household asking for steadier, more patient investment — the family dynamic grows slowly when it is tended consistently",
+    ],
+    "9-29": [
+      "warmth, care, or genuine domestic goodwill landing on your role in the household and softening what has been more effortful",
+    ],
+    "10-29": [
+      "a sharp domestic decision or necessary household cut landing on your role — clarity and direct action matter more than preserving the easier version",
+    ],
+    "15-29": [
+      "authority, care burden, or practical household weight landing on your role and asking for honest assessment of whether what is being carried is sustainable",
+    ],
+    "17-29": [
+      "your domestic role beginning to shift or improve once the household change is made in the right order rather than all at once",
+    ],
+    "22-29": [
+      "a genuine household choice landing on your position — what the family does next depends on your decision more than on external conditions",
+    ],
+    "26-29": [
+      "something unspoken, undisclosed, or not yet acknowledged shaping your role in the household in ways that need naming before they set the pattern",
+    ],
+    "29-31": [
+      "your domestic role entering a warmer, more settled phase — what has been maintained faithfully is producing something visible and positive at home",
+    ],
+    "29-36": [
+      "your role in the household carrying a heavier obligation or family duty that asks for acceptance and honest management rather than silent bearing",
+    ],
   },
   spiritual: {
     "1-29": [
@@ -5857,6 +5890,57 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "34-36": [
       "This pairing says resources, costs, or practical support are carrying more family weight than can be ignored",
+    ],
+    "1-29": [
+      "This pairing says a household signal, incoming news, or domestic change is landing on your role and deserves a prompt, considered response",
+    ],
+    "2-29": [
+      "This pairing says a brief domestic opening or easy timing window is available around your home situation — act on it lightly rather than overthinking it",
+    ],
+    "3-29": [
+      "This pairing says movement, a household relocation, or a significant change in domestic context is landing on your role and reshaping how family life feels",
+    ],
+    "4-29": [
+      "This pairing says your own position and the home base are now so closely linked that the household question cannot be read separately from who you are within it",
+    ],
+    "5-29": [
+      "This pairing says your role in the household calls for patient, steady investment — the family dynamic deepens when it is tended consistently rather than in bursts",
+    ],
+    "6-29": [
+      "This pairing says uncertainty or mixed signals are sitting on your home role and need honest naming before they become the household baseline",
+    ],
+    "9-29": [
+      "This pairing says warmth, care, or genuine domestic goodwill is landing on your role and softening what has been more effortful or tense",
+    ],
+    "12-29": [
+      "This pairing says anxious household communication, repeated worried conversations, or unsettled domestic exchanges are shaping your role more than the actual home situation warrants",
+    ],
+    "13-29": [
+      "This pairing says something new is beginning in the household — a new family member, a fresh domestic arrangement, or a genuine restart in how home life runs",
+    ],
+    "17-29": [
+      "This pairing says the household is beginning to improve, but only if the domestic change is made in the right order and at the right pace",
+    ],
+    "18-29": [
+      "This pairing says loyal, reliable family support or a faithful household presence is shaping your role and deserves more conscious acknowledgment",
+    ],
+    "19-29": [
+      "This pairing says formal household matters — property, legal family obligations, or institutional family processes — are landing on your role and need proper handling",
+    ],
+    "22-29": [
+      "This pairing says a genuine household decision or domestic crossroads is landing on your position — the family situation shifts once your choice is made rather than deferred",
+    ],
+    "23-29": [
+      "This pairing says your home role is being quietly worn down by accumulated domestic strain, small neglects, or low-grade household erosion that needs naming",
+    ],
+    "25-29": [
+      "This pairing says a household agreement, domestic commitment, or family obligation is landing on your role and making what is expected of you visible",
+    ],
+    "29-31": [
+      "This pairing says your domestic role is entering a warmer, more positive phase — what has been maintained faithfully at home is producing something visible and encouraging",
+    ],
+    "29-35": [
+      "This pairing says your role in the household is being tested by steadiness, staying power, and whether the family can genuinely rely on what you are holding",
     ],
   },
   money: {
