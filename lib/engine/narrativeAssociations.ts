@@ -3281,6 +3281,75 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-35": [
       "your stance being tested for staying power, so growth depends on what can actually hold after the first surge of feeling",
     ],
+    "3-29": [
+      "your inner life entering a more active, outward-moving phase, where what gets set in motion now sets the tone for the growth journey ahead",
+    ],
+    "4-29": [
+      "your private foundation — the inner stability and sense of belonging to yourself — becoming the ground that makes real growth possible",
+    ],
+    "6-29": [
+      "your own stance moving through fog, uncertainty, or a phase where what you are becoming is not yet readable — patience matters more than clarity-forcing",
+    ],
+    "7-29": [
+      "your growth being complicated by shadow, mixed motives, or the part of the inner life that resists the straightforward reading",
+    ],
+    "8-29": [
+      "your inner life passing through a genuine ending — the old version of how you have been has to release before growth can take a new form",
+    ],
+    "9-29": [
+      "grace, encouragement, or an unexpected moment of ease gathering around your inner position and softening the harder edges of the process",
+    ],
+    "11-29": [
+      "a repeating inner pattern landing on your own position — the loop is visible, and growth depends on interrupting it rather than studying it further",
+    ],
+    "12-29": [
+      "anxious inner chatter or overworked self-analysis landing on your stance — slowing the noise and returning to what is actually true matters more than more processing",
+    ],
+    "15-29": [
+      "a significant inner demand, weight, or authority pressure landing on your own position — check whether what feels like strength here is serving depth or suppressing it",
+    ],
+    "16-29": [
+      "long-range guidance gathering around your inner position and giving the growth a direction worth trusting even before it is fully visible",
+    ],
+    "17-29": [
+      "your own inner stance beginning to shift into a new form — the growth is in the direction of change, not in holding the current shape",
+    ],
+    "18-29": [
+      "faithful, loyal presence toward yourself and your own path landing on your inner position — consistency with what you say you value matters here",
+    ],
+    "19-29": [
+      "a more inward-turned or solitary phase of the inner life landing on your position — time apart from the group has legitimate developmental purpose",
+    ],
+    "23-29": [
+      "quiet erosion, accumulated doubt, or slow self-neglect landing on your inner position — naming what is draining the growth process matters before it sets the baseline",
+    ],
+    "24-29": [
+      "your emotional core — what you genuinely care about — becoming the most useful guide to what the inner life most needs to change",
+    ],
+    "25-29": [
+      "a commitment or repeated vow to your own growth process landing on your position — what is being kept or broken in relation to your own path",
+    ],
+    "26-29": [
+      "something still hidden in the inner life shaping your growth without being named — what is not yet acknowledged is influencing direction more than what is",
+    ],
+    "27-29": [
+      "a message, articulation, or naming of something inner landing on your position — growth becomes real when it can be put into words",
+    ],
+    "28-29": [
+      "the other person as mirror — what another person reflects back about your own inner stance that your own reflection cannot show",
+    ],
+    "29-17": [
+      "your inner life's need for change landing in the space of transformation — what is growing in you is also what is asking to change form",
+    ],
+    "29-22": [
+      "your own clarity and stance landing at a genuine inner crossroads — the growth changes once the real choice is made rather than held in suspension",
+    ],
+    "29-31": [
+      "your inner life moving into a warmer and more illuminated phase — what has been practised and grown quietly is beginning to produce visible warmth",
+    ],
+    "29-36": [
+      "your personal growth carrying a heavier calling or non-negotiable inner obligation — what is being asked of you on this path cannot be made comfortable without cost",
+    ],
   },
   travel: {
     "1-29": [
@@ -4747,6 +4816,81 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-35": [
       "This pairing says growth is now being tested by what can actually hold after the first emotional wave passes",
+    ],
+    "2-29": [
+      "This pairing says a small, unforced opening for growth is available now, so acting on it lightly matters more than waiting for conditions to become more significant",
+    ],
+    "3-29": [
+      "This pairing says personal growth is entering a more active, outward-moving phase, so what gets set in motion now shapes what the journey becomes",
+    ],
+    "4-29": [
+      "This pairing says the private foundations — the inner stability and home base — are what makes genuine growth possible, so tending those matters before reaching further",
+    ],
+    "5-22": [
+      "This pairing says patient, rooted growth is reaching a fork, so the choice ahead is not about urgency but about which direction the roots actually want to go",
+    ],
+    "5-29": [
+      "This pairing says personal growth is a slow, embodied process here, so what is growing quietly in the inner life deserves more patience than it is being given",
+    ],
+    "7-29": [
+      "This pairing says shadow, complexity, or mixed motivation is shaping your inner stance, so honest self-examination matters more than presenting the cleaner version",
+    ],
+    "8-22": [
+      "This pairing says something is ending just as a real choice arrives, so the crossroads is clearer once what is over is allowed to close",
+    ],
+    "8-29": [
+      "This pairing says personal growth requires a genuine inner ending — the part of the old self that needs releasing has to be allowed to go before the next phase can start",
+    ],
+    "9-29": [
+      "This pairing says grace, encouragement, or an unexpected gift is touching your inner position and softening the harder edges of the growth process",
+    ],
+    "10-29": [
+      "This pairing says a sharp cut or moment of radical honesty is landing personally, where clarity about what to release matters more than preserving the comfortable version",
+    ],
+    "11-29": [
+      "This pairing says a repeated pattern is landing on your inner position — the loop has to be interrupted consciously rather than just observed one more time",
+    ],
+    "13-22": [
+      "This pairing says a genuine new beginning is arriving alongside a real choice, so the freshness is only available once the old direction is consciously let go",
+    ],
+    "13-29": [
+      "This pairing says a genuine fresh start in the inner life is forming, so the new beginning benefits from openness and less certainty rather than more planning",
+    ],
+    "15-29": [
+      "This pairing says a significant weight, authority, or inner demand is shaping your growth, so the question is whether what is felt as pressure is serving depth or crushing it",
+    ],
+    "16-29": [
+      "This pairing says long-range guidance is coming into clearer relationship with your inner position, so the larger signal deserves more trust than the immediate noise",
+    ],
+    "17-29": [
+      "This pairing says change is landing on your own inner position — the growth being called for is not optional, it is what the self is actually moving toward",
+    ],
+    "17-33": [
+      "This pairing says transformation and the key insight that enables it are in the same frame, so the change becomes possible once the right understanding is allowed in",
+    ],
+    "18-29": [
+      "This pairing says loyalty — to yourself, your values, or your path — is what the growth process most needs from you now",
+    ],
+    "19-29": [
+      "This pairing says solitude, withdrawal, or a more inward-turned phase is part of the growth picture, so time away from the group has legitimate developmental purpose",
+    ],
+    "20-29": [
+      "This pairing says the social or public field is shaping your inner growth — check whether external visibility is helping or replacing the actual inner work",
+    ],
+    "22-33": [
+      "This pairing says a real choice and a clear answer are converging, so the decision does not need more information — it needs the willingness to commit",
+    ],
+    "23-29": [
+      "This pairing says something in the inner life is being quietly worn away — small discouragements, deferred choices, or accumulated doubt need acknowledging before they set the tone",
+    ],
+    "24-29": [
+      "This pairing says the emotional core of your growth — what you actually care about — is becoming the most reliable guide to what needs to change",
+    ],
+    "25-29": [
+      "This pairing says a commitment to your own growth process — to a practice, a path, or a changed way of being — is what is being asked for now",
+    ],
+    "29-36": [
+      "This pairing says your own growth is carrying a heavier obligation or calling, where what is being asked of you personally cannot be avoided or made comfortable without cost",
     ],
   },
   travel: {
