@@ -4326,6 +4326,48 @@ const SUBJECT_OVERLAY_ASSOCIATION_NOTES: Partial<Record<SubjectId, Record<string
     "29-36": [
       "your professional position carrying a heavier obligation, ethical weight, or responsibility that cannot stay optional",
     ],
+    "2-29": [
+      "a brief professional window — a small opening, a narrow well-timed chance — forming around your position and rewarding prompt action",
+    ],
+    "5-29": [
+      "your professional position being asked to slow to a sustainable pace — long-term capacity matters more than short-term output",
+    ],
+    "6-29": [
+      "your role moving through uncertainty, unclear priorities, or ambiguous reporting — cleaner reading matters more than premature certainty",
+    ],
+    "9-29": [
+      "a moment of professional ease, positive feedback, or genuine good-faith support gathering around your position — use it to make something concrete",
+    ],
+    "13-29": [
+      "a new role, a fresh project, or an early-stage professional opportunity forming around your position — first workable habits matter more than intention",
+    ],
+    "17-29": [
+      "your professional situation beginning to improve once the right change is made in the right order rather than all at once",
+    ],
+    "18-29": [
+      "a reliable colleague, loyal support, or dependable professional relationship shaping your position in ways that deserve more explicit recognition",
+    ],
+    "20-29": [
+      "your professional position becoming more visible in the team, public, or stakeholder field — visibility is shaping how the work is received",
+    ],
+    "23-29": [
+      "your professional position being worn down by small workflow leaks, repeated corrections, or low-grade strain that needs naming before it sets the output baseline",
+    ],
+    "24-29": [
+      "what genuinely matters to you in the work — values, meaning, care — landing on your professional position and becoming the most honest guide to the next move",
+    ],
+    "26-29": [
+      "restricted information, policy detail, or specialist knowledge shaping your professional position in ways that need cleaner access",
+    ],
+    "29-32": [
+      "your professional reputation, visibility cycles, and the feedback loops of how your work is being perceived shaping your position",
+    ],
+    "29-33": [
+      "your own professional clarity becoming the answer point that unlocks the next step — the solution is available once your position is readable",
+    ],
+    "29-35": [
+      "your professional position being tested by durability, long effort, and whether the conditions that make the role sustainable are actually in place",
+    ],
   },
   purpose_calling: {
     "7-29": [
@@ -5968,6 +6010,66 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
     ],
     "29-31": [
       "This pairing says recognition or a positive outcome is starting to form around your professional position, so visible effort matters now",
+    ],
+    "1-29": [
+      "This pairing says a fresh assignment, incoming request, or professional signal is landing on your role and sets the next immediate priority",
+    ],
+    "2-29": [
+      "This pairing says a brief professional window — a small opening, a narrow chance, a well-timed ask — is available and rewards acting on it promptly",
+    ],
+    "3-29": [
+      "This pairing says professional movement, relocation, or a shift in working context is landing on your role and changing how the work feels from the inside",
+    ],
+    "4-29": [
+      "This pairing says your role is being held by structure, routine, or institutional commitments that limit speed but provide stability worth protecting",
+    ],
+    "5-29": [
+      "This pairing says the professional situation calls for sustainable pace and long-term capacity — the role only holds if what is being asked of it is actually manageable",
+    ],
+    "6-29": [
+      "This pairing says uncertainty, unclear reporting, or ambiguous priorities are sitting on your professional position and need honest naming before they become the baseline",
+    ],
+    "7-29": [
+      "This pairing says office politics, mixed motives, or a strategic undercurrent is shaping your professional position and needs cleaner reading before you move",
+    ],
+    "9-29": [
+      "This pairing says a moment of genuine professional ease, positive feedback, or good-faith support is available — use it to make something concrete rather than just enjoying the climate",
+    ],
+    "10-29": [
+      "This pairing says a sharp professional decision, a restructure, or a necessary cut is landing on your role — clarity and speed matter more than consensus",
+    ],
+    "11-29": [
+      "This pairing says repeated workplace friction, a persistent conflict, or a pressure loop is landing on your position and needs addressing rather than absorbing",
+    ],
+    "13-29": [
+      "This pairing says a new role, a fresh project, or an early-stage professional opportunity is forming around your position — first habits matter more than promises",
+    ],
+    "14-29": [
+      "This pairing says strategic self-interest, careful positioning, or office caution is shaping your professional stance — check whether the protection is serving the work or replacing it",
+    ],
+    "15-29": [
+      "This pairing says authority, budget control, or resource power is sitting on your professional position — knowing who can sponsor or block the next move matters",
+    ],
+    "17-29": [
+      "This pairing says the professional situation is beginning to improve, but only if change is made in the right order rather than all at once",
+    ],
+    "18-29": [
+      "This pairing says a reliable colleague, loyal team member, or dependable professional relationship is shaping your position in ways that deserve recognition",
+    ],
+    "19-29": [
+      "This pairing says institutional process, formal approval chains, or bureaucratic steps are sitting on your professional position and cannot be skipped",
+    ],
+    "23-29": [
+      "This pairing says professional momentum is being quietly worn down — small workflow leaks, repeated corrections, or low-grade strain need naming before they define the output",
+    ],
+    "24-29": [
+      "This pairing says what genuinely matters to you in the work — the values, the meaning, the care — is shaping your professional position more than strategy is",
+    ],
+    "25-29": [
+      "This pairing says a contract, formal agreement, or binding professional commitment is landing on your role and making the obligations visible",
+    ],
+    "29-34": [
+      "This pairing says your professional position is directly connected to revenue flow, client movement, or the practical value the work is producing",
     ],
   },
   love: {
