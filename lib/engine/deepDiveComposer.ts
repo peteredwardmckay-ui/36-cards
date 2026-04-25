@@ -57,20 +57,138 @@ function choose<T>(values: T[], random: () => number): T {
 
 const DEEP_DIVE_TITLE_POOL: Record<string, string[]> = {
   // GT deep dive
-  "opening-frame": ["Opening Frame", "The Wider Picture", "Setting the Scene", "Reading the Field"],
-  "center-significator": ["Center / Significator Focus", "The Significator", "Your Central Position", "Where You Sit"],
-  "immediate-surroundings": ["Immediate Surroundings", "What Sits Closest", "The Near Field", "Cards Within Reach"],
-  houses: ["Houses", "House Positions", "The Houses Beneath", "Where Each Card Lands"],
-  "local-cluster": ["Local Cluster", "The Closest Group", "Concentrated Energy", "Where Cards Gather"],
-  "wider-thread": ["Wider Thread", "The Longer Reach", "Distant Influences", "What Extends Further"],
-  "secondary-zone": ["Secondary Zone", "Background Pressure", "The Outer Ring", "What Builds Quietly"],
-  "cartouche-fate": ["Cartouche / Fate Line", "The Fate Line", "Below the Grid", "The Final Row"],
-  "key-threads": ["Key Threads", "Pulling It Together", "The Strongest Threads", "What Stands Out"],
+  "opening-frame": [
+    "Opening Frame",
+    "The Wider Picture",
+    "Setting the Scene",
+    "Reading the Field",
+    "The Full Picture",
+    "How the Cards Sit",
+    "The Overall Shape",
+    "The Lay of the Land",
+    "What the Spread Shows",
+  ],
+  "center-significator": [
+    "Center / Significator Focus",
+    "The Significator",
+    "Your Central Position",
+    "Where You Sit",
+    "The Central Card",
+    "At the Heart",
+    "Your Position in the Field",
+    "The Middle Ground",
+  ],
+  "immediate-surroundings": [
+    "Immediate Surroundings",
+    "What Sits Closest",
+    "The Near Field",
+    "Cards Within Reach",
+    "What Surrounds You",
+    "The Close Circle",
+    "Nearest Influences",
+    "What Presses In",
+  ],
+  houses: [
+    "Houses",
+    "House Positions",
+    "The Houses Beneath",
+    "Where Each Card Lands",
+    "The Underlying Houses",
+    "Position and Ground",
+    "What Each House Says",
+    "The House Layer",
+  ],
+  "local-cluster": [
+    "Local Cluster",
+    "The Closest Group",
+    "Concentrated Energy",
+    "Where Cards Gather",
+    "Tight Grouping",
+    "Cards in Close Company",
+    "The Dense Pocket",
+    "Where Attention Concentrates",
+  ],
+  "wider-thread": [
+    "Wider Thread",
+    "The Longer Reach",
+    "Distant Influences",
+    "What Extends Further",
+    "The Broader Field",
+    "Outlying Forces",
+    "What Sits Further Back",
+    "Reaching Out",
+  ],
+  "secondary-zone": [
+    "Secondary Zone",
+    "Background Pressure",
+    "The Outer Ring",
+    "What Builds Quietly",
+    "The Outer Layer",
+    "Quieter Forces",
+    "The Perimeter",
+    "What Works in the Background",
+  ],
+  "cartouche-fate": [
+    "Cartouche / Fate Line",
+    "The Fate Line",
+    "Below the Grid",
+    "The Final Row",
+    "Beneath the Spread",
+    "The Lower Row",
+    "The Fate Row",
+    "What Underlies Everything",
+  ],
+  "key-threads": [
+    "Key Threads",
+    "Pulling It Together",
+    "The Strongest Threads",
+    "What Stands Out",
+    "Main Themes",
+    "The Dominant Notes",
+    "Drawing It Together",
+    "What the Reading Keeps Returning To",
+  ],
   // Three-card deep dive
-  "situation-3c": ["Situation", "Where Things Stand", "The Starting Position", "What Is Already Here"],
-  "pivot-3c": ["Pivot", "The Turning Point", "The Hinge", "Where It Shifts"],
-  "direction-3c": ["Direction", "Where It Leads", "The Forward Movement", "What Follows"],
-  "between-cards": ["Between the Cards", "The Pairs", "Card Combinations", "How They Speak Together"],
+  "situation-3c": [
+    "Situation",
+    "Where Things Stand",
+    "The Starting Position",
+    "What Is Already Here",
+    "The Current State",
+    "How Things Are",
+    "What Is Present",
+    "The Ground Condition",
+  ],
+  "pivot-3c": [
+    "Pivot",
+    "The Turning Point",
+    "The Hinge",
+    "Where It Shifts",
+    "The Fulcrum",
+    "The Crux",
+    "The Hinge Point",
+    "What Changes Things",
+  ],
+  "direction-3c": [
+    "Direction",
+    "Where It Leads",
+    "The Forward Movement",
+    "What Follows",
+    "The Trajectory",
+    "What Opens",
+    "The Path Forward",
+    "Ahead",
+  ],
+  "between-cards": [
+    "Between the Cards",
+    "The Pairs",
+    "Card Combinations",
+    "How They Speak Together",
+    "Card Relationships",
+    "Where Cards Meet",
+    "What Connects Them",
+    "The Pairings",
+  ],
 };
 
 function pickDeepDiveTitle(id: string, random: () => number): string {
@@ -258,6 +376,9 @@ function buildDiagonalMovementSentence(
           `Read as a sequence, that line keeps circling ${startThread}`,
           `Taken as a whole, that line returns repeatedly to ${startThread}`,
           `Corner to corner, the arc stays with ${startThread} — the same thread running throughout`,
+          `From one end to the other, that diagonal keeps returning to ${startThread}`,
+          `The line holds its focus on ${startThread} no matter where you enter it`,
+          `That entire arc is shaped by ${startThread} — it runs all the way through`,
         ],
         random,
       ),
@@ -409,6 +530,24 @@ function introShiftFocus(subjectId: SubjectId): string {
       return "what is starting to shift in the journey";
     case "general_reading":
       return "what starts to move first";
+    case "spiritual":
+      return "what is starting to shift in the inner life";
+    case "personal_growth":
+      return "what is starting to shift inside";
+    case "education":
+      return "what is starting to shift on the study path";
+    case "creative":
+      return "what is starting to shift in the work";
+    case "health":
+      return "what the body is starting to respond to first";
+    case "pets":
+      return "what the animal is starting to signal";
+    case "legal_admin":
+      return "what is starting to shift in the process";
+    case "money":
+      return "what the money picture is starting to move toward";
+    case "purpose_calling":
+      return "what the path is starting to ask of you";
     default:
       return "what starts to shift first";
   }
@@ -549,6 +688,9 @@ function buildClusterLinkSentence(
             "This part of the spread keeps procedural pressure and practical choices tightly bound together",
             "In this ring, compliance, documentation, and decision-making all converge — none moves independently",
             "The formal and the practical are pressing on each other here; what the process requires and what can actually be done stay entangled",
+            "Nothing in this cluster can be addressed in isolation — formal requirements and real-world constraints are the same problem here",
+            "This section refuses to let process and practicality stay separate",
+            "What the cluster concentrates is the gap between what the procedure demands and what can actually be managed — they become one question here",
           ],
           random,
         ),
@@ -561,6 +703,9 @@ function buildClusterLinkSentence(
             "Here, financial pressure and practical choices keep feeding into one another",
             "The cluster concentrates where resource decisions and emotional reactions to money are inseparable",
             "At this range, what the numbers say and how you feel about them are part of the same question",
+            "Nothing in this cluster can be addressed in isolation — financial reality and how you relate to it are the same question here",
+            "This section refuses to let the numbers and the emotional response to them stay separate",
+            "What the cluster concentrates is the point where resource management and personal feeling become one concern",
           ],
           random,
         ),
@@ -573,6 +718,9 @@ function buildClusterLinkSentence(
             "This section keeps study pressure, practical choices, and what still needs proving tightly bound together",
             "In this ring, the learning curve, the assessment pressure, and the daily reality of study all press on the same point",
             "What you are studying and what the study is costing — in time, energy, and focus — stay tangled together here",
+            "Nothing in this cluster can be addressed in isolation — the demands of study and the experience of it are the same question here",
+            "This section refuses to let academic pressure and personal readiness stay separate",
+            "What the cluster concentrates is where learning becomes its own kind of work — not just subject matter but the cost of getting there",
           ],
           random,
         ),
@@ -585,6 +733,9 @@ function buildClusterLinkSentence(
             "This section keeps logistics, timing, and practical choices tightly bound together",
             "At this range, route, schedule, and readiness are all one conversation — planning and reality overlap",
             "The cards nearest the center keep the practical demands of the journey directly in view",
+            "Nothing in this cluster can be addressed in isolation — what the journey needs and what you are prepared for are the same question here",
+            "This section refuses to let the plan and the reality of the trip stay separate",
+            "What the cluster concentrates is where logistics stop being abstract and become immediate",
           ],
           random,
         ),
@@ -597,6 +748,9 @@ function buildClusterLinkSentence(
             "This knot of cards keeps creative pressure, practical choices, and what still needs shaping tightly bound together",
             "In this ring, inspiration, craft, and the question of whether the work is landing all converge",
             "What the work needs and what you are able to give it right now are pressing on the same point here",
+            "Nothing in this cluster can be addressed in isolation — the vision and the capacity to execute it are the same question here",
+            "This section refuses to let creative impulse and practical craft stay separate",
+            "What the cluster concentrates is where making something becomes a question of honest self-assessment as much as skill",
           ],
           random,
         ),
@@ -609,6 +763,9 @@ function buildClusterLinkSentence(
             "This knot of cards keeps community dynamics, individual choices, and group expectations tightly bound together",
             "In this ring, what the wider field needs and what you are actually able to give it all press on the same point",
             "Belonging, contribution, and the terms of engagement are entangled here — none can shift without the others moving",
+            "Nothing in this cluster can be addressed in isolation — what the group needs and what you are willing to give are the same question here",
+            "This section refuses to let individual preference and collective obligation stay separate",
+            "What the cluster concentrates is where belonging stops being comfortable and starts requiring something specific",
           ],
           random,
         ),
@@ -621,6 +778,9 @@ function buildClusterLinkSentence(
             "This knot of cards keeps social pressure, practical choices, and what still needs clarifying tightly bound together",
             "In this ring, who you spend time with, how it feels, and what the group expects all press on the same point",
             "Social dynamics and private needs are entangled here — neither can be addressed without the other moving",
+            "Nothing in this cluster can be addressed in isolation — the social dynamic and how you move through it are the same question here",
+            "This section refuses to let what the friendship needs and what you are prepared to offer stay separate",
+            "What the cluster concentrates is where social ease and honest engagement stop being the same thing",
           ],
           random,
         ),
@@ -633,6 +793,9 @@ function buildClusterLinkSentence(
             "Here, workplace pressure and practical choices keep shaping each other",
             "The cluster concentrates where performance, politics, and personal judgment all converge — they cannot be separated",
             "In this ring, what the role demands and what you are prepared to give stay entangled",
+            "Nothing in this cluster can be addressed in isolation — what the role demands and what you have to give it are the same question here",
+            "This section refuses to let professional expectation and personal capacity stay separate",
+            "What the cluster concentrates is where competence and political reality become one concern",
           ],
           random,
         ),
@@ -645,6 +808,9 @@ function buildClusterLinkSentence(
             "In this nearest ring, the practical and the personal keep feeding into each other",
             "At this range, circumstances and choices are entangled — what is happening and what you do about it are the same question",
             "The cards closest to the center keep the central tension close and active; nothing here sits in isolation",
+            "Nothing in this cluster can be addressed in isolation — what is happening and what you do about it are already the same question",
+            "This section refuses to let circumstance and response stay in separate categories",
+            "What the cluster concentrates is the point where conditions and choices stop being distinguishable",
           ],
           random,
         ),
@@ -657,6 +823,9 @@ function buildClusterLinkSentence(
             "In this nearest ring, feeling and action keep feeding into each other in ways that are hard to separate",
             "At this range, what is felt between you and what is actually said or done stay entangled",
             "The cards nearest the center keep the relationship's central tension close; emotion and practical decision-making press on the same point",
+            "Nothing in this cluster can be addressed in isolation — what is felt and what needs to be done about it are the same question here",
+            "This section refuses to let emotional truth and practical action stay separate",
+            "What the cluster concentrates is where feeling stops being background and becomes the thing that has to be worked with directly",
           ],
           random,
         ),
@@ -669,6 +838,9 @@ function buildClusterLinkSentence(
             "In this nearest ring, pacing, routine, and what the system actually needs all press on the same question",
             "At this range, symptoms and habits feed into each other; what is happening physically and what is being done about it are the same conversation",
             "The cards nearest the center keep the health question close and practical — recovery and daily routine cannot be separated here",
+            "Nothing in this cluster can be addressed in isolation — what the body needs and what daily life allows are the same question here",
+            "This section refuses to let physical signals and lifestyle choices stay in separate categories",
+            "What the cluster concentrates is where wellbeing stops being an aspiration and becomes a daily negotiation",
           ],
           random,
         ),
@@ -681,6 +853,9 @@ function buildClusterLinkSentence(
             "In this nearest ring, the emotional tone of the household and the practical demands of daily life press on the same point",
             "At this range, family dynamics and concrete decisions feed into each other — neither moves without the other",
             "The cards nearest the center keep the household's central tension active; emotional and practical concerns are the same concern here",
+            "Nothing in this cluster can be addressed in isolation — the household's emotional climate and its practical demands are the same question here",
+            "This section refuses to let domestic feeling and concrete action stay separate",
+            "What the cluster concentrates is where home stops being a backdrop and becomes the thing that has to be actively tended",
           ],
           random,
         ),
@@ -693,6 +868,9 @@ function buildClusterLinkSentence(
             "In this nearest ring, self-awareness and behavioural change keep feeding into each other",
             "At this range, what you are growing toward and what that actually requires day to day stay entangled",
             "The cards nearest the center keep the growth question close — insight and action press on the same point here",
+            "Nothing in this cluster can be addressed in isolation — what is shifting inside and what needs to change in practice are the same question here",
+            "This section refuses to let self-understanding and behavioral change stay separate",
+            "What the cluster concentrates is where insight stops being enough and starts requiring something to be done differently",
           ],
           random,
         ),
@@ -705,6 +883,39 @@ function buildClusterLinkSentence(
             "In this nearest ring, inner sensing and outer alignment keep feeding into each other in ways that resist clean separation",
             "At this range, discernment and practice press on the same point — what is felt and what is acted on are one question",
             "The cards nearest the center keep the spiritual question active; trust, doubt, and daily discipline all converge here",
+            "Nothing in this cluster can be addressed in isolation — what is being sought and how the practice is actually being lived are the same question here",
+            "This section refuses to let inner knowing and outer alignment stay separate",
+            "What the cluster concentrates is where spiritual seeking stops being comfortable and starts asking for something specific",
+          ],
+          random,
+        ),
+      );
+    case "pets":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps care choices, the animal's signals, and your own reading of the situation tightly linked",
+            "This knot of cards keeps what the animal needs, what you are able to provide, and how you are reading the signals tightly bound together",
+            "In this ring, the animal's behaviour and the care environment keep feeding into each other — neither can be read without the other",
+            "What the animal is showing and what your care approach is asking of it are pressing on the same point here",
+            "Nothing in this cluster can be addressed in isolation — what the animal is communicating and what the care approach is offering are the same question here",
+            "This section refuses to let the animal's signals and your response to them stay in separate categories",
+            "What the cluster concentrates is where reading the animal and adjusting the care become one continuous act",
+          ],
+          random,
+        ),
+      );
+    case "purpose_calling":
+      return sentence(
+        choose(
+          [
+            "The cluster keeps calling, conviction, and practical choices tightly linked — what the path asks for and what you are actually able to give it stay entangled",
+            "This knot of cards keeps the question of meaning, the reality of daily life, and the choices available tightly bound together",
+            "In this ring, genuine calling and the practical constraints around it keep feeding into each other in ways that cannot be cleanly separated",
+            "What the path is asking of you and what you are prepared to offer it are pressing on the same point here",
+            "Nothing in this cluster can be addressed in isolation — what the path asks for and what is actually available to give it are the same question here",
+            "This section refuses to let calling and capacity stay separate",
+            "What the cluster concentrates is where purpose stops being a vision and starts requiring a concrete commitment",
           ],
           random,
         ),
@@ -1203,14 +1414,77 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           "Where the cards gather most densely, the financial signal is clearest",
           "The nearest cluster shapes the most immediate money question",
         ]
-      : [
-          "Around the center, a compact cluster gathers",
-          "Nearest to the heart of the spread, these cards show where the first pressure lands",
-          "The closest cluster to the center carries the immediate emotional weather",
-          "The tightest grouping near the center concentrates the reading's strongest signal",
-          "Where the cards gather most densely, the message is hardest to ignore",
-          "The nearest cluster shapes the most immediate question",
-        ],
+      : subjectId === "love"
+        ? [
+            "Around the center, a compact emotional cluster gathers",
+            "Nearest to the heart of the spread, these cards carry the relationship's first pressure",
+            "The closest cluster to the center holds the immediate relational weather",
+            "The tightest grouping near the center concentrates what the bond is asking first",
+            "Where the cards gather most densely, the emotional signal is hardest to set aside",
+            "The nearest cluster shapes the most immediate question in the relationship",
+          ]
+        : subjectId === "work"
+          ? [
+              "Around the center, a compact professional cluster gathers",
+              "Nearest to the heart of the spread, these cards carry the first workplace pressure",
+              "The closest cluster to the center holds the immediate professional weather",
+              "The tightest grouping near the center concentrates the career picture",
+              "Where the cards gather most densely, the work signal is clearest",
+              "The nearest cluster shapes the most immediate professional question",
+            ]
+          : subjectId === "health"
+            ? [
+                "Around the center, a compact wellbeing cluster gathers",
+                "Nearest to the heart of the spread, these cards carry the body's first signal",
+                "The closest cluster to the center holds the immediate health picture",
+                "The tightest grouping near the center concentrates what the system is asking first",
+                "Where the cards gather most densely, the health signal is clearest",
+                "The nearest cluster shapes the most immediate wellbeing question",
+              ]
+            : subjectId === "spiritual"
+              ? [
+                  "Around the center, a compact inner cluster gathers",
+                  "Nearest to the heart of the spread, these cards carry the path's first signal",
+                  "The closest cluster to the center holds the immediate spiritual weather",
+                  "The tightest grouping near the center concentrates what the inner life is asking",
+                  "Where the cards gather most densely, the spiritual signal is hardest to ignore",
+                  "The nearest cluster shapes the most immediate question on the path",
+                ]
+              : subjectId === "personal_growth"
+                ? [
+                    "Around the center, a compact inner cluster gathers",
+                    "Nearest to the heart of the spread, these cards carry the growth process's first pressure",
+                    "The closest cluster to the center holds the most immediate inner weather",
+                    "The tightest grouping near the center concentrates what is asking to shift first",
+                    "Where the cards gather most densely, the inner signal is clearest",
+                    "The nearest cluster shapes the most immediate growth question",
+                  ]
+                : subjectId === "legal_admin"
+                  ? [
+                      "Around the center, a compact procedural cluster gathers",
+                      "Nearest to the heart of the spread, these cards carry the first practical pressure in the matter",
+                      "The closest cluster to the center holds the immediate process picture",
+                      "The tightest grouping near the center concentrates where the file is most active",
+                      "Where the cards gather most densely, the procedural signal is clearest",
+                      "The nearest cluster shapes the most immediate question in the matter",
+                    ]
+                  : subjectId === "creative"
+                    ? [
+                        "Around the center, a compact creative cluster gathers",
+                        "Nearest to the heart of the spread, these cards carry the work's first pressure",
+                        "The closest cluster to the center holds the immediate creative weather",
+                        "The tightest grouping near the center concentrates what the work is asking first",
+                        "Where the cards gather most densely, the creative signal is clearest",
+                        "The nearest cluster shapes the most immediate question in the process",
+                      ]
+                    : [
+                        "Around the center, a compact cluster gathers",
+                        "Nearest to the heart of the spread, these cards show where the first pressure lands",
+                        "The closest cluster to the center carries the immediate emotional weather",
+                        "The tightest grouping near the center concentrates the reading's strongest signal",
+                        "Where the cards gather most densely, the message is hardest to ignore",
+                        "The nearest cluster shapes the most immediate question",
+                      ],
     random,
   );
   const widerLead = choose(
@@ -1290,9 +1564,9 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               [
                 "your own stance matters because the inner process is taking its cue from what you keep allowing, protecting, or postponing",
                 "the reading keeps returning to how your boundaries and self-definition are shaping the pace of change",
-                "your role in your own growth matters because what you reinforce now becomes the next pattern",
-                "the growth process is tracking your positioning — what you lean into, what you resist, and what you outgrow keeps shaping what comes next",
-                "your relationship with change is the thread the cards keep surfacing, and the next phase depends on what you genuinely accept rather than tolerate",
+                "your inner stance in growth matters because what you reinforce now becomes the next pattern",
+                "the inner process of growth is tracking your positioning — what you lean into, what you resist, and what you outgrow keeps shaping what comes next",
+                "your inner stance with change — what you genuinely accept versus what you are still tolerating — is the thread the cards keep returning to",
               ],
               random,
             )
@@ -1303,7 +1577,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "the reading keeps returning to how your own creative stance is setting the pace of the work",
                 "your role in the creative process matters because what you reinforce now becomes the next shape the work can take",
                 "the work responds to your creative positioning — what you commit to, revise, or leave unfinished keeps defining what the project can become",
-                "your relationship with the material is the variable that keeps surfacing, and the next stage depends on what you are willing to push through or abandon",
+                "how you are holding the creative work — what you push through, abandon, or revise — is the variable the cards keep returning to",
               ],
               random,
             )
@@ -1336,7 +1610,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "the reading keeps returning to what helps your system settle, repair, or stop overcompensating",
                 "your position in health matters because pacing, rest, and what you keep asking of yourself are shaping the outcome",
                 "the health picture responds to your rhythm — what you sustain, what you interrupt, and what you refuse to accommodate keeps setting the body's pace",
-                "your relationship with pacing is the thread the cards keep surfacing, and the next improvement depends on what you actually allow yourself",
+                "how you are handling pacing — and what the body is actually signaling you need to allow — is the thread the cards keep surfacing",
               ],
               random,
             )
@@ -1406,6 +1680,17 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               ],
               random,
             )
+        : subjectId === "love"
+          ? choose(
+              [
+                "your emotional stance in the relationship matters because the bond is responding to what you keep available, clarify, or leave unspoken",
+                "the reading keeps returning to what your own availability and boundaries are creating in the relational field",
+                "your role in the relationship matters because the emotional dynamic keeps taking cues from what you permit, offer, or quietly hold back",
+                "the relationship picture responds to your positioning — what you open to, close off, or leave ambiguous shapes what the bond can hold",
+                "your own place in the dynamic is the thread the cards keep returning to, and the next shift depends on what you make visible or keep unspoken",
+              ],
+              random,
+            )
         : choose(
             [
               "your own stance is setting the tone more than first appearances suggest",
@@ -1429,28 +1714,135 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           )
         : interpretiveThread(centerSignificatorText);
   const centerHouseSentence = buildHouseAssociationSentence(significatorHouse, subjectId, meaningDomain, random);
+  function rewriteHouseSentence(base: string, moonIn: string, moonMakes: string, sunIn: string, sunMakes: string): string {
+    return base
+      .replace(/^In Moon House, the emphasis falls on emotional cycles and reputation\s*, with recognition\./i, moonIn)
+      .replace(/^Moon House makes emotional cycles and reputation\s*, with recognition setting the tone harder to ignore\./i, moonMakes)
+      .replace(/^In Sun House, the emphasis falls on vitality, confidence, and clear progress shine, with success setting the tone\./i, sunIn)
+      .replace(/^Sun House makes vitality, confidence, and clear progress shine, with success setting the tone harder to ignore\./i, sunMakes);
+  }
   const normalizedCenterHouseSentence =
     subjectId === "work"
-      ? centerHouseSentence
-          .replace(/^In Moon House, the emphasis falls on emotional cycles and reputation\s*, with recognition\./i, "In Moon House, the emphasis falls on reputation, feedback loops, and the changing visibility of your work.")
-          .replace(/^Moon House makes emotional cycles and reputation\s*, with recognition setting the tone harder to ignore\./i, "Moon House keeps attention on reputation, feedback loops, and the changing visibility of your work.")
+      ? rewriteHouseSentence(
+          centerHouseSentence,
+          "In Moon House, the emphasis falls on reputation, feedback loops, and the changing visibility of your work.",
+          "Moon House keeps attention on reputation, feedback loops, and the changing visibility of your work.",
+          "In Sun House, the emphasis falls on visible professional momentum, clear results, and the phase where effort starts landing in ways others can see.",
+          "Sun House keeps attention on visible professional momentum and the phase where effort starts producing clear, trustworthy results.",
+        )
       : subjectId === "travel"
-        ? centerHouseSentence
-            .replace(/^In Moon House, the emphasis falls on emotional cycles and reputation\s*, with recognition\./i, "In Moon House, the emphasis falls on timing, visibility, and the changing feel of the journey as conditions shift.")
-            .replace(/^Moon House makes emotional cycles and reputation\s*, with recognition setting the tone harder to ignore\./i, "Moon House keeps attention on timing, visibility, and the changing feel of the journey as conditions shift.")
-      : subjectId === "health"
-        ? centerHouseSentence
-            .replace(/^In Moon House, the emphasis falls on emotional cycles and reputation\s*, with recognition\./i, "In Moon House, the emphasis falls on cycles, sensitivity, and the way timing changes what the body can carry.")
-            .replace(/^Moon House makes emotional cycles and reputation\s*, with recognition setting the tone harder to ignore\./i, "Moon House keeps attention on cycles, sensitivity, and the way timing changes what the body can carry.")
-            .replace(/^In Sun House, the emphasis falls on vitality, confidence, and clear progress shine, with success setting the tone\./i, "In Sun House, the emphasis falls on returning vitality, clearer signal, and the point where improvement is visible enough to trust.")
-            .replace(/^Sun House makes vitality, confidence, and clear progress shine, with success setting the tone harder to ignore\./i, "Sun House keeps attention on returning vitality, clearer signal, and the point where improvement is visible enough to trust.")
-      : subjectId === "legal_admin"
-        ? centerHouseSentence
-            .replace(/^In Sun House, the emphasis falls on vitality, confidence, and clear progress shine, with success setting the tone\./i, "In Sun House, the emphasis falls on clear visibility, formal progress, and the parts of the matter that can now be tested openly.")
-            .replace(/^Sun House makes vitality, confidence, and clear progress shine, with success setting the tone harder to ignore\./i, "Sun House keeps attention on clear visibility, formal progress, and the parts of the matter that are finally visible enough to test openly.")
-            .replace(/^In Moon House, the emphasis falls on emotional cycles and reputation\s*, with recognition\./i, "In Moon House, the emphasis falls on visibility, review cycles, and how the matter is being read as updates accumulate.")
-            .replace(/^Moon House makes emotional cycles and reputation\s*, with recognition setting the tone harder to ignore\./i, "Moon House keeps attention on visibility, review cycles, and how the matter is being read as the process unfolds.")
-      : centerHouseSentence;
+        ? rewriteHouseSentence(
+            centerHouseSentence,
+            "In Moon House, the emphasis falls on timing, visibility, and the changing feel of the journey as conditions shift.",
+            "Moon House keeps attention on timing, visibility, and the changing feel of the journey as conditions shift.",
+            "In Sun House, the emphasis falls on clear routing, confirming visibility, and the travel phase where the journey feels genuinely possible.",
+            "Sun House keeps attention on clear routing, confirming visibility, and the open phase where the journey becomes easier to trust.",
+          )
+        : subjectId === "health"
+          ? rewriteHouseSentence(
+              centerHouseSentence,
+              "In Moon House, the emphasis falls on cycles, sensitivity, and the way timing changes what the body can carry.",
+              "Moon House keeps attention on cycles, sensitivity, and the way timing changes what the body can carry.",
+              "In Sun House, the emphasis falls on returning vitality, clearer signal, and the point where improvement is visible enough to trust.",
+              "Sun House keeps attention on returning vitality, clearer signal, and the point where improvement is visible enough to trust.",
+            )
+          : subjectId === "legal_admin"
+            ? rewriteHouseSentence(
+                centerHouseSentence,
+                "In Moon House, the emphasis falls on visibility, review cycles, and how the matter is being read as updates accumulate.",
+                "Moon House keeps attention on visibility, review cycles, and how the matter is being read as the process unfolds.",
+                "In Sun House, the emphasis falls on clear visibility, formal progress, and the parts of the matter that can now be tested openly.",
+                "Sun House keeps attention on clear visibility, formal progress, and the parts of the matter that are finally visible enough to test openly.",
+              )
+            : subjectId === "love"
+              ? rewriteHouseSentence(
+                  centerHouseSentence,
+                  "In Moon House, the emphasis falls on emotional longing, shifting moods, and the way recognition or distance changes how the bond feels.",
+                  "Moon House keeps attention on emotional longing, shifting moods, and the way being seen or overlooked changes the whole relational tone.",
+                  "In Sun House, the emphasis falls on warmth, visible happiness, and the phase where the relationship feels genuinely nourishing rather than effortful.",
+                  "Sun House keeps attention on warmth, visible happiness, and the open phase where the connection feels easier to trust.",
+                )
+              : subjectId === "money"
+                ? rewriteHouseSentence(
+                    centerHouseSentence,
+                    "In Moon House, the emphasis falls on market sentiment, financial mood cycles, and the way confidence or anxiety changes how the money picture feels.",
+                    "Moon House keeps attention on market sentiment, financial mood cycles, and the way the picture feels different depending on timing and emotional state.",
+                    "In Sun House, the emphasis falls on profitable momentum, financial clarity, and the phase where effort starts producing visible, trustworthy returns.",
+                    "Sun House keeps attention on profitable momentum and the point where the money picture becomes dependable enough to build on.",
+                  )
+                : subjectId === "personal_growth"
+                  ? rewriteHouseSentence(
+                      centerHouseSentence,
+                      "In Moon House, the emphasis falls on self-image cycles, inner visibility, and the way growth feels more or less real depending on mood and self-perception.",
+                      "Moon House keeps attention on self-image cycles and the way the growth process feels different at different points in the emotional cycle.",
+                      "In Sun House, the emphasis falls on genuine confidence arriving and the phase where growth starts feeling less like effort and more like arrival.",
+                      "Sun House keeps attention on genuine confidence arriving and the inner warmth that signals growth is becoming more stable than effortful.",
+                    )
+                  : subjectId === "spiritual"
+                    ? rewriteHouseSentence(
+                        centerHouseSentence,
+                        "In Moon House, the emphasis falls on mystical experience, inner cycles, and the part of the path that speaks through intuition, dreams, and what cannot be fully articulated.",
+                        "Moon House keeps attention on intuition, inner cycles, and the spiritual layer that speaks through feeling and image rather than clear instruction.",
+                        "In Sun House, the emphasis falls on illumination, spiritual clarity, and the phase where practice begins producing genuine warmth and visible inner light.",
+                        "Sun House keeps attention on illumination, spiritual clarity, and the point where the path feels genuinely alive rather than effortful.",
+                      )
+                    : subjectId === "creative"
+                      ? rewriteHouseSentence(
+                          centerHouseSentence,
+                          "In Moon House, the emphasis falls on recognition cycles, visibility swings, and the emotional weather created by how the work is being seen.",
+                          "Moon House keeps attention on recognition cycles and the way the creative climate shifts depending on how the work is being received.",
+                          "In Sun House, the emphasis falls on visible traction, confident momentum, and the phase where creative effort starts producing results that feel genuinely trustworthy.",
+                          "Sun House keeps attention on visible traction, confident creative momentum, and the result signal that makes the work easier to trust.",
+                        )
+                      : subjectId === "education"
+                        ? rewriteHouseSentence(
+                            centerHouseSentence,
+                            "In Moon House, the emphasis falls on academic reputation cycles, fluctuating confidence, and how the work is being received and assessed.",
+                            "Moon House keeps attention on academic reputation cycles and the way confidence and recognition shift as more of the work becomes visible.",
+                            "In Sun House, the emphasis falls on clear academic progress, visible results, and the phase where the work starts paying off in ways that can be trusted.",
+                            "Sun House keeps attention on clear academic progress and the visible results that make the next step on the path feel real.",
+                          )
+                        : subjectId === "community"
+                          ? rewriteHouseSentence(
+                              centerHouseSentence,
+                              "In Moon House, the emphasis falls on group visibility, social recognition, and the way belonging feels different depending on how the wider field is reading the situation.",
+                              "Moon House keeps attention on group visibility and social recognition — how the wider field reads and responds to participation shapes what belonging feels like.",
+                              "In Sun House, the emphasis falls on confident community presence, visible participation, and the phase where the wider field feels genuinely welcoming.",
+                              "Sun House keeps attention on confident community presence and the open phase where belonging feels earned and the wider field is easier to move within.",
+                            )
+                          : subjectId === "friends_social"
+                            ? rewriteHouseSentence(
+                                centerHouseSentence,
+                                "In Moon House, the emphasis falls on social reputation, shifting group moods, and the way recognition or perception changes how the social dynamic feels.",
+                                "Moon House keeps attention on social reputation, shifting group moods, and the way recognition or perception changes how the friendship or group dynamic feels.",
+                                "In Sun House, the emphasis falls on social warmth, visible openness, and the phase where the friendship or group dynamic feels genuinely easy to trust.",
+                                "Sun House keeps attention on social warmth and the open, visible phase where the friendship or group dynamic is at its most generous.",
+                              )
+                            : subjectId === "home_family"
+                              ? rewriteHouseSentence(
+                                  centerHouseSentence,
+                                  "In Moon House, the emphasis falls on household emotional weather, changing moods at home, and the way sensitivity and recognition set the domestic tone.",
+                                  "Moon House keeps attention on household emotional weather and the way shifting moods, sensitivity, and recognition change the atmosphere at home.",
+                                  "In Sun House, the emphasis falls on domestic warmth, household clarity, and the phase where family life feels genuinely easier and more nourishing.",
+                                  "Sun House keeps attention on domestic warmth and the clearer, more open phase where the household is easier to trust and move within.",
+                                )
+                              : subjectId === "pets"
+                                ? rewriteHouseSentence(
+                                    centerHouseSentence,
+                                    "In Moon House, the emphasis falls on the animal's sensitivity cycles, changing responses, and the way timing and mood shape the care picture.",
+                                    "Moon House keeps attention on the animal's sensitivity cycles and the way the care picture shifts depending on timing, environment, and the animal's emotional state.",
+                                    "In Sun House, the emphasis falls on clearer signs of comfort, returning vitality, and the phase where the animal's condition feels easier to read and trust.",
+                                    "Sun House keeps attention on clearer signs of comfort and vitality — the phase where the care picture brightens and the animal's responses become easier to trust.",
+                                  )
+                                : subjectId === "purpose_calling"
+                                  ? rewriteHouseSentence(
+                                      centerHouseSentence,
+                                      "In Moon House, the emphasis falls on conviction cycles, doubt phases, and the way the calling feels more or less certain depending on inner weather and timing.",
+                                      "Moon House keeps attention on conviction cycles and the shifting visibility of purpose — how real the path feels changes with inner weather.",
+                                      "In Sun House, the emphasis falls on the path becoming visible and confident, where the calling starts producing something recognizable rather than remaining theoretical.",
+                                      "Sun House keeps attention on the calling becoming visible and confident — the phase where the path feels real enough to build on.",
+                                    )
+                                  : centerHouseSentence;
 
   const intro = sentence(
     normalizedQuestion
@@ -1703,6 +2095,9 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
                   `In practice, this keeps the reading close to that same central thread`,
                   `Practically, the focus stays with what was named at the center`,
                   `In practice, that thread keeps this section oriented toward the same core concern`,
+                  `What this means in practice is that the center holds — the core concern does not shift`,
+                  `The central thread stays in view throughout this section`,
+                  `This part of the reading stays anchored to what the center already named`,
                 ],
                 random,
               ),
@@ -2042,6 +2437,8 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               `Alignment between both sides stays central (${cardRef(cardinalPair.cardA)} + ${cardRef(cardinalPair.cardB)})`,
               `Shared expectations stay central (${cardRef(cardinalPair.cardA)} + ${cardRef(cardinalPair.cardB)})`,
               `Mutual clarity remains central (${cardRef(cardinalPair.cardA)} + ${cardRef(cardinalPair.cardB)})`,
+              `The balance between both sides stays central (${cardRef(cardinalPair.cardA)} + ${cardRef(cardinalPair.cardB)})`,
+              `What each side holds keeps the center active (${cardRef(cardinalPair.cardA)} + ${cardRef(cardinalPair.cardB)})`,
             ],
             random,
           )
@@ -2283,6 +2680,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       "The opening position describes conditions that are already present, not predictions",
       "What this card captures is the ground you are standing on — what is already true before anything shifts",
       "This is the starting material: the situation as it exists before any choice or change enters the picture",
+      "The first card names what is already in motion — not a forecast but a description of present conditions",
+      "This position reads the ground state: what is here before anything else enters the picture",
+      "What the opening card offers is an honest account of current conditions, not a direction yet",
     ],
     random,
   ));
@@ -2292,6 +2692,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       "The middle card carries the most weight — it is where the reading turns, and what you do with it shapes the outcome",
       "Everything in this spread passes through this position, so a deliberate response here changes more than it might seem",
       "This is where the reading asks for something specific — not reflection, but a response that alters the sequence",
+      "The middle position is the crux: what happens here shapes how the third card lands",
+      "This card sits at the fulcrum — it is where the reading becomes actionable rather than descriptive",
+      "The pivot card is where the sequence can be redirected; it holds more leverage than either of the other two",
     ],
     random,
   ));
@@ -2301,6 +2704,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
       "The closing card describes where momentum is heading — not a fixed fate, but the most likely shape of what follows",
       "This position shows what the sequence is moving toward, given what the first two cards have set in motion",
       "Where the reading lands depends on the pivot, so this card is best read as a consequence rather than a destination",
+      "The third card shows the trajectory — where things are heading if the first two are read honestly",
+      "This is not a fixed outcome but the direction that is gathering, given everything the first two cards have set in motion",
+      "The closing position carries the momentum of the sequence — what it shows is probable, not inevitable",
     ],
     random,
   ));
@@ -2318,6 +2724,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
                 `"${normalizedQuestion}" answers most clearly when each card is read in order — the sequence itself carries meaning`,
                 `The question "${normalizedQuestion}" enters a three-part arc where position matters as much as symbol`,
                 `"${normalizedQuestion}" is the kind of question that unfolds across three positions rather than arriving in a single answer`,
+                `To read "${normalizedQuestion}" clearly, follow the arc — what each position adds to the one before it is where the answer lives`,
+                `"${normalizedQuestion}" opens into a sequence here: each card modifies the one before it rather than standing alone`,
+                `The question "${normalizedQuestion}" is best understood as a progression — situation, hinge, and trajectory rather than a single response`,
               ],
               random,
             )
@@ -2327,6 +2736,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
                 "The reading unfolds across three positions, where order and timing carry as much meaning as the individual cards",
                 "Three cards, read in sequence — the arc itself tells a story that no single card could carry alone",
                 "What matters here is the movement from one position to the next, not any single card in isolation",
+                "This reading works as a progression: each card sets the conditions for the one that follows",
+                "The three positions form an arc — situation, pivot, trajectory — and the sequence is as meaningful as the symbols",
+                "Read in order, these cards tell a story; read out of order, they are just three separate things",
               ],
               random,
             ),
@@ -2337,6 +2749,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
             "Each position builds on the one before it, so the sequence rewards careful, unhurried reading",
             "The reading is shaped by progression — what comes first sets the conditions for everything that follows",
             "What makes this reading specific is not just the cards but the order they arrived in",
+            "The order of the cards is not incidental — it is part of what the reading is saying",
+            "Position matters here as much as meaning: the same card in a different slot would tell a different story",
+            "Reading slowly and in order is what lets the arc become clear rather than remaining three separate impressions",
           ],
           random,
         ),

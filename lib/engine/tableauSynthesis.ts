@@ -937,6 +937,7 @@ function rewriteSocialFragmentResiduals(input: string, subjectId: "community" | 
 
 function rewriteResidualSignalLabels(input: string, subjectId: SubjectId, kind: "opening" | "pressure"): string {
   let rewritten = input
+    .replace(/\bhouse house\b/gi, "Foundation House")
     .replace(/\bvalues and love\b/gi, "what genuinely matters")
     .replace(/\brepetition and tension\b/gi, kind === "pressure" ? "repeated friction and pressure" : "a pattern that keeps replaying")
     .replace(/\bslow growth and rooting\b/gi, "slower, steadier growth")
@@ -951,6 +952,9 @@ function rewriteResidualSignalLabels(input: string, subjectId: SubjectId, kind: 
     .replace(/\bcommunication and nerves\b/gi, "anxious talk and crossed signals")
     .replace(/\byour own field\b/gi, "your own position")
     .replace(/\bsupport and loyalty\b/gi, "reliable support")
+    .replace(/\bresources and flow\b/gi, "resource movement and practical exchange")
+    .replace(/\bclosure, ending, or rest\b/gi, "a pause, ending, or rest phase")
+    .replace(/\bthe meaningful burden\b/gi, "the heavier weight at the heart of this")
     .replace(/\bpower or resource control\b/gi, "leverage or resource control")
     .replace(/\bguidance and signal\b/gi, "clearer direction")
     .replace(/\bmovement, distance, or transition\b/gi, "a shift in proximity or direction");
@@ -4372,110 +4376,163 @@ function atmosphereSentenceFromMotifs(motifs: Array<[MotifId, number]>, random: 
     "hidden:guidance": [
       "A good deal is still half-hidden, but the important things are lit.",
       "Not everything is visible yet, though the useful signals are already showing.",
+      "The fog is real but not total; something worth following is still catching the light.",
+      "Much stays out of reach for now, but the reading has not gone completely dark.",
+      "What cannot yet be seen is real, but the signal that is visible is worth trusting.",
     ],
     "guidance:hidden": [
       "The spread is not clear in every direction, but the important lights are on.",
       "Guidance is present, even if much of the surrounding field remains uncertain.",
+      "The signal is present and readable, though not everything it points toward is yet visible.",
+      "Clarity leads here, but it is partial — enough to move but not enough to resolve everything.",
+      "There is enough light to follow, even if the full picture has not yet come through.",
     ],
     "pressure:stability": [
       "Pressure is unmistakable here, but something underneath can still hold.",
       "The strain is genuine, yet the spread is not structurally hopeless.",
+      "The weight is real, but the foundation beneath it has not given way.",
+      "There is genuine difficulty here, and yet the structure is holding.",
+      "What is under pressure has not broken; there is more durability in this field than the difficulty makes visible.",
     ],
     "stability:pressure": [
       "Something durable is present beneath the strain, even if it is being tested.",
       "The cards show pressure, but not collapse; there is structure under it.",
+      "The pressure is real, but what is solid here is not moving regardless.",
+      "Something durable is underneath the strain, and that changes what the difficulty can actually do.",
+      "The structure holds even under the load the spread is carrying.",
     ],
     "movement:guidance": [
       "This spread favors movement with signal, not drift for its own sake.",
       "Change is active here, but it comes with direction rather than chaos.",
+      "Things are in motion and the direction is clear; this is not drift, it is momentum.",
+      "The movement in this spread is purposeful rather than reactive.",
+      "Change is active here and it is pointed somewhere useful rather than running loose.",
     ],
     "choice:pressure": [
       "Decision pressure is part of the story, and not every path will stay open forever.",
       "The cards keep returning to choices that can no longer remain abstract.",
+      "A decision is pressing in this spread, and the pressure around it is real.",
+      "The fork is genuine and the weight of it is not imaginary.",
+      "Decision and difficulty are running together here; the choice cannot be made around the pressure.",
     ],
     "warmth:pressure": [
       "Feeling is strong here, but it is moving through strain rather than ease.",
       "Warmth is present in the spread, though it is being tested by pressure around it.",
+      "There is real feeling in this spread, and it is being asked to hold under strain.",
+      "Warmth and difficulty are both genuine here — neither is cancelling the other out.",
+      "The emotional weight in this spread is real; so is the care underneath the pressure.",
     ],
     "guidance:pressure": [
       "Direction is available in this spread, but it has to move through real resistance to arrive.",
       "The clearer signals are present, but they are working against genuine pressure.",
       "There is a usable path here, even if it runs straight through the difficulty.",
+      "The direction is real, but it asks to be followed through friction rather than around it.",
+      "Signal and difficulty are both genuine here; the path goes through the pressure, not past it.",
     ],
     "pressure:guidance": [
       "The weight is real here, but the spread has not gone dark; guidance is still visible if you look past the strain.",
       "Pressure leads in this field, though the cards have not closed off a useful direction.",
       "The difficulty is genuine, but it is not the whole story; there is still signal pointing a way through.",
+      "The strain leads, but it has not closed the door on a useful way forward.",
+      "The weight is at the front of this reading, though what is lit behind it is worth reaching for.",
     ],
     "guidance:stability": [
       "The spread has both direction and ground to stand on, which makes this a moment worth trusting.",
       "Clear signal and a solid foundation are both present here, and together they give this reading unusual steadiness.",
       "Something is pointing the way, and the footing is firm enough to move on it.",
+      "There is both signal and footing here — a reading where moving forward is the right call.",
+      "Direction and ground are both present, which is rarer than it looks and worth using.",
     ],
     "stability:guidance": [
       "There is solid ground beneath this reading, and the direction available is worth following from it.",
       "The base is steady and the signal is clear; this is a field ready to be worked with deliberately.",
       "Steadiness leads here, and the guidance available builds on that rather than fighting against it.",
+      "What is steady here is not passive; it is the platform the direction can be trusted from.",
+      "The foundation is real and the path forward is readable from it.",
     ],
     "pressure:movement": [
       "The pressure in this spread is already forcing things to move, whether or not the timing feels right.",
       "Strain and change are running together here; the question is whether the movement is being shaped or just endured.",
       "Things are shifting under load, and the reading asks whether that movement can be steered.",
+      "The weight in this spread is not just static; it is already creating motion.",
+      "Strain and change are not separate stories here — they are the same one, and the question is who is steering.",
     ],
     "movement:pressure": [
       "Change is happening, but it is moving through pressure rather than open ground.",
       "This spread is in motion, though the resistance around it means nothing shifts without cost.",
       "There is real movement here, but the pressure means the next step matters more than usual.",
+      "The spread is moving, but the friction around it is real and worth accounting for.",
+      "Change leads here, and so does cost; nothing shifts without something being asked of it.",
     ],
     "guidance:warmth": [
       "The direction available in this spread has a human quality to it; this is not just strategy, it is care.",
       "Signal and warmth are both present, and they are pointing the same way.",
       "There is both clarity and genuine feeling in this field, which gives the available direction real weight.",
+      "The path forward in this spread is not cold; it runs through genuine care.",
+      "What is clear here is also warm — the direction and the feeling are aligned.",
     ],
     "warmth:guidance": [
       "Warmth leads in this spread, and the direction available flows naturally from that rather than against it.",
       "Human feeling is the dominant note here, and the guidance available is shaped by it.",
       "The emotional tone is strong, and the signal the cards offer is consistent with it.",
+      "The emotional note leads, and the direction available is consistent with rather than separate from it.",
+      "Warmth is the real signal here, and the guidance follows rather than contradicts it.",
     ],
     "stability:movement": [
       "Something solid is present in this spread, but it is not static; change is gathering underneath it.",
       "The base is steady for now, but the cards suggest that movement is already beginning to build.",
       "Stability and change are both active here, and the reading is asking which one to back.",
+      "What is grounded here is beginning to loosen at the edges; change is already in motion.",
+      "The steadiness in this spread is real, but the movement underneath it is too.",
     ],
     "movement:stability": [
       "Change is the dominant note in this field, but something stable is available to land on once the movement settles.",
       "Things are shifting here, and a steadier foundation is close enough to reach if the movement is directed well.",
       "The spread is in motion, but it is not groundless; stability is available once the immediate change is navigated.",
+      "Motion leads in this field, but there is something worth landing on once the current wave passes.",
+      "The spread is in transit, but stable ground is close enough to be genuinely relevant.",
     ],
     "guidance:choice": [
       "The spread shows both a clear direction and a decision that has to be made before it can be followed.",
       "There is useful signal here, but it leads through a genuine choice rather than around it.",
       "Direction is available, though it requires a clear decision first rather than a gradual drift toward it.",
+      "The signal in this spread is clear enough to help make the decision, not just point at it.",
+      "Direction and decision are both present; one is waiting on the other before things can move.",
     ],
     "choice:guidance": [
       "A decision is near the center of this reading, and the guidance available points toward rather than away from making it.",
       "The cards keep returning to a choice, and the signal they offer is pointed enough to make that choice cleaner.",
       "Decision pressure leads here, though the direction available gives it more structure than it might first appear.",
+      "The choice at the center of this spread has enough signal around it to be made with intention.",
+      "Decision pressure leads, but the cards have more to say about the shape of it than first appears.",
     ],
     "communication:pressure": [
       "Conversation and signal are running through pressure in this spread; what gets said matters, and so does how.",
       "Communication is active in this field, but it is moving through strain, which makes clarity more important than usual.",
       "Words and information are part of the pressure here, not just a background note.",
+      "What is being communicated in this spread — and what is being withheld — is part of the weight.",
+      "The pressure here has a verbal dimension; words, silence, and what goes unacknowledged are all in play.",
     ],
     "pressure:communication": [
       "The weight in this spread has a communicative edge; what is being said or withheld is part of the difficulty.",
       "Pressure leads, and it is being carried at least partly through words, signals, and what remains unspoken.",
       "The strain here is not just circumstantial; some of it lives in the space between what is said and what is meant.",
+      "The strain in this spread is partly about what is being said, and partly about what is not.",
+      "Pressure and communication are intertwined here; the difficulty is not just circumstantial but carried in words.",
     ],
     "power:pressure": [
       "Resources and leverage are active in this spread, but they are under pressure rather than freely available.",
       "There is real capacity here, but it is being tested by the weight around it.",
       "Power and strain are in direct contact in this field, and the question is which one is setting the terms.",
+      "What holds weight in this field is being tested by the strain around it.",
+      "Capacity and difficulty are in direct contact here; neither is background noise.",
     ],
     "pressure:power": [
       "The pressure in this spread has a structural quality; it is not just circumstantial but tied to leverage, resources, or control.",
       "Strain leads here, and it is the kind that comes from competing claims on what has real weight.",
       "The weight in this field is partly about who or what holds the leverage, and that is what makes it harder to simply wait out.",
+      "The weight here is partly structural; it is not just a difficult moment but a question of leverage.",
+      "The strain in this spread is not random; it is organized around questions of control and resource.",
     ],
   };
 
@@ -4623,13 +4680,18 @@ export function synthesizeGrandTableauNarrative(input: {
       ? choose(
         [
           `The situation has more room in it than the pressure suggests — the strain is real, and so is what can still develop, and neither cancels the other`,
-          `Two things can be true at once here: the pressure is real, and a clearer direction is beginning to take shape`,
+          `The weight of this reading is real, and so is the direction still visible through it`,
           `What matters is not denying the strain; it is noticing where movement has already started`,
           `At heart, this is a phase where the strain has to be faced honestly — and there is still a path worth following if it is`,
           `The clearer reading is that the strain is real, and the forward thread is still worth following`,
           `This is not a closed picture; the pressure has not ended, but neither has what can still shift`,
           `The reading describes active strain, not a finished outcome — the difficulty is real, and so is what the spread is still pointing toward`,
           `Neither side of this picture cancels the other — the pressure is worth attending to, and so is what the spread is still pointing toward`,
+          `The honest reading is that strain and forward movement are both present — the spread is not asking you to choose between them`,
+          `Pressure and possibility are not opposites here — both are active, and the reading is tracking both`,
+          `Something is hard and something is moving — the spread is holding both, and neither is more accurate than the other`,
+          `The reading is not asking you to resolve the tension — it is asking you to move with it rather than waiting for it to clear`,
+          `The spread does not offer a clean resolution — it offers clarity about where to move while the difficulty is still present`,
           ],
           random,
         )

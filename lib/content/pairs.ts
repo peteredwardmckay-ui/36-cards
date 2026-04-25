@@ -3383,7 +3383,14 @@ function buildPairRepository(): PairMeaning[] {
 
   candidates.sort((left, right) => right.signal - left.signal);
 
-  const topPairs = candidates.slice(0, 220);
+  // Always include every curated pair regardless of signal rank;
+  // fill remaining slots up to 220 with the highest-signal non-curated pairs.
+  const curatedKeys = new Set(Object.keys(CURATED_OVERRIDES));
+  const curatedPairs = candidates.filter((c) => curatedKeys.has(pairKey(c.a, c.b)));
+  const nonCuratedTop = candidates
+    .filter((c) => !curatedKeys.has(pairKey(c.a, c.b)))
+    .slice(0, 220);
+  const topPairs = [...curatedPairs, ...nonCuratedTop];
 
   return topPairs.map((entry) => {
     const key = pairKey(entry.a, entry.b);

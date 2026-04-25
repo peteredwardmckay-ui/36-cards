@@ -583,6 +583,64 @@ export function buildThemeCardSentence(
   if (!lens) return "";
   const label = getThemeDefinition(themeId).displayLabel.toLowerCase();
 
+  // When the lens phrase starts with the label word (e.g. label="trust", lens="trust eroded or ended..."),
+  // standard templates create immediate repetition: "the trust hinge: trust eroded...".
+  // Use inverted templates instead — lens comes first, label appears later with prose distance.
+  const lensStartsWithLabel =
+    lens.toLowerCase().startsWith(label.toLowerCase() + " ") || lens.toLowerCase() === label.toLowerCase();
+
+  if (lensStartsWithLabel) {
+    if (position === "situation") {
+      return pick(
+        [
+          `${lens} — that is the ${label} context ${cardName} opens with.`,
+          `${lens}: this is the ${label} ground as ${cardName} reads it.`,
+          `${lens} — what ${cardName} names at the ${label} level here.`,
+        ],
+        random,
+      );
+    }
+    if (position === "pivot") {
+      return pick(
+        [
+          `${lens} — that is the ${label} pressure ${cardName} names at the pivot.`,
+          `${lens}: this is the ${label} tension this reading turns on.`,
+          `${lens} — the ${label} hinge, and ${cardName} holds it.`,
+        ],
+        random,
+      );
+    }
+    if (position === "direction") {
+      return pick(
+        [
+          `${lens} — that is where the ${label} thread points, as ${cardName} makes clear.`,
+          `${lens}: the ${label} direction, as ${cardName} reads it.`,
+          `${lens} — the forward ${label} signal, carried by ${cardName}.`,
+        ],
+        random,
+      );
+    }
+    if (position === "center") {
+      return pick(
+        [
+          `${lens} — ${cardName} at the center makes the ${label} question this specific.`,
+          `${lens}: that is the ${label} core, and ${cardName} carries it.`,
+          `${lens} — ${cardName} at the heart of this spread names it directly.`,
+        ],
+        random,
+      );
+    }
+    // Inverted fallback (no position)
+    return pick(
+      [
+        `${lens} — the ${label} angle ${cardName} names most directly.`,
+        `${lens}: this is what ${cardName} points to on ${label}.`,
+        `${lens} — ${cardName} read through the ${label} lens.`,
+      ],
+      random,
+    );
+  }
+
   if (position === "situation") {
     return pick(
       [
@@ -603,7 +661,7 @@ export function buildThemeCardSentence(
         `At the ${label} crux, ${cardName} shows ${lens}.`,
         `${cardName} is the ${label} hinge: ${lens}.`,
         `The ${label} tension in this reading centers on ${cardName}: ${lens}.`,
-        `In terms of ${label}, ${cardName} is where the sequence can turn — ${lens}.`,
+        `The ${label} pivot sits with ${cardName} — ${lens}.`,
         `${cardName} at the pivot names the ${label} pressure directly: ${lens}.`,
         `Through the ${label} lens, the pivot turns on ${lens}.`,
       ],
@@ -620,6 +678,9 @@ export function buildThemeCardSentence(
         `On the ${label} front, the direction is ${lens}.`,
         `${cardName} carries the ${label} direction: ${lens}.`,
         `Through the ${label} frame, the emerging path is ${lens}.`,
+        `The ${label} thread resolves toward ${lens}, as ${cardName} makes clear.`,
+        `Where the ${label} current is heading: ${cardName} reads as ${lens}.`,
+        `For the ${label} question, the forward signal is ${lens}.`,
       ],
       random,
     );
@@ -628,12 +689,12 @@ export function buildThemeCardSentence(
   if (position === "center") {
     return pick(
       [
-        `At the center, in terms of ${label}, ${cardName} names ${lens}.`,
+        `Centered on ${cardName}, the ${label} question comes into sharpest focus: ${lens}.`,
         `${cardName} sits at the heart of the ${label} question, pointing to ${lens}.`,
         `The ${label} core of this spread — ${cardName} shows ${lens}.`,
         `Through the ${label} lens, the central card speaks directly: ${lens}.`,
-        `In terms of ${label}, everything in this reading turns on what ${cardName} holds: ${lens}.`,
-        `${cardName} at the center names the ${label} truth: ${lens}.`,
+        `The ${label} question centers on ${cardName}: ${lens}.`,
+        `${cardName} at the center points most directly to ${lens}.`,
       ],
       random,
     );
@@ -642,7 +703,7 @@ export function buildThemeCardSentence(
   // Fallback (no position)
   return pick(
     [
-      `In terms of ${label}, ${cardName} points to ${lens}.`,
+      `Through the ${label} lens, ${cardName} points to ${lens}.`,
       `Through the ${label} frame, ${cardName} shows ${lens}.`,
       `The ${label} angle here: ${cardName} is most directly about ${lens}.`,
       `${cardName} speaks to ${label} by showing ${lens}.`,

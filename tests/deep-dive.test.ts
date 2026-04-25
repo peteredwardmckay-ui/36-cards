@@ -254,7 +254,7 @@ describe("deep-dive composition", () => {
 
     const cartouche = reading.sections.find((section) => section.id === "cartouche");
     expect(cartouche).toBeDefined();
-    expect(cartouche?.title).toBe("Cartouche");
+    expect(["Cartouche", "The Fate Line", "Below the Tableau", "The Final Row"]).toContain(cartouche?.title);
   });
 
   it("produces deep-dive three-card readings within target range", () => {

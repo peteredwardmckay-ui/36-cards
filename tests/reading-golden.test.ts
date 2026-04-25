@@ -30,7 +30,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       gtLayout: "4x9",
       significatorMode: "self",
     },
-    expectedFingerprint: "0a39ebd9ef6879782049",
+    expectedFingerprint: "ea05270da9b3272e1f0b",
   },
   {
     id: "quick_gt_4x9_love",
@@ -45,7 +45,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: false,
       significatorMode: "relationship",
     },
-    expectedFingerprint: "27a21f08a80ab4faca3d",
+    expectedFingerprint: "fdec04cc9134fc25bd25",
   },
   {
     id: "quick_gt_4x8_cartouche_money",
@@ -60,7 +60,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: false,
       significatorMode: "self",
     },
-    expectedFingerprint: "b3837890759b68cf3f00",
+    expectedFingerprint: "4d154dbb3cfe19626ce9",
   },
   {
     id: "deep_gt_4x9_houses_off_work",
@@ -75,7 +75,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: false,
       significatorMode: "self",
     },
-    expectedFingerprint: "a0b111593a6aed205108",
+    expectedFingerprint: "bb0284f5d9116b20a2c9",
   },
   {
     id: "deep_gt_4x9_houses_on_work",
@@ -90,7 +90,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: true,
       significatorMode: "self",
     },
-    expectedFingerprint: "675a345fb25029eb8e8d",
+    expectedFingerprint: "d7f749030c2e7dcd212d",
   },
   {
     id: "deep_gt_4x8_houses_off_purpose",
@@ -105,7 +105,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: false,
       significatorMode: "open",
     },
-    expectedFingerprint: "2cae41c4049cfd8fca62",
+    expectedFingerprint: "0406e2447f692ed2ca50",
   },
   {
     id: "deep_gt_4x8_houses_on_purpose",
@@ -120,7 +120,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: true,
       significatorMode: "open",
     },
-    expectedFingerprint: "de84e72562da0a8e0b5c",
+    expectedFingerprint: "b881cafb1902fb06ea75",
   },
   {
     id: "quick_3card_health",
@@ -136,7 +136,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       gtLayout: "4x9",
       significatorMode: "self",
     },
-    expectedFingerprint: "c2cef7392dc6dce1892c",
+    expectedFingerprint: "a946f0d83a5d4cf46ca0",
   },
   {
     id: "quick_gt_legal_admin",
@@ -151,7 +151,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       includeHouses: false,
       significatorMode: "self",
     },
-    expectedFingerprint: "bf32603ca20cf88dd5f1",
+    expectedFingerprint: "37f1c86b6cc24c82b47b",
   },
   {
     id: "quick_3card_purpose",
@@ -167,7 +167,7 @@ const GOLDEN_FIXTURES: GoldenFixture[] = [
       gtLayout: "4x9",
       significatorMode: "open",
     },
-    expectedFingerprint: "90bf97786e313073a702",
+    expectedFingerprint: "aea1c657a468bd53efb8",
   },
 ];
 
