@@ -4,340 +4,337 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-display: "Georgia", "Times New Roman", "Times", serif;
-  --font-body: "Avenir Next", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  --font-display-botanical: "Palatino", "Book Antiqua", "Georgia", serif;
-  --font-display-gothic: "Times New Roman", "Georgia", serif;
-  --font-display-retro: "Trebuchet MS", "Verdana", "Arial", sans-serif;
-  --font-display-vapor: "Trebuchet MS", "Verdana", "Arial", sans-serif;
-  --font-display-whimsy: "Gill Sans", "Trebuchet MS", "Verdana", sans-serif;
-  --font-display-luxe: "Didot", "Bodoni MT", "Georgia", serif;
-  --font-body-quiet: "Avenir Next", "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  --font-body-tech: "Verdana", "Trebuchet MS", "Arial", sans-serif;
-  --font-body-soft: "Gill Sans", "Trebuchet MS", "Verdana", sans-serif;
-  --font-body-clean: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  --ui-radius-xl: 1rem;
-  --ui-radius-lg: 0.85rem;
-  --ui-radius-md: 0.7rem;
-  --ui-shadow-lg: 0 24px 60px rgba(12, 10, 20, 0.2);
-  --ui-shadow-card: 0 16px 36px rgba(10, 8, 18, 0.22);
-}
+/* =========================================================
+   Base
+   ========================================================= */
 
-* {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-html,
-body {
-  margin: 0;
-  min-height: 100%;
-}
+html, body { margin: 0; min-height: 100%; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  position: relative;
+  background: var(--ink);
+  color: var(--vellum);
+  font-family: var(--serif-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
   padding-bottom: env(safe-area-inset-bottom);
-  color: var(--theme-text, var(--brand-text));
-  background:
-    radial-gradient(circle at 8% -12%, rgba(255, 255, 255, 0.68), transparent 36%),
-    radial-gradient(circle at 96% 4%, rgba(255, 255, 255, 0.28), transparent 34%),
-    linear-gradient(145deg, var(--theme-bg, var(--brand-bg)), color-mix(in oklab, var(--theme-bg, var(--brand-bg)) 74%, #1a1210 26%));
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
 }
 
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  z-index: -1;
-  pointer-events: none;
-  filter: blur(2px);
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+
+::selection { background: var(--ember); color: var(--vellum); }
+
+/* =========================================================
+   Surfaces
+   ========================================================= */
+
+.surface-ink    { background: var(--ink);    color: var(--vellum); }
+.surface-vellum { background: var(--vellum); color: var(--ink); }
+
+/* =========================================================
+   Typography utilities
+   ========================================================= */
+
+.display {
+  font-family: var(--serif-display);
+  font-weight: 300;
+  letter-spacing: -0.012em;
+  line-height: 0.96;
 }
 
-body::before {
-  top: -22vmax;
-  left: -18vmax;
-  width: 46vmax;
-  height: 46vmax;
-  border-radius: 9999px;
-  background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 24%, white 76%), transparent 68%);
-  opacity: 0.45;
+.italic-display {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 400;
 }
 
-body::after {
-  bottom: -30vmax;
-  right: -24vmax;
-  width: 58vmax;
-  height: 58vmax;
-  border-radius: 9999px;
-  background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 20%, #100b18 80%), transparent 68%);
-  opacity: 0.34;
+.smallcaps {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  font-weight: 500;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
-  letter-spacing: 0.01em;
+.mono { font-family: var(--mono); }
+
+.numeral {
+  font-family: var(--serif-display);
+  font-feature-settings: "lnum" 1;
+  font-weight: 300;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* =========================================================
+   Hairline rule
+   ========================================================= */
 
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.rule {
+  border: 0;
+  border-top: var(--rule) solid var(--rule-color);
+  margin: 0;
 }
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
+.surface-vellum .rule { border-top-color: var(--rule-color-alt); }
 
-.ritual-panel {
-  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 78%, white 22%);
-  border-radius: var(--ui-radius-xl);
-  background:
-    linear-gradient(158deg, color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 90%, white 10%), color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 88%, #e5d8c5 12%));
-  box-shadow: var(--ui-shadow-lg);
-  backdrop-filter: blur(4px);
-}
+/* =========================================================
+   Buttons — new system
+   ========================================================= */
 
-.ritual-panel-soft {
-  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 80%, white 20%);
-  border-radius: var(--ui-radius-lg);
-  background:
-    linear-gradient(170deg, color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 93%, white 7%), color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 87%, #d8cab8 13%));
-  box-shadow: 0 14px 30px rgba(12, 10, 20, 0.14);
-}
-
-.section-kicker {
+.btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  border-radius: 9999px;
-  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 74%, white 26%);
-  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 86%, white 14%);
-  padding: 0.34rem 0.68rem;
-  font-size: 0.63rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  gap: 12px;
+  padding: 14px 22px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--theme-muted, var(--brand-muted));
+  border: var(--rule) solid currentColor;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
+.btn:hover { transform: translateY(-1px); }
 
-.btn-primary,
-.btn-secondary,
-.btn-ghost {
+.btn-ember {
+  background: var(--ember);
+  color: var(--vellum);
+  border-color: var(--ember);
+}
+.btn-ember:hover { background: var(--ember-soft); border-color: var(--ember-soft); }
+
+.btn-ghost-light { color: var(--vellum); border-color: rgba(243, 236, 220, 0.4); }
+.btn-ghost-light:hover { background: var(--vellum); color: var(--ink); }
+
+.btn-ghost-dark  { color: var(--ink); border-color: rgba(14, 19, 32, 0.4); }
+.btn-ghost-dark:hover { background: var(--ink); color: var(--vellum); }
+
+/* =========================================================
+   Card frame
+   ========================================================= */
+
+.card-frame {
   position: relative;
+  aspect-ratio: 5 / 8;
+  background: var(--ink-2);
   overflow: hidden;
-  border-radius: 0.8rem;
-  min-height: 44px;
-  transition: transform 150ms ease, filter 150ms ease, background-color 150ms ease, border-color 150ms ease;
+  border: var(--rule) solid var(--rule-color);
 }
-
-.btn-primary {
-  border: 1px solid color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 72%, black 28%);
-  background:
-    linear-gradient(160deg, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 80%, white 20%), color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 82%, black 18%));
-  color: white;
-}
-
-.btn-secondary {
-  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 76%, white 24%);
-  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 90%, white 10%);
-  color: var(--theme-text, var(--brand-text));
-}
-
-.btn-ghost {
-  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 72%, white 28%);
-  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 84%, transparent 16%);
-  color: var(--theme-text, var(--brand-text));
-}
-
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-ghost:hover {
-  transform: translateY(-1px);
-  filter: saturate(1.05);
-}
-
-.btn-primary:focus-visible,
-.btn-secondary:focus-visible,
-.btn-ghost:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 45%, white 55%);
-}
-
-.sky-motif {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  color: color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 32%, #3a4a5c 68%);
-}
-
-.sky-motif__wash,
-.sky-motif__sea,
-.sky-motif__ships,
-.sky-motif__birds {
-  position: absolute;
-}
-
-.sky-motif__wash {
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(155, 125, 85, 0.06) 0%,
-      rgba(255, 182, 88, 0.17) 52%,
-      rgba(218, 108, 50, 0.10) 76%,
-      rgba(65, 100, 142, 0.11) 100%
-    ),
-    radial-gradient(circle at 82% 78%, rgba(255, 198, 96, 0.20), transparent 34%);
-}
-
-.sky-motif__sea {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 26%;
-  background: linear-gradient(180deg, rgba(58, 88, 128, 0.04), rgba(48, 76, 118, 0.11));
-  border-top: 1px solid rgba(155, 138, 118, 0.20);
-}
-
-
-.sky-motif__ships {
-  inset: 0;
+.card-frame img {
   width: 100%;
   height: 100%;
-  color: color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 18%, #243244 82%);
+  object-fit: cover;
+  display: block;
 }
 
-.sky-motif__birds {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.58;
-  animation: sky-birds-drift 24s ease-in-out infinite;
+.card-placeholder {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--ink-2) 0px,
+    var(--ink-2) 4px,
+    var(--ink) 4px,
+    var(--ink) 8px
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ash);
+  padding: 8px;
 }
 
-.sky-motif__birds path {
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-width: 2;
+/* =========================================================
+   Container
+   ========================================================= */
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.container-wide {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 48px;
 }
 
-/* ── loading variant ── */
-.sky-motif-loading .sky-motif__wash {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(138, 112, 76, 0.09) 0%,
-      rgba(255, 188, 96, 0.24) 50%,
-      rgba(212, 96, 46, 0.13) 74%,
-      rgba(58, 98, 148, 0.15) 100%
-    ),
-    radial-gradient(circle at 80% 76%, rgba(255, 202, 106, 0.26), transparent 32%);
+@media (max-width: 640px) {
+  .container, .container-wide { padding: 0 20px; }
 }
 
+/* =========================================================
+   Top nav
+   ========================================================= */
 
-/* ── loading spinner ── */
-.loading-orbit {
-  position: absolute;
-  inset: -0.35rem;
-  border-top: 1px solid color-mix(in oklab, var(--brand-accent) 55%, white 45%);
-  border-right: 1px solid transparent;
-  border-radius: 9999px;
-  opacity: 0.85;
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 48px;
+  border-bottom: var(--rule) solid var(--rule-color);
+  position: relative;
+  z-index: 10;
+}
+.surface-vellum .topnav { border-bottom-color: var(--rule-color-alt); }
+
+@media (max-width: 640px) {
+  .topnav { padding: 20px; }
 }
 
-.loading-orbit--one {
-  animation: loading-orbit-spin 1.8s linear infinite;
+.topnav-wordmark {
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--vellum);
+  text-decoration: none;
+}
+.topnav-wordmark .num {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  opacity: 0.55;
+  position: relative;
+  top: -2px;
 }
 
-.loading-orbit--two {
-  inset: -0.7rem;
+.topnav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.topnav-links a {
+  opacity: 0.6;
+  transition: opacity 0.15s, color 0.15s;
+  color: var(--vellum);
+  text-decoration: none;
+}
+.topnav-links a:hover { opacity: 1; }
+.topnav-links a.active {
+  opacity: 1;
+  color: var(--ember);
+  border-bottom: 1px solid var(--ember);
+  padding-bottom: 1px;
+}
+
+.topnav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: var(--rule) solid rgba(243, 236, 220, 0.3);
+  color: var(--vellum);
+  opacity: 0.7;
+  transition: opacity 0.15s;
+  cursor: pointer;
+}
+.topnav-toggle:hover { opacity: 1; }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.sitefooter {
+  border-top: var(--rule) solid var(--rule-color);
+  padding: 40px 48px 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.surface-vellum .sitefooter { border-top-color: var(--rule-color-alt); }
+
+.sitefooter-left {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   opacity: 0.45;
-  animation: loading-orbit-spin 2.6s linear infinite reverse;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.sky-cta {
-  position: relative;
+.sitefooter-right {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  text-align: right;
 }
 
-.sky-cta::before {
-  content: "";
+.sitefooter a { text-decoration: underline; text-underline-offset: 3px; }
+.sitefooter a:hover { opacity: 1; color: var(--ember); }
+
+@media (max-width: 640px) {
+  .sitefooter { padding: 32px 20px 48px; flex-direction: column; }
+  .sitefooter-right { text-align: left; }
+}
+
+/* =========================================================
+   Starfield (hero ornament)
+   ========================================================= */
+
+.starfield {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 82% 18%, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 22%, white 78%), transparent 24%),
-    linear-gradient(180deg, rgba(145, 186, 219, 0.06), rgba(255, 220, 181, 0.08) 48%, transparent 100%);
-  opacity: 0.9;
   pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, rgba(217,184,120,0.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 64%, rgba(217,184,120,0.35) 50%, transparent 51%),
+    radial-gradient(1px 1px at 47% 22%, rgba(217,184,120,0.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 78%, rgba(217,184,120,0.3) 50%, transparent 51%),
+    radial-gradient(1px 1px at 81% 34%, rgba(217,184,120,0.45) 50%, transparent 51%),
+    radial-gradient(1px 1px at 92% 71%, rgba(217,184,120,0.3) 50%, transparent 51%),
+    radial-gradient(1px 1px at 35% 88%, rgba(217,184,120,0.25) 50%, transparent 51%),
+    radial-gradient(1px 1px at 71% 12%, rgba(217,184,120,0.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 18% 44%, rgba(217,184,120,0.3) 50%, transparent 51%),
+    radial-gradient(1px 1px at 56% 56%, rgba(217,184,120,0.2) 50%, transparent 51%);
 }
 
+/* =========================================================
+   Scrollbar hide
+   ========================================================= */
 
-@keyframes sky-birds-drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(0.55rem, -0.14rem, 0) scale(1.016);
-  }
-}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
 
-@keyframes loading-orbit-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* =========================================================
+   Sigil ornament
+   ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
-  .sky-motif__birds,
-  .loading-orbit--one,
-  .loading-orbit--two {
-    animation: none;
-  }
-}
+.sigil { display: inline-block; vertical-align: middle; }
 
-.ritual-progress-track {
-  height: 0.48rem;
-  width: 100%;
-  border-radius: 9999px;
-  border: 1px solid color-mix(in oklab, var(--theme-border, var(--brand-border)) 78%, white 22%);
-  background: color-mix(in oklab, var(--theme-panel, var(--brand-panel)) 80%, #100d17 20%);
-  overflow: hidden;
-}
+/* =========================================================
+   Reading prose (existing — kept for results pages)
+   ========================================================= */
 
-.ritual-progress-fill {
-  height: 100%;
-  border-radius: inherit;
-  background:
-    linear-gradient(90deg, color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 86%, white 14%), color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 78%, #ffd7a5 22%));
-  transition: width 260ms ease;
-}
+.reading-prose p { margin: 0; line-height: 1.65; }
+.reading-prose section { scroll-margin-top: 1.6rem; }
+.reading-prose section + section { margin-top: 1rem; }
 
-input[type="range"] {
-  accent-color: var(--theme-accent, var(--brand-accent));
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  border: 1px solid color-mix(in oklab, var(--theme-accent, var(--brand-accent)) 72%, black 28%);
-  box-shadow: 0 5px 14px rgba(10, 8, 18, 0.26);
-}
+/* =========================================================
+   Card flip (existing — kept for reveal page)
+   ========================================================= */
 
 .card-flip-inner {
   position: relative;
@@ -346,42 +343,23 @@ input[type="range"]::-webkit-slider-thumb {
   transform-style: preserve-3d;
   transition: transform 820ms cubic-bezier(0.22, 0.78, 0.22, 1);
 }
-
-.card-flip-inner-revealed {
-  transform: rotateY(180deg);
-}
-
-.card-interactive:hover .card-flip-inner,
-.card-interactive:focus-visible .card-flip-inner {
-  transform: translateY(-2px);
-}
-
-.card-interactive:hover .card-flip-inner-revealed,
-.card-interactive:focus-visible .card-flip-inner-revealed {
-  transform: rotateY(180deg) translateY(-2px);
-}
-
-.card-face-back,
-.card-face-front {
+.card-flip-inner-revealed { transform: rotateY(180deg); }
+.card-face-back, .card-face-front {
   position: absolute;
   inset: 0;
   border-radius: inherit;
   backface-visibility: hidden;
 }
-
-.card-face-back {
-  background-size: cover;
-  background-position: center;
-}
-
+.card-face-back { background-size: cover; background-position: center; }
 .card-face-front {
   transform: rotateY(180deg);
-  background:
-    linear-gradient(160deg, color-mix(in oklab, var(--theme-panel, #fff) 95%, white 5%), color-mix(in oklab, var(--theme-panel, #fff) 84%, #e6d2ba 16%));
-  box-shadow: var(--ui-shadow-card);
-  text-align: left;
+  background: var(--ink-2);
   overflow: hidden;
 }
+
+/* =========================================================
+   Grand Tableau grid (existing)
+   ========================================================= */
 
 .gt-grid {
   display: grid;
@@ -389,119 +367,136 @@ input[type="range"]::-webkit-slider-thumb {
   gap: 0.5rem;
 }
 
+/* =========================================================
+   Legacy panel classes (kept while pages are migrated)
+   ========================================================= */
 
-.font-display-botanical {
-  font-family: var(--font-display-botanical), var(--font-display), serif;
+:root {
+  --ui-radius-xl: 1rem;
+  --ui-radius-lg: 0.85rem;
+  --ui-shadow-lg: 0 24px 60px rgba(12, 10, 20, 0.2);
+  --ui-shadow-card: 0 16px 36px rgba(10, 8, 18, 0.22);
 }
 
-.font-display-gothic {
-  font-family: var(--font-display-gothic), var(--font-display), serif;
+.ritual-panel {
+  border: 1px solid rgba(243, 236, 220, 0.12);
+  border-radius: var(--ui-radius-xl);
+  background: var(--ink-2);
+  box-shadow: var(--ui-shadow-lg);
 }
 
-.font-display-retro {
-  font-family: var(--font-display-retro), var(--font-display), sans-serif;
+.ritual-panel-soft {
+  border: 1px solid rgba(243, 236, 220, 0.1);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ink-2);
 }
 
-.font-display-vapor {
-  font-family: var(--font-display-vapor), var(--font-display), sans-serif;
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(243, 236, 220, 0.2);
+  background: rgba(243, 236, 220, 0.05);
+  padding: 0.34rem 0.68rem;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ash);
 }
 
-.font-display-whimsy {
-  font-family: var(--font-display-whimsy), var(--font-display), serif;
+/* Legacy buttons — kept for existing pages */
+.btn-primary, .btn-secondary, .btn-ghost-legacy {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  min-height: 44px;
+  transition: transform 150ms ease, filter 150ms ease;
+  font-family: var(--serif-body);
+}
+.btn-primary {
+  background: var(--ember);
+  border: 1px solid var(--ember);
+  color: var(--vellum);
+}
+.btn-primary:hover { background: var(--ember-soft); }
+.btn-secondary, .btn-ghost-legacy {
+  border: 1px solid rgba(243, 236, 220, 0.25);
+  background: rgba(243, 236, 220, 0.05);
+  color: var(--vellum);
+}
+.btn-primary:hover, .btn-secondary:hover, .btn-ghost-legacy:hover {
+  transform: translateY(-1px);
 }
 
-.font-display-luxe {
-  font-family: var(--font-display-luxe), var(--font-display), serif;
+/* Legacy .btn-ghost alias used by existing pages */
+.btn-ghost {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  min-height: 44px;
+  border: 1px solid rgba(243, 236, 220, 0.25);
+  background: rgba(243, 236, 220, 0.05);
+  color: var(--vellum);
+  transition: transform 150ms ease;
 }
+.btn-ghost:hover { transform: translateY(-1px); background: rgba(243, 236, 220, 0.1); }
 
-.font-body-quiet {
-  font-family: var(--font-body-quiet), var(--font-body), sans-serif;
-}
+/* =========================================================
+   Page reveal animation
+   ========================================================= */
 
-.font-body-tech {
-  font-family: var(--font-body-tech), var(--font-body), sans-serif;
-}
-
-.font-body-soft {
-  font-family: var(--font-body-soft), var(--font-body), sans-serif;
-}
-
-.font-body-clean {
-  font-family: var(--font-body-clean), var(--font-body), sans-serif;
-}
-
-.reading-prose p {
-  margin: 0;
-  line-height: 1.65;
-}
-
-.reading-prose section {
-  scroll-margin-top: 1.6rem;
-}
-
-.reading-prose section + section {
-  margin-top: 1rem;
-}
-
-.page-reveal {
-  animation: pageReveal 420ms ease;
-}
+.page-reveal { animation: pageReveal 420ms ease; }
 
 @keyframes pageReveal {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .card-flip-inner {
-    transition: none;
-  }
+/* =========================================================
+   Loading orbit (existing)
+   ========================================================= */
 
-  .btn-primary,
-  .btn-secondary,
-  .btn-ghost,
-  .page-reveal {
+.loading-orbit {
+  position: absolute;
+  inset: -0.35rem;
+  border-top: 1px solid rgba(194, 86, 43, 0.6);
+  border-right: 1px solid transparent;
+  border-radius: 9999px;
+  opacity: 0.85;
+}
+.loading-orbit--one { animation: loading-orbit-spin 1.8s linear infinite; }
+.loading-orbit--two {
+  inset: -0.7rem;
+  opacity: 0.45;
+  animation: loading-orbit-spin 2.6s linear infinite reverse;
+}
+
+@keyframes loading-orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   Form elements
+   ========================================================= */
+
+textarea, select, input {
+  background: var(--ink-2);
+  color: var(--vellum);
+  border: 1px solid var(--ink-3);
+}
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .card-flip-inner { transition: none; }
+  .btn, .btn-primary, .btn-secondary, .btn-ghost, .page-reveal {
     animation: none;
     transition: none;
   }
+  .loading-orbit--one, .loading-orbit--two { animation: none; }
 }
-
-/* Dark mode body — replace white radial overlays with subtle dark glows */
-html.dark body {
-  background-color: #12131c;
-  background:
-    radial-gradient(circle at 8% -12%, rgba(224, 178, 102, 0.06), transparent 36%),
-    radial-gradient(circle at 96% 4%, rgba(224, 178, 102, 0.03), transparent 34%),
-    linear-gradient(145deg, #12131c, #0b0c14);
-}
-
-html.dark body::before,
-html.dark body::after {
-  opacity: 0 !important;
-}
-
-html.dark .sky-cta::before {
-  opacity: 0;
-}
-
-/* Fix hardcoded light backgrounds on form elements in dark mode */
-html.dark textarea,
-html.dark select {
-  background-color: rgba(255, 255, 255, 0.06);
-  color: var(--brand-text);
-}
-
-/* Fix hardcoded bg-white/35 boxes in dark mode (glossary panels etc.) */
-html.dark [class*="bg-white/"] {
-  background-color: rgba(255, 255, 255, 0.06) !important;
-}
-
-/* Logo inversion: dark PNG asset inverts to white in dark mode */
-html.dark .brand-wordmark { filter: invert(1); mix-blend-mode: normal; }
