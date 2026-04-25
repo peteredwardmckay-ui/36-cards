@@ -169,7 +169,7 @@ const THEME_LENS: Partial<Record<ThemeId, string[]>> = {
   ],
   cashflow: [
     "how money is actually moving — in, out, and between",
-    "where the flow of resources is smooth, blocked, or erratic",
+    "what the actual movement or stagnation of money is signaling here",
     "what the rhythm of income and expense is showing here",
   ],
   investment_caution: [
