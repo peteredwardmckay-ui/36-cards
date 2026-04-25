@@ -154,7 +154,7 @@ const THEME_LENS: Partial<Record<ThemeId, string[]>> = {
   ],
   stability: [
     "what is providing steadiness or where it is missing",
-    "how grounded, reliable foundations are working — or not",
+    "where the absence or presence of reliable foundations is the real signal",
     "where consistency and durability are the real question",
   ],
   financial_pressure: [
