@@ -1,14 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { BrandHeader } from "@/components/BrandHeader";
+import { TopNav } from "@/components/TopNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SpreadGrid } from "@/components/SpreadGrid";
 import { CardInspector } from "@/components/CardInspector";
 import { LoadingScreen } from "@/components/LoadingScreen";
-import { BrandFooter } from "@/components/BrandFooter";
 import { useReadingState } from "@/lib/state/useReadingState";
-import { getTheme } from "@/lib/ui/themes";
 import type { GTLayout } from "@/lib/engine/types";
 
 const GT_ROWS = 4;
@@ -70,76 +69,49 @@ export default function RevealPage() {
   const [autoRevealing, setAutoRevealing] = useState(false);
   const autoTimer = useRef<number | null>(null);
 
-  const theme = useMemo(() => getTheme(state?.setup.themeId ?? "botanical-engraving"), [state?.setup.themeId]);
-
   useEffect(() => {
     if (!ready) return;
-    if (!state) {
-      router.replace("/setup");
-      return;
-    }
-    if (state.stage === "ritual") {
-      router.replace("/shuffle");
-      return;
-    }
-    if (state.stage === "results") {
-      router.replace("/results");
-    }
+    if (!state) { router.replace("/setup"); return; }
+    if (state.stage === "ritual") { router.replace("/shuffle"); return; }
+    if (state.stage === "results") { router.replace("/results"); }
   }, [ready, router, state]);
 
   const revealMap = state?.stage === "reveal" ? state.revealMap : [];
   const revealedCount = revealMap.filter(Boolean).length;
   const total = revealMap.length;
   const allRevealed = total > 0 && revealedCount === total;
+  const pct = total > 0 ? (revealedCount / total) * 100 : 0;
 
   const flipCards = useCallback((positions: number[]) => {
     if (!state || state.stage !== "reveal") return;
-
-    const validPositions = positions.filter((position) => {
-      const index = position - 1;
-      return index >= 0 && index < state.revealMap.length && !state.revealMap[index];
+    const validPositions = positions.filter((p) => {
+      const i = p - 1;
+      return i >= 0 && i < state.revealMap.length && !state.revealMap[i];
     });
-
     if (!validPositions.length) return;
-
     update((current) => {
       const revealMap = [...current.revealMap];
       let selected = current.selectedCardPosition;
-
-      validPositions.forEach((position) => {
-        const index = position - 1;
-        if (!revealMap[index]) {
-          revealMap[index] = true;
-          selected = position;
-        }
+      validPositions.forEach((p) => {
+        const i = p - 1;
+        if (!revealMap[i]) { revealMap[i] = true; selected = p; }
       });
-
-      return {
-        ...current,
-        revealMap,
-        selectedCardPosition: selected,
-      };
+      return { ...current, revealMap, selectedCardPosition: selected };
     });
   }, [state, update]);
 
   const flipCard = useCallback((position: number) => {
     if (!state || state.stage !== "reveal") return;
-
     const index = position - 1;
     if (state.revealMap[index]) {
-      update((current) => ({
-        ...current,
-        selectedCardPosition: position,
-      }));
+      update((current) => ({ ...current, selectedCardPosition: position }));
       return;
     }
-
     flipCards([position]);
   }, [flipCards, state, update]);
 
   const revealNext = useCallback(() => {
     if (!state || state.stage !== "reveal") return;
-
     const nextIndex = firstUnrevealedIndex(state.revealMap);
     if (nextIndex === null) return;
     flipCard(nextIndex + 1);
@@ -148,144 +120,178 @@ export default function RevealPage() {
   const goResults = useCallback(() => {
     if (!state || state.stage !== "reveal" || !allRevealed) return;
     setAutoRevealing(false);
-
-    update((current) => ({
-      ...current,
-      stage: "results",
-    }));
-
+    update((current) => ({ ...current, stage: "results" }));
     router.push("/results");
   }, [allRevealed, router, state, update]);
 
   useEffect(() => {
     if (!state || state.stage !== "reveal") return;
-
     if (!autoRevealing || allRevealed) {
-      if (autoTimer.current) {
-        window.clearTimeout(autoTimer.current);
-        autoTimer.current = null;
-      }
-      if (allRevealed && autoRevealing) {
-        setAutoRevealing(false);
-      }
+      if (autoTimer.current) { window.clearTimeout(autoTimer.current); autoTimer.current = null; }
+      if (allRevealed && autoRevealing) setAutoRevealing(false);
       return;
     }
-
     autoTimer.current = window.setTimeout(() => {
       if (state.setup.spreadType === "grand-tableau") {
         const batch = getGrandTableauAutoBatch(state.revealMap, state.setup.gtLayout ?? "4x9");
-        if (batch.length) {
-          flipCards(batch);
-        }
+        if (batch.length) flipCards(batch);
         return;
       }
-
       const nextIndex = firstUnrevealedIndex(state.revealMap);
-      if (nextIndex !== null) {
-        flipCards([nextIndex + 1]);
-      }
+      if (nextIndex !== null) flipCards([nextIndex + 1]);
     }, state.setup.spreadType === "grand-tableau" ? 170 : 260);
-
     return () => {
-      if (autoTimer.current) {
-        window.clearTimeout(autoTimer.current);
-        autoTimer.current = null;
-      }
+      if (autoTimer.current) { window.clearTimeout(autoTimer.current); autoTimer.current = null; }
     };
   }, [autoRevealing, allRevealed, flipCards, state]);
 
-  if (!ready) {
+  if (!ready || !state || state.stage !== "reveal") {
     return <LoadingScreen />;
   }
 
-  if (!state || state.stage !== "reveal") {
-    return <LoadingScreen />;
-  }
+  const isGT = state.setup.spreadType === "grand-tableau";
 
   return (
-    <main className={`${theme.bodyClass} ${theme.displayFontClass} ${theme.bodyFontClass} min-h-screen px-4 py-5 sm:px-6 lg:px-8`}>
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-4">
-        <BrandHeader compact />
+    <div className="surface-ink" style={{ minHeight: "100vh" }}>
+      <TopNav activePage={undefined} />
 
-        <section className="flex flex-col gap-4">
-          <article className="ritual-panel page-reveal p-5">
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <span className="section-kicker">Reveal</span>
-                <h1 className="mt-2 text-3xl font-semibold">Turn the Cards</h1>
-              </div>
-            </div>
-            <p className="mt-2 text-sm text-[color:var(--theme-muted,var(--brand-muted))]">
-              Flip cards one by one to unfold the spread. Progress: {revealedCount}/{total}.
+      <div className={isGT ? "container-wide" : "container"} style={{ paddingTop: 48, paddingBottom: 96 }}>
+
+        {/* ── Header ──────────────────────────────────────── */}
+        <div style={{
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "space-between",
+          paddingBottom: 32,
+          borderBottom: "var(--rule) solid var(--rule-color)",
+          flexWrap: "wrap",
+          gap: 16,
+          marginBottom: 32,
+        }}>
+          <div>
+            <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 12, opacity: 0.8 }}>
+              Turn the cards
             </p>
+            <h1 className="display" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 0.95, margin: 0 }}>
+              <em>The spread.</em>
+            </h1>
+          </div>
 
-            <div className="mt-4">
-              <div className="ritual-progress-track">
-                <div className="ritual-progress-fill" style={{ width: `${(revealedCount / total) * 100}%` }} />
-              </div>
-            </div>
+          {/* Progress counter */}
+          <div style={{ textAlign: "right" }}>
+            <span className="numeral" style={{ fontSize: 48, color: "var(--ember)", lineHeight: 1 }}>
+              {revealedCount}
+            </span>
+            <span className="mono" style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.4, marginLeft: 8 }}>
+              / {total}
+            </span>
+          </div>
+        </div>
 
-            <div className="mt-4">
-              <SpreadGrid
-                spreadType={state.setup.spreadType}
-                layout={state.layout}
-                revealMap={state.revealMap}
-                selectedPosition={state.selectedCardPosition}
-                onFlip={flipCard}
-                onSelect={(position) =>
-                  update((current) => ({
-                    ...current,
-                    selectedCardPosition: position,
-                  }))
-                }
-                gtLayout={state.setup.gtLayout}
-                showCastingBoard={false}
-                themeId={state.setup.themeId}
-              />
-            </div>
+        {/* ── Progress bar ────────────────────────────────── */}
+        <div style={{ height: 2, background: "var(--rule-color)", marginBottom: 40, borderRadius: 1 }}>
+          <div style={{
+            height: "100%",
+            width: `${pct}%`,
+            background: "var(--ember)",
+            transition: "width 0.3s ease",
+            borderRadius: 1,
+          }} />
+        </div>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={revealNext}
-                disabled={allRevealed}
-                className="btn-secondary px-4 py-2 text-sm font-semibold disabled:opacity-50"
-              >
-                Individual Turn
-              </button>
-              <button
-                type="button"
-                onClick={() => setAutoRevealing((current) => !current)}
-                disabled={allRevealed}
-                className="btn-secondary px-4 py-2 text-sm font-semibold disabled:opacity-50"
-              >
-                {autoRevealing ? "Automatic Turn (Stop)" : "Automatic Turn"}
-              </button>
-              <button
-                type="button"
-                onClick={goResults}
-                disabled={!allRevealed}
-                className="btn-primary px-4 py-2 text-sm font-semibold disabled:opacity-50"
-              >
-                View Results
-              </button>
-            </div>
-          </article>
+        {/* ── Spread grid ─────────────────────────────────── */}
+        <div style={{ marginBottom: 40 }}>
+          <SpreadGrid
+            spreadType={state.setup.spreadType}
+            layout={state.layout}
+            revealMap={state.revealMap}
+            selectedPosition={state.selectedCardPosition}
+            onFlip={flipCard}
+            onSelect={(position) =>
+              update((current) => ({ ...current, selectedCardPosition: position }))
+            }
+            gtLayout={state.setup.gtLayout}
+            showCastingBoard={false}
+            themeId={state.setup.themeId}
+          />
+        </div>
 
-        </section>
+        {/* ── Action buttons ──────────────────────────────── */}
+        <div style={{
+          display: "flex",
+          gap: 12,
+          flexWrap: "wrap",
+          paddingTop: 32,
+          borderTop: "var(--rule) solid var(--rule-color)",
+        }}>
+          <button
+            type="button"
+            onClick={revealNext}
+            disabled={allRevealed}
+            className="mono"
+            style={{
+              padding: "12px 24px",
+              border: "var(--rule) solid var(--rule-color)",
+              color: "var(--vellum)",
+              background: "transparent",
+              fontSize: 10,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              opacity: allRevealed ? 0.3 : 1,
+              cursor: allRevealed ? "not-allowed" : "pointer",
+              transition: "opacity 0.12s",
+            }}
+          >
+            Turn one
+          </button>
+          <button
+            type="button"
+            onClick={() => setAutoRevealing((v) => !v)}
+            disabled={allRevealed}
+            className="mono"
+            style={{
+              padding: "12px 24px",
+              border: `var(--rule) solid ${autoRevealing ? "var(--ember)" : "var(--rule-color)"}`,
+              color: "var(--vellum)",
+              background: autoRevealing ? "var(--ink-3)" : "transparent",
+              fontSize: 10,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              opacity: allRevealed ? 0.3 : 1,
+              cursor: allRevealed ? "not-allowed" : "pointer",
+              transition: "background 0.12s, border-color 0.12s, opacity 0.12s",
+            }}
+          >
+            {autoRevealing ? "Stop auto" : "Turn all"}
+          </button>
+          <button
+            type="button"
+            onClick={goResults}
+            disabled={!allRevealed}
+            className="mono"
+            style={{
+              padding: "12px 32px",
+              border: `var(--rule) solid ${allRevealed ? "var(--ember)" : "var(--rule-color)"}`,
+              color: allRevealed ? "var(--ember)" : "var(--vellum)",
+              background: "transparent",
+              fontSize: 10,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              opacity: allRevealed ? 1 : 0.3,
+              cursor: allRevealed ? "pointer" : "not-allowed",
+              transition: "opacity 0.12s, border-color 0.12s, color 0.12s",
+            }}
+          >
+            Read the cards →
+          </button>
+        </div>
 
-        <CardInspector state={state} position={state.selectedCardPosition} />
-
-        <BrandFooter
-          spreadLabel={
-            state.setup.spreadType === "grand-tableau"
-              ? state.setup.gtLayout === "4x8+4"
-                ? "Grand Tableau (4x8 + 4 cartouche)"
-                : "Grand Tableau (4x9 continuous)"
-              : "3-card"
-          }
-        />
       </div>
-    </main>
+
+      {/* ── Card inspector ──────────────────────────────────── */}
+      <CardInspector state={state} position={state.selectedCardPosition} />
+
+      <SiteFooter />
+    </div>
   );
 }

@@ -1,22 +1,41 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { BrandHeader } from "@/components/BrandHeader";
+import { TopNav } from "@/components/TopNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SpreadGrid } from "@/components/SpreadGrid";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { HouseAdSlot } from "@/components/HouseAdSlot";
-import { BrandFooter } from "@/components/BrandFooter";
-import { ReadingTOC } from "@/components/ReadingTOC";
 import { trackEvent } from "@/lib/analytics/ga";
 import { ritualSummaryLine } from "@/lib/engine/shuffle";
-import type { GeneratedReading, ReadingRequestPayload } from "@/lib/engine/types";
+import type { GeneratedReading, NarrativeSection, ReadingRequestPayload } from "@/lib/engine/types";
 import { useReadingState } from "@/lib/state/useReadingState";
 import { saveReadingToHistory } from "@/lib/state/storage";
-import { getTheme } from "@/lib/ui/themes";
 
 const RESULTS_LOADING_MIN_MS = 4000;
 const READING_REQUEST_TIMEOUT_MS = 15_000;
+
+const TECHNIQUE_LABELS: Record<NarrativeSection["technique"], string> = {
+  house:        "House position",
+  diagonal:     "Diagonal",
+  knight:       "Knighting",
+  proximity:    "Proximity",
+  significator: "Significator",
+  pair:         "Pairing",
+  timeline:     "Timeline",
+  synthesis:    "Synthesis",
+};
+
+function spreadLabel(state: ReturnType<typeof useReadingState>["state"]): string {
+  if (!state) return "";
+  if (state.setup.spreadType === "grand-tableau") {
+    return state.setup.gtLayout === "4x8+4"
+      ? "Grand Tableau · 4×8 + cartouche"
+      : "Grand Tableau · 4×9";
+  }
+  return "3-card spread";
+}
 
 export default function ResultsPage() {
   const router = useRouter();
@@ -26,43 +45,28 @@ export default function ResultsPage() {
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied">("idle");
   const readingRequestRef = useRef<string | null>(null);
 
-  const theme = useMemo(() => getTheme(state?.setup.themeId ?? "botanical-engraving"), [state?.setup.themeId]);
-
+  /* ── minimum loading gate ───────────────────────────────── */
   useEffect(() => {
     const timer = window.setTimeout(() => setLoadingGatePassed(true), RESULTS_LOADING_MIN_MS);
     return () => window.clearTimeout(timer);
   }, []);
 
+  /* ── routing guard ──────────────────────────────────────── */
   useEffect(() => {
     if (!ready) return;
-    if (!state) {
-      router.replace("/setup");
-      return;
-    }
-
-    if (state.stage === "ritual") {
-      router.replace("/shuffle");
-      return;
-    }
-
+    if (!state) { router.replace("/setup"); return; }
+    if (state.stage === "ritual") { router.replace("/shuffle"); return; }
     if (state.stage === "reveal") {
       const allRevealed = state.revealMap.every(Boolean);
-      if (!allRevealed) {
-        router.replace("/reveal");
-        return;
-      }
-
-      update((current) => ({
-        ...current,
-        stage: "results",
-      }));
+      if (!allRevealed) { router.replace("/reveal"); return; }
+      update((current) => ({ ...current, stage: "results" }));
     }
   }, [ready, router, state, update]);
 
+  /* ── reading generation ─────────────────────────────────── */
   useEffect(() => {
     if (!ready || !state || state.stage !== "results" || state.reading) return;
     if (readingRequestRef.current === state.id) return;
-
     readingRequestRef.current = state.id;
     setReadingError(null);
 
@@ -77,33 +81,18 @@ export default function ResultsPage() {
           ritual: state.ritual,
           layout: state.layout,
         };
-
         const response = await fetch("/api/reading", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           signal: controller.signal,
           body: JSON.stringify({ state: requestPayload }),
         });
-
-        if (!response.ok) {
-          throw new Error("Reading generation failed.");
-        }
-
+        if (!response.ok) throw new Error("Reading generation failed.");
         const payload = (await response.json()) as { reading?: GeneratedReading };
-
-        if (!payload.reading) {
-          throw new Error("No reading returned.");
-        }
-
+        if (!payload.reading) throw new Error("No reading returned.");
         update((current) => {
           if (current.id !== state.id || current.reading) return current;
-
-          const updated = {
-            ...current,
-            reading: payload.reading ?? null,
-          };
+          const updated = { ...current, reading: payload.reading ?? null };
           if (updated.reading) saveReadingToHistory(updated);
           return updated;
         });
@@ -117,7 +106,7 @@ export default function ResultsPage() {
         const isTimeout = error instanceof DOMException && error.name === "AbortError";
         setReadingError(
           isTimeout
-            ? "Reading generation took too long. Please try again."
+            ? "The reading took too long. Please try again."
             : "The reading did not come through cleanly. Please try again.",
         );
         trackEvent("reading_generation_failed", {
@@ -132,7 +121,7 @@ export default function ResultsPage() {
     })();
   }, [ready, state, update]);
 
-
+  /* ── share / copy ───────────────────────────────────────── */
   const copyReading = async () => {
     if (!state?.reading) return;
     const parts = [
@@ -146,16 +135,12 @@ export default function ResultsPage() {
     try {
       if (navigator.share) {
         await navigator.share({ title: "My 36 Cards Reading", text });
-        setCopyStatus("copied");
-        setTimeout(() => setCopyStatus("idle"), 2000);
-        return;
+      } else {
+        await navigator.clipboard.writeText(text);
       }
-      await navigator.clipboard.writeText(text);
       setCopyStatus("copied");
       setTimeout(() => setCopyStatus("idle"), 2000);
-    } catch {
-      // cancelled or unavailable
-    }
+    } catch { /* cancelled or unavailable */ }
   };
 
   const startNewReading = () => {
@@ -170,22 +155,29 @@ export default function ResultsPage() {
     router.push("/setup");
   };
 
+  /* ── loading / error states ─────────────────────────────── */
   if (!loadingGatePassed || !ready) {
     return <LoadingScreen mode="immersive" />;
   }
 
   if (state?.stage === "results" && !state.reading && readingError) {
     return (
-      <main className={`${theme.bodyClass} ${theme.displayFontClass} ${theme.bodyFontClass} min-h-screen px-4 py-5 sm:px-6 lg:px-8`}>
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-4">
-          <BrandHeader compact />
-          <section className="ritual-panel page-reveal p-5">
-            <span className="section-kicker">Reading Error</span>
-            <h1 className="mt-3 text-3xl font-semibold">We need one more try.</h1>
-            <p className="mt-3 max-w-2xl text-sm text-[color:var(--theme-muted,var(--brand-muted))]">
+      <>
+        <div className="surface-ink">
+          <TopNav activePage={undefined} />
+        </div>
+        <div className="surface-vellum" style={{ minHeight: "100vh" }}>
+          <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
+            <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20, opacity: 0.8 }}>
+              Reading error
+            </p>
+            <h1 className="display" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 0.95, margin: "0 0 24px" }}>
+              <em>One more try.</em>
+            </h1>
+            <p style={{ fontSize: 17, lineHeight: 1.75, opacity: 0.7, maxWidth: 560, marginBottom: 32 }}>
               {readingError}
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <button
                 type="button"
                 onClick={() => {
@@ -197,18 +189,18 @@ export default function ResultsPage() {
                     reading_style: state.setup.readingStyle,
                   });
                 }}
-                className="btn-primary rounded-full px-4 py-2 text-sm font-semibold"
+                className="btn"
               >
-                Try Again
+                Try again
               </button>
-              <button type="button" onClick={startNewReading} className="btn-ghost rounded-full px-4 py-2 text-sm font-semibold">
-                Start New Reading
+              <button type="button" onClick={startNewReading} className="btn btn-ghost-dark">
+                New reading
               </button>
             </div>
-          </section>
-          <BrandFooter spreadLabel={state.setup.spreadType === "grand-tableau" ? (state.setup.gtLayout === "4x8+4" ? "Grand Tableau (4x8 + 4 cartouche)" : "Grand Tableau (4x9 continuous)") : "3-card"} />
+          </div>
         </div>
-      </main>
+        <SiteFooter />
+      </>
     );
   }
 
@@ -216,50 +208,69 @@ export default function ResultsPage() {
     return <LoadingScreen mode="immersive" />;
   }
 
-  const subjectLabel = state.reading.subjectLabel;
-  const resolvedTheme = state.reading.themeOverlay ?? null;
-  const gtLayoutLabel =
-    state.setup.gtLayout === "4x8+4" ? "Grand Tableau (4x8 + 4 cartouche)" : "Grand Tableau (4x9 continuous)";
+  const reading = state.reading;
+  const label = spreadLabel(state);
+  const styleLabel = state.setup.readingStyle === "deep_dive" ? "Deep dive" : "Quick";
+  const subjectLabel = reading.subjectLabel;
+  const resolvedTheme = reading.themeOverlay ?? null;
+  const dateStr = new Date(state.createdAt).toLocaleDateString("en-AU", {
+    day: "numeric", month: "long", year: "numeric",
+  });
 
   return (
-    <main className={`${theme.bodyClass} ${theme.displayFontClass} ${theme.bodyFontClass} min-h-screen px-4 py-5 sm:px-6 lg:px-8`}>
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4">
-        <BrandHeader compact />
+    <>
+      <div className="surface-ink">
+        <TopNav activePage={undefined} />
+      </div>
 
-        <section>
-          <article className="ritual-panel page-reveal p-5">
-            <header className="flex flex-wrap items-start justify-between gap-3">
-              <div>
-                <span className="section-kicker">Interpretation</span>
-                <h1 className="mt-2 text-3xl font-semibold">Your Reading Results</h1>
-                {state.setup.question ? (
-                  <p className="mt-2 max-w-2xl border-l-2 border-[color:var(--theme-accent,var(--brand-accent))] pl-3 text-base italic text-[color:var(--theme-text,var(--brand-text))]">
-                    &ldquo;{state.setup.question}&rdquo;
-                  </p>
-                ) : null}
-                <p className="mt-1 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">{new Date(state.createdAt).toLocaleString()}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">
-                  Spread: {state.setup.spreadType === "grand-tableau" ? gtLayoutLabel : "3-card"}
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">
-                  Style: {state.setup.readingStyle === "deep_dive" ? "Deep Dive" : "Quick"}
-                </p>
-                {state.setup.spreadType === "grand-tableau" ? (
-                  <p className="mt-1 text-xs uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">
-                    Houses: {state.setup.includeHouses ? "Included" : "Not Included"}
-                  </p>
-                ) : null}
-                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">Subject: {subjectLabel}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.12em] text-[color:var(--theme-muted,var(--brand-muted))]">
-                  Theme: {resolvedTheme?.resolvedThemeLabel ?? "Auto"} ({resolvedTheme?.mode ?? "explicit"})
-                </p>
-                {resolvedTheme?.subjectContextNote ? (
-                  <p className="mt-1 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">{resolvedTheme.subjectContextNote}</p>
-                ) : null}
-              </div>
-            </header>
+      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
+        <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
 
-            <div className="ritual-panel-soft mt-4 p-3">
+          {/* ── Reading header ──────────────────────────── */}
+          <div style={{
+            paddingBottom: 48,
+            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            maxWidth: 760,
+          }}>
+            <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 16, opacity: 0.8 }}>
+              Interpretation
+            </p>
+            <h1 className="display" style={{ fontSize: "clamp(40px, 5.5vw, 72px)", lineHeight: 0.95, margin: "0 0 20px" }}>
+              <em>Your reading.</em>
+            </h1>
+
+            {state.setup.question && (
+              <p style={{
+                fontSize: "clamp(15px, 1.3vw, 18px)",
+                lineHeight: 1.65,
+                fontStyle: "italic",
+                opacity: 0.75,
+                maxWidth: 600,
+                marginBottom: 20,
+                paddingLeft: 20,
+                borderLeft: "2px solid var(--ember)",
+              }}>
+                &ldquo;{state.setup.question}&rdquo;
+              </p>
+            )}
+
+            <p className="mono" style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.4 }}>
+              {dateStr} · {label} · {styleLabel} · {subjectLabel}
+              {resolvedTheme?.resolvedThemeLabel ? ` · ${resolvedTheme.resolvedThemeLabel}` : ""}
+            </p>
+          </div>
+
+          {/* ── Spread overview ─────────────────────────── */}
+          <div style={{
+            padding: "40px 0",
+            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+          }}>
+            <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 24 }}>The spread</p>
+            <div style={{
+              border: "var(--rule) solid var(--rule-color-alt)",
+              padding: "24px",
+              overflowX: "auto",
+            }}>
               <SpreadGrid
                 spreadType={state.setup.spreadType}
                 layout={state.layout}
@@ -273,93 +284,183 @@ export default function ResultsPage() {
                 readonly
               />
             </div>
+          </div>
 
-            <div className="ritual-panel-soft mt-3 p-3">
-              <p className="text-sm text-[color:var(--theme-text,var(--brand-text))]">{state.reading.intro}</p>
-            </div>
+          {/* ── Intro ───────────────────────────────────── */}
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", maxWidth: 720 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.8, opacity: 0.75 }}>{reading.intro}</p>
+          </div>
 
-            <div className="mt-3">
-              <HouseAdSlot id="ad-first-paragraph" variant="standard" />
-            </div>
+          <div style={{ marginBottom: 0 }}>
+            <HouseAdSlot id="ad-first-paragraph" variant="standard" />
+          </div>
 
-            <div className="ritual-panel-soft mt-4 p-3 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">
-              <p>Ritual details: {ritualSummaryLine(state.ritual.shuffleRun, state.ritual.cutStep)}</p>
-              <p className="mt-1">Generated narrative length: {state.reading.wordCount} words</p>
-            </div>
+          {/* ── Ritual detail (collapsed) ────────────────── */}
+          <div style={{
+            padding: "20px 0",
+            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+          }}>
+            <p className="mono" style={{ fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.35 }}>
+              {ritualSummaryLine(state.ritual.shuffleRun, state.ritual.cutStep)}
+              {" · "}
+              {reading.wordCount} words
+            </p>
+          </div>
 
-            {state.setup.spreadType === "grand-tableau" && state.reading.sections.length > 3 ? (
-              <ReadingTOC sections={state.reading.sections} />
-            ) : null}
-
-            <div className="reading-prose mt-4 space-y-4">
-              {state.reading.sections.map((section, index) => (
-                <>
-                  <section
-                    id={section.id}
-                    key={section.id}
-                    className="ritual-panel-soft border-l-4 border-l-[color:var(--theme-accent,var(--brand-accent))] p-3"
-                  >
-                    <h2 className="text-xl font-semibold">{section.title}</h2>
-                    <div className="mt-2 space-y-2 text-sm text-[color:var(--theme-text,var(--brand-text))]">
-                      {section.body.split("\n").filter(Boolean).map((paragraph, pIndex) => (
-                        <p key={pIndex}>{paragraph}</p>
-                      ))}
-                    </div>
-                  </section>
-                  {index === 2 ? (
-                    <HouseAdSlot key="ad-mid" id="ad-mid-content" variant="standard" />
-                  ) : null}
-                </>
-              ))}
-            </div>
-
-            <section id="closing" className="ritual-panel-soft mt-4 border-l-4 border-l-[color:var(--theme-accent,var(--brand-accent))] p-3">
-              <h2 className="text-xl font-semibold">Conclusion</h2>
-              <p className="mt-2 text-sm text-[color:var(--theme-text,var(--brand-text))]">{state.reading.conclusion}</p>
-              {state.reading.disclaimer ? (
-                <p className="mt-3 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">{state.reading.disclaimer}</p>
-              ) : null}
-            </section>
-
-            <section
-             
-              className="ritual-panel-soft sky-cta mt-4 overflow-hidden p-4 sm:p-5"
-            >
-              <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                <div className="max-w-2xl">
-                  <span className="section-kicker">What&apos;s Next</span>
-                  <h2 className="mt-3 text-2xl font-semibold">Share your reading or ask another question.</h2>
-                  <p className="mt-2 text-sm text-[color:var(--theme-muted,var(--brand-muted))]">
-                    Send this reading to someone, or begin again with a new question and a fresh spread.
+          {/* ── Reading sections ─────────────────────────── */}
+          <div>
+            {reading.sections.map((section, index) => (
+              <div key={section.id}>
+                <div
+                  id={section.id}
+                  style={{
+                    padding: "40px 0",
+                    borderBottom: "var(--rule) solid var(--rule-color-alt)",
+                    maxWidth: 760,
+                  }}
+                >
+                  <p className="mono" style={{
+                    fontSize: 9,
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    color: "var(--ember)",
+                    opacity: 0.65,
+                    marginBottom: 12,
+                  }}>
+                    {TECHNIQUE_LABELS[section.technique] ?? section.technique}
                   </p>
+                  <h2 className="display" style={{
+                    fontSize: "clamp(22px, 2.5vw, 32px)",
+                    fontStyle: "italic",
+                    fontWeight: 400,
+                    lineHeight: 1.1,
+                    margin: "0 0 20px",
+                  }}>
+                    {section.title}
+                  </h2>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                    {section.body.split("\n").filter(Boolean).map((paragraph, pIndex) => (
+                      <p key={pIndex} style={{ fontSize: 16, lineHeight: 1.8, opacity: 0.72 }}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-
-                <div className="flex flex-wrap gap-2">
-                  <button type="button" onClick={startNewReading} className="btn-primary rounded-full px-4 py-2 text-sm font-semibold">
-                    Start New Reading
-                  </button>
-                  <button type="button" onClick={copyReading} className="btn-secondary rounded-full px-4 py-2 text-sm font-semibold">
-                    {copyStatus === "copied" ? "Shared!" : "Share Reading"}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="btn-ghost rounded-full px-4 py-2 text-sm font-semibold"
-                  >
-                    Back to Top
-                  </button>
-                </div>
+                {index === 2 && (
+                  <HouseAdSlot key="ad-mid" id="ad-mid-content" variant="standard" />
+                )}
               </div>
-            </section>
-          </article>
-        </section>
+            ))}
+          </div>
 
-        <div>
-          <HouseAdSlot id="ad-footer" variant="compact" />
+          {/* ── Conclusion ──────────────────────────────── */}
+          <div id="closing" style={{
+            padding: "40px 0",
+            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            maxWidth: 760,
+          }}>
+            <p className="mono" style={{
+              fontSize: 9,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "var(--ember)",
+              opacity: 0.65,
+              marginBottom: 12,
+            }}>
+              Synthesis
+            </p>
+            <h2 className="display" style={{
+              fontSize: "clamp(22px, 2.5vw, 32px)",
+              fontStyle: "italic",
+              fontWeight: 400,
+              lineHeight: 1.1,
+              margin: "0 0 20px",
+            }}>
+              Conclusion
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.8, opacity: 0.72 }}>{reading.conclusion}</p>
+            {reading.disclaimer && (
+              <p className="mono" style={{
+                marginTop: 24,
+                fontSize: 9,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                opacity: 0.35,
+                lineHeight: 1.7,
+              }}>
+                {reading.disclaimer}
+              </p>
+            )}
+          </div>
+
+          {/* ── CTA ─────────────────────────────────────── */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "1.2fr 1fr",
+            gap: 1,
+            background: "var(--rule-color-alt)",
+            marginTop: 0,
+          }}>
+            <div style={{ padding: "48px 0", background: "var(--vellum)" }}>
+              <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>What&apos;s next</p>
+              <h2 className="display" style={{ fontSize: "clamp(24px, 3vw, 40px)", fontStyle: "italic", fontWeight: 400, margin: "0 0 8px", lineHeight: 1.05 }}>
+                Ask another question.
+              </h2>
+              <p style={{ fontSize: 14, lineHeight: 1.65, opacity: 0.55, maxWidth: 400, marginBottom: 32 }}>
+                Begin again with a fresh spread and a new question.
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <button type="button" onClick={startNewReading} className="btn">
+                  New reading
+                </button>
+                <button type="button" onClick={copyReading} className="btn btn-ghost-dark">
+                  {copyStatus === "copied" ? "Shared!" : "Share reading"}
+                </button>
+              </div>
+            </div>
+            <div style={{ padding: "48px 0 48px 40px", background: "var(--vellum)" }}>
+              <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>Navigate</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                <button
+                  type="button"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="mono"
+                  style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "inherit" }}
+                >
+                  ↑ Back to top
+                </button>
+                {reading.sections.map((s) => (
+                  <button
+                    key={s.id}
+                    type="button"
+                    onClick={() => document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth" })}
+                    className="mono"
+                    style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.45, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "inherit" }}
+                  >
+                    {s.title}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  onClick={() => document.getElementById("closing")?.scrollIntoView({ behavior: "smooth" })}
+                  className="mono"
+                  style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.45, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "inherit" }}
+                >
+                  Conclusion
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr className="rule" style={{ borderTopColor: "var(--rule-color-alt)" }} />
+
+          <div style={{ marginTop: 0 }}>
+            <HouseAdSlot id="ad-footer" variant="compact" />
+          </div>
+
         </div>
-
-        <BrandFooter spreadLabel={state.setup.spreadType === "grand-tableau" ? gtLayoutLabel : "3-card"} />
       </div>
-    </main>
+
+      <SiteFooter />
+    </>
   );
 }
