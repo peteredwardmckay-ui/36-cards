@@ -87,6 +87,9 @@ export function TopNav({ activePage }: TopNavProps) {
         <Link href="/glossary" className={active === "glossary" ? "active" : ""}>
           Glossary
         </Link>
+        <Link href="/journal" className={active === "journal" ? "active" : ""}>
+          Journal
+        </Link>
         <button
           onClick={toggle}
           className="topnav-toggle"
