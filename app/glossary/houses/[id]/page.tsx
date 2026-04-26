@@ -49,11 +49,8 @@ export default async function HouseGlossaryPage({ params }: { params: Promise<{ 
 
   return (
     <>
-      <div className="surface-ink">
+      <div className="surface-ink" style={{ minHeight: "100vh" }}>
         <TopNav activePage="glossary" />
-      </div>
-
-      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
         <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
 
           {/* Breadcrumb */}
@@ -69,7 +66,7 @@ export default async function HouseGlossaryPage({ params }: { params: Promise<{ 
             gridTemplateColumns: card ? "200px 1fr" : "1fr",
             gap: "clamp(32px, 5vw, 64px)",
             paddingBottom: 56,
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
           }}>
             {card && (
               <div className="card-frame" style={{ width: 200, opacity: 0.75 }}>
@@ -119,23 +116,23 @@ export default async function HouseGlossaryPage({ params }: { params: Promise<{ 
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 1,
-            background: "var(--rule-color-alt)",
+            background: "var(--rule-color)",
             margin: "0",
           }}>
             {[
-              { label: "When a supportive card lands here", body: house.whenStrong },
-              { label: "When a difficult card lands here",  body: house.whenChallenged },
-            ].map(({ label, body }) => (
-              <div key={label} style={{ padding: "40px 0 40px", background: "var(--vellum)" }}>
+              { label: "When a supportive card lands here", body: house.whenStrong,     padding: "40px 40px 40px 0" },
+              { label: "When a difficult card lands here",  body: house.whenChallenged, padding: "40px 0 40px 40px" },
+            ].map(({ label, body, padding }) => (
+              <div key={label} style={{ padding, background: "var(--vellum)" }}>
                 <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 14 }}>{label}</p>
                 <p style={{ fontSize: 15, lineHeight: 1.7, opacity: 0.7, maxWidth: 480 }}>{body}</p>
               </div>
             ))}
           </div>
-          <hr className="rule" style={{ borderTopColor: "var(--rule-color-alt)" }} />
+          <hr className="rule" style={{ borderTopColor: "var(--rule-color)" }} />
 
           {/* ── How to read ───────────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
             <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>Reading this house</p>
             <p style={{ fontSize: 15, lineHeight: 1.7, opacity: 0.65, maxWidth: 680 }}>
               In the Grand Tableau, every card that lands in position {house.id} is coloured by this

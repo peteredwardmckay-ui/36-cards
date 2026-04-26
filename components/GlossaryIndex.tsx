@@ -64,11 +64,8 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
   return (
     <>
       {/* TopNav lives in its own ink strip so it stays readable on the vellum page */}
-      <div className="surface-ink">
+      <div className="surface-ink" style={{ minHeight: "100vh" }}>
         <TopNav activePage="glossary" />
-      </div>
-
-      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
         <div className="container-wide" style={{ paddingTop: 64, paddingBottom: 96 }}>
 
           {/* ── Masthead ──────────────────────────────── */}
@@ -77,7 +74,7 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
             gridTemplateColumns: "1.4fr 1fr",
             gap: "clamp(40px, 6vw, 80px)",
             paddingBottom: 56,
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
           }}>
             <div>
               <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20 }}>
@@ -101,7 +98,7 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
             justifyContent: "space-between",
             alignItems: "center",
             padding: "24px 0",
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
             flexWrap: "wrap",
             gap: 16,
           }}>
@@ -116,13 +113,13 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
                     className="mono"
                     style={{
                       padding: "10px 16px",
-                      border: `var(--rule) solid ${sel ? "var(--ink)" : "var(--rule-color-alt)"}`,
-                      color: sel ? "var(--vellum)" : "var(--ink)",
-                      background: sel ? "var(--ink)" : "transparent",
+                      border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                      color: "var(--vellum)",
+                      background: sel ? "var(--ink-3)" : "transparent",
                       fontSize: 10,
                       letterSpacing: "0.16em",
                       textTransform: "uppercase",
-                      transition: "background 0.12s, color 0.12s, border-color 0.12s",
+                      transition: "background 0.12s, border-color 0.12s",
                     }}
                   >
                     {FILTER_LABELS[id]}
@@ -136,7 +133,7 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
               <span className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.4 }}>
                 {visible.length} {visible.length === 1 ? "entry" : "entries"}
               </span>
-              <div style={{ display: "flex", border: "var(--rule) solid var(--rule-color-alt)" }}>
+              <div style={{ display: "flex", border: "var(--rule) solid var(--rule-color)" }}>
                 {(["grid", "index"] as const).map((v) => (
                   <button
                     key={v}
@@ -144,12 +141,12 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
                     className="mono"
                     style={{
                       padding: "8px 14px",
-                      background: view === v ? "var(--ink)" : "transparent",
-                      color: view === v ? "var(--vellum)" : "var(--ink)",
+                      background: view === v ? "var(--ink-3)" : "transparent",
+                      color: "var(--vellum)",
                       fontSize: 10,
                       letterSpacing: "0.16em",
                       textTransform: "uppercase",
-                      transition: "background 0.12s, color 0.12s",
+                      transition: "background 0.12s",
                     }}
                   >
                     {v}
@@ -186,7 +183,7 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "baseline",
-                    borderBottom: "var(--rule) solid var(--rule-color-alt)",
+                    borderBottom: "var(--rule) solid var(--rule-color)",
                     paddingBottom: 8,
                   }}>
                     <span className="numeral" style={{ fontSize: 18, color: "var(--ember)" }}>
@@ -211,16 +208,16 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr className="mono" style={{ textAlign: "left", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.4 }}>
-                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", width: 56 }}>№</th>
-                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", width: 180 }}>Card</th>
-                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>Meaning</th>
-                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", width: 160 }}>Keywords</th>
-                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", width: 60 }} />
+                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color)", width: 56 }}>№</th>
+                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color)", width: 180 }}>Card</th>
+                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>Meaning</th>
+                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color)", width: 160 }}>Keywords</th>
+                    <th style={{ padding: "12px 0", borderBottom: "var(--rule) solid var(--rule-color)", width: 60 }} />
                   </tr>
                 </thead>
                 <tbody>
                   {visible.map((card) => (
-                    <tr key={card.id} style={{ borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+                    <tr key={card.id} style={{ borderBottom: "var(--rule) solid var(--rule-color)" }}>
                       <td style={{ padding: "16px 0" }}>
                         <span className="numeral" style={{ fontSize: 20, color: "var(--ember)" }}>
                           {String(card.id).padStart(2, "0")}
@@ -260,7 +257,7 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
             gap: "clamp(32px, 5vw, 64px)",
             marginTop: 96,
             paddingTop: 64,
-            borderTop: "var(--rule) solid var(--rule-color-alt)",
+            borderTop: "var(--rule) solid var(--rule-color)",
           }}>
             {/* Houses */}
             <div>
@@ -311,8 +308,8 @@ export function GlossaryIndex({ cards, houses, techniques }: Props) {
                     style={{
                       textDecoration: "none",
                       color: "inherit",
-                      borderTop: i === 0 ? "var(--rule) solid var(--rule-color-alt)" : "none",
-                      borderBottom: "var(--rule) solid var(--rule-color-alt)",
+                      borderTop: i === 0 ? "var(--rule) solid var(--rule-color)" : "none",
+                      borderBottom: "var(--rule) solid var(--rule-color)",
                       padding: "20px 0",
                       display: "block",
                     }}

@@ -1,23 +1,23 @@
 "use client";
 
-const BUSY_BEAVER_URL = "https://busybeaver.art";
-const RIDDLE_URL = "https://riddlethebadger.com";
+const RIDDLE_URL   = "https://riddlethebadger.com";
+const BEAVER_URL   = "https://busybeaver.art";
 
 const ADS = [
   {
-    key: "riddle",
-    name: "Riddle the Badger",
-    tagline: "A new word puzzle every day. Free, challenging, satisfying.",
-    url: RIDDLE_URL,
-    mascot: "/brand/riddle-the-badger.png",
+    key:       "riddle",
+    name:      "Riddle the Badger",
+    tagline:   "A new word puzzle every day. Free, challenging, satisfying.",
+    url:       RIDDLE_URL,
+    mascot:    "/brand/riddle-the-badger.png",
     mascotAlt: "Riddle the Badger",
   },
   {
-    key: "beaver",
-    name: "Busy Beaver",
-    tagline: "A focus timer with cosy pixel-art scenery. Work better, one session at a time.",
-    url: BUSY_BEAVER_URL,
-    mascot: "/brand/busy-beaver.png",
+    key:       "beaver",
+    name:      "Busy Beaver",
+    tagline:   "A focus timer with cosy pixel-art scenery. Work better, one session at a time.",
+    url:       BEAVER_URL,
+    mascot:    "/brand/busy-beaver.png",
     mascotAlt: "Busy Beaver",
   },
 ];
@@ -28,35 +28,57 @@ interface HouseAdSlotProps {
   variant?: "compact" | "standard";
 }
 
-export function HouseAdSlot({ id, className }: HouseAdSlotProps) {
+export function HouseAdSlot({ id }: HouseAdSlotProps) {
   return (
-    <section id={id} className={className} aria-label="From the maker">
-      <div className="ritual-panel-soft relative overflow-hidden p-3">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--theme-accent,var(--brand-accent))] to-transparent opacity-55" />
-        <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-[color:var(--theme-muted,var(--brand-muted))]">
-          Also by the maker
-        </p>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {ADS.map((ad) => (
-            <a
-              key={ad.key}
-              href={ad.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex min-h-[44px] items-center gap-3 rounded-lg border border-[color:var(--theme-border,var(--brand-border))] p-2 transition-opacity hover:opacity-75"
-            >
-              <img
-                src={ad.mascot}
-                alt={ad.mascotAlt}
-                className="h-12 w-12 shrink-0 object-contain"
-              />
-              <div className="min-w-0">
-                <p className="text-sm font-semibold leading-snug">{ad.name}</p>
-                <p className="mt-0.5 text-xs text-[color:var(--theme-muted,var(--brand-muted))]">{ad.tagline}</p>
-              </div>
-            </a>
-          ))}
-        </div>
+    <section
+      id={id}
+      aria-label="From the maker"
+      style={{
+        padding: "24px 0",
+        borderBottom: "var(--rule) solid var(--rule-color-alt)",
+      }}
+    >
+      <p className="mono" style={{
+        fontSize: 9,
+        letterSpacing: "0.2em",
+        textTransform: "uppercase",
+        opacity: 0.4,
+        marginBottom: 16,
+      }}>
+        Also by the maker
+      </p>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "var(--rule-color-alt)" }}>
+        {ADS.map((ad) => (
+          <a
+            key={ad.key}
+            href={ad.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+              padding: "20px 24px",
+              background: "var(--vellum)",
+              color: "var(--ink)",
+              textDecoration: "none",
+              transition: "opacity 0.12s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={ad.mascot}
+              alt={ad.mascotAlt}
+              style={{ width: 48, height: 48, objectFit: "contain", flexShrink: 0 }}
+            />
+            <div>
+              <p style={{ fontSize: 15, fontWeight: 500, lineHeight: 1.3, margin: 0 }}>{ad.name}</p>
+              <p style={{ fontSize: 13, lineHeight: 1.5, opacity: 0.55, margin: "4px 0 0" }}>{ad.tagline}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   );

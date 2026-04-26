@@ -40,11 +40,8 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
 
   return (
     <>
-      <div className="surface-ink">
+      <div className="surface-ink" style={{ minHeight: "100vh" }}>
         <TopNav activePage="glossary" />
-      </div>
-
-      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
         <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
 
           {/* Breadcrumb */}
@@ -57,7 +54,7 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
           {/* ── Hero ──────────────────────────────────── */}
           <div style={{
             paddingBottom: 56,
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
             maxWidth: 760,
           }}>
             <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20, opacity: 0.8 }}>
@@ -72,12 +69,12 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
           </div>
 
           {/* ── Description ───────────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", maxWidth: 720 }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)", maxWidth: 720 }}>
             <p style={{ fontSize: 17, lineHeight: 1.75, opacity: 0.7 }}>{t.description}</p>
           </div>
 
           {/* ── How it works ──────────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
             <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 24 }}>How it works</p>
             <ol style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 16, maxWidth: 680 }}>
               {t.howItWorks.map((point, i) => (
@@ -96,7 +93,7 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 1,
-            background: "var(--rule-color-alt)",
+            background: "var(--rule-color)",
             marginBottom: 0,
           }}>
             <div style={{ padding: "40px 0 40px", background: "var(--vellum)" }}>
@@ -108,11 +105,11 @@ export default async function TechniquePage({ params }: { params: Promise<{ slug
               <p style={{ fontSize: 15, lineHeight: 1.7, fontStyle: "italic", opacity: 0.65, maxWidth: 440 }}>{t.example}</p>
             </div>
           </div>
-          <hr className="rule" style={{ borderTopColor: "var(--rule-color-alt)" }} />
+          <hr className="rule" style={{ borderTopColor: "var(--rule-color)" }} />
 
           {/* ── Other techniques ──────────────────────── */}
           {(prevTech || nextTech) && (
-            <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+            <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
               <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 20 }}>Other techniques</p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 {TECHNIQUES.filter((x) => x.slug !== t.slug).map((x) => (

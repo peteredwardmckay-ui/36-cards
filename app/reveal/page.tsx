@@ -30,9 +30,7 @@ function getGrandTableauAutoBatch(revealMap: boolean[], gtLayout: GTLayout): num
 
   if (gtLayout === "4x8+4" && mainReveal.every(Boolean)) {
     const cartoucheIndex = cartoucheReveal.findIndex((value) => !value);
-    if (cartoucheIndex >= 0) {
-      return [mainCardCount + cartoucheIndex + 1];
-    }
+    if (cartoucheIndex >= 0) return [mainCardCount + cartoucheIndex + 1];
     return [];
   }
 
@@ -44,9 +42,7 @@ function getGrandTableauAutoBatch(revealMap: boolean[], gtLayout: GTLayout): num
   for (let row = 0; row < GT_ROWS; row += 1) {
     const trigger = cols < CASCADE_TRIGGER ? cols : CASCADE_TRIGGER;
     const prereqMet = row === 0 || rowCounts[row - 1] >= trigger;
-    if (prereqMet && rowCounts[row] < cols) {
-      activeRows.push(row);
-    }
+    if (prereqMet && rowCounts[row] < cols) activeRows.push(row);
   }
 
   if (!activeRows.length) return [];
@@ -54,12 +50,8 @@ function getGrandTableauAutoBatch(revealMap: boolean[], gtLayout: GTLayout): num
   const next: number[] = [];
   const topRow = activeRows[0];
   next.push(topRow * cols + rowCounts[topRow] + 1);
-
   const bottomRow = activeRows[activeRows.length - 1];
-  if (bottomRow !== topRow) {
-    next.push(bottomRow * cols + rowCounts[bottomRow] + 1);
-  }
-
+  if (bottomRow !== topRow) next.push(bottomRow * cols + rowCounts[bottomRow] + 1);
   return next;
 }
 
@@ -152,55 +144,23 @@ export default function RevealPage() {
   const isGT = state.setup.spreadType === "grand-tableau";
 
   return (
-    <div className="surface-ink" style={{ minHeight: "100vh" }}>
+    <div className="surface-ink" style={{ minHeight: "100vh", paddingBottom: 88 }}>
       <TopNav activePage={undefined} />
 
-      <div className={isGT ? "container-wide" : "container"} style={{ paddingTop: 48, paddingBottom: 96 }}>
+      <div className="container" style={{ paddingTop: 40, paddingBottom: 40 }}>
 
-        {/* ── Header ──────────────────────────────────────── */}
-        <div style={{
-          display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "space-between",
-          paddingBottom: 32,
-          borderBottom: "var(--rule) solid var(--rule-color)",
-          flexWrap: "wrap",
-          gap: 16,
-          marginBottom: 32,
-        }}>
-          <div>
-            <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 12, opacity: 0.8 }}>
-              Turn the cards
-            </p>
-            <h1 className="display" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 0.95, margin: 0 }}>
-              <em>The spread.</em>
-            </h1>
-          </div>
-
-          {/* Progress counter */}
-          <div style={{ textAlign: "right" }}>
-            <span className="numeral" style={{ fontSize: 48, color: "var(--ember)", lineHeight: 1 }}>
-              {revealedCount}
-            </span>
-            <span className="mono" style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.4, marginLeft: 8 }}>
-              / {total}
-            </span>
-          </div>
+        {/* ── Header ─────────────────────────────────────── */}
+        <div style={{ marginBottom: 32 }}>
+          <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 10, opacity: 0.8 }}>
+            Turn the cards
+          </p>
+          <h1 className="display" style={{ fontSize: "clamp(28px, 4vw, 48px)", lineHeight: 0.95, margin: 0 }}>
+            <em>The spread.</em>
+          </h1>
         </div>
 
-        {/* ── Progress bar ────────────────────────────────── */}
-        <div style={{ height: 2, background: "var(--rule-color)", marginBottom: 40, borderRadius: 1 }}>
-          <div style={{
-            height: "100%",
-            width: `${pct}%`,
-            background: "var(--ember)",
-            transition: "width 0.3s ease",
-            borderRadius: 1,
-          }} />
-        </div>
-
-        {/* ── Spread grid ─────────────────────────────────── */}
-        <div style={{ marginBottom: 40 }}>
+        {/* ── Spread grid ────────────────────────────────── */}
+        <div style={{ maxWidth: isGT ? 900 : 560, margin: "0 auto" }}>
           <SpreadGrid
             spreadType={state.setup.spreadType}
             layout={state.layout}
@@ -216,28 +176,64 @@ export default function RevealPage() {
           />
         </div>
 
-        {/* ── Action buttons ──────────────────────────────── */}
-        <div style={{
-          display: "flex",
-          gap: 12,
-          flexWrap: "wrap",
-          paddingTop: 32,
-          borderTop: "var(--rule) solid var(--rule-color)",
-        }}>
+      </div>
+
+      {/* ── Card inspector ─────────────────────────────────── */}
+      <CardInspector state={state} position={state.selectedCardPosition} />
+
+      <SiteFooter />
+
+      {/* ── Sticky action bar ──────────────────────────────── */}
+      <div style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        background: "var(--ink)",
+        borderTop: "var(--rule) solid var(--rule-color)",
+        padding: "14px 48px",
+        display: "flex",
+        alignItems: "center",
+        gap: 24,
+      }}>
+        {/* Progress counter */}
+        <div style={{ display: "flex", alignItems: "baseline", gap: 6, flexShrink: 0 }}>
+          <span className="numeral" style={{ fontSize: 28, color: "var(--ember)", lineHeight: 1 }}>
+            {revealedCount}
+          </span>
+          <span className="mono" style={{ fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.35 }}>
+            / {total}
+          </span>
+        </div>
+
+        {/* Progress bar */}
+        <div style={{ flex: 1, height: 2, background: "var(--rule-color)", borderRadius: 1 }}>
+          <div style={{
+            height: "100%",
+            width: `${pct}%`,
+            background: "var(--ember)",
+            transition: "width 0.3s ease",
+            borderRadius: 1,
+          }} />
+        </div>
+
+        {/* Buttons */}
+        <div style={{ display: "flex", gap: 10, flexShrink: 0 }}>
           <button
             type="button"
             onClick={revealNext}
             disabled={allRevealed}
             className="mono"
             style={{
-              padding: "12px 24px",
+              padding: "10px 20px",
               border: "var(--rule) solid var(--rule-color)",
               color: "var(--vellum)",
               background: "transparent",
               fontSize: 10,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              opacity: allRevealed ? 0.3 : 1,
+              opacity: allRevealed ? 0.25 : 1,
               cursor: allRevealed ? "not-allowed" : "pointer",
               transition: "opacity 0.12s",
             }}
@@ -250,19 +246,19 @@ export default function RevealPage() {
             disabled={allRevealed}
             className="mono"
             style={{
-              padding: "12px 24px",
+              padding: "10px 20px",
               border: `var(--rule) solid ${autoRevealing ? "var(--ember)" : "var(--rule-color)"}`,
               color: "var(--vellum)",
               background: autoRevealing ? "var(--ink-3)" : "transparent",
               fontSize: 10,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              opacity: allRevealed ? 0.3 : 1,
+              opacity: allRevealed ? 0.25 : 1,
               cursor: allRevealed ? "not-allowed" : "pointer",
               transition: "background 0.12s, border-color 0.12s, opacity 0.12s",
             }}
           >
-            {autoRevealing ? "Stop auto" : "Turn all"}
+            {autoRevealing ? "Stop" : "Turn all"}
           </button>
           <button
             type="button"
@@ -270,14 +266,14 @@ export default function RevealPage() {
             disabled={!allRevealed}
             className="mono"
             style={{
-              padding: "12px 32px",
+              padding: "10px 24px",
               border: `var(--rule) solid ${allRevealed ? "var(--ember)" : "var(--rule-color)"}`,
               color: allRevealed ? "var(--ember)" : "var(--vellum)",
               background: "transparent",
               fontSize: 10,
               letterSpacing: "0.16em",
               textTransform: "uppercase",
-              opacity: allRevealed ? 1 : 0.3,
+              opacity: allRevealed ? 1 : 0.25,
               cursor: allRevealed ? "pointer" : "not-allowed",
               transition: "opacity 0.12s, border-color 0.12s, color 0.12s",
             }}
@@ -285,13 +281,7 @@ export default function RevealPage() {
             Read the cards →
           </button>
         </div>
-
       </div>
-
-      {/* ── Card inspector ──────────────────────────────────── */}
-      <CardInspector state={state} position={state.selectedCardPosition} />
-
-      <SiteFooter />
     </div>
   );
 }

@@ -134,8 +134,8 @@ export function JournalClient() {
   if (mounted && history.length === 0) {
     return (
       <>
-        <div className="surface-ink"><TopNav activePage="journal" /></div>
-        <div className="surface-vellum" style={{ minHeight: "100vh" }}>
+        <div className="surface-ink" style={{ minHeight: "100vh" }}>
+          <TopNav activePage="journal" />
           <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
             <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20, opacity: 0.8 }}>
               The Journal · Your archive
@@ -159,9 +159,8 @@ export function JournalClient() {
   /* ── Full journal ──────────────────────────────────────────── */
   return (
     <>
-      <div className="surface-ink"><TopNav activePage="journal" /></div>
-
-      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
+      <div className="surface-ink" style={{ minHeight: "100vh" }}>
+        <TopNav activePage="journal" />
         <div className="container-wide" style={{ paddingTop: 64, paddingBottom: 96 }}>
 
           {/* ── Masthead ──────────────────────────────────────── */}
@@ -170,7 +169,7 @@ export function JournalClient() {
             gridTemplateColumns: "1.2fr 1fr",
             gap: "clamp(40px, 6vw, 80px)",
             paddingBottom: 56,
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
           }}>
             <div>
               <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20 }}>
@@ -190,7 +189,7 @@ export function JournalClient() {
                 display: "flex",
                 gap: 36,
                 paddingTop: 24,
-                borderTop: "var(--rule) solid var(--rule-color-alt)",
+                borderTop: "var(--rule) solid var(--rule-color)",
                 flexWrap: "wrap",
               }}>
                 {[
@@ -210,7 +209,7 @@ export function JournalClient() {
 
           {/* ── Patterns panel ────────────────────────────────── */}
           {history.length > 0 && (
-            <div style={{ paddingTop: 56, paddingBottom: 56, borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+            <div style={{ paddingTop: 56, paddingBottom: 56, borderBottom: "var(--rule) solid var(--rule-color)" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 32, flexWrap: "wrap", gap: 12 }}>
                 <h2 className="display" style={{ fontSize: "clamp(32px, 4vw, 52px)", margin: 0, fontWeight: 400 }}>
                   <em>Patterns</em> in the archive
@@ -267,9 +266,9 @@ export function JournalClient() {
                   </p>
                   {toneSum > 0 ? (
                     <>
-                      <div style={{ display: "flex", height: 10, overflow: "hidden", border: "var(--rule) solid var(--rule-color-alt)" }}>
+                      <div style={{ display: "flex", height: 10, overflow: "hidden", border: "var(--rule) solid var(--rule-color)" }}>
                         <div style={{ flex: overallTone.pos, background: "var(--ember)" }} />
-                        <div style={{ flex: overallTone.neu, background: "var(--rule-color-alt)" }} />
+                        <div style={{ flex: overallTone.neu, background: "var(--rule-color)" }} />
                         <div style={{ flex: overallTone.neg, background: "var(--ink)" }} />
                       </div>
                       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, marginTop: 20 }}>
@@ -303,7 +302,7 @@ export function JournalClient() {
                         style={{
                           flex: 1,
                           height: count === 0 ? 4 : `${Math.round((count / maxWeek) * 80)}px`,
-                          background: count === 0 ? "var(--rule-color-alt)" : "var(--ink)",
+                          background: count === 0 ? "var(--rule-color)" : "var(--ink)",
                           transition: "height 0.3s",
                         }}
                       />
@@ -318,7 +317,7 @@ export function JournalClient() {
 
               {/* Recurring questions */}
               {recurring.length > 0 && (
-                <div style={{ marginTop: 48, paddingTop: 32, borderTop: "var(--rule) solid var(--rule-color-alt)" }}>
+                <div style={{ marginTop: 48, paddingTop: 32, borderTop: "var(--rule) solid var(--rule-color)" }}>
                   <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20 }}>Questions you have returned to</p>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 32 }}>
                     {recurring.map((g, i) => (
@@ -344,7 +343,7 @@ export function JournalClient() {
             justifyContent: "space-between",
             alignItems: "center",
             padding: "24px 0",
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
             flexWrap: "wrap",
             gap: 16,
           }}>
@@ -364,13 +363,13 @@ export function JournalClient() {
                     className="mono"
                     style={{
                       padding: "10px 16px",
-                      border: `var(--rule) solid ${sel ? "var(--ink)" : "var(--rule-color-alt)"}`,
-                      color: sel ? "var(--vellum)" : "var(--ink)",
-                      background: sel ? "var(--ink)" : "transparent",
+                      border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                      color: "var(--vellum)",
+                      background: sel ? "var(--ink-3)" : "transparent",
                       fontSize: 10,
                       letterSpacing: "0.16em",
                       textTransform: "uppercase",
-                      transition: "background 0.12s, color 0.12s, border-color 0.12s",
+                      transition: "background 0.12s, border-color 0.12s",
                     }}
                   >
                     {label}
@@ -403,7 +402,7 @@ export function JournalClient() {
                       gridTemplateColumns: "96px 1fr auto 80px",
                       gap: "clamp(16px, 3vw, 40px)",
                       padding: "32px 0",
-                      borderBottom: "var(--rule) solid var(--rule-color-alt)",
+                      borderBottom: "var(--rule) solid var(--rule-color)",
                       alignItems: "center",
                     }}
                   >

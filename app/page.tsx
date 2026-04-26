@@ -135,21 +135,27 @@ export default function HomePage() {
           </div>
 
           {/* Triptych */}
-          <div style={{ display: "flex", gap: "clamp(12px, 2vw, 28px)", justifyContent: "flex-start" }}>
-            {TRIPTYCH.map((card, i) => (
-              <div
-                key={card.id}
-                className="card-frame"
-                style={{
-                  width: "clamp(88px, 13vw, 168px)",
-                  opacity: i === 1 ? 1 : 0.65,
-                  transform: i === 0 ? "rotate(-3deg)" : i === 2 ? "rotate(2.5deg)" : "none",
-                  transformOrigin: "bottom center",
-                }}
-              >
-                <Image src={cardImg(card.id, card.slug)} alt={card.name} fill style={{ objectFit: "cover" }} />
-              </div>
-            ))}
+          <div style={{ position: "relative", height: 580 }}>
+            {/* Stars (16) — back left, tilted */}
+            <div className="card-frame" style={{ position: "absolute", top: 0, left: 0, width: 220, transform: "rotate(-3deg)", transformOrigin: "bottom center", opacity: 0.7 }}>
+              <Image src={cardImg(TRIPTYCH[0].id, TRIPTYCH[0].slug)} alt={TRIPTYCH[0].name} fill style={{ objectFit: "cover" }} />
+            </div>
+            {/* Key (33) — center, forward */}
+            <div className="card-frame" style={{ position: "absolute", top: 80, left: 200, width: 240, zIndex: 2 }}>
+              <Image src={cardImg(TRIPTYCH[1].id, TRIPTYCH[1].slug)} alt={TRIPTYCH[1].name} fill style={{ objectFit: "cover" }} />
+            </div>
+            {/* Rider (1) — back right, tilted */}
+            <div className="card-frame" style={{ position: "absolute", top: 60, left: 420, width: 220, transform: "rotate(4deg)", transformOrigin: "bottom center", opacity: 0.7 }}>
+              <Image src={cardImg(TRIPTYCH[2].id, TRIPTYCH[2].slug)} alt={TRIPTYCH[2].name} fill style={{ objectFit: "cover" }} />
+            </div>
+            {/* Coordinate readout */}
+            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, borderTop: "var(--rule) solid var(--rule-color)", paddingTop: 16, display: "flex", justifyContent: "space-between", maxWidth: 660 }}>
+              {TRIPTYCH.map((card) => (
+                <span key={card.id} className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.4 }}>
+                  {String(card.id).padStart(2, "0")} · {card.name}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Stats row */}

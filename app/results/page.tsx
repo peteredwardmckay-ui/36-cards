@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { TopNav } from "@/components/TopNav";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -163,10 +164,8 @@ export default function ResultsPage() {
   if (state?.stage === "results" && !state.reading && readingError) {
     return (
       <>
-        <div className="surface-ink">
+        <div className="surface-ink" style={{ minHeight: "100vh" }}>
           <TopNav activePage={undefined} />
-        </div>
-        <div className="surface-vellum" style={{ minHeight: "100vh" }}>
           <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
             <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20, opacity: 0.8 }}>
               Reading error
@@ -219,17 +218,14 @@ export default function ResultsPage() {
 
   return (
     <>
-      <div className="surface-ink">
+      <div className="surface-ink" style={{ minHeight: "100vh" }}>
         <TopNav activePage={undefined} />
-      </div>
-
-      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
         <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
 
           {/* ── Reading header ──────────────────────────── */}
           <div style={{
             paddingBottom: 48,
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
             maxWidth: 760,
           }}>
             <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 16, opacity: 0.8 }}>
@@ -263,11 +259,11 @@ export default function ResultsPage() {
           {/* ── Spread overview ─────────────────────────── */}
           <div style={{
             padding: "40px 0",
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
           }}>
             <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 24 }}>The spread</p>
             <div style={{
-              border: "var(--rule) solid var(--rule-color-alt)",
+              border: "var(--rule) solid var(--rule-color)",
               padding: "24px",
               overflowX: "auto",
             }}>
@@ -287,7 +283,7 @@ export default function ResultsPage() {
           </div>
 
           {/* ── Intro ───────────────────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", maxWidth: 720 }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)", maxWidth: 720 }}>
             <p style={{ fontSize: 17, lineHeight: 1.8, opacity: 0.75 }}>{reading.intro}</p>
           </div>
 
@@ -298,7 +294,7 @@ export default function ResultsPage() {
           {/* ── Ritual detail (collapsed) ────────────────── */}
           <div style={{
             padding: "20px 0",
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
           }}>
             <p className="mono" style={{ fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.35 }}>
               {ritualSummaryLine(state.ritual.shuffleRun, state.ritual.cutStep)}
@@ -315,7 +311,7 @@ export default function ResultsPage() {
                   id={section.id}
                   style={{
                     padding: "40px 0",
-                    borderBottom: "var(--rule) solid var(--rule-color-alt)",
+                    borderBottom: "var(--rule) solid var(--rule-color)",
                     maxWidth: 760,
                   }}
                 >
@@ -356,7 +352,7 @@ export default function ResultsPage() {
           {/* ── Conclusion ──────────────────────────────── */}
           <div id="closing" style={{
             padding: "40px 0",
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
             maxWidth: 760,
           }}>
             <p className="mono" style={{
@@ -398,7 +394,7 @@ export default function ResultsPage() {
             display: "grid",
             gridTemplateColumns: "1.2fr 1fr",
             gap: 1,
-            background: "var(--rule-color-alt)",
+            background: "var(--rule-color)",
             marginTop: 0,
           }}>
             <div style={{ padding: "48px 0", background: "var(--vellum)" }}>
@@ -417,6 +413,13 @@ export default function ResultsPage() {
                   {copyStatus === "copied" ? "Shared!" : "Share reading"}
                 </button>
               </div>
+              <p className="mono" style={{ marginTop: 24, fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.4 }}>
+                This reading has been saved to your{" "}
+                <Link href="/journal" style={{ color: "var(--ember)", textDecoration: "underline", textUnderlineOffset: 3 }}>
+                  journal
+                </Link>
+                .
+              </p>
             </div>
             <div style={{ padding: "48px 0 48px 40px", background: "var(--vellum)" }}>
               <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>Navigate</p>
@@ -451,7 +454,7 @@ export default function ResultsPage() {
               </div>
             </div>
           </div>
-          <hr className="rule" style={{ borderTopColor: "var(--rule-color-alt)" }} />
+          <hr className="rule" style={{ borderTopColor: "var(--rule-color)" }} />
 
           <div style={{ marginTop: 0 }}>
             <HouseAdSlot id="ad-footer" variant="compact" />

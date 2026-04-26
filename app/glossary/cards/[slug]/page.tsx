@@ -50,11 +50,8 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
 
   return (
     <>
-      <div className="surface-ink">
+      <div className="surface-ink" style={{ minHeight: "100vh" }}>
         <TopNav activePage="glossary" />
-      </div>
-
-      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
         <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
 
           {/* Breadcrumb */}
@@ -70,7 +67,7 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
             gridTemplateColumns: "200px 1fr",
             gap: "clamp(32px, 5vw, 64px)",
             paddingBottom: 56,
-            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
           }}>
             {/* Card image */}
             <div className="card-frame" style={{ width: 200 }}>
@@ -118,23 +115,23 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 1,
-            background: "var(--rule-color-alt)",
+            background: "var(--rule-color)",
             margin: "0",
           }}>
             {[
-              { label: "Caution",       body: card.caution },
-              { label: "Useful action", body: card.action  },
-            ].map(({ label, body }) => (
-              <div key={label} style={{ padding: "32px 0 32px", background: "var(--vellum)" }}>
+              { label: "Caution",       body: card.caution, padding: "32px 40px 32px 0" },
+              { label: "Useful action", body: card.action,  padding: "32px 0 32px 40px" },
+            ].map(({ label, body, padding }) => (
+              <div key={label} style={{ padding, background: "var(--vellum)" }}>
                 <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 12 }}>{label}</p>
                 <p style={{ fontSize: 15, lineHeight: 1.65, opacity: 0.7 }}>{body}</p>
               </div>
             ))}
           </div>
-          <hr className="rule" style={{ borderTopColor: "var(--rule-color-alt)" }} />
+          <hr className="rule" style={{ borderTopColor: "var(--rule-color)" }} />
 
           {/* ── Core Variants ─────────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
             <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 20 }}>Core variants</p>
             <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 12 }}>
               {card.coreVariants.map((v, i) => (
@@ -149,11 +146,11 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
           </div>
 
           {/* ── Domain variants ───────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
             <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 20 }}>By domain</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "clamp(16px, 3vw, 40px)" }}>
               {(["general", "love", "work"] as const).map((domain) => (
-                <div key={domain} style={{ borderTop: "var(--rule) solid var(--rule-color-alt)", paddingTop: 16 }}>
+                <div key={domain} style={{ borderTop: "var(--rule) solid var(--rule-color)", paddingTop: 16 }}>
                   <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 10 }}>{domain}</p>
                   <p style={{ fontSize: 14, lineHeight: 1.65, opacity: 0.65 }}>
                     {card.domainVariants[domain]}
@@ -165,12 +162,12 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
 
           {/* ── Common pairs ──────────────────────────── */}
           {topPairs.length > 0 && (
-            <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+            <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
               <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 8 }}>Common pairs</p>
               <p style={{ fontSize: 14, opacity: 0.5, marginBottom: 24, lineHeight: 1.55 }}>
                 When {card.name} appears beside these cards:
               </p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 1, background: "var(--rule-color-alt)" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 1, background: "var(--rule-color)" }}>
                 {topPairs.map((pair) => {
                   const partnerId = pair.a === card.id ? pair.b : pair.a;
                   const partner   = CARD_MEANINGS.find((c) => c.id === partnerId);
@@ -200,7 +197,7 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
           )}
 
           {/* ── Technique notes ───────────────────────── */}
-          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color)" }}>
             <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 20 }}>Technique notes</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(16px, 4vw, 48px)" }}>
               {[
@@ -243,6 +240,7 @@ export default async function CardGlossaryPage({ params }: { params: Promise<{ s
       </div>
 
       <SiteFooter />
+
     </>
   );
 }

@@ -1,56 +1,65 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 interface LoadingScreenProps {
   mode?: "immersive" | "transient";
 }
 
-const TRANSIENT_LOADING_DELAY_MS = 250;
+const TRANSIENT_DELAY_MS = 250;
 
 export function LoadingScreen({ mode = "transient" }: LoadingScreenProps) {
   const [visible, setVisible] = useState(mode === "immersive");
 
   useEffect(() => {
-    if (mode === "immersive") {
-      setVisible(true);
-      return;
-    }
-
-    const timer = window.setTimeout(() => setVisible(true), TRANSIENT_LOADING_DELAY_MS);
+    if (mode === "immersive") { setVisible(true); return; }
+    const timer = window.setTimeout(() => setVisible(true), TRANSIENT_DELAY_MS);
     return () => window.clearTimeout(timer);
   }, [mode]);
 
-  if (!visible) {
-    return null;
-  }
+  if (!visible) return null;
 
   return (
-    <main className="theme-ethiopian font-display-botanical font-body-quiet min-h-screen px-4 py-6 sm:px-6 lg:px-8">
-      <div className="ritual-panel page-reveal mx-auto w-full max-w-3xl overflow-hidden">
-        <div className="relative h-48 w-full overflow-hidden sm:h-64">
-          <Image
-            src="/brand/header.png"
-            alt="Lenormand cards on a dark oak table"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-        <div className="flex flex-col items-center px-6 py-8 text-center sm:py-10">
-          <Image
-            src="/brand/logo-mark.png"
-            alt="36 Cards"
-            width={180}
-            height={180}
-            className="brand-wordmark h-auto w-36 object-contain sm:w-44 [mix-blend-mode:multiply]"
-          />
-          <p className="mt-4 text-base text-[color:var(--brand-muted)]">
-            Your interpretation is loading…
-          </p>
-        </div>
+    <div className="surface-ink" style={{
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 32,
+    }}>
+      {/* Wordmark */}
+      <div style={{ textAlign: "center" }}>
+        <span className="numeral" style={{ fontSize: 48, color: "var(--ember)", lineHeight: 1 }}>36</span>
+        <span className="display" style={{ fontSize: 28, fontStyle: "italic", opacity: 0.6, marginLeft: 8 }}>Cards</span>
       </div>
-    </main>
+
+      {/* Animated rule */}
+      <div style={{ width: 120, height: 1, background: "var(--rule-color)", overflow: "hidden", position: "relative" }}>
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          background: "var(--ember)",
+          animation: "loading-sweep 1.6s ease-in-out infinite",
+        }} />
+      </div>
+
+      <p className="mono" style={{
+        fontSize: 9,
+        letterSpacing: "0.22em",
+        textTransform: "uppercase",
+        opacity: 0.35,
+      }}>
+        Your interpretation is loading
+      </p>
+
+      <style>{`
+        @keyframes loading-sweep {
+          0%   { transform: translateX(-100%); }
+          50%  { transform: translateX(0%); }
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
+    </div>
   );
 }
