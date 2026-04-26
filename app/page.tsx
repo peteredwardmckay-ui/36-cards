@@ -288,11 +288,11 @@ export default function HomePage() {
                 cta: "Begin a Tableau",
               },
             ].map(({ label, subtitle, body, link, cta }) => (
-              <div key={label} style={{ padding: "48px 40px", background: "var(--ink-2)" }}>
+              <div key={label} style={{ padding: "48px 40px", background: "var(--ink-2)", color: "var(--vellum)" }}>
                 <p className="smallcaps" style={{ opacity: 0.4, marginBottom: "12px" }}>{subtitle}</p>
                 <h3 className="display" style={{ fontSize: "36px", marginBottom: "16px" }}>{label}</h3>
                 <p style={{ opacity: 0.6, lineHeight: 1.65, marginBottom: "32px", fontSize: "15px" }}>{body}</p>
-                <Link href={link} className="btn btn-ghost-light" style={{ fontSize: "10px" }}>
+                <Link href={link} className="btn" style={{ fontSize: "10px" }}>
                   {cta}
                 </Link>
               </div>

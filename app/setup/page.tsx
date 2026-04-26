@@ -43,10 +43,10 @@ const SIGNIFICATOR_OPTIONS: {
   cardId: number | null;
   cardSlug: string | null;
 }[] = [
-  { id: "self",         label: "The Querent (29)",   cardId: 29, cardSlug: "woman" },
-  { id: "other",        label: "The Gentleman (28)", cardId: 28, cardSlug: "man" },
-  { id: "relationship", label: "Relationship axis",  cardId: null, cardSlug: null },
-  { id: "open",         label: "No significator",    cardId: null, cardSlug: null },
+  { id: "self",         label: "The Querent (29)",     cardId: 29, cardSlug: "querent" },
+  { id: "other",        label: "The Counterpart (28)", cardId: 28, cardSlug: "counterpart" },
+  { id: "relationship", label: "Relationship axis",    cardId: null, cardSlug: null },
+  { id: "open",         label: "No significator",      cardId: null, cardSlug: null },
 ];
 
 /* =========================================================
@@ -173,15 +173,14 @@ export default function SetupPage() {
               marginBottom: 80,
             }}>
               <div>
-                <p className="smallcaps" style={{ opacity: 0.45, marginBottom: 20 }}>Setup · Folio I</p>
                 <h1 className="display" style={{
                   fontSize: "clamp(56px, 7vw, 100px)",
                   margin: 0,
                   fontWeight: 300,
                   lineHeight: 0.95,
                 }}>
-                  Frame the<br />
-                  <span className="italic-display" style={{ color: "var(--ember)" }}>asking.</span>
+                  Frame your<br />
+                  <span className="italic-display" style={{ color: "var(--ember)" }}>question.</span>
                 </h1>
               </div>
               <p style={{
@@ -350,9 +349,9 @@ export default function SetupPage() {
                           className="mono"
                           style={{
                             padding: "10px 16px",
-                            border: "var(--rule) solid currentColor",
-                            color: sel ? "var(--ink)" : "var(--vellum)",
-                            background: sel ? "var(--vellum)" : "transparent",
+                            border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                            color: "var(--vellum)",
+                            background: sel ? "var(--ink-3)" : "transparent",
                             fontSize: 10,
                             letterSpacing: "0.16em",
                             textTransform: "uppercase",
@@ -384,9 +383,9 @@ export default function SetupPage() {
                         className="mono"
                         style={{
                           padding: "12px 20px",
-                          border: "var(--rule) solid currentColor",
-                          color: sel ? "var(--ink)" : "var(--vellum)",
-                          background: sel ? "var(--vellum)" : "transparent",
+                          border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                          color: "var(--vellum)",
+                          background: sel ? "var(--ink-3)" : "transparent",
                           fontSize: 11,
                           letterSpacing: "0.16em",
                           textTransform: "uppercase",
@@ -420,14 +419,14 @@ export default function SetupPage() {
                           className="mono"
                           style={{
                             padding: "10px 14px",
-                            border: "var(--rule) solid currentColor",
-                            color: sel ? "var(--ink)" : "var(--vellum)",
-                            background: sel ? "var(--vellum)" : "transparent",
+                            border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                            color: "var(--vellum)",
+                            background: sel ? "var(--ink-3)" : "transparent",
                             fontSize: 10,
                             letterSpacing: "0.15em",
                             textTransform: "uppercase",
                             textAlign: "left",
-                            transition: "background 0.12s, color 0.12s",
+                            transition: "background 0.12s, border-color 0.12s",
                           }}
                         >
                           {subject.displayLabel}
@@ -452,13 +451,13 @@ export default function SetupPage() {
                           className="mono"
                           style={{
                             padding: "10px 16px",
-                            border: "var(--rule) solid currentColor",
-                            color: sel ? "var(--ink)" : "var(--vellum)",
-                            background: sel ? "var(--vellum)" : "transparent",
+                            border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                            color: "var(--vellum)",
+                            background: sel ? "var(--ink-3)" : "transparent",
                             fontSize: 10,
                             letterSpacing: "0.15em",
                             textTransform: "uppercase",
-                            transition: "background 0.12s, color 0.12s",
+                            transition: "background 0.12s, border-color 0.12s",
                           }}
                         >
                           {t.displayLabel}
@@ -543,11 +542,11 @@ export default function SetupPage() {
                             aria-pressed={sel}
                             style={{
                               padding: "12px 20px",
-                              border: "var(--rule) solid currentColor",
-                              color: sel ? "var(--ink)" : "var(--vellum)",
-                              background: sel ? "var(--vellum)" : "transparent",
+                              border: `var(--rule) solid ${sel ? "var(--ember)" : "var(--rule-color)"}`,
+                              color: sel ? "var(--vellum)" : "var(--vellum)",
+                              background: sel ? "var(--ink-3)" : "transparent",
                               textAlign: "left",
-                              transition: "background 0.12s, color 0.12s",
+                              transition: "background 0.12s, border-color 0.12s",
                             }}
                           >
                             <div className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase" }}>

@@ -1,128 +1,155 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BrandHeader } from "@/components/BrandHeader";
-import { BrandFooter } from "@/components/BrandFooter";
+import { TopNav } from "@/components/TopNav";
+import { SiteFooter } from "@/components/SiteFooter";
 import { TECHNIQUES, TECHNIQUES_BY_SLUG } from "@/lib/content/techniques";
 
 export function generateStaticParams() {
-  return TECHNIQUES.map((item) => ({ slug: item.slug }));
+  return TECHNIQUES.map((t) => ({ slug: t.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const technique = TECHNIQUES_BY_SLUG.get(slug);
-
-  if (!technique) {
-    return {
-      metadataBase: new URL("https://36cards.com"),
-      title: "Technique Glossary",
-      description: "Lenormand reading techniques and reference notes.",
-      alternates: {
-        canonical: "/glossary/techniques",
-      },
-    };
-  }
-
+  const t = TECHNIQUES_BY_SLUG.get(slug);
+  if (!t) return { title: "Technique Glossary" };
   return {
     metadataBase: new URL("https://36cards.com"),
-    title: technique.title,
-    description: `${technique.title}: ${technique.summary}`,
-    alternates: {
-      canonical: `/glossary/techniques/${technique.slug}`,
-    },
+    title: t.title,
+    description: `${t.title}: ${t.summary}`,
+    alternates: { canonical: `/glossary/techniques/${t.slug}` },
     openGraph: {
-      title: `${technique.title} - 36 Cards Glossary`,
-      description: `${technique.title}: ${technique.summary}`,
-      url: `https://36cards.com/glossary/techniques/${technique.slug}`,
-      siteName: "36 Cards",
-      type: "article",
-      images: [
-        {
-          url: "https://36cards.com/brand/og-image-1200x630.png",
-          width: 1200,
-          height: 630,
-          alt: `${technique.title} glossary page`,
-        },
-      ],
+      title: `${t.title} — 36 Cards Glossary`,
+      description: t.summary,
+      url: `https://36cards.com/glossary/techniques/${t.slug}`,
+      siteName: "36 Cards", type: "article",
+      images: [{ url: "https://36cards.com/brand/og-image-1200x630.png", width: 1200, height: 630, alt: `${t.title} glossary page` }],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: `${technique.title} - 36 Cards Glossary`,
-      description: `${technique.title}: ${technique.summary}`,
-      images: ["https://36cards.com/brand/og-image-1200x630.png"],
-    },
+    twitter: { card: "summary_large_image", title: `${t.title} — 36 Cards Glossary`, description: t.summary, images: ["https://36cards.com/brand/og-image-1200x630.png"] },
   };
 }
 
 export default async function TechniquePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const technique = TECHNIQUES_BY_SLUG.get(slug);
-  if (!technique) return notFound();
+  const t = TECHNIQUES_BY_SLUG.get(slug);
+  if (!t) return notFound();
 
-  const techIndex = TECHNIQUES.findIndex((t) => t.slug === slug);
-  const prevTech = techIndex > 0 ? TECHNIQUES[techIndex - 1] : null;
-  const nextTech = techIndex < TECHNIQUES.length - 1 ? TECHNIQUES[techIndex + 1] : null;
+  const idx      = TECHNIQUES.findIndex((x) => x.slug === slug);
+  const prevTech = idx > 0 ? TECHNIQUES[idx - 1] : null;
+  const nextTech = idx < TECHNIQUES.length - 1 ? TECHNIQUES[idx + 1] : null;
 
   return (
-    <main className="min-h-screen px-4 py-5 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-4xl flex-col gap-4">
-        <BrandHeader compact />
-        <article className="rounded-2xl border border-[color:var(--brand-border)] bg-[color:var(--brand-panel)] p-5 shadow-ritual">
-          <p className="text-xs uppercase tracking-[0.12em] text-[color:var(--brand-muted)]">
-            <Link href="/glossary" className="hover:underline">Glossary</Link> / Techniques
-          </p>
-          <h1 className="mt-2 text-3xl font-semibold">{technique.title}</h1>
-          <p className="mt-2 text-sm text-[color:var(--brand-muted)]">{technique.summary}</p>
-          <p className="mt-3 text-sm leading-relaxed text-[color:var(--brand-text)]">{technique.description}</p>
+    <>
+      <div className="surface-ink">
+        <TopNav activePage="glossary" />
+      </div>
 
-          <section className="mt-5">
-            <h2 className="text-xl font-semibold">How It Works</h2>
-            <ul className="mt-3 space-y-3 text-sm text-[color:var(--brand-muted)]">
-              {technique.howItWorks.map((point) => (
-                <li key={point} className="flex gap-3">
-                  <span className="mt-1 block h-1.5 w-1.5 shrink-0 rounded-full bg-[color:var(--brand-accent)]" />
-                  <span>{point}</span>
+      <div className="surface-vellum" style={{ minHeight: "100vh" }}>
+        <div className="container" style={{ paddingTop: 56, paddingBottom: 96 }}>
+
+          {/* Breadcrumb */}
+          <p className="mono" style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.4, marginBottom: 48 }}>
+            <Link href="/glossary" style={{ color: "inherit" }}>Glossary</Link>
+            {" / Techniques / "}
+            {t.title}
+          </p>
+
+          {/* ── Hero ──────────────────────────────────── */}
+          <div style={{
+            paddingBottom: 56,
+            borderBottom: "var(--rule) solid var(--rule-color-alt)",
+            maxWidth: 760,
+          }}>
+            <p className="smallcaps" style={{ color: "var(--ember)", marginBottom: 20, opacity: 0.8 }}>
+              Reading technique
+            </p>
+            <h1 className="display" style={{ fontSize: "clamp(44px, 6vw, 80px)", lineHeight: 0.95, margin: "0 0 24px" }}>
+              <em>{t.title}</em>
+            </h1>
+            <p style={{ fontSize: "clamp(16px, 1.4vw, 20px)", lineHeight: 1.6, opacity: 0.65 }}>
+              {t.summary}
+            </p>
+          </div>
+
+          {/* ── Description ───────────────────────────── */}
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)", maxWidth: 720 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.75, opacity: 0.7 }}>{t.description}</p>
+          </div>
+
+          {/* ── How it works ──────────────────────────── */}
+          <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+            <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 24 }}>How it works</p>
+            <ol style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 16, maxWidth: 680 }}>
+              {t.howItWorks.map((point, i) => (
+                <li key={i} style={{ display: "flex", gap: 20, alignItems: "baseline" }}>
+                  <span className="numeral" style={{ color: "var(--ember)", fontSize: 20, flexShrink: 0, opacity: 0.55, minWidth: 28 }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span style={{ fontSize: 15, lineHeight: 1.7, opacity: 0.7 }}>{point}</span>
                 </li>
               ))}
-            </ul>
-          </section>
+            </ol>
+          </div>
 
-          <section className="mt-5 rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
-            <h2 className="text-lg font-semibold">Why It Matters</h2>
-            <p className="mt-2 text-sm leading-relaxed text-[color:var(--brand-muted)]">{technique.whyItMatters}</p>
-          </section>
+          {/* ── Why it matters + Example ──────────────── */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 1,
+            background: "var(--rule-color-alt)",
+            marginBottom: 0,
+          }}>
+            <div style={{ padding: "40px 0 40px", background: "var(--vellum)" }}>
+              <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>Why it matters</p>
+              <p style={{ fontSize: 15, lineHeight: 1.7, opacity: 0.7, maxWidth: 440 }}>{t.whyItMatters}</p>
+            </div>
+            <div style={{ padding: "40px 0 40px 40px", background: "var(--vellum)" }}>
+              <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>Example</p>
+              <p style={{ fontSize: 15, lineHeight: 1.7, fontStyle: "italic", opacity: 0.65, maxWidth: 440 }}>{t.example}</p>
+            </div>
+          </div>
+          <hr className="rule" style={{ borderTopColor: "var(--rule-color-alt)" }} />
 
-          <section className="mt-5 rounded-xl border border-[color:var(--brand-border)] bg-white/35 p-4">
-            <h2 className="text-lg font-semibold">Example</h2>
-            <p className="mt-2 text-sm leading-relaxed text-[color:var(--brand-muted)] italic">{technique.example}</p>
-          </section>
+          {/* ── Other techniques ──────────────────────── */}
+          {(prevTech || nextTech) && (
+            <div style={{ padding: "40px 0", borderBottom: "var(--rule) solid var(--rule-color-alt)" }}>
+              <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 20 }}>Other techniques</p>
+              <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+                {TECHNIQUES.filter((x) => x.slug !== t.slug).map((x) => (
+                  <Link
+                    key={x.slug}
+                    href={`/glossary/techniques/${x.slug}`}
+                    className="mono"
+                    style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.5, textDecoration: "none", color: "inherit" }}
+                  >
+                    {x.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
-          <nav className="mt-6 flex items-center justify-between border-t border-[color:var(--brand-border)] pt-4">
+          {/* ── Prev / Next ───────────────────────────── */}
+          <div style={{ display: "flex", justifyContent: "space-between", paddingTop: 40 }}>
             {prevTech ? (
-              <Link
-                href={`/glossary/techniques/${prevTech.slug}`}
-                className="text-sm text-[color:var(--brand-muted)] hover:text-[color:var(--brand-text)] hover:underline"
-              >
-                &larr; {prevTech.title}
+              <Link href={`/glossary/techniques/${prevTech.slug}`} className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, textDecoration: "none", color: "inherit" }}>
+                ← {prevTech.title}
               </Link>
-            ) : (
-              <span />
-            )}
+            ) : <span />}
+            <Link href="/glossary" className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.4, textDecoration: "none", color: "inherit" }}>
+              All techniques
+            </Link>
             {nextTech ? (
-              <Link
-                href={`/glossary/techniques/${nextTech.slug}`}
-                className="text-sm text-[color:var(--brand-muted)] hover:text-[color:var(--brand-text)] hover:underline"
-              >
-                {nextTech.title} &rarr;
+              <Link href={`/glossary/techniques/${nextTech.slug}`} className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, textDecoration: "none", color: "inherit" }}>
+                {nextTech.title} →
               </Link>
-            ) : (
-              <span />
-            )}
-          </nav>
-        </article>
-        <BrandFooter />
+            ) : <span />}
+          </div>
+
+        </div>
       </div>
-    </main>
+
+      <SiteFooter />
+    </>
   );
 }
