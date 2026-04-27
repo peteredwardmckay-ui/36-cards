@@ -9,11 +9,15 @@ import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 // layer. 'unsafe-inline' still provides meaningful protection here because
 // all other directives (object-src, base-uri, form-action) remain strict, and
 // external scripts from unlisted hosts are still blocked regardless.
-const CONTENT_SECURITY_POLICY = `
+function contentSecurityPolicy(phase: string): string {
+  const devScriptSource = phase === PHASE_DEVELOPMENT_SERVER ? "\n    'unsafe-eval'" : "";
+
+  return `
   default-src 'self';
   script-src
     'self'
     'unsafe-inline'
+    ${devScriptSource}
     https://www.googletagmanager.com
     https://pagead2.googlesyndication.com;
   style-src
@@ -39,23 +43,26 @@ const CONTENT_SECURITY_POLICY = `
   base-uri   'self';
   form-action 'self';
 `
-  .replace(/\s+/g, " ")
-  .trim();
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-const SECURITY_HEADERS = [
-  { key: "Content-Security-Policy", value: CONTENT_SECURITY_POLICY },
-  // Prevent the page from being embedded in an iframe on other domains
-  { key: "X-Frame-Options", value: "SAMEORIGIN" },
-  // Block MIME-type sniffing (already set on API routes; add globally here)
-  { key: "X-Content-Type-Options", value: "nosniff" },
-  // Send origin only for same-origin requests; no referrer for cross-origin
-  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  // Disable browser features that this app does not use
-  {
-    key: "Permissions-Policy",
-    value: "camera=(), microphone=(), geolocation=(), payment=()",
-  },
-];
+function securityHeaders(phase: string) {
+  return [
+    { key: "Content-Security-Policy", value: contentSecurityPolicy(phase) },
+    // Prevent the page from being embedded in an iframe on other domains
+    { key: "X-Frame-Options", value: "SAMEORIGIN" },
+    // Block MIME-type sniffing (already set on API routes; add globally here)
+    { key: "X-Content-Type-Options", value: "nosniff" },
+    // Send origin only for same-origin requests; no referrer for cross-origin
+    { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+    // Disable browser features that this app does not use
+    {
+      key: "Permissions-Policy",
+      value: "camera=(), microphone=(), geolocation=(), payment=()",
+    },
+  ];
+}
 
 export default function createNextConfig(phase: string): NextConfig {
   return {
@@ -67,7 +74,7 @@ export default function createNextConfig(phase: string): NextConfig {
       return [
         {
           source: "/(.*)",
-          headers: SECURITY_HEADERS,
+          headers: securityHeaders(phase),
         },
       ];
     },

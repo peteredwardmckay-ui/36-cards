@@ -5046,7 +5046,7 @@ const SUBJECT_HOUSE_ASSOCIATION_NOTES: Partial<Record<SubjectId, Partial<Record<
       "where the querent's self-protective intelligence is most active and most needs honest examination",
     ],
     15: [
-      "power, stewardship, and the question of how to carry strength without letting control become the answer to everything",
+      "power, stewardship, and the question of how to carry strength without letting control become the whole response",
       "the power or resource dimension of growth — where personal strength, authority, and self-sufficiency are the main features",
       "the managing or protective inner dimension — where the force available to carry or protect the growth is operating",
       "where the querent's primary inner resources and the capacity for genuine self-direction are strongest",
@@ -10222,7 +10222,7 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
       "This pairing says home environment and repeated stress are feeding each other; changing the setup changes the loop",
     ],
     "4-33": [
-      "This pairing says the answer to the care question is inside the existing setup — one concrete adjustment to the routine is already available",
+      "This pairing says the care question can be answered inside the existing setup — one concrete adjustment to the routine is already available",
       "This pairing says what holds steady and what unlocks progress are the same thing here; look for the answer in what the animal already knows",
     ],
     "5-8": [
@@ -10493,7 +10493,7 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
       "This pairing says repeated conflict or unresolved tension is moving through a loyal connection, so the pattern needs addressing before the friendship can carry more weight",
     ],
     "12-18": [
-      "This pairing says nervous chatter or anxious social interaction is wearing on a loyal connection, so quieter and more direct contact would serve the friendship better",
+      "This pairing says nervous chatter or anxious social interaction is wearing on a loyal connection, so quieter and more direct communication would serve the friendship better",
     ],
     "13-18": [
       "This pairing says a new friendship or fresh beginning in a loyal connection is forming, so the relationship benefits from a light touch and open expectations",
@@ -11870,7 +11870,7 @@ const SUBJECT_PAIR_ASSOCIATION_OVERRIDES: Partial<Record<SubjectId, Record<strin
       "This pairing says a new spiritual beginning is being illuminated by warmth and vitality, so the fresh start has real energy behind it",
     ],
     "16-33": [
-      "This pairing says guidance and clarity are converging, so the answer to the spiritual question is closer than uncertainty makes it feel",
+      "This pairing says guidance and clarity are converging, so the spiritual question is less out of reach than uncertainty makes it feel",
     ],
     "21-36": [
       "This pairing says an obstacle is meeting a deep obligation, so the blockage is not random — it is asking something specific of your practice",
@@ -12634,7 +12634,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     ],
     33: [
       "identify the specific thing that would actually unlock the wider field dynamic and bring it forward",
-      "trust that the answer to the community question is already present if the group is willing to look honestly",
+      "trust that the community question already has a workable response if the group is willing to look honestly",
       "identify the one thing that would actually move the group forward and bring it to the table",
       "move through the opening in this zone — the community's path forward here is genuinely available and waiting to be used",
     ],
@@ -12852,7 +12852,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
     ],
     33: [
       "identify the specific thing that would actually unlock the friendship dynamic and say it or do it",
-      "trust that the answer to the social or friendship difficulty is more available than anxiety is making it feel",
+      "trust that the social or friendship difficulty has more available support than anxiety is making it feel",
       "name what would actually help the social dynamic and act on it rather than waiting for the other person to notice first",
       "take the social opening in this area seriously — the access or connection available here is genuine and should be moved through",
     ],
@@ -13982,7 +13982,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "use the small opening to improve tone, timing, or handling without pretending it resolves the whole matter",
       "work the goodwill or procedural opening only where it helps the file move cleanly and credibly",
       "use the favourable condition, approval, or clear response while it is available rather than holding out for better terms",
-      "receive the positive legal or administrative signal as the opening it is rather than overcomplicating what has already been approved",
+      "receive the positive legal or administrative signal as a real opening rather than overcomplicating what has already been approved",
     ],
     4: [
       "stabilize the base terms, file structure, or fixed obligations the rest of the matter depends on",
@@ -14636,7 +14636,7 @@ const SUBJECT_HOUSE_ACTION_OVERRIDES: Partial<Record<SubjectId, Partial<Record<n
       "use goodwill where it helps, but make the support concrete before you count on it",
       "let the favorable tone open a door, then check whether the terms actually hold",
       "use the favourable condition, approval, or clear response while it is available rather than holding out for better terms",
-      "receive the positive legal or administrative signal as the opening it is rather than overcomplicating what has already been approved",
+      "receive the positive legal or administrative signal as a real opening rather than overcomplicating what has already been approved",
     ],
     5: [
       "back the slow repair that actually strengthens the base",
@@ -15955,6 +15955,1535 @@ export function createReadingContext(): ReadingContext {
   return { usedCardPhrases: new Map(), usedHousePhrases: new Map() };
 }
 
+type CardNarrativePosition = "situation" | "pivot" | "direction";
+
+const CARD_POSITION_ASSOCIATION_NOTES: Partial<Record<number, Record<CardNarrativePosition, string[]>>> = {
+  1: {
+    situation: [
+      "the first thing entering the field, especially the message or event that changes what can be considered next",
+      "incoming movement that sets the pace before the rest of the spread has time to settle",
+      "the arrival, invitation, or update that gives the reading its opening momentum",
+      "new information crossing the threshold and forcing the situation to become more immediate",
+      "the early signal that tells you the situation is already moving, even if the full context is not here yet",
+    ],
+    pivot: [
+      "the message that changes the middle of the story, making response more important than speculation",
+      "the point where waiting for more context starts to cost more than answering what has already arrived",
+      "a live update that can redirect the sequence if it is handled while the window is still open",
+      "the hinge where news, contact, or movement asks for a practical response instead of passive watching",
+      "the moment when the reading stops being theoretical because something has arrived and needs handling",
+    ],
+    direction: [
+      "movement toward a next contact, update, or practical step that should be answered promptly",
+      "a forward line that depends on responding to what arrives rather than trying to control the whole route",
+      "the next signal in the chain, where momentum builds through contact, confirmation, or timely action",
+      "a direction shaped by quick communication and the willingness to verify details as they come in",
+      "the path opening through news, arrival, or invitation rather than through long deliberation",
+    ],
+  },
+  2: {
+    situation: [
+      "a small opening already present at the start, useful precisely because it is modest and workable",
+      "early ease in the situation, where a brief window can matter if it is used instead of admired",
+      "a lighter starting condition that does not solve everything but gives the reading room to breathe",
+      "a passing advantage near the beginning, small enough to miss but real enough to use",
+      "the first sign that the field is not closed, even if the opportunity is brief",
+    ],
+    pivot: [
+      "the hinge where a small chance has to be taken seriously before it passes",
+      "a brief window in the middle of the spread that can redirect the story if acted on cleanly",
+      "the point where ease becomes useful only if it is turned into a concrete move",
+      "a low-friction opening that asks for timing, not overanalysis",
+      "the moment when luck stops being background mood and becomes the thing to use",
+    ],
+    direction: [
+      "a forward path through the small chance that is actually available rather than the larger one you might prefer",
+      "movement through a brief improvement, provided it is used before conditions change again",
+      "a next step that should stay light, quick, and proportionate to the opening being offered",
+      "the direction of a modest but real opportunity that works because it is acted on cleanly",
+      "progress through a small easing in the field, not a sweeping resolution",
+    ],
+  },
+  3: {
+    situation: [
+      "distance, movement, or expansion already shaping the field before the reading narrows its focus",
+      "the wider horizon at the start, where the situation is already reaching beyond familiar ground",
+      "an opening condition defined by travel, trade, distance, or the need to choose a clearer destination",
+      "movement away from the known point, bringing perspective but also asking for direction",
+      "the early sign that this situation is not staying local, static, or fully contained",
+    ],
+    pivot: [
+      "the hinge where movement needs a destination, otherwise the whole sequence can drift",
+      "a middle point shaped by distance, timing, or the route that must be chosen rather than assumed",
+      "the turn where expansion becomes useful only if the next stage is given direction",
+      "the point where longing for elsewhere has to become a plan, route, or practical transfer",
+      "the place where the reading asks whether movement is purposeful or just escape",
+    ],
+    direction: [
+      "a forward line through movement, distance, or expansion, but only once the route is named",
+      "the next stage of the journey, where progress depends on choosing a destination rather than drifting",
+      "movement toward a wider field, with the practical question of what must travel with you",
+      "a direction that opens through relocation, exchange, or a broader horizon becoming actionable",
+      "the path opening wider, provided the movement has enough structure to arrive somewhere useful",
+    ],
+  },
+  4: {
+    situation: [
+      "the base conditions already holding the matter in place: home, structure, routine, and what feels safe enough to build from",
+      "a starting point defined by foundation, habit, and the structures that quietly decide what can happen next",
+      "the domestic or structural ground beneath the question, including the routines that make the situation stable or stuck",
+      "the place where security and familiarity set the opening terms of the reading",
+      "the existing foundation, which may be protective, confining, or simply the ground that must be dealt with first",
+    ],
+    pivot: [
+      "the hinge where stability has to be tested: what protects the situation, and what keeps it too fixed",
+      "the middle point where home, structure, or routine becomes the thing that either supports change or blocks it",
+      "the question of whether the foundation can hold the next move without turning into rigidity",
+      "the place where the reading asks for stronger structure rather than more emotional improvisation",
+      "the moment when the base of the matter has to be repaired, reinforced, or consciously redefined",
+    ],
+    direction: [
+      "a forward path that depends on strengthening the base before asking the situation to carry more weight",
+      "movement toward steadier ground, with routines and boundaries doing more of the work than urgency",
+      "the next step of making the situation liveable, structured, and easier to return to",
+      "a direction that favors consolidation: protect the foundation, then decide what can grow from it",
+      "progress through home base, structure, or practical containment rather than another dramatic push",
+    ],
+  },
+  5: {
+    situation: [
+      "the longer growth pattern already underneath the question: health, roots, time, and what has been developing slowly",
+      "a starting condition shaped by the body, the family line, or the patient structure that has been growing in the background",
+      "the living system beneath the immediate issue, where pace and sustainability matter more than a quick result",
+      "the part of the situation that has roots, history, and accumulated effects rather than a single recent cause",
+      "the slow condition at the base of the reading, asking what is healthy enough to keep growing",
+    ],
+    pivot: [
+      "the hinge where patience stops being passive and becomes a practical question of care, rhythm, and endurance",
+      "the middle point where the reading asks whether the roots are nourished or quietly strained",
+      "the place where health, time, or long development must be addressed before faster movement will hold",
+      "the turn where growth needs tending rather than forcing, especially if the situation has been carrying stress for a while",
+      "the point where the deeper pattern matters more than the visible symptom",
+    ],
+    direction: [
+      "a forward path through steady tending, pacing, and choices that improve the health of the whole system",
+      "movement toward sustainable growth, with the next step judged by whether it strengthens the roots",
+      "the direction of slower repair or maturation, where consistency does more than urgency",
+      "a next stage that asks for patience without drift: nourish what should continue and stop feeding what should not",
+      "progress through long-range care, especially where the body, foundation, or future resilience is involved",
+    ],
+  },
+  6: {
+    situation: [
+      "unclear conditions at the start, where mixed signals or partial information make the field harder to read",
+      "a confusing opening atmosphere, with uncertainty shaping what can and cannot be trusted yet",
+      "the first sign that perception is clouded: the issue may be real, but the outline is not clean",
+      "a situation beginning under ambiguity, mood, weather, or doubt rather than a settled fact pattern",
+      "the fog around the question, showing that timing and clarity are part of the matter itself",
+    ],
+    pivot: [
+      "the hinge where unclear information must be separated from what is actually known",
+      "the middle point where the reading asks for steadiness until the fog thins enough to act cleanly",
+      "the challenge of not mistaking confusion for evidence or anxiety for instruction",
+      "the turn where mixed signals require slower judgment rather than a dramatic interpretation",
+      "the place where uncertainty has to be managed directly, because pretending it is clarity would distort the next move",
+    ],
+    direction: [
+      "a forward path through clarification, waiting for cleaner visibility, and checking what the atmosphere is distorting",
+      "movement toward better discernment, where the next step should reduce confusion rather than feed it",
+      "the direction of clearing the field: ask what can be verified, what is only mood, and what still needs time",
+      "progress through patience with uncertainty, especially if acting too soon would lock in the wrong reading of events",
+      "a next step that favors light, testing, and plain facts over assumptions made in poor visibility",
+    ],
+  },
+  7: {
+    situation: [
+      "complex motives or a winding path already present, making the situation less direct than it first appears",
+      "an opening condition shaped by strategy, entanglement, attraction, or the need to move carefully",
+      "the part of the field where something is not simple: desire, rivalry, indirection, or competing agendas may be involved",
+      "a situation beginning with complication rather than openness, so the straightest route may not be the wisest",
+      "the first sign that this matter has turns in it, and that easy trust may need more scrutiny",
+    ],
+    pivot: [
+      "the hinge where tact, discernment, and motive-reading matter more than blunt force",
+      "the middle point where the reading asks what is being curved around, avoided, or quietly pursued",
+      "the challenge of handling complexity without becoming tangled in it",
+      "the turn where desire or strategy has to be named honestly before the next move can be trusted",
+      "the place where indirectness becomes the issue: useful if conscious, risky if denied",
+    ],
+    direction: [
+      "a forward path through careful strategy, clear motives, and refusal to be hurried into the obvious surface story",
+      "movement that succeeds by reading the turns in the path rather than pretending it is straight",
+      "the direction of deliberate navigation: stay alert to motives, timing, and the cost of entanglement",
+      "a next step that should be precise and self-possessed, especially where attraction or rivalry complicates judgment",
+      "progress through complexity by choosing the cleanest possible motive and leaving the rest less fed",
+    ],
+  },
+  8: {
+    situation: [
+      "an ending, depletion, pause, or closed chapter already defining the field before new movement can be considered",
+      "a starting point shaped by what has stopped, gone quiet, or reached the limit of usefulness",
+      "the part of the situation where continuation is no longer the main question; completion, rest, or release is",
+      "a field marked by exhaustion or closure, asking what must be allowed to finish before anything else can grow",
+      "the early sign that something has run its course, even if the emotional adjustment has not caught up yet",
+    ],
+    pivot: [
+      "the hinge where stopping becomes the practical move, especially if more effort would only prolong depletion",
+      "the middle point where the reading asks what needs closure, rest, or a clean ending",
+      "the challenge of not reviving what is already complete just because the silence feels uncomfortable",
+      "the turn where loss, fatigue, or finality must be respected before a new shape can appear",
+      "the place where the sequence changes by ending something rather than improving it",
+    ],
+    direction: [
+      "a forward path through closure, rest, and the honest release of what has reached its limit",
+      "movement that begins after the ending is acknowledged, not while the old form is being kept artificially alive",
+      "the direction of simplification: stop feeding what is finished so energy can return elsewhere",
+      "a next stage that asks for clean completion before renewal is demanded",
+      "progress through accepting the stop, making space, and letting the closed chapter stay closed",
+    ],
+  },
+  9: {
+    situation: [
+      "an opening note of grace, invitation, goodwill, or presentation already shaping how the matter is received",
+      "a starting condition made easier by charm, courtesy, recognition, or someone offering something usable",
+      "the visible gift in the situation, where what is offered may be modest but changes the tone of the field",
+      "a softening influence at the beginning, especially through appreciation, welcome, aesthetics, or social generosity",
+      "the first sign that the situation has an offered blessing, but one that still needs to be received wisely",
+    ],
+    pivot: [
+      "the hinge where goodwill has to become a real opening rather than a pleasant surface",
+      "the middle point where charm, invitation, or approval must be tested for usefulness",
+      "the challenge of accepting what is offered without confusing grace with a complete solution",
+      "the turn where presentation, appreciation, or social ease changes what response becomes possible",
+      "the place where the reading asks what should be welcomed, and what is only decoration",
+    ],
+    direction: [
+      "a forward path through accepting the useful invitation, acknowledging help, and letting goodwill do practical work",
+      "movement toward a more gracious opening, provided the gift is handled instead of merely admired",
+      "the direction of making the offer concrete: receive what is sincere, respond cleanly, and keep the tone generous",
+      "a next step that uses courtesy, beauty, or appreciation as a bridge rather than a distraction",
+      "progress through welcome and reciprocity, especially where a small gesture can change the social temperature",
+    ],
+  },
+  10: {
+    situation: [
+      "a sharp cut, decision, or sudden separation already defining the start of the matter",
+      "an opening condition where something has to be trimmed, named, or removed before the field can settle",
+      "the first sign that speed and precision matter, because delay could make the cut messier",
+      "a situation beginning with an edge: interruption, surgery, harvest, or the need for a clean break",
+      "the part of the field where hesitation may be more dangerous than a precise ending",
+    ],
+    pivot: [
+      "the hinge where the necessary cut must be made carefully enough not to damage what should remain",
+      "the middle point where decisiveness becomes useful only if it is precise",
+      "the challenge of knowing what to remove, what to harvest, and what not to sever by accident",
+      "the turn where delay gives way to a clear boundary, edit, or interruption",
+      "the place where the reading asks for a clean cut rather than continued tension",
+    ],
+    direction: [
+      "a forward path through precision, decisive editing, and the courage to end what needs ending",
+      "movement toward a cleaner field once the excess, risk, or outdated attachment is cut away",
+      "the direction of swift but careful action: remove the problem without scattering the whole structure",
+      "a next step that favors clarity, timing, and a sharp boundary over more discussion",
+      "progress through harvesting what is ready and severing what is no longer safe to carry",
+    ],
+  },
+  11: {
+    situation: [
+      "repetition, friction, argument, or strain already running through the opening conditions",
+      "a starting point shaped by recurring tension, where the same issue may be replaying in a new form",
+      "the noisy pattern at the beginning: conflict, effort, insistence, or a cycle that keeps striking the same place",
+      "the part of the situation where pressure is not subtle because the rhythm has become repetitive",
+      "an opening field marked by pushback, debate, overexertion, or a pattern that needs interruption",
+    ],
+    pivot: [
+      "the hinge where the repeated pattern has to be named before it turns into another round of the same conflict",
+      "the middle point where friction becomes information, but only if the cycle is not simply replayed",
+      "the challenge of distinguishing productive effort from punishment, pressure, or compulsive repetition",
+      "the turn where the reading asks what keeps being repeated and what it is costing",
+      "the place where tension can become clarity if the old rhythm is interrupted",
+    ],
+    direction: [
+      "a forward path through breaking the loop, changing the rhythm, and refusing to keep paying for the same conflict",
+      "movement toward cleaner effort, where repetition is used for practice rather than punishment",
+      "the direction of naming the pattern plainly so the next exchange does not become another replay",
+      "a next step that reduces friction by changing the terms of the argument or the rhythm of the work",
+      "progress through disciplined interruption: stop feeding the cycle, then decide what effort is still worthwhile",
+    ],
+  },
+  12: {
+    situation: [
+      "conversation, worry, negotiation, or nervous activity already setting the atmosphere at the start",
+      "an opening condition full of talk, messages, fluttering attention, or two voices trying to find a shared rhythm",
+      "the first sign that communication is active but not necessarily settled",
+      "a situation beginning with chatter, concern, consultation, or the need to listen before reacting",
+      "the nervous movement around the question, where what is said and what is repeated both matter",
+    ],
+    pivot: [
+      "the hinge where anxious talk has to become clearer communication",
+      "the middle point where the reading asks which conversation actually matters and which one is just nervous motion",
+      "the challenge of listening through noise without letting every worry become evidence",
+      "the turn where dialogue, timing, and tone decide whether the sequence calms or escalates",
+      "the place where communication must be paired with discernment, because more talk is not automatically more clarity",
+    ],
+    direction: [
+      "a forward path through a clearer conversation, a calmer exchange, or a decision to stop feeding anxious noise",
+      "movement toward direct communication, with attention to timing, tone, and what has been repeated too often",
+      "the direction of asking the useful question aloud and letting the unnecessary chatter fall away",
+      "a next step that favors listening, naming the worry, and keeping the exchange proportionate",
+      "progress through conversation that clarifies the rhythm rather than increasing the nervous charge",
+    ],
+  },
+  13: {
+    situation: [
+      "a new, small, or still-forming condition already shaping the start of the matter",
+      "an opening situation where innocence, inexperience, or a first attempt needs light but real structure",
+      "the early stage of the question, where the matter is not mature enough to carry heavy expectations yet",
+      "a fresh beginning in the field, useful because it can still be shaped before habits harden around it",
+      "the small seed of the situation, asking to be protected from both neglect and overloading",
+    ],
+    pivot: [
+      "the hinge where a small beginning needs proper scale, not adult-sized pressure",
+      "the middle point where the reading asks what is genuinely new and what is merely underdeveloped",
+      "the challenge of giving the early stage enough structure without crushing its flexibility",
+      "the turn where curiosity, learning, or a first attempt becomes the thing that can redirect the sequence",
+      "the place where the reading asks for a smaller, cleaner start rather than a fully grown answer",
+    ],
+    direction: [
+      "a forward path through starting small, learning quickly, and letting the new form develop without forcing maturity",
+      "movement toward a fresh attempt, with the next step kept simple enough to actually teach you something",
+      "the direction of beginner's mind: test the small version before committing to the full structure",
+      "a next stage that favors light structure, curiosity, and willingness to iterate",
+      "progress through protecting the beginning long enough for it to show what it can become",
+    ],
+  },
+  14: {
+    situation: [
+      "caution, self-interest, work strategy, or a need for verification already shaping the opening conditions",
+      "a starting field where motives, incentives, or practical survival concerns need to be read carefully",
+      "the part of the situation that asks what is efficient, what is protective, and what may be too self-serving",
+      "an opening condition marked by calculation, guardedness, or the need to check the story against the facts",
+      "the first sign that cleverness is active in the field, useful if honest and risky if evasive",
+    ],
+    pivot: [
+      "the hinge where caution becomes useful only if it stays honest rather than sliding into suspicion",
+      "the middle point where the reading asks who benefits, what is being protected, and what needs verification",
+      "the challenge of separating practical strategy from fear, avoidance, or self-protection that has gone too far",
+      "the turn where due diligence, work sense, or self-interest must be named before the next move is trusted",
+      "the place where the reading asks for sharper discernment instead of either naive trust or automatic doubt",
+    ],
+    direction: [
+      "a forward path through verification, practical caution, and protecting value without becoming closed",
+      "movement toward a smarter strategy, where the next step is checked against incentives and facts",
+      "the direction of careful self-protection: preserve what matters while staying honest about motives",
+      "a next stage that favors due diligence, clean boundaries, and a plan that can survive scrutiny",
+      "progress through reading the practical interests in play before committing more trust or effort",
+    ],
+  },
+  15: {
+    situation: [
+      "power, protection, resources, or authority already setting the weight of the situation",
+      "a starting condition shaped by money, leadership, appetite, control, or the person holding real influence",
+      "the heavy presence in the field, where capacity and pressure may be coming from the same source",
+      "an opening picture defined by strength, guardianship, possession, or resource management",
+      "the first sign that scale matters here: the issue is not small because the stakes, body, budget, or authority is substantial",
+    ],
+    pivot: [
+      "the hinge where strength has to become stewardship rather than control",
+      "the middle point where the reading asks who holds the resources, who carries the weight, and how power is being used",
+      "the challenge of handling appetite, authority, or protection without letting it become domination",
+      "the turn where capacity must be organized, because raw force alone will not solve the matter",
+      "the place where the reading asks for grounded leadership instead of either overreach or passivity",
+    ],
+    direction: [
+      "a forward path through responsible power, resource control, and protection that does not smother the situation",
+      "movement toward stronger stewardship: name the resources, set the limits, and use authority deliberately",
+      "the direction of taking up weight cleanly, without confusing control with care",
+      "a next stage that favors budgeting, embodiment, leadership, or firm support according to what the question needs",
+      "progress through using strength as a container rather than as a blunt instrument",
+    ],
+  },
+  16: {
+    situation: [
+      "guidance, orientation, aspiration, or a long-range signal already lighting the opening field",
+      "a starting condition shaped by the bigger pattern, where direction matters more than immediate proof",
+      "the first sign that hope is useful only when it becomes navigation, not vague reassurance",
+      "a field beginning under a guiding signal: vision, alignment, distance, or the pattern that points beyond the present moment",
+      "the wider map behind the question, asking what direction is still visible even before the route is complete",
+    ],
+    pivot: [
+      "the hinge where inspiration has to become guidance you can actually follow",
+      "the middle point where the reading asks whether the long-range signal is being trusted, tested, or idealized",
+      "the challenge of keeping faith with the direction without floating away from practical steps",
+      "the turn where a pattern becomes visible enough to steer by, but not enough to skip verification",
+      "the place where the reading asks for orientation: what is the signal, and what step would honor it",
+    ],
+    direction: [
+      "a forward path through orientation, pattern recognition, and the practical step that keeps faith with the larger aim",
+      "movement toward clearer guidance, where aspiration becomes a route rather than a mood",
+      "the direction of following the visible signal while still checking the ground under each step",
+      "a next stage that favors hope with coordinates: vision, timing, and the discipline to make the guidance usable",
+      "progress through aligning the immediate move with the longer pattern the spread is showing",
+    ],
+  },
+  17: {
+    situation: [
+      "change, migration, improvement, or seasonal movement already shaping the start of the matter",
+      "an opening condition where the situation is not fixed; something is preparing to shift form or location",
+      "the first sign that adjustment is underway, even if the new arrangement has not fully landed yet",
+      "a field beginning with transition, return, upgrade, or the need to move with a changing pattern",
+      "the part of the situation that is already in motion toward renewal, relocation, or a different working shape",
+    ],
+    pivot: [
+      "the hinge where change has to be guided rather than merely hoped for",
+      "the middle point where the reading asks what is ready to move, return, improve, or be reconfigured",
+      "the challenge of cooperating with transition without forcing a premature landing",
+      "the turn where the old arrangement loosens and the next form needs practical support",
+      "the place where the reading asks whether the change is an upgrade, a necessary migration, or a pattern repeating in a new place",
+    ],
+    direction: [
+      "a forward path through practical adjustment, relocation, renewal, or letting the situation take its next form",
+      "movement toward an improved arrangement, provided the change is guided instead of left to drift",
+      "the direction of transition with follow-through: move what is ready, support what is changing, and check what returns",
+      "a next stage that favors adaptation, seasonal timing, and a willingness to revise the old setup",
+      "progress through making the change workable rather than demanding that it be instantly complete",
+    ],
+  },
+  18: {
+    situation: [
+      "loyalty, trust, help, or a dependable bond already shaping the opening conditions",
+      "a starting point defined by who shows up, who can be relied on, and what kind of support is actually proven",
+      "the friendly or faithful thread at the beginning, useful because it has a record rather than just a promise",
+      "a situation beginning through companionship, alliance, service, or the need to test reliability in real time",
+      "the part of the field where trust is not abstract; it is shown through presence, consistency, and follow-through",
+    ],
+    pivot: [
+      "the hinge where loyalty has to be demonstrated, not merely claimed",
+      "the middle point where the reading asks who is genuinely dependable and what kind of support is being offered",
+      "the challenge of telling proven trust from habit, attachment, or the wish for reassurance",
+      "the turn where alliance, friendship, or service becomes the thing that can steady the sequence",
+      "the place where the reading asks whether the bond is reciprocal enough to lean on",
+    ],
+    direction: [
+      "a forward path through reliable support, tested trust, and the ally who can actually stay present",
+      "movement toward clearer loyalty, where follow-through matters more than a warm claim",
+      "the direction of strengthening the dependable bond while noticing whether the support flows both ways",
+      "a next stage that favors collaboration, service, and returning to the people or practices that have proved reliable",
+      "progress through trust that is specific, reciprocal, and backed by action",
+    ],
+  },
+  19: {
+    situation: [
+      "structure, distance, institution, or formal boundary already setting the opening terms",
+      "a starting condition shaped by separation, professionalism, official channels, or the need to see the matter from above",
+      "the vertical structure in the field: authority, isolation, expertise, or the system that frames what can happen",
+      "an opening picture where distance is not incidental; it may be protective, procedural, or lonely",
+      "the part of the situation governed by rules, offices, hierarchy, or the vantage point that comes from stepping back",
+    ],
+    pivot: [
+      "the hinge where distance has to become perspective rather than withdrawal",
+      "the middle point where the reading asks what structure, institution, or boundary is actually shaping the outcome",
+      "the challenge of using formality and expertise without becoming cut off from the human reality",
+      "the turn where the official channel, professional stance, or higher vantage point must be handled consciously",
+      "the place where the reading asks whether the wall is protection, procedure, or avoidance",
+    ],
+    direction: [
+      "a forward path through proper structure, formal channels, and enough distance to make a clean decision",
+      "movement toward a clearer boundary or professional frame, with the human cost kept in view",
+      "the direction of working with the system as it is: rules, hierarchy, expertise, and the right level of distance",
+      "a next stage that favors perspective, documentation, and boundaries that clarify rather than isolate",
+      "progress through stepping back far enough to see the whole structure without disappearing from it",
+    ],
+  },
+  20: {
+    situation: [
+      "public visibility, community, audience, or a social field already shaping the start of the matter",
+      "an opening condition defined by who is present, who can see, and how the situation behaves in shared space",
+      "the collective setting at the beginning, where reputation, participation, and social context matter",
+      "a situation beginning in the open: networks, groups, gatherings, or the public-facing layer of the question",
+      "the first sign that this is not only private; the wider room, audience, or community field is part of the matter",
+    ],
+    pivot: [
+      "the hinge where visibility, participation, or group dynamics changes what can happen next",
+      "the middle point where the reading asks how the public field is shaping the private decision",
+      "the challenge of managing audience, reputation, or community involvement without losing the core issue",
+      "the turn where the right network, room, or social context becomes the thing that redirects the sequence",
+      "the place where the reading asks what should be shared, what should be witnessed, and what should stay private",
+    ],
+    direction: [
+      "a forward path through the right public setting, useful network, or community context",
+      "movement toward visibility that is chosen rather than accidental",
+      "the direction of participating wisely: enter the room, use the network, and manage what becomes public",
+      "a next stage that favors social context, shared space, and reputation handled with intention",
+      "progress through understanding the wider field before deciding how visible the next move should be",
+    ],
+  },
+  21: {
+    situation: [
+      "an obstacle, delay, or difficult terrain already setting the pace before the rest of the reading can move freely",
+      "a starting condition shaped by resistance, distance, or the need to take the slower route seriously",
+      "the blockage at the beginning, where progress is possible but only through patience, strategy, and staged effort",
+      "a situation beginning with a hard limit that needs to be worked around rather than argued with",
+      "the first sign that the matter is not closed, but it will not yield to speed, pressure, or wishful timing",
+    ],
+    pivot: [
+      "the hinge where resistance has to be mapped instead of treated as a simple refusal",
+      "the middle point where the reading asks what the delay is teaching about route, stamina, and realistic timing",
+      "the challenge of distinguishing a true blockage from a path that simply requires more patience and structure",
+      "the turn where pushing harder becomes less useful than finding the passable route",
+      "the place where the obstacle becomes specific enough to plan around rather than fear in the abstract",
+    ],
+    direction: [
+      "a forward path through staged effort, patience, and the route that works with the terrain instead of against it",
+      "movement toward progress that is slower but still viable if the obstacle is named clearly",
+      "the direction of endurance, where the climb is reduced to workable steps and success is not measured by speed alone",
+      "a next stage that favors strategy, persistence, and a willingness to go around what will not move",
+      "progress through accepting the limit without letting it become the whole story",
+    ],
+  },
+  22: {
+    situation: [
+      "a choice, fork, or set of competing options already shaping the opening conditions",
+      "a starting point defined by alternatives, tradeoffs, and the need for clearer criteria before the route is chosen",
+      "the branch in the road at the beginning, where more than one path is possible but not every path serves the same aim",
+      "a situation beginning in decision-space, with the practical question of what each option would actually require",
+      "the first sign that the matter will not settle until the available paths are named honestly",
+    ],
+    pivot: [
+      "the hinge where choice has to become criteria rather than another round of weighing possibilities",
+      "the middle point where the reading asks what is being chosen, what is being declined, and what cannot travel down both roads",
+      "the challenge of not confusing openness with progress when a decision is what gives the sequence direction",
+      "the turn where tradeoffs become visible enough to make one route cleaner than the rest",
+      "the place where the reading asks whether the choice is being made from values, pressure, habit, or fear of losing an option",
+    ],
+    direction: [
+      "a forward path through explicit choice, clean criteria, and accepting the tradeoff that comes with the route",
+      "movement toward a clearer branch, where the next step improves once the options stop blurring together",
+      "the direction of choosing deliberately: name the path, name the cost, and stop feeding the abandoned alternatives",
+      "a next stage that favors decision quality over keeping every possibility open",
+      "progress through narrowing the field enough that action can finally follow",
+    ],
+  },
+  23: {
+    situation: [
+      "small drains, stress, loss, or erosion already weakening the situation at the start",
+      "a starting condition shaped by attrition, where the issue may look minor until the accumulated cost is counted",
+      "the leak in the field at the beginning, asking what is being nibbled away by stress, worry, or neglect",
+      "a situation beginning with depletion that needs maintenance before it becomes a larger collapse",
+      "the first sign that the problem is not one dramatic event but a pattern of small losses adding up",
+    ],
+    pivot: [
+      "the hinge where the slow leak has to be patched before more energy is poured into the situation",
+      "the middle point where the reading asks what is being drained, wasted, or quietly worn down",
+      "the challenge of treating small losses as real information before they become harder to repair",
+      "the turn where stress stops being background noise and becomes the practical issue to reduce",
+      "the place where the reading asks what can be simplified so the attrition does not keep spreading",
+    ],
+    direction: [
+      "a forward path through patching leaks, reducing stressors, and protecting what is still worth preserving",
+      "movement toward less depletion, with progress measured by what stops draining away",
+      "the direction of maintenance: repair the small losses before asking the larger plan to hold",
+      "a next stage that favors simplification, prevention, and attention to what has been quietly wearing thin",
+      "progress through reducing the nibbling pressure rather than waiting for one dramatic solution",
+    ],
+  },
+  24: {
+    situation: [
+      "care, affection, values, or devotion already shaping what the matter means from the beginning",
+      "a starting point defined by what is loved, valued, or emotionally true enough to guide the rest of the reading",
+      "the feeling-core at the beginning, where motivation, sincerity, and attachment are not side issues",
+      "a situation beginning through the heart of the matter: care that needs expression, protection, and honest limits",
+      "the first sign that this question cannot be read only strategically; values and emotional truth are active forces",
+    ],
+    pivot: [
+      "the hinge where affection has to become honest action rather than idealized feeling",
+      "the middle point where the reading asks what is genuinely cared for and what kind of boundary lets that care stay clean",
+      "the challenge of following the heart without using devotion as an excuse to ignore practical limits",
+      "the turn where values, vulnerability, or emotional truth becomes the thing that decides the next step",
+      "the place where the reading asks whether love is being expressed as care, projection, loyalty, or longing",
+    ],
+    direction: [
+      "a forward path through honest care, value alignment, and emotional truth that can stand inside real boundaries",
+      "movement toward what is genuinely loved or valued, provided the feeling is matched by action",
+      "the direction of devotion with discernment: protect what matters without idealizing what needs repair",
+      "a next stage that favors sincerity, warmth, and choices that keep faith with the heart of the matter",
+      "progress through naming what matters most and acting from care that can remain practical",
+    ],
+  },
+  25: {
+    situation: [
+      "a commitment, contract, cycle, or repeating agreement already setting the terms of the matter",
+      "a starting point shaped by what has been promised, renewed, repeated, or allowed to bind the situation",
+      "the agreement at the beginning, where the terms matter as much as the feeling around them",
+      "a situation beginning inside a loop, contract, promise, or recurring pattern that needs conscious review",
+      "the first sign that this matter is being held by obligation, rhythm, or a bond that should be named plainly",
+    ],
+    pivot: [
+      "the hinge where the terms of the commitment have to be reviewed rather than assumed",
+      "the middle point where the reading asks what is being renewed, renegotiated, or repeated by habit",
+      "the challenge of distinguishing a living agreement from an outdated loop",
+      "the turn where a promise, contract, or recurring pattern becomes the thing that decides the next step",
+      "the place where the reading asks whether the bond still serves the purpose it was meant to serve",
+    ],
+    direction: [
+      "a forward path through clearer terms, renewed commitment, or ending the loop that no longer holds honestly",
+      "movement toward commitment that is conscious rather than automatic",
+      "the direction of reviewing the agreement: name what is promised, what is repeated, and what needs revision",
+      "a next stage that favors explicit terms over vague loyalty to an old cycle",
+      "progress through making the bond workable again or admitting where it has become only repetition",
+    ],
+  },
+  26: {
+    situation: [
+      "hidden knowledge, private context, study, or undisclosed information already shaping the start",
+      "a starting condition defined by what is not yet visible and what needs to be learned before action is clean",
+      "the closed page at the beginning, where research, secrecy, or withheld context matters",
+      "a situation beginning with partial knowledge, asking for inquiry before confident conclusions",
+      "the first sign that the useful answer may be inside what has not been said, shown, or understood yet",
+    ],
+    pivot: [
+      "the hinge where hidden context has to be studied, disclosed, or handled responsibly",
+      "the middle point where the reading asks what is known, what is private, and what still needs research",
+      "the challenge of not treating secrecy as emptiness when it may contain the decisive context",
+      "the turn where learning becomes more useful than guessing",
+      "the place where the reading asks whether information is being protected wisely or withheld too long",
+    ],
+    direction: [
+      "a forward path through research, responsible disclosure, and learning enough to act without fantasy",
+      "movement toward revelation, but at the pace that protects the information while making it useful",
+      "the direction of opening the right page: study what matters and share only what is ready to be carried",
+      "a next stage that favors inquiry, privacy, and careful handling of what becomes known",
+      "progress through making hidden context usable without forcing every secret into the open at once",
+    ],
+  },
+  27: {
+    situation: [
+      "a message, document, record, or formal communication already setting the opening conditions",
+      "a starting point shaped by what is written, tracked, sent, filed, or needing a clear reply",
+      "the message trail at the beginning, where wording and record-keeping decide more than mood",
+      "a situation beginning with a note, form, receipt, text, or statement that needs direct handling",
+      "the first sign that this matter needs written clarity before the rest of the reading can settle",
+    ],
+    pivot: [
+      "the hinge where communication has to become specific enough to be trusted",
+      "the middle point where the reading asks what must be documented, followed up, or put in plain words",
+      "the challenge of not letting vague communication carry a decision that needs a record",
+      "the turn where the message itself becomes the practical lever",
+      "the place where the reading asks whether the right thing has been stated, sent, received, or confirmed",
+    ],
+    direction: [
+      "a forward path through clear wording, documented follow-up, and communication that can be checked later",
+      "movement toward a cleaner message trail, where the next step is written rather than implied",
+      "the direction of putting it on record: say what matters, track what changes, and follow up",
+      "a next stage that favors explicit communication over hoping the meaning is understood",
+      "progress through the document, message, or record that turns uncertainty into something answerable",
+    ],
+  },
+  28: {
+    situation: [
+      "another person's role, stance, or mirror already shaping the opening conditions",
+      "a starting point defined by the counterpart's expectations, availability, or side of the exchange",
+      "the other side of the matter at the beginning, where projection would distort what is actually happening",
+      "a situation beginning with mutual dynamics rather than one person's intentions alone",
+      "the first sign that the reading cannot be settled without accurately reading the other person's position",
+    ],
+    pivot: [
+      "the hinge where the counterpart's role has to be clarified instead of guessed",
+      "the middle point where the reading asks what belongs to them, what belongs to you, and what is created between you",
+      "the challenge of not projecting a story onto the other person before their actual stance is known",
+      "the turn where mutual expectation, mirrored behavior, or another stakeholder's choice changes the sequence",
+      "the place where the reading asks whether the relationship dynamic is being read from evidence or assumption",
+    ],
+    direction: [
+      "a forward path through clarifying roles, expectations, and the other person's actual position",
+      "movement toward a more accurate reading of the counterpart rather than a more elaborate guess",
+      "the direction of mutual clarity: name your side, read their side, and stop making one stand in for the other",
+      "a next stage that favors direct role clarification over projection",
+      "progress through understanding the other person's leverage, limits, and real participation",
+    ],
+  },
+  29: {
+    situation: [
+      "your own role, stance, agency, or boundary already shaping the matter from the start",
+      "a starting point defined by what you permit, choose, resist, or keep making central",
+      "the self-position at the beginning, where your orientation affects the field more than a distant factor does",
+      "a situation beginning with your availability, identity, or boundary conditions as active forces",
+      "the first sign that the reading is asking what is yours to steer before it asks what others will do",
+    ],
+    pivot: [
+      "the hinge where your own stance has to become conscious enough to guide the next move",
+      "the middle point where the reading asks what is actually yours to choose, permit, or release",
+      "the challenge of separating agency from self-protective stories that keep the field smaller",
+      "the turn where your boundary, identity, or direct choice changes the sequence",
+      "the place where the reading asks whether you are acting from values, fear, habit, or genuine agency",
+    ],
+    direction: [
+      "a forward path through clearer agency, better boundaries, and choices that belong to you",
+      "movement toward self-definition that is active without trying to control the whole field",
+      "the direction of choosing from values rather than fear",
+      "a next stage that favors owning your role without taking responsibility for every variable",
+      "progress through clarifying what you can actually steer and letting the rest stop pretending to be yours",
+    ],
+  },
+  30: {
+    situation: [
+      "maturity, peace, ethics, or long judgment already setting a quieter tone at the start",
+      "a starting condition shaped by restraint, dignity, patience, and the need for principled calm",
+      "the mature note at the beginning, where composure matters but must not become avoidance",
+      "a situation beginning with ethical standards, experience, or a slower wisdom that asks to be respected",
+      "the first sign that the matter needs calm intention rather than heat, haste, or display",
+    ],
+    pivot: [
+      "the hinge where composure has to be paired with clear intent",
+      "the middle point where the reading asks what maturity, ethics, or long-term judgment requires now",
+      "the challenge of telling genuine peace from passive avoidance",
+      "the turn where restraint becomes useful only if it still allows necessary action",
+      "the place where the reading asks whether the calm is principled, tired, diplomatic, or withholding",
+    ],
+    direction: [
+      "a forward path through mature timing, principled calm, and action taken without unnecessary heat",
+      "movement toward peace that is active rather than merely quiet",
+      "the direction of ethical steadiness: keep the tone composed and the intention explicit",
+      "a next stage that favors patience, respect, and long-term judgment over reactive intensity",
+      "progress through a calmer standard that still has enough spine to act",
+    ],
+  },
+  31: {
+    situation: [
+      "clarity, confidence, vitality, or visible momentum already brightening the opening field",
+      "a starting point shaped by success, warmth, recognition, or the energy to move forward",
+      "the bright signal at the beginning, where confidence is real but still needs responsible use",
+      "a situation beginning with visibility and momentum that can help if it is not inflated",
+      "the first sign that the matter has life in it and enough light to make the next step visible",
+    ],
+    pivot: [
+      "the hinge where confidence has to become responsible action rather than glare",
+      "the middle point where the reading asks how success, visibility, or vitality should be used",
+      "the challenge of letting clarity energize the situation without turning into overconfidence",
+      "the turn where warmth and momentum can redirect the whole sequence",
+      "the place where the reading asks what becomes possible when the true signal is allowed to be seen",
+    ],
+    direction: [
+      "a forward path through clarity, sustained confidence, and visibility used with care",
+      "movement toward a brighter outcome, provided the momentum is supported rather than assumed",
+      "the direction of responsible visibility: use the light to act, not to overlook details",
+      "a next stage that favors vitality, success, and confidence that remains accountable",
+      "progress through the part of the situation that is genuinely working and ready to be strengthened",
+    ],
+  },
+  32: {
+    situation: [
+      "emotion, recognition, rhythm, or reputation already shaping the atmosphere at the start",
+      "a starting condition defined by sensitivity, perception, feedback, and the cycles affecting response",
+      "the emotional weather at the beginning, where feeling and recognition are part of the facts",
+      "a situation beginning under changing light, with mood, memory, or public perception influencing the field",
+      "the first sign that the matter has a rhythm and should not be judged from one feeling-state alone",
+    ],
+    pivot: [
+      "the hinge where emotional rhythm has to be tracked rather than obeyed blindly",
+      "the middle point where the reading asks what needs recognition, attunement, or a calmer reading of mood",
+      "the challenge of letting sensitivity inform the decision without letting fluctuation lead it",
+      "the turn where reputation, feedback, or emotional timing changes the sequence",
+      "the place where the reading asks whether the feeling is a signal, a cycle, or a reflection wanting response",
+    ],
+    direction: [
+      "a forward path through emotional attunement, cycle-tracking, and recognition handled carefully",
+      "movement toward a more honest rhythm, where feeling is heard without being allowed to drive everything",
+      "the direction of naming the need, watching the cycle, and responding when the light is steadier",
+      "a next stage that favors perception, feedback, and emotional timing over forcing a fixed answer",
+      "progress through honoring the emotional signal while checking how it changes over time",
+    ],
+  },
+  33: {
+    situation: [
+      "a solution, certainty, key detail, or unlocking condition already visible near the start",
+      "a starting point shaped by the thing that can open the field if it is verified and used",
+      "the key at the beginning, where clarity exists but still needs correct handling",
+      "a situation beginning with access, permission, or a practical solution close enough to test",
+      "the first sign that the matter may unlock through one decisive detail rather than through more general effort",
+    ],
+    pivot: [
+      "the hinge where the solution has to be verified before it is treated as final",
+      "the middle point where the reading asks what unlocks the situation and what must be true for it to work",
+      "the challenge of using certainty without locking onto the first answer too soon",
+      "the turn where a key fact, decision, or access point changes the whole sequence",
+      "the place where the reading asks whether the door is genuinely open or only appears open from this angle",
+    ],
+    direction: [
+      "a forward path through verification, focused action, and using the key once it has been tested",
+      "movement toward a workable solution that becomes available through precision",
+      "the direction of unlocking the next step: confirm the key detail, then commit",
+      "a next stage that favors decisive clarity without rushing past the lock it has to fit",
+      "progress through the access point that solves the problem because it is specific enough to use",
+    ],
+  },
+  34: {
+    situation: [
+      "resources, money, flow, exchange, or movement of value already shaping the opening field",
+      "a starting condition defined by inflow, outflow, commerce, or the way energy and resources circulate",
+      "the current at the beginning, where what moves through the system matters more than what is fixed",
+      "a situation beginning with dynamic resources that need tracking before they can be trusted",
+      "the first sign that flow, value, and exchange are not background but the medium of the matter",
+    ],
+    pivot: [
+      "the hinge where flow has to be monitored so it does not become leakage or drift",
+      "the middle point where the reading asks what is coming in, going out, and being exchanged",
+      "the challenge of treating abundance or movement as manageable only when it is tracked",
+      "the turn where resources, money, or commerce decides what can happen next",
+      "the place where the reading asks whether the flow is aligned with what actually matters",
+    ],
+    direction: [
+      "a forward path through tracking movement, aligning resources, and making the flow accountable",
+      "movement toward healthier circulation of money, energy, or value",
+      "the direction of resource clarity: watch the inflow, name the outflow, and steer the current",
+      "a next stage that favors responsive management rather than assuming the flow will manage itself",
+      "progress through understanding how value moves before deciding where more should be invested",
+    ],
+  },
+  35: {
+    situation: [
+      "stability, work, endurance, or long-term commitment already anchoring the matter",
+      "a starting point defined by what holds, what lasts, and what has become too fixed to ignore",
+      "the anchor at the beginning, where durability is both a support and a possible source of stuckness",
+      "a situation beginning with sustained effort, career direction, or the need to stabilize what matters",
+      "the first sign that the matter depends on follow-through more than immediate excitement",
+    ],
+    pivot: [
+      "the hinge where stability has to be chosen consciously rather than clung to automatically",
+      "the middle point where the reading asks what should be anchored and what has become dead weight",
+      "the challenge of distinguishing endurance from staying fixed to an obsolete goal",
+      "the turn where long-term commitment, work, or steadiness determines the next step",
+      "the place where the reading asks whether the anchor is holding the situation steady or holding it back",
+    ],
+    direction: [
+      "a forward path through durable effort, steadier structure, and releasing what no longer deserves anchoring",
+      "movement toward stability that can actually hold under real conditions",
+      "the direction of follow-through: secure what matters and stop tying energy to what is finished",
+      "a next stage that favors endurance, career focus, and commitments with enough life to last",
+      "progress through building the stable version rather than chasing a faster but weaker one",
+    ],
+  },
+  36: {
+    situation: [
+      "burden, duty, meaning, or serious responsibility already weighing on the opening field",
+      "a starting condition shaped by what must be carried wisely and what may not be yours to carry",
+      "the weight at the beginning, where purpose and pressure need to be separated carefully",
+      "a situation beginning with moral seriousness, obligation, or a difficult meaning that cannot be ignored",
+      "the first sign that the matter is heavy because it matters, but heaviness alone does not decide the right response",
+    ],
+    pivot: [
+      "the hinge where burden has to be distinguished from purpose",
+      "the middle point where the reading asks what responsibility is real, what is inherited, and what can be shared",
+      "the challenge of not turning meaningful duty into unnecessary suffering",
+      "the turn where accountability, sacrifice, or spiritual weight changes the sequence",
+      "the place where the reading asks whether the weight is clarifying the path or crushing movement that should continue",
+    ],
+    direction: [
+      "a forward path through wise carrying, shared responsibility, and purpose separated from pressure",
+      "movement toward meaning that can be honored without accepting every burden as yours",
+      "the direction of grounded reflection: carry what is true, put down what is only inherited strain",
+      "a next stage that favors accountability with support rather than solitary endurance",
+      "progress through treating the seriousness as guidance, not as proof that nothing can change",
+    ],
+  },
+};
+
+const SUPPORTIVE_PAIR_CARD_IDS = new Set([2, 9, 16, 18, 24, 31, 33, 35]);
+const PRESSURE_PAIR_CARD_IDS = new Set([6, 7, 8, 10, 11, 14, 21, 23, 36]);
+
+const BATCH_PAIR_ASSOCIATION_NOTES: Partial<Record<number, {
+  supportive: string[];
+  pressure: string[];
+}>> = {
+  1: {
+    supportive: [
+      "the arriving signal has help around it, so the useful move is to answer promptly while the support is still close",
+      "news or movement is being met by a stabilizing factor, which makes response more useful than waiting",
+      "what comes in now has enough backing to be tested in real life rather than held as a possibility",
+      "the first contact becomes more useful because the second card gives it somewhere constructive to land",
+    ],
+    pressure: [
+      "the arrival is not neutral; it carries pressure, complication, or a decision that needs cleaner handling",
+      "what comes in quickly also brings a harder condition with it, so speed needs discernment",
+      "the message changes the field, but the second card shows why it cannot be answered casually",
+      "movement is active, but the pressure beside it decides what kind of response is actually wise",
+    ],
+  },
+  2: {
+    supportive: [
+      "a small opening is reinforced by genuine help, making the modest chance more useful than it first appears",
+      "the brief window has something steady beside it, so it can become practical instead of merely lucky",
+      "ease and support are working together here; the opportunity is small, but not empty",
+      "the opening becomes more trustworthy because the second card gives it warmth, clarity, or staying power",
+    ],
+    pressure: [
+      "the small chance is real, but it has to be used inside constraint rather than treated as effortless luck",
+      "a brief opening meets resistance, so timing matters more than optimism",
+      "the opportunity is narrow because the pressure beside it can close the window quickly",
+      "Clover softens the field, but the second card shows what still has to be handled before ease can hold",
+    ],
+  },
+  3: {
+    supportive: [
+      "movement has something dependable beside it, making the route more trustworthy than a simple leap into the unknown",
+      "the journey or expansion is supported enough to become practical, provided the direction is named",
+      "distance, exchange, or movement gains help from the second card, so the path can be worked rather than only imagined",
+      "the wider horizon becomes more usable because the second card gives it support, clarity, or value",
+    ],
+    pressure: [
+      "movement is possible, but the second card shows the cost, obstacle, or complication that travels with it",
+      "the route widens and tightens at the same time, so direction has to be chosen with the constraint in view",
+      "Ship wants movement, but the pressure card decides what cannot simply be carried forward unchanged",
+      "the journey is real, yet the harder card shows why drifting would make the situation heavier",
+    ],
+  },
+  4: {
+    supportive: [
+      "the base is being reinforced, so structure, trust, or steadiness can do more work than urgency",
+      "home, routine, or foundation has help around it, making the situation more buildable than it first appears",
+      "the second card strengthens the container, so the practical answer begins with what can safely hold",
+      "the foundation becomes useful because support, clarity, or warmth is present enough to build from",
+    ],
+    pressure: [
+      "the foundation is under pressure, so the question is what must be repaired before more weight is added",
+      "home, structure, or routine is meeting strain, and the reading asks what can still hold under it",
+      "the base of the matter is not neutral; it is where the harder card is pressing most directly",
+      "House tries to contain the situation, but the pressure card shows what has started to stress the walls",
+    ],
+  },
+  5: {
+    supportive: [
+      "slow growth has help around it, so the answer can rely on patience without becoming passive",
+      "the rooted condition is being strengthened by the second card, making care and consistency more effective",
+      "health, time, or development has support here; the practical move is to protect what is genuinely growing",
+      "Tree gives the matter roots, and the supportive card shows where nourishment, trust, or clarity can reach those roots",
+    ],
+    pressure: [
+      "the deeper pattern is under strain, so the visible issue may be a symptom rather than the whole problem",
+      "Tree slows the reading down, while the pressure card shows what has been stressing the roots over time",
+      "health, growth, or endurance is being tested here, which makes pacing more important than a quick fix",
+      "the situation can keep growing only if the pressure beside it is not allowed to keep feeding the same old strain",
+    ],
+  },
+  6: {
+    supportive: [
+      "the fog is real, but the supportive card gives a cleaner reference point to work from",
+      "uncertainty is softened by help nearby, so the reading asks for clarification rather than panic",
+      "Clouds blurs the field, while the second card shows where support, warmth, or a useful signal can still be found",
+      "mixed signals are present, but they are not the whole story; the supportive card helps separate mood from fact",
+    ],
+    pressure: [
+      "uncertainty is intensified by the harder card, so acting on assumptions would make the situation more tangled",
+      "the fog and the pressure card reinforce each other, making verification more important than speed",
+      "Clouds shows poor visibility, and the second card shows why unclear judgment could become costly",
+      "confusion is not incidental here; it is part of the pressure that has to be reduced before a clean move is possible",
+    ],
+  },
+  7: {
+    supportive: [
+      "the complexity has something constructive beside it, so strategy can become careful wisdom rather than suspicion",
+      "Snake complicates the field, but the supportive card shows where tact, desire, or negotiation can still be used cleanly",
+      "the winding path has help around it, making a thoughtful indirect approach more useful than a blunt one",
+      "mixed motives need discernment, and the second card offers enough support to keep that discernment practical",
+    ],
+    pressure: [
+      "the complication is sharpened by the second card, so motive, timing, and entanglement need very clear handling",
+      "Snake and the pressure card together warn against taking the surface story as the whole truth",
+      "the winding path has a cost here; the harder card shows where delay, rivalry, or strain can gather",
+      "desire or strategy is meeting pressure, which makes clean motives more important than winning the next turn",
+    ],
+  },
+  8: {
+    supportive: [
+      "closure is supported here, so ending, resting, or releasing can become constructive rather than merely sad",
+      "Coffin marks a stop, while the supportive card shows what is protected by allowing that stop to be real",
+      "the ending has help around it, making recovery possible once the finished thing is no longer being carried",
+      "completion becomes easier to trust because the second card shows warmth, clarity, or stability on the other side of release",
+    ],
+    pressure: [
+      "the ending is heavy because the pressure card shows what has made continuation costly",
+      "Coffin and the harder card together make depletion visible, so the reading asks what must stop before more is demanded",
+      "closure is not optional here; the second card shows why trying to keep the old form alive would intensify the strain",
+      "the stop carries pressure, but it may also prevent the situation from consuming more energy than it deserves",
+    ],
+  },
+  9: {
+    supportive: [
+      "goodwill is being reinforced, so the offer or invitation can become more useful than a passing kindness",
+      "Bouquet brings grace, and the supportive card gives that grace enough substance to matter",
+      "the welcome is not empty here; the second card shows where warmth, clarity, or loyalty can carry it further",
+      "a pleasant opening gains practical strength because the support beside it gives the gesture somewhere to land",
+    ],
+    pressure: [
+      "the gift is real, but the pressure card shows why charm alone cannot carry the situation",
+      "Bouquet softens the field, while the harder card names what still needs a more serious answer",
+      "goodwill meets constraint here, so the invitation has to be handled with discernment rather than politeness alone",
+      "the pleasant surface may help, but the pressure beside it shows what cannot be decorated away",
+    ],
+  },
+  10: {
+    supportive: [
+      "the cut is supported, so decisive action can clear the field rather than simply shock it",
+      "Scythe becomes useful because the second card shows what is protected by making the clean removal",
+      "precision has help around it, making the necessary edit sharper and less destructive",
+      "the supportive card gives the cut a purpose: remove what blocks the healthier, clearer, or more stable line",
+    ],
+    pressure: [
+      "the cut is under strain, so timing and precision matter because a careless move would scatter the field",
+      "Scythe and the pressure card together warn that delay may make the eventual break harsher",
+      "a sharp decision is needed, but the harder card shows why the edge must be handled carefully",
+      "the pressure beside Scythe names what has become too risky to leave attached",
+    ],
+  },
+  11: {
+    supportive: [
+      "repetition gains a constructive outlet here, so effort can become practice rather than another round of strain",
+      "Whip is softened by support, making the pattern easier to name without escalating the conflict",
+      "the second card gives friction somewhere useful to go, especially if the old rhythm is consciously changed",
+      "the repeated issue can be worked with because help, loyalty, or clarity keeps it from becoming pure punishment",
+    ],
+    pressure: [
+      "the repeated pattern is intensified, so the reading asks what conflict keeps being fed",
+      "Whip and the pressure card together show a loop that can exhaust the situation if it is not interrupted",
+      "friction is not incidental here; the harder card shows where repetition has become costly",
+      "the pressure beside Whip turns effort into strain unless the rhythm is changed on purpose",
+    ],
+  },
+  12: {
+    supportive: [
+      "conversation has help around it, so talking can clarify instead of scattering the field",
+      "Birds brings nervous motion, but the supportive card gives the exchange a steadier perch",
+      "communication becomes more useful because the second card adds warmth, loyalty, clarity, or a workable opening",
+      "the talk can become practical here if the support beside it keeps the tone calm and specific",
+    ],
+    pressure: [
+      "the conversation is under pressure, so anxious talk could amplify the problem if it is not contained",
+      "Birds and the harder card together show noise, worry, or negotiation becoming part of the strain",
+      "the pressure beside Birds asks for clearer tone, fewer assumptions, and less repetition of the worry",
+      "communication is active but not neutral here; the harder card shows what the talk could escalate",
+    ],
+  },
+  13: {
+    supportive: [
+      "the beginning has help around it, so the small start can be protected long enough to develop",
+      "Child is strengthened by the supportive card, making curiosity or a first attempt more workable",
+      "the new thing has enough warmth, clarity, or loyalty beside it to learn without being overburdened",
+      "the supportive card gives the small seed better conditions, so the next move can stay light but real",
+    ],
+    pressure: [
+      "the beginning is under strain, so it needs protection from pressure it is not ready to carry",
+      "Child and the pressure card together show where inexperience, immaturity, or a new start can be overloaded",
+      "the small thing is real, but the harder card shows why it cannot be treated as fully grown yet",
+      "pressure beside Child asks for scale: keep the next step small enough to survive contact with the difficulty",
+    ],
+  },
+  14: {
+    supportive: [
+      "caution has support here, so verification can protect value without closing the field completely",
+      "Fox becomes useful because the supportive card turns strategy into practical wisdom rather than suspicion",
+      "the second card gives self-protection a clean purpose: preserve what matters while staying honest",
+      "careful checking is reinforced, making the practical route smarter and less reactive",
+    ],
+    pressure: [
+      "caution is under pressure, so self-interest, avoidance, or mistrust may distort the next move",
+      "Fox and the harder card together ask for verification before the surface story is trusted",
+      "the pressure beside Fox shows where cleverness could become evasive or too protective",
+      "strategy is necessary here, but the harder card shows why motives and incentives must be checked plainly",
+    ],
+  },
+  15: {
+    supportive: [
+      "power has support around it, so resources or authority can be used protectively rather than defensively",
+      "Bear is strengthened by the supportive card, making capacity, money, or leadership more reliable",
+      "the second card gives weight a constructive outlet, so strength can become stewardship",
+      "resources are not isolated here; the supportive card shows where protection, clarity, or loyalty can help carry them",
+    ],
+    pressure: [
+      "power is under strain, so control, appetite, or resource pressure needs careful handling",
+      "Bear and the harder card together show where weight has become heavy enough to distort the field",
+      "authority meets pressure here, making stewardship more useful than force",
+      "the harder card shows what can happen when protection becomes control or resources become a source of strain",
+    ],
+  },
+  16: {
+    supportive: [
+      "guidance is reinforced here, so the hopeful signal has enough backing to become practical",
+      "Stars gains support from the second card, turning aspiration into a clearer route",
+      "the wider pattern is helped by warmth, clarity, or stability, making the signal easier to trust and test",
+      "the supportive card gives the guidance somewhere to land, so the vision can become a usable next step",
+    ],
+    pressure: [
+      "the signal is still present, but pressure beside it shows why hope needs verification and structure",
+      "Stars and the harder card together warn against turning guidance into vague reassurance",
+      "the longer direction is under strain, so the reading asks what would keep the signal usable under pressure",
+      "aspiration meets constraint here, making practical orientation more important than simply believing it will work",
+    ],
+  },
+  17: {
+    supportive: [
+      "change has support around it, so the transition can become an upgrade rather than mere disruption",
+      "Stork is strengthened by the supportive card, making movement, renewal, or relocation easier to land",
+      "the second card gives the change better conditions, so adaptation can become practical",
+      "the shift is helped by warmth, clarity, or stability, making the new arrangement more trustworthy",
+    ],
+    pressure: [
+      "change is under strain, so the transition needs guidance before it becomes scattered or reactive",
+      "Stork and the harder card together show where a necessary shift is carrying stress with it",
+      "the pressure beside Stork asks what must be adjusted carefully rather than moved in haste",
+      "movement is real here, but the harder card shows why the new form cannot be assumed to settle by itself",
+    ],
+  },
+  18: {
+    supportive: [
+      "trust is reinforced here, so the supportive bond can be leaned on with more confidence",
+      "Dog is strengthened by the second card, making loyalty, collaboration, or service more dependable",
+      "the alliance has help around it, so follow-through can matter more than reassurance",
+      "the supportive card gives the bond a practical outlet, showing where trust can actually do work",
+    ],
+    pressure: [
+      "loyalty is under pressure, so the reading asks whether the support is reciprocal enough to hold",
+      "Dog and the harder card together show where trust, friendship, or service is being tested",
+      "the pressure beside Dog asks for proof of reliability rather than a warm assumption",
+      "support is present, but the harder card shows where attachment, duty, or uneven loyalty could strain it",
+    ],
+  },
+  19: {
+    supportive: [
+      "structure has support around it, so the boundary or formal channel can protect rather than isolate",
+      "Tower is strengthened by the supportive card, making distance, expertise, or procedure more useful",
+      "the second card gives the formal frame a constructive purpose, so the system can be worked with",
+      "perspective is helped here, making the step back clearer and less lonely",
+    ],
+    pressure: [
+      "structure is under pressure, so distance, bureaucracy, or hierarchy may become part of the obstacle",
+      "Tower and the harder card together show where formal boundaries can harden into isolation or delay",
+      "the pressure beside Tower asks whether the wall is protection, procedure, or avoidance",
+      "the system matters here, but the harder card shows why it may need careful navigation rather than passive compliance",
+    ],
+  },
+  20: {
+    supportive: [
+      "the public field has support around it, so visibility or community can become genuinely useful",
+      "Garden is strengthened by the supportive card, making the network, audience, or shared space more trustworthy",
+      "the second card gives participation a constructive outlet, so the wider room can help rather than distract",
+      "social context is working in favor of the matter, provided the visibility is chosen with care",
+    ],
+    pressure: [
+      "the public field is under pressure, so visibility, reputation, or group dynamics need careful handling",
+      "Garden and the harder card together show where the wider room can amplify the strain",
+      "the pressure beside Garden asks what should be public, what should be witnessed, and what should stay contained",
+      "community is part of the issue here, but the harder card shows why audience or network effects cannot be ignored",
+    ],
+  },
+  21: {
+    supportive: [
+      "the obstacle has help around it, so patience and staged effort can become constructive rather than discouraging",
+      "Mountain is softened by the supportive card, making the slow route more viable than it first appears",
+      "the second card gives the blockage a workable context, so the reading can plan around it instead of freezing",
+      "resistance is present, but support beside it shows where endurance, guidance, or warmth can make the climb possible",
+    ],
+    pressure: [
+      "the obstacle is intensified here, so delay, distance, or resistance needs a more deliberate route",
+      "Mountain and the harder card together show where pushing straight ahead could waste effort",
+      "the pressure beside Mountain asks what can be routed around, broken into stages, or postponed without surrendering the whole aim",
+      "blockage is not just mood here; the second card shows the real cost of ignoring the terrain",
+    ],
+  },
+  22: {
+    supportive: [
+      "the choice has support around it, so the options can be weighed with more confidence and less panic",
+      "Crossroads gains clarity from the supportive card, making one route easier to test or trust",
+      "the second card gives the fork better criteria, so the decision can become practical instead of abstract",
+      "the available paths are not equally vague here; support beside Crossroads shows where a cleaner route may open",
+    ],
+    pressure: [
+      "the choice is under pressure, so delay, fear, or divided priorities may distort the decision",
+      "Crossroads and the harder card together show why keeping every option open could become costly",
+      "the pressure beside Crossroads asks for criteria before the fork turns into drift",
+      "multiple paths are present, but the harder card shows what happens if the tradeoff is avoided",
+    ],
+  },
+  23: {
+    supportive: [
+      "the drain can be repaired here, because the supportive card shows where energy, trust, or clarity can be restored",
+      "Mice is softened by support, making the leak easier to find before it becomes a larger loss",
+      "the second card gives the attrition a practical remedy, so maintenance can actually change the pattern",
+      "small losses are present, but help nearby shows what can be protected from further erosion",
+    ],
+    pressure: [
+      "the drain is intensified here, so stress, loss, or erosion needs attention before it spreads",
+      "Mice and the harder card together show attrition becoming expensive if the small leak is ignored",
+      "the pressure beside Mice asks what is quietly eating at the situation and what must be simplified now",
+      "depletion is not incidental here; the second card shows where strain could keep multiplying",
+    ],
+  },
+  24: {
+    supportive: [
+      "care is reinforced here, so affection, values, or devotion can become a reliable guide",
+      "Heart is strengthened by the supportive card, making sincerity warmer and more practical",
+      "the second card gives feeling somewhere constructive to land, so love or value can become action",
+      "emotional truth has support beside it, which makes care easier to express without losing steadiness",
+    ],
+    pressure: [
+      "the heart of the matter is under pressure, so care needs boundaries as much as warmth",
+      "Heart and the harder card together show where longing, devotion, or value may be strained by reality",
+      "the pressure beside Heart asks whether affection is clarifying the choice or idealizing what needs repair",
+      "feeling is real here, but the harder card shows why love has to be matched with discernment and follow-through",
+    ],
+  },
+  25: {
+    supportive: [
+      "the commitment has support around it, so the agreement can be renewed with more trust",
+      "Ring is strengthened by the supportive card, making the bond or cycle more workable",
+      "the second card gives the terms somewhere constructive to land, so repetition can become reliability",
+      "the promise is helped here, provided it is reviewed consciously rather than left on old assumptions",
+    ],
+    pressure: [
+      "the commitment is under pressure, so the terms need review before the loop repeats itself",
+      "Ring and the harder card together show where obligation could become a trap if it is not renegotiated",
+      "the pressure beside Ring asks what is still a living promise and what is only habit",
+      "the bond matters here, but the harder card shows why agreement needs clearer limits or updated terms",
+    ],
+  },
+  26: {
+    supportive: [
+      "hidden knowledge has help around it, so research or disclosure can become useful rather than destabilizing",
+      "Book is strengthened by the supportive card, making study, privacy, or learning easier to trust",
+      "the second card gives the unknown material a safe way to become practical",
+      "what is not yet visible can be approached constructively because support, clarity, or patience is present",
+    ],
+    pressure: [
+      "the hidden factor is under pressure, so secrecy, missing context, or withheld knowledge needs careful handling",
+      "Book and the harder card together show why guessing around the unknown could become costly",
+      "the pressure beside Book asks what must be learned before the next move is treated as informed",
+      "private context matters here, and the harder card shows why it cannot stay vague forever",
+    ],
+  },
+  27: {
+    supportive: [
+      "the message has support around it, so documentation can clarify rather than merely record the problem",
+      "Letter is strengthened by the supportive card, making the wording, file, or follow-up more useful",
+      "the second card gives the communication a practical destination, so the record can do real work",
+      "the message trail is helped here, especially if what matters is stated plainly and tracked",
+    ],
+    pressure: [
+      "the communication is under pressure, so vague wording or missing follow-up could intensify the issue",
+      "Letter and the harder card together show why the record needs to be exact",
+      "the pressure beside Letter asks what must be written, confirmed, or corrected before the situation moves",
+      "the message matters here, but the harder card shows why informal understanding may not be enough",
+    ],
+  },
+  28: {
+    supportive: [
+      "the other person's position has support around it, so mutual clarity can become easier to reach",
+      "Counterpart is strengthened by the supportive card, making their role, response, or participation more workable",
+      "the second card gives the relational mirror a constructive use, so projection can give way to evidence",
+      "their side of the matter is helped here, provided it is read accurately rather than assumed",
+    ],
+    pressure: [
+      "the other person's position is under pressure, so assumption or projection could distort the reading",
+      "Counterpart and the harder card together show where their role, limits, or response needs clearer handling",
+      "the pressure beside Counterpart asks what belongs to them and what is being projected onto them",
+      "their participation matters here, but the harder card shows why mutual clarity cannot be skipped",
+    ],
+  },
+  29: {
+    supportive: [
+      "your own agency has support around it, so a clearer stance can become practical",
+      "Querent is strengthened by the supportive card, making your choice, boundary, or presence easier to trust",
+      "the second card gives your role a constructive outlet, so the reading can focus on what is genuinely yours to steer",
+      "your position is helped here, especially where values and practical support can work together",
+    ],
+    pressure: [
+      "your own stance is under pressure, so fear, defensiveness, or over-responsibility needs careful sorting",
+      "Querent and the harder card together show where your role is being tested",
+      "the pressure beside Querent asks what is truly yours to choose and what should not be carried as yours",
+      "your agency matters here, but the harder card shows why self-definition needs boundaries as well as courage",
+    ],
+  },
+  30: {
+    supportive: [
+      "maturity has support around it, so calm judgment can become more than restraint",
+      "Lily is strengthened by the supportive card, making ethics, patience, or diplomacy more effective",
+      "the second card gives composure a practical outlet, so peace can act rather than merely soothe",
+      "the mature route is helped here, especially where dignity and warmth can hold the tone steady",
+    ],
+    pressure: [
+      "maturity is under pressure, so calm could slide into avoidance if the issue is not named",
+      "Lily and the harder card together show where restraint must not become silence",
+      "the pressure beside Lily asks whether patience is serving wisdom or delaying necessary action",
+      "ethical steadiness matters here, but the harder card shows why composure needs clear intent",
+    ],
+  },
+  31: {
+    supportive: [
+      "clarity is reinforced here, so confidence and momentum can become genuinely useful",
+      "Sun is strengthened by the supportive card, making success, warmth, or visibility easier to sustain",
+      "the second card gives the bright signal enough substance to become action",
+      "what is working is helped here, provided the visibility is used responsibly",
+    ],
+    pressure: [
+      "clarity is under pressure, so confidence needs checks before it becomes overreach",
+      "Sun and the harder card together show where success or visibility could expose the unresolved issue",
+      "the pressure beside Sun asks what must be handled so momentum does not become glare",
+      "the light is real here, but the harder card shows why optimism still needs structure",
+    ],
+  },
+  32: {
+    supportive: [
+      "emotional rhythm has support around it, so sensitivity can become guidance rather than volatility",
+      "Moon is strengthened by the supportive card, making recognition, attunement, or feedback more trustworthy",
+      "the second card gives feeling a steadier container, so the cycle can be read more cleanly",
+      "the emotional signal is helped here, especially if it is tracked over time rather than judged in one moment",
+    ],
+    pressure: [
+      "emotional rhythm is under pressure, so mood, reputation, or feedback loops need careful reading",
+      "Moon and the harder card together show where feeling could be intensified by uncertainty or strain",
+      "the pressure beside Moon asks what is a true signal and what is only a passing phase",
+      "sensitivity matters here, but the harder card shows why the response needs steadiness",
+    ],
+  },
+  33: {
+    supportive: [
+      "the solution has support around it, so the key detail can be tested and used with confidence",
+      "Key is strengthened by the supportive card, making access, clarity, or certainty more reliable",
+      "the second card gives the unlocking point a practical path, so insight can become movement",
+      "the answer is helped here, provided it is verified before being treated as final",
+    ],
+    pressure: [
+      "the solution is under pressure, so certainty needs verification before the lock is forced",
+      "Key and the harder card together show why the apparent answer must fit the actual problem",
+      "the pressure beside Key asks what unlocks the situation and what could close it again",
+      "clarity is present here, but the harder card shows why one decisive detail still needs careful handling",
+    ],
+  },
+  34: {
+    supportive: [
+      "resource flow has support around it, so money, energy, or exchange can circulate more cleanly",
+      "Fish is strengthened by the supportive card, making movement of value easier to track and use",
+      "the second card gives the flow a constructive channel, so resources can become responsive rather than scattered",
+      "what is moving through the system is helped here, especially if inflow and outflow are both named",
+    ],
+    pressure: [
+      "resource flow is under pressure, so untracked movement could become leakage",
+      "Fish and the harder card together show where money, energy, or exchange needs firmer management",
+      "the pressure beside Fish asks what is coming in, what is going out, and what is being lost in the current",
+      "flow is active here, but the harder card shows why movement alone is not the same as stability",
+    ],
+  },
+  35: {
+    supportive: [
+      "stability has support around it, so long-term effort can hold more securely",
+      "Anchor is strengthened by the supportive card, making endurance, work, or commitment more reliable",
+      "the second card gives steadiness a living purpose, so staying put does not become stagnation",
+      "what holds is helped here, especially if the commitment still has enough life to deserve anchoring",
+    ],
+    pressure: [
+      "stability is under pressure, so endurance may need revision rather than more holding on",
+      "Anchor and the harder card together show where the fixed point could become dead weight",
+      "the pressure beside Anchor asks what should be stabilized and what has outlived its purpose",
+      "steadiness matters here, but the harder card shows why durability needs renewal, not stubbornness",
+    ],
+  },
+  36: {
+    supportive: [
+      "the burden has support around it, so responsibility can be carried more wisely",
+      "Cross is strengthened by the supportive card, making duty, meaning, or accountability less isolating",
+      "the second card gives the weight a constructive context, so purpose can be separated from unnecessary suffering",
+      "the serious note is helped here, especially where support makes the responsibility shareable",
+    ],
+    pressure: [
+      "the burden is intensified here, so responsibility, grief, or duty needs careful limits",
+      "Cross and the harder card together show where pressure could be mistaken for purpose",
+      "the pressure beside Cross asks what is truly yours to carry and what must be redistributed",
+      "the weight is real here, but the harder card shows why seriousness should not become solitary endurance",
+    ],
+  },
+};
+
+const OWN_HOUSE_FOLLOW_THROUGH: Partial<Record<number, string[]>> = {
+  1: [
+    "Rider in Rider House makes the arrival itself the clearest instruction — answer the new signal while it is still live",
+    "The message, visit, or first movement is not background here; it is the event the reading wants handled first",
+    "As an arrival marker, it warns that delaying too long risks missing the point of the spread",
+  ],
+  2: [
+    "Clover in Clover House says the small opening is exactly as small and usable as it looks",
+    "The promise is not grand; it is a brief window that becomes meaningful only if it is used",
+    "The reading is giving permission to take the modest advantage seriously without inflating it",
+  ],
+  3: [
+    "Ship in Ship House puts the journey, distance, or movement in plain view — the route itself is the matter",
+    "The spread is direct about movement here: define the destination before committing more effort to the crossing",
+    "This is where expansion becomes literal enough to need planning, resources, and a named direction",
+  ],
+  4: [
+    "House in Foundation House makes the base of the matter impossible to treat as background",
+    "The reading is plain here: structure, home base, and daily containment are the practical issue",
+    "This is where the foundation either holds the whole story together or reveals what needs repair first",
+  ],
+  5: [
+    "Tree in Tree House makes health, roots, and long development the practical center of the matter",
+    "The spread slows down here on purpose: what has been growing over time is the thing to tend first",
+    "As a roots marker, it asks what strengthens the living system rather than what moves fastest",
+  ],
+  6: [
+    "Clouds in Clouds House says the uncertainty itself must be handled before the rest of the reading can sharpen",
+    "This is a clear fog marker: separate mood, assumption, and evidence before treating any one story as final",
+    "The spread is not asking for dramatic certainty here; it is asking for better visibility and cleaner verification",
+  ],
+  7: [
+    "Snake in Snake House makes complication, motive, and strategy impossible to treat as side issues",
+    "This is where the winding path is the point: move carefully, name the motive, and do not rush trust",
+    "The reading is direct about complexity here; the useful move is precise navigation rather than blunt reaction",
+  ],
+  8: [
+    "Coffin in Coffin House makes the ending, pause, or exhaustion the plain instruction",
+    "As a strong closure marker, it says to stop asking the finished thing to keep producing life",
+    "The spread points to rest, release, and completion before it asks for renewal",
+  ],
+  9: [
+    "Bouquet in Bouquet House makes the offer, welcome, or gesture of goodwill the clearest opening",
+    "As a grace marker, it says to receive what is being sincerely offered, then make it practical",
+    "The spread points to appreciation, invitation, and social ease as active forces, not decoration",
+  ],
+  10: [
+    "Scythe in Scythe House makes the cut itself impossible to postpone or soften into vagueness",
+    "As a clean edge marker, it asks what must be removed, harvested, or stopped",
+    "The spread is direct about timing here; precision matters because the blade is already in the story",
+  ],
+  11: [
+    "Whip in Whip House makes the repeated conflict or effort pattern the thing to address first",
+    "As a loop marker, it asks you to name what keeps replaying before it becomes another round",
+    "The spread points to friction, repetition, and rhythm as the practical issue, not background noise",
+  ],
+  12: [
+    "Birds in Birds House makes the conversation, worry, or nervous exchange the live wire of the reading",
+    "As a communication marker, it says to listen for the repeated concern without letting it multiply unchecked",
+    "The spread points to tone, timing, and the quality of the exchange as the part that needs handling first",
+  ],
+  13: [
+    "Child in Child House makes the new beginning, small scale, or first attempt the clearest instruction",
+    "As a seed marker, it keeps the next move small enough to learn from",
+    "The spread points to curiosity, light structure, and protection of the early stage before it asks for maturity",
+  ],
+  14: [
+    "Fox in Fox House makes caution, incentives, and practical self-protection impossible to ignore",
+    "As a verification marker, it asks for facts, motives, and workability before more trust is offered",
+    "The spread points to strategy here, but it asks for clean strategy rather than suspicion for its own sake",
+  ],
+  15: [
+    "Bear in Bear House makes power, resources, and stewardship the practical center of the matter",
+    "As a weight marker, it asks who holds influence and how that influence is being used",
+    "The spread points to strength, money, body, or authority as the thing that must be handled deliberately",
+  ],
+  16: [
+    "Stars in Stars House makes the guiding signal unusually clear, but it still needs a practical route",
+    "As an orientation marker, it says to follow the visible pattern without floating away from the next step",
+    "The spread points to hope with coordinates — direction, timing, and a signal that can be tested",
+  ],
+  17: [
+    "Stork in Stork House makes the change itself the practical instruction",
+    "As a transition marker, it asks for support around the move, upgrade, or seasonal shift already underway",
+    "The spread points to adaptation and follow-through before it asks the new form to be settled",
+  ],
+  18: [
+    "Dog in Dog House makes proven loyalty, support, and follow-through the clearest signal",
+    "As a trust marker, it favors what has shown up consistently over what merely sounds reassuring",
+    "The spread points to the reliable ally, reciprocal bond, or service that can actually carry weight",
+  ],
+  19: [
+    "Tower in Tower House makes structure, distance, or the formal channel the issue to handle directly",
+    "As a boundary marker, it asks you to work with the system, the office, or the necessary distance consciously",
+    "The spread points to perspective and procedure, but asks that distance clarify rather than isolate",
+  ],
+  20: [
+    "Garden in Garden House makes the public field, network, or shared room impossible to treat as background",
+    "As a visibility marker, it asks how the matter should enter the wider social space",
+    "The spread points to audience, community, and participation as active forces in the outcome",
+  ],
+  21: [
+    "Mountain in Mountain House makes the obstacle itself the practical issue to map",
+    "As a delay marker, it slows the plan down enough to find the passable route",
+    "The spread points to endurance, strategy, and the limit that must be worked with rather than wished away",
+  ],
+  22: [
+    "Crossroads in Crossroads House makes the choice itself impossible to outsource or postpone forever",
+    "As a fork marker, it asks for criteria before every route is kept alive",
+    "The spread points to tradeoffs, decision quality, and the path that becomes real only when it is chosen",
+  ],
+  23: [
+    "Mice in Mice House makes the leak, stressor, or small loss the clearest thing to address",
+    "As an attrition marker, it says to patch what is draining the situation before adding more demand",
+    "The spread points to maintenance, simplification, and the quiet erosion that needs practical repair",
+  ],
+  24: [
+    "Heart in Heart House makes care, values, and emotional truth the center of the matter",
+    "As a values marker, it asks for action from what genuinely matters while keeping enough boundary to protect it",
+    "The spread points to love, sincerity, and devotion as guides only when they are matched by practical follow-through",
+  ],
+  25: [
+    "Ring in Ring House makes the agreement, promise, or recurring cycle the thing to review directly",
+    "As a commitment marker, it says to renew the terms consciously or stop letting the old loop decide for you",
+    "The spread points to the bond, contract, or repetition that must become explicit before it can be trusted",
+  ],
+  26: [
+    "Book in Book House makes hidden knowledge, study, or private context the clearest issue",
+    "As a learning marker, it asks for research before conclusion and responsible disclosure afterward",
+    "The spread points to what is not yet visible as active material, not empty space",
+  ],
+  27: [
+    "Letter in Letter House makes the message, document, or record the practical lever",
+    "As a documentation marker, it says to put the important thing in clear words and follow up",
+    "The spread points to written clarity, tracked communication, and the wording that changes what can happen next",
+  ],
+  28: [
+    "Counterpart in Counterpart House makes the other person's actual position impossible to treat as a guess",
+    "As a mutuality marker, it asks for roles and expectations to be clarified before projection fills the space",
+    "The spread points to their stance, limits, and participation as active forces in the reading",
+  ],
+  29: [
+    "Querent in Querent House makes your own agency, stance, and boundaries the clearest point of leverage",
+    "As a self-position marker, it asks for choices from values rather than fear and names what is actually yours to steer",
+    "The spread points to your role in the matter without making you responsible for every moving part",
+  ],
+  30: [
+    "Lily in Lily House makes maturity, ethics, and long judgment the practical center",
+    "As a composure marker, it pairs calm with clear intent so peace does not become avoidance",
+    "The spread points to patience, respect, and principled action rather than heat or display",
+  ],
+  31: [
+    "Sun in Sun House makes clarity, vitality, and success unusually direct",
+    "As a confidence marker, it says to use the light responsibly and support what is genuinely working",
+    "The spread points to momentum, visibility, and the part of the situation that has enough life to strengthen",
+  ],
+  32: [
+    "Moon in Moon House makes emotional rhythm, recognition, and cycles the thing to track",
+    "As an attunement marker, it listens to the feeling without letting one phase become the whole truth",
+    "The spread points to mood, reputation, feedback, and timing as active forces in the outcome",
+  ],
+  33: [
+    "Key in Key House makes the solution or unlocking detail unusually plain",
+    "As an access marker, it says to verify the key, then use it with focus",
+    "The spread points to the specific detail, decision, or opening that can actually move the lock",
+  ],
+  34: [
+    "Fish in Fish House makes resource flow, money, or exchange the practical issue to monitor",
+    "As a flow marker, it tracks what comes in, what goes out, and what the current is carrying",
+    "The spread points to movement of value as the medium of the matter, not a side concern",
+  ],
+  35: [
+    "Anchor in Anchor House makes stability, work, and durable commitment the clearest instruction",
+    "As an endurance marker, it stabilizes what still has life and releases what has become dead weight",
+    "The spread points to follow-through, long effort, and the fixed point that either holds or traps the situation",
+  ],
+  36: [
+    "Cross in Cross House makes burden, duty, and meaning impossible to treat lightly",
+    "As a responsibility marker, it carries what is true, shares what can be shared, and puts down inherited strain",
+    "The spread points to serious purpose without asking you to mistake pressure for destiny",
+  ],
+};
+
 function chooseAvoiding(
   pool: string[],
   id: number,
@@ -16074,6 +17603,62 @@ export function buildCardAssociationSentence(
   );
 }
 
+export function buildPositionedCardAssociationSentence(
+  input: number | CardMeaning,
+  position: CardNarrativePosition,
+  subjectId: SubjectId,
+  domain: Domain,
+  random: () => number,
+): string {
+  const card = cardFrom(input);
+  const pool = CARD_POSITION_ASSOCIATION_NOTES[card.id]?.[position];
+  if (!pool?.length) {
+    return buildCardAssociationSentence(card, subjectId, domain, random);
+  }
+
+  const phrase = choose(pool, random);
+
+  if (position === "situation") {
+    return sentence(
+      choose(
+        [
+          `${card.name} names the opening condition: ${phrase}`,
+          `${card.name} gives the beginning its shape through ${phrase}`,
+          `${card.name} starts the sequence by pointing to ${phrase}`,
+          `${card.name} sets the first terms of the reading: ${phrase}`,
+        ],
+        random,
+      ),
+    );
+  }
+
+  if (position === "pivot") {
+    return sentence(
+      choose(
+      [
+        `${card.name} makes the pivot about ${phrase}`,
+        `${card.name} becomes the hinge here because it names ${phrase}`,
+        `The middle card asks for attention to ${phrase}`,
+        `${card.name} brings this into the center of the sequence: ${phrase}`,
+      ],
+      random,
+    ),
+    );
+  }
+
+  return sentence(
+    choose(
+      [
+        `For the next step, ${card.name} emphasizes ${phrase}`,
+        `${card.name} gives the way forward its shape through ${phrase}`,
+        `The advice line becomes more concrete through ${phrase}`,
+        `Looking ahead, ${card.name} turns attention toward ${phrase}`,
+      ],
+      random,
+    ),
+  );
+}
+
 export function buildHouseAssociationSentence(
   input: number | HouseMeaning,
   subjectId: SubjectId,
@@ -16083,18 +17668,20 @@ export function buildHouseAssociationSentence(
   const house = houseFrom(input);
   const houseName = displayHouseName(house);
   const housePhrase = buildHouseAssociationPhrase(house, subjectId, domain, random);
+  const housePhraseObject = housePhrase.replace(/^where\s+/i, "the place where ");
+  const housePhraseNoWhere = housePhrase.replace(/^where\s+/i, "");
 
   return sentence(
     choose(
       [
-        `${houseName} keeps drawing attention to ${housePhrase}`,
-        `${houseName} makes ${housePhrase} harder to ignore`,
-        `In ${houseName}, the emphasis falls on ${housePhrase}`,
-        `${houseName} is the part of the reading where ${housePhrase} becomes most concrete`,
-        `Whatever else is happening, ${houseName} keeps pulling focus back to ${housePhrase}`,
-        `The weight of ${houseName} lands on ${housePhrase}, and other readings nearby are shaped by it`,
-        `${houseName} grounds the reading: ${housePhrase} is not abstract here, it is active`,
-        `${houseName} localizes the pressure around ${housePhrase}`,
+        `${houseName} keeps drawing attention to ${housePhraseObject}`,
+        `${houseName} makes ${housePhraseObject} harder to ignore`,
+        `In ${houseName}, the emphasis falls on ${housePhraseObject}`,
+        `${houseName} is where ${housePhraseNoWhere} becomes most concrete`,
+        `Whatever else is happening, ${houseName} keeps pulling focus back to ${housePhraseObject}`,
+        `The weight of ${houseName} lands on ${housePhraseObject}, and other readings nearby are shaped by it`,
+        `${houseName} grounds the reading in ${housePhraseObject}`,
+        `${houseName} localizes the pressure around ${housePhraseObject}`,
       ],
       random,
     ),
@@ -16146,6 +17733,11 @@ export function buildOverlayAssociationSentence(input: {
         `${card.name} landing in ${houseName} means ${cardPhrase} is now working inside the conditions of ${housePhrase}`,
         `The combination of ${card.name} and ${houseName} concentrates the reading: ${cardPhrase} is where ${housePhraseNoWhere} becomes personal`,
         `In ${houseName}, ${card.name} cannot avoid ${housePhrase} — and the result is that ${cardPhrase} takes on a sharper, more grounded quality`,
+        `${houseName} gives ${card.name} a specific place to act: ${cardPhrase} has to answer the conditions of ${housePhrase}`,
+        `${card.name} does not stay abstract in ${houseName}; it becomes visible through ${housePhrase}`,
+        `Read through ${houseName}, ${card.name} turns ${cardPhrase} into something that has to be handled where ${housePhraseNoWhere}`,
+        `${houseName} changes the scale of ${card.name}, moving ${cardPhrase} from a general signal into the territory of ${housePhrase}`,
+        `${card.name} in ${houseName} shows the point where ${cardPhrase} meets the practical reality of ${housePhrase}`,
       ],
       input.random,
     ),
@@ -16175,6 +17767,40 @@ export function buildPairAssociationSentence(input: {
     const opener = choose(PAIR_OPENERS, input.random);
     return sentence(`${opener} ${lowerFirst(stripped)}`);
   }
+  const batchCardCandidate = [cardA, cardB].find((card) => BATCH_PAIR_ASSOCIATION_NOTES[card.id]);
+  if (batchCardCandidate) {
+    const batchCard = batchCardCandidate;
+    const otherCard = batchCard.id === cardA.id ? cardB : cardA;
+    const batchPairNotes = BATCH_PAIR_ASSOCIATION_NOTES[batchCard.id]!;
+    if (SUPPORTIVE_PAIR_CARD_IDS.has(otherCard.id)) {
+      return sentence(
+        choose(
+          [
+            `${batchCard.name} with ${otherCard.name} shows support in motion: ${choose(batchPairNotes.supportive, input.random)}`,
+            `${batchCard.name} and ${otherCard.name} work supportively here: ${choose(batchPairNotes.supportive, input.random)}`,
+            `The helpful side of this pairing is specific: ${choose(batchPairNotes.supportive, input.random)}`,
+            `${otherCard.name} strengthens ${batchCard.name} here, suggesting ${choose(batchPairNotes.supportive, input.random)}`,
+          ],
+          input.random,
+        ),
+      );
+    }
+
+    if (PRESSURE_PAIR_CARD_IDS.has(otherCard.id)) {
+      return sentence(
+        choose(
+          [
+            `${batchCard.name} with ${otherCard.name} names a pressure point: ${choose(batchPairNotes.pressure, input.random)}`,
+            `${batchCard.name} and ${otherCard.name} work as a pressure pair here: ${choose(batchPairNotes.pressure, input.random)}`,
+            `The harder side of this pairing is specific: ${choose(batchPairNotes.pressure, input.random)}`,
+            `${otherCard.name} puts pressure on ${batchCard.name} here, suggesting ${choose(batchPairNotes.pressure, input.random)}`,
+          ],
+          input.random,
+        ),
+      );
+    }
+  }
+
   const leftKeywords = normalizePairKeywords(naturalJoin(cardA.keywords.slice(0, 2)).toLowerCase());
   const rightKeywords = normalizePairKeywords(naturalJoin(cardB.keywords.slice(0, 2)).toLowerCase());
   // Avoid "X and Y and A and B" chains when each side already contains "and"
@@ -16187,15 +17813,21 @@ export function buildPairAssociationSentence(input: {
     choose(
       [
         `${cardA.name} and ${cardB.name} show ${kwJoin(leftKeywords, rightKeywords)} actively shaping each other rather than sitting in separate lanes`,
-        `Taken together, ${cardA.name} and ${cardB.name} bring ${leftKeywords} into direct contact with ${rightKeywords}, so neither can be read on its own`,
+        `Taken together, ${cardA.name} and ${cardB.name} make ${kwJoin(leftKeywords, rightKeywords)} part of the same living dynamic`,
         `${cardA.name} and ${cardB.name} place ${kwJoin(leftKeywords, rightKeywords)} in the same frame — and make each harder to ignore`,
-        `${cardA.name} and ${cardB.name} bring ${leftKeywords} into active contact with ${rightKeywords}, which is why the reading cannot treat them as separate issues`,
+        `${cardA.name} and ${cardB.name} show ${leftKeywords} working through ${rightKeywords}, which is why the reading cannot treat them as separate issues`,
         `${cardA.name} alongside ${cardB.name} means ${kwJoin(leftKeywords, rightKeywords)} are not separate threads — they are already interacting`,
         `The combination of ${cardA.name} and ${cardB.name} makes ${kwJoin(leftKeywords, rightKeywords)} part of the same question`,
         `${cardA.name} and ${cardB.name} together pull ${kwJoin(leftKeywords, rightKeywords)} into the same orbit`,
         `What ${cardA.name} starts with ${leftKeywords}, ${cardB.name} reshapes through ${rightKeywords} — the two cards speak as one voice here`,
         `${cardA.name} and ${cardB.name} are not background noise: ${kwJoin(leftKeywords, rightKeywords)} is the mechanism the reading is describing`,
         `Neither ${cardA.name} nor ${cardB.name} can be understood alone in this spread — ${kwJoin(leftKeywords, rightKeywords)} describes a single dynamic, not two separate ones`,
+        `${cardA.name} gives the reading ${leftKeywords}; ${cardB.name} answers with ${rightKeywords}, so the meaning sits in their exchange`,
+        `${cardA.name} and ${cardB.name} form a working pair here: ${kwJoin(leftKeywords, rightKeywords)} keep modifying one another`,
+        `${cardA.name} sets up ${leftKeywords}, but ${cardB.name} decides how that pressure moves through ${rightKeywords}`,
+        `${cardB.name} changes the reading of ${cardA.name}: ${rightKeywords} becomes the condition that ${leftKeywords} has to answer`,
+        `The useful question is not ${cardA.name} or ${cardB.name} separately, but how the first signal changes once the layer of ${rightKeywords} enters the picture`,
+        `${cardA.name} supplies the first signal, ${cardB.name} supplies the consequence, and together they make ${kwJoin(leftKeywords, rightKeywords)} actionable`,
       ],
       input.random,
     ),
@@ -16246,21 +17878,23 @@ export function buildActionDirectiveSentence(input: {
         const opener = choose(THIS_IS_WHERE_OPENERS, input.random);
         return `${opener} ${lowerFirst(stripped)}`;
       })()
+    : isCardEqualsHouse && OWN_HOUSE_FOLLOW_THROUGH[card.id]?.length
+        ? choose(OWN_HOUSE_FOLLOW_THROUGH[card.id] ?? [], input.random)
     : isCardEqualsHouse
       ? choose(
           [
-            `The card and house naming the same thing makes this the clearest point in the spread`,
-            `The card and the house naming the same thing concentrates the signal unusually`,
-            `The card and the house point to the same place, which makes it worth trusting`,
-            `What the card and the house share here makes the signal unusually direct`,
-            `A card landing in its own house is a reading's clearest statement`,
-            `The card matching the house removes ambiguity — this is as clear as the reading gets`,
-            `When the card and house are one, the reading stops needing interpretation and just needs a response`,
-            `A card in its own house doesn't hedge — the message is as direct as the reading produces`,
-            `The coincidence of card and house here collapses the usual ambiguity into a single clear instruction`,
-            `This is one of the cleaner signals a spread can offer — card and house speaking the same language`,
-            `Card and house matching means the reading has already done the interpretive work — what's left is response`,
-            `The reading does not need to be decoded here; the signal is as plain as it gets`,
+            `${card.name} in ${houseName} makes this one of the clearest points in the spread`,
+            `${card.name} matching its own house concentrates the signal unusually`,
+            `Because ${card.name} and ${houseName} point to the same place, this is worth trusting`,
+            `What ${card.name} and ${houseName} share here makes the signal unusually direct`,
+            `${card.name} landing in its own house gives the reading a plain statement`,
+            `${card.name} matching ${houseName} removes ambiguity from this part of the spread`,
+            `When ${card.name} and ${houseName} are one, the reading needs response more than decoding`,
+            `${card.name} in its own house does not hedge; the message is unusually direct`,
+            `The coincidence of ${card.name} and ${houseName} collapses the usual ambiguity into a single instruction`,
+            `This is one of the cleaner signals a spread can offer: ${card.name} and house speaking the same language`,
+            `${card.name} matching its house means the reading has already done much of the interpretive work`,
+            `The ${card.name} signal does not need much decoding here; it is as plain as the spread gets`,
           ],
           input.random,
         )

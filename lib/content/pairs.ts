@@ -1163,7 +1163,7 @@ const CURATED_OVERRIDES: Record<string, Record<Domain, string>> = {
     work: "Mice + Cross marks a critical responsibility being slowly weakened by persistent operational stress.",
   },
   "23-33": {
-    general: "Mice + Key shows the answer to the drain — once the source of attrition is identified and named, the erosion can stop.",
+    general: "Mice + Key shows how the drain can be answered — once the source of attrition is identified and named, the erosion can stop.",
     love: "Mice + Key suggests the quiet tension eroding the relationship has a specific, identifiable cause that can be addressed.",
     work: "Mice + Key points to a diagnostic fix for an operational leak — identify the drain and the solution becomes obvious.",
   },

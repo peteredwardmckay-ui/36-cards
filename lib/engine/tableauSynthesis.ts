@@ -862,7 +862,9 @@ function describePlacementSignal(
       `${card.name} in ${house.name} points to ${cardPhrase} inside ${housePhrase}`,
       `${card.name} in ${house.name} puts ${cardPhrase} under the influence of ${housePhrase}`,
       `${card.name} in ${house.name} connects ${cardPhrase} with the territory of ${housePhrase}`,
-      `${card.name} in ${house.name} brings ${cardPhrase} into direct contact with ${housePhrase}`,
+      `${card.name} in ${house.name} links ${cardPhrase} with ${housePhrase}`,
+      `${card.name} in ${house.name} shows ${cardPhrase} being shaped by ${housePhrase}`,
+      `${card.name} in ${house.name} reads as ${cardPhrase} filtered through ${housePhrase}`,
     ],
     random,
   );
@@ -876,7 +878,9 @@ function signalLead(input: string): string {
 function signalSummary(input: string): string {
   return lowerFirst(
     clause(input)
-      .replace(/^[A-Za-z][A-Za-z0-9' -]* in [A-Za-z][A-Za-z0-9' -]* House\s+(suggests|points to|puts)\s+/i, "")
+      .replace(/^[A-Za-z][A-Za-z0-9' -]* in [A-Za-z][A-Za-z0-9' -]* House\s+(suggests|points to|puts|reads as)\s+/i, "")
+      .replace(/^[A-Za-z][A-Za-z0-9' -]* in [A-Za-z][A-Za-z0-9' -]* House\s+shows\s+(.+?)\s+being shaped by\s+/i, "$1 shaped by ")
+      .replace(/^[A-Za-z][A-Za-z0-9' -]* in [A-Za-z][A-Za-z0-9' -]* House\s+(connects|links|brings)\s+/i, "")
       .replace(/\s+under the influence of\s+/i, " under ")
       .replace(/\s+moving through\s+/i, " moving through ")
       .replace(/\s+inside\s+/i, " in ")
@@ -2571,6 +2575,7 @@ function narrativeSignalPhrase(
       .replace(/^the answer point around reliable support$/i, "a clarifying answer emerging through the support that is actually dependable")
       .replace(/^improvement or movement around maturity and restraint$/i, "movement becoming possible through maturity, restraint, and steadier social judgment")
       .replace(/^your own position under fog or uncertainty$/i, "your own social position sitting inside mixed signals, ambiguity, or too little clarity")
+      .replace(/^your own position shaped by fog or uncertainty$/i, "your own social position sitting inside mixed signals, ambiguity, or too little clarity")
       .replace(/^constructive change under slow growth$/i, "constructive change becoming possible through slower trust and steadier belonging")
       .replace(/^repetition and tension under obstruction$/i, "social friction getting trapped inside a blockage that has still not been worked through cleanly")
       .replace(/^heart, value, or feeling under expansion$/i, "what genuinely matters beginning to get more room to move in the social field")
@@ -2587,6 +2592,7 @@ function narrativeSignalPhrase(
       .replace(/^grace, goodwill, or invitation in improvement or movement$/i, "a warmer social response beginning to show as the dynamic starts moving in a healthier direction")
       .replace(/^improvement or movement around a solution or unlock$/i, "movement beginning to gather around a workable answer or way through")
       .replace(/^your own position under communication and nerves$/i, "your own social position getting tangled in too much chatter, nerves, or crossed signals")
+      .replace(/^your own position with caution$/i, "your own social position being handled with too much caution or guardedness")
       .replace(/^a small but real opening around grace, goodwill, or invitation$/i, "a small but real opening through warmth, goodwill, or a friendlier social response")
       .replace(/^a sharp decision or cut in strategy$/i, "a necessary social cut being shaped by guarded strategy, overmanagement, or self-protective positioning")
       .replace(/^a sharp decision or cut moving through strategy$/i, "a necessary social cut being shaped by guarded strategy, overmanagement, or self-protective positioning")
@@ -2675,6 +2681,8 @@ function narrativeSignalPhrase(
       .replace(/^caution and self-interest under fog or uncertainty$/i, "defensive caution getting worse because too much in the social field still feels unclear")
       .replace(/^incoming movement or news under incoming momentum$/i, "new contact or movement beginning to matter because the social field is finally starting to shift")
       .replace(/^your own position under closure$/i, "your own social position gathering around a pause, ending, or quiet withdrawal")
+      .replace(/^your own position with the territory of closure$/i, "your own social position gathering around a pause, ending, or quiet withdrawal")
+      .replace(/^your own position filtered through structure$/i, "your own social position being shaped by fixed roles, distance, or formal boundaries")
       .replace(/^heart, value, or feeling in support and loyalty$/i, "what genuinely matters becoming clearer through the people or ties that actually hold")
       .replace(/^fog and uncertainty in structure$/i, "social uncertainty gathering inside fixed roles, rigid expectations, or a structure that is too hard to read cleanly")
       .replace(/^constructive change in maturity$/i, "constructive change becoming possible through maturity, restraint, and steadier social judgment")
@@ -2696,6 +2704,8 @@ function narrativeSignalPhrase(
       .replace(/^caution and self-interest in obstruction$/i, "defensive caution and guarded self-interest making an already blocked social dynamic even harder to move")
       .replace(/^maturity around your own position$/i, "steadier social judgment gathering around your own position")
       .replace(/^a sharp decision or cut moving through closure$/i, "a necessary social cut arriving as a pause, ending, or withdrawal becomes unavoidable")
+      .replace(/^choice and branching paths filtered through closure$/i, "a social choice narrowing as something reaches a pause, ending, or withdrawal")
+      .replace(/^choice and branching paths with closure$/i, "a social choice narrowing as something reaches a pause, ending, or withdrawal")
       .replace(/^structure, distance, or institution under communication and nerves$/i, "distance, fixed roles, or formal social structure being made harder by anxious talk, crossed signals, or too much chatter")
       .replace(/^social or public life feeding long-term growth more than first appearances suggest$/i, "the wider social field helping trust and belonging grow more steadily than first appearances suggest")
       .replace(/^burden and meaning in caution$/i, "a weighty social issue being tightened further by defensiveness, guardedness, or overcareful handling")
@@ -4293,6 +4303,10 @@ function formatOpeningSentence(
           `What keeps this field from closing down is ${firstSummary}`,
           `The most available path forward runs through ${firstSummary}`,
           `The spread's strongest positive signal is ${firstSummary}`,
+          `The part with the most room to move is ${firstSummary}`,
+          `The most useful opening is not abstract; it sits with ${firstSummary}`,
+          `Where the spread still has give is ${firstSummary}`,
+          `The first place to look for movement is ${firstSummary}`,
         ],
         random,
       ),
@@ -4307,6 +4321,10 @@ function formatOpeningSentence(
         `One hopeful line runs through ${firstSummary}, while another grows through ${secondSummary}`,
         `The spread offers two real openings: ${firstSummary} is the most direct, with ${secondSummary} as a secondary path`,
         `What the field keeps offering runs through ${firstSummary}, and ${secondSummary} gives it a second entry point`,
+        `The main opening is ${firstSummary}, but ${secondSummary} keeps the wider field from closing down`,
+        `${firstSummary} is the clearest place to move first; ${secondSummary} adds a second workable route`,
+        `The spread does not rely on one hope only: ${firstSummary} leads, while ${secondSummary} keeps another door usable`,
+        `Movement starts most cleanly with ${firstSummary}, then extends through ${secondSummary}`,
       ],
       random,
     ),
@@ -4336,6 +4354,10 @@ function formatPressureSentence(
           `The main strain sits around ${firstSummary}`,
           `The most concentrated friction in this field runs through ${firstSummary}`,
           `Where the spread pushes hardest is ${firstSummary}`,
+          `The pressure that needs the plainest attention is ${firstSummary}`,
+          `The part least willing to soften is ${firstSummary}`,
+          `The point that carries the most weight is ${firstSummary}`,
+          `The harder layer to work with is ${firstSummary}`,
         ],
         random,
       ),
@@ -4350,6 +4372,10 @@ function formatPressureSentence(
         `The strain gathers around ${firstSummary}, with ${secondSummary} keeping the pressure active`,
         `This field carries two pressure points: ${firstSummary} is the more immediate, and ${secondSummary} sits just behind it`,
         `The friction concentrates around ${firstSummary}, while ${secondSummary} adds a secondary layer that doesn't let the field settle`,
+        `${firstSummary} is the pressure to name first; ${secondSummary} is the pressure that keeps returning behind it`,
+        `The first strain is ${firstSummary}, and the second is ${secondSummary}; together they explain why the field does not settle quickly`,
+        `The harder pattern starts with ${firstSummary}, then tightens through ${secondSummary}`,
+        `Pressure gathers first around ${firstSummary}, with ${secondSummary} showing why a simple answer may not hold`,
       ],
       random,
     ),
@@ -4523,9 +4549,9 @@ function atmosphereSentenceFromMotifs(motifs: Array<[MotifId, number]>, random: 
     "power:pressure": [
       "Resources and leverage are active in this spread, but they are under pressure rather than freely available.",
       "There is real capacity here, but it is being tested by the weight around it.",
-      "Power and strain are in direct contact in this field, and the question is which one is setting the terms.",
+      "Power and strain are both active in this field, and the question is which one is setting the terms.",
       "What holds weight in this field is being tested by the strain around it.",
-      "Capacity and difficulty are in direct contact here; neither is background noise.",
+      "Capacity and difficulty are both active here; neither is background noise.",
     ],
     "pressure:power": [
       "The pressure in this spread has a structural quality; it is not just circumstantial but tied to leverage, resources, or control.",
@@ -4628,10 +4654,15 @@ export function synthesizeGrandTableauNarrative(input: {
           [
             `The difficulty sits with ${pressureSummary}, while ${openingSummary} shows what can still move`,
             `The harder part is ${pressureSummary}, but there is still room for ${openingSummary}`,
-          `${pressureSummary} is what keeps the story from settling, yet there is still room for ${openingSummary}`,
+            `${pressureSummary} is what keeps the story from settling, yet there is still room for ${openingSummary}`,
             `The pressure gathers around ${pressureSummary}, while ${openingSummary} is already beginning to answer it`,
             `What is most difficult here is ${pressureSummary}; what still helps is ${openingSummary}`,
-            `${openingSummary} is real, but it has to work around ${pressureSummary} first`,
+            `The useful opening is ${openingSummary}; the pressure it must work through is ${pressureSummary}`,
+            `The most workable route begins with ${openingSummary}, but it has to account for ${pressureSummary}`,
+            `The spread is asking for two-track thinking: name ${pressureSummary} clearly, then use ${openingSummary} where it is actually available`,
+            `The practical answer is not to deny ${pressureSummary}; it is to let ${openingSummary} show where the next move can still land`,
+            `The field becomes easier to read when ${pressureSummary} is treated as the constraint and ${openingSummary} as the leverage`,
+            `What can move is ${openingSummary}; what sets the terms is ${pressureSummary}`,
           ],
           random,
         ),
@@ -4661,6 +4692,10 @@ export function synthesizeGrandTableauNarrative(input: {
           `What keeps this workable is that the strain is not the whole story; movement is already beginning to show through`,
           `Both threads belong in the reading: the pressure is real, and so is where the spread is still pointing forward`,
           `The situation is strained, not closed: the pressure is active, and there is still room for what is beginning to open`,
+          `The tableau is strongest when read as a contrast: what presses, and what still gives enough room to work`,
+          `The path forward is not separate from the pressure; it forms by answering the pressure accurately`,
+          `The reading keeps the opening and the strain in the same frame, because one explains how the other can be used`,
+          `This is a field where opportunity has conditions attached, and those conditions are exactly what the pressure is naming`,
           ],
           random,
         )
@@ -4689,9 +4724,13 @@ export function synthesizeGrandTableauNarrative(input: {
           `Neither side of this picture cancels the other — the pressure is worth attending to, and so is what the spread is still pointing toward`,
           `The honest reading is that strain and forward movement are both present — the spread is not asking you to choose between them`,
           `Pressure and possibility are not opposites here — both are active, and the reading is tracking both`,
-          `Something is hard and something is moving — the spread is holding both, and neither is more accurate than the other`,
-          `The reading is not asking you to resolve the tension — it is asking you to move with it rather than waiting for it to clear`,
+          `The harder thread is ${pressureSummary}, and the moving thread is ${openingSummary}; the spread is holding both, and neither cancels the other`,
+          `This tension does not have to be resolved before you move — the spread is asking for response, not perfect certainty`,
           `The spread does not offer a clean resolution — it offers clarity about where to move while the difficulty is still present`,
+          `The answer is not that the pressure disappears; it is that the opening becomes usable once the pressure is named accurately`,
+          `The useful move is to read pressure and possibility together, then act where the cards show actual room rather than imagined relief`,
+          `The spread is not promising ease; it is showing where movement can still be made without pretending the strain is gone`,
+          `What matters now is proportion: give the pressure its due, but do not let it erase the opening that is already visible`,
           ],
           random,
         )

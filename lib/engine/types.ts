@@ -118,6 +118,8 @@ export interface GeneratedReading {
     primaryPairSelectionBand?: string[];
     cartouchePairKey?: string | null;
     threeCardPairKey?: string | null;
+    phraseTemplateIds?: string[];
+    phraseTemplateFamilies?: string[];
   };
 }
 

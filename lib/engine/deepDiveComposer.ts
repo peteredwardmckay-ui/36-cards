@@ -15,6 +15,7 @@ import {
   buildHouseAssociationPhrase,
   buildHouseAssociationSentence,
   buildPairAssociationSentence,
+  buildPositionedCardAssociationSentence,
   createReadingContext,
   type ReadingContext,
 } from "@/lib/engine/narrativeAssociations";
@@ -1384,7 +1385,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
   const normalizedQuestion = normalizeQuestionText(state.setup.question);
   const centerLead = choose(
     [
-      "At the center",
+      "In the central position",
       "At the heart of the tableau",
       "In the middle of the spread",
       "At the focal point",
@@ -2119,7 +2120,7 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
               `${cardRef(placement.cardId)} in ${houseName} keeps ${houseOverlay} close to the center story`,
               `${houseName} becomes important here because ${cardRef(placement.cardId)} keeps pulling it into view`,
               `${cardRef(placement.cardId)} makes ${houseName} one of the clearer side themes around the center`,
-              `In ${houseName}, ${cardRef(placement.cardId)} brings ${houseOverlay} into direct contact with the central reading`,
+              `In ${houseName}, ${cardRef(placement.cardId)} keeps ${houseOverlay} tied to the central reading`,
               `${houseName} carries ${houseOverlay}, and ${cardRef(placement.cardId)} makes sure it stays in view`,
             ],
             random,
@@ -2427,8 +2428,19 @@ function composeDeepDiveGT(input: ComposeDeepDiveInput): DeepDiveDraft {
           ? "the lower-left zone"
           : "the lower-right zone";
 
+  const leverageLine = choose(
+    [
+      `${cardRef(significatorPlacement.cardId)} in ${significatorHouseName} marks your leverage point`,
+      `Your leverage point sits with ${cardRef(significatorPlacement.cardId)} in ${significatorHouseName}`,
+      `Start with ${significatorHouseName}, where ${cardRef(significatorPlacement.cardId)} concentrates the reading`,
+      `The clearest point of influence is ${cardRef(significatorPlacement.cardId)} in ${significatorHouseName}`,
+      `${significatorHouseName} gives ${cardRef(significatorPlacement.cardId)} the spread's main point of influence`,
+    ],
+    random,
+  );
+
   const keyThreadLines = [
-    `${cardRef(significatorPlacement.cardId)} in ${significatorHouseName} marks your leverage point`,
+    leverageLine,
     tableauSynthesis.openingBullet
       ? `${tableauSynthesis.openingBullet[0].toUpperCase()}${tableauSynthesis.openingBullet.slice(1)}`
       : cardinalPair
@@ -2671,9 +2683,9 @@ function composeDeepDiveThreeCard(input: ComposeDeepDiveInput): DeepDiveDraft {
 
   // Capture sentences that will be used in section bodies AND the trim queue.
   // Boilerplate is trimmed first (highest priority), then association sentences (lower priority).
-  const situationAssoc = buildCardAssociationSentence(cards[0], subjectId, domain, random);
-  const pivotAssoc = buildCardAssociationSentence(cards[1], subjectId, domain, random);
-  const directionAssoc = buildCardAssociationSentence(cards[2], subjectId, domain, random);
+  const situationAssoc = buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random);
+  const pivotAssoc = buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random);
+  const directionAssoc = buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random);
   const situationBoilerplate = sentence(choose(
     [
       "This first card shows where things already stand before any adjustment is made",

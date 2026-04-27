@@ -19,6 +19,7 @@ import {
   buildCardAssociationSentence,
   buildOverlayAssociationSentence,
   buildPairAssociationSentence,
+  buildPositionedCardAssociationSentence,
 } from "@/lib/engine/narrativeAssociations";
 import {
   buildGrandTableauPairCandidates,
@@ -27,6 +28,7 @@ import {
   selectTopPair,
 } from "@/lib/engine/pairSelection";
 import { createMulberry32, hashStringToInt } from "@/lib/engine/rng";
+import { chooseAvoidingRecent, createPhraseUsageTracker, type PhraseTemplate } from "@/lib/engine/phraseVariation";
 import { buildThreeCardLayout, getThreeCardLabels } from "@/lib/engine/threeCard";
 import { composeDeepDiveReading } from "@/lib/engine/deepDiveComposer";
 import type {
@@ -76,6 +78,14 @@ function choose<T>(values: T[], random: () => number): T {
   }
   const index = Math.floor(random() * values.length);
   return values[index];
+}
+
+function template<TContext>(
+  id: string,
+  family: string,
+  text: string | ((context: TContext) => string),
+): PhraseTemplate<TContext> {
+  return { id, family, text };
 }
 
 function cardLabel(cardId: number): string {
@@ -264,6 +274,9 @@ function cleanProseArtifacts(input: string): string {
   return humanizeTechnicalPhrases(input)
     .replace(/\bis central is central\b/gi, "is central")
     .replace(/\bare central is central\b/gi, "are central")
+    .replace(/\bpoints to into\b/gi, "points into")
+    .replace(/\bcentral message here\s+—\s+/gi, "")
+    .replace(/(?:^| )On the [^.]+ front\.(?= |$)/gi, " ")
     // Remove consecutive duplicate words (e.g. "where where", "that that")
     .replace(/\b(\w+) \1\b/gi, "$1")
     .replace(/\s+/g, " ")
@@ -290,27 +303,542 @@ function formatHouseName(input: string): string {
   return deduped.join(" ");
 }
 
-function buildQuickCenterBridgeSentence(cardId: number, domainClause: string, random: () => number): string {
+function buildQuickCenterBridgeSentence(
+  cardId: number,
+  domainClause: string,
+  random: () => number,
+  phraseTracker = createPhraseUsageTracker(),
+): string {
+  if (cardId === 1) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.rider.timing.arrival.01", "center.rider.timing", () => `The center is moving because ${domainClause}; the first signal matters before the whole story is settled`),
+          template("center.rider.action_point.response.01", "center.rider.action_point", "The reading is asking for response to what has arrived, not endless waiting for a fuller context"),
+          template("center.rider.communication.signal.01", "center.rider.communication", () => `The strongest signal comes through contact, news, or movement around the fact that ${domainClause}`),
+          template("center.rider.opportunity.momentum.01", "center.rider.opportunity", "This is the kind of center card that turns a small arrival into the thing the rest of the spread has to answer"),
+          template("center.rider.practical.current.01", "center.rider.practical", "What just came in is more current than the older assumptions around it"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 2) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.clover.opportunity.window.01", "center.clover.opportunity", () => `The center is not promising a complete rescue; it is showing the small workable opening inside the fact that ${domainClause}`),
+          template("center.clover.timing.brief.01", "center.clover.timing", "The useful thing here is brief, which makes timing more important than intensity"),
+          template("center.clover.practical.modest.01", "center.clover.practical", "This card keeps the reading practical: use the bit of ease that is actually available"),
+          template("center.clover.action_point.use_it.01", "center.clover.action_point", () => `The spread turns on whether the opening around ${domainClause} is used while it is still open`),
+          template("center.clover.obstacle.minimize.01", "center.clover.obstacle", "The risk is dismissing a small advantage because it does not look large enough to matter"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 3) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.ship.direction.route.01", "center.ship.direction", () => `The center asks for direction because ${domainClause}; movement helps only if it is headed somewhere`),
+          template("center.ship.practical.distance.01", "center.ship.practical", "Distance, exchange, or movement is not background here — it is the field the rest of the cards are crossing"),
+          template("center.ship.timing.journey.01", "center.ship.timing", "This is a moving center, so the reading needs to be judged across stages rather than in one fixed moment"),
+          template("center.ship.opportunity.horizon.01", "center.ship.opportunity", () => `The opening widens when the route around ${domainClause} becomes concrete`),
+          template("center.ship.obstacle.drift.01", "center.ship.obstacle", "The danger is not movement itself; it is movement without a named destination"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 4) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.house.stability.foundation.01", "center.house.stability", () => `The center is the foundation: ${domainClause}, and everything else depends on whether that base can hold`),
+          template("center.house.practical.structure.01", "center.house.practical", "This spread wants structure before drama; the base conditions are doing more work than the visible movement"),
+          template("center.house.boundary.container.01", "center.house.boundary", "The main question is what can be safely contained, protected, or made liveable enough to build from"),
+          template("center.house.obstacle.rigidity.01", "center.house.obstacle", () => `The pressure gathers where ${domainClause} has become too fixed to adapt easily`),
+          template("center.house.action_point.repair.01", "center.house.action_point", "The practical move is to repair the base before asking the rest of the reading to carry more weight"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 5) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.tree.stability.roots.01", "center.tree.stability", () => `The center has roots because ${domainClause}; the useful question is what has been developing over time`),
+          template("center.tree.practical.health.01", "center.tree.practical", "This spread slows down around health, endurance, and the living structure underneath the visible issue"),
+          template("center.tree.timing.long_growth.01", "center.tree.timing", "The result here is unlikely to come from one sharp move; it comes from what is consistently nourished"),
+          template("center.tree.obstacle.strain.01", "center.tree.obstacle", () => `The pressure gathers where ${domainClause} has been carrying strain longer than the surface story admits`),
+          template("center.tree.action_point.tend.01", "center.tree.action_point", "The practical move is to tend the roots: pace, care, and sustain what actually has life in it"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 6) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.clouds.obstacle.visibility.01", "center.clouds.obstacle", () => `The center is unclear because ${domainClause}; better visibility matters more than immediate certainty`),
+          template("center.clouds.practical.verify.01", "center.clouds.practical", "The reading turns on verification: what is known, what is mood, and what is still hidden by poor light"),
+          template("center.clouds.timing.wait_for_clearer.01", "center.clouds.timing", "Timing matters because acting inside fog can make a manageable question feel much larger"),
+          template("center.clouds.action_point.separate.01", "center.clouds.action_point", "The practical move is to separate fact from atmosphere before drawing conclusions"),
+          template("center.clouds.signal.mixed.01", "center.clouds.signal", () => `Mixed signals around ${domainClause} are part of the message, not just an inconvenience`),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 7) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.snake.obstacle.complexity.01", "center.snake.obstacle", () => `The center is complicated because ${domainClause}; the straightest story may not be the truest one`),
+          template("center.snake.practical.motives.01", "center.snake.practical", "This card asks for motive-reading, tact, and a refusal to be hurried by the surface version of events"),
+          template("center.snake.action_point.strategy.01", "center.snake.action_point", "The useful move is strategic without becoming suspicious: name the desire, the detour, and the cost"),
+          template("center.snake.boundary.entanglement.01", "center.snake.boundary", () => `The risk around ${domainClause} is entanglement, especially if indirectness goes unnamed`),
+          template("center.snake.timing.winding_path.01", "center.snake.timing", "Progress may be winding here, so the quality of each turn matters more than rushing to the end"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 8) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.coffin.obstacle.ending.01", "center.coffin.obstacle", () => `The center is an ending or pause because ${domainClause}; forcing continuation would distort the reading`),
+          template("center.coffin.practical.release.01", "center.coffin.practical", "This spread asks what has stopped, what is depleted, and what should no longer be asked to perform"),
+          template("center.coffin.timing.after_stop.01", "center.coffin.timing", "The next phase begins after the stop is respected, not while the old form is being kept alive"),
+          template("center.coffin.action_point.complete.01", "center.coffin.action_point", "The practical move is completion: close the loop, rest the system, and make room for energy to return elsewhere"),
+          template("center.coffin.cause_effect.depletion.01", "center.coffin.cause_effect", () => `The pressure around ${domainClause} may be showing what has already reached its limit`),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 9) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.bouquet.opportunity.invitation.01", "center.bouquet.opportunity", () => `The center opens through goodwill because ${domainClause}; the offer matters if it is received and answered cleanly`),
+          template("center.bouquet.social.welcome.01", "center.bouquet.social", "This spread turns on welcome, appreciation, and the small social gesture that changes what becomes possible"),
+          template("center.bouquet.practical.offer.01", "center.bouquet.practical", "The useful thing is not just pleasant; it is an invitation or gift that needs practical handling"),
+          template("center.bouquet.obstacle.surface.01", "center.bouquet.obstacle", () => `The risk around ${domainClause} is mistaking charm for completion when the offer still needs follow-through`),
+          template("center.bouquet.action_point.receive.01", "center.bouquet.action_point", "The practical move is to receive what is sincere, respond with grace, and turn the opening into something real"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 10) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.scythe.action_point.cut.01", "center.scythe.action_point", () => `The center asks for a clean cut because ${domainClause}; delay may make the edge rougher`),
+          template("center.scythe.practical.precision.01", "center.scythe.practical", "This spread wants precision: remove what must go without damaging what should remain"),
+          template("center.scythe.timing.swift.01", "center.scythe.timing", "Timing is sharp here, so the practical question is what needs decisive action now"),
+          template("center.scythe.obstacle.careless.01", "center.scythe.obstacle", () => `The pressure around ${domainClause} comes from the risk of cutting too late, too broadly, or without enough care`),
+          template("center.scythe.cause_effect.harvest.01", "center.scythe.cause_effect", "The card can show harvest as well as severing, but either way something has reached the point of removal"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 11) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.whip.obstacle.repetition.01", "center.whip.obstacle", () => `The center is repetition because ${domainClause}; the pattern matters more than any single argument`),
+          template("center.whip.practical.loop.01", "center.whip.practical", "This spread asks what keeps replaying and what it costs each time the rhythm repeats"),
+          template("center.whip.action_point.interrupt.01", "center.whip.action_point", "The useful move is to interrupt the loop before effort turns into punishment"),
+          template("center.whip.timing.rhythm.01", "center.whip.timing", () => `The rhythm around ${domainClause} needs changing, not just another attempt inside the same terms`),
+          template("center.whip.boundary.friction.01", "center.whip.boundary", "Friction can become information here, but only if the reading does not simply rehearse the conflict again"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 12) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.birds.communication.conversation.01", "center.birds.communication", () => `The center is conversational because ${domainClause}; tone and timing decide whether the exchange clarifies or scatters`),
+          template("center.birds.obstacle.worry.01", "center.birds.obstacle", "The nervous charge around this card makes it important to separate useful dialogue from repeated worry"),
+          template("center.birds.practical.listen.01", "center.birds.practical", "This spread wants listening before reaction: which voice matters, and which one is only adding noise"),
+          template("center.birds.action_point.say_it.01", "center.birds.action_point", () => `The practical move around ${domainClause} is a clearer conversation, not more anxious circling`),
+          template("center.birds.timing.message_rhythm.01", "center.birds.timing", "Communication is active here, but the rhythm needs calming before it becomes reliable"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 13) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.child.opportunity.beginning.01", "center.child.opportunity", () => `The center is still forming because ${domainClause}; the next move works best at a small, testable scale`),
+          template("center.child.practical.scale.01", "center.child.practical", "This spread asks for light structure: enough to protect the beginning, not so much that it crushes it"),
+          template("center.child.timing.early_stage.01", "center.child.timing", "The timing is early, so the reading should be judged by what can be learned rather than what is already complete"),
+          template("center.child.obstacle.overload.01", "center.child.obstacle", () => `The risk around ${domainClause} is loading a new thing with expectations it cannot carry yet`),
+          template("center.child.action_point.iterate.01", "center.child.action_point", "The practical move is to start small, learn quickly, and let the first attempt teach the next one"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 14) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.fox.practical.verify.01", "center.fox.practical", () => `The center asks for verification because ${domainClause}; motives and incentives need to be checked plainly`),
+          template("center.fox.boundary.self_protection.01", "center.fox.boundary", "This spread wants careful self-protection without turning every uncertainty into suspicion"),
+          template("center.fox.obstacle.evasion.01", "center.fox.obstacle", "The risk is that strategy becomes avoidance, or cleverness starts protecting the wrong thing"),
+          template("center.fox.action_point.diligence.01", "center.fox.action_point", () => `The practical move around ${domainClause} is due diligence: check the story against the facts before committing more`),
+          template("center.fox.cause_effect.incentive.01", "center.fox.cause_effect", "The important question is who benefits, what is being protected, and whether the plan can survive scrutiny"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 15) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.bear.stability.power.01", "center.bear.stability", () => `The center has weight because ${domainClause}; power and resources have to be handled deliberately`),
+          template("center.bear.practical.resources.01", "center.bear.practical", "This spread turns on capacity: money, body, authority, protection, or the person carrying real influence"),
+          template("center.bear.boundary.stewardship.01", "center.bear.boundary", "The useful move is stewardship, not control; strength should hold the situation without smothering it"),
+          template("center.bear.obstacle.overreach.01", "center.bear.obstacle", () => `The pressure around ${domainClause} comes from weight becoming control, appetite, or overreach`),
+          template("center.bear.action_point.organize.01", "center.bear.action_point", "The practical answer is to name the resources, set the limits, and use authority with care"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 16) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.stars.direction.guidance.01", "center.stars.direction", () => `The center offers guidance because ${domainClause}; the signal needs a route, not just belief`),
+          template("center.stars.practical.orientation.01", "center.stars.practical", "This spread asks for orientation: what pattern is visible, and what step would keep faith with it"),
+          template("center.stars.opportunity.alignment.01", "center.stars.opportunity", "Hope is useful here when it becomes coordinates: direction, timing, and a next action that can be tested"),
+          template("center.stars.obstacle.float.01", "center.stars.obstacle", () => `The risk around ${domainClause} is floating on inspiration instead of making the guidance usable`),
+          template("center.stars.timing.long_range.01", "center.stars.timing", "The timing is long-range, so the immediate move should align with the pattern rather than try to finish it"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 17) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.stork.direction.change.01", "center.stork.direction", () => `The center is changing because ${domainClause}; the question is how to guide the transition rather than simply wait it out`),
+          template("center.stork.timing.seasonal.01", "center.stork.timing", "This spread turns on timing, adaptation, and the moment when the old arrangement starts becoming a new one"),
+          template("center.stork.practical.adjust.01", "center.stork.practical", "The practical move is to support the shift: move what is ready, revise what is stale, and check what returns"),
+          template("center.stork.opportunity.upgrade.01", "center.stork.opportunity", () => `The opening around ${domainClause} is improvement, but only if the change is helped into a workable form`),
+          template("center.stork.obstacle.unsettled.01", "center.stork.obstacle", "The risk is mistaking movement for completion before the new arrangement has actually landed"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 18) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.dog.social.loyalty.01", "center.dog.social", () => `The center rests on loyalty because ${domainClause}; trust has to be measured by follow-through`),
+          template("center.dog.practical.reliability.01", "center.dog.practical", "This spread asks who is genuinely dependable, what support is proven, and whether the bond is reciprocal"),
+          template("center.dog.action_point.ally.01", "center.dog.action_point", "The useful move is to work with the ally or practice that has already shown it can stay present"),
+          template("center.dog.obstacle.assumption.01", "center.dog.obstacle", () => `The risk around ${domainClause} is assuming warmth equals reliability before support is actually tested`),
+          template("center.dog.boundary.service.01", "center.dog.boundary", "Service and loyalty matter here, but they need clean boundaries so help does not become obligation without choice"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 19) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.tower.boundary.structure.01", "center.tower.boundary", () => `The center is structured because ${domainClause}; the formal frame decides more than mood does`),
+          template("center.tower.practical.system.01", "center.tower.practical", "This spread asks for procedure, boundaries, and the right degree of distance from the immediate pressure"),
+          template("center.tower.obstacle.isolation.01", "center.tower.obstacle", "The risk is that useful distance hardens into isolation, bureaucracy, or a wall no one can work through"),
+          template("center.tower.action_point.channel.01", "center.tower.action_point", () => `The practical move around ${domainClause} is to use the proper channel rather than trying to solve it informally`),
+          template("center.tower.direction.perspective.01", "center.tower.direction", "The stronger view comes from stepping back far enough to see the structure without disappearing from the human reality"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 20) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.garden.social.public_field.01", "center.garden.social", () => `The center is public because ${domainClause}; the wider room is part of the reading, not just background`),
+          template("center.garden.practical.network.01", "center.garden.practical", "This spread turns on participation, reputation, and the network that shapes what can be seen or shared"),
+          template("center.garden.action_point.visibility.01", "center.garden.action_point", "The practical move is to choose the right setting, audience, or shared space for the next step"),
+          template("center.garden.obstacle.exposure.01", "center.garden.obstacle", () => `The risk around ${domainClause} is accidental visibility: being seen before the terms are chosen`),
+          template("center.garden.timing.gathering.01", "center.garden.timing", "The timing depends on the social field: who is present, who can witness, and what the room is ready to hold"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 21) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.mountain.obstacle.terrain.01", "center.mountain.obstacle", () => `The center is blocked because ${domainClause}; the useful question is what route can still be worked`),
+          template("center.mountain.timing.slow.01", "center.mountain.timing", "This spread turns on delay, endurance, and the patience to break the climb into real stages"),
+          template("center.mountain.practical.route.01", "center.mountain.practical", "The practical move is to map the obstacle: what will not move, what can be routed around, and what simply needs more time"),
+          template("center.mountain.action_point.stage.01", "center.mountain.action_point", () => `Progress around ${domainClause} comes through staged effort rather than another push straight at the wall`),
+          template("center.mountain.obstacle.not_failure.01", "center.mountain.obstacle", "The delay is not automatically failure; it is information about terrain, stamina, and the route that can actually hold"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 22) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.crossroads.action_point.choose.01", "center.crossroads.action_point", () => `The center is a choice because ${domainClause}; criteria matter more than keeping every option alive`),
+          template("center.crossroads.practical.tradeoff.01", "center.crossroads.practical", "This spread asks for tradeoff clarity: what each route costs, protects, and makes possible"),
+          template("center.crossroads.obstacle.drift.01", "center.crossroads.obstacle", "The risk is mistaking open options for movement when the reading is asking for a chosen path"),
+          template("center.crossroads.values.criteria.01", "center.crossroads.values", () => `The decision around ${domainClause} becomes cleaner when values are used as criteria, not decoration`),
+          template("center.crossroads.direction.branch.01", "center.crossroads.direction", "The way forward narrows by design: choose the road that can carry the actual next step"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 23) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.mice.obstacle.leak.01", "center.mice.obstacle", () => `The center is being drained because ${domainClause}; the small leak matters before it becomes a large loss`),
+          template("center.mice.practical.repair.01", "center.mice.practical", "This spread asks for maintenance: patch the leak, reduce the stressor, and stop treating attrition as background"),
+          template("center.mice.timing.accumulation.01", "center.mice.timing", "Timing matters because small losses compound when they are left unnamed"),
+          template("center.mice.action_point.simplify.01", "center.mice.action_point", () => `The practical move around ${domainClause} is simplification, especially where energy keeps disappearing in small amounts`),
+          template("center.mice.hidden_pressure.stress.01", "center.mice.hidden_pressure", "The issue may not look dramatic, but the reading is tracking what quietly wears trust, money, time, or attention thin"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 24) {
+    return sentence(
+      chooseAvoidingRecent(
+        [
+          template("center.heart.values.core.01", "center.heart.values", () => `The center is emotional because ${domainClause}; what is genuinely cared for has to guide the next move`),
+          template("center.heart.practical.care.01", "center.heart.practical", "This spread asks for care that can act: sincere, warm, and bounded enough to stay trustworthy"),
+          template("center.heart.boundary.devotion.01", "center.heart.boundary", "Devotion matters here, but it needs discernment so love does not become idealization or self-erasure"),
+          template("center.heart.action_point.express.01", "center.heart.action_point", () => `The practical move around ${domainClause} is to express the value clearly and back it with follow-through`),
+          template("center.heart.direction.alignment.01", "center.heart.direction", "The way forward is value alignment: choose what keeps faith with the heart of the matter without ignoring reality"),
+        ],
+        undefined,
+        phraseTracker,
+        random,
+      ),
+    );
+  }
+
+  if (cardId === 25) {
+    return sentence(chooseAvoidingRecent([
+      template("center.ring.commitment.terms.01", "center.ring.commitment", () => `The center is an agreement because ${domainClause}; the terms need to be conscious, not merely inherited from the last cycle`),
+      template("center.ring.practical.review.01", "center.ring.practical", "This spread asks what is being promised, renewed, repeated, or kept alive by habit"),
+      template("center.ring.obstacle.loop.01", "center.ring.obstacle", "The risk is staying loyal to an outdated loop because it still has the shape of commitment"),
+      template("center.ring.action_point.renew.01", "center.ring.action_point", () => `The practical move around ${domainClause} is to review the bond and decide what should be renewed on purpose`),
+      template("center.ring.direction.terms.01", "center.ring.direction", "The way forward is clearer terms: name the promise, the cycle, and the point where repetition needs revision"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 26) {
+    return sentence(chooseAvoidingRecent([
+      template("center.book.hidden_context.01", "center.book.hidden_context", () => `The center is not fully visible because ${domainClause}; research matters before certainty`),
+      template("center.book.practical.study.01", "center.book.practical", "This spread asks for study, privacy, and responsible handling of what has not yet been disclosed"),
+      template("center.book.obstacle.withheld.01", "center.book.obstacle", "The risk is acting around missing context as if the blank space were already understood"),
+      template("center.book.action_point.learn.01", "center.book.action_point", () => `The practical move around ${domainClause} is to learn enough before deciding what should be revealed`),
+      template("center.book.timing.revelation.01", "center.book.timing", "The timing belongs to revelation in stages: open the right page, not every page at once"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 27) {
+    return sentence(chooseAvoidingRecent([
+      template("center.letter.communication.record.01", "center.letter.communication", () => `The center is documented because ${domainClause}; wording and follow-up matter now`),
+      template("center.letter.practical.confirm.01", "center.letter.practical", "This spread asks for a message trail that can be checked, not meaning left floating in the air"),
+      template("center.letter.action_point.write.01", "center.letter.action_point", "The practical move is to put the important thing in clear words and make sure it is received"),
+      template("center.letter.obstacle.vague.01", "center.letter.obstacle", () => `The risk around ${domainClause} is vague communication carrying a decision that needs a record`),
+      template("center.letter.direction.follow_up.01", "center.letter.direction", "The way forward runs through the document, message, form, receipt, or follow-up that makes the matter answerable"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 30) {
+    return sentence(chooseAvoidingRecent([
+      template("center.lily.ethics.maturity.01", "center.lily.ethics", () => `The center asks for maturity because ${domainClause}; calm has to be paired with clear intent`),
+      template("center.lily.practical.composure.01", "center.lily.practical", "This spread turns on restraint, ethics, patience, and the long view"),
+      template("center.lily.obstacle.avoidance.01", "center.lily.obstacle", "The risk is mistaking quiet for wisdom when action still needs to be taken"),
+      template("center.lily.action_point.dignity.01", "center.lily.action_point", () => `The practical move around ${domainClause} is composed action, not passive waiting`),
+      template("center.lily.direction.peace.01", "center.lily.direction", "The way forward is principled calm with enough spine to say what the situation requires"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 31) {
+    return sentence(chooseAvoidingRecent([
+      template("center.sun.clarity.vitality.01", "center.sun.clarity", () => `The center is bright because ${domainClause}; what is working should be strengthened responsibly`),
+      template("center.sun.practical.visibility.01", "center.sun.practical", "This spread asks for confidence, visibility, and the discipline to sustain success once it appears"),
+      template("center.sun.obstacle.overconfidence.01", "center.sun.obstacle", "The risk is letting momentum become glare, where brightness hides details that still matter"),
+      template("center.sun.action_point.use_light.01", "center.sun.action_point", () => `The practical move around ${domainClause} is to use the clarity without outrunning the checks`),
+      template("center.sun.direction.success.01", "center.sun.direction", "The way forward runs through the part of the situation that is genuinely alive and ready to grow stronger"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 32) {
+    return sentence(chooseAvoidingRecent([
+      template("center.moon.emotional.rhythm.01", "center.moon.emotional", () => `The center is rhythmic because ${domainClause}; feeling needs to be tracked across more than one phase`),
+      template("center.moon.practical.attunement.01", "center.moon.practical", "This spread asks for emotional attunement, feedback, and recognition without surrendering judgment to mood"),
+      template("center.moon.obstacle.fluctuation.01", "center.moon.obstacle", "The risk is treating one emotional weather pattern as the whole climate"),
+      template("center.moon.action_point.name_need.01", "center.moon.action_point", () => `The practical move around ${domainClause} is to name the need and watch how the signal changes over time`),
+      template("center.moon.direction.recognition.01", "center.moon.direction", "The way forward depends on timing, perception, and recognition handled with steadiness"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 33) {
+    return sentence(chooseAvoidingRecent([
+      template("center.key.solution.access.01", "center.key.solution", () => `The center is unlocking because ${domainClause}; the key detail should be verified and used`),
+      template("center.key.practical.verify.01", "center.key.practical", "This spread asks for focused action: test the solution, then commit where the lock actually opens"),
+      template("center.key.obstacle.false_certainty.01", "center.key.obstacle", "The risk is locking onto the first answer before checking whether it fits the real problem"),
+      template("center.key.action_point.unlock.01", "center.key.action_point", () => `The practical move around ${domainClause} is to use the specific access point, not scatter effort everywhere`),
+      template("center.key.direction.decide.01", "center.key.direction", "The way forward becomes available through one decisive, usable piece of clarity"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 34) {
+    return sentence(chooseAvoidingRecent([
+      template("center.fish.resources.flow.01", "center.fish.resources", () => `The center is flowing because ${domainClause}; what comes in and goes out needs tracking`),
+      template("center.fish.practical.monitor.01", "center.fish.practical", "This spread turns on money, energy, exchange, or resource movement that has to be steered"),
+      template("center.fish.obstacle.leakage.01", "center.fish.obstacle", "The risk is confusing movement with health when the flow may include leaks"),
+      template("center.fish.action_point.align.01", "center.fish.action_point", () => `The practical move around ${domainClause} is to align the flow with what actually matters`),
+      template("center.fish.direction.current.01", "center.fish.direction", "The way forward is resource clarity: follow the current closely enough to direct it"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 35) {
+    return sentence(chooseAvoidingRecent([
+      template("center.anchor.stability.endurance.01", "center.anchor.stability", () => `The center is anchored because ${domainClause}; durability matters more than a quick swing`),
+      template("center.anchor.practical.hold.01", "center.anchor.practical", "This spread asks what should be stabilized, what can hold, and what has become dead weight"),
+      template("center.anchor.obstacle.stuck.01", "center.anchor.obstacle", "The risk is mistaking staying power for wisdom when the fixed point no longer serves the life of the matter"),
+      template("center.anchor.action_point.stabilize.01", "center.anchor.action_point", () => `The practical move around ${domainClause} is to strengthen what still deserves anchoring`),
+      template("center.anchor.direction.long_term.01", "center.anchor.direction", "The way forward is the stable version: slower, more durable, and easier to trust under pressure"),
+    ], undefined, phraseTracker, random));
+  }
+
+  if (cardId === 36) {
+    return sentence(chooseAvoidingRecent([
+      template("center.cross.burden.meaning.01", "center.cross.burden", () => `The center is serious because ${domainClause}; purpose has to be separated from pressure`),
+      template("center.cross.practical.carry.01", "center.cross.practical", "This spread asks what is truly yours to carry, what can be shared, and what should be put down"),
+      template("center.cross.obstacle.overburden.01", "center.cross.obstacle", "The risk is treating heaviness as proof that every burden is meaningful or necessary"),
+      template("center.cross.action_point.discern.01", "center.cross.action_point", () => `The practical move around ${domainClause} is discernment: carry the true responsibility, not inherited strain`),
+      template("center.cross.direction.accountability.01", "center.cross.direction", "The way forward honors the seriousness without making solitary endurance the whole answer"),
+    ], undefined, phraseTracker, random));
+  }
+
   if (cardId === 29) {
     return sentence(
-      choose(
+      chooseAvoidingRecent(
         [
-          "The reading stays anchored to what you can shape, permit, or clarify directly",
-          "The reading's weight sits with the part of the story you are actually steering",
-          "That is why your own stance carries more weight here than the surrounding noise",
-          "That is what pulls the reading back to your choices more than the wider context",
-          "That keeps the emphasis on what you can actually move, not just observe",
-          "The reading keeps returning to what belongs to your side of things",
-          "Your position in this is not peripheral; the spread keeps treating it as the active variable",
-          "What you choose, permit, or leave unresolved is the variable the spread keeps circling back to",
-          "The reading is not neutral about this — it treats your choices as the most active part of the picture",
-          "What belongs to your side of things has more weight here than the surrounding circumstances",
-          "The spread keeps treating your position as the lever that determines the outcome",
-          "Not all of this is in your hands, but the part that is turns out to matter most",
-          "The reading's center of gravity sits with what you are actually in a position to do",
-          "What is genuinely yours to move, decide, or let go carries more weight here than what is outside your control",
-          "The surrounding cards keep redirecting attention to what is specifically yours to act on",
+          template("center.querent.action_point.direct.01", "center.querent.action_point", () => `Your clearest leverage is the part where ${domainClause}, because that is what you can shape, permit, or clarify directly`),
+          template("center.querent.practical.steering.01", "center.querent.practical", () => `The weight sits with the part of the story you are actually steering: where ${domainClause}`),
+          template("center.querent.obstacle.noise.01", "center.querent.obstacle", "That is why your own stance carries more weight here than the surrounding noise"),
+          template("center.querent.practical.choice.01", "center.querent.practical", "That is what pulls the reading back to your choices more than the wider context"),
+          template("center.querent.action_point.move.01", "center.querent.action_point", "That keeps the emphasis on what you can actually move, not just observe"),
+          template("center.querent.social.side.01", "center.querent.social", () => `The spread keeps returning to your side of the exchange, especially where ${domainClause}`),
+          template("center.querent.cause_effect.domain.01", "center.querent.cause_effect", () => `Your position in this is active because ${domainClause}`),
+          template("center.querent.hidden_pressure.unresolved.01", "center.querent.hidden_pressure", "What you choose, permit, or leave unresolved is the variable the spread keeps circling back to"),
+          template("center.querent.practical.active.01", "center.querent.practical", "This spread treats your choices as the most active part of the picture"),
+          template("center.querent.cause_effect.domain.02", "center.querent.cause_effect", () => `The reading gives extra weight to the part where ${domainClause}`),
+          template("center.querent.action_point.lever.01", "center.querent.action_point", "The spread keeps treating your position as the lever that determines the outcome"),
+          template("center.querent.practical.control.01", "center.querent.practical", "Not all of this is in your hands, but the part that is turns out to matter most"),
+          template("center.querent.opportunity.capacity.01", "center.querent.opportunity", "The reading's center of gravity sits with what you are actually in a position to do"),
+          template("center.querent.boundary.control.01", "center.querent.boundary", "What is genuinely yours to move, decide, or let go carries more weight here than what is outside your control"),
+          template("center.querent.action_point.redirect.01", "center.querent.action_point", "The surrounding cards keep redirecting attention to what is specifically yours to act on"),
         ],
+        undefined,
+        phraseTracker,
         random,
       ),
     );
@@ -318,28 +846,37 @@ function buildQuickCenterBridgeSentence(cardId: number, domainClause: string, ra
 
   if (cardId === 28) {
     return sentence(
-      choose(
+      chooseAvoidingRecent(
         [
-          "That keeps attention on the part of the story you do not define alone",
-          "That keeps the reading honest about how much depends on the other person's position",
-          "That is why the other person's stance carries real weight here",
-          "That is what keeps part of this outside your direct steering",
-          "That is why the reading keeps returning to what the other person holds or reveals",
+          template("center.counterpart.social.shared.01", "center.counterpart.social", () => `This keeps attention on the part of the story you do not define alone, especially where ${domainClause}`),
+          template("center.counterpart.practical.position.01", "center.counterpart.practical", () => `The other person's position matters because ${domainClause}`),
+          template("center.counterpart.social.stance.01", "center.counterpart.social", () => `Their stance carries real weight where ${domainClause}`),
+          template("center.counterpart.boundary.control.01", "center.counterpart.boundary", () => `This is the part you cannot steer by yourself, even if ${domainClause}`),
+          template("center.counterpart.hidden_pressure.reveals.01", "center.counterpart.hidden_pressure", () => `The reading keeps returning to what the other person holds back, shows, or reveals around the fact that ${domainClause}`),
+          template("center.counterpart.timing.availability.01", "center.counterpart.timing", () => `The timing depends partly on their availability, because ${domainClause}`),
+          template("center.counterpart.obstacle.assumption.01", "center.counterpart.obstacle", () => `The main risk is assuming their side is already clear when ${domainClause}`),
+          template("center.counterpart.opportunity.alignment.01", "center.counterpart.opportunity", () => `The useful opening is clearer alignment with their side of the matter, particularly where ${domainClause}`),
+          template("center.counterpart.action_point.reading.01", "center.counterpart.action_point", () => `The practical move is to read their actual position before deciding what ${domainClause} means for you`),
+          template("center.counterpart.emotional.mirror.01", "center.counterpart.emotional", () => `Emotionally, the spread asks you to notice what their response mirrors back about the part where ${domainClause}`),
         ],
+        undefined,
+        phraseTracker,
         random,
       ),
     );
   }
 
   return sentence(
-    choose(
+    chooseAvoidingRecent(
       [
-        `The surrounding cards suggest that ${domainClause}`,
-        `The wider pattern suggests that ${domainClause}`,
-        `The supporting cards suggest that ${domainClause}`,
-        `Read together, the cards keep pointing back to ${domainClause}`,
-        `The field keeps circling ${domainClause}`,
+        template("center.general.signal.surrounding.01", "center.general.signal", () => `The surrounding cards suggest that ${domainClause}`),
+        template("center.general.signal.pattern.01", "center.general.signal", () => `The wider pattern suggests that ${domainClause}`),
+        template("center.general.supporting.01", "center.general.supporting", () => `The supporting cards suggest that ${domainClause}`),
+        template("center.general.cause_effect.return.01", "center.general.cause_effect", () => `Read together, the cards keep pointing back to ${domainClause}`),
+        template("center.general.hidden_pressure.field.01", "center.general.hidden_pressure", () => `The field keeps circling ${domainClause}`),
       ],
+      undefined,
+      phraseTracker,
       random,
     ),
   );
@@ -410,11 +947,11 @@ function buildQuickIntro(input: {
       `"${normalized}" draws the reading toward ${lowerSubject}, ${themeLensSummary}.`,
       `This spread, asked through "${normalized}", keeps circling back to ${lowerSubject} ${themeLensSummary} as the clearest frame.`,
       `What the cards seem most interested in, given "${normalized}", is ${lowerSubject} ${themeLensSummary}.`,
-      `The answer to "${normalized}" seems to be living in ${lowerSubject} territory ${themeLensSummary}.`,
+      `"${normalized}" seems to live most strongly in ${lowerSubject} territory ${themeLensSummary}.`,
       `Framing "${normalized}" through ${lowerSubject} ${themeLensSummary} gives the clearest read of what is actually moving.`,
       `"${normalized}" enters a field shaped by ${lowerSubject} ${themeLensSummary}, and the cards answer by pointing toward what is most ready to shift.`,
       `The question "${normalized}" finds its strongest thread in ${lowerSubject} ${themeLensSummary}, so the reading follows that line first.`,
-      `For "${normalized}", the practical answer lives in ${lowerSubject} ${themeLensSummary} — that is where the cards concentrate.`,
+      `For "${normalized}", the practical response lives in ${lowerSubject} ${themeLensSummary} — that is where the cards concentrate.`,
       `"${normalized}" is a question that the spread answers through ${lowerSubject} ${themeLensSummary}, and the sections below trace where the signal is strongest.`,
     ],
     random,
@@ -1243,11 +1780,12 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
   const diagonalCardsB = diagonalNESW.map((position) => layout.find((item) => item.position === position)).filter(isDefined);
   const knightCards = knights.map((position) => layout.find((item) => item.position === position)).filter(isDefined);
   const selectedPair = selectBestPair(pairCandidates, domain, random, subjectId);
+  const phraseTracker = createPhraseUsageTracker();
 
   const houseName = formatHouseName(primaryHouse.name);
   const primaryFocusPhrase = lowerFirst(buildCardAssociationPhrase(primaryCard, subjectId, domain, random));
   const primaryDomainClause = normalizeMeaningThatClause(primaryCard.domainVariants[domain]);
-  const centerBridgeSentence = buildQuickCenterBridgeSentence(primaryCard.id, primaryDomainClause, random);
+  const centerBridgeSentence = buildQuickCenterBridgeSentence(primaryCard.id, primaryDomainClause, random, phraseTracker);
   const overlaySentence = buildOverlayAssociationSentence({
     card: primaryCard,
     house: primaryHouse,
@@ -1256,15 +1794,17 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
     random,
   });
 
-  const centerSentence = choose(
+  const centerSentence = chooseAvoidingRecent(
     [
-      `${houseName} now holds ${cardRef(primaryPlacement.cardId)}, which puts ${primaryFocusPhrase} at the center of the reading. ${centerBridgeSentence} ${overlaySentence}`,
-      `Centered here, ${cardRef(primaryPlacement.cardId)} falls in ${houseName}. That keeps ${primaryFocusPhrase} close to everything else that is happening. ${centerBridgeSentence} ${overlaySentence}`,
-      `${houseName} holds ${cardRef(primaryPlacement.cardId)}, keeping ${primaryFocusPhrase} in focus. ${centerBridgeSentence} ${overlaySentence}`,
-      `At the center, ${cardRef(primaryPlacement.cardId)} rests in ${houseName}. This keeps ${primaryFocusPhrase} in the foreground. ${centerBridgeSentence} ${overlaySentence}`,
-      `One clear focal point is ${cardRef(primaryPlacement.cardId)} in ${houseName}. It brings ${primaryFocusPhrase} to the foreground. ${centerBridgeSentence} ${overlaySentence}`,
-      `${cardRef(primaryPlacement.cardId)} in ${houseName} becomes the main anchor here, putting ${primaryFocusPhrase} under the strongest light. ${centerBridgeSentence} ${overlaySentence}`,
+      template("gt.center.frame.house_hold.01", "gt.center.frame.house", () => `${houseName} now holds ${cardRef(primaryPlacement.cardId)}, which puts ${primaryFocusPhrase} at the center of the reading. ${centerBridgeSentence} ${overlaySentence}`),
+      template("gt.center.frame.centered.01", "gt.center.frame.centered", () => `${cardRef(primaryPlacement.cardId)} falls in ${houseName} at the reading's center. That keeps ${primaryFocusPhrase} close to everything else that is happening. ${centerBridgeSentence} ${overlaySentence}`),
+      template("gt.center.frame.focus.01", "gt.center.frame.focus", () => `${houseName} holds ${cardRef(primaryPlacement.cardId)}, keeping ${primaryFocusPhrase} in focus. ${centerBridgeSentence} ${overlaySentence}`),
+      template("gt.center.frame.foreground.01", "gt.center.frame.foreground", () => `${houseName} centers ${cardRef(primaryPlacement.cardId)} here. This keeps ${primaryFocusPhrase} in the foreground. ${centerBridgeSentence} ${overlaySentence}`),
+      template("gt.center.frame.focal.01", "gt.center.frame.focal", () => `One clear focal point is ${cardRef(primaryPlacement.cardId)} in ${houseName}. It brings ${primaryFocusPhrase} to the foreground. ${centerBridgeSentence} ${overlaySentence}`),
+      template("gt.center.frame.anchor.01", "gt.center.frame.anchor", () => `${cardRef(primaryPlacement.cardId)} in ${houseName} becomes the main anchor here, putting ${primaryFocusPhrase} under the strongest light. ${centerBridgeSentence} ${overlaySentence}`),
     ],
+    undefined,
+    phraseTracker,
     random,
   );
   const centerThemeSentence = buildThemeCardSentence(resolvedThemeId, primaryCard.id, primaryCard.name, "center", random);
@@ -1273,70 +1813,74 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
   const pairSentence = selectedPair
     ? (() => {
         const quickPairMeaning = humanizeQuickPairMeaning(selectedPair.meaning);
-        return choose(
+        return chooseAvoidingRecent(
           [
-            `${cardRef(selectedPair.cardA)} with ${cardRef(selectedPair.cardB)} points to ${quickPairMeaning}. ${buildPairAssociationSentence({
+            template("gt.pair.frame.points.01", "gt.pair.frame.points", () => `${cardRef(selectedPair.cardA)} with ${cardRef(selectedPair.cardB)} points to ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
-            `Closest to center, ${cardRef(selectedPair.cardA)} with ${cardRef(selectedPair.cardB)} points to ${quickPairMeaning}. ${buildPairAssociationSentence({
+            })}`),
+            template("gt.pair.frame.closest.01", "gt.pair.frame.closest", () => `${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)} make the closest central pair, pointing to ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
-            `${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)} sit close together, and the combination points to ${quickPairMeaning}. ${buildPairAssociationSentence({
+            })}`),
+            template("gt.pair.frame.combination.01", "gt.pair.frame.combination", () => `${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)} sit close together, and the combination points to ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
-            `Near the center, ${cardRef(selectedPair.cardA)} with ${cardRef(selectedPair.cardB)} points to ${quickPairMeaning}. ${buildPairAssociationSentence({
+            })}`),
+            template("gt.pair.frame.near.01", "gt.pair.frame.near", () => `Near the center, ${cardRef(selectedPair.cardA)} with ${cardRef(selectedPair.cardB)} points to ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
-            `${cardRef(selectedPair.cardA)} beside ${cardRef(selectedPair.cardB)} sharpens the reading around ${quickPairMeaning}. ${buildPairAssociationSentence({
+            })}`),
+            template("gt.pair.frame.sharpens.01", "gt.pair.frame.sharpens", () => `${cardRef(selectedPair.cardA)} beside ${cardRef(selectedPair.cardB)} sharpens the reading around ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
-            `The nearest hinge sits between ${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)}, pointing to ${quickPairMeaning}. ${buildPairAssociationSentence({
+            })}`),
+            template("gt.pair.frame.hinge.01", "gt.pair.frame.hinge", () => `The nearest hinge sits between ${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)}, pointing to ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
-            `${cardRef(selectedPair.cardA)} with ${cardRef(selectedPair.cardB)} make the central tension easier to name: ${quickPairMeaning}. ${buildPairAssociationSentence({
+            })}`),
+            template("gt.pair.frame.tension.01", "gt.pair.frame.tension", () => `Together, ${cardRef(selectedPair.cardA)} and ${cardRef(selectedPair.cardB)} make the central tension easier to name: ${quickPairMeaning}. ${buildPairAssociationSentence({
               cardA: selectedPair.cardA,
               cardB: selectedPair.cardB,
               subjectId,
               domain,
               random,
-            })}`,
+            })}`),
           ],
+          undefined,
+          phraseTracker,
           random,
         );
       })()
-    : choose(
+    : chooseAvoidingRecent(
         [
-          "No single nearby pair dominates, so meaning depends more on overall pattern than one isolated combination.",
-          "The cards near the center spread their influence broadly rather than concentrating in one strong pairing.",
-          "Without a dominant pairing near the center, the reading distributes its weight more evenly across the field.",
-          "The nearby cards do not lock into one strong combination, so the reading is shaped by proximity and atmosphere rather than a single pair.",
-          "No single pairing commands the center, which means the broader spread of surrounding influences carries more weight than usual.",
-          "The lack of a dominant pair near the center keeps the reading open — the pattern emerges from the wider field rather than one concentrated signal.",
+          template("gt.pair.none.pattern.01", "gt.pair.none.pattern", "No single nearby pair dominates, so meaning depends more on overall pattern than one isolated combination."),
+          template("gt.pair.none.distributed.01", "gt.pair.none.distributed", "The cards near the center spread their influence broadly rather than concentrating in one strong pairing."),
+          template("gt.pair.none.even_weight.01", "gt.pair.none.even_weight", "Without a dominant pairing near the center, the reading distributes its weight more evenly across the field."),
+          template("gt.pair.none.atmosphere.01", "gt.pair.none.atmosphere", "The nearby cards do not lock into one strong combination, so the reading is shaped by proximity and atmosphere rather than a single pair."),
+          template("gt.pair.none.broader_field.01", "gt.pair.none.broader_field", "No single pairing commands the center, which means the broader spread of surrounding influences carries more weight than usual."),
+          template("gt.pair.none.open_field.01", "gt.pair.none.open_field", "The lack of a dominant pair near the center keeps the reading open — the pattern emerges from the wider field rather than one concentrated signal."),
         ],
+        undefined,
+        phraseTracker,
         random,
       );
 
@@ -1357,113 +1901,133 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
     domain,
     random,
   });
-  const backgroundConnector = choose(
+  const backgroundConnector = chooseAvoidingRecent(
     [
-      "Beneath that first layer,",
-      "Underneath the immediate picture,",
-      "Looking past the headline cards,",
-      "Behind the central impression,",
-      "Beyond the surface reading,",
-      "Stepping past the first impression,",
-      "Further into the spread,",
-      "Past the opening layer,",
-      "Below the most visible pressure,",
-      "Underneath what the center card announces,",
+      template("gt.background.connector.beneath.01", "gt.background.connector.beneath", "Beneath that first layer,"),
+      template("gt.background.connector.underneath.01", "gt.background.connector.underneath", "Below that first visible layer,"),
+      template("gt.background.connector.headline.01", "gt.background.connector.headline", "Looking past the headline cards,"),
+      template("gt.background.connector.behind.01", "gt.background.connector.behind", "Behind the central impression,"),
+      template("gt.background.connector.surface.01", "gt.background.connector.surface", "Beyond the surface reading,"),
+      template("gt.background.connector.first_impression.01", "gt.background.connector.first_impression", "Stepping past the first impression,"),
+      template("gt.background.connector.further.01", "gt.background.connector.further", "Further into the spread,"),
+      template("gt.background.connector.opening.01", "gt.background.connector.opening", "Past the opening layer,"),
+      template("gt.background.connector.pressure.01", "gt.background.connector.pressure", "Below the most visible pressure,"),
+      template("gt.background.connector.center.01", "gt.background.connector.center", "Underneath what the center card announces,"),
     ],
+    undefined,
+    phraseTracker,
     random,
   );
   const backgroundSentence =
     knightCards.length > 0
-      ? `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${choose(
+      ? `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${chooseAvoidingRecent(
           [
-            `a longer thread runs through ${diagonalThread}, while side links around ${knightBrief} show the story developing in stages.`,
-            `the diagonals run through ${diagonalThread}, while ${knightBrief} tighten the timing around that longer movement.`,
-            `${diagonalThread} read as a slow build, while ${knightBrief} show where the pace changes.`,
-            `the wider motion runs through ${diagonalThread}; off-angle links to ${knightBrief} show results arriving step by step.`,
-            `a quieter layer runs through ${diagonalThread}, while ${knightBrief} show where the rhythm starts to shift.`,
+            template("gt.background.knight.setup.thread.01", "gt.background.knight.setup.thread", () => `a longer thread runs through ${diagonalThread}, while side links around ${knightBrief} show the story developing in stages.`),
+            template("gt.background.knight.setup.timing.01", "gt.background.knight.setup.timing", () => `the diagonals run through ${diagonalThread}, while ${knightBrief} tighten the timing around that longer movement.`),
+            template("gt.background.knight.setup.pace.01", "gt.background.knight.setup.pace", () => `${diagonalThread} read as a slow build, while ${knightBrief} show where the pace changes.`),
+            template("gt.background.knight.setup.motion.01", "gt.background.knight.setup.motion", () => `the wider motion runs through ${diagonalThread}; off-angle links to ${knightBrief} show results arriving step by step.`),
+            template("gt.background.knight.setup.rhythm.01", "gt.background.knight.setup.rhythm", () => `a quieter layer runs through ${diagonalThread}, while ${knightBrief} show where the rhythm starts to shift.`),
           ],
+          undefined,
+          phraseTracker,
           random,
-        )} ${choose(
+        )} ${chooseAvoidingRecent(
           [
-            "Read as a whole, the diagonals show the underlying direction of travel while the knight links name the points where smaller factors can interrupt, accelerate, or redirect it — the slower line of development rather than the headline turn of events.",
-            "The diagonals trace the longer arc of the story, and the knight connections show where indirect forces can alter the pace or redirect the outcome.",
-            "Taken together, the diagonals name the deeper current while the knight links mark where that current gets redirected, reinforced, or quietly interrupted.",
-            "The diagonal layer holds the longer arc while the knight links name the off-angle points where that arc gets complicated, extended, or quietly redirected.",
-            "A slow current runs through the diagonals; the knight connections are where it gets interrupted, redirected, or quietly reinforced.",
-            "The diagonals set the longer direction while the knight links show the places where that direction gets tested, bent, or quietly confirmed.",
-            "The diagonal layer describes what builds by accumulation, while the knight connections show the junctures where outside forces enter that buildup.",
-            "What the two layers share is a quieter kind of causation — the diagonals show the direction and the knight links show the knock-on effects that complicate or extend it.",
-            "Background timeline lives in the diagonals; the knight links name the moments where that timeline is suddenly compressed, stretched, or diverted.",
-            "The two layers complement each other — the diagonals describe what builds slowly, and the knight connections show the moments where that slow build is suddenly accelerated, diverted, or confirmed.",
+            template("gt.background.knight.meaning.direction.01", "gt.background.knight.meaning.direction", "Read as a whole, the diagonals show the underlying direction of travel while the knight links name the points where smaller factors can interrupt, accelerate, or redirect it — the slower line of development rather than the headline turn of events."),
+            template("gt.background.knight.meaning.arc.01", "gt.background.knight.meaning.arc", "The diagonals trace the longer arc of the story, and the knight connections show where indirect forces can alter the pace or redirect the outcome."),
+            template("gt.background.knight.meaning.current.01", "gt.background.knight.meaning.current", "Taken together, the diagonals name the deeper current while the knight links mark where that current gets redirected, reinforced, or quietly interrupted."),
+            template("gt.background.knight.meaning.complication.01", "gt.background.knight.meaning.complication", "The diagonal layer holds the longer arc while the knight links name the off-angle points where that arc gets complicated, extended, or quietly redirected."),
+            template("gt.background.knight.meaning.reinforce.01", "gt.background.knight.meaning.reinforce", "A slow current runs through the diagonals; the knight connections are where it gets interrupted, redirected, or quietly reinforced."),
+            template("gt.background.knight.meaning.test.01", "gt.background.knight.meaning.test", () => `${diagonalThread} set the longer direction, while the knight links around ${knightBrief} show where that direction gets tested, bent, or quietly confirmed.`),
+            template("gt.background.knight.meaning.outside_forces.01", "gt.background.knight.meaning.outside_forces", "The diagonal layer describes what builds by accumulation, while the knight connections show the junctures where outside forces enter that buildup."),
+            template("gt.background.knight.meaning.causation.01", "gt.background.knight.meaning.causation", "What the two layers share is a quieter kind of causation — the diagonals show the direction and the knight links show the knock-on effects that complicate or extend it."),
+            template("gt.background.knight.meaning.compress.01", "gt.background.knight.meaning.compress", () => `Because ${diagonalThread} carry the background line, the links around ${knightBrief} show where that line compresses, stretches, or changes direction.`),
+            template("gt.background.knight.meaning.side_pressure.01", "gt.background.knight.meaning.side_pressure", () => `The long thread belongs to ${diagonalThread}; ${knightBrief} mark the side pressures that can speed it up, slow it down, or send it slightly off course.`),
+            template("gt.background.knight.meaning.adjust.01", "gt.background.knight.meaning.adjust", () => `The background timing is not flat here: ${diagonalThread} show what keeps developing, while ${knightBrief} show where that development has to adjust.`),
+            template("gt.background.knight.meaning.complement.01", "gt.background.knight.meaning.complement", "The two layers complement each other — the diagonals describe what builds slowly, and the knight connections show the moments where that slow build is suddenly accelerated, diverted, or confirmed."),
           ],
+          undefined,
+          phraseTracker,
           random,
         )}`
-      : `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${choose(
+      : `${tableauSynthesis.atmosphereSentence} ${backgroundConnector} ${chooseAvoidingRecent(
           [
-            `a quieter pattern runs through ${diagonalThread}, pointing to movement by stages rather than abrupt change.`,
-            `${diagonalThread} suggest progress that gathers gradually once the separate threads are read together.`,
-            `the diagonal frame linking ${diagonalThread} implies a slow build rather than a dramatic turn.`,
-            `${diagonalThread} carry the wider story, and they favor sequence over sudden swings.`,
+            template("gt.background.diagonal.setup.pattern.01", "gt.background.diagonal.setup.pattern", () => `a quieter pattern runs through ${diagonalThread}, pointing to movement by stages rather than abrupt change.`),
+            template("gt.background.diagonal.setup.gradual.01", "gt.background.diagonal.setup.gradual", () => `${diagonalThread} suggest progress that gathers gradually once the separate threads are read together.`),
+            template("gt.background.diagonal.setup.slow_build.01", "gt.background.diagonal.setup.slow_build", () => `the diagonal frame linking ${diagonalThread} implies a slow build rather than a dramatic turn.`),
+            template("gt.background.diagonal.setup.sequence.01", "gt.background.diagonal.setup.sequence", () => `${diagonalThread} carry the wider story, and they favor sequence over sudden swings.`),
           ],
+          undefined,
+          phraseTracker,
           random,
-        )} ${choose(
+        )} ${chooseAvoidingRecent(
           [
-            "Read together, the diagonals are doing the longer-range work here, showing what gathers by stages rather than arriving all at once. Taken together, this is the slower line of development, and it shows what needs time to assemble before the full picture can be read clearly.",
-            "The diagonal thread describes the quieter timeline — what builds gradually rather than announcing itself. This is the part of the reading that rewards patience.",
-            "What the diagonals reveal is the slower current beneath the surface. These are not headline events but the conditions that are quietly assembling before the next visible shift.",
-            "The diagonal arc is the long game — what is accumulating underneath the immediate picture and will become decisive once enough time has passed.",
-            "Taken together, the diagonal connections describe what is not yet visible but already in motion — the quiet thread that will eventually define the outcome.",
+            template("gt.background.diagonal.meaning.long_range.01", "gt.background.diagonal.meaning.long_range", "Read together, the diagonals are doing the longer-range work here, showing what gathers by stages rather than arriving all at once. Taken together, this is the slower line of development, and it shows what needs time to assemble before the full picture can be read clearly."),
+            template("gt.background.diagonal.meaning.quiet_timeline.01", "gt.background.diagonal.meaning.quiet_timeline", "The diagonal thread describes the quieter timeline — what builds gradually rather than announcing itself. This is the part of the reading that rewards patience."),
+            template("gt.background.diagonal.meaning.slower_current.01", "gt.background.diagonal.meaning.slower_current", "What the diagonals reveal is the slower current beneath the surface. These are not headline events but the conditions that are quietly assembling before the next visible shift."),
+            template("gt.background.diagonal.meaning.long_game.01", "gt.background.diagonal.meaning.long_game", "The diagonal arc is the long game — what is accumulating underneath the immediate picture and will become decisive once enough time has passed."),
+            template("gt.background.diagonal.meaning.in_motion.01", "gt.background.diagonal.meaning.in_motion", "Taken together, the diagonal connections describe what is not yet visible but already in motion — the quiet thread that will eventually define the outcome."),
           ],
+          undefined,
+          phraseTracker,
           random,
         )}`;
 
   const nearBrief = dedupeCardRefs(proximity.near.map((placement) => placement.cardId), 4);
   const mediumBrief = dedupeCardRefs(proximity.medium.map((placement) => placement.cardId), 4);
-  const timingConnector = choose(
+  const timingConnector = chooseAvoidingRecent(
     [
-      "In terms of timing,",
-      "Looking at the sequence of pressure,",
-      "As the pace of events goes,",
-      "When it comes to what arrives first,",
-      "On the question of pace,",
-      "Looking at what arrives when,",
-      "Considering the order of events,",
-      "For the sequence of what unfolds,",
+      template("gt.timing.connector.timing.01", "gt.timing.connector.timing", "In terms of timing,"),
+      template("gt.timing.connector.sequence_pressure.01", "gt.timing.connector.sequence_pressure", "Looking at the sequence of pressure,"),
+      template("gt.timing.connector.pace.01", "gt.timing.connector.pace", "As the pace of events goes,"),
+      template("gt.timing.connector.first.01", "gt.timing.connector.first", "When it comes to what arrives first,"),
+      template("gt.timing.connector.pace_question.01", "gt.timing.connector.pace_question", "On the question of pace,"),
+      template("gt.timing.connector.arrives_when.01", "gt.timing.connector.arrives_when", "Looking at what arrives when,"),
+      template("gt.timing.connector.order.01", "gt.timing.connector.order", "Considering the order of events,"),
+      template("gt.timing.connector.unfolds.01", "gt.timing.connector.unfolds", "For the sequence of what unfolds,"),
     ],
+    undefined,
+    phraseTracker,
     random,
   );
-  const timingSentence = `${timingConnector} ${choose(
+  const timingSentence = `${timingConnector} ${chooseAvoidingRecent(
     [
-      `${nearBrief} describe what is immediate, while ${mediumBrief || "the next ring of cards"} shape what follows.`,
-      `the first pressure sits with ${nearBrief}; ${mediumBrief || "the cards further out"} show the layer that forms just behind it.`,
-      `the near field, ${nearBrief}, speaks to current pressure, and ${mediumBrief || "the outer field"} helps show what gathers next.`,
-      `${nearBrief} read as present-tense influence, and ${mediumBrief || "the broader field"} as the sequence forming right behind it.`,
-      `${nearBrief} belong to the immediate turn of events, while ${mediumBrief || "the outer field"} describe what is still gathering.`,
-      `${nearBrief} speak first; ${mediumBrief || "the next layer out"} describe what follows after.`,
+      template("gt.timing.setup.immediate.01", "gt.timing.setup.immediate", () => `${nearBrief} describe what is immediate, while ${mediumBrief || "the next ring of cards"} shape what follows.`),
+      template("gt.timing.setup.first_pressure.01", "gt.timing.setup.first_pressure", () => `the first pressure sits with ${nearBrief}; ${mediumBrief || "the cards further out"} show the layer that forms just behind it.`),
+      template("gt.timing.setup.near_field.01", "gt.timing.setup.near_field", () => `the near field, ${nearBrief}, speaks to current pressure, and ${mediumBrief || "the outer field"} helps show what gathers next.`),
+      template("gt.timing.setup.present_tense.01", "gt.timing.setup.present_tense", () => `${nearBrief} read as present-tense influence, and ${mediumBrief || "the broader field"} as the sequence forming right behind it.`),
+      template("gt.timing.setup.immediate_turn.01", "gt.timing.setup.immediate_turn", () => `${nearBrief} belong to the immediate turn of events, while ${mediumBrief || "the outer field"} describe what is still gathering.`),
+      template("gt.timing.setup.speak_first.01", "gt.timing.setup.speak_first", () => `${nearBrief} speak first; ${mediumBrief || "the next layer out"} describe what follows after.`),
     ],
+    undefined,
+    phraseTracker,
     random,
   )} ${mediumBrief
-    ? choose(
+    ? chooseAvoidingRecent(
         [
-          "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it.",
-          "What presses first sits with the near cards; the medium ring holds what is already forming but not yet fully visible.",
-          "What is closest demands attention first, but the next ring out is already shaping the conditions those decisions will land in.",
-          "Near and medium cards are not the same story — the first layer is already active, while the second is still forming its shape.",
-          "That distinction is important: the near field names what requires a response now, and the medium field names what is becoming the next thing to manage.",
-          "The two rings describe different timescales: what is asking for a response now, and what is quietly becoming the next chapter.",
-          "Proximity matters here — the closest cards are active and current; the next ring is gathering but not yet pressing.",
-          "The near field is already in motion; the medium ring is what that motion will soon run into.",
+          template("gt.timing.meaning.split.01", "gt.timing.meaning.split", "That split matters because the near field describes what is already pressing for attention, while the next ring shows what is forming just behind it."),
+          template("gt.timing.meaning.forming.01", "gt.timing.meaning.forming", "What presses first sits with the near cards; the medium ring holds what is already forming but not yet fully visible."),
+          template("gt.timing.meaning.conditions.01", "gt.timing.meaning.conditions", "What is closest demands attention first, but the next ring out is already shaping the conditions those decisions will land in."),
+          template("gt.timing.meaning.different_layers.01", "gt.timing.meaning.different_layers", "Near and medium cards are not the same story — the first layer is already active, while the second is still forming its shape."),
+          template("gt.timing.meaning.response_now.01", "gt.timing.meaning.response_now", "That distinction is important: the near field names what requires a response now, and the medium field names what is becoming the next thing to manage."),
+          template("gt.timing.meaning.timescales.01", "gt.timing.meaning.timescales", "The two rings describe different timescales: what is asking for a response now, and what is quietly becoming the next chapter."),
+          template("gt.timing.meaning.proximity.01", "gt.timing.meaning.proximity", "Proximity matters here — the closest cards are active and current; the next ring is gathering but not yet pressing."),
+          template("gt.timing.meaning.motion.01", "gt.timing.meaning.motion", "The near field is already in motion; the medium ring is what that motion will soon run into."),
         ],
+        undefined,
+        phraseTracker,
         random,
       )
-    : choose(
+    : chooseAvoidingRecent(
         [
-          "That split matters because the near field describes what is already pressing for attention, even if the outer layer has not clarified itself yet.",
-          "The immediate cards carry the clearest signal; what lies further out has not yet gathered enough weight to read with confidence.",
-          "The nearest cards speak most clearly — the outer field is still forming, so the timing picture concentrates around what is closest.",
-          "When the medium field is sparse, the near cards carry more weight than usual — they are doing most of the timing work here.",
-          "The near field is readable and pressing; the outer layer has not yet solidified, so this reading works most confidently from what is closest.",
+          template("gt.timing.meaning.sparse_pressing.01", "gt.timing.meaning.sparse_pressing", "That split matters because the near field describes what is already pressing for attention, even if the outer layer has not clarified itself yet."),
+          template("gt.timing.meaning.sparse_signal.01", "gt.timing.meaning.sparse_signal", "The immediate cards carry the clearest signal; what lies further out has not yet gathered enough weight to read with confidence."),
+          template("gt.timing.meaning.sparse_closest.01", "gt.timing.meaning.sparse_closest", "The nearest cards speak most clearly — the outer field is still forming, so the timing picture concentrates around what is closest."),
+          template("gt.timing.meaning.sparse_weight.01", "gt.timing.meaning.sparse_weight", "When the medium field is sparse, the near cards carry more weight than usual — they are doing most of the timing work here."),
+          template("gt.timing.meaning.sparse_readable.01", "gt.timing.meaning.sparse_readable", "The near field is readable and pressing; the outer layer has not yet solidified, so this reading works most confidently from what is closest."),
         ],
+        undefined,
+        phraseTracker,
         random,
       )}`;
 
@@ -1495,41 +2059,47 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
 
       const cartouchePair = selectBestPair(cartouchePairs, domain, random, subjectId);
       cartouchePairKey = cartouchePair?.key ?? null;
-      const cartoucheSentenceA = choose(
+      const cartoucheSentenceA = chooseAvoidingRecent(
         [
-          `The cartouche closes with ${dedupeCardRefs(cartoucheCardIds, 4)}, setting the wrap-up tone after the main field speaks.`,
-          `As a final line, the cartouche shows ${dedupeCardRefs(cartoucheCardIds, 4)}, clarifying what settles after the first wave.`,
-          `The wrap-up line in cartouche form carries ${dedupeCardRefs(cartoucheCardIds, 4)}, which reads as the spread's closing movement.`,
-          `Below the main grid, the cartouche holds ${dedupeCardRefs(cartoucheCardIds, 4)}, adding a final layer to the reading.`,
-          `The fate line at the bottom — ${dedupeCardRefs(cartoucheCardIds, 4)} — describes what lingers after the main action settles.`,
-          `Closing the layout, ${dedupeCardRefs(cartoucheCardIds, 4)} form the cartouche row and carry the reading's last word.`,
+          template("gt.cartouche.setup.closes.01", "gt.cartouche.setup.closes", () => `The cartouche closes with ${dedupeCardRefs(cartoucheCardIds, 4)}, setting the wrap-up tone after the main field speaks.`),
+          template("gt.cartouche.setup.final_line.01", "gt.cartouche.setup.final_line", () => `As a final line, the cartouche shows ${dedupeCardRefs(cartoucheCardIds, 4)}, clarifying what settles after the first wave.`),
+          template("gt.cartouche.setup.wrap_up.01", "gt.cartouche.setup.wrap_up", () => `The wrap-up line in cartouche form carries ${dedupeCardRefs(cartoucheCardIds, 4)}, which reads as the spread's closing movement.`),
+          template("gt.cartouche.setup.below_grid.01", "gt.cartouche.setup.below_grid", () => `Below the main grid, the cartouche holds ${dedupeCardRefs(cartoucheCardIds, 4)}, adding a final layer to the reading.`),
+          template("gt.cartouche.setup.fate_line.01", "gt.cartouche.setup.fate_line", () => `The fate line at the bottom — ${dedupeCardRefs(cartoucheCardIds, 4)} — describes what lingers after the main action settles.`),
+          template("gt.cartouche.setup.last_word.01", "gt.cartouche.setup.last_word", () => `Closing the layout, ${dedupeCardRefs(cartoucheCardIds, 4)} form the cartouche row and carry the reading's last word.`),
         ],
+        undefined,
+        phraseTracker,
         random,
       );
       const cartoucheSentenceB = cartouchePair
-        ? choose(
+        ? chooseAvoidingRecent(
             [
-              `${cardRef(cartouchePair.cardA)} with ${cardRef(cartouchePair.cardB)} points to ${pairMeaningToProse(cartouchePair.meaning)}.`,
-              `Within that line, ${cardRef(cartouchePair.cardA)} and ${cardRef(cartouchePair.cardB)} suggest ${pairMeaningToProse(
+              template("gt.cartouche.pair.points.01", "gt.cartouche.pair.points", () => `${cardRef(cartouchePair.cardA)} with ${cardRef(cartouchePair.cardB)} points to ${pairMeaningToProse(cartouchePair.meaning)}.`),
+              template("gt.cartouche.pair.within.01", "gt.cartouche.pair.within", () => `Within that line, ${cardRef(cartouchePair.cardA)} and ${cardRef(cartouchePair.cardB)} suggest ${pairMeaningToProse(
                 cartouchePair.meaning,
-              )}.`,
-              `The strongest link in the cartouche is ${cardRef(cartouchePair.cardA)} beside ${cardRef(cartouchePair.cardB)}: ${pairMeaningToProse(cartouchePair.meaning)}.`,
-              `${cardRef(cartouchePair.cardA)} and ${cardRef(cartouchePair.cardB)} concentrate the cartouche's meaning around ${pairMeaningToProse(cartouchePair.meaning)}.`,
+              )}.`),
+              template("gt.cartouche.pair.strongest.01", "gt.cartouche.pair.strongest", () => `The strongest link in the cartouche is ${cardRef(cartouchePair.cardA)} beside ${cardRef(cartouchePair.cardB)}: ${pairMeaningToProse(cartouchePair.meaning)}.`),
+              template("gt.cartouche.pair.concentrate.01", "gt.cartouche.pair.concentrate", () => `${cardRef(cartouchePair.cardA)} and ${cardRef(cartouchePair.cardB)} concentrate the cartouche's meaning around ${pairMeaningToProse(cartouchePair.meaning)}.`),
             ],
+            undefined,
+            phraseTracker,
             random,
           )
         : `${cardRef(cartoucheFirstCard.id)} and ${cardRef(cartoucheLastCard.id)} frame a closing shift from ${lowerFirst(
             clause(cartoucheFirstCard.keywords[0]),
           )} toward ${lowerFirst(clause(cartoucheLastCard.keywords[0]))}.`;
-      const cartoucheSentenceC = choose(
+      const cartoucheSentenceC = chooseAvoidingRecent(
         [
-          `Read alongside ${cardRef(primaryPlacement.cardId)} at the heart of the spread, this closing line suggests outcomes settle through pacing rather than pressure.`,
-          `Coming back to ${cardRef(primaryPlacement.cardId)}, the final line points to consequences that arrive once choices have been sustained.`,
-          `With ${cardRef(primaryPlacement.cardId)} still holding the center, the cartouche reads as what remains once the immediate tension clears.`,
-          `${cardRef(primaryPlacement.cardId)} anchors the reading, and this closing line shows what becomes available once its lesson is followed through.`,
-          `The cartouche adds a coda to ${cardRef(primaryPlacement.cardId)}'s central message, showing where the sequence naturally resolves.`,
-          `Taken with ${cardRef(primaryPlacement.cardId)} at the center, this final row suggests that outcomes arrive through sustained attention rather than a single decisive moment.`,
+          template("gt.cartouche.coda.pacing.01", "gt.cartouche.coda.pacing", () => `Read alongside ${cardRef(primaryPlacement.cardId)} at the heart of the spread, this closing line suggests outcomes settle through pacing rather than pressure.`),
+          template("gt.cartouche.coda.consequence.01", "gt.cartouche.coda.consequence", () => `Coming back to ${cardRef(primaryPlacement.cardId)}, the final line points to consequences that arrive once choices have been sustained.`),
+          template("gt.cartouche.coda.remains.01", "gt.cartouche.coda.remains", () => `With ${cardRef(primaryPlacement.cardId)} still holding the center, the cartouche reads as what remains once the immediate tension clears.`),
+          template("gt.cartouche.coda.follow_through.01", "gt.cartouche.coda.follow_through", () => `${cardRef(primaryPlacement.cardId)} anchors the reading, and this closing line shows what becomes available once its lesson is followed through.`),
+          template("gt.cartouche.coda.resolves.01", "gt.cartouche.coda.resolves", () => `The cartouche adds a coda to ${cardRef(primaryPlacement.cardId)}'s central message, showing where the sequence naturally resolves.`),
+          template("gt.cartouche.coda.sustained.01", "gt.cartouche.coda.sustained", () => `Taken with ${cardRef(primaryPlacement.cardId)} at the center, this final row suggests that outcomes arrive through sustained attention rather than a single decisive moment.`),
         ],
+        undefined,
+        phraseTracker,
         random,
       );
 
@@ -1543,22 +2113,26 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
   );
 
   const conclusionActionCard = primaryCard.id === 28 || primaryCard.id === 29 ? getCardMeaning(primaryHouse.id) : primaryCard;
-  const conclusionBridge = choose(
+  const conclusionActionRef = cardRef(conclusionActionCard.id);
+  const conclusionHouseName = formatHouseName(primaryHouse.name);
+  const conclusionBridge = chooseAvoidingRecent(
     [
-      "The spread points to one place worth reflecting on first.",
-      "There is a practical thread worth following through.",
-      "The cards suggest one place where a direct response would land first.",
-      "That picture leaves one thread that concentrates the reading more than the others.",
-      "One part of the spread carries more weight than the rest, and that is where action would count most.",
-      "If the reading has a single strongest signal, it gathers here.",
-      "The cards converge on one point more clearly than anywhere else in the spread.",
-      "That overall picture has one place where the reading is asking for something concrete.",
-      "Something in this reading is more actionable than the rest.",
-      "Across all of that, one direction carries the most weight right now.",
-      "Amid everything the spread describes, one place has more leverage than the others.",
-      "The reading points most clearly in one direction from here.",
-      "Of all the things the spread surfaces, one has the clearest practical edge.",
+      template("gt.conclusion.bridge.reflect.01", "gt.conclusion.bridge.reflect", () => `${conclusionActionRef} in ${conclusionHouseName} is the place worth reflecting on first.`),
+      template("gt.conclusion.bridge.practical.01", "gt.conclusion.bridge.practical", () => `The practical thread runs through ${conclusionActionRef} in ${conclusionHouseName}.`),
+      template("gt.conclusion.bridge.response.01", "gt.conclusion.bridge.response", () => `A direct response would land first with ${conclusionActionRef} in ${conclusionHouseName}.`),
+      template("gt.conclusion.bridge.concentrates.01", "gt.conclusion.bridge.concentrates", () => `That picture concentrates around ${conclusionActionRef} in ${conclusionHouseName} more than anywhere else.`),
+      template("gt.conclusion.bridge.weight.01", "gt.conclusion.bridge.weight", () => `${conclusionActionRef} in ${conclusionHouseName} carries the practical weight, so action counts there first.`),
+      template("gt.conclusion.bridge.signal.01", "gt.conclusion.bridge.signal", () => `The strongest signal gathers around ${conclusionActionRef} in ${conclusionHouseName}.`),
+      template("gt.conclusion.bridge.converge.01", "gt.conclusion.bridge.converge", () => `The cards converge on ${conclusionActionRef} in ${conclusionHouseName} more clearly than anywhere else.`),
+      template("gt.conclusion.bridge.concrete.01", "gt.conclusion.bridge.concrete", () => `${conclusionActionRef} in ${conclusionHouseName} is where the reading asks for something concrete.`),
+      template("gt.conclusion.bridge.actionable.01", "gt.conclusion.bridge.actionable", () => `${conclusionActionRef} in ${conclusionHouseName} is the most actionable part of the spread.`),
+      template("gt.conclusion.bridge.direction.01", "gt.conclusion.bridge.direction", () => `The direction with the most weight now runs through ${conclusionActionRef} in ${conclusionHouseName}.`),
+      template("gt.conclusion.bridge.leverage.01", "gt.conclusion.bridge.leverage", () => `${conclusionActionRef} in ${conclusionHouseName} has more leverage than the surrounding noise.`),
+      template("gt.conclusion.bridge.points.01", "gt.conclusion.bridge.points", () => `From here, the reading points most clearly toward ${conclusionActionRef} in ${conclusionHouseName}.`),
+      template("gt.conclusion.bridge.edge.01", "gt.conclusion.bridge.edge", () => `${conclusionActionRef} in ${conclusionHouseName} gives the spread its clearest practical edge.`),
     ],
+    undefined,
+    phraseTracker,
     random,
   );
   const conclusion = `${tableauSynthesis.conclusionSentence} ${conclusionBridge} ${buildActionDirectiveSentence({
@@ -1576,6 +2150,8 @@ function generateGTSections(context: NarrativeSeedContext, random: () => number)
       primaryPairKey: selectedPair?.key ?? null,
       primaryPairSelectionBand: selectedPair?.topBandKeys ?? [],
       cartouchePairKey,
+      phraseTemplateIds: Array.from(phraseTracker.usedTemplateIds),
+      phraseTemplateFamilies: Array.from(phraseTracker.usedFamilies),
     },
   };
 }
@@ -1594,12 +2170,12 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
 
   const situationSentenceBase = choose(
       [
-        `${labels[0]} opens with ${cardRef(cards[0].id)}: ${situationThread}, which sets the tone before anything else has a chance to speak. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `With ${cardRef(cards[0].id)} in ${labels[0].toLowerCase()}, the starting picture is already clear: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `${cardRef(cards[0].id)} in ${labels[0]} sets the tone: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `The sequence begins in ${labels[0]} with ${cardRef(cards[0].id)}: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `${labels[0]} arrives through ${cardRef(cards[0].id)}, establishing ${situationThread} as the ground the rest of the reading builds from. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
-        `The first card, ${cardRef(cards[0].id)}, describes what is already present: ${situationThread}. ${buildCardAssociationSentence(cards[0], subjectId, domain, random)}`,
+        `${labels[0]} opens with ${cardRef(cards[0].id)}: ${situationThread}, which sets the tone before anything else has a chance to speak. ${buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random)}`,
+        `With ${cardRef(cards[0].id)} in ${labels[0].toLowerCase()}, the starting picture is already clear: ${situationThread}. ${buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random)}`,
+        `${cardRef(cards[0].id)} in ${labels[0]} sets the tone: ${situationThread}. ${buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random)}`,
+        `The sequence begins in ${labels[0]} with ${cardRef(cards[0].id)}: ${situationThread}. ${buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random)}`,
+        `${labels[0]} arrives through ${cardRef(cards[0].id)}, establishing ${situationThread} as the ground the rest of the reading builds from. ${buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random)}`,
+        `The first card, ${cardRef(cards[0].id)}, describes what is already present: ${situationThread}. ${buildPositionedCardAssociationSentence(cards[0], "situation", subjectId, domain, random)}`,
       ],
       random,
   );
@@ -1607,13 +2183,13 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
 
   const pivotSentenceBase = choose(
     [
-      `${labels[1]} turns on ${cardRef(cards[1].id)}, so the middle card becomes the point where the sequence can redirect. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
-      `At the pivot, ${labels[1]} places ${cardRef(cards[1].id)} at the center, making this the point where the reading can shift. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
-      `In ${labels[1]}, ${cardRef(cards[1].id)} becomes the pivot, so the next movement depends on how its lesson is handled. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
-      `${cardRef(cards[1].id)} in ${labels[1]} acts as the fulcrum, so this is the point where tone, timing, or choice can change the sequence. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
-      `${labels[1]} centers on ${cardRef(cards[1].id)}, where the whole sequence either opens or tightens. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
-      `The pivot falls on ${cardRef(cards[1].id)} in ${labels[1]}, marking the moment where the situation either moves forward or doubles back. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
-      `${cardRef(cards[1].id)} holds the middle ground in ${labels[1]}, and it is here that the reading asks for a direct response. ${buildCardAssociationSentence(cards[1], subjectId, domain, random)}`,
+      `${labels[1]} turns on ${cardRef(cards[1].id)}, so the middle card becomes the point where the sequence can redirect. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
+      `At the pivot, ${labels[1]} places ${cardRef(cards[1].id)} at the center, making this the point where the reading can shift. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
+      `In ${labels[1]}, ${cardRef(cards[1].id)} becomes the pivot, so the next movement depends on how its lesson is handled. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
+      `${cardRef(cards[1].id)} in ${labels[1]} acts as the fulcrum, so this is the point where tone, timing, or choice can change the sequence. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
+      `${labels[1]} centers on ${cardRef(cards[1].id)}, where the whole sequence either opens or tightens. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
+      `The pivot falls on ${cardRef(cards[1].id)} in ${labels[1]}, marking the moment where the situation either moves forward or doubles back. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
+      `${cardRef(cards[1].id)} holds the middle ground in ${labels[1]}, and it is here that the reading asks for a direct response. ${buildPositionedCardAssociationSentence(cards[1], "pivot", subjectId, domain, random)}`,
     ],
     random,
   );
@@ -1621,13 +2197,13 @@ function generateThreeCardSections(context: NarrativeSeedContext, random: () => 
 
   const directionSentenceBase = choose(
     [
-      `The direction in ${labels[2]} comes through ${cardRef(cards[2].id)}: ${directionThread}, once the middle card is handled directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `The likely direction shows in ${labels[2]} through ${cardRef(cards[2].id)}, and it suggests ${directionThread} once the pivot is met directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `What ${labels[2]} shows through ${cardRef(cards[2].id)}: ${directionThread}, provided the central pressure is handled honestly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `${labels[2]} closes with ${cardRef(cards[2].id)}, and the directional message is: ${directionThread} when the pivot receives consistent attention. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `${cardRef(cards[2].id)} in ${labels[2]} suggests ${directionThread}, once the middle-card pressure has been worked with directly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `In ${labels[2]}, ${cardRef(cards[2].id)} points toward ${directionThread}, assuming the pivot is met with something more than avoidance. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
-      `The final position gives ${cardRef(cards[2].id)} in ${labels[2]}, and its directional pull is toward ${directionThread} when the middle card is answered honestly. ${buildCardAssociationSentence(cards[2], subjectId, domain, random)}`,
+      `The direction in ${labels[2]} comes through ${cardRef(cards[2].id)}: ${directionThread}, once the middle card is handled directly. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
+      `The likely direction shows in ${labels[2]} through ${cardRef(cards[2].id)}, and it suggests ${directionThread} once the pivot is met directly. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
+      `What ${labels[2]} shows through ${cardRef(cards[2].id)}: ${directionThread}, provided the central pressure is handled honestly. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
+      `${labels[2]} closes with ${cardRef(cards[2].id)}, and the directional message is: ${directionThread} when the pivot receives consistent attention. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
+      `${cardRef(cards[2].id)} in ${labels[2]} suggests ${directionThread}, once the middle-card pressure has been worked with directly. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
+      `In ${labels[2]}, ${cardRef(cards[2].id)} points toward ${directionThread}, assuming the pivot is met with something more than avoidance. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
+      `The final position gives ${cardRef(cards[2].id)} in ${labels[2]}, and its directional pull is toward ${directionThread} when the middle card is answered honestly. ${buildPositionedCardAssociationSentence(cards[2], "direction", subjectId, domain, random)}`,
     ],
     random,
   );
@@ -1768,13 +2344,16 @@ function enforceSentenceTargets(
 
   const trimSentence = (sentence: string): string => {
     const trimmed = clause(sentence);
+    const sentences = trimmed
+      .split(/(?<=[.!?])\s+/)
+      .map((part) => part.trim())
+      .filter(Boolean);
+    if (sentences.length > 1) {
+      return sentences.slice(0, -1).join(" ");
+    }
     const commaIndex = trimmed.lastIndexOf(",");
     if (commaIndex > 64) {
       return `${trimmed.slice(0, commaIndex)}.`;
-    }
-    const words = trimmed.split(/\s+/);
-    if (words.length > 28) {
-      return `${words.slice(0, 28).join(" ")}.`;
     }
     return `${trimmed}.`;
   };

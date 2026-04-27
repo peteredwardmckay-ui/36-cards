@@ -23,6 +23,8 @@
     "audit:frozen-regression": "vitest run tests/frozen-pack-regression.audit.test.ts",
     "audit:rollout-pack": "vitest run tests/rollout-pack.audit.test.ts",
     "audit:phrase-harvest": "vitest run tests/rollout-phrase-harvest.audit.test.ts",
+    "audit:variation-inventory": "vitest run tests/variation-inventory.audit.test.ts",
+    "audit:repeat-variation": "vitest run tests/repeat-question-variation.audit.test.ts",
     "art:generate": "node scripts/generate-art.mjs",
     "art:dry-run": "node scripts/generate-art.mjs --dry-run"
   },

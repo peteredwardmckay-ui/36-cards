@@ -197,6 +197,69 @@ const BASE_CASES: MatrixCase[] = [
     threeCardMode: "past-present-future",
     significatorMode: "open",
   },
+  {
+    caseId: "health_gt",
+    subjectId: "health",
+    interpretationThemeId: "auto",
+    spreadType: "grand-tableau",
+    question: "What does my body need most right now and what should I pay attention to?",
+    threeCardMode: "past-present-future",
+    significatorMode: "self",
+  },
+  {
+    caseId: "health_3card",
+    subjectId: "health",
+    interpretationThemeId: "auto",
+    spreadType: "three-card",
+    question: "What is the most important thing to address about my health this month?",
+    threeCardMode: "situation-challenge-advice",
+    significatorMode: "self",
+  },
+  {
+    caseId: "creative_gt",
+    subjectId: "creative",
+    interpretationThemeId: "auto",
+    spreadType: "grand-tableau",
+    question: "What is blocking or driving my creative work right now?",
+    threeCardMode: "past-present-future",
+    significatorMode: "self",
+  },
+  {
+    caseId: "education_3card",
+    subjectId: "education",
+    interpretationThemeId: "auto",
+    spreadType: "three-card",
+    question: "What does my study path need from me most right now?",
+    threeCardMode: "situation-challenge-advice",
+    significatorMode: "self",
+  },
+  {
+    caseId: "friends_gt",
+    subjectId: "friends_social",
+    interpretationThemeId: "auto",
+    spreadType: "grand-tableau",
+    question: "What is shaping my social world and closest friendships at the moment?",
+    threeCardMode: "past-present-future",
+    significatorMode: "self",
+  },
+  {
+    caseId: "community_3card",
+    subjectId: "community",
+    interpretationThemeId: "auto",
+    spreadType: "three-card",
+    question: "What does my community or group need from me and where do I fit?",
+    threeCardMode: "situation-challenge-advice",
+    significatorMode: "self",
+  },
+  {
+    caseId: "spiritual_gt",
+    subjectId: "spiritual",
+    interpretationThemeId: "auto",
+    spreadType: "grand-tableau",
+    question: "What is the reading pointing to in my spiritual life and practice right now?",
+    threeCardMode: "past-present-future",
+    significatorMode: "open",
+  },
 ];
 
 function sentenceFingerprint(input: string): string {
@@ -642,6 +705,8 @@ function runAuditMatrix(): {
     sentences.forEach((sentence) => {
       const fingerprint = sentenceFingerprint(sentence);
       if (!fingerprint) return;
+      // Skip intentional boilerplate that is expected to repeat across readings
+      if (/for reflective purposes only/i.test(sentence)) return;
       const existing = allSentenceCounts.get(fingerprint);
       if (existing) {
         existing.count += 1;
@@ -705,12 +770,23 @@ function runAuditMatrix(): {
   const rarelySelected = rareUsage.filter((row) => row.count === 1).sort((a, b) => b.weight - a.weight).slice(0, 40);
 
   const repeatedPhrases = [...allSentenceCounts.values()]
-    .filter((item) => item.count >= 3)
+    .filter((item) => item.count >= 5)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 40);
+
+  const repeatedPhrasesWarnings = [...allSentenceCounts.values()]
+    .filter((item) => item.count >= 3 && item.count < 5)
     .sort((a, b) => b.count - a.count)
     .slice(0, 40);
 
   const overusedOpenings = [...openingCounts.entries()]
-    .filter(([, count]) => count >= 4)
+    .filter(([, count]) => count >= 6)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 30)
+    .map(([opening, count]) => ({ opening, count }));
+
+  const overusedOpeningsWarnings = [...openingCounts.entries()]
+    .filter(([, count]) => count >= 4 && count < 6)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 30)
     .map(([opening, count]) => ({ opening, count }));
@@ -726,7 +802,9 @@ function runAuditMatrix(): {
     aggregate: {
       sampleCount: rows.length,
       repeatedPhrases,
+      repeatedPhrasesWarnings,
       overusedOpenings,
+      overusedOpeningsWarnings,
       weakSummaryLines: weakLines,
       rankingConcerns,
       mostFrequentEntries: mostFrequent,
@@ -753,7 +831,9 @@ function writeAuditArtifacts() {
   const aggregate = report.aggregate as {
     sampleCount: number;
     repeatedPhrases: Array<{ sentence: string; count: number }>;
+    repeatedPhrasesWarnings: Array<{ sentence: string; count: number }>;
     overusedOpenings: Array<{ opening: string; count: number }>;
+    overusedOpeningsWarnings: Array<{ opening: string; count: number }>;
     weakSummaryLines: Array<{ caseId: string; line: string }>;
     rankingConcerns: RankingConcern[];
     mostFrequentEntries: FrequencyStat[];
@@ -766,8 +846,10 @@ function writeAuditArtifacts() {
   lines.push("# Runtime Quality Audit");
   lines.push("");
   lines.push(`- Sample runs: ${aggregate.sampleCount}`);
-  lines.push(`- Repeated sentence patterns (>=3): ${aggregate.repeatedPhrases.length}`);
-  lines.push(`- Overused sentence openings (>=4): ${aggregate.overusedOpenings.length}`);
+  lines.push(`- Repeated sentence patterns (>=5, FAIL): ${aggregate.repeatedPhrases.length}`);
+  lines.push(`- Repeated sentence patterns (x3, warning): ${aggregate.repeatedPhrasesWarnings.length}`);
+  lines.push(`- Overused sentence openings (>=6, FAIL): ${aggregate.overusedOpenings.length}`);
+  lines.push(`- Overused sentence openings (4-5, warning): ${aggregate.overusedOpeningsWarnings.length}`);
   lines.push(`- Ranking concern flags: ${aggregate.rankingConcerns.length}`);
   lines.push("");
   lines.push("## Most Frequent Selected Entries");
@@ -780,13 +862,23 @@ function writeAuditArtifacts() {
     lines.push(`- [${concern.type}] ${concern.message} Selected: ${concern.selectedKey}, stronger: ${concern.strongerKey}, delta=${concern.delta}`);
   });
   lines.push("");
-  lines.push("## Repeated Phrases");
+  lines.push("## Repeated Phrases (>=5, FAIL)");
   aggregate.repeatedPhrases.slice(0, 20).forEach((item) => {
     lines.push(`- x${item.count}: ${item.sentence}`);
   });
   lines.push("");
-  lines.push("## Overused Openings");
+  lines.push("## Repeated Phrases (x3, warning)");
+  aggregate.repeatedPhrasesWarnings.slice(0, 20).forEach((item) => {
+    lines.push(`- x${item.count}: ${item.sentence}`);
+  });
+  lines.push("");
+  lines.push("## Overused Openings (>=6, FAIL)");
   aggregate.overusedOpenings.slice(0, 20).forEach((item) => {
+    lines.push(`- x${item.count}: ${item.opening}`);
+  });
+  lines.push("");
+  lines.push("## Overused Openings (4-5, warning)");
+  aggregate.overusedOpeningsWarnings.slice(0, 20).forEach((item) => {
     lines.push(`- x${item.count}: ${item.opening}`);
   });
   lines.push("");
@@ -816,6 +908,29 @@ describe("runtime quality audit generator", () => {
     const result = writeAuditArtifacts();
     expect(fs.existsSync(result.jsonPath)).toBe(true);
     expect(fs.existsSync(result.markdownPath)).toBe(true);
-    expect(result.report.rows.length).toBeGreaterThanOrEqual(12);
+    expect(result.report.rows.length).toBeGreaterThanOrEqual(20);
+
+    const aggregate = result.report.aggregate as {
+      repeatedPhrases: Array<{ sentence: string; count: number }>;
+      overusedOpenings: Array<{ opening: string; count: number }>;
+    };
+
+    const repeatedSummary = aggregate.repeatedPhrases
+      .slice(0, 5)
+      .map((p) => `x${p.count}: "${p.sentence.slice(0, 80)}"`)
+      .join("\n  ");
+    expect(
+      aggregate.repeatedPhrases.length,
+      `Repeated phrases (>=5 across readings):\n  ${repeatedSummary}`,
+    ).toBe(0);
+
+    const openingSummary = aggregate.overusedOpenings
+      .slice(0, 5)
+      .map((o) => `x${o.count}: "${o.opening}"`)
+      .join("\n  ");
+    expect(
+      aggregate.overusedOpenings.length,
+      `Overused 3-word openings (>=6 across readings):\n  ${openingSummary}`,
+    ).toBe(0);
   });
 });
