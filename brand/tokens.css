@@ -18,9 +18,9 @@
   --shadow:     #5a5546;
 
   /* Typography */
-  --serif-display: "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif;
-  --serif-body:    "Newsreader", "Source Serif 4", "Iowan Old Style", Georgia, serif;
-  --mono:          "JetBrains Mono", "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --serif-display: var(--font-serif-display), "EB Garamond", Garamond, "Times New Roman", serif;
+  --serif-body:    var(--font-serif-body), "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono:          var(--font-mono), "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
   /* Rules */
   --rule: 0.5px;

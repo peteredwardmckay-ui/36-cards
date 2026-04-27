@@ -190,13 +190,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .topnav-wordmark {
-  font-family: var(--serif-display);
-  font-size: 22px;
-  font-style: italic;
-  letter-spacing: 0.02em;
   display: inline-flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 10px;
   color: var(--vellum);
   text-decoration: none;
 }
@@ -206,6 +202,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 13px;
   letter-spacing: 0.16em;
   opacity: 0.7;
+  line-height: 1;
+  position: relative;
+  top: -2px;
+}
+.topnav-wordmark .label {
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .topnav-links {
@@ -244,6 +251,30 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   cursor: pointer;
 }
 .topnav-toggle:hover { opacity: 1; }
+
+@media (max-width: 860px) {
+  .topnav {
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .topnav-links {
+    justify-content: flex-end;
+    gap: 18px 24px;
+    flex-wrap: wrap;
+    max-width: min(520px, 70vw);
+  }
+}
+
+@media (max-width: 700px) {
+  .topnav {
+    align-items: center;
+    flex-direction: column;
+  }
+  .topnav-links {
+    justify-content: center;
+    max-width: 100%;
+  }
+}
 
 /* =========================================================
    Footer
@@ -484,6 +515,73 @@ textarea, select, input {
   background: var(--ink-2);
   color: var(--vellum);
   border: 1px solid var(--ink-3);
+}
+
+/* =========================================================
+   Mobile responsive
+   ========================================================= */
+
+/* Home — hide absolute triptych on small screens */
+@media (max-width: 860px) {
+  .home-triptych { display: none !important; }
+}
+
+/* Home — COTD grid stacks on mobile */
+@media (max-width: 860px) {
+  .cotd-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .cotd-grid > div:nth-child(2) {
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: var(--rule) solid var(--rule-color-alt);
+    padding-top: 24px;
+  }
+  .cotd-grid > div:nth-child(3) {
+    display: none; /* hide card image on mobile — number/name is enough */
+  }
+}
+
+/* Journal — horizontal scroll filter chips on mobile */
+@media (max-width: 860px) {
+  .journal-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+  .journal-filters button { flex-shrink: 0; }
+}
+
+/* Journal — entry rows stack on mobile */
+@media (max-width: 860px) {
+  .journal-entry {
+    grid-template-columns: 64px 1fr !important;
+    grid-template-rows: auto auto !important;
+  }
+  .journal-entry-cards { display: none !important; }
+  .journal-entry-action { display: none !important; }
+}
+
+/* Journal — patterns panel stacks on mobile */
+@media (max-width: 860px) {
+  .journal-patterns {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Journal — masthead stacks on mobile */
+@media (max-width: 860px) {
+  .journal-masthead {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Results — CTA stacks on mobile */
+@media (max-width: 860px) {
+  .results-cta {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* =========================================================

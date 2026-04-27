@@ -390,14 +390,17 @@ export default function ResultsPage() {
           </div>
 
           {/* ── CTA ─────────────────────────────────────── */}
-          <div style={{
+          <div className="results-cta" style={{
+            padding: "56px 0",
+            borderTop: "var(--rule) solid var(--rule-color)",
+            borderBottom: "var(--rule) solid var(--rule-color)",
             display: "grid",
-            gridTemplateColumns: "1.2fr 1fr",
-            gap: 1,
-            background: "var(--rule-color)",
-            marginTop: 0,
+            gridTemplateColumns: "1fr 1fr",
+            gap: "clamp(32px, 5vw, 80px)",
+            alignItems: "start",
           }}>
-            <div style={{ padding: "48px 0", background: "var(--vellum)" }}>
+            {/* Left — actions */}
+            <div>
               <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>What&apos;s next</p>
               <h2 className="display" style={{ fontSize: "clamp(24px, 3vw, 40px)", fontStyle: "italic", fontWeight: 400, margin: "0 0 8px", lineHeight: 1.05 }}>
                 Ask another question.
@@ -406,10 +409,10 @@ export default function ResultsPage() {
                 Begin again with a fresh spread and a new question.
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <button type="button" onClick={startNewReading} className="btn">
+                <button type="button" onClick={startNewReading} className="btn btn-ember">
                   New reading
                 </button>
-                <button type="button" onClick={copyReading} className="btn btn-ghost-dark">
+                <button type="button" onClick={copyReading} className="btn btn-ghost-light">
                   {copyStatus === "copied" ? "Shared!" : "Share reading"}
                 </button>
               </div>
@@ -421,14 +424,16 @@ export default function ResultsPage() {
                 .
               </p>
             </div>
-            <div style={{ padding: "48px 0 48px 40px", background: "var(--vellum)" }}>
+
+            {/* Right — navigate */}
+            <div>
               <p className="smallcaps" style={{ opacity: 0.4, marginBottom: 16 }}>Navigate</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 <button
                   type="button"
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="mono"
-                  style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "inherit" }}
+                  style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "var(--vellum)" }}
                 >
                   ↑ Back to top
                 </button>
@@ -438,7 +443,7 @@ export default function ResultsPage() {
                     type="button"
                     onClick={() => document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth" })}
                     className="mono"
-                    style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.45, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "inherit" }}
+                    style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.45, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "var(--vellum)" }}
                   >
                     {s.title}
                   </button>
@@ -447,14 +452,13 @@ export default function ResultsPage() {
                   type="button"
                   onClick={() => document.getElementById("closing")?.scrollIntoView({ behavior: "smooth" })}
                   className="mono"
-                  style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.45, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "inherit" }}
+                  style={{ fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.45, textAlign: "left", background: "none", border: "none", cursor: "pointer", color: "var(--vellum)" }}
                 >
                   Conclusion
                 </button>
               </div>
             </div>
           </div>
-          <hr className="rule" style={{ borderTopColor: "var(--rule-color)" }} />
 
           <div style={{ marginTop: 0 }}>
             <HouseAdSlot id="ad-footer" variant="compact" />

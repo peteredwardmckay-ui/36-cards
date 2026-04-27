@@ -59,6 +59,7 @@ function daysAgo(ts: number): number {
 export function JournalClient() {
   const [history, setHistory] = useState<ReadingHistoryEntry[]>([]);
   const [filter, setFilter] = useState<string>("all");
+  const [sort,   setSort]   = useState<"recent" | "oldest">("recent");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -66,14 +67,16 @@ export function JournalClient() {
     setMounted(true);
   }, []);
 
-  /* ── Filtered entries ─────────────────────────────────────── */
-  const filtered = history.filter((r) => {
-    if (filter === "triad") return r.spreadType === "three-card";
-    if (filter === "tableau") return r.spreadType === "grand-tableau";
-    if (filter === "favourable") return readingTone(r.cardIds) === "favourable";
-    if (filter === "challenging") return readingTone(r.cardIds) === "challenging";
-    return true;
-  });
+  /* ── Filtered + sorted entries ────────────────────────────── */
+  const filtered = history
+    .filter((r) => {
+      if (filter === "triad") return r.spreadType === "three-card";
+      if (filter === "tableau") return r.spreadType === "grand-tableau";
+      if (filter === "favourable") return readingTone(r.cardIds) === "favourable";
+      if (filter === "challenging") return readingTone(r.cardIds) === "challenging";
+      return true;
+    })
+    .sort((a, b) => sort === "recent" ? b.createdAt - a.createdAt : a.createdAt - b.createdAt);
 
   /* ── Patterns (deterministic, full history) ───────────────── */
 
@@ -144,9 +147,13 @@ export function JournalClient() {
               The questions<br />
               <em style={{ color: "var(--ember)" }}>you keep asking.</em>
             </h1>
-            <p style={{ fontSize: 17, lineHeight: 1.75, opacity: 0.6, maxWidth: 520, marginBottom: 40 }}>
-              Your readings will appear here once you complete one. Each entry is stored locally
-              on this device — nothing leaves your browser.
+            <p style={{ fontSize: 17, lineHeight: 1.75, opacity: 0.6, maxWidth: 520, marginBottom: 24 }}>
+              Your readings will appear here once you complete one.
+            </p>
+            <p className="mono" style={{ fontSize: 10, letterSpacing: "0.14em", lineHeight: 1.7, opacity: 0.4, maxWidth: 520, marginBottom: 40 }}>
+              Readings are saved in your browser&rsquo;s local storage — on this device only.
+              They are not sent to or stored by 36cards.com, and are not accessible to anyone else.
+              Clearing your browser&rsquo;s site data will permanently remove them.
             </p>
             <Link href="/setup" className="btn">Begin a reading</Link>
           </div>
@@ -164,7 +171,7 @@ export function JournalClient() {
         <div className="container-wide" style={{ paddingTop: 64, paddingBottom: 96 }}>
 
           {/* ── Masthead ──────────────────────────────────────── */}
-          <div style={{
+          <div className="journal-masthead" style={{
             display: "grid",
             gridTemplateColumns: "1.2fr 1fr",
             gap: "clamp(40px, 6vw, 80px)",
@@ -204,6 +211,19 @@ export function JournalClient() {
                   </div>
                 ))}
               </div>
+
+              {/* Privacy notice */}
+              <div style={{
+                marginTop: 24,
+                paddingTop: 20,
+                borderTop: "var(--rule) solid var(--rule-color)",
+              }}>
+                <p className="mono" style={{ fontSize: 10, letterSpacing: "0.14em", lineHeight: 1.7, opacity: 0.45, margin: 0 }}>
+                  Your readings are saved in your browser&rsquo;s local storage — on this device only.
+                  They are not sent to or stored by 36cards.com, and are not accessible to anyone else.
+                  Clearing your browser&rsquo;s site data will permanently remove them.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -219,7 +239,7 @@ export function JournalClient() {
                 </span>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gap: "clamp(24px, 4vw, 56px)", alignItems: "start" }}>
+              <div className="journal-patterns" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gap: "clamp(24px, 4vw, 56px)", alignItems: "start" }}>
 
                 {/* Most-drawn cards */}
                 <div>
@@ -347,7 +367,7 @@ export function JournalClient() {
             flexWrap: "wrap",
             gap: 16,
           }}>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <div className="journal-filters" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {[
                 ["all",         "All readings"],
                 ["triad",       "Triads"],
@@ -377,9 +397,32 @@ export function JournalClient() {
                 );
               })}
             </div>
-            <span className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.4 }}>
-              {filtered.length} of {history.length}
-            </span>
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <span className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.4 }}>
+                {filtered.length} of {history.length}
+              </span>
+              <div style={{ display: "flex", border: "var(--rule) solid var(--rule-color)" }}>
+                {(["recent", "oldest"] as const).map((s) => (
+                  <button
+                    key={s}
+                    onClick={() => setSort(s)}
+                    className="mono"
+                    style={{
+                      padding: "8px 14px",
+                      background: sort === s ? "var(--ink-3)" : "transparent",
+                      color: "var(--vellum)",
+                      border: sort === s ? `var(--rule) solid var(--ember)` : "none",
+                      fontSize: 10,
+                      letterSpacing: "0.16em",
+                      textTransform: "uppercase",
+                      transition: "background 0.12s",
+                    }}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* ── Entries list ───────────────────────────────────── */}
@@ -397,6 +440,7 @@ export function JournalClient() {
                 return (
                   <article
                     key={r.id}
+                    className="journal-entry"
                     style={{
                       display: "grid",
                       gridTemplateColumns: "96px 1fr auto 80px",
@@ -442,7 +486,7 @@ export function JournalClient() {
                     </div>
 
                     {/* Card strip */}
-                    <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                    <div className="journal-entry-cards" style={{ display: "flex", gap: 4, alignItems: "center" }}>
                       {previewCards.map((id) => {
                         const card = CARD_BY_ID.get(id);
                         if (!card) return null;
@@ -467,7 +511,7 @@ export function JournalClient() {
                     </div>
 
                     {/* Action */}
-                    <div style={{ textAlign: "right" }}>
+                    <div className="journal-entry-action" style={{ textAlign: "right" }}>
                       <Link
                         href="/setup"
                         className="mono"
@@ -486,7 +530,7 @@ export function JournalClient() {
           {history.length > 0 && (
             <div style={{ marginTop: 48, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
               <p className="mono" style={{ fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.4 }}>
-                Patterns recompute on each new reading · Stored locally on this device
+                Patterns recompute on each new reading · Stored in browser local storage only
               </p>
               <Link href="/setup" className="btn">
                 Begin a new reading

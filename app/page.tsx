@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { TopNav } from "@/components/TopNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { CARD_BY_ID } from "@/lib/content/cards";
+import { HOUSE_BY_ID } from "@/lib/content/houses";
 
 /* =========================================================
    Card data
@@ -47,7 +49,8 @@ const CARDS = [
 ];
 
 function cardImg(id: number, slug: string) {
-  return `/cards/traditional/${String(id).padStart(2, "0")}-${slug}.webp`;
+  const fileSlug = slug === "sun" ? "Sun" : slug === "moon" ? "Moon" : slug;
+  return `/cards/traditional/${String(id).padStart(2, "0")}-${fileSlug}.webp`;
 }
 
 function getCardOfTheDay() {
@@ -56,7 +59,10 @@ function getCardOfTheDay() {
   const diff = now.getTime() - start.getTime();
   const oneDay = 1000 * 60 * 60 * 24;
   const dayOfYear = Math.floor(diff / oneDay);
-  return CARDS[dayOfYear % 36];
+  const base = CARDS[dayOfYear % 36];
+  const full = CARD_BY_ID.get(base.id);
+  const house = HOUSE_BY_ID.get(base.id);
+  return { ...base, coreMeaning: full?.coreMeaning ?? "", keywords: full?.keywords ?? [], houseName: house?.name ?? "" };
 }
 
 function formatDate() {
@@ -135,7 +141,7 @@ export default function HomePage() {
           </div>
 
           {/* Triptych */}
-          <div style={{ position: "relative", height: 580 }}>
+          <div className="home-triptych" style={{ position: "relative", height: 580 }}>
             {/* Stars (16) — back left, tilted */}
             <div className="card-frame" style={{ position: "absolute", top: 0, left: 0, width: 220, transform: "rotate(-3deg)", transformOrigin: "bottom center", opacity: 0.7 }}>
               <Image src={cardImg(TRIPTYCH[0].id, TRIPTYCH[0].slug)} alt={TRIPTYCH[0].name} fill style={{ objectFit: "cover" }} />
@@ -188,34 +194,59 @@ export default function HomePage() {
 
       {/* ── Card of the Day ──────────────────────────────── */}
       <section className="surface-vellum">
-        <div className="container" style={{ paddingTop: "64px", paddingBottom: "64px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "48px", flexWrap: "wrap" }}>
+        <div className="container-wide" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+          <div className="cotd-grid" style={{ display: "grid", gridTemplateColumns: "1fr 2fr 1fr", gap: "clamp(24px, 4vw, 56px)", alignItems: "center" }}>
 
-            {/* Card image */}
-            <div className="card-frame" style={{ width: "108px", flexShrink: 0 }}>
-              <Image src={cardImg(cotd.id, cotd.slug)} alt={cotd.name} fill style={{ objectFit: "cover" }} />
+            {/* Left — number + name + house */}
+            <div>
+              <p className="smallcaps" style={{ marginBottom: 16, fontSize: 9 }}>
+                <span style={{ color: "var(--ember)", marginRight: 8 }}>●</span>
+                Card of the day
+              </p>
+              <div className="numeral" style={{ fontSize: "clamp(64px, 8vw, 96px)", lineHeight: 0.9, color: "var(--ember)" }}>
+                {String(cotd.id).padStart(2, "0")}
+              </div>
+              <div className="display" style={{ fontStyle: "italic", fontSize: "clamp(28px, 4vw, 40px)", marginTop: 8, lineHeight: 1 }}>
+                {cotd.name}
+              </div>
+              <p className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, marginTop: 14 }}>
+                {cotd.houseName}
+              </p>
             </div>
 
-            {/* Text */}
-            <div>
-              <p className="smallcaps" style={{ opacity: 0.45, marginBottom: "12px" }}>
-                Card of the Day · {formatDate()}
+            {/* Centre — meaning + metadata */}
+            <div style={{ borderLeft: "var(--rule) solid var(--rule-color-alt)", paddingLeft: "clamp(24px, 4vw, 48px)" }}>
+              <p style={{ fontSize: "clamp(16px, 1.6vw, 21px)", lineHeight: 1.5, margin: "0 0 28px", fontStyle: "italic" }}>
+                <em style={{ color: "var(--ember)" }}>&ldquo;</em>
+                {cotd.coreMeaning}.
+                <em style={{ color: "var(--ember)" }}>&rdquo;</em>
               </p>
-              <h2 className="display" style={{ fontSize: "clamp(32px, 5vw, 52px)", marginBottom: "12px" }}>
-                {cotd.id}. {cotd.name}
-              </h2>
-              <p style={{ opacity: 0.6, maxWidth: "480px", lineHeight: 1.65 }}>
-                Each day surfaces a single card from the 36. Let it sit with
-                you — as a lens on the day ahead, not a prediction.
-              </p>
+              <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>
+                <span className="mono" style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.55 }}>
+                  {formatDate()}
+                </span>
+                {cotd.keywords.slice(0, 3).map((kw) => (
+                  <span key={kw} className="mono" style={{ fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.45 }}>
+                    {kw}
+                  </span>
+                ))}
+              </div>
               <Link
                 href={`/glossary/cards/${cotd.slug}`}
-                className="smallcaps"
-                style={{ display: "inline-block", marginTop: "20px", opacity: 0.55, textDecoration: "underline", textUnderlineOffset: "3px" }}
+                className="mono"
+                style={{ display: "inline-block", marginTop: 20, fontSize: 10, letterSpacing: "0.16em", textTransform: "uppercase", opacity: 0.5, textDecoration: "underline", textUnderlineOffset: 3 }}
               >
-                Read the full meaning →
+                Full entry →
               </Link>
             </div>
+
+            {/* Right — card image */}
+            <div style={{ justifySelf: "end", width: "clamp(100px, 12vw, 160px)" }}>
+              <div className="card-frame" style={{ width: "100%" }}>
+                <Image src={cardImg(cotd.id, cotd.slug)} alt={cotd.name} fill style={{ objectFit: "cover" }} />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

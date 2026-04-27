@@ -74,7 +74,7 @@ export function TopNav({ activePage }: TopNavProps) {
     <nav className="topnav">
       <Link href="/" className="topnav-wordmark">
         <span className="num">36</span>
-        Cards
+        <span className="label">Cards</span>
       </Link>
 
       <div className="topnav-links">
